@@ -1,0 +1,11 @@
+
+== worksheets/current/homogeneity_copy_paste_v6_two_target_COA_import_safe.json ==
+OK: 3 worksheet name(s), no duplicates
+Found 15 named cell(s)
+OK: required named cells present
+OK: no duplicate named-cell targets
+PASSED
+OK: COA references HOMOGENEITY_TEST
+Homogeneity render named_cell refs: ['report_results']
+Homogeneity get_worksheet_value refs: []
+OK: Homogeneity named cell references exist in worksheet JSON
