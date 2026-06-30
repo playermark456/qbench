@@ -1,0 +1,27 @@
+<div><img style="width: 8.5in; position: relative; left: -0.09in;" src="blob:https://ait.qbench.net/4e478e10-3bb5-4053-9297-026c380396ec" alt="" width="8.5in"></div>
+<div>
+<table style="border-collapse: collapse; width: 8.48in; position: relative; top: -0.6in;" border="1"><colgroup><col style="width: 35%;"><col style="width: 32%;"><col style="width: 33%;"></colgroup>
+<tbody>
+<tr>
+<td> </td>
+<td style="font-size: 16pt; font-family: 'Roboto'; vertical-align: top;"><strong>{{sample.sample_name if sample and sample.sample_name}}</strong></td>
+<td style="font-size: 16pt; font-family: 'Roboto'; vertical-align: top;"><strong>{{customer.customer_name if customer and customer.customer_name}}</strong></td>
+</tr>
+<tr>
+<td style="font-size: 9pt; font-family: 'Roboto';"> </td>
+<td style="font-size: 9pt; font-family: 'Roboto';"> </td>
+<td style="font-size: 9pt; font-family: 'Roboto'; vertical-align: top;">{{customer.customer_city_state if customer and customer.customer_city_state}}</td>
+</tr>
+<tr>
+<td style="font-size: 9pt; font-family: 'Roboto';"> </td>
+<td style="font-size: 9pt; font-family: 'Roboto'; vertical-align: top;">Sample ID: {{sample.get_display_id() if sample and sample.get_display_id()}}</td>
+<td style="font-size: 9pt; font-family: 'Roboto';"> </td>
+</tr>
+<tr>
+<td style="font-size: 9pt; font-family: 'Roboto'; vertical-align: top;">Report Issuance: {{date_generated | local_time("%m/%d/%Y") if date_generated}}</td>
+<td style="font-size: 9pt; font-family: 'Roboto'; vertical-align: top;">Product Matrix: {{sample.product_matrix if sample and sample.product_matrix}}</td>
+<td style="font-size: 9pt; font-family: 'Roboto'; vertical-align: top;">Level of Analysis: {{sample.level_of_analysis if sample and sample.level_of_analysis}}</td>
+</tr>
+</tbody>
+</table>
+</div>

@@ -1,0 +1,743 @@
+<!-- START CUSTOM JINJA CODE
+  {% set IMG_EXTENSIONS = [
+    'png',
+    'jpg',
+    'jpeg'
+  ] %}
+
+  {# Microbial assay ID doesn't exist, only used to group the separate analytes for Microbials #}
+  {% set ASSAY_ID_MAP = {
+    'MICROBIAL_ANALYSIS': -1,
+    'CANNABINOIDS': 2,
+    'TERPENES': 8,
+    'HEAVY_METALS': 3,
+    'MYCOTOXINS': 5,
+    'PESTICIDES': 4,
+    'RESIDUAL_SOLVENTS': 7,
+    'FOREIGN_MATERIAL': 12,
+    'TOTAL_YEAST_AND_MOLD': 19,
+    'TOTAL_AEROBIC_MICROBIAL': 18,
+    'SHIGA_TOXIN_PRODUCING_E_COLI': 16,
+    'SALMONELLA_SPECIES': 15,
+    'LISTERIA_MONOCYTOGENES': 17,
+    'ENTEROBACTERIACEAE': 20,
+    'ASPERGILLUS_SPP': 14,
+    'WATER_ACTIVITY': 9,
+    'HOMOGENEITY': 11,
+  } %}
+
+  {% set MICROBIAL_ASSAY_IDS = [
+    ASSAY_ID_MAP['TOTAL_YEAST_AND_MOLD'],
+    ASSAY_ID_MAP['TOTAL_AEROBIC_MICROBIAL'],
+    ASSAY_ID_MAP['SHIGA_TOXIN_PRODUCING_E_COLI'],
+    ASSAY_ID_MAP['SALMONELLA_SPECIES'],
+    ASSAY_ID_MAP['LISTERIA_MONOCYTOGENES'],
+    ASSAY_ID_MAP['ENTEROBACTERIACEAE'],
+    ASSAY_ID_MAP['ASPERGILLUS_SPP'],
+    ASSAY_ID_MAP['WATER_ACTIVITY'],
+  ] %}
+
+  {# TODO: not all Protocol Steps Created yet #}
+  {% set PROTOCOL_STEP_ID_MAP = {
+    'CANNABINOID_POTENCY_PREPARATION': 13,
+    'FOREIGN_MATERIAL_PREPARATION': 37,
+    'HEAVY_METALS_PREPARATION': 24,
+    'MYCOTOXIN_PREPARATION': 41,
+    'PESTICIDES_PREPARATION': 51,
+    'RESIDUAL_SOLVENTS_PREPARATION': 32,
+    'TERPENES_PREPARATION': -1,
+    'WATER_ACTIVITY_CLEAN': 8,
+    'GENE_UP_MICROBIAL_ANALYSIS_SAMPLE_PREPARATION_ASPERGILLUS': 55,
+    'GENE_UP_MICROBIAL_ANALYSIS_SAMPLE_PREPARATION_LISTERIA': 58,
+    'GENE_UP_MICROBIAL_ANALYSIS_SAMPLE_PREPARATION_SAL_STEC': 57,
+    'TEMPO_MICROBIAL_ANALYSIS_SAMPLE_PREPARATION': 63,
+    'PEST_MYCO_QUALITATIVE_PREPARATION_OF_LABORATORY_CONTROL_SAMPLES': 51,
+    'HOMOGENEITY_SUB_SAMPLING': 47,
+    'MYCOTOXIN_PREPARATION_OF_LAB_CONTROLS': 41,
+  } %}
+
+  {% set PROTOCOL_STEP_IDS = [
+    PROTOCOL_STEP_ID_MAP['CANNABINOID_POTENCY_PREPARATION'],
+    PROTOCOL_STEP_ID_MAP['FOREIGN_MATERIAL_PREPARATION'],
+    PROTOCOL_STEP_ID_MAP['HEAVY_METALS_PREPARATION'],
+    PROTOCOL_STEP_ID_MAP['MYCOTOXIN_PREPARATION'],
+    PROTOCOL_STEP_ID_MAP['PESTICIDES_PREPARATION'],
+    PROTOCOL_STEP_ID_MAP['RESIDUAL_SOLVENTS_PREPARATION'],
+    PROTOCOL_STEP_ID_MAP['TERPENES_PREPARATION'],
+    PROTOCOL_STEP_ID_MAP['WATER_ACTIVITY_CLEAN'],
+    PROTOCOL_STEP_ID_MAP['GENE_UP_MICROBIAL_ANALYSIS_SAMPLE_PREPARATION_ASPERGILLUS'],
+    PROTOCOL_STEP_ID_MAP['GENE_UP_MICROBIAL_ANALYSIS_SAMPLE_PREPARATION_LISTERIA'],
+    PROTOCOL_STEP_ID_MAP['GENE_UP_MICROBIAL_ANALYSIS_SAMPLE_PREPARATION_SAL_STEC'],
+    PROTOCOL_STEP_ID_MAP['TEMPO_MICROBIAL_ANALYSIS_SAMPLE_PREPARATION'],
+    PROTOCOL_STEP_ID_MAP['PEST_MYCO_QUALITATIVE_PREPARATION_OF_LABORATORY_CONTROL_SAMPLES'],
+    PROTOCOL_STEP_ID_MAP['HOMOGENEITY_SUB_SAMPLING'],
+    PROTOCOL_STEP_ID_MAP['MYCOTOXIN_PREPARATION_OF_LAB_CONTROLS'],
+  ] %}
+
+  {% set PF_CLASS_TO_LABEL_MAP = {
+    'fail': 'Fail',
+    'pass': 'Pass',
+    'not-tested': 'Not Tested',
+  } %}
+
+  {% macro get_test_pf_class(test) %}
+    {% set pass_fail = test.get_worksheet_value('pass_fail') or 'Not Tested' %}
+    {% set pf_class = 'not-tested' %}
+    {% set pf_class = 'pass' if pass_fail|trim|lower == 'pass' else pf_class %}
+    {% set pf_class = 'fail' if pass_fail|trim|lower == 'fail' else pf_class %}
+
+    {{ pf_class }}
+  {% endmacro %}
+
+  {% macro get_label_for_pf_class(pf_class) %}{{ PF_CLASS_TO_LABEL_MAP[pf_class] }}{% endmacro %}
+
+  {% set test_map = {
+    ASSAY_ID_MAP['CANNABINOIDS']: {
+      'test': none,
+    },
+    ASSAY_ID_MAP['HOMOGENEITY']: {
+      'test': none,
+    },
+    ASSAY_ID_MAP['TERPENES']: {
+      'test': none,
+    },
+    ASSAY_ID_MAP['MICROBIAL_ANALYSIS']: {
+      'tests': [],
+      'pf_class_list': [],
+      'pf_class': 'not-tested',
+      'pass_fail': 'Not Tested',
+      'test_method_list': [],
+      'total_primary_sample_weight_list': [],
+      'equations_list': [],
+      'metrc_source_package_id_list': [],
+      'metrc_lab_test_id_list': [],
+    },
+    ASSAY_ID_MAP['HEAVY_METALS']: {
+      'test': none,
+      'pass_fail': 'Not Tested',
+      'pf_class': 'not-tested',
+    },
+    ASSAY_ID_MAP['MYCOTOXINS']: {
+      'test': none,
+      'pass_fail': 'Not Tested',
+      'pf_class': 'not-tested',
+    },
+    ASSAY_ID_MAP['PESTICIDES']: {
+      'test': none,
+      'pass_fail': 'Not Tested',
+      'pf_class': 'not-tested',
+    },
+    ASSAY_ID_MAP['RESIDUAL_SOLVENTS']: {
+      'test': none,
+      'pass_fail': 'Not Tested',
+      'pf_class': 'not-tested',
+    },
+    ASSAY_ID_MAP['FOREIGN_MATERIAL']: {
+      'test': none,
+      'pass_fail': 'Not Tested',
+      'pf_class': 'not-tested',
+    },
+  } %}
+
+  {# FIND TESTS AND RESULTS #}
+
+  {% set total_thc = namespace(value=none) %}
+  {% set protocol_step_date_completed_list = [] %}
+
+  {% for test in tests %}
+    {% if test.assay_id in test_map or test.assay_id in MICROBIAL_ASSAY_IDS %}
+      {% set pf_class = get_test_pf_class(test)|trim %}
+
+      {% if test.assay_id in MICROBIAL_ASSAY_IDS %}
+        {% set _ = test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['tests'].append(test) %}
+        {% set _ = test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['pf_class_list'].append(pf_class) %}
+
+        {% if test.assay.method and test.assay.method not in test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['test_method_list'] %}
+          {% set _ = test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['test_method_list'].append(test.assay.method) %}
+        {% endif %}
+
+        {% if test.test_sample_weight and test.test_sample_weight not in test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['total_primary_sample_weight_list'] %}
+          {% set _ = test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['total_primary_sample_weight_list'].append(test.test_sample_weight) %}
+        {% endif %}
+
+        {% if test.assay.coa_equations and test.assay.coa_equations not in test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['equations_list'] %}
+          {% set _ = test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['equations_list'].append(test.assay.coa_equations) %}
+        {% endif %}
+
+        {% if test.metrc_source_package_id and test.metrc_source_package_id not in test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['metrc_source_package_id_list'] %}
+          {% set _ = test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['metrc_source_package_id_list'].append(test.metrc_source_package_id) %}
+        {% endif %}
+
+        {% if test.metrc_lab_test_id and test.metrc_lab_test_id not in test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['metrc_lab_test_id_list'] %}
+          {% set _ = test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['metrc_lab_test_id_list'].append(test.metrc_lab_test_id) %}
+        {% endif %}
+      {% else %}
+        {% set _ = test_map[test.assay_id].update({
+          'test': test,
+          'pass_fail': get_label_for_pf_class(pf_class),
+          'pf_class': pf_class,
+        }) %}
+      {% endif %}
+    {% endif %}
+
+{% if test.assay_id == ASSAY_ID_MAP['CANNABINOIDS'] %}
+  {% set total_thc.value = test.get_worksheet_value('total_thc_report_result') %}
+{% endif %}
+
+    {# BUILD SAMPLE PREPARATION #}
+    {% for batch in test.batches %}
+      {% for batch_object_protocol_step in batch.batch_protocol_steps %}
+        {% set protocol_step = batch_object_protocol_step.protocol_step %}
+        {% set date_completed = batch_object_protocol_step.date_completed %}
+        {% set protocol_step_date_completed = date_completed|local_time("%m/%d/%Y") if date_completed else '' %}
+
+        {% if protocol_step.id in PROTOCOL_STEP_IDS and protocol_step_date_completed and protocol_step_date_completed not in protocol_step_date_completed_list %}
+          {% set _ = protocol_step_date_completed_list.append(protocol_step_date_completed) %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+
+{% set CANNABINOIDS_TEST = test_map[ASSAY_ID_MAP['CANNABINOIDS']]['test'] %}
+
+{% if CANNABINOIDS_TEST and total_thc.value is not none and total_thc.value|string|trim != '' %}
+  {% set total_thc_clean = total_thc.value|string|replace('%', '')|trim %}
+  {% set TOTAL_THC_DISPLAY = "{:.2f}%".format(total_thc_clean|float) %}
+  {% set TOTAL_THC_CLASS = 'value' %}
+{% elif CANNABINOIDS_TEST %}
+  {% set TOTAL_THC_DISPLAY = "0.00%" %}
+  {% set TOTAL_THC_CLASS = 'value' %}
+{% else %}
+  {% set TOTAL_THC_DISPLAY = 'Not Tested' %}
+  {% set TOTAL_THC_CLASS = 'not-tested' %}
+{% endif %}
+
+  {% set TERPENES_TEST = test_map[ASSAY_ID_MAP['TERPENES']]['test'] %}
+  {% set HEAVY_METALS_TEST = test_map[ASSAY_ID_MAP['HEAVY_METALS']]['test'] %}
+  {% set MYCOTOXINS_TEST = test_map[ASSAY_ID_MAP['MYCOTOXINS']]['test'] %}
+  {% set PESTICIDES_TEST = test_map[ASSAY_ID_MAP['PESTICIDES']]['test'] %}
+  {% set RESIDUAL_SOLVENTS_TEST = test_map[ASSAY_ID_MAP['RESIDUAL_SOLVENTS']]['test'] %}
+  {% set FOREIGN_MATERIAL_TEST = test_map[ASSAY_ID_MAP['FOREIGN_MATERIAL']]['test'] %}
+  {% set HOMOGENEITY_TEST = test_map[ASSAY_ID_MAP['HOMOGENEITY']]['test'] %}
+
+  {% set MICROBIAL_ANALYSIS_TESTS = test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['tests'] %}
+  {% set MICROBIAL_FORMATTED_TEST_METHOD = test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['test_method_list']|join(', ') if test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['test_method_list'] else '' %}
+  {% set MICROBIAL_FORMATTED_TOTAL_PRIMARY_SAMPLE_WEIGHT = test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['total_primary_sample_weight_list']|join(', ') if test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['total_primary_sample_weight_list'] else '' %}
+  {% set MICROBIAL_FORMATTED_EQUATIONS = test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['equations_list']|join(', ') if test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['equations_list'] else '' %}
+  {% set MICROBIAL_FORMATTED_METRC_SOURCE_PACKAGE_ID = test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['metrc_source_package_id_list']|join(', ') if test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['metrc_source_package_id_list'] else '' %}
+  {% set MICROBIAL_FORMATTED_METRC_LAB_TEST_ID = test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['metrc_lab_test_id_list']|join(', ') if test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['metrc_lab_test_id_list'] else '' %}
+
+  {% set microbial_pf_class = 'not-tested' %}
+  {% if 'fail' in test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['pf_class_list'] %}
+    {% set microbial_pf_class = 'fail' %}
+  {% elif 'pass' in test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']]['pf_class_list'] %}
+    {% set microbial_pf_class = 'pass' %}
+  {% endif %}
+
+  {% set _ = test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']].update({
+    'pass_fail': get_label_for_pf_class(microbial_pf_class),
+    'pf_class': microbial_pf_class,
+  }) %}
+
+  {% set RESULT_PF_CLASS = namespace(
+    total_thc_class=TOTAL_THC_CLASS,
+    mycotoxins_pf=test_map[ASSAY_ID_MAP['MYCOTOXINS']].get('pf_class', 'not-tested'),
+    pesticides_pf=test_map[ASSAY_ID_MAP['PESTICIDES']].get('pf_class', 'not-tested'),
+    microbials_pf=test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']].get('pf_class', 'not-tested'),
+    heavy_metals_pf=test_map[ASSAY_ID_MAP['HEAVY_METALS']].get('pf_class', 'not-tested'),
+    residual_solvents_pf=test_map[ASSAY_ID_MAP['RESIDUAL_SOLVENTS']].get('pf_class', 'not-tested'),
+    foreign_matter_pf=test_map[ASSAY_ID_MAP['FOREIGN_MATERIAL']].get('pf_class', 'not-tested'),
+    homogeneity_pf=test_map[ASSAY_ID_MAP['HOMOGENEITY']].get('pf_class', 'not-tested')
+  )%}
+
+  {% set RESULTS = namespace(
+    total_thc_value=TOTAL_THC_DISPLAY,
+    mycotoxins_pf=test_map[ASSAY_ID_MAP['MYCOTOXINS']].get('pass_fail', 'Not Tested'),
+    pesticides_pf=test_map[ASSAY_ID_MAP['PESTICIDES']].get('pass_fail', 'Not Tested'),
+    microbials_pf=test_map[ASSAY_ID_MAP['MICROBIAL_ANALYSIS']].get('pass_fail', 'Not Tested'),
+    heavy_metals_pf=test_map[ASSAY_ID_MAP['HEAVY_METALS']].get('pass_fail', 'Not Tested'),
+    residual_solvents_pf=test_map[ASSAY_ID_MAP['RESIDUAL_SOLVENTS']].get('pass_fail', 'Not Tested'),
+    foreign_matter_pf=test_map[ASSAY_ID_MAP['FOREIGN_MATERIAL']].get('pass_fail', 'Not Tested'),
+    homogeneity_pf=test_map[ASSAY_ID_MAP['HOMOGENEITY']].get('pass_fail', 'Not Tested')
+  ) %}
+
+  {% set overall_pf = namespace(value=true) %}
+  {% for test_context in test_map.values() %}
+    {% if test_context.get('pf_class') == 'fail' %}
+      {% set overall_pf.value = false %}
+    {% endif %}
+  {% endfor %}
+
+  {% set sample_preparation = protocol_step_date_completed_list|join(', ') %}
+
+  {# FIND SAMPLE IMAGE #}
+
+  {% set SAMPLE_IMAGE_ATTACHMENT = namespace(value=none) %}
+  {% for attachment in sample.get_attachments() %}
+    {% set attachment_fullname = attachment.asset.file_name if attachment.asset else '' %}
+    {% if attachment_fullname %}
+      {% set attachment_ext = attachment_fullname.split('.')[-1] %}
+      {% set attachment_name = attachment_fullname.split('.')[0] %}
+
+      {% if attachment_name|trim|lower == 'sample_img' and attachment_ext|lower in IMG_EXTENSIONS %}
+        {% set SAMPLE_IMAGE_ATTACHMENT.value = attachment %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {# Upload the 8-tile hex image to this report config with the exact filename below.
+     If it is not attached, the old 7-tile image URL remains as a fallback. #}
+  {% set HEX_TILE_ATTACHMENT = report_config_attachments.get('hexagon-grid-8tile-1336x618.png') if report_config_attachments else none %}
+END CUSTOM JINJA CODE-->
+<style>
+  @page {
+    background-image: url("{{report_config_attachments['AIT Watermark.png'].asset_id|get_asset_file_download_url() if report_config_attachments and report_config_attachments['AIT Watermark.png']}}");
+    background-size: 7in;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: 'Roboto';
+  }
+
+  * {
+    font-family: 'Roboto';
+  }
+
+  .hex-container {
+    position: relative;
+    width: 4.5in;
+    display: inline-block;
+  }
+
+  .hex-container img {
+    width: 100%;
+    display: block;
+  }
+
+  .hex-text {
+    position: absolute;
+    text-align: center;
+    width: 20%;
+    margin-left: -10%;
+  }
+
+  .hex-status {
+    display: table;
+    width: 100%;
+    height: 38pt;
+  }
+
+  .hex-status-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 19pt;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+    line-height: 1;
+    height: 38pt;
+  }
+
+  .hex-status-inner.pass {
+    color: #2da841;
+  }
+
+  .hex-status-inner.fail {
+    color: #d42b2b;
+  }
+
+  .hex-status-inner.not-tested {
+    color: #888;
+  }
+
+  .hex-status-inner.value {
+    color: #333;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+    font-size: 15pt;
+  }
+
+  .hex-label {
+    font-size: 6pt;
+    color: #555;
+    text-align: center;
+  }
+
+  .test-results-container {
+    display: table;
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
+    border-spacing: 5px 0;
+  }
+
+  .test-results-container-row {
+    display: table-row;
+  }
+
+  .test-results-container-cell {
+    display: table-cell;
+  }
+
+  .ait-report-heavy-metals-worksheet-container,
+  .ait-report-mycotoxins-worksheet-container,
+  .ait-report-worksheet-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ait-report-heavy-metals-worksheet-container table,
+  .ait-report-mycotoxins-worksheet-container table,
+  .ait-report-worksheet-container table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+  }
+
+  .ait-report-heavy-metals-worksheet-container table,
+  .ait-report-mycotoxins-worksheet-container td,
+  .ait-report-heavy-metals-worksheet-container table,
+  .ait-report-mycotoxins-worksheet-container td,
+  .ait-report-worksheet-container table,
+  .ait-report-worksheet-container th {
+    font-size: 8pt !important;
+    height: auto !important;
+    min-height: 10px !important;
+    max-height: none !important;
+  }
+
+  .ait-report-heavy-metals-worksheet-container td,
+  .ait-report-mycotoxins-worksheet-container td,
+  .ait-report-worksheet-container td {
+    font-size: 8pt !important;
+    height: auto !important;
+    min-height: 10px !important;
+    max-height: none !important;
+  }
+
+  .ait-report-microbial-worksheet-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ait-report-microbial-worksheet-container table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+  }
+
+  .ait-report-microbial-worksheet-container table,
+  .ait-report-microbial-worksheet-container th {
+    font-size: 8pt !important;
+    height: auto !important;
+    min-height: 10px !important;
+    max-height: none !important;
+    border-color: transparent !important;
+    border-bottom-color: black !important;
+  }
+
+  .ait-report-mycotoxins-worksheet-container td:nth-child(1) {
+    width: 30%;
+    max-width: 30%;
+    min-width: 30%;
+  }
+
+  .ait-report-heavy-metals-worksheet-container td:nth-child(1),
+  .ait-report-microbial-worksheet-container th:nth-child(1) {
+    width: 20%;
+    max-width: 20%;
+    min-width: 20%;
+  }
+
+  .ait-report-heavy-metals-worksheet-container td:nth-child(2),
+  .ait-report-mycotoxins-worksheet-container td:nth-child(2),
+  .ait-report-microbial-worksheet-container th:nth-child(2) {
+    width: 14%;
+    max-width: 14%;
+    min-width: 14%;
+  }
+
+  .ait-report-heavy-metals-worksheet-container td:nth-child(3),
+  .ait-report-mycotoxins-worksheet-container td:nth-child(3),
+  .ait-report-microbial-worksheet-container th:nth-child(3) {
+    width: 9%;
+    max-width: 9%;
+    min-width: 9%;
+  }
+
+  .ait-report-heavy-metals-worksheet-container td:nth-child(4),
+  .ait-report-mycotoxins-worksheet-container td:nth-child(4),
+  .ait-report-microbial-worksheet-container th:nth-child(4) {
+    width: 10%;
+    max-width: 10%;
+    min-width: 10%;
+  }
+
+  .ait-report-heavy-metals-worksheet-container td:nth-child(5),
+  .ait-report-mycotoxins-worksheet-container td:nth-child(5),
+  .ait-report-microbial-worksheet-container th:nth-child(5) {
+    width: 14%;
+    max-width: 14%;
+    min-width: 14%;
+  }
+
+  .ait-report-heavy-metals-worksheet-container td:nth-child(6),
+  .ait-report-mycotoxins-worksheet-container td:nth-child(6),
+  .ait-report-microbial-worksheet-container th:nth-child(6) {
+    width: 15%;
+    max-width: 15%;
+    min-width: 15%;
+  }
+
+  .ait-report-microbial-worksheet-container tr td:nth-child(1) {
+    text-align: left !important;
+  }
+
+  .ait-report-microbial-worksheet-container td {
+    font-size: 7pt !important;
+    height: auto !important;
+    min-height: 10px !important;
+    max-height: none !important;
+    border-color: transparent !important;
+  }
+
+  .ait-report-homogeneity-worksheet-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 6px;
+  }
+
+  .ait-report-homogeneity-worksheet-container table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+  }
+
+  .ait-report-homogeneity-worksheet-container table,
+  .ait-report-homogeneity-worksheet-container th,
+  .ait-report-homogeneity-worksheet-container td {
+    font-size: 7pt !important;
+    height: auto !important;
+    min-height: 10px !important;
+    max-height: none !important;
+    padding: 2px 3px !important;
+  }
+
+  .ait-report-homogeneity-worksheet-container th {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .ait-report-homogeneity-worksheet-container td {
+    text-align: center;
+  }
+</style>
+<div>
+<table style="border-collapse: collapse; width: 8.48in;" border="1"><colgroup> <col style="width: 35%;"> <col style="width: 32%;"> <col style="width: 33%;"> </colgroup>
+<tbody>
+<tr style="font-size: 9pt;">
+<td style="font-size: 9pt;">Collected (Sampled): {{sample.additional_fields['date_collected_sampled'].date_or_datetime_value | local_time("%m/%d/%Y") if sample and sample.additional_fields['date_collected_sampled'] and sample.additional_fields['date_collected_sampled'].date_or_datetime_value}}</td>
+<td style="font-size: 9pt;">Strain: {{sample.strain if sample and sample.strain}}</td>
+<td style="font-size: 9pt;">Sampling Method: {{"SOP Client Method" if sample.date_collected_sampled else ""}}</td>
+</tr>
+<tr style="font-size: 9pt;">
+<td style="font-size: 9pt;">Received By Testing Lab: {{sample.date_received1 | local_time("%m/%d/%Y") if sample and sample.date_received1}}</td>
+<td style="font-size: 9pt;">Batch No: {{sample.batch_id if sample and sample.batch_id}}</td>
+<td style="font-size: 9pt;">Description: {{sample.description | html_replace_br if sample and sample.description}}</td>
+</tr>
+<tr style="font-size: 9pt;">
+<td style="font-size: 9pt;">Sample Preparation: {{sample_preparation}}</td>
+<td style="font-size: 9pt;">Batch Size: {{sample.batch_size if sample and sample.batch_size}}</td>
+<td style="font-size: 9pt;">Metrc ID: {{sample.metrc_uid if sample and sample.metrc_uid}}</td>
+</tr>
+</tbody>
+</table>
+<div><hr style="color: black;"></div>
+<div>
+<table style="border-collapse: collapse; width: 8.48in;" border="1"><colgroup> <col style="width: 18%;"> <col style="width: 64%;"> <col style="width: 18%;"> </colgroup>
+<tbody>
+<tr>
+<td><!-- {% if SAMPLE_IMAGE_ATTACHMENT.value %} --> <img style="width: 1.5in;" src="file://{{ SAMPLE_IMAGE_ATTACHMENT.value.asset.id | download_file_to_local_tmp if SAMPLE_IMAGE_ATTACHMENT.value and SAMPLE_IMAGE_ATTACHMENT.value.asset and SAMPLE_IMAGE_ATTACHMENT.value.asset.id }}" alt=""> <!-- {% endif %} --></td>
+<td style="text-align: center;">
+<div class="hex-container"><img style="width: 100%; opacity: 0.5;" src="{{ HEX_TILE_ATTACHMENT.asset_id|get_asset_file_download_url() if HEX_TILE_ATTACHMENT else 'blob:https:/ait.qbench.net/fd606ba3-f7b6-48da-9447-4d2544a41b52' }}" alt=""> <!-- Row 1 -->
+<div class="hex-text" style="left: 11.1%; top: 14%;">
+<div class="hex-status">
+<div class="hex-status-inner {{RESULT_PF_CLASS.total_thc_class}}">{{RESULTS.total_thc_value}}</div>
+</div>
+<div class="hex-label">Total THC</div>
+</div>
+<div class="hex-text" style="left: 33.2%; top: 14%;">
+<div class="hex-status">
+<div class="hex-status-inner {{RESULT_PF_CLASS.mycotoxins_pf}}">{{RESULTS.mycotoxins_pf}}</div>
+</div>
+<div class="hex-label">Mycotoxins</div>
+</div>
+<div class="hex-text" style="left: 55.4%; top: 14%;">
+<div class="hex-status">
+<div class="hex-status-inner {{RESULT_PF_CLASS.pesticides_pf}}">{{RESULTS.pesticides_pf}}</div>
+</div>
+<div class="hex-label">Pesticides</div>
+</div>
+<div class="hex-text" style="left: 77.5%; top: 14%;">
+<div class="hex-status">
+<div class="hex-status-inner {{RESULT_PF_CLASS.microbials_pf}}">{{RESULTS.microbials_pf}}</div>
+</div>
+<div class="hex-label">Microbials</div>
+</div>
+<!-- Row 2 -->
+<div class="hex-text" style="left: 22.2%; top: 55%;">
+<div class="hex-status">
+<div class="hex-status-inner {{RESULT_PF_CLASS.heavy_metals_pf}}">{{RESULTS.heavy_metals_pf}}</div>
+</div>
+<div class="hex-label">Heavy Metals</div>
+</div>
+<div class="hex-text" style="left: 44.3%; top: 55%;">
+<div class="hex-status">
+<div class="hex-status-inner {{RESULT_PF_CLASS.residual_solvents_pf}}">{{RESULTS.residual_solvents_pf}}</div>
+</div>
+<div class="hex-label">Residual Solvents</div>
+</div>
+<div class="hex-text" style="left: 66.5%; top: 55%;">
+<div class="hex-status">
+<div class="hex-status-inner {{RESULT_PF_CLASS.foreign_matter_pf}}">{{RESULTS.foreign_matter_pf}}</div>
+</div>
+<div class="hex-label">Foreign Matter</div>
+</div>
+<div class="hex-text" style="left: 88.6%; top: 55%;">
+<div class="hex-status">
+<div class="hex-status-inner {{RESULT_PF_CLASS.homogeneity_pf}}">{{RESULTS.homogeneity_pf}}</div>
+</div>
+<div class="hex-label">Homogeneity</div>
+</div>
+</div>
+</td>
+<td style="text-align: center;"><!-- {% if overall_pf.value %} --> <img style="width: 1.5in;" src="blob:https://ait.qbench.net/65f16342-a94a-451c-b706-31e183f0450c" alt=""> <!-- {% endif %} --></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><hr style="color: black;"></div>
+<div><!-- {% if CANNABINOIDS_TEST or TERPENES_TEST %} --> <!-- {% set test_count = (1 if CANNABINOIDS_TEST else 0) + (1 if TERPENES_TEST else 0) %} --> <!-- {% set _width = 100 if test_count == 1 else 49 %} -->
+<div class="test-results-container">
+<div class="test-results-container-row"><!-- {% if CANNABINOIDS_TEST %} -->
+<div class="test-results-container-cell" style="width: {{_width}}%; max-width: {{_width}}%;">
+<div id="cannabinoids-results">
+<div style="font-size: 13pt; font-weight: bold; text-align: center;">{{CANNABINOIDS_TEST.assay.title if CANNABINOIDS_TEST}}</div>
+<div class="ait-report-worksheet-container">{{QBTestService().render_worksheet(CANNABINOIDS_TEST, named_cell="report_results", ignore_empty_rows=true) if CANNABINOIDS_TEST else 'Pending worksheets'}}</div>
+<div style="font-size: 8pt;">{{"Test Method: {}".format(CANNABINOIDS_TEST.assay.method) if CANNABINOIDS_TEST and CANNABINOIDS_TEST.assay.method}}</div>
+<div style="font-size: 8pt;">{{"Total Primary Sample Weight: {}".format(CANNABINOIDS_TEST.test_sample_weight) if CANNABINOIDS_TEST and CANNABINOIDS_TEST.test_sample_weight is not none}}</div>
+<div style="font-size: 6pt;">{{"Equations: {}".format(CANNABINOIDS_TEST.assay.coa_equations) if CANNABINOIDS_TEST and CANNABINOIDS_TEST.assay.coa_equations}}</div>
+<div style="font-size: 8pt;">{{"METRC Source Package ID: {}".format(CANNABINOIDS_TEST.metrc_source_package_id) if CANNABINOIDS_TEST and CANNABINOIDS_TEST.metrc_source_package_id}}</div>
+<div style="font-size: 8pt;">{{"METRC Lab Test ID: {}".format(CANNABINOIDS_TEST.metrc_lab_test_id) if CANNABINOIDS_TEST and CANNABINOIDS_TEST.metrc_lab_test_id}}</div>
+</div>
+</div>
+<!-- {% endif %} --> <!-- {% if TERPENES_TEST %} -->
+<div class="test-results-container-cell" style="width: {{_width}}%; max-width: {{_width}}%;">
+<div id="terpenes-results">
+<div style="font-size: 13pt; font-weight: bold; text-align: center;">{{TERPENES_TEST.assay.title if TERPENES_TEST}}</div>
+<div class="ait-report-worksheet-container">{{QBTestService().render_worksheet(TERPENES_TEST, named_cell="report_results", ignore_empty_rows=true) if TERPENES_TEST else 'Pending worksheets'}}</div>
+<div style="font-size: 8pt;">{{"Test Method: {}".format(TERPENES_TEST.assay.method) if TERPENES_TEST and TERPENES_TEST.assay.method}}</div>
+<div style="font-size: 8pt;">{{"Total Primary Sample Weight: {}".format(TERPENES_TEST.test_sample_weight) if TERPENES_TEST and TERPENES_TEST.test_sample_weight is not none}}</div>
+<div style="font-size: 6pt;">{{"Equations: {}".format(TERPENES_TEST.assay.coa_equations) if TERPENES_TEST and TERPENES_TEST.assay.coa_equations}}</div>
+<div style="font-size: 8pt;">{{"METRC Source Package ID: {}".format(TERPENES_TEST.metrc_source_package_id) if TERPENES_TEST and TERPENES_TEST.metrc_source_package_id}}</div>
+<div style="font-size: 8pt;">{{"METRC Lab Test ID: {}".format(TERPENES_TEST.metrc_lab_test_id) if TERPENES_TEST and TERPENES_TEST.metrc_lab_test_id}}</div>
+</div>
+</div>
+<!-- {% endif %} --></div>
+</div>
+<!-- {% endif %} --></div>
+<!-- {% if HOMOGENEITY_TEST %} --> <div style="page-break-before: always;"></div>
+<div id="homogeneity-results">
+<div style="font-size: 13pt; font-weight: bold; text-align: center;">{{HOMOGENEITY_TEST.assay.title if HOMOGENEITY_TEST}}</div>
+<div class="ait-report-homogeneity-worksheet-container">{{QBTestService().render_worksheet(HOMOGENEITY_TEST, named_cell="report_results", ignore_empty_rows=true) if HOMOGENEITY_TEST else 'Pending worksheets'}}</div>
+<div style="font-size: 8pt;">{{"Test Method: {}".format(HOMOGENEITY_TEST.assay.method) if HOMOGENEITY_TEST and HOMOGENEITY_TEST.assay.method}}</div>
+<div style="font-size: 8pt;">{{"Total Primary Sample Weight: {}".format(HOMOGENEITY_TEST.test_sample_weight) if HOMOGENEITY_TEST and HOMOGENEITY_TEST.test_sample_weight is not none}}</div>
+<div style="font-size: 6pt;">{{"Equations: {}".format(HOMOGENEITY_TEST.assay.coa_equations) if HOMOGENEITY_TEST and HOMOGENEITY_TEST.assay.coa_equations}}</div>
+<div style="font-size: 8pt;">{{"METRC Source Package ID: {}".format(HOMOGENEITY_TEST.metrc_source_package_id) if HOMOGENEITY_TEST and HOMOGENEITY_TEST.metrc_source_package_id}}</div>
+<div style="font-size: 8pt;">{{"METRC Lab Test ID: {}".format(HOMOGENEITY_TEST.metrc_lab_test_id) if HOMOGENEITY_TEST and HOMOGENEITY_TEST.metrc_lab_test_id}}</div>
+</div>
+<!-- {% endif %} -->
+<div><!-- {% set test_count = (1 if MICROBIAL_ANALYSIS_TESTS else 0) + (1 if HEAVY_METALS_TEST else 0) + (1 if MYCOTOXINS_TEST else 0) %} --> <!-- {% if test_count %} --> <div style="page-break-before: always;"></div>
+<div class="test-results-container-row"><!-- {% if MICROBIAL_ANALYSIS_TESTS %} -->
+<div class="test-results-container-cell" style="width: 100%; max-width: 100%;">
+<div id="microbial-analysis-results">
+<div style="font-size: 13pt; font-weight: bold; text-align: center;">Microbial Analysis</div>
+<div class="ait-report-microbial-worksheet-container">{{QBOrderService().render_test_worksheets_summary(MICROBIAL_ANALYSIS_TESTS, header_named_cells=["report_header"], data_named_cells=["report_content"], params={"assay_ids": MICROBIAL_ASSAY_IDS, }, ignore_empty_rows=true,use_tbody=true)}}</div>
+<div style="font-size: 8pt;">{{"Test Method: {}".format(MICROBIAL_FORMATTED_TEST_METHOD) if MICROBIAL_FORMATTED_TEST_METHOD else ''}}</div>
+<div style="font-size: 8pt;">{{"Total Primary Sample Weight: {}".format(MICROBIAL_FORMATTED_TOTAL_PRIMARY_SAMPLE_WEIGHT) if MICROBIAL_FORMATTED_TOTAL_PRIMARY_SAMPLE_WEIGHT else ''}}</div>
+<div style="font-size: 6pt;">{{"Equations: {}".format(MICROBIAL_FORMATTED_EQUATIONS) if MICROBIAL_FORMATTED_EQUATIONS else ''}}</div>
+<div style="font-size: 8pt;">{{"METRC Source Package ID: {}".format(MICROBIAL_FORMATTED_METRC_SOURCE_PACKAGE_ID) if MICROBIAL_FORMATTED_METRC_SOURCE_PACKAGE_ID else ''}}</div>
+<div style="font-size: 8pt;">{{"METRC Lab Test ID: {}".format(MICROBIAL_FORMATTED_METRC_LAB_TEST_ID) if MICROBIAL_FORMATTED_METRC_LAB_TEST_ID else ''}}</div>
+</div>
+<!-- {% endif %} --></div>
+</div>
+<div class="test-results-container-row"><!-- {% if HEAVY_METALS_TEST %} -->
+<div class="test-results-container-cell" style="width: 50%; max-width: 50%;">
+<div id="heavy-metals-results">
+<div style="font-size: 13pt; font-weight: bold; text-align: center;"><br>{{HEAVY_METALS_TEST.assay.title if HEAVY_METALS_TEST}}</div>
+<div class="ait-report-heavy-metals-worksheet-container">{{QBTestService().render_worksheet(HEAVY_METALS_TEST, named_cell="report_results", ignore_empty_rows=true) if HEAVY_METALS_TEST else 'Pending worksheets'}}</div>
+<div style="font-size: 8pt;">{{"Test Method: {}".format(HEAVY_METALS_TEST.assay.method) if HEAVY_METALS_TEST and HEAVY_METALS_TEST.assay.method}}</div>
+<div style="font-size: 8pt;">{{"Total Primary Sample Weight: {}".format(HEAVY_METALS_TEST.test_sample_weight) if HEAVY_METALS_TEST and HEAVY_METALS_TEST.test_sample_weight is not none}}</div>
+<div style="font-size: 6pt;">{{"Equations: {}".format(HEAVY_METALS_TEST.assay.coa_equations) if HEAVY_METALS_TEST and HEAVY_METALS_TEST.assay.coa_equations}}</div>
+<div style="font-size: 8pt;">{{"METRC Source Package ID: {}".format(HEAVY_METALS_TEST.metrc_source_package_id) if HEAVY_METALS_TEST and HEAVY_METALS_TEST.metrc_source_package_id}}</div>
+<div style="font-size: 8pt;">{{"METRC Lab Test ID: {}".format(HEAVY_METALS_TEST.metrc_lab_test_id) if HEAVY_METALS_TEST and HEAVY_METALS_TEST.metrc_lab_test_id}}</div>
+</div>
+<!-- {% endif %} --> <!-- {% if MYCOTOXINS_TEST %} -->
+<div class="test-results-container-cell" style="width: 50%; max-width: 50%;">
+<div id="mycotoxins-results">
+<div style="font-size: 13pt; font-weight: bold; text-align: center;">{{MYCOTOXINS_TEST.assay.title if MYCOTOXINS_TEST}}</div>
+<div class="ait-report-mycotoxins-worksheet-container">{{QBTestService().render_worksheet(MYCOTOXINS_TEST, named_cell="report_results", ignore_empty_rows=true) if MYCOTOXINS_TEST else 'Pending worksheets'}}</div>
+<div style="font-size: 8pt;">{{"Test Method: {}".format(MYCOTOXINS_TEST.assay.method) if MYCOTOXINS_TEST and MYCOTOXINS_TEST.assay.method}}</div>
+<div style="font-size: 8pt;">{{"Total Primary Sample Weight: {}".format(MYCOTOXINS_TEST.test_sample_weight) if MYCOTOXINS_TEST and MYCOTOXINS_TEST.test_sample_weight is not none}}</div>
+<div style="font-size: 6pt;">{{"Equations: {}".format(MYCOTOXINS_TEST.assay.coa_equations) if MYCOTOXINS_TEST and MYCOTOXINS_TEST.assay.coa_equations}}</div>
+<div style="font-size: 8pt;">{{"METRC Source Package ID: {}".format(MYCOTOXINS_TEST.metrc_source_package_id) if MYCOTOXINS_TEST and MYCOTOXINS_TEST.metrc_source_package_id}}</div>
+<div style="font-size: 8pt;">{{"METRC Lab Test ID: {}".format(MYCOTOXINS_TEST.metrc_lab_test_id) if MYCOTOXINS_TEST and MYCOTOXINS_TEST.metrc_lab_test_id}}</div>
+</div>
+<!-- {% endif %} --></div>
+</div>
+</div>
+<!-- {% endif %} --></div>
+<!-- {% if PESTICIDES_TEST %} --> <div style="page-break-before: always;"></div>
+<div id="pesticides-results">
+<div style="font-size: 13pt; font-weight: bold; text-align: center;"> </div>
+{{PESTICIDES_TEST.assay.title if PESTICIDES_TEST}}</div>
+<div class="ait-report-worksheet-container">{{QBTestService().render_worksheet(PESTICIDES_TEST, named_cell="report_results", ignore_empty_rows=true) if PESTICIDES_TEST else 'Pending worksheets'}}</div>
+<div style="font-size: 8pt;">{{"Test Method: {}".format(PESTICIDES_TEST.assay.method) if PESTICIDES_TEST and PESTICIDES_TEST.assay.method}}</div>
+<div style="font-size: 8pt;">{{"Total Primary Sample Weight: {}".format(PESTICIDES_TEST.test_sample_weight) if PESTICIDES_TEST and PESTICIDES_TEST.test_sample_weight is not none}}</div>
+<div style="font-size: 6pt;">{{"Equations: {}".format(PESTICIDES_TEST.assay.coa_equations) if PESTICIDES_TEST and PESTICIDES_TEST.assay.coa_equations}}</div>
+<div style="font-size: 8pt;">{{"METRC Source Package ID: {}".format(PESTICIDES_TEST.metrc_source_package_id) if PESTICIDES_TEST and PESTICIDES_TEST.metrc_source_package_id}}</div>
+<div style="font-size: 8pt;">{{"METRC Lab Test ID: {}".format(PESTICIDES_TEST.metrc_lab_test_id) if PESTICIDES_TEST and PESTICIDES_TEST.metrc_lab_test_id}}</div>
+</div>
+<!-- {% endif %} -->
+<div> </div>
+<!-- {% if RESIDUAL_SOLVENTS_TEST or FOREIGN_MATERIAL_TEST %} -->
+<div> </div>
+<!-- {% set test_count = (1 if RESIDUAL_SOLVENTS_TEST else 0) + (1 if FOREIGN_MATERIAL_TEST else 0) %} -->
+<div class="test-results-container">
+<div class="test-results-container-row">
+<div class="test-results-container-cell" style="width: 49%; max-width: 49%; min-width: 49%;"><!-- {% if RESIDUAL_SOLVENTS_TEST %} -->
+<div id="residual-solvents-results">
+<div style="font-size: 13pt; font-weight: bold; text-align: center;">{{RESIDUAL_SOLVENTS_TEST.assay.title if RESIDUAL_SOLVENTS_TEST}}</div>
+<div class="ait-report-worksheet-container">{{QBTestService().render_worksheet(RESIDUAL_SOLVENTS_TEST, named_cell="report_results", ignore_empty_rows=true) if RESIDUAL_SOLVENTS_TEST else 'Pending worksheets'}}</div>
+<div style="font-size: 8pt;">{{"Test Method: {}".format(RESIDUAL_SOLVENTS_TEST.assay.method) if RESIDUAL_SOLVENTS_TEST and RESIDUAL_SOLVENTS_TEST.assay.method}}</div>
+<div style="font-size: 8pt;">{{"Total Primary Sample Weight: {}".format(RESIDUAL_SOLVENTS_TEST.test_sample_weight) if RESIDUAL_SOLVENTS_TEST and RESIDUAL_SOLVENTS_TEST.test_sample_weight is not none}}</div>
+<div style="font-size: 6pt;">{{"Equations: {}".format(RESIDUAL_SOLVENTS_TEST.assay.coa_equations) if RESIDUAL_SOLVENTS_TEST and RESIDUAL_SOLVENTS_TEST.assay.coa_equations}}</div>
+<div style="font-size: 8pt;">{{"METRC Source Package ID: {}".format(RESIDUAL_SOLVENTS_TEST.metrc_source_package_id) if RESIDUAL_SOLVENTS_TEST and RESIDUAL_SOLVENTS_TEST.metrc_source_package_id}}</div>
+<div style="font-size: 8pt;">{{"METRC Lab Test ID: {}".format(RESIDUAL_SOLVENTS_TEST.metrc_lab_test_id) if RESIDUAL_SOLVENTS_TEST and RESIDUAL_SOLVENTS_TEST.metrc_lab_test_id}}</div>
+</div>
+<!-- {% endif %} --></div>
+<div class="test-results-container-cell" style="width: 49%; max-width: 49%; min-width: 49%;"><!-- {% if FOREIGN_MATERIAL_TEST %} -->
+<div id="foreign-material-results">
+<div style="font-size: 13pt; font-weight: bold; text-align: center;">{{FOREIGN_MATERIAL_TEST.assay.title if FOREIGN_MATERIAL_TEST}}</div>
+<div class="ait-report-worksheet-container">{{QBTestService().render_worksheet(FOREIGN_MATERIAL_TEST, named_cell="report_results", ignore_empty_rows=true) if FOREIGN_MATERIAL_TEST else 'Pending worksheets'}}</div>
+<div style="font-size: 8pt;">{{"Test Method: {}".format(FOREIGN_MATERIAL_TEST.assay.method) if FOREIGN_MATERIAL_TEST and FOREIGN_MATERIAL_TEST.assay.method}}</div>
+<div style="font-size: 8pt;">{{"Total Primary Sample Weight: {}".format(FOREIGN_MATERIAL_TEST.test_sample_weight) if FOREIGN_MATERIAL_TEST and FOREIGN_MATERIAL_TEST.test_sample_weight is not none}}</div>
+<div style="font-size: 6pt;">{{"Equations: {}".format(FOREIGN_MATERIAL_TEST.assay.coa_equations) if FOREIGN_MATERIAL_TEST and FOREIGN_MATERIAL_TEST.assay.coa_equations}}</div>
+<div style="font-size: 8pt;">{{"METRC Source Package ID: {}".format(FOREIGN_MATERIAL_TEST.metrc_source_package_id) if FOREIGN_MATERIAL_TEST and FOREIGN_MATERIAL_TEST.metrc_source_package_id}}</div>
+<div style="font-size: 8pt;">{{"METRC Lab Test ID: {}".format(FOREIGN_MATERIAL_TEST.metrc_lab_test_id) if FOREIGN_MATERIAL_TEST and FOREIGN_MATERIAL_TEST.metrc_lab_test_id}}</div>
+</div>
+<!-- {% endif %} --></div>
+</div>
+</div>
+<!-- {% endif %} -->

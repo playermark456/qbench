@@ -1,0 +1,42 @@
+<style>
+  * {
+    font-family: 'Roboto';
+  }
+  @page {
+      counter-increment: page;
+    font-family: 'Roboto';
+
+      @bottom-center {
+      font-family: 'Roboto';
+          font-size: 8pt;
+          content: "Page " counter(page) " of " counter(pages);
+          margin-bottom: -1.2in;
+      }
+  }
+</style>
+<div>
+<table style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 75%;"><col style="width: 25%;"></colgroup>
+<tbody>
+<tr>
+<td style="border-bottom: 2px solid black; font-size: 9pt;">
+<div style="max-height: 4em; overflow: hidden; line-clamp: 3;">Location of Analysis: {{sample.location.location_address | html_replace_br if sample and sample.location and sample.location.location_address}}</div>
+</td>
+<td style="text-align: center;" rowspan="2"><img style="width: 2in;" src="blob:https://ait.qbench.net/a801115b-0e08-4707-8452-3d5de4f69675" alt=""></td>
+</tr>
+<tr>
+<td>
+<div style="font-size: 6pt;">This product has been tested by Adams Independent Testing using valid testing methods. Values reported apply only to the product testing and only as the sample was received. Adams Independent Testing makes no claims as to the efficacy, safety, or other risks associated with any detected or non-detected level of any compounds reported herein. This Certificate shall not be reported except in full, without the written approval and Adams Independent Testing. Test results that are Pass/Fail are reported using the <span data-highlighted="true" data-vc="highlighted-text">OCM</span> MN Technical Authority XX/XX/2025. Results above the Limit will be considered Fail and will be in red. This is for informational purposes only and can be changed upon request. Measurement Uncertainty is not used for Pass/Fail conditions, but available upon request. Another disclaimer about not all potential/existing hazards were tested.</div>
+<div style="font-size: 6pt;">{{customer.program_disclaimer_text if customer and customer.program_disclaimer_text}}</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div><img style="width: 8.5in; position: absolute; left: -0.09in; top: 0.5in;" src="blob:https://ait.qbench.net/5d2080c5-2736-4048-81b0-fbe3645a76b5" alt="" width="8.5in"></div>
+<div style="z-index: 10; position: absolute; right: 0.5in; bottom: 0.1in;">
+<div style="color: white; text-align: end; font-size: 9pt;"><!-- {% if customer.customer_program in ["MN OCM Hemp Derived Cannabis Products (HDCP)","MN OCM Cannabis"] %} --> MN OCM License No: XYZXYZ<!-- {% else %} -->   <!-- {% endif %} --></div>
+<div style="color: white; text-align: end; font-size: 9pt;"><!-- {% if customer.customer_program in ["MN OCM Hemp Derived Cannabis Products (HDCP)","MN OCM Cannabis"] %} --> METRC No: XYZXYZ<!-- {% else %} -->   <!-- {% endif %} --></div>
+<div> </div>
+<div style="color: white; text-align: end;"><strong>{{sample.location.location_address if sample and sample.location and sample.location.location_address else ' '}}</strong></div>
+</div>
+<div style="z-index: 10; position: absolute; left: 0; bottom: 0in;"><img style="width: 0.6in; height: 0.6in;" src="{{ report.public_link() | qr_code_base64 }}"></div>
+</div>
