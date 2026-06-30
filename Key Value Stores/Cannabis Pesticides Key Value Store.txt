@@ -1,0 +1,4848 @@
+{
+  "MN OCM Cannabis": {
+    "Cannabis or Hemp Flower for Concentrate": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 36,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 56.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 21,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 10.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 21.1,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 16.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 11.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 47.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 12.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 12.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 34.9,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 9.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 6.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 6.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 7.6,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 7.2,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 36.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 12,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 8.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 7.1,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 10.4,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 9.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 7.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 18.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 8.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 6.9,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 7.4,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 6.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 13.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 8.3,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 50.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 3.1,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 10.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 9.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spinosad|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    },
+    "Cannabis or Hemp Flower for Smoking": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 36,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 56.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 21,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 10.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 21.1,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 16.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 11.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 47.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 12.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 12.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 34.9,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 9.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 6.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 6.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 7.6,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 7.2,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 36.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 12,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 8.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 7.1,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 10.4,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 9.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 7.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 18.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 8.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 6.9,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 7.4,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 6.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 13.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 8.3,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 50.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 3.1,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 10.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 9.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    },
+    "Cannabis or Hemp Infused Flower": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 36,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 56.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 21,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 10.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 21.1,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 16.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 11.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 47.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 12.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 12.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 34.9,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 9.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 6.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 6.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 7.6,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 7.2,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 36.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 12,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 8.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 7.1,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 10.4,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 9.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 7.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 18.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 8.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 6.9,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 7.4,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 6.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 13.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 8.3,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 50.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 3.1,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 10.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 9.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    },
+    "Cannabis or Hemp Liquid Edible": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 20.9,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 12.1,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 13.9,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 6.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 31.9,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 11.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 9.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 46.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 3.5,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 7.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 8.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 29.6,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 5.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 9.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 11.6,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 2.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 5.3,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 19.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 8.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 4.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 13.5,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 5.4,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 19.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 3.1,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 10.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 5.7,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 8.5,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 11,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 12.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 12.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 7.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 10.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 2.6,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 16.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 10.6,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 11,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 7.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 6,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 24.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 4.7,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 4.3,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 7.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 4.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 9.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 3.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 8.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    },
+    "Cannabis or Hemp Non-Liquid Edibles": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 21.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 18.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 15,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 2.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 30,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 13.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 14.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 34.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 6.1,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 13.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 25.6,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 8.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 9.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 6.2,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 13.5,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 7.7,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 2.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 4.2,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 4.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 18.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 12.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 5.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 11.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 4.3,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 17.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 11.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 3.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 8.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 8.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 10.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 9.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 6.5,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 10.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 29.4,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 10.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 4.2,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 10.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 5.1,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 30.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 3.4,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 3,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 8.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 3.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 6.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 3.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 16.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    },
+    "Cannabis or Hemp Resins": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 66,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 46,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 35.2,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 13,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 30,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 17.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 2.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 64.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 10.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 10.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 13.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 21.9,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 13.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 5.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 25.4,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 15,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 24.6,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 5.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 42.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 11.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 15.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 15,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 16.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 10.4,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 39.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 12.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 10,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 19.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 2.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 25,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 7.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 3.1,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 17.8,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 4.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 63.8,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 14.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 6.3,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 10.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 12.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 10.1,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 13.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 5.7,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 7.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 12.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 12.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    },
+    "Cannabis or Hemp Rosins": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 66,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 46,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 35.2,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 13,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 30,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 17.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 2.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 64.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 10.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 10.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 13.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 21.9,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 13.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 5.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 25.4,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 15,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 24.6,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 5.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 42.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 11.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 15.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 15,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 16.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 10.4,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 39.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 12.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 10,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 19.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 2.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 25,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 7.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 3.1,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 17.8,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 4.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 63.8,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 14.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 6.3,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 10.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 12.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 10.1,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 13.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 5.7,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 7.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 12.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 12.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    }
+  },
+  "MN OCM Hemp Derived Cannabis Products (HDCP)": {
+    "Cannabis or Hemp Flower for Concentrate": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 36,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 56.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 21,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 10.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 21.1,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 16.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 11.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 47.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 12.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 12.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 34.9,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 9.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 6.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 6.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 7.6,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 7.2,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 36.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 12,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 8.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 7.1,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 10.4,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 9.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 7.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 18.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 8.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 6.9,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 7.4,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 6.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 13.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 8.3,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 50.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 3.1,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 10.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 9.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    },
+    "Cannabis or Hemp Flower for Smoking": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 36,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 56.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 21,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 10.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 21.1,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 16.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 11.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 47.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 12.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 12.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 34.9,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 9.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 6.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 6.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 7.6,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 7.2,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 36.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 12,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 8.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 7.1,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 10.4,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 9.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 7.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 18.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 8.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 6.9,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 7.4,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 6.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 13.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 8.3,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 50.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 3.1,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 10.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 9.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    },
+    "Cannabis or Hemp Infused Flower": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 36,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 56.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 21,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 10.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 21.1,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 16.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 11.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 47.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 12.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 12.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 34.9,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 9.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 6.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 6.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 7.6,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 7.2,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 36.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 12,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 8.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 7.1,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 10.4,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 9.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 7.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 18.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 8.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 6.9,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 7.4,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 6.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 7.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 13.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 8.3,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 50.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 3.1,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 10.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 9.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    },
+    "Cannabis or Hemp Liquid Edible": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 20.9,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 12.1,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 13.9,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 6.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 31.9,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 11.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 9.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 46.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 3.5,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 7.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 8.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 29.6,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 5.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 9.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 11.6,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 2.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 5.3,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 19.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 8.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 4.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 13.5,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 5.4,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 19.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 3.1,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 10.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 5.7,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 8.5,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 11,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 12.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 12.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 7.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 10.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 2.6,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 16.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 10.6,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 11,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 8.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 7.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 6,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 24.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 4.7,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 4.3,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 7.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 4.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 9.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 3.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 8.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    },
+    "Cannabis or Hemp Non-Liquid Edibles": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 21.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 18.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 15,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 2.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 30,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 13.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 14.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 34.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 6.1,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 13.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 25.6,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 8.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 9.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 6.2,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 13.5,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 7.7,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 2.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 4.2,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 4.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 18.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 12.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 5.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 9.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 11.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 4.3,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 17.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 11.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 3.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 8.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 8.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 10.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 9.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 6.5,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 10.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 29.4,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 10.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 4.2,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 4,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 10.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 5.1,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 30.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 3.4,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 3,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 8.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 3.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 6.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 3.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 16.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    },
+    "Cannabis or Hemp Resins": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 66,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 46,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 35.2,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 13,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 30,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 17.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 2.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 64.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 10.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 10.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 13.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 21.9,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 13.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 5.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 25.4,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 15,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 24.6,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 5.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 42.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 11.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 15.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 15,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 16.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 10.4,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 39.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 12.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 10,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 19.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 2.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 25,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 7.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 3.1,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 17.8,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 4.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 63.8,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 14.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 6.3,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 10.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 12.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 10.1,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 13.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 5.7,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 7.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 12.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 12.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    },
+    "Cannabis or Hemp Rosins": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 66,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 46,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 35.2,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 13,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 30,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 17.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 2.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 64.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 10.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 10.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 13.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 21.9,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 13.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 5.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 25.4,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 15,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 24.6,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 5.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 42.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 11.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 15.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 15,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 16.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 10.4,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 39.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 12.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 10,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 19.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 2.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 25,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 7.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 3.1,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 17.8,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 4.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 63.8,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 14.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 6.3,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 10.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 12.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 10.1,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 13.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 5.7,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 7.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 12.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 12.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    },
+    "Hemp Resins - Artificially Derived": {
+      "AbamectinB1a": {
+        "LOQ": 0.005,
+        "MU%": 66,
+        "Pass/Fail Limits": 0.5
+      },
+      "Acephate": {
+        "LOQ": 0.005,
+        "MU%": 46,
+        "Pass/Fail Limits": 0.4
+      },
+      "Acequinocyl": {
+        "LOQ": 0.005,
+        "MU%": 35.2,
+        "Pass/Fail Limits": 2
+      },
+      "Acetamiprid": {
+        "LOQ": 0.005,
+        "MU%": 13,
+        "Pass/Fail Limits": 0.2
+      },
+      "Azadirachtin": {
+        "LOQ": 0.005,
+        "MU%": 30,
+        "Pass/Fail Limits": 1
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 17.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenazate": {
+        "LOQ": 0.005,
+        "MU%": 2.9,
+        "Pass/Fail Limits": 0.2
+      },
+      "Bifenthrin": {
+        "LOQ": 0.005,
+        "MU%": 64.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Boscalid": {
+        "LOQ": 0.005,
+        "MU%": 10.3,
+        "Pass/Fail Limits": 0.4
+      },
+      "Carbaryl": {
+        "LOQ": 0.005,
+        "MU%": 10.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.005,
+        "MU%": 13.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorfenapyr": {
+        "LOQ": 0.005,
+        "MU%": 21.9,
+        "Pass/Fail Limits": 1
+      },
+      "Chlormequat Chloride": {
+        "LOQ": 0.005,
+        "MU%": 13.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.005,
+        "MU%": 5.8,
+        "Pass/Fail Limits": 0.2
+      },
+      "Clofentezine": {
+        "LOQ": 0.005,
+        "MU%": 11.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.005,
+        "MU%": 25.4,
+        "Pass/Fail Limits": 1
+      },
+      "Cypermethrin": {
+        "LOQ": 0.005,
+        "MU%": 15,
+        "Pass/Fail Limits": 1
+      },
+      "Daminozide": {
+        "LOQ": 0.005,
+        "MU%": 24.6,
+        "Pass/Fail Limits": 1
+      },
+      "Diazinon": {
+        "LOQ": 0.005,
+        "MU%": 5.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Dichlorvos": {
+        "LOQ": 0.005,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 0.1
+      },
+      "Dimethoate": {
+        "LOQ": 0.005,
+        "MU%": 15.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Etofenprox": {
+        "LOQ": 0.005,
+        "MU%": 42.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Etoxazole": {
+        "LOQ": 0.005,
+        "MU%": 11.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenoxycarb": {
+        "LOQ": 0.005,
+        "MU%": 5.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.005,
+        "MU%": 15.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Fipronil": {
+        "LOQ": 0.005,
+        "MU%": 15,
+        "Pass/Fail Limits": 0.4
+      },
+      "Flonicamid": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 1
+      },
+      "Fludioxonil": {
+        "LOQ": 0.005,
+        "MU%": 16.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Hexythiazox": {
+        "LOQ": 0.005,
+        "MU%": 10.4,
+        "Pass/Fail Limits": 1
+      },
+      "Imazalil": {
+        "LOQ": 0.005,
+        "MU%": 39.5,
+        "Pass/Fail Limits": 0.2
+      },
+      "Imidacloprid": {
+        "LOQ": 0.005,
+        "MU%": 12.2,
+        "Pass/Fail Limits": 0.4
+      },
+      "Kresoxim Methyl": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Malathion": {
+        "LOQ": 0.005,
+        "MU%": 10,
+        "Pass/Fail Limits": 0.2
+      },
+      "Metalaxyl": {
+        "LOQ": 0.005,
+        "MU%": 19.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methiocarb": {
+        "LOQ": 0.005,
+        "MU%": 2.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Methomyl": {
+        "LOQ": 0.005,
+        "MU%": 25,
+        "Pass/Fail Limits": 0.4
+      },
+      "Myclobutanil": {
+        "LOQ": 0.005,
+        "MU%": 7.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Naled": {
+        "LOQ": 0.005,
+        "MU%": 3.1,
+        "Pass/Fail Limits": 0.5
+      },
+      "Oxamyl": {
+        "LOQ": 0.005,
+        "MU%": 17.8,
+        "Pass/Fail Limits": 1
+      },
+      "Paclobutrazol": {
+        "LOQ": 0.005,
+        "MU%": 4.8,
+        "Pass/Fail Limits": 0.4
+      },
+      "Permethrins": {
+        "LOQ": 0.005,
+        "MU%": 63.8,
+        "Pass/Fail Limits": 0.3
+      },
+      "Phosmet": {
+        "LOQ": 0.005,
+        "MU%": 14.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Piperonyl Butoxide": {
+        "LOQ": 0.005,
+        "MU%": 6.3,
+        "Pass/Fail Limits": 2
+      },
+      "Prallethrin": {
+        "LOQ": 0.005,
+        "MU%": 6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Propiconazole": {
+        "LOQ": 0.005,
+        "MU%": 10.6,
+        "Pass/Fail Limits": 0.4
+      },
+      "Propoxur": {
+        "LOQ": 0.005,
+        "MU%": 12.3,
+        "Pass/Fail Limits": 0.2
+      },
+      "Pyrethrin I": {
+        "LOQ": 0.005,
+        "MU%": 10.1,
+        "Pass/Fail Limits": 1
+      },
+      "Pyridaben": {
+        "LOQ": 0.005,
+        "MU%": 13.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 6.6,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 5.7,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.005,
+        "MU%": 7.1,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spirotetramat": {
+        "LOQ": 0.005,
+        "MU%": 4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Tebuconazole": {
+        "LOQ": 0.005,
+        "MU%": 12.9,
+        "Pass/Fail Limits": 0.4
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.005,
+        "MU%": 9.7,
+        "Pass/Fail Limits": 0.2
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.005,
+        "MU%": 12.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "keys": [
+        "AbamectinB1a|Acephate|Acequinocyl|Acetamiprid|Azadirachtin|Azoxystrobin|Bifenazate|Bifenthrin|Boscalid|Carbaryl|Chlorantraniliprole|Chlorfenapyr|Chlormequat Chloride|Chlorpyrifos|Clofentezine|Cyfluthrin|Cypermethrin|Daminozide|Diazinon|Dichlorvos|Dimethoate|Etofenprox|Etoxazole|Fenoxycarb|Fenpyroximate|Fipronil|Flonicamid|Fludioxonil|Hexythiazox|Imazalil|Imidacloprid|Kresoxim Methyl|Malathion|Metalaxyl|Methiocarb|Methomyl|Myclobutanil|Naled|Oxamyl|Paclobutrazol|Permethrins|Phosmet|Piperonyl Butoxide|Prallethrin|Propiconazole|Propoxur|Pyrethrin I|Pyridaben|Spinosyn A|Spinosyn D|Spiromefesin|Spirotetramat|Tebuconazole|Thiamethoxam|Trifloxystrobin"
+      ]
+    }
+  },
+  "ND Medical": {
+    "Cannabis Concentrates": {
+      "Acetamiprid": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.03
+      },
+      "Bifenthrin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.05
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Fludioxonil": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Imidacloprid": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Metalaxyl/Mefenoxam": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Methomyl": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Myclobutanil": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Oxamyl": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Permethrins": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.05
+      },
+      "Piperonyl butoxide": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Spirotetramat": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "keys": "Acetamiprid|Azoxystrobin|Bifenthrin|Chlorantraniliprole|Chlorpyrifos|Cyfluthrin|Fenpyroximate|Fludioxonil|Imidacloprid|Metalaxyl/Mefenoxam|Methomyl|Myclobutanil|Oxamyl|Permethrins|Piperonyl butoxide|Spinosad|Spiromefesin|Spirotetramat|Thiamethoxam|Trifloxystrobin"
+    },
+    "Cannabis End Products - Edibles": {
+      "Acetamiprid": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.03
+      },
+      "Bifenthrin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.05
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Fludioxonil": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Imidacloprid": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Metalaxyl/Mefenoxam": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Methomyl": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Myclobutanil": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Oxamyl": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Permethrins": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.05
+      },
+      "Piperonyl butoxide": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Spirotetramat": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "keys": "Acetamiprid|Azoxystrobin|Bifenthrin|Chlorantraniliprole|Chlorpyrifos|Cyfluthrin|Fenpyroximate|Fludioxonil|Imidacloprid|Metalaxyl/Mefenoxam|Methomyl|Myclobutanil|Oxamyl|Permethrins|Piperonyl butoxide|Spinosad|Spiromefesin|Spirotetramat|Thiamethoxam|Trifloxystrobin"
+    },
+    "Cannabis End Products - Ingestibles": {
+      "Acetamiprid": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.03
+      },
+      "Bifenthrin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.05
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Fludioxonil": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Imidacloprid": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Metalaxyl/Mefenoxam": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Methomyl": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Myclobutanil": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Oxamyl": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Permethrins": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.05
+      },
+      "Piperonyl butoxide": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Spirotetramat": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "keys": "Acetamiprid|Azoxystrobin|Bifenthrin|Chlorantraniliprole|Chlorpyrifos|Cyfluthrin|Fenpyroximate|Fludioxonil|Imidacloprid|Metalaxyl/Mefenoxam|Methomyl|Myclobutanil|Oxamyl|Permethrins|Piperonyl butoxide|Spinosad|Spiromefesin|Spirotetramat|Thiamethoxam|Trifloxystrobin"
+    },
+    "Cannabis End Products - Topicals": {
+      "Acetamiprid": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.03
+      },
+      "Bifenthrin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.05
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Fludioxonil": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Imidacloprid": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Metalaxyl/Mefenoxam": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Methomyl": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Myclobutanil": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Oxamyl": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Permethrins": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.05
+      },
+      "Piperonyl butoxide": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Spirotetramat": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "keys": "Acetamiprid|Azoxystrobin|Bifenthrin|Chlorantraniliprole|Chlorpyrifos|Cyfluthrin|Fenpyroximate|Fludioxonil|Imidacloprid|Metalaxyl/Mefenoxam|Methomyl|Myclobutanil|Oxamyl|Permethrins|Piperonyl butoxide|Spinosad|Spiromefesin|Spirotetramat|Thiamethoxam|Trifloxystrobin"
+    },
+    "Cannabis Flower": {
+      "Acetamiprid": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Azoxystrobin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.03
+      },
+      "Bifenthrin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.05
+      },
+      "Chlorantraniliprole": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Chlorpyrifos": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Cyfluthrin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Fenpyroximate": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Fludioxonil": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "Imidacloprid": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Metalaxyl/Mefenoxam": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Methomyl": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Myclobutanil": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Oxamyl": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Permethrins": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.05
+      },
+      "Piperonyl butoxide": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Spinosad": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": 0.2
+      },
+      "Spinosyn A": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spinosyn D": {
+        "LOQ": 0.005,
+        "MU%": 6.4,
+        "Pass/Fail Limits": "N/A"
+      },
+      "Spiromefesin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Spirotetramat": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.1
+      },
+      "Thiamethoxam": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.02
+      },
+      "Trifloxystrobin": {
+        "LOQ": 0.01,
+        "MU%": null,
+        "Pass/Fail Limits": 0.01
+      },
+      "keys": "Acetamiprid|Azoxystrobin|Bifenthrin|Chlorantraniliprole|Chlorpyrifos|Cyfluthrin|Fenpyroximate|Fludioxonil|Imidacloprid|Metalaxyl/Mefenoxam|Methomyl|Myclobutanil|Oxamyl|Permethrins|Piperonyl butoxide|Spinosad|Spiromefesin|Spirotetramat|Thiamethoxam|Trifloxystrobin"
+    }
+  }
+}

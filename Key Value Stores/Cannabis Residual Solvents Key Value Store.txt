@@ -1,0 +1,2506 @@
+{
+  "MN OCM Cannabis": {
+    "Full Panel (Conc.) Tribal Only": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 750
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 10.9,
+        "Pass/Fail Limits": 1
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 12.5,
+        "Pass/Fail Limits": 800
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 14.5,
+        "Pass/Fail Limits": 1
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 300
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 125
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 1000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 18.4,
+        "Pass/Fail Limits": 400
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 27,
+        "Pass/Fail Limits": 500
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 16.8,
+        "Pass/Fail Limits": 50
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 500
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 27.5,
+        "Pass/Fail Limits": 250
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 750
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 32.5,
+        "Pass/Fail Limits": 2100
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 14,
+        "Pass/Fail Limits": 25
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "Full Panel (FinPrd) Tribal Only": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 18.5,
+        "Pass/Fail Limits": 5000
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 15.4,
+        "Pass/Fail Limits": 2
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 22.6,
+        "Pass/Fail Limits": 5000
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 19.8,
+        "Pass/Fail Limits": 2
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 18.1,
+        "Pass/Fail Limits": 3880
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 18.9,
+        "Pass/Fail Limits": 600
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 15.9,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 17.4,
+        "Pass/Fail Limits": 5000
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 24.7,
+        "Pass/Fail Limits": 5000
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 19.9,
+        "Pass/Fail Limits": 290
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 15.9,
+        "Pass/Fail Limits": 5000
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 32.1,
+        "Pass/Fail Limits": 3000
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 3000
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 31.8,
+        "Pass/Fail Limits": 5000
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 890
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 12.8,
+        "Pass/Fail Limits": 2170
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 19.6,
+        "Pass/Fail Limits": 80
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "Full Panel (Flower) Tribal Only": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 750
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 10.9,
+        "Pass/Fail Limits": 1
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 12.5,
+        "Pass/Fail Limits": 800
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 14.5,
+        "Pass/Fail Limits": 1
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 300
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 125
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 1000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 18.4,
+        "Pass/Fail Limits": 400
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 27,
+        "Pass/Fail Limits": 500
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 16.8,
+        "Pass/Fail Limits": 50
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 500
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 27.5,
+        "Pass/Fail Limits": 250
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 750
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 32.5,
+        "Pass/Fail Limits": 2100
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 14,
+        "Pass/Fail Limits": 25
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "Infused Edible": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 18.5,
+        "Pass/Fail Limits": 5000
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 15.4,
+        "Pass/Fail Limits": 2
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 22.6,
+        "Pass/Fail Limits": 5000
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 19.8,
+        "Pass/Fail Limits": 2
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 18.1,
+        "Pass/Fail Limits": 3880
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 18.9,
+        "Pass/Fail Limits": 600
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 15.9,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 17.4,
+        "Pass/Fail Limits": 5000
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 24.7,
+        "Pass/Fail Limits": 5000
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 19.9,
+        "Pass/Fail Limits": 290
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 15.9,
+        "Pass/Fail Limits": 5000
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 32.1,
+        "Pass/Fail Limits": 3000
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 3000
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 31.8,
+        "Pass/Fail Limits": 5000
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 890
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 12.8,
+        "Pass/Fail Limits": 2170
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 19.6,
+        "Pass/Fail Limits": 80
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "Infused Non-Edible": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 750
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 10.9,
+        "Pass/Fail Limits": 1
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 12.5,
+        "Pass/Fail Limits": 800
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 14.5,
+        "Pass/Fail Limits": 1
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 300
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 125
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 1000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 18.4,
+        "Pass/Fail Limits": 400
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 27,
+        "Pass/Fail Limits": 500
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 16.8,
+        "Pass/Fail Limits": 50
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 500
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 27.5,
+        "Pass/Fail Limits": 250
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 750
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 32.5,
+        "Pass/Fail Limits": 2100
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 14,
+        "Pass/Fail Limits": 25
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "R&D Solvents - Inhal. Prod.": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 750
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 10.9,
+        "Pass/Fail Limits": 1
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 12.5,
+        "Pass/Fail Limits": 800
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 14.5,
+        "Pass/Fail Limits": 1
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 300
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 125
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 1000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 18.4,
+        "Pass/Fail Limits": 400
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 27,
+        "Pass/Fail Limits": 500
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 16.8,
+        "Pass/Fail Limits": 50
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 500
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 27.5,
+        "Pass/Fail Limits": 250
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 750
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 32.5,
+        "Pass/Fail Limits": 2100
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 14,
+        "Pass/Fail Limits": 25
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "R&D Solvents - Non-Inhal. Prod.": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 18.5,
+        "Pass/Fail Limits": 5000
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 15.4,
+        "Pass/Fail Limits": 2
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 22.6,
+        "Pass/Fail Limits": 5000
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 19.8,
+        "Pass/Fail Limits": 2
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 18.1,
+        "Pass/Fail Limits": 3880
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 18.9,
+        "Pass/Fail Limits": 600
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 15.9,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 17.4,
+        "Pass/Fail Limits": 5000
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 24.7,
+        "Pass/Fail Limits": 5000
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 19.9,
+        "Pass/Fail Limits": 290
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 15.9,
+        "Pass/Fail Limits": 5000
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 32.1,
+        "Pass/Fail Limits": 3000
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 3000
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 31.8,
+        "Pass/Fail Limits": 5000
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 890
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 12.8,
+        "Pass/Fail Limits": 2170
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 19.6,
+        "Pass/Fail Limits": 80
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "Solvent BasedConcentrateExtract": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 750
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 10.9,
+        "Pass/Fail Limits": 1
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 12.5,
+        "Pass/Fail Limits": 800
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 14.5,
+        "Pass/Fail Limits": 1
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 300
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 125
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 1000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 18.4,
+        "Pass/Fail Limits": 400
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 27,
+        "Pass/Fail Limits": 500
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 16.8,
+        "Pass/Fail Limits": 50
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 500
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 27.5,
+        "Pass/Fail Limits": 250
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 750
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 32.5,
+        "Pass/Fail Limits": 2100
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 14,
+        "Pass/Fail Limits": 25
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "Vape Cartridge": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 750
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 10.9,
+        "Pass/Fail Limits": 1
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 12.5,
+        "Pass/Fail Limits": 800
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 14.5,
+        "Pass/Fail Limits": 1
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 300
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 125
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 1000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 18.4,
+        "Pass/Fail Limits": 400
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 27,
+        "Pass/Fail Limits": 500
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 16.8,
+        "Pass/Fail Limits": 50
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 500
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 27.5,
+        "Pass/Fail Limits": 250
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 750
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 32.5,
+        "Pass/Fail Limits": 2100
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 14,
+        "Pass/Fail Limits": 25
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    }
+  },
+  "MN OCM Hemp Derived Cannabis Products (HDCP)": {
+    "Full Panel (Conc.) Tribal Only": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 750
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 10.9,
+        "Pass/Fail Limits": 1
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 12.5,
+        "Pass/Fail Limits": 800
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 14.5,
+        "Pass/Fail Limits": 1
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 300
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 125
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 1000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 18.4,
+        "Pass/Fail Limits": 400
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 27,
+        "Pass/Fail Limits": 500
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 16.8,
+        "Pass/Fail Limits": 50
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 500
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 27.5,
+        "Pass/Fail Limits": 250
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 750
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 32.5,
+        "Pass/Fail Limits": 2100
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 14,
+        "Pass/Fail Limits": 25
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "Full Panel (FinPrd) Tribal Only": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 18.5,
+        "Pass/Fail Limits": 5000
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 15.4,
+        "Pass/Fail Limits": 2
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 22.6,
+        "Pass/Fail Limits": 5000
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 19.8,
+        "Pass/Fail Limits": 2
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 18.1,
+        "Pass/Fail Limits": 3880
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 18.9,
+        "Pass/Fail Limits": 600
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 15.9,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 17.4,
+        "Pass/Fail Limits": 5000
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 24.7,
+        "Pass/Fail Limits": 5000
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 19.9,
+        "Pass/Fail Limits": 290
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 15.9,
+        "Pass/Fail Limits": 5000
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 32.1,
+        "Pass/Fail Limits": 3000
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 3000
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 31.8,
+        "Pass/Fail Limits": 5000
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 890
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 12.8,
+        "Pass/Fail Limits": 2170
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 19.6,
+        "Pass/Fail Limits": 80
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "Full Panel (Flower) Tribal Only": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 750
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 10.9,
+        "Pass/Fail Limits": 1
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 12.5,
+        "Pass/Fail Limits": 800
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 14.5,
+        "Pass/Fail Limits": 1
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 300
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 125
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 1000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 18.4,
+        "Pass/Fail Limits": 400
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 27,
+        "Pass/Fail Limits": 500
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 16.8,
+        "Pass/Fail Limits": 50
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 500
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 27.5,
+        "Pass/Fail Limits": 250
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 750
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 32.5,
+        "Pass/Fail Limits": 2100
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 14,
+        "Pass/Fail Limits": 25
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "Infused Edible": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 18.5,
+        "Pass/Fail Limits": 5000
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 15.4,
+        "Pass/Fail Limits": 2
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 22.6,
+        "Pass/Fail Limits": 5000
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 19.8,
+        "Pass/Fail Limits": 2
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 18.1,
+        "Pass/Fail Limits": 3880
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 18.9,
+        "Pass/Fail Limits": 600
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 15.9,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 17.4,
+        "Pass/Fail Limits": 5000
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 24.7,
+        "Pass/Fail Limits": 5000
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 19.9,
+        "Pass/Fail Limits": 290
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 15.9,
+        "Pass/Fail Limits": 5000
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 32.1,
+        "Pass/Fail Limits": 3000
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 3000
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 31.8,
+        "Pass/Fail Limits": 5000
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 890
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 12.8,
+        "Pass/Fail Limits": 2170
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 19.6,
+        "Pass/Fail Limits": 80
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "Infused Non-Edible": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 750
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 10.9,
+        "Pass/Fail Limits": 1
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 12.5,
+        "Pass/Fail Limits": 800
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 14.5,
+        "Pass/Fail Limits": 1
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 300
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 125
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 1000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 18.4,
+        "Pass/Fail Limits": 400
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 27,
+        "Pass/Fail Limits": 500
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 16.8,
+        "Pass/Fail Limits": 50
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 500
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 27.5,
+        "Pass/Fail Limits": 250
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 750
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 32.5,
+        "Pass/Fail Limits": 2100
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 14,
+        "Pass/Fail Limits": 25
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "R&D Solvents - Inhal. Prod.": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 750
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 10.9,
+        "Pass/Fail Limits": 1
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 12.5,
+        "Pass/Fail Limits": 800
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 14.5,
+        "Pass/Fail Limits": 1
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 300
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 125
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 1000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 18.4,
+        "Pass/Fail Limits": 400
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 27,
+        "Pass/Fail Limits": 500
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 16.8,
+        "Pass/Fail Limits": 50
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 500
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 27.5,
+        "Pass/Fail Limits": 250
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 750
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 32.5,
+        "Pass/Fail Limits": 2100
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 14,
+        "Pass/Fail Limits": 25
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "R&D Solvents - Non-Inhal. Prod.": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 18.5,
+        "Pass/Fail Limits": 5000
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 15.4,
+        "Pass/Fail Limits": 2
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 22.6,
+        "Pass/Fail Limits": 5000
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 19.8,
+        "Pass/Fail Limits": 2
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 18.1,
+        "Pass/Fail Limits": 3880
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 18.9,
+        "Pass/Fail Limits": 600
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 15.9,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 17.4,
+        "Pass/Fail Limits": 5000
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 24.7,
+        "Pass/Fail Limits": 5000
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 19.9,
+        "Pass/Fail Limits": 290
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 15.9,
+        "Pass/Fail Limits": 5000
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 32.1,
+        "Pass/Fail Limits": 3000
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 3000
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 31.8,
+        "Pass/Fail Limits": 5000
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 890
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 12.8,
+        "Pass/Fail Limits": 2170
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 19.6,
+        "Pass/Fail Limits": 80
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "Solvent BasedConcentrateExtract": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 750
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 10.9,
+        "Pass/Fail Limits": 1
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 12.5,
+        "Pass/Fail Limits": 800
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 14.5,
+        "Pass/Fail Limits": 1
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 300
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 125
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 1000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 18.4,
+        "Pass/Fail Limits": 400
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 27,
+        "Pass/Fail Limits": 500
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 16.8,
+        "Pass/Fail Limits": 50
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 500
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 27.5,
+        "Pass/Fail Limits": 250
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 750
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 32.5,
+        "Pass/Fail Limits": 2100
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 14,
+        "Pass/Fail Limits": 25
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    },
+    "Vape Cartridge": {
+      "Acetone": {
+        "LOQ": 0.05,
+        "MU%": 13.3,
+        "Pass/Fail Limits": 750
+      },
+      "Benzene": {
+        "LOQ": 0.05,
+        "MU%": 10.9,
+        "Pass/Fail Limits": 1
+      },
+      "Butane": {
+        "LOQ": 30,
+        "MU%": 12.5,
+        "Pass/Fail Limits": 800
+      },
+      "Chloroform": {
+        "LOQ": 0.05,
+        "MU%": 14.5,
+        "Pass/Fail Limits": 1
+      },
+      "Cyclohexane": {
+        "LOQ": 0.05,
+        "MU%": 14.2,
+        "Pass/Fail Limits": 300
+      },
+      "Dichloromethane": {
+        "LOQ": 0.05,
+        "MU%": 14.1,
+        "Pass/Fail Limits": 125
+      },
+      "Ethanol": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 1000
+      },
+      "Ethyl Acetate": {
+        "LOQ": 0.05,
+        "MU%": 18.4,
+        "Pass/Fail Limits": 400
+      },
+      "Heptane": {
+        "LOQ": 0.05,
+        "MU%": 27,
+        "Pass/Fail Limits": 500
+      },
+      "Hexane": {
+        "LOQ": 0.05,
+        "MU%": 16.8,
+        "Pass/Fail Limits": 50
+      },
+      "Isopropanol (2-Propanol)": {
+        "LOQ": 0.05,
+        "MU%": 9.4,
+        "Pass/Fail Limits": 500
+      },
+      "Methanol": {
+        "LOQ": 0.2,
+        "MU%": 27.5,
+        "Pass/Fail Limits": 250
+      },
+      "Pentane": {
+        "LOQ": 0.05,
+        "MU%": 38.9,
+        "Pass/Fail Limits": 750
+      },
+      "Propane": {
+        "LOQ": 30,
+        "MU%": 32.5,
+        "Pass/Fail Limits": 2100
+      },
+      "Toluene": {
+        "LOQ": 0.05,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Total Xylenes": {
+        "LOQ": 0.15,
+        "MU%": 8.8,
+        "Pass/Fail Limits": 150
+      },
+      "Trichloroethene": {
+        "LOQ": 0.05,
+        "MU%": 14,
+        "Pass/Fail Limits": 25
+      },
+      "keys": [
+        "Acetone|Benzene|Butane|Chloroform|Cyclohexane|Dichloromethane|Ethanol|Ethyl Acetate|Heptane|Hexane|Isopropanol (2-Propanol)|Methanol|Pentane|Propane|Toluene|Trichloroethene|Total Xylenes"
+      ]
+    }
+  },
+  "ND Medical": {
+    "Cannabis Concentrates": {
+      "1,4-Dioxane": {
+        "LOQ": 71.25,
+        "MU%": null,
+        "Pass/Fail Limits": 380
+      },
+      "2-Butanol": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "2-Ethoxyethanol": {
+        "LOQ": 30,
+        "MU%": null,
+        "Pass/Fail Limits": 160
+      },
+      "2-Propanol (IPA)": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Acetone": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Acetonitrile": {
+        "LOQ": 76.88,
+        "MU%": null,
+        "Pass/Fail Limits": 410
+      },
+      "Benzene": {
+        "LOQ": 0.375,
+        "MU%": null,
+        "Pass/Fail Limits": 2
+      },
+      "Butanes": {
+        "LOQ": 156.3,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Cumene": {
+        "LOQ": 13.13,
+        "MU%": null,
+        "Pass/Fail Limits": 70
+      },
+      "Cyclohexane": {
+        "LOQ": 727.5,
+        "MU%": null,
+        "Pass/Fail Limits": 3880
+      },
+      "Dichloromethane": {
+        "LOQ": 112.5,
+        "MU%": null,
+        "Pass/Fail Limits": 600
+      },
+      "Ethyl acetate": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl ether": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethylene glycol": {
+        "LOQ": 116.3,
+        "MU%": null,
+        "Pass/Fail Limits": 620
+      },
+      "Ethylene oxide": {
+        "LOQ": 9.375,
+        "MU%": null,
+        "Pass/Fail Limits": 50
+      },
+      "Heptane": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Hexanes": {
+        "LOQ": 217.5,
+        "MU%": null,
+        "Pass/Fail Limits": 290
+      },
+      "Isopropyl acetate": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Methanol": {
+        "LOQ": 312.5,
+        "MU%": null,
+        "Pass/Fail Limits": 3000
+      },
+      "Pentanes": {
+        "LOQ": 953.1,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Propane": {
+        "LOQ": 31.25,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Tetrahydrofuran": {
+        "LOQ": 135,
+        "MU%": null,
+        "Pass/Fail Limits": 720
+      },
+      "Toluene": {
+        "LOQ": 166.9,
+        "MU%": null,
+        "Pass/Fail Limits": 890
+      },
+      "Xylenes": {
+        "LOQ": 1221,
+        "MU%": null,
+        "Pass/Fail Limits": 2170
+      },
+      "keys": "1,4-Dioxane|2-Butanol|2-Ethoxyethanol|2-Propanol (IPA)|Acetone|Acetonitrile|Benzene|Cumene|Cyclohexane|Dichloromethane|Ethyl acetate|Ethyl ether|Ethylene glycol|Heptane|Hexanes|Isopropyl acetate|Methanol|Pentanes|Tetrahydrofuran|Toluene|Xylenes|Butanes|Ethylene oxide|Propane"
+    },
+    "Cannabis End Products - Edibles": {
+      "1,4-Dioxane": {
+        "LOQ": 71.25,
+        "MU%": null,
+        "Pass/Fail Limits": 380
+      },
+      "2-Butanol": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "2-Ethoxyethanol": {
+        "LOQ": 30,
+        "MU%": null,
+        "Pass/Fail Limits": 160
+      },
+      "2-Propanol (IPA)": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Acetone": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Acetonitrile": {
+        "LOQ": 76.88,
+        "MU%": null,
+        "Pass/Fail Limits": 410
+      },
+      "Benzene": {
+        "LOQ": 0.375,
+        "MU%": null,
+        "Pass/Fail Limits": 2
+      },
+      "Butanes": {
+        "LOQ": 156.3,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Cumene": {
+        "LOQ": 13.13,
+        "MU%": null,
+        "Pass/Fail Limits": 70
+      },
+      "Cyclohexane": {
+        "LOQ": 727.5,
+        "MU%": null,
+        "Pass/Fail Limits": 3880
+      },
+      "Dichloromethane": {
+        "LOQ": 112.5,
+        "MU%": null,
+        "Pass/Fail Limits": 600
+      },
+      "Ethyl acetate": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl ether": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethylene glycol": {
+        "LOQ": 116.3,
+        "MU%": null,
+        "Pass/Fail Limits": 620
+      },
+      "Ethylene oxide": {
+        "LOQ": 9.375,
+        "MU%": null,
+        "Pass/Fail Limits": 50
+      },
+      "Heptane": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Hexanes": {
+        "LOQ": 217.5,
+        "MU%": null,
+        "Pass/Fail Limits": 290
+      },
+      "Isopropyl acetate": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Methanol": {
+        "LOQ": 312.5,
+        "MU%": null,
+        "Pass/Fail Limits": 3000
+      },
+      "Pentanes": {
+        "LOQ": 953.1,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Propane": {
+        "LOQ": 31.25,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Tetrahydrofuran": {
+        "LOQ": 135,
+        "MU%": null,
+        "Pass/Fail Limits": 720
+      },
+      "Toluene": {
+        "LOQ": 166.9,
+        "MU%": null,
+        "Pass/Fail Limits": 890
+      },
+      "Xylenes": {
+        "LOQ": 1221,
+        "MU%": null,
+        "Pass/Fail Limits": 2170
+      },
+      "keys": "1,4-Dioxane|2-Butanol|2-Ethoxyethanol|2-Propanol (IPA)|Acetone|Acetonitrile|Benzene|Cumene|Cyclohexane|Dichloromethane|Ethyl acetate|Ethyl ether|Ethylene glycol|Heptane|Hexanes|Isopropyl acetate|Methanol|Pentanes|Tetrahydrofuran|Toluene|Xylenes|Butanes|Ethylene oxide|Propane"
+    },
+    "Cannabis End Products - Ingestibles": {
+      "1,4-Dioxane": {
+        "LOQ": 71.25,
+        "MU%": null,
+        "Pass/Fail Limits": 380
+      },
+      "2-Butanol": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "2-Ethoxyethanol": {
+        "LOQ": 30,
+        "MU%": null,
+        "Pass/Fail Limits": 160
+      },
+      "2-Propanol (IPA)": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Acetone": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Acetonitrile": {
+        "LOQ": 76.88,
+        "MU%": null,
+        "Pass/Fail Limits": 410
+      },
+      "Benzene": {
+        "LOQ": 0.375,
+        "MU%": null,
+        "Pass/Fail Limits": 2
+      },
+      "Butanes": {
+        "LOQ": 156.3,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Cumene": {
+        "LOQ": 13.13,
+        "MU%": null,
+        "Pass/Fail Limits": 70
+      },
+      "Cyclohexane": {
+        "LOQ": 727.5,
+        "MU%": null,
+        "Pass/Fail Limits": 3880
+      },
+      "Dichloromethane": {
+        "LOQ": 112.5,
+        "MU%": null,
+        "Pass/Fail Limits": 600
+      },
+      "Ethyl acetate": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl ether": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethylene glycol": {
+        "LOQ": 116.3,
+        "MU%": null,
+        "Pass/Fail Limits": 620
+      },
+      "Ethylene oxide": {
+        "LOQ": 9.375,
+        "MU%": null,
+        "Pass/Fail Limits": 50
+      },
+      "Heptane": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Hexanes": {
+        "LOQ": 217.5,
+        "MU%": null,
+        "Pass/Fail Limits": 290
+      },
+      "Isopropyl acetate": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Methanol": {
+        "LOQ": 312.5,
+        "MU%": null,
+        "Pass/Fail Limits": 3000
+      },
+      "Pentanes": {
+        "LOQ": 953.1,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Propane": {
+        "LOQ": 31.25,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Tetrahydrofuran": {
+        "LOQ": 135,
+        "MU%": null,
+        "Pass/Fail Limits": 720
+      },
+      "Toluene": {
+        "LOQ": 166.9,
+        "MU%": null,
+        "Pass/Fail Limits": 890
+      },
+      "Xylenes": {
+        "LOQ": 1221,
+        "MU%": null,
+        "Pass/Fail Limits": 2170
+      },
+      "keys": "1,4-Dioxane|2-Butanol|2-Ethoxyethanol|2-Propanol (IPA)|Acetone|Acetonitrile|Benzene|Cumene|Cyclohexane|Dichloromethane|Ethyl acetate|Ethyl ether|Ethylene glycol|Heptane|Hexanes|Isopropyl acetate|Methanol|Pentanes|Tetrahydrofuran|Toluene|Xylenes|Butanes|Ethylene oxide|Propane"
+    },
+    "Cannabis End Products - Topicals": {
+      "1,4-Dioxane": {
+        "LOQ": 71.25,
+        "MU%": null,
+        "Pass/Fail Limits": 380
+      },
+      "2-Butanol": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "2-Ethoxyethanol": {
+        "LOQ": 30,
+        "MU%": null,
+        "Pass/Fail Limits": 160
+      },
+      "2-Propanol (IPA)": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Acetone": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Acetonitrile": {
+        "LOQ": 76.88,
+        "MU%": null,
+        "Pass/Fail Limits": 410
+      },
+      "Benzene": {
+        "LOQ": 0.375,
+        "MU%": null,
+        "Pass/Fail Limits": 2
+      },
+      "Butanes": {
+        "LOQ": 156.3,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Cumene": {
+        "LOQ": 13.13,
+        "MU%": null,
+        "Pass/Fail Limits": 70
+      },
+      "Cyclohexane": {
+        "LOQ": 727.5,
+        "MU%": null,
+        "Pass/Fail Limits": 3880
+      },
+      "Dichloromethane": {
+        "LOQ": 112.5,
+        "MU%": null,
+        "Pass/Fail Limits": 600
+      },
+      "Ethyl acetate": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl ether": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethylene glycol": {
+        "LOQ": 116.3,
+        "MU%": null,
+        "Pass/Fail Limits": 620
+      },
+      "Ethylene oxide": {
+        "LOQ": 9.375,
+        "MU%": null,
+        "Pass/Fail Limits": 50
+      },
+      "Heptane": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Hexanes": {
+        "LOQ": 217.5,
+        "MU%": null,
+        "Pass/Fail Limits": 290
+      },
+      "Isopropyl acetate": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Methanol": {
+        "LOQ": 312.5,
+        "MU%": null,
+        "Pass/Fail Limits": 3000
+      },
+      "Pentanes": {
+        "LOQ": 953.1,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Propane": {
+        "LOQ": 31.25,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Tetrahydrofuran": {
+        "LOQ": 135,
+        "MU%": null,
+        "Pass/Fail Limits": 720
+      },
+      "Toluene": {
+        "LOQ": 166.9,
+        "MU%": null,
+        "Pass/Fail Limits": 890
+      },
+      "Xylenes": {
+        "LOQ": 1221,
+        "MU%": null,
+        "Pass/Fail Limits": 2170
+      },
+      "keys": "1,4-Dioxane|2-Butanol|2-Ethoxyethanol|2-Propanol (IPA)|Acetone|Acetonitrile|Benzene|Cumene|Cyclohexane|Dichloromethane|Ethyl acetate|Ethyl ether|Ethylene glycol|Heptane|Hexanes|Isopropyl acetate|Methanol|Pentanes|Tetrahydrofuran|Toluene|Xylenes|Butanes|Ethylene oxide|Propane"
+    }
+  },
+  "National Hemp": {
+    "Beverage": {
+      "1,4-Dioxane": {
+        "LOQ": 71.25,
+        "MU%": null,
+        "Pass/Fail Limits": 380
+      },
+      "2-Butanol": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "2-Ethoxyethanol": {
+        "LOQ": 30,
+        "MU%": null,
+        "Pass/Fail Limits": 160
+      },
+      "2-Propanol (IPA)": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Acetone": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Acetonitrile": {
+        "LOQ": 76.88,
+        "MU%": null,
+        "Pass/Fail Limits": 410
+      },
+      "Benzene": {
+        "LOQ": 0.375,
+        "MU%": null,
+        "Pass/Fail Limits": 2
+      },
+      "Butanes": {
+        "LOQ": 156.3,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Cumene": {
+        "LOQ": 13.13,
+        "MU%": null,
+        "Pass/Fail Limits": 70
+      },
+      "Cyclohexane": {
+        "LOQ": 727.5,
+        "MU%": null,
+        "Pass/Fail Limits": 3880
+      },
+      "Dichloromethane": {
+        "LOQ": 112.5,
+        "MU%": null,
+        "Pass/Fail Limits": 600
+      },
+      "Ethanol": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl acetate": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl ether": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethylene glycol": {
+        "LOQ": 116.3,
+        "MU%": null,
+        "Pass/Fail Limits": 620
+      },
+      "Ethylene oxide": {
+        "LOQ": 9.375,
+        "MU%": null,
+        "Pass/Fail Limits": 50
+      },
+      "Heptane": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Hexanes": {
+        "LOQ": 217.5,
+        "MU%": null,
+        "Pass/Fail Limits": 290
+      },
+      "Isopropyl acetate": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Methanol": {
+        "LOQ": 312.5,
+        "MU%": null,
+        "Pass/Fail Limits": 3000
+      },
+      "Pentanes": {
+        "LOQ": 953.1,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Propane": {
+        "LOQ": 31.25,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Tetrahydrofuran": {
+        "LOQ": 135,
+        "MU%": null,
+        "Pass/Fail Limits": 720
+      },
+      "Toluene": {
+        "LOQ": 166.9,
+        "MU%": null,
+        "Pass/Fail Limits": 890
+      },
+      "Xylenes": {
+        "LOQ": 1221,
+        "MU%": null,
+        "Pass/Fail Limits": 2170
+      },
+      "keys": "1,4-Dioxane|2-Butanol|2-Ethoxyethanol|2-Propanol (IPA)|Acetone|Acetonitrile|Benzene|Butanes|Cumene|Cyclohexane|Dichloromethane|Ethanol|Ethyl acetate|Ethyl ether|Ethylene glycol|Ethylene oxide|Heptane|Hexanes|Isopropyl acetate|Methanol|Pentanes|Propane|Tetrahydrofuran|Toluene|Xylenes"
+    },
+    "Concentrates": {
+      "1,4-Dioxane": {
+        "LOQ": 71.25,
+        "MU%": null,
+        "Pass/Fail Limits": 380
+      },
+      "2-Butanol": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "2-Ethoxyethanol": {
+        "LOQ": 30,
+        "MU%": null,
+        "Pass/Fail Limits": 160
+      },
+      "2-Propanol (IPA)": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Acetone": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Acetonitrile": {
+        "LOQ": 76.88,
+        "MU%": null,
+        "Pass/Fail Limits": 410
+      },
+      "Benzene": {
+        "LOQ": 0.375,
+        "MU%": null,
+        "Pass/Fail Limits": 2
+      },
+      "Butanes": {
+        "LOQ": 156.3,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Cumene": {
+        "LOQ": 13.13,
+        "MU%": null,
+        "Pass/Fail Limits": 70
+      },
+      "Cyclohexane": {
+        "LOQ": 727.5,
+        "MU%": null,
+        "Pass/Fail Limits": 3880
+      },
+      "Dichloromethane": {
+        "LOQ": 112.5,
+        "MU%": null,
+        "Pass/Fail Limits": 600
+      },
+      "Ethanol": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl acetate": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl ether": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethylene glycol": {
+        "LOQ": 116.3,
+        "MU%": null,
+        "Pass/Fail Limits": 620
+      },
+      "Ethylene oxide": {
+        "LOQ": 9.375,
+        "MU%": null,
+        "Pass/Fail Limits": 50
+      },
+      "Heptane": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Hexanes": {
+        "LOQ": 217.5,
+        "MU%": null,
+        "Pass/Fail Limits": 290
+      },
+      "Isopropyl acetate": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Methanol": {
+        "LOQ": 312.5,
+        "MU%": null,
+        "Pass/Fail Limits": 3000
+      },
+      "Pentanes": {
+        "LOQ": 953.1,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Propane": {
+        "LOQ": 31.25,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Tetrahydrofuran": {
+        "LOQ": 135,
+        "MU%": null,
+        "Pass/Fail Limits": 720
+      },
+      "Toluene": {
+        "LOQ": 166.9,
+        "MU%": null,
+        "Pass/Fail Limits": 890
+      },
+      "Xylenes": {
+        "LOQ": 1221,
+        "MU%": null,
+        "Pass/Fail Limits": 2170
+      },
+      "keys": "1,4-Dioxane|2-Butanol|2-Ethoxyethanol|2-Propanol (IPA)|Acetone|Acetonitrile|Benzene|Butanes|Cumene|Cyclohexane|Dichloromethane|Ethanol|Ethyl acetate|Ethyl ether|Ethylene glycol|Ethylene oxide|Heptane|Hexanes|Isopropyl acetate|Methanol|Pentanes|Propane|Tetrahydrofuran|Toluene|Xylenes"
+    },
+    "Edible": {
+      "1,4-Dioxane": {
+        "LOQ": 71.25,
+        "MU%": null,
+        "Pass/Fail Limits": 380
+      },
+      "2-Butanol": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "2-Ethoxyethanol": {
+        "LOQ": 30,
+        "MU%": null,
+        "Pass/Fail Limits": 160
+      },
+      "2-Propanol (IPA)": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Acetone": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Acetonitrile": {
+        "LOQ": 76.88,
+        "MU%": null,
+        "Pass/Fail Limits": 410
+      },
+      "Benzene": {
+        "LOQ": 0.375,
+        "MU%": null,
+        "Pass/Fail Limits": 2
+      },
+      "Butanes": {
+        "LOQ": 156.3,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Cumene": {
+        "LOQ": 13.13,
+        "MU%": null,
+        "Pass/Fail Limits": 70
+      },
+      "Cyclohexane": {
+        "LOQ": 727.5,
+        "MU%": null,
+        "Pass/Fail Limits": 3880
+      },
+      "Dichloromethane": {
+        "LOQ": 112.5,
+        "MU%": null,
+        "Pass/Fail Limits": 600
+      },
+      "Ethanol": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl acetate": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethyl ether": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Ethylene glycol": {
+        "LOQ": 116.3,
+        "MU%": null,
+        "Pass/Fail Limits": 620
+      },
+      "Ethylene oxide": {
+        "LOQ": 9.375,
+        "MU%": null,
+        "Pass/Fail Limits": 50
+      },
+      "Heptane": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Hexanes": {
+        "LOQ": 217.5,
+        "MU%": null,
+        "Pass/Fail Limits": 290
+      },
+      "Isopropyl acetate": {
+        "LOQ": 437.5,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Methanol": {
+        "LOQ": 312.5,
+        "MU%": null,
+        "Pass/Fail Limits": 3000
+      },
+      "Pentanes": {
+        "LOQ": 953.1,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Propane": {
+        "LOQ": 31.25,
+        "MU%": null,
+        "Pass/Fail Limits": 5000
+      },
+      "Tetrahydrofuran": {
+        "LOQ": 135,
+        "MU%": null,
+        "Pass/Fail Limits": 720
+      },
+      "Toluene": {
+        "LOQ": 166.9,
+        "MU%": null,
+        "Pass/Fail Limits": 890
+      },
+      "Xylenes": {
+        "LOQ": 1221,
+        "MU%": null,
+        "Pass/Fail Limits": 2170
+      },
+      "keys": "1,4-Dioxane|2-Butanol|2-Ethoxyethanol|2-Propanol (IPA)|Acetone|Acetonitrile|Benzene|Butanes|Cumene|Cyclohexane|Dichloromethane|Ethanol|Ethyl acetate|Ethyl ether|Ethylene glycol|Ethylene oxide|Heptane|Hexanes|Isopropyl acetate|Methanol|Pentanes|Propane|Tetrahydrofuran|Toluene|Xylenes"
+    }
+  }
+}

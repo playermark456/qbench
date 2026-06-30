@@ -1,0 +1,486 @@
+{
+  "MN OCM Cannabis": {
+    "Cannabis or Hemp Flower for Concentrate": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 16.1,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 7.1,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 21.5,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 26.7,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 41.3,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    },
+    "Cannabis or Hemp Flower for Smoking": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 16.1,
+        "Pass/Fail Limits": 5
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 7.1,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 21.5,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 26.7,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 41.3,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    },
+    "Cannabis or Hemp Infused Flower": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 16.1,
+        "Pass/Fail Limits": 5
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 7.1,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 21.5,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 26.7,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 41.3,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    },
+    "Cannabis or Hemp Liquid Edible": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 21.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 29.2,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 32.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    },
+    "Cannabis or Hemp Non-Liquid Edibles": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 21.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 29.2,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 32.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    },
+    "Cannabis or Hemp Resins": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 21.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 29.2,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 32.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    },
+    "Cannabis or Hemp Rosins": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 21.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 29.2,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 32.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    }
+  },
+  "MN OCM Hemp Derived Cannabis Products (HDCP)": {
+    "Cannabis or Hemp Flower for Concentrate": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 16.1,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 7.1,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 21.5,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 26.7,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 41.3,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    },
+    "Cannabis or Hemp Flower for Smoking": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 16.1,
+        "Pass/Fail Limits": 5
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 7.1,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 21.5,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 26.7,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 41.3,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    },
+    "Cannabis or Hemp Infused Flower": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 16.1,
+        "Pass/Fail Limits": 5
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 7.1,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 21.5,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 26.7,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 41.3,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    },
+    "Cannabis or Hemp Liquid Edible": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 21.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 29.2,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 32.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    },
+    "Cannabis or Hemp Non-Liquid Edibles": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 21.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 29.2,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 32.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    },
+    "Cannabis or Hemp Resins": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 21.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 29.2,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 32.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    },
+    "Cannabis or Hemp Rosins": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 21.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 29.2,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 32.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    },
+    "Hemp Resins - Artificially Derived": {
+      "Aflatoxin B1": {
+        "LOQ": 0.2,
+        "MU": 21.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin B2": {
+        "LOQ": 0.2,
+        "MU": 29.2,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G1": {
+        "LOQ": 0.2,
+        "MU": 32.6,
+        "Pass/Fail Limits": 20
+      },
+      "Aflatoxin G2": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Ochratoxin A": {
+        "LOQ": 0.2,
+        "MU": 29.1,
+        "Pass/Fail Limits": 20
+      },
+      "Total Mycotoxins": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": 20
+      }
+    }
+  }
+}

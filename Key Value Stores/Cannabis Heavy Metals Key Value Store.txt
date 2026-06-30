@@ -1,0 +1,538 @@
+{
+  "MN OCM Cannabis": {
+    "Cannabis or Hemp Flower for Concentrate": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 20.6,
+        "Pass/Fail Limits": 1.5
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 32.2,
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 48.8,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 13,
+        "Pass/Fail Limits": 3
+      }
+    },
+    "Cannabis or Hemp Flower for Smoking": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 20.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 32.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 48.8,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 13,
+        "Pass/Fail Limits": 0.1
+      }
+    },
+    "Cannabis or Hemp Infused Flower": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 20.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 32.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 48.8,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 13,
+        "Pass/Fail Limits": 0.1
+      }
+    },
+    "Cannabis or Hemp Liquid Edible": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 10.7,
+        "Pass/Fail Limits": 1.5
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 30.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 5.4,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 17.6,
+        "Pass/Fail Limits": 3
+      }
+    },
+    "Cannabis or Hemp Non-Liquid Edibles": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 10.7,
+        "Pass/Fail Limits": 1.5
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 30.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 5.4,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 17.6,
+        "Pass/Fail Limits": 3
+      }
+    },
+    "Cannabis or Hemp Resins": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 10.7,
+        "Pass/Fail Limits": 1.5
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 30.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 5.4,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 17.6,
+        "Pass/Fail Limits": 3
+      }
+    },
+    "Cannabis or Hemp Rosins": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 10.7,
+        "Pass/Fail Limits": 1.5
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 30.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 5.4,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 17.6,
+        "Pass/Fail Limits": 3
+      }
+    }
+  },
+  "MN OCM Hemp Derived Cannabis Products (HDCP)": {
+    "Cannabis or Hemp Flower for Concentrate": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 20.6,
+        "Pass/Fail Limits": 1.5
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 32.2,
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 48.8,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 13,
+        "Pass/Fail Limits": 3
+      }
+    },
+    "Cannabis or Hemp Flower for Smoking": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 20.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 32.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 48.8,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 13,
+        "Pass/Fail Limits": 0.1
+      }
+    },
+    "Cannabis or Hemp Infused Flower": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 20.6,
+        "Pass/Fail Limits": 0.2
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 32.2,
+        "Pass/Fail Limits": 0.2
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 48.8,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 13,
+        "Pass/Fail Limits": 0.1
+      }
+    },
+    "Cannabis or Hemp Liquid Edible": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 10.7,
+        "Pass/Fail Limits": 1.5
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 30.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 5.4,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 17.6,
+        "Pass/Fail Limits": 3
+      }
+    },
+    "Cannabis or Hemp Non-Liquid Edibles": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 10.7,
+        "Pass/Fail Limits": 1.5
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 30.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 5.4,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 17.6,
+        "Pass/Fail Limits": 3
+      }
+    },
+    "Cannabis or Hemp Resins": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 10.7,
+        "Pass/Fail Limits": 1.5
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 30.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 5.4,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 17.6,
+        "Pass/Fail Limits": 3
+      }
+    },
+    "Cannabis or Hemp Rosins": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 10.7,
+        "Pass/Fail Limits": 1.5
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 30.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 5.4,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 17.6,
+        "Pass/Fail Limits": 3
+      }
+    },
+    "Hemp Resins - Artificially Derived": {
+      "Arsenic": {
+        "LOQ": 0.05,
+        "MU": 10.7,
+        "Pass/Fail Limits": 1.5
+      },
+      "Cadmium": {
+        "LOQ": 0.05,
+        "MU": 30.7,
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.05,
+        "MU": 5.4,
+        "Pass/Fail Limits": 0.5
+      },
+      "Mercury": {
+        "LOQ": 0.05,
+        "MU": 17.6,
+        "Pass/Fail Limits": 3
+      }
+    }
+  },
+  "ND Medical": {
+    "Cannabis Concentrates": {
+      "Arsenic": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.4
+      },
+      "Cadmium": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.3
+      },
+      "Lead": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 1
+      },
+      "Mercury": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.2
+      }
+    },
+    "Cannabis End Products - Edibles": {
+      "Arsenic": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.4
+      },
+      "Cadmium": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.3
+      },
+      "Lead": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 1
+      },
+      "Mercury": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.2
+      }
+    },
+    "Cannabis End Products - Ingestibles": {
+      "Arsenic": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.4
+      },
+      "Cadmium": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.3
+      },
+      "Lead": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 1
+      },
+      "Mercury": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.2
+      }
+    },
+    "Cannabis End Products - Topicals": {
+      "Arsenic": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.4
+      },
+      "Cadmium": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.3
+      },
+      "Lead": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 1
+      },
+      "Mercury": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.2
+      }
+    },
+    "Cannabis Flower": {
+      "Arsenic": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.4
+      },
+      "Cadmium": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.3
+      },
+      "Lead": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 1
+      },
+      "Mercury": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.2
+      }
+    }
+  },
+  "National Hemp": {
+    "Beverage": {
+      "Arsenic": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.2
+      },
+      "Cadmium": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.1
+      },
+      "Mercury": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.2
+      }
+    },
+    "Concentrates": {
+      "Arsenic": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.2
+      },
+      "Cadmium": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.1
+      },
+      "Mercury": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.2
+      }
+    },
+    "Edible": {
+      "Arsenic": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.2
+      },
+      "Cadmium": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.1
+      },
+      "Mercury": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.2
+      }
+    },
+    "Flower": {
+      "Arsenic": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.2
+      },
+      "Cadmium": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.5
+      },
+      "Lead": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.1
+      },
+      "Mercury": {
+        "LOQ": 0.1,
+        "MU": "",
+        "Pass/Fail Limits": 0.2
+      }
+    }
+  }
+}

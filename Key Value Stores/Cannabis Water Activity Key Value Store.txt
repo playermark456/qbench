@@ -1,0 +1,178 @@
+{
+  "MN OCM Cannabis": {
+    "Cannabis or Hemp Flower for Concentrate": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 3.1,
+        "Pass/Fail Limits": 0.85
+      }
+    },
+    "Cannabis or Hemp Flower for Smoking": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 3.1,
+        "Pass/Fail Limits": 0.65
+      }
+    },
+    "Cannabis or Hemp Infused Flower": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 3.1,
+        "Pass/Fail Limits": 0.65
+      }
+    },
+    "Cannabis or Hemp Liquid Edible": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.85
+      }
+    },
+    "Cannabis or Hemp Non-Liquid Edibles": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.85
+      }
+    },
+    "Cannabis or Hemp Resins": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.85
+      }
+    },
+    "Cannabis or Hemp Rosins": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.85
+      }
+    }
+  },
+  "MN OCM Hemp Derived Cannabis Products (HDCP)": {
+    "Cannabis or Hemp Flower for Concentrate": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 3.1,
+        "Pass/Fail Limits": 0.85
+      }
+    },
+    "Cannabis or Hemp Flower for Smoking": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 3.1,
+        "Pass/Fail Limits": 0.65
+      }
+    },
+    "Cannabis or Hemp Infused Flower": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 3.1,
+        "Pass/Fail Limits": 0.65
+      }
+    },
+    "Cannabis or Hemp Liquid Edible": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.85
+      }
+    },
+    "Cannabis or Hemp Non-Liquid Edibles": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.85
+      }
+    },
+    "Cannabis or Hemp Resins": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.85
+      }
+    },
+    "Cannabis or Hemp Rosins": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.85
+      }
+    },
+    "Hemp Resins - Artificially Derived": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 2.2,
+        "Pass/Fail Limits": 0.85
+      }
+    }
+  },
+  "ND Medical": {
+    "Cannabis Concentrates": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 0.003,
+        "Pass/Fail Limits": 0.65
+      }
+    },
+    "Cannabis End Products - Edibles": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 0.003,
+        "Pass/Fail Limits": 0.65
+      }
+    },
+    "Cannabis End Products - Ingestibles": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 0.003,
+        "Pass/Fail Limits": 0.65
+      }
+    },
+    "Cannabis End Products - Topicals": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 0.003,
+        "Pass/Fail Limits": 0.65
+      }
+    },
+    "Cannabis Flower": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 0.003,
+        "Pass/Fail Limits": 0.65
+      }
+    }
+  },
+  "National Hemp": {
+    "Beverage": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 0.003,
+        "Pass/Fail Limits": 0.85
+      }
+    },
+    "Concentrates": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 0.003,
+        "Pass/Fail Limits": 0.85
+      }
+    },
+    "Edible": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 0.003,
+        "Pass/Fail Limits": 0.85
+      }
+    },
+    "Flower": {
+      "Water Activity (aw)": {
+        "LOQ": 0.125,
+        "MU%": 0.003,
+        "Pass/Fail Limits": 0.65
+      }
+    }
+  }
+}

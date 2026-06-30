@@ -1,0 +1,1661 @@
+{
+  "MN OCM Cannabis": {
+    "Cannabis or Hemp Flower for Concentrate": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 2.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 11.2,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 3.4,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 7.3,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 6.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 8.9,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 7.6,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 5.6,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 12,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 14.7,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Flower for Smoking": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 2.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 11.2,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 3.4,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 7.3,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 6.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 8.9,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 7.6,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 5.6,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 12,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 14.7,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Infused Flower": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 2.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 11.2,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 3.4,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 7.3,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 6.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 8.9,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 7.6,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 5.6,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 12,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 14.7,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Liquid Edible": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 10.1,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 10.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 17.4,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 4.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 9.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 5,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 5.8,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 9.1,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 8.9,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 2.8,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Non-Liquid Edibles": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 19.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 26.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 14.6,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 23.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 16.9,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 25.6,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 24.2,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 14.3,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 23.6,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 27.5,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Resins": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 6.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 5.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 4.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 3.1,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 7.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 3.9,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 3.9,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 11.7,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 8.4,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 6.5,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Rosins": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 6.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 5.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 4.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 3.1,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 7.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 3.9,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 3.9,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 11.7,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 8.4,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 6.5,
+          "Pass/Fail Limit": ""
+        }
+      }
+    }
+  },
+  "MN OCM Hemp Derived Cannabis Products (HDCP)": {
+    "Cannabis or Hemp Concentrate": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 6.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 5.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 4.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 3.1,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 7.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 3.9,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 3.9,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 11.7,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 8.4,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 6.5,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Flower for Concentrate": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 2.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 11.2,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 3.4,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 7.3,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 6.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 8.9,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 7.6,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 5.6,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 12,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 14.7,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Flower for Smoking": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 2.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 11.2,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 3.4,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 7.3,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 6.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 8.9,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 7.6,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 5.6,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 12,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 14.7,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Infused Flower": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 2.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 11.2,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 3.4,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 7.3,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 6.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 8.9,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 7.6,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 5.6,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 12,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 14.7,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Liquid Edible": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 10.1,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 10.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 17.4,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 4.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 9.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 5,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 5.8,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 9.1,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 8.9,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 2.8,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Non-Liquid Edibles": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 19.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 26.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 14.6,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 23.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 16.9,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 25.6,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 24.2,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 14.3,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 23.6,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 27.5,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Resins": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 6.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 5.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 4.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 3.1,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 7.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 3.9,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 3.9,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 11.7,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 8.4,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 6.5,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Rosins": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 6.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 5.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 4.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 3.1,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 7.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 3.9,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 3.9,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 11.7,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 8.4,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 6.5,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Topical": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 19.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 26.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 14.6,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 23.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 16.9,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 25.6,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 24.2,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 14.3,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 23.6,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 27.5,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Hemp Resins - Artificially Derived": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 6.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 5.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBDa": {
+          "LOQ": 0.001,
+          "MU": 4.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 3.1,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 7.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 3.9,
+          "Pass/Fail Limit": ""
+        },
+        "Purity*": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "Restrictions for Other Artificially Derived Cannabinoids": {
+          "LOQ": 0.001,
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 3.9,
+          "Pass/Fail Limit": ""
+        },
+        "THCa": {
+          "LOQ": 0.001,
+          "MU": 11.7,
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDa|CBG|CBGa|CBN|Purity*|Restrictions for Other Artificially Derived Cannabinoids|THCV|THCa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 8.4,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 6.5,
+          "Pass/Fail Limit": ""
+        }
+      }
+    }
+  },
+  "ND Medical": {
+    "Cannabis Concentrates": {
+      "Original Concentration": {
+        "CBD": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBDA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBD|CBDA|THCA|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis End Products - Edibles": {
+      "Original Concentration": {
+        "CBD": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBDA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBD|CBDA|THCA|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis End Products - Ingestibles": {
+      "Original Concentration": {
+        "CBD": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBDA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBD|CBDA|THCA|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis End Products - Topicals": {
+      "Original Concentration": {
+        "CBD": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBDA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBD|CBDA|THCA|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis Flower": {
+      "Dry Matter Basis": {
+        "CBD": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBDA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBD|CBDA|THCA|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        }
+      }
+    }
+  },
+  "National Hemp": {
+    "Cannabis Concentrates": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBDA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBDV": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBL": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCVa": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDA|CBDV|CBG|CBGa|CBL|CBN|THCA|THCV|THCVa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis End Products - Edibles": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 19.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 26.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBDA": {
+          "LOQ": 0.001,
+          "MU": 14.6,
+          "Pass/Fail Limit": ""
+        },
+        "CBDV": {
+          "LOQ": 0.001,
+          "MU": 14.6,
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 23.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 16.9,
+          "Pass/Fail Limit": ""
+        },
+        "CBL": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 25.6,
+          "Pass/Fail Limit": ""
+        },
+        "THCA": {
+          "LOQ": 0.001,
+          "MU": 14.3,
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": 0.001,
+          "MU": 24.2,
+          "Pass/Fail Limit": ""
+        },
+        "THCVa": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDA|CBDV|CBG|CBGa|CBL|CBN|THCA|THCV|THCVa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 23.6,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 27.5,
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis End Products - Ingestibles": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBDA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBDV": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBL": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCVa": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDA|CBDV|CBG|CBGa|CBL|CBN|THCA|THCV|THCVa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis End Products - Topicals": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBDA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBDV": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBL": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCVa": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDA|CBDV|CBG|CBGa|CBL|CBN|THCA|THCV|THCVa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis Flower": {
+      "Dry Matter Basis": {
+        "CBC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBDA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBDV": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBL": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCA": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCVa": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDA|CBDV|CBG|CBGa|CBL|CBN|THCA|THCV|THCVa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        }
+      }
+    },
+    "Cannabis or Hemp Concentrates (copy)": {
+      "Original Concentration": {
+        "CBC": {
+          "LOQ": 0.001,
+          "MU": 6.7,
+          "Pass/Fail Limit": ""
+        },
+        "CBD": {
+          "LOQ": 0.001,
+          "MU": 5.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBDA": {
+          "LOQ": 0.001,
+          "MU": 4.8,
+          "Pass/Fail Limit": ""
+        },
+        "CBDV": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBG": {
+          "LOQ": 0.001,
+          "MU": 3.1,
+          "Pass/Fail Limit": ""
+        },
+        "CBGa": {
+          "LOQ": 0.001,
+          "MU": 7.5,
+          "Pass/Fail Limit": ""
+        },
+        "CBL": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "CBN": {
+          "LOQ": 0.001,
+          "MU": 3.9,
+          "Pass/Fail Limit": ""
+        },
+        "THCA": {
+          "LOQ": 0.001,
+          "MU": 11.7,
+          "Pass/Fail Limit": ""
+        },
+        "THCV": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "THCVa": {
+          "LOQ": "",
+          "MU": "",
+          "Pass/Fail Limit": ""
+        },
+        "keys": [
+          "CBC|CBD|CBDA|CBDV|CBG|CBGa|CBL|CBN|THCA|THCV|THCVa|Δ8-THC|Δ9-THC"
+        ],
+        "Δ8-THC": {
+          "LOQ": 0.001,
+          "MU": 8.4,
+          "Pass/Fail Limit": ""
+        },
+        "Δ9-THC": {
+          "LOQ": 0.001,
+          "MU": 6.5,
+          "Pass/Fail Limit": ""
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,750 @@
+{
+  "MN OCM Cannabis": {
+    "Cannabis or Hemp Flower for Concentrate": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 150
+      },
+      "Listeria Monocytogenes": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      }
+    },
+    "Cannabis or Hemp Flower for Smoking": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 1000
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 100000
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 100000
+      }
+    },
+    "Cannabis or Hemp Infused Flower": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 150
+      },
+      "Listeria Monocytogenes": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      }
+    },
+    "Cannabis or Hemp Liquid Edible": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 25 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 150
+      },
+      "Listeria Monocytogenes": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 25 g"
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 25 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 25 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      }
+    },
+    "Cannabis or Hemp Non-Liquid Edibles": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 25 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 150
+      },
+      "Listeria Monocytogenes": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 25 g"
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 25 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 25 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      }
+    },
+    "Cannabis or Hemp Resins": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 150
+      },
+      "Listeria Monocytogenes": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      }
+    },
+    "Cannabis or Hemp Rosins": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 150
+      },
+      "Listeria Monocytogenes": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      }
+    }
+  },
+  "MN OCM Hemp Derived Cannabis Products (HDCP)": {
+    "Cannabis or Hemp Flower for Concentrate": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 150
+      },
+      "Listeria Monocytogenes": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      }
+    },
+    "Cannabis or Hemp Flower for Smoking": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 1000
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 100000
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 100000
+      }
+    },
+    "Cannabis or Hemp Infused Flower": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 150
+      },
+      "Listeria Monocytogenes": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      }
+    },
+    "Cannabis or Hemp Liquid Edible": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 25 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 150
+      },
+      "Listeria Monocytogenes": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 25 g"
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 25 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 25 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      }
+    },
+    "Cannabis or Hemp Non-Liquid Edibles": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 150
+      },
+      "Listeria Monocytogenes": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      }
+    },
+    "Cannabis or Hemp Resins": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 150
+      },
+      "Listeria Monocytogenes": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      }
+    },
+    "Cannabis or Hemp Rosins": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 150
+      },
+      "Listeria Monocytogenes": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      }
+    },
+    "Cannabis or Hemp Topical": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 150
+      },
+      "Listeria Monocytogenes": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 10 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      }
+    },
+    "Hemp Resins - Artificially Derived": {
+      "Aspergillus spp.": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Enterobacteriaceae": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": 150
+      },
+      "Listeria Monocytogenes": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Salmonella species": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Shiga toxin-producing E. coli": {
+        "LOQ": "N/A",
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not detected in 5 g"
+      },
+      "Total aerobic microbial": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      },
+      "Total yeast and mold": {
+        "LOQ": 100,
+        "MU": "N/A",
+        "Pass/Fail Limits": "Not applicable"
+      }
+    }
+  },
+  "ND Medical": {
+    "Cannabis Concentrates": {
+      "Bile-Tolerant Gram-Negative Bacteria": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 100
+      },
+      "STEC": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 0
+      },
+      "Salmonella": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 0
+      },
+      "Total Coliforms": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 100
+      },
+      "Total Viable Aerobic Bacteria": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 10000
+      },
+      "Total Yeast and Mold": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 1000
+      }
+    },
+    "Cannabis End Products - Edibles": {
+      "Bile-Tolerant Gram-Negative Bacteria": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 100
+      },
+      "STEC": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 0
+      },
+      "Salmonella": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 0
+      },
+      "Total Coliforms": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 100
+      },
+      "Total Viable Aerobic Bacteria": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 10000
+      },
+      "Total Yeast and Mold": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 1000
+      }
+    },
+    "Cannabis End Products - Ingestibles": {
+      "Bile-Tolerant Gram-Negative Bacteria": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 100
+      },
+      "STEC": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 0
+      },
+      "Salmonella": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 0
+      },
+      "Total Coliforms": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 100
+      },
+      "Total Viable Aerobic Bacteria": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 10000
+      },
+      "Total Yeast and Mold": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 1000
+      }
+    },
+    "Cannabis End Products - Topicals": {
+      "Bile-Tolerant Gram-Negative Bacteria": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 100
+      },
+      "STEC": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 0
+      },
+      "Salmonella": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 0
+      },
+      "Total Coliforms": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 100
+      },
+      "Total Viable Aerobic Bacteria": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 10000
+      },
+      "Total Yeast and Mold": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 1000
+      }
+    },
+    "Cannabis Flower": {
+      "Bile-Tolerant Gram-Negative Bacteria": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 1000
+      },
+      "STEC": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 0
+      },
+      "Salmonella": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 0
+      },
+      "Total Coliforms": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 1000
+      },
+      "Total Viable Aerobic Bacteria": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 100000
+      },
+      "Total Yeast and Mold": {
+        "LOQ": null,
+        "MU": null,
+        "Pass/Fail Limits": 10000
+      }
+    }
+  }
+}
