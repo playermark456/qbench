@@ -1,0 +1,1089 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "1e48031b-d15b-4b02-8e2f-683ed4faa07f",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "enableSpreadsheetCustomization": false,
+        "allowTabEditing": true,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowCreate": true,
+      "allowChangePosition": true,
+      "animation": true,
+      "position": "top",
+      "maxWidth": "-50px"
+    },
+    "style": [
+      "font-weight:bold",
+      "font-weight:bold;background-color:#e0e0e0",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "border-top:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;text-wrap:wrap;text-align:left",
+      "border-top:1px solid black;border-left:1px solid black;text-wrap:wrap;text-align:left",
+      "border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black;text-wrap:wrap;text-align:left",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;text-wrap:wrap;text-align:left",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black;text-wrap:wrap;color:#212121",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;text-wrap:wrap;color:#212121",
+      "border-top:1px solid black;border-left:1px solid black;text-wrap:wrap;color:#212121",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;text-wrap:wrap;text-align:left;color:#212121",
+      "border-top:1px solid black;border-left:1px solid black;text-wrap:wrap;text-align:left;color:#212121",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;text-wrap:wrap;color:#212121",
+      "border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black;text-wrap:wrap;text-align:left;color:#212121",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;text-wrap:wrap;text-align:left;color:#212121"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A1": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "B1": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "C1": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "D1": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "E1": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "F1": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "A2": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "B2": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "C2": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "D2": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "E2": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "F2": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "A3": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "B3": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "C3": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "D3": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "E3": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "F3": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "A4": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "B4": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "C4": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "D4": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "E4": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "F4": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "A5": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "B5": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "C5": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "D5": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "E5": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "F5": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "A9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "C9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "F9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 134,
+            "x": 7
+          },
+          "A10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "C10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "F10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 134,
+            "x": 7
+          },
+          "A11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "C11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "F11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 134,
+            "x": 7
+          },
+          "A12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "C12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "F12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 134,
+            "x": 7
+          },
+          "A13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "C13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "F13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 134,
+            "x": 7
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 134
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "B1": [
+            5,
+            1
+          ],
+          "B2": [
+            5,
+            1
+          ],
+          "B3": [
+            5,
+            1
+          ],
+          "B4": [
+            5,
+            1
+          ],
+          "B5": [
+            5,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 40,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 40,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 652,
+        "worksheetId": "b780e495-855a-4982-986a-fbc2e515b08d",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "10.0",
+            "RUN CANNABINOID POTENCY TESTS (10 TOTAL)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "10.1",
+            "Perform all ten (10) Cannabinoid Potency tests per the Cannabinoid Potency Analysis SOP.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "10.2",
+            "Complete worksheets and required QBench steps for each replicate potency test.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "10.3",
+            "Verify all ten (10) potency tests are complete in QBench prior to homogeneity pass/fail selection.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "style": {
+          "A1": 18,
+          "B1": 19,
+          "C1": 18,
+          "D1": 18,
+          "E1": 18,
+          "F1": 19,
+          "A2": 20,
+          "B2": 21,
+          "C2": 22,
+          "D2": 22,
+          "E2": 22,
+          "F2": 21,
+          "A3": 20,
+          "B3": 21,
+          "C3": 22,
+          "D3": 22,
+          "E3": 22,
+          "F3": 21,
+          "A4": 20,
+          "B4": 21,
+          "C4": 22,
+          "D4": 22,
+          "E4": 22,
+          "F4": 21,
+          "A5": 23,
+          "B5": 24,
+          "C5": 25,
+          "D5": 25,
+          "E5": 25,
+          "F5": 24
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "10.0",
+        "RUN CANNABINOID POTENCY TESTS (10 TOTAL)",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "10.1",
+        "Perform all ten (10) Cannabinoid Potency tests per the Cannabinoid Potency Analysis SOP.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "10.2",
+        "Complete worksheets and required QBench steps for each replicate potency test.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "10.3",
+        "Verify all ten (10) potency tests are complete in QBench prior to homogeneity pass/fail selection.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  }
+}
