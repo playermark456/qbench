@@ -1,0 +1,2050 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "fed07551-045e-44a7-b559-5fa55e148c20",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "background-color:#e0e0e0",
+      "background-color:#e0e0e0;font-weight:bold",
+      "font-weight:bold",
+      "background-color:#e0e0e0;font-weight:bold;text-wrap:wrap",
+      "font-weight:bold;text-wrap:wrap",
+      "text-wrap:wrap",
+      "font-weight:bold;text-wrap:wrap;text-align:left",
+      "text-wrap:wrap;text-align:left",
+      "text-wrap:wrap;border-top:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "font-weight:bold;text-wrap:wrap;border-top:1px solid black;border-left:1px solid black",
+      "font-weight:bold;text-wrap:wrap;text-align:left;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "font-weight:bold;text-wrap:wrap;text-align:left;border-top:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;text-align:left;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;text-align:left;border-top:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;text-align:left;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;text-align:left;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "font-weight:bold;text-wrap:wrap;font-style:italic",
+      "text-wrap:wrap;text-align:left;font-style:italic",
+      "text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;font-weight:bold",
+      "font-weight:bold;text-wrap:wrap;border-top:1px solid black;border-left:1px solid black;background-color:#e0e0e0",
+      "text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;font-weight:bold;background-color:#e0e0e0"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A6": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Completed",
+                "name": "Completed"
+              },
+              {
+                "id": "Not Applicable",
+                "name": "Not Applicable"
+              }
+            ],
+            "type": "dropdown",
+            "x": 0
+          },
+          "A7": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Completed",
+                "name": "Completed"
+              },
+              {
+                "id": "Not Applicable",
+                "name": "Not Applicable"
+              }
+            ],
+            "type": "dropdown",
+            "x": 0
+          },
+          "A8": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Completed",
+                "name": "Completed"
+              },
+              {
+                "id": "Not Applicable",
+                "name": "Not Applicable"
+              }
+            ],
+            "type": "dropdown",
+            "x": 0
+          },
+          "A9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "C10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "F10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "B1": [
+            5,
+            1
+          ],
+          "B2": [
+            5,
+            1
+          ],
+          "B3": [
+            5,
+            1
+          ],
+          "B4": [
+            5,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 55
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 1016,
+        "worksheetId": "4b2e6303-d5d6-4336-ba8e-6ba62951c8f1",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.5",
+            "Preparation of the Sample Blank, LCS, and STD 5",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.5.1",
+            "See Table 7 for the preparation of Sample Blank, the Spiked QC, and the STD 5 in 50 mL conical tubes and proceed to Section 8.6.2 for the sample extraction.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Table 7. ",
+            "Preparation of the Matrix Matched Calibration Curve",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Completed with This Batch",
+            "Sample",
+            "Amount of Matrix",
+            "Amount of M Mix (µL)",
+            "Final Mycotoxin Conc. (ppb)",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "Blank",
+            "0.50 ± 0.01 g",
+            "N/A",
+            "N/A",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "LCS",
+            "0.50 ± 0.01 g",
+            "5.0 µL",
+            "0.25",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "STD 5",
+            "0.50 ± 0.01 g",
+            "200 µL",
+            "10.0",
+            "",
+            "",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "style": {
+          "A1": 3,
+          "A2": 12,
+          "A3": 10,
+          "A4": 19,
+          "A5": 22,
+          "A6": 8,
+          "A7": 8,
+          "A8": 10,
+          "B1": 3,
+          "B2": 13,
+          "B3": 17,
+          "B4": 20,
+          "B5": 22,
+          "B6": 8,
+          "B7": 8,
+          "B8": 10,
+          "C1": 3,
+          "C2": 14,
+          "C3": 18,
+          "C4": 20,
+          "C5": 22,
+          "C6": 8,
+          "C7": 8,
+          "C8": 10,
+          "D1": 3,
+          "D2": 14,
+          "D3": 18,
+          "D4": 20,
+          "D5": 22,
+          "D6": 8,
+          "D7": 8,
+          "D8": 10,
+          "E1": 3,
+          "E2": 14,
+          "E3": 18,
+          "E4": 20,
+          "E5": 23,
+          "E6": 9,
+          "E7": 9,
+          "E8": 11,
+          "F1": 3,
+          "F2": 13,
+          "F3": 17,
+          "F4": 20,
+          "F5": 5,
+          "F6": 5,
+          "F7": 5,
+          "F8": 5
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.5",
+        "Preparation of the Sample Blank, LCS, and STD 5",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.5.1",
+        "See Table 7 for the preparation of Sample Blank, the Spiked QC, and the STD 5 in 50 mL conical tubes and proceed to Section 8.6.2 for the sample extraction.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Table 7. ",
+        "Preparation of the Matrix Matched Calibration Curve",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Completed with This Batch",
+        "Sample",
+        "Amount of Matrix",
+        "Amount of M Mix (µL)",
+        "Final Mycotoxin Conc. (ppb)",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "Blank",
+        "0.50 ± 0.01 g",
+        "N/A",
+        "N/A",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "LCS",
+        "0.50 ± 0.01 g",
+        "5.0 µL",
+        "0.25",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "STD 5",
+        "0.50 ± 0.01 g",
+        "200 µL",
+        "10.0",
+        "",
+        "",
+        ""
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  }
+}

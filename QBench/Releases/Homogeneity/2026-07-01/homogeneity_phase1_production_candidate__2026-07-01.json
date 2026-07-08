@@ -88,7 +88,10 @@
       "font-weight:bold;text-align:center;color:#212121;border-bottom:1px solid black;font-size:8pt;text-wrap:wrap",
       "text-align:center;color:#212121;font-size:8pt",
       "text-wrap:wrap;color:#212121;font-size:7pt",
-      "background-color:#f5f5f5;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black;text-align:right;mso-number-format:\"0.0%\""
+      "background-color:#f5f5f5;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black;text-align:right;mso-number-format:\"0.0%\"",
+      "font-weight:bold;text-align:center;color:#212121;font-size:8pt",
+      "font-weight:bold;text-align:center;color:#212121;border-bottom:1px solid black;font-size:7pt;text-wrap:wrap",
+      "text-align:center;color:#212121;font-size:7pt"
     ],
     "worksheets": [
       {
@@ -8366,25 +8369,25 @@
           [
             "Target Cannabinoid 1",
             "Total THC",
-            "Label Cannabinoid 1 Content mg/container",
+            "Label Cannabinoid 1 Content mg/unit",
             "=IF(O4<>\"\",O4,IF(B4=\"\",\"\",IFERROR(IF(OR(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0))=\"\",LOWER(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0)))=\"none\",LEFT(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0)),2)=\"${\"),\"\",INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0))),\"\")))",
             "Target Cannabinoid 2 optional",
             "",
-            "Label Cannabinoid 2 Content mg/container",
+            "Label Cannabinoid 2 Content mg/unit",
             "=IF(S4<>\"\",S4,IF(F4=\"\",\"\",IFERROR(IF(OR(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0))=\"\",LOWER(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0)))=\"none\",LEFT(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0)),2)=\"${\"),\"\",INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0))),\"\")))",
             "Label Unit Mass g optional",
             "",
             "Allowed Variance",
             0.15,
             "",
-            "Manual Label 1 Override mg/container",
+            "Manual Label 1 Override mg/serving/unit",
             "",
             "Label Claim 1 Source",
-            "=IF(O4<>\"\",\"Manual override Paste!O4\",IF(B4=\"\",\"\",IFERROR(IF(OR(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0))=\"\",LOWER(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0)))=\"none\",LEFT(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0)),2)=\"${\"),\"Mapped QBench field is blank/unresolved: \"&INDEX($O$25:$O$36,MATCH(B4,$N$25:$N$36,0)),\"Pulled from \"&INDEX($O$25:$O$36,MATCH(B4,$N$25:$N$36,0))),\"No mapped QBench sample label field\")))",
-            "Manual Label 2 Override mg/container",
+            "=IF(O4<>\"\",\"Manual per-serving/unit override Paste!O4\",IF(B4=\"\",\"\",IFERROR(IF(OR(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0))=\"\",LOWER(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0)))=\"none\",LEFT(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0)),2)=\"${\"),\"Mapped per-serving/unit field is blank/unresolved: \"&INDEX($O$25:$O$36,MATCH(B4,$N$25:$N$36,0)),\"Pulled per-serving/unit value from \"&INDEX($O$25:$O$36,MATCH(B4,$N$25:$N$36,0))),\"No mapped per-serving/unit QBench sample label field\")))",
+            "Manual Label 2 Override mg/serving/unit",
             "",
             "Label Claim 2 Source",
-            "=IF(F4=\"\",\"Target 2 not used\",IF(S4<>\"\",\"Manual override Paste!S4\",IFERROR(IF(OR(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0))=\"\",LOWER(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0)))=\"none\",LEFT(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0)),2)=\"${\"),\"Mapped QBench field is blank/unresolved: \"&INDEX($O$25:$O$36,MATCH(F4,$N$25:$N$36,0)),\"Pulled from \"&INDEX($O$25:$O$36,MATCH(F4,$N$25:$N$36,0))),\"No mapped QBench sample label field\")))",
+            "=IF(F4=\"\",\"Target 2 not used\",IF(S4<>\"\",\"Manual per-serving/unit override Paste!S4\",IFERROR(IF(OR(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0))=\"\",LOWER(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0)))=\"none\",LEFT(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0)),2)=\"${\"),\"Mapped per-serving/unit field is blank/unresolved: \"&INDEX($O$25:$O$36,MATCH(F4,$N$25:$N$36,0)),\"Pulled per-serving/unit value from \"&INDEX($O$25:$O$36,MATCH(F4,$N$25:$N$36,0))),\"No mapped per-serving/unit QBench sample label field\")))",
             "",
             "",
             "",
@@ -9139,7 +9142,7 @@
           ],
           [
             "Unit note",
-            "Pasted cannabinoid result values are expected in ug/g. AI:AJ and Data target formulas convert to mg/g before mg/container calculations.",
+            "Pasted cannabinoid result values are expected in ug/g. AI:AJ and Data target formulas convert to mg/g before mg/unit calculations.",
             "",
             "",
             "",
@@ -9237,9 +9240,9 @@
             "",
             "",
             "",
-            "QBench sample label amount lookup",
-            "Field display name",
-            "Pulled label mg/container",
+            "QBench per-serving label amount lookup",
+            "Per-serving source field/status",
+            "Pulled label mg/serving/unit",
             "",
             "",
             "",
@@ -9281,8 +9284,8 @@
             "",
             "",
             "Total THC",
-            "Product Label Amount - Total THC (if applicable)",
-            "${test.sample.product_label_totalthc}",
+            "Per-serving label amount - Total THC (totalthc_persrv)",
+            "${test.sample.totalthc_persrv}",
             "",
             "",
             "",
@@ -9324,8 +9327,8 @@
             "",
             "",
             "Total CBD",
-            "Product Label Amount - Total CBD (if applicable)",
-            "${test.sample.product_label_totalcbd}",
+            "Per-serving label amount - Total CBD (totalcbd_persrv)",
+            "${test.sample.totalcbd_persrv}",
             "",
             "",
             "",
@@ -9367,8 +9370,8 @@
             "",
             "",
             "CBD",
-            "Product Label Amount - CBD (if applicable)",
-            "${test.sample.product_label_cbd}",
+            "Per-serving label amount - CBD (cbd_persrv)",
+            "${test.sample.cbd_persrv}",
             "",
             "",
             "",
@@ -9410,8 +9413,8 @@
             "",
             "",
             "CBDa",
-            "Product Label Amount - CBDa (if applicable)",
-            "${test.sample.product_label_cbda}",
+            "Manual per-serving override required - no exported per-serving field",
+            "",
             "",
             "",
             "",
@@ -9453,8 +9456,8 @@
             "",
             "",
             "CBN",
-            "Product Label Amount - CBN (if applicable)",
-            "${test.sample.product_label_cbn}",
+            "Manual per-serving override required - no exported per-serving field",
+            "",
             "",
             "",
             "",
@@ -9496,8 +9499,8 @@
             "",
             "",
             "CBG",
-            "Product Label Amount - CBG (if applicable)",
-            "${test.sample.product_label_cbg}",
+            "Manual per-serving override required - no exported per-serving field",
+            "",
             "",
             "",
             "",
@@ -9539,8 +9542,8 @@
             "",
             "",
             "CBGa",
-            "Product Label Amount - CBGa (if applicable)",
-            "${test.sample.product_label_cbga}",
+            "Manual per-serving override required - no exported per-serving field",
+            "",
             "",
             "",
             "",
@@ -9582,8 +9585,8 @@
             "",
             "",
             "D8-THC",
-            "Product Label Amount - d8 THC (if applicable)",
-            "${test.sample.product_label_d8thc}",
+            "Per-serving label amount - d8 THC (d8thc_persrv)",
+            "${test.sample.d8thc_persrv}",
             "",
             "",
             "",
@@ -9625,8 +9628,8 @@
             "",
             "",
             "D9-THC",
-            "Product Label Amount - d9 THC (if applicable)",
-            "${test.sample.product_label_thc}",
+            "Per-serving label amount - d9 THC (d9thc_persrv)",
+            "${test.sample.d9thc_persrv}",
             "",
             "",
             "",
@@ -9668,8 +9671,8 @@
             "",
             "",
             "THCV",
-            "Product Label Amount - THCV (if applicable)",
-            "${test.sample.product_label_thcv}",
+            "Manual per-serving override required - no exported per-serving field",
+            "",
             "",
             "",
             "",
@@ -9711,8 +9714,8 @@
             "",
             "",
             "CBC",
-            "Product Label Amount - CBC (if applicable)",
-            "${test.sample.product_label_cbc}",
+            "Per-serving label amount - CBC (cbc_persrv)",
+            "${test.sample.cbc_persrv}",
             "",
             "",
             "",
@@ -9754,8 +9757,8 @@
             "",
             "",
             "THCa",
-            "Product Label Amount - THCa (if applicable)",
-            "${test.sample.product_label_thca}",
+            "Manual per-serving override required - no exported per-serving field",
+            "",
             "",
             "",
             "",
@@ -14924,7 +14927,7 @@
             ""
           ],
           [
-            "Pasted cannabinoid result values are expected in ug/g. Target result formulas convert to mg/g before mg/container calculations.",
+            "Pasted cannabinoid result values are expected in ug/g. Target result formulas convert to mg/g before mg/unit calculations.",
             "",
             "",
             "",
@@ -14972,7 +14975,7 @@
             ""
           ],
           [
-            "Label Cannabinoid 1 Content mg/container",
+            "Label Cannabinoid 1 Content mg/unit",
             "=Paste!D4",
             "",
             "",
@@ -15020,7 +15023,7 @@
             ""
           ],
           [
-            "Label Cannabinoid 2 Content mg/container",
+            "Label Cannabinoid 2 Content mg/unit",
             "=Paste!H4",
             "",
             "",
@@ -15151,11 +15154,11 @@
             "Mass Basis g",
             "Mass Basis Type",
             "Mass % Variance",
-            "Label Cannabinoid 1 mg/container",
-            "Actual Cannabinoid 1 mg/container",
+            "Label Cannabinoid 1 mg/unit",
+            "Actual Cannabinoid 1 mg/unit",
             "Cannabinoid 1 % Variance",
-            "Label Cannabinoid 2 mg/container",
-            "Actual Cannabinoid 2 mg/container",
+            "Label Cannabinoid 2 mg/unit",
+            "Actual Cannabinoid 2 mg/unit",
             "Cannabinoid 2 % Variance",
             "Mass Result",
             "Cannabinoid 1 Result",
@@ -15524,7 +15527,7 @@
             ""
           ],
           [
-            "Highest Reported Cannabinoid 1 mg/container",
+            "Highest Reported Cannabinoid 1 mg/unit",
             "=IF(COUNT(M12:M21)=0,\"\",MAX(M12:M21))",
             "",
             "",
@@ -15572,7 +15575,7 @@
             ""
           ],
           [
-            "Highest Reported Cannabinoid 2 mg/container",
+            "Highest Reported Cannabinoid 2 mg/unit",
             "=IF($B$5=\"\",\"\",IF(COUNT(P12:P21)=0,\"\",MAX(P12:P21)))",
             "",
             "",
@@ -15838,7 +15841,7 @@
           [
             "Required Target 1 and Label Claim Check",
             "=IF(AND($B$3<>\"\",$B$4<>\"\"),\"PASS\",\"INCOMPLETE\")",
-            "Target Cannabinoid 1 and label mg/container are required",
+            "Target Cannabinoid 1 and label mg/unit are required",
             "",
             "",
             "",
@@ -15862,7 +15865,7 @@
           [
             "Optional Target 2 Label Claim Check",
             "=IF($B$5=\"\",\"PASS\",IF($B$6<>\"\",\"PASS\",\"INCOMPLETE\"))",
-            "Target Cannabinoid 2 is optional; label mg/container is required when used",
+            "Target Cannabinoid 2 is optional; label mg/unit is required when used",
             "",
             "",
             "",
@@ -16217,93 +16220,126 @@
         "cells": {
           "A1": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 12,
-            "style": 51
+            "width": 12
           },
           "B1": {
             "readonly": false,
+            "style": 52,
             "type": "text",
-            "width": 16,
-            "style": 52
+            "width": 16
           },
           "C1": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 18,
-            "style": 51
+            "width": 18
           },
           "D1": {
             "readonly": false,
+            "style": 52,
             "type": "text",
-            "width": 16,
-            "style": 52
+            "width": 16
           },
           "E1": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 22,
-            "style": 51
+            "width": 22
+          },
+          "F1": {
+            "readonly": false,
+            "style": 52,
+            "type": "text",
+            "width": 100
+          },
+          "G1": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
           },
           "A2": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 12,
-            "style": 51
+            "width": 12
           },
           "B2": {
             "readonly": false,
+            "style": 52,
             "type": "text",
-            "width": 16,
-            "style": 52
+            "width": 16
           },
           "C2": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 18,
-            "style": 51
+            "width": 18
           },
           "D2": {
             "readonly": false,
+            "style": 52,
             "type": "text",
-            "width": 16,
-            "style": 52
+            "width": 16
           },
           "E2": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 22,
-            "style": 51
+            "width": 22
+          },
+          "F2": {
+            "readonly": false,
+            "style": 52,
+            "type": "text",
+            "width": 100
+          },
+          "G2": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
           },
           "A3": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 12,
-            "style": 51
+            "width": 12
           },
           "B3": {
             "readonly": false,
+            "style": 52,
             "type": "text",
-            "width": 16,
-            "style": 52
+            "width": 16
           },
           "C3": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 18,
-            "style": 51
+            "width": 18
           },
           "D3": {
             "readonly": false,
+            "style": 52,
             "type": "text",
-            "width": 16,
-            "style": 52
+            "width": 16
           },
           "E3": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 22,
-            "style": 51
+            "width": 22
+          },
+          "F3": {
+            "readonly": false,
+            "style": 52,
+            "type": "text",
+            "width": 100
+          },
+          "G3": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
           },
           "A4": {
             "readonly": false,
@@ -16330,6 +16366,16 @@
             "type": "text",
             "width": 22
           },
+          "F4": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
+          },
+          "G4": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
+          },
           "A5": {
             "readonly": false,
             "type": "text",
@@ -16355,95 +16401,138 @@
             "type": "text",
             "width": 22
           },
-          "A6": {
+          "F5": {
             "readonly": false,
             "type": "text",
-            "width": 12,
-            "style": 51
+            "width": 100
+          },
+          "G5": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
+          },
+          "A6": {
+            "readonly": false,
+            "style": 51,
+            "type": "text",
+            "width": 12
           },
           "B6": {
             "readonly": false,
+            "style": 52,
             "type": "text",
-            "width": 16,
-            "style": 52
+            "width": 16
           },
           "C6": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 18,
-            "style": 51
+            "width": 18
           },
           "D6": {
             "readonly": false,
+            "style": 52,
             "type": "text",
-            "width": 16,
-            "style": 52
+            "width": 16
           },
           "E6": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 22,
-            "style": 51
+            "width": 22
+          },
+          "F6": {
+            "readonly": false,
+            "style": 52,
+            "type": "text",
+            "width": 100
+          },
+          "G6": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
           },
           "A7": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 12,
-            "style": 51
+            "width": 12
           },
           "B7": {
             "readonly": false,
+            "style": 52,
             "type": "text",
-            "width": 16,
-            "style": 52
+            "width": 16
           },
           "C7": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 18,
-            "style": 51
+            "width": 18
           },
           "D7": {
             "readonly": false,
+            "style": 52,
             "type": "text",
-            "width": 16,
-            "style": 52
+            "width": 16
           },
           "E7": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 22,
-            "style": 51
+            "width": 22
+          },
+          "F7": {
+            "readonly": false,
+            "style": 52,
+            "type": "text",
+            "width": 100
+          },
+          "G7": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
           },
           "A8": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 12,
-            "style": 51
+            "width": 12
           },
           "B8": {
             "readonly": false,
+            "style": 52,
             "type": "text",
-            "width": 16,
-            "style": 52
+            "width": 16
           },
           "C8": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 18,
-            "style": 51
+            "width": 18
           },
           "D8": {
             "readonly": false,
+            "style": 52,
             "type": "text",
-            "width": 16,
-            "style": 52
+            "width": 16
           },
           "E8": {
             "readonly": false,
+            "style": 51,
             "type": "text",
-            "width": 22,
-            "style": 51
+            "width": 22
+          },
+          "F8": {
+            "readonly": false,
+            "style": 52,
+            "type": "text",
+            "width": 100
+          },
+          "G8": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
           },
           "A9": {
             "readonly": false,
@@ -16470,489 +16559,7 @@
             "type": "text",
             "width": 22
           },
-          "A10": {
-            "readonly": false,
-            "type": "text",
-            "width": 12,
-            "style": 54
-          },
-          "B10": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 54
-          },
-          "C10": {
-            "readonly": false,
-            "type": "text",
-            "width": 18,
-            "style": 54
-          },
-          "D10": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 54
-          },
-          "E10": {
-            "readonly": false,
-            "type": "text",
-            "width": 22,
-            "style": 54
-          },
-          "A11": {
-            "readonly": false,
-            "type": "text",
-            "width": 12,
-            "style": 55
-          },
-          "B11": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "C11": {
-            "readonly": false,
-            "type": "text",
-            "width": 18,
-            "style": 55
-          },
-          "D11": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "E11": {
-            "readonly": false,
-            "type": "text",
-            "width": 22,
-            "style": 55
-          },
-          "A12": {
-            "readonly": false,
-            "type": "text",
-            "width": 12,
-            "style": 55
-          },
-          "B12": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "C12": {
-            "readonly": false,
-            "type": "text",
-            "width": 18,
-            "style": 55
-          },
-          "D12": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "E12": {
-            "readonly": false,
-            "type": "text",
-            "width": 22,
-            "style": 55
-          },
-          "A13": {
-            "readonly": false,
-            "type": "text",
-            "width": 12,
-            "style": 55
-          },
-          "B13": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "C13": {
-            "readonly": false,
-            "type": "text",
-            "width": 18,
-            "style": 55
-          },
-          "D13": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "E13": {
-            "readonly": false,
-            "type": "text",
-            "width": 22,
-            "style": 55
-          },
-          "A14": {
-            "readonly": false,
-            "type": "text",
-            "width": 12,
-            "style": 55
-          },
-          "B14": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "C14": {
-            "readonly": false,
-            "type": "text",
-            "width": 18,
-            "style": 55
-          },
-          "D14": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "E14": {
-            "readonly": false,
-            "type": "text",
-            "width": 22,
-            "style": 55
-          },
-          "A15": {
-            "readonly": false,
-            "type": "text",
-            "width": 12,
-            "style": 55
-          },
-          "B15": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "C15": {
-            "readonly": false,
-            "type": "text",
-            "width": 18,
-            "style": 55
-          },
-          "D15": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "E15": {
-            "readonly": false,
-            "type": "text",
-            "width": 22,
-            "style": 55
-          },
-          "A16": {
-            "readonly": false,
-            "type": "text",
-            "width": 12,
-            "style": 55
-          },
-          "B16": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "C16": {
-            "readonly": false,
-            "type": "text",
-            "width": 18,
-            "style": 55
-          },
-          "D16": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "E16": {
-            "readonly": false,
-            "type": "text",
-            "width": 22,
-            "style": 55
-          },
-          "A17": {
-            "readonly": false,
-            "type": "text",
-            "width": 12,
-            "style": 55
-          },
-          "B17": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "C17": {
-            "readonly": false,
-            "type": "text",
-            "width": 18,
-            "style": 55
-          },
-          "D17": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "E17": {
-            "readonly": false,
-            "type": "text",
-            "width": 22,
-            "style": 55
-          },
-          "A18": {
-            "readonly": false,
-            "type": "text",
-            "width": 12,
-            "style": 55
-          },
-          "B18": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "C18": {
-            "readonly": false,
-            "type": "text",
-            "width": 18,
-            "style": 55
-          },
-          "D18": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "E18": {
-            "readonly": false,
-            "type": "text",
-            "width": 22,
-            "style": 55
-          },
-          "A19": {
-            "readonly": false,
-            "type": "text",
-            "width": 12,
-            "style": 55
-          },
-          "B19": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "C19": {
-            "readonly": false,
-            "type": "text",
-            "width": 18,
-            "style": 55
-          },
-          "D19": {
-            "readonly": false,
-            "type": "text",
-            "width": 16,
-            "style": 55
-          },
-          "E19": {
-            "readonly": false,
-            "type": "text",
-            "width": 22,
-            "style": 55
-          },
-          "A20": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "B20": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "C20": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "D20": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "E20": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "F1": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 52
-          },
-          "F2": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 52
-          },
-          "F3": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 52
-          },
-          "F4": {
-            "readonly": false,
-            "type": "text",
-            "width": 100
-          },
-          "F5": {
-            "readonly": false,
-            "type": "text",
-            "width": 100
-          },
-          "F6": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 52
-          },
-          "F7": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 52
-          },
-          "F8": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 52
-          },
           "F9": {
-            "readonly": false,
-            "type": "text",
-            "width": 100
-          },
-          "F10": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 54
-          },
-          "F11": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "F12": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "F13": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "F14": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "F15": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "F16": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "F17": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "F18": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "F19": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "F20": {
-            "readonly": false,
-            "type": "text",
-            "width": 100,
-            "style": 55
-          },
-          "G1": {
-            "readonly": false,
-            "type": "text",
-            "width": 100
-          },
-          "G2": {
-            "readonly": false,
-            "type": "text",
-            "width": 100
-          },
-          "G3": {
-            "readonly": false,
-            "type": "text",
-            "width": 100
-          },
-          "G4": {
-            "readonly": false,
-            "type": "text",
-            "width": 100
-          },
-          "G5": {
-            "readonly": false,
-            "type": "text",
-            "width": 100
-          },
-          "G6": {
-            "readonly": false,
-            "type": "text",
-            "width": 100
-          },
-          "G7": {
-            "readonly": false,
-            "type": "text",
-            "width": 100
-          },
-          "G8": {
             "readonly": false,
             "type": "text",
             "width": 100
@@ -16962,71 +16569,467 @@
             "type": "text",
             "width": 100
           },
+          "A10": {
+            "readonly": false,
+            "style": 54,
+            "type": "text",
+            "width": 12
+          },
+          "B10": {
+            "readonly": false,
+            "style": 54,
+            "type": "text",
+            "width": 16
+          },
+          "C10": {
+            "readonly": false,
+            "style": 54,
+            "type": "text",
+            "width": 18
+          },
+          "D10": {
+            "readonly": false,
+            "style": 54,
+            "type": "text",
+            "width": 16
+          },
+          "E10": {
+            "readonly": false,
+            "style": 54,
+            "type": "text",
+            "width": 22
+          },
+          "F10": {
+            "readonly": false,
+            "style": 54,
+            "type": "text",
+            "width": 100
+          },
           "G10": {
             "readonly": false,
+            "style": 54,
             "type": "text",
-            "width": 100,
-            "style": 54
+            "width": 100
+          },
+          "A11": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 12
+          },
+          "B11": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "C11": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 18
+          },
+          "D11": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "E11": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 22
+          },
+          "F11": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
           },
           "G11": {
             "readonly": false,
+            "style": 55,
             "type": "text",
-            "width": 100,
-            "style": 55
+            "width": 100
+          },
+          "A12": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 12
+          },
+          "B12": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "C12": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 18
+          },
+          "D12": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "E12": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 22
+          },
+          "F12": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
           },
           "G12": {
             "readonly": false,
+            "style": 55,
             "type": "text",
-            "width": 100,
-            "style": 55
+            "width": 100
+          },
+          "A13": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 12
+          },
+          "B13": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "C13": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 18
+          },
+          "D13": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "E13": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 22
+          },
+          "F13": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
           },
           "G13": {
             "readonly": false,
+            "style": 55,
             "type": "text",
-            "width": 100,
-            "style": 55
+            "width": 100
+          },
+          "A14": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 12
+          },
+          "B14": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "C14": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 18
+          },
+          "D14": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "E14": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 22
+          },
+          "F14": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
           },
           "G14": {
             "readonly": false,
+            "style": 55,
             "type": "text",
-            "width": 100,
-            "style": 55
+            "width": 100
+          },
+          "A15": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 12
+          },
+          "B15": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "C15": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 18
+          },
+          "D15": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "E15": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 22
+          },
+          "F15": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
           },
           "G15": {
             "readonly": false,
+            "style": 55,
             "type": "text",
-            "width": 100,
-            "style": 55
+            "width": 100
+          },
+          "A16": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 12
+          },
+          "B16": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "C16": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 18
+          },
+          "D16": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "E16": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 22
+          },
+          "F16": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
           },
           "G16": {
             "readonly": false,
+            "style": 55,
             "type": "text",
-            "width": 100,
-            "style": 55
+            "width": 100
+          },
+          "A17": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 12
+          },
+          "B17": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "C17": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 18
+          },
+          "D17": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "E17": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 22
+          },
+          "F17": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
           },
           "G17": {
             "readonly": false,
+            "style": 55,
             "type": "text",
-            "width": 100,
-            "style": 55
+            "width": 100
+          },
+          "A18": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 12
+          },
+          "B18": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "C18": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 18
+          },
+          "D18": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "E18": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 22
+          },
+          "F18": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
           },
           "G18": {
             "readonly": false,
+            "style": 55,
             "type": "text",
-            "width": 100,
-            "style": 55
+            "width": 100
+          },
+          "A19": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 12
+          },
+          "B19": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "C19": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 18
+          },
+          "D19": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 16
+          },
+          "E19": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 22
+          },
+          "F19": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
           },
           "G19": {
             "readonly": false,
+            "style": 55,
             "type": "text",
-            "width": 100,
-            "style": 55
+            "width": 100
+          },
+          "A20": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
+          },
+          "B20": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
+          },
+          "C20": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
+          },
+          "D20": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
+          },
+          "E20": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
+          },
+          "F20": {
+            "readonly": false,
+            "style": 55,
+            "type": "text",
+            "width": 100
           },
           "G20": {
             "readonly": false,
+            "style": 55,
             "type": "text",
-            "width": 100,
-            "style": 55
+            "width": 100
           }
         },
         "columnDrag": true,
@@ -17074,7 +17077,13 @@
         "rowResize": true,
         "rows": [
           {
+            "height": 40
+          },
+          {
             "height": 25
+          },
+          {
+            "height": 55
           },
           {
             "height": 25
@@ -17083,25 +17092,19 @@
             "height": 25
           },
           {
-            "height": 25
+            "height": 40
+          },
+          {
+            "height": 55
+          },
+          {
+            "height": 55
           },
           {
             "height": 25
           },
           {
-            "height": 25
-          },
-          {
-            "height": 25
-          },
-          {
-            "height": 25
-          },
-          {
-            "height": 25
-          },
-          {
-            "height": 25
+            "height": 40
           },
           {
             "height": 25
@@ -17151,18 +17154,18 @@
           ],
           [
             "Label Mass g",
-            "=IF(Data!B7=\"\",\"\",Data!B7)",
+            "=IF(OR(Data!B7=\"\",Data!B7=0),\"N/A\",TEXT(Data!B7,\"0.000\"))",
             "Mass Variance Basis",
             "=Data!B10",
             "Allowed Variance",
-            "=TEXT(Data!B9,\"0%\")",
+            "=TEXT(Data!B9,\"0.0%\")",
             ""
           ],
           [
-            "Label Cannabinoid 1 mg/container",
+            "Label Cannabinoid 1 mg/unit",
             "=Data!B4",
-            "Label Cannabinoid 2 mg/container",
-            "=IF(Data!B5=\"\",\"\",Data!B6)",
+            "Label Cannabinoid 2 mg/unit",
+            "=IF(Data!B5=\"\",\"N/A\",Data!B6)",
             "",
             "",
             ""
@@ -17195,7 +17198,7 @@
             ""
           ],
           [
-            "Highest Cannabinoid 1 mg/container",
+            "Highest Cannabinoid 1 mg/unit",
             "=IF(Data!B27=\"\",\"\",TEXT(Data!B27,\"0.00\"))",
             "Cannabinoid 1 Label Variance",
             "=IF(Data!B28=\"\",\"\",TEXT(Data!B28,\"0.0%\"))",
@@ -17204,10 +17207,10 @@
             ""
           ],
           [
-            "Highest Cannabinoid 2 mg/container",
-            "=IF(Data!B5=\"\",\"\",IF(Data!B29=\"\",\"\",TEXT(Data!B29,\"0.00\")))",
+            "Highest Cannabinoid 2 mg/unit",
+            "=IF(Data!B5=\"\",\"N/A\",IF(Data!B29=\"\",\"\",TEXT(Data!B29,\"0.00\")))",
             "Cannabinoid 2 Label Variance",
-            "=IF(Data!B5=\"\",\"\",IF(Data!B30=\"\",\"\",TEXT(Data!B30,\"0.0%\")))",
+            "=IF(Data!B5=\"\",\"N/A\",IF(Data!B30=\"\",\"\",TEXT(Data!B30,\"0.0%\")))",
             "",
             "",
             ""
@@ -17225,10 +17228,10 @@
             "Replicate",
             "Unit Mass g",
             "Mass Label Variance",
-            "=IF(Data!B3=\"\",\"mg/container\",\"mg/container (\"&Data!B3&\")\")",
-            "=IF(Data!B3=\"\",\"Cannabinoid Label Variance\",\"Cannabinoid Label Variance (\"&Data!B3&\")\")",
-            "=IF(Data!B5=\"\",\"\",\"mg/container (\"&Data!B5&\")\")",
-            "=IF(Data!B5=\"\",\"\",\"Cannabinoid Label Variance (\"&Data!B5&\")\")"
+            "mg/unit (Target 1)",
+            "Cannabinoid Label Variance (Target 1)",
+            "=IF(Data!B5=\"\",\"\",\"mg/unit (Target 2)\")",
+            "=IF(Data!B5=\"\",\"\",\"Cannabinoid Label Variance (Target 2)\")"
           ],
           [
             "=Data!A12",
@@ -17322,8 +17325,8 @@
           ]
         ],
         "tableOverflow": true,
-        "tableWidth": 800,
-        "tableHeight": 552,
+        "tableWidth": 1871,
+        "tableHeight": 350,
         "resize": "vertical",
         "minDimensions": [
           1,
@@ -17333,48 +17336,48 @@
         "meta": {},
         "style": {
           "A1": 45,
-          "C1": 45,
-          "E1": 45,
           "B1": 47,
+          "C1": 45,
           "D1": 47,
+          "E1": 45,
           "F1": 47,
           "G1": 47,
           "A2": 45,
-          "C2": 45,
-          "E2": 45,
           "B2": 47,
+          "C2": 45,
           "D2": 47,
+          "E2": 45,
           "F2": 47,
           "G2": 47,
           "A3": 45,
-          "C3": 45,
-          "E3": 45,
           "B3": 47,
+          "C3": 45,
           "D3": 47,
+          "E3": 45,
           "F3": 47,
           "G3": 47,
+          "A5": 44,
           "A6": 45,
-          "C6": 45,
-          "E6": 45,
           "B6": 47,
+          "C6": 45,
           "D6": 47,
+          "E6": 45,
           "F6": 47,
           "G6": 47,
           "A7": 45,
-          "C7": 45,
-          "E7": 45,
           "B7": 47,
+          "C7": 45,
           "D7": 47,
+          "E7": 45,
           "F7": 47,
           "G7": 47,
           "A8": 45,
-          "C8": 45,
-          "E8": 45,
           "B8": 47,
+          "C8": 45,
           "D8": 47,
+          "E8": 45,
           "F8": 47,
           "G8": 47,
-          "A5": 44,
           "A10": 45,
           "B10": 45,
           "C10": 45,
@@ -19612,12 +19615,12 @@
       },
       "label_cannabinoid_1_mg_container": {
         "cell": "Data!B4",
-        "display_name": "Label Cannabinoid 1 mg/container",
+        "display_name": "Label Cannabinoid 1 mg/unit",
         "export": true
       },
       "label_cannabinoid_2_mg_container": {
         "cell": "Data!B6",
-        "display_name": "Label Cannabinoid 2 mg/container",
+        "display_name": "Label Cannabinoid 2 mg/unit",
         "export": true
       },
       "label_unit_mass_g": {
@@ -19642,7 +19645,7 @@
       },
       "highest_reported_cannabinoid_1_mg_container": {
         "cell": "Data!B27",
-        "display_name": "Highest Reported Cannabinoid 1 mg/container",
+        "display_name": "Highest Reported Cannabinoid 1 mg/unit",
         "export": true
       },
       "highest_cannabinoid_1_label_variance": {
@@ -19652,7 +19655,7 @@
       },
       "highest_reported_cannabinoid_2_mg_container": {
         "cell": "Data!B29",
-        "display_name": "Highest Reported Cannabinoid 2 mg/container",
+        "display_name": "Highest Reported Cannabinoid 2 mg/unit",
         "export": true
       },
       "highest_cannabinoid_2_label_variance": {
@@ -19727,17 +19730,17 @@
       },
       "manual_label_cannabinoid_1_mg_container": {
         "cell": "Paste!O4",
-        "display_name": "Manual Label Cannabinoid 1 mg/container Override",
+        "display_name": "Manual Label Cannabinoid 1 mg/unit Override",
         "export": true
       },
       "manual_label_cannabinoid_2_mg_container": {
         "cell": "Paste!S4",
-        "display_name": "Manual Label Cannabinoid 2 mg/container Override",
+        "display_name": "Manual Label Cannabinoid 2 mg/unit Override",
         "export": true
       },
       "qbench_sample_label_amount_lookup": {
         "cell": "Paste!N24:P36",
-        "display_name": "QBench Sample Label Amount Lookup",
+        "display_name": "QBench Per-Serving Label Amount Lookup",
         "export": true
       }
     },
@@ -19878,25 +19881,25 @@
       [
         "Target Cannabinoid 1",
         "Total THC",
-        "Label Cannabinoid 1 Content mg/container",
+        "Label Cannabinoid 1 Content mg/unit",
         "=IF(O4<>\"\",O4,IF(B4=\"\",\"\",IFERROR(IF(OR(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0))=\"\",LOWER(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0)))=\"none\",LEFT(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0)),2)=\"${\"),\"\",INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0))),\"\")))",
         "Target Cannabinoid 2 optional",
         "",
-        "Label Cannabinoid 2 Content mg/container",
+        "Label Cannabinoid 2 Content mg/unit",
         "=IF(S4<>\"\",S4,IF(F4=\"\",\"\",IFERROR(IF(OR(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0))=\"\",LOWER(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0)))=\"none\",LEFT(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0)),2)=\"${\"),\"\",INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0))),\"\")))",
         "Label Unit Mass g optional",
         "",
         "Allowed Variance",
         0.15,
         "",
-        "Manual Label 1 Override mg/container",
+        "Manual Label 1 Override mg/serving/unit",
         "",
         "Label Claim 1 Source",
-        "=IF(O4<>\"\",\"Manual override Paste!O4\",IF(B4=\"\",\"\",IFERROR(IF(OR(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0))=\"\",LOWER(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0)))=\"none\",LEFT(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0)),2)=\"${\"),\"Mapped QBench field is blank/unresolved: \"&INDEX($O$25:$O$36,MATCH(B4,$N$25:$N$36,0)),\"Pulled from \"&INDEX($O$25:$O$36,MATCH(B4,$N$25:$N$36,0))),\"No mapped QBench sample label field\")))",
-        "Manual Label 2 Override mg/container",
+        "=IF(O4<>\"\",\"Manual per-serving/unit override Paste!O4\",IF(B4=\"\",\"\",IFERROR(IF(OR(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0))=\"\",LOWER(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0)))=\"none\",LEFT(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0)),2)=\"${\"),\"Mapped per-serving/unit field is blank/unresolved: \"&INDEX($O$25:$O$36,MATCH(B4,$N$25:$N$36,0)),\"Pulled per-serving/unit value from \"&INDEX($O$25:$O$36,MATCH(B4,$N$25:$N$36,0))),\"No mapped per-serving/unit QBench sample label field\")))",
+        "Manual Label 2 Override mg/serving/unit",
         "",
         "Label Claim 2 Source",
-        "=IF(F4=\"\",\"Target 2 not used\",IF(S4<>\"\",\"Manual override Paste!S4\",IFERROR(IF(OR(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0))=\"\",LOWER(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0)))=\"none\",LEFT(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0)),2)=\"${\"),\"Mapped QBench field is blank/unresolved: \"&INDEX($O$25:$O$36,MATCH(F4,$N$25:$N$36,0)),\"Pulled from \"&INDEX($O$25:$O$36,MATCH(F4,$N$25:$N$36,0))),\"No mapped QBench sample label field\")))",
+        "=IF(F4=\"\",\"Target 2 not used\",IF(S4<>\"\",\"Manual per-serving/unit override Paste!S4\",IFERROR(IF(OR(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0))=\"\",LOWER(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0)))=\"none\",LEFT(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0)),2)=\"${\"),\"Mapped per-serving/unit field is blank/unresolved: \"&INDEX($O$25:$O$36,MATCH(F4,$N$25:$N$36,0)),\"Pulled per-serving/unit value from \"&INDEX($O$25:$O$36,MATCH(F4,$N$25:$N$36,0))),\"No mapped per-serving/unit QBench sample label field\")))",
         "",
         "",
         "",
@@ -20651,7 +20654,7 @@
       ],
       [
         "Unit note",
-        "Pasted cannabinoid result values are expected in ug/g. AI:AJ and Data target formulas convert to mg/g before mg/container calculations.",
+        "Pasted cannabinoid result values are expected in ug/g. AI:AJ and Data target formulas convert to mg/g before mg/unit calculations.",
         "",
         "",
         "",
@@ -20749,9 +20752,9 @@
         "",
         "",
         "",
-        "QBench sample label amount lookup",
-        "Field display name",
-        "Pulled label mg/container",
+        "QBench per-serving label amount lookup",
+        "Per-serving source field/status",
+        "Pulled label mg/serving/unit",
         "",
         "",
         "",
@@ -20793,8 +20796,8 @@
         "",
         "",
         "Total THC",
-        "Product Label Amount - Total THC (if applicable)",
-        "${test.sample.product_label_totalthc}",
+        "Per-serving label amount - Total THC (totalthc_persrv)",
+        "${test.sample.totalthc_persrv}",
         "",
         "",
         "",
@@ -20836,8 +20839,8 @@
         "",
         "",
         "Total CBD",
-        "Product Label Amount - Total CBD (if applicable)",
-        "${test.sample.product_label_totalcbd}",
+        "Per-serving label amount - Total CBD (totalcbd_persrv)",
+        "${test.sample.totalcbd_persrv}",
         "",
         "",
         "",
@@ -20879,8 +20882,8 @@
         "",
         "",
         "CBD",
-        "Product Label Amount - CBD (if applicable)",
-        "${test.sample.product_label_cbd}",
+        "Per-serving label amount - CBD (cbd_persrv)",
+        "${test.sample.cbd_persrv}",
         "",
         "",
         "",
@@ -20922,8 +20925,8 @@
         "",
         "",
         "CBDa",
-        "Product Label Amount - CBDa (if applicable)",
-        "${test.sample.product_label_cbda}",
+        "Manual per-serving override required - no exported per-serving field",
+        "",
         "",
         "",
         "",
@@ -20965,8 +20968,8 @@
         "",
         "",
         "CBN",
-        "Product Label Amount - CBN (if applicable)",
-        "${test.sample.product_label_cbn}",
+        "Manual per-serving override required - no exported per-serving field",
+        "",
         "",
         "",
         "",
@@ -21008,8 +21011,8 @@
         "",
         "",
         "CBG",
-        "Product Label Amount - CBG (if applicable)",
-        "${test.sample.product_label_cbg}",
+        "Manual per-serving override required - no exported per-serving field",
+        "",
         "",
         "",
         "",
@@ -21051,8 +21054,8 @@
         "",
         "",
         "CBGa",
-        "Product Label Amount - CBGa (if applicable)",
-        "${test.sample.product_label_cbga}",
+        "Manual per-serving override required - no exported per-serving field",
+        "",
         "",
         "",
         "",
@@ -21094,8 +21097,8 @@
         "",
         "",
         "D8-THC",
-        "Product Label Amount - d8 THC (if applicable)",
-        "${test.sample.product_label_d8thc}",
+        "Per-serving label amount - d8 THC (d8thc_persrv)",
+        "${test.sample.d8thc_persrv}",
         "",
         "",
         "",
@@ -21137,8 +21140,8 @@
         "",
         "",
         "D9-THC",
-        "Product Label Amount - d9 THC (if applicable)",
-        "${test.sample.product_label_thc}",
+        "Per-serving label amount - d9 THC (d9thc_persrv)",
+        "${test.sample.d9thc_persrv}",
         "",
         "",
         "",
@@ -21180,8 +21183,8 @@
         "",
         "",
         "THCV",
-        "Product Label Amount - THCV (if applicable)",
-        "${test.sample.product_label_thcv}",
+        "Manual per-serving override required - no exported per-serving field",
+        "",
         "",
         "",
         "",
@@ -21223,8 +21226,8 @@
         "",
         "",
         "CBC",
-        "Product Label Amount - CBC (if applicable)",
-        "${test.sample.product_label_cbc}",
+        "Per-serving label amount - CBC (cbc_persrv)",
+        "${test.sample.cbc_persrv}",
         "",
         "",
         "",
@@ -21266,8 +21269,8 @@
         "",
         "",
         "THCa",
-        "Product Label Amount - THCa (if applicable)",
-        "${test.sample.product_label_thca}",
+        "Manual per-serving override required - no exported per-serving field",
+        "",
         "",
         "",
         "",
@@ -21321,7 +21324,7 @@
         ""
       ],
       [
-        "Pasted cannabinoid result values are expected in ug/g. Target result formulas convert to mg/g before mg/container calculations.",
+        "Pasted cannabinoid result values are expected in ug/g. Target result formulas convert to mg/g before mg/unit calculations.",
         "",
         "",
         "",
@@ -21369,7 +21372,7 @@
         ""
       ],
       [
-        "Label Cannabinoid 1 Content mg/container",
+        "Label Cannabinoid 1 Content mg/unit",
         "=Paste!D4",
         "",
         "",
@@ -21417,7 +21420,7 @@
         ""
       ],
       [
-        "Label Cannabinoid 2 Content mg/container",
+        "Label Cannabinoid 2 Content mg/unit",
         "=Paste!H4",
         "",
         "",
@@ -21548,11 +21551,11 @@
         "Mass Basis g",
         "Mass Basis Type",
         "Mass % Variance",
-        "Label Cannabinoid 1 mg/container",
-        "Actual Cannabinoid 1 mg/container",
+        "Label Cannabinoid 1 mg/unit",
+        "Actual Cannabinoid 1 mg/unit",
         "Cannabinoid 1 % Variance",
-        "Label Cannabinoid 2 mg/container",
-        "Actual Cannabinoid 2 mg/container",
+        "Label Cannabinoid 2 mg/unit",
+        "Actual Cannabinoid 2 mg/unit",
         "Cannabinoid 2 % Variance",
         "Mass Result",
         "Cannabinoid 1 Result",
@@ -21921,7 +21924,7 @@
         ""
       ],
       [
-        "Highest Reported Cannabinoid 1 mg/container",
+        "Highest Reported Cannabinoid 1 mg/unit",
         "=IF(COUNT(M12:M21)=0,\"\",MAX(M12:M21))",
         "",
         "",
@@ -21969,7 +21972,7 @@
         ""
       ],
       [
-        "Highest Reported Cannabinoid 2 mg/container",
+        "Highest Reported Cannabinoid 2 mg/unit",
         "=IF($B$5=\"\",\"\",IF(COUNT(P12:P21)=0,\"\",MAX(P12:P21)))",
         "",
         "",
@@ -22235,7 +22238,7 @@
       [
         "Required Target 1 and Label Claim Check",
         "=IF(AND($B$3<>\"\",$B$4<>\"\"),\"PASS\",\"INCOMPLETE\")",
-        "Target Cannabinoid 1 and label mg/container are required",
+        "Target Cannabinoid 1 and label mg/unit are required",
         "",
         "",
         "",
@@ -22259,7 +22262,7 @@
       [
         "Optional Target 2 Label Claim Check",
         "=IF($B$5=\"\",\"PASS\",IF($B$6<>\"\",\"PASS\",\"INCOMPLETE\"))",
-        "Target Cannabinoid 2 is optional; label mg/container is required when used",
+        "Target Cannabinoid 2 is optional; label mg/unit is required when used",
         "",
         "",
         "",
@@ -22317,18 +22320,18 @@
       ],
       [
         "Label Mass g",
-        "=IF(Data!B7=\"\",\"\",Data!B7)",
+        "=IF(OR(Data!B7=\"\",Data!B7=0),\"N/A\",TEXT(Data!B7,\"0.000\"))",
         "Mass Variance Basis",
         "=Data!B10",
         "Allowed Variance",
-        "=TEXT(Data!B9,\"0%\")",
+        "=TEXT(Data!B9,\"0.0%\")",
         ""
       ],
       [
-        "Label Cannabinoid 1 mg/container",
+        "Label Cannabinoid 1 mg/unit",
         "=Data!B4",
-        "Label Cannabinoid 2 mg/container",
-        "=IF(Data!B5=\"\",\"\",Data!B6)",
+        "Label Cannabinoid 2 mg/unit",
+        "=IF(Data!B5=\"\",\"N/A\",Data!B6)",
         "",
         "",
         ""
@@ -22361,7 +22364,7 @@
         ""
       ],
       [
-        "Highest Cannabinoid 1 mg/container",
+        "Highest Cannabinoid 1 mg/unit",
         "=IF(Data!B27=\"\",\"\",TEXT(Data!B27,\"0.00\"))",
         "Cannabinoid 1 Label Variance",
         "=IF(Data!B28=\"\",\"\",TEXT(Data!B28,\"0.0%\"))",
@@ -22370,10 +22373,10 @@
         ""
       ],
       [
-        "Highest Cannabinoid 2 mg/container",
-        "=IF(Data!B5=\"\",\"\",IF(Data!B29=\"\",\"\",TEXT(Data!B29,\"0.00\")))",
+        "Highest Cannabinoid 2 mg/unit",
+        "=IF(Data!B5=\"\",\"N/A\",IF(Data!B29=\"\",\"\",TEXT(Data!B29,\"0.00\")))",
         "Cannabinoid 2 Label Variance",
-        "=IF(Data!B5=\"\",\"\",IF(Data!B30=\"\",\"\",TEXT(Data!B30,\"0.0%\")))",
+        "=IF(Data!B5=\"\",\"N/A\",IF(Data!B30=\"\",\"\",TEXT(Data!B30,\"0.0%\")))",
         "",
         "",
         ""
@@ -22391,10 +22394,10 @@
         "Replicate",
         "Unit Mass g",
         "Mass Label Variance",
-        "=IF(Data!B3=\"\",\"mg/container\",\"mg/container (\"&Data!B3&\")\")",
-        "=IF(Data!B3=\"\",\"Cannabinoid Label Variance\",\"Cannabinoid Label Variance (\"&Data!B3&\")\")",
-        "=IF(Data!B5=\"\",\"\",\"mg/container (\"&Data!B5&\")\")",
-        "=IF(Data!B5=\"\",\"\",\"Cannabinoid Label Variance (\"&Data!B5&\")\")"
+        "mg/unit (Target 1)",
+        "Cannabinoid Label Variance (Target 1)",
+        "=IF(Data!B5=\"\",\"\",\"mg/unit (Target 2)\")",
+        "=IF(Data!B5=\"\",\"\",\"Cannabinoid Label Variance (Target 2)\")"
       ],
       [
         "=Data!A12",

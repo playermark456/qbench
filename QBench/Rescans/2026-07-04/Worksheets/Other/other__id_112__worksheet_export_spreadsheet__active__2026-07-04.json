@@ -1,0 +1,1761 @@
+{
+  "_id": "Type:WORKSHEET_VERSION;EntityId:386",
+  "table_config": {
+    "cell_settings": [
+      [
+        {
+          "value": "SOP Step",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 0,
+            "visualCol": 0,
+            "visualRow": 0,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#F3F3F3"
+                }
+              }
+            },
+            "borders": {
+              "id": "border_row0col0",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 0,
+              "col": 0,
+              "top": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "SOP Description",
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 0,
+            "visualCol": 1,
+            "visualRow": 0,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#F3F3F3"
+                }
+              }
+            },
+            "borders": {
+              "id": "border_row0col1",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 0,
+              "col": 1,
+              "top": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 0,
+            "visualCol": 2,
+            "visualRow": 0,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#F3F3F3"
+                }
+              }
+            }
+          }
+        },
+        {
+          "value": "Criteria",
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 0,
+            "visualCol": 3,
+            "visualRow": 0,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#F3F3F3"
+                }
+              }
+            },
+            "borders": {
+              "id": "border_row0col3",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 0,
+              "col": 3,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "hide": true
+              }
+            }
+          }
+        },
+        {
+          "value": "Parameter",
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 0,
+            "visualCol": 4,
+            "visualRow": 0,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#F3F3F3"
+                }
+              }
+            },
+            "borders": {
+              "id": "border_row0col4",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 0,
+              "col": 4,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "hide": true
+              }
+            }
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.1",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 1,
+            "visualCol": 0,
+            "visualRow": 1,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            },
+            "borders": {
+              "id": "border_row1col0",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 1,
+              "col": 0,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "Prior to use each day, the system requires a Daily Self-Test to ensure optimal operation.",
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 1,
+            "visualCol": 1,
+            "visualRow": 1,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "borders": {
+              "id": "border_row1col1",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 1,
+              "col": 1,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 1,
+            "visualCol": 2,
+            "visualRow": 1,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "borders": {
+              "id": "border_row1col2",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 1,
+              "col": 2,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "hide": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 1,
+            "visualCol": 3,
+            "visualRow": 1,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            },
+            "type": "dropdown",
+            "editor": "dropdown",
+            "source": [
+              "Performed",
+              "N/A"
+            ],
+            "options": {},
+            "_automaticallyAssignedMetaProps": [
+              "validator"
+            ],
+            "borders": {
+              "id": "border_row1col3",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 1,
+              "col": 3,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            },
+            "filter": false,
+            "strict": true,
+            "valid": true
+          }
+        },
+        {
+          "value": "Check to ensure the PCR plate holder is in the Gene-Up.",
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 1,
+            "visualCol": 4,
+            "visualRow": 1,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "borders": {
+              "id": "border_row1col4",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 1,
+              "col": 4,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.2",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 2,
+            "visualCol": 0,
+            "visualRow": 2,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "borders": {
+              "id": "border_row2col0",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 2,
+              "col": 0,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "Open and login to the appropriate software (either the Open or Routine software).",
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 2,
+            "visualCol": 1,
+            "visualRow": 2,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "borders": {
+              "id": "border_row2col1",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 2,
+              "col": 1,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 2,
+            "visualCol": 2,
+            "visualRow": 2,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "borders": {
+              "id": "border_row2col2",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 2,
+              "col": 2,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "hide": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 2,
+            "visualCol": 3,
+            "visualRow": 2,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            },
+            "type": "dropdown",
+            "editor": "dropdown",
+            "source": [
+              "Performed",
+              "N/A"
+            ],
+            "options": {},
+            "_automaticallyAssignedMetaProps": [
+              "validator"
+            ],
+            "borders": {
+              "id": "border_row2col3",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 2,
+              "col": 3,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "Perform the self test.",
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 2,
+            "visualCol": 4,
+            "visualRow": 2,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            },
+            "borders": {
+              "id": "border_row2col4",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 2,
+              "col": 4,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.3",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 3,
+            "visualCol": 0,
+            "visualRow": 3,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "borders": {
+              "id": "border_row3col0",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 3,
+              "col": 0,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "Open the Gene Up by pressing the top panel. Ensure that the PCR plate holder is inserted in the machine. If the PCR plate holder is not in the machine, insert the PCR plate holder into the machine. Close the Gene Up by gently pulling the top panel.",
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 3,
+            "visualCol": 1,
+            "visualRow": 3,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            },
+            "borders": {
+              "id": "border_row3col1",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 3,
+              "col": 1,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 3,
+            "visualCol": 2,
+            "visualRow": 3,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 3,
+            "visualCol": 3,
+            "visualRow": 3,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 3,
+            "visualCol": 4,
+            "visualRow": 3,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.4",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 4,
+            "visualCol": 0,
+            "visualRow": 4,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "borders": {
+              "id": "border_row4col0",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 4,
+              "col": 0,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "Select the “Self Test” and click the check mark to confirm the “Self Test” to be performed.",
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 4,
+            "visualCol": 1,
+            "visualRow": 4,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "borders": {
+              "id": "border_row4col1",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 4,
+              "col": 1,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 4,
+            "visualCol": 2,
+            "visualRow": 4,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 4,
+            "visualCol": 3,
+            "visualRow": 4,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 4,
+            "visualCol": 4,
+            "visualRow": 4,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.5",
+          "meta_data": {
+            "visualRow": 5,
+            "visualCol": 0,
+            "row": 5,
+            "col": 0,
+            "prop": 0,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "borders": {
+              "id": "border_row5col0",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 5,
+              "col": 0,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "Upon completion, a new window will appear. Ensure each test confirms “Passed”.",
+          "meta_data": {
+            "visualRow": 5,
+            "visualCol": 1,
+            "row": 5,
+            "col": 1,
+            "prop": 1,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "borders": {
+              "id": "border_row5col1",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 5,
+              "col": 1,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "visualRow": 5,
+            "visualCol": 2,
+            "row": 5,
+            "col": 2,
+            "prop": 2,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "visualRow": 5,
+            "visualCol": 3,
+            "row": 5,
+            "col": 3,
+            "prop": 3,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "visualRow": 5,
+            "visualCol": 4,
+            "row": 5,
+            "col": 4,
+            "prop": 4,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.6",
+          "meta_data": {
+            "visualRow": 6,
+            "visualCol": 0,
+            "row": 6,
+            "col": 0,
+            "prop": 0,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            },
+            "borders": {
+              "id": "border_row6col0",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 6,
+              "col": 0,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "If an error occurs, reboot the PC and rerun the “Self Test”. If a second “Self Test” does not pass, contact technical support.",
+          "meta_data": {
+            "visualRow": 6,
+            "visualCol": 1,
+            "row": 6,
+            "col": 1,
+            "prop": 1,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23",
+            "borders": {
+              "id": "border_row6col1",
+              "border": {
+                "width": 1,
+                "color": "#000",
+                "cornerVisible": false
+              },
+              "row": 6,
+              "col": 1,
+              "top": {
+                "hide": true
+              },
+              "bottom": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              },
+              "left": {
+                "hide": true
+              },
+              "right": {
+                "width": "1",
+                "color": "#000000",
+                "cornerVisible": true
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "visualRow": 6,
+            "visualCol": 2,
+            "row": 6,
+            "col": 2,
+            "prop": 2,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "visualRow": 6,
+            "visualCol": 3,
+            "row": 6,
+            "col": 3,
+            "prop": 3,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "visualRow": 6,
+            "visualCol": 4,
+            "row": 6,
+            "col": 4,
+            "prop": 4,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        }
+      ],
+      [
+        {
+          "value": "",
+          "meta_data": {
+            "visualRow": 7,
+            "visualCol": 0,
+            "row": 7,
+            "col": 0,
+            "prop": 0,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 7,
+            "visualCol": 1,
+            "row": 7,
+            "col": 1,
+            "prop": 1,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 7,
+            "visualCol": 2,
+            "row": 7,
+            "col": 2,
+            "prop": 2,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 7,
+            "visualCol": 3,
+            "row": 7,
+            "col": 3,
+            "prop": 3,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 7,
+            "visualCol": 4,
+            "row": 7,
+            "col": 4,
+            "prop": 4,
+            "renderer": "e43f1d9e-cff4-499e-83ec-b28be24dfd23"
+          }
+        }
+      ]
+    ],
+    "default_settings": {
+      "rowHeights": [
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23
+      ],
+      "colWidths": [
+        87,
+        225,
+        50,
+        87,
+        200
+      ],
+      "fixedRowsTop": 0,
+      "fixedColumnsStart": 0
+    },
+    "plugin_settings": {
+      "mergeCells": [],
+      "hiddenColumns": {
+        "copyPasteEnabled": false,
+        "indicators": true,
+        "columns": []
+      },
+      "hiddenRows": {
+        "copyPasteEnabled": false,
+        "indicators": true,
+        "rows": []
+      },
+      "customBorders": [
+        {
+          "id": "border_row0col0",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 0,
+          "col": 0,
+          "top": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row0col1",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 0,
+          "col": 1,
+          "top": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row1col0",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 1,
+          "col": 0,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row1col1",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 1,
+          "col": 1,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row2col0",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 2,
+          "col": 0,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row2col1",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 2,
+          "col": 1,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row3col0",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 3,
+          "col": 0,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row3col1",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 3,
+          "col": 1,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row4col0",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 4,
+          "col": 0,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row4col1",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 4,
+          "col": 1,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row5col0",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 5,
+          "col": 0,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row5col1",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 5,
+          "col": 1,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row6col0",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 6,
+          "col": 0,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row6col1",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 6,
+          "col": 1,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row1col3",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 1,
+          "col": 3,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row1col4",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 1,
+          "col": 4,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row2col3",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 2,
+          "col": 3,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row1col2",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 1,
+          "col": 2,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "hide": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row2col2",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 2,
+          "col": 2,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "hide": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row2col4",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 2,
+          "col": 4,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          }
+        },
+        {
+          "id": "border_row0col3",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 0,
+          "col": 3,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "hide": true
+          }
+        },
+        {
+          "id": "border_row0col4",
+          "border": {
+            "width": 1,
+            "color": "#000",
+            "cornerVisible": false
+          },
+          "row": 0,
+          "col": 4,
+          "top": {
+            "hide": true
+          },
+          "bottom": {
+            "width": "1",
+            "color": "#000000",
+            "cornerVisible": true
+          },
+          "left": {
+            "hide": true
+          },
+          "right": {
+            "hide": true
+          }
+        }
+      ]
+    }
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "_qbench_entity_id": 386,
+  "qb6": "bcc70ecb59924a4"
+}

@@ -1,0 +1,699 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "f7068067-a86a-4304-837d-71d49992b806",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "text-wrap:wrap",
+      "text-wrap:wrap;text-align:left",
+      "font-weight:bold",
+      "font-weight:bold;background-color:#e0e0e0",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;text-align:left;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;text-align:left;border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;text-align:left;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;text-align:left;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-align:left"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "H2": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 7
+          },
+          "H3": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 7
+          },
+          "H4": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 7
+          },
+          "H5": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 7
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 53
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "B1": [
+            5,
+            1
+          ],
+          "B2": [
+            5,
+            1
+          ],
+          "B3": [
+            5,
+            1
+          ],
+          "B4": [
+            5,
+            1
+          ],
+          "B5": [
+            5,
+            1
+          ],
+          "B6": [
+            5,
+            1
+          ],
+          "I1": [
+            4,
+            1
+          ],
+          "I2": [
+            4,
+            1
+          ],
+          "I3": [
+            4,
+            1
+          ],
+          "I4": [
+            4,
+            1
+          ],
+          "I5": [
+            4,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 39
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 1016,
+        "worksheetId": "6d86c96d-7e1d-46d6-a001-4d4fa0406bb9",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Criteria",
+            "Parameter",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.6.1",
+            "Weigh 0.50 ± 0.01 g of sample into a 50 mL tube.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Weigh 0.50 ± 0.01 g of sample into a 50 mL tube",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.6.2",
+            "Add 8 mL of 1% formic acid in acetonitrile solution to each sample.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Add 8 mL of 1% Formic Acid in Acetonitrile to each sample",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.6.3",
+            "Vortex the samples at speed 10 for about 5 minutes.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Vortex for the samples for 5 minutes",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.6.4",
+            "Add all the contents of a 5 g QuEChERS salts (4 g MgSO4 + 1 g NaCl) from one packet to each sample in the 50 mL tubes.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Add 5 g packet of QuEChERS salts and vortex for 3 minutes",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.6.5",
+            "Vortex samples at speed 10 for about 3 minutes.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "style": {
+          "A1": 4,
+          "A2": 6,
+          "A3": 6,
+          "A4": 6,
+          "A5": 6,
+          "A6": 9,
+          "B1": 5,
+          "B2": 7,
+          "B3": 7,
+          "B4": 7,
+          "B5": 7,
+          "B6": 10,
+          "C1": 4,
+          "C2": 8,
+          "C3": 8,
+          "C4": 8,
+          "C5": 8,
+          "C6": 11,
+          "D1": 4,
+          "D2": 8,
+          "D3": 8,
+          "D4": 8,
+          "D5": 8,
+          "D6": 11,
+          "E1": 4,
+          "E2": 8,
+          "E3": 8,
+          "E4": 8,
+          "E5": 8,
+          "E6": 11,
+          "F1": 5,
+          "F2": 7,
+          "F3": 7,
+          "F4": 7,
+          "F5": 7,
+          "F6": 10,
+          "H1": 4,
+          "H2": 6,
+          "H3": 6,
+          "H4": 6,
+          "H5": 9,
+          "I1": 5,
+          "I2": 7,
+          "I3": 7,
+          "I4": 7,
+          "I5": 10,
+          "J1": 4,
+          "J2": 8,
+          "J3": 8,
+          "J4": 8,
+          "J5": 11,
+          "K1": 4,
+          "K2": 8,
+          "K3": 8,
+          "K4": 8,
+          "K5": 11,
+          "L1": 5,
+          "L2": 7,
+          "L3": 7,
+          "L4": 7,
+          "L5": 10
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Criteria",
+        "Parameter",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.6.1",
+        "Weigh 0.50 ± 0.01 g of sample into a 50 mL tube.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Weigh 0.50 ± 0.01 g of sample into a 50 mL tube",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.6.2",
+        "Add 8 mL of 1% formic acid in acetonitrile solution to each sample.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Add 8 mL of 1% Formic Acid in Acetonitrile to each sample",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.6.3",
+        "Vortex the samples at speed 10 for about 5 minutes.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Vortex for the samples for 5 minutes",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.6.4",
+        "Add all the contents of a 5 g QuEChERS salts (4 g MgSO4 + 1 g NaCl) from one packet to each sample in the 50 mL tubes.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Add 5 g packet of QuEChERS salts and vortex for 3 minutes",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.6.5",
+        "Vortex samples at speed 10 for about 3 minutes.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  }
+}

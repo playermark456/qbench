@@ -1,0 +1,1638 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "17e18d29-8dcc-49c2-b4c9-1d21391c9cda",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": [
+          {
+            "criteria_1": "Fail",
+            "id": "c7a409e9-2cdd-41f8-b6c8-d4144a4743b2",
+            "name": "Fail report",
+            "range": "Report!F1:F6",
+            "rule": "TEXT_CONTAINS",
+            "style": {
+              "color": "#CC0100"
+            },
+            "worksheet_id": "4856e03a-c78c-4981-8397-ea99f0af5ba5"
+          },
+          {
+            "criteria_1": "Fail",
+            "id": "433e53f4-854a-4d64-bb7c-1375d6b788e2",
+            "name": "Fail",
+            "range": "F5",
+            "rule": "TEXT_CONTAINS",
+            "style": {
+              "color": "#CC0100",
+              "fontWeight": "bold"
+            },
+            "worksheet_id": "12731f1a-748c-4dee-8790-c272cd461470"
+          },
+          {
+            "criteria_1": "Fail",
+            "id": "f87f851a-3a59-4f72-8695-2f94af93a18f",
+            "name": "Fail",
+            "range": "F5",
+            "rule": "TEXT_CONTAINS",
+            "style": {
+              "color": "#CC0100",
+              "fontWeight": "bold"
+            },
+            "worksheet_id": "12731f1a-748c-4dee-8790-c272cd461470"
+          },
+          {
+            "criteria_1": "Fail",
+            "id": "e6c34043-325f-4f8f-8361-87adddaaee98",
+            "name": "fail",
+            "range": "F3",
+            "rule": "TEXT_CONTAINS",
+            "style": {
+              "color": "#FF0000",
+              "fontWeight": "bold"
+            },
+            "worksheet_id": "4856e03a-c78c-4981-8397-ea99f0af5ba5"
+          }
+        ]
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "background-color:#e3f2fd",
+      "border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "background-color:#e3f2fd;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "background-color:#e3f2fd;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;border-right:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black;font-weight:bold",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;font-weight:bold",
+      "border-top:1px solid black;border-left:1px solid black;font-weight:bold;background-color:#bdbdbd",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;font-weight:bold;background-color:#bdbdbd",
+      "border-top:1px solid black;border-left:1px solid black;font-weight:bold;background-color:#eeeeee",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;font-weight:bold;background-color:#eeeeee",
+      "font-weight:bold",
+      "font-weight:bold;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "font-weight:bold;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "font-weight:bold;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;background-color:#9e9e9e",
+      "font-weight:bold;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black;background-color:#9e9e9e",
+      "font-weight:bold;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;background-color:#eeeeee",
+      "font-weight:bold;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black;background-color:#eeeeee",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;font-weight:bold;background-color:#fafafa",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;border-right:1px solid black;background-color:#fafafa",
+      "font-weight:bold;background-color:#fafafa",
+      "background-color:#fafafa",
+      "",
+      "background-color:#c5e1a5;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "background-color:#c5e1a5;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "background-color:#f1f7e9;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "background-color:#f1f7e9;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black;font-weight:bold;color:#212121",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;font-weight:bold;color:#212121",
+      "font-weight:bold;background-color:#eeeeee",
+      "text-wrap:wrap",
+      "font-weight:bold;border-top:1px solid black",
+      "border-top:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;border-right:1px solid black;background-color:#e0e0e0",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;border-right:1px solid black;background-color:#e0e0e0;font-weight:bold",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;border-right:1px solid black;background-color:#e0e0e0;font-weight:bold;text-wrap:wrap",
+      "background-color:#e0e0e0;font-weight:bold;text-wrap:wrap",
+      "background-color:#e0e0e0;font-weight:bold;text-wrap:wrap;border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black;font-weight:bold;background-color:#e0e0e0",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;font-weight:bold;background-color:#e0e0e0",
+      "font-weight:bold;background-color:#e0e0e0",
+      "font-weight:normal",
+      "font-weight:bold;border-bottom:4px solid black",
+      "font-weight:bold;border-bottom:3px solid black",
+      "font-weight:bold;border-bottom:2px solid black",
+      "font-weight:bold;border-bottom:2px solid black;background-color:#ffffff",
+      "background-color:#ffffff",
+      "font-weight:normal;background-color:#ffffff",
+      "font-weight:bold;border-bottom:2px solid black;background-color:#ffffff;border-top:1px solid #ffffff;border-left:1px solid #ffffff",
+      "font-weight:bold;border-bottom:2px solid black;background-color:#ffffff;border-top:1px solid #ffffff;border-right:1px solid #ffffff;border-left:1px solid #ffffff",
+      "background-color:#ffffff;border-top:1px solid #ffffff;border-left:1px solid #ffffff",
+      "background-color:#ffffff;border-top:1px solid #ffffff;border-right:1px solid #ffffff;border-left:1px solid #ffffff",
+      "font-weight:normal;background-color:#ffffff;border-top:1px solid #ffffff;border-left:1px solid #ffffff",
+      "font-weight:normal;background-color:#ffffff;border-top:1px solid #ffffff;border-right:1px solid #ffffff;border-left:1px solid #ffffff",
+      "background-color:#ffffff;border-top:1px solid #ffffff;border-bottom:1px solid #ffffff;border-left:1px solid #ffffff",
+      "background-color:#ffffff;border-top:1px solid #ffffff;border-right:1px solid #ffffff;border-bottom:1px solid #ffffff;border-left:1px solid #ffffff",
+      "font-weight:normal;background-color:#ffffff;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt",
+      "font-weight:normal;background-color:#ffffff;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:10pt",
+      "font-weight:bold;border-bottom:2px solid black;background-color:#ffffff;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt",
+      "font-weight:bold;border-bottom:2px solid black;background-color:#ffffff;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:10pt",
+      "font-weight:bold;border-bottom:2px solid black;background-color:#ffffff;border-top:1px solid #ffffff;border-right:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt",
+      "background-color:#ffffff;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt",
+      "background-color:#ffffff;border-top:1px solid #ffffff;border-right:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt",
+      "font-weight:normal;background-color:#ffffff;border-top:1px solid #ffffff;border-right:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt",
+      "background-color:#ffffff;border-top:1px solid #ffffff;border-bottom:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt",
+      "background-color:#ffffff;border-top:1px solid #ffffff;border-right:1px solid #ffffff;border-bottom:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt",
+      "background-color:#ffffff;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt;text-align:left",
+      "font-weight:normal;background-color:#ffffff;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt;text-align:left",
+      "font-weight:bold;border-top:1px solid black;border-right:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black;font-weight:bold;color:#212121;text-wrap:wrap",
+      "background-color:#f1f7e9",
+      "font-weight:bold;color:#212121;text-wrap:wrap",
+      "font-weight:bold;color:#212121",
+      "border-top:1px solid black;border-left:1px solid black;font-weight:bold;color:#212121;text-wrap:wrap;border-right:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black;font-weight:bold;color:#212121;background-color:#e0e0e0",
+      "border-top:1px solid black;border-left:1px solid black;font-weight:bold;color:#212121;text-wrap:wrap;border-right:1px solid black;background-color:#e0e0e0",
+      "border-top:1px solid black;border-left:1px solid black;font-weight:bold;background-color:#eeeeee;color:#212121",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;font-weight:bold;background-color:#e0e0e0;color:#212121",
+      "color:#212121",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;color:#212121",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;border-right:1px solid black;color:#212121",
+      "background-color:#e0e0e0;font-weight:bold;text-wrap:wrap;border-top:1px solid black;border-left:1px solid black;color:#212121",
+      "font-weight:bold;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;color:#212121",
+      "background-color:#f1f7e9;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;color:#212121",
+      "background-color:#f1f7e9;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black;color:#212121",
+      "font-weight:bold;border-bottom:2px solid black;background-color:#ffffff;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt;text-align:center",
+      "background-color:#ffffff;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt;text-align:center",
+      "font-weight:normal;background-color:#ffffff;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt;text-align:center",
+      "font-weight:bold;background-color:#ffffff;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt;text-align:left;border-bottom:2px solid black",
+      "font-weight:bold;border-bottom:2px solid black;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt",
+      "font-weight:bold;border-bottom:2px solid black;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt;text-align:center",
+      "font-weight:bold;border-bottom:2px solid black;border-top:1px solid #ffffff;border-right:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt",
+      "font-weight:bold;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt;text-align:left;border-bottom:2px solid black",
+      "font-weight:bold;border-bottom:2px solid black;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt;color:#212121",
+      "font-weight:bold;border-bottom:2px solid black;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt;text-align:center;color:#212121",
+      "font-weight:bold;border-bottom:2px solid black;border-top:1px solid #ffffff;border-right:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt;color:#212121",
+      "font-weight:bold;border-top:1px solid #ffffff;border-left:1px solid #ffffff;font-size:8pt;text-align:left;border-bottom:2px solid black;color:#212121",
+      "font-weight:bold;font-size:8pt;color:#212121",
+      "font-weight:bold;font-size:8pt;text-align:center;color:#212121",
+      "font-weight:bold;font-size:8pt;text-align:left;color:#212121",
+      "font-weight:bold;font-size:8pt;color:#212121;border-bottom:2px solid black",
+      "font-weight:bold;font-size:8pt;text-align:center;color:#212121;border-bottom:2px solid black",
+      "font-weight:normal;font-size:8pt;text-align:left;color:#212121",
+      "font-weight:normal;font-size:8pt;text-align:center;color:#212121",
+      "font-weight:normal;font-size:8pt;color:#212121"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A1": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
+          },
+          "A2": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
+          },
+          "B1": {
+            "readonly": false,
+            "type": "text",
+            "width": 148
+          },
+          "B2": {
+            "readonly": false,
+            "type": "text",
+            "width": 148
+          },
+          "C1": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
+          },
+          "C2": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
+          },
+          "D1": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
+          },
+          "D2": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
+          },
+          "E1": {
+            "readonly": false,
+            "type": "text",
+            "width": 100
+          },
+          "E2": {
+            "readonly": false,
+            "type": "text",
+            "width": 142
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 193
+          },
+          {
+            "type": "text",
+            "width": 148
+          },
+          {
+            "type": "text",
+            "width": 191
+          },
+          {
+            "type": "text",
+            "width": 154
+          },
+          {
+            "type": "text",
+            "width": 142
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {},
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 68
+          },
+          {
+            "height": 27
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 1274,
+        "worksheetId": "69644b16-ca09-4a2a-8327-44fbed59f755",
+        "worksheetName": "Data",
+        "data": [
+          [
+            "Sample ID",
+            "Test ID",
+            "Product Matrix",
+            "Assay Name",
+            "Results"
+          ],
+          [
+            "${sample.custom_formatted_id}",
+            "${test.get_display_id()}",
+            "${test.sample.product_matrix}",
+            "${test.assay.title}",
+            ""
+          ]
+        ],
+        "style": {
+          "A1": 78,
+          "A2": 83,
+          "B1": 78,
+          "B2": 83,
+          "C1": 78,
+          "C2": 83,
+          "D1": 78,
+          "D2": 83,
+          "E1": 81,
+          "E2": 88
+        }
+      },
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A1": {
+            "readonly": false,
+            "type": "text",
+            "width": 168
+          },
+          "A2": {
+            "readonly": false,
+            "type": "text",
+            "width": 168
+          },
+          "A3": {
+            "readonly": false,
+            "type": "text",
+            "width": 168
+          },
+          "A4": {
+            "readonly": false,
+            "type": "text",
+            "width": 168
+          },
+          "A5": {
+            "readonly": false,
+            "type": "text",
+            "width": 168
+          },
+          "B1": {
+            "readonly": false,
+            "type": "text",
+            "width": 137
+          },
+          "B2": {
+            "readonly": false,
+            "type": "text",
+            "width": 137
+          },
+          "B3": {
+            "readonly": false,
+            "type": "text",
+            "width": 137
+          },
+          "B4": {
+            "readonly": false,
+            "type": "text",
+            "width": 137
+          },
+          "B5": {
+            "readonly": false,
+            "type": "text",
+            "width": 137
+          },
+          "C1": {
+            "readonly": false,
+            "type": "text",
+            "width": 134
+          },
+          "C2": {
+            "readonly": false,
+            "type": "text",
+            "width": 134
+          },
+          "C3": {
+            "readonly": false,
+            "type": "text",
+            "width": 134
+          },
+          "C4": {
+            "readonly": false,
+            "type": "text",
+            "width": 134
+          },
+          "C5": {
+            "readonly": false,
+            "type": "text",
+            "width": 134
+          },
+          "D1": {
+            "colElement": {},
+            "element": {},
+            "readonly": false,
+            "type": "text",
+            "width": 135,
+            "x": 0
+          },
+          "D2": {
+            "readonly": false,
+            "type": "text",
+            "width": 166
+          },
+          "D3": {
+            "readonly": false,
+            "type": "text",
+            "width": 166
+          },
+          "D4": {
+            "readonly": false,
+            "type": "text",
+            "width": 166
+          },
+          "D5": {
+            "readonly": false,
+            "type": "text",
+            "width": 166
+          },
+          "E1": {
+            "readonly": false,
+            "type": "text",
+            "width": 139
+          },
+          "E2": {
+            "readonly": false,
+            "type": "text",
+            "width": 139
+          },
+          "E3": {
+            "readonly": false,
+            "type": "text",
+            "width": 139
+          },
+          "E4": {
+            "readonly": false,
+            "type": "text",
+            "width": 139
+          },
+          "E5": {
+            "readonly": false,
+            "type": "text",
+            "width": 139
+          },
+          "F1": {
+            "readonly": false,
+            "type": "text",
+            "width": 139
+          },
+          "F2": {
+            "readonly": false,
+            "type": "text",
+            "width": 139
+          },
+          "F3": {
+            "readonly": false,
+            "type": "text",
+            "width": 139
+          },
+          "F4": {
+            "readonly": false,
+            "type": "text",
+            "width": 139
+          },
+          "F5": {
+            "readonly": false,
+            "type": "text",
+            "width": 139
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 168
+          },
+          {
+            "type": "text",
+            "width": 250
+          },
+          {
+            "type": "text",
+            "width": 270
+          },
+          {
+            "type": "text",
+            "width": 166
+          },
+          {
+            "type": "text",
+            "width": 139
+          },
+          {
+            "type": "text",
+            "width": 139
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {},
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 27
+          },
+          {
+            "height": 27
+          },
+          {
+            "height": 27
+          },
+          {
+            "height": 44
+          },
+          {
+            "height": 30
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 1274,
+        "worksheetId": "12731f1a-748c-4dee-8790-c272cd461470",
+        "worksheetName": "Specifications",
+        "data": [
+          [
+            "Customer",
+            "Program",
+            "Matrix",
+            "Overall Pass/Fail",
+            "",
+            ""
+          ],
+          [
+            "${test.sample.order.customer_account.customer_name}",
+            "${test.sample.order.customer_account.customer_program}",
+            "${test.sample.product_matrix}",
+            "=F5",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Analyte",
+            "LOQ (PPM)",
+            "Limit (PPM)",
+            "Result (PPM)",
+            "Measurement Uncertainty (%)",
+            "Status (Pass/Fail)"
+          ],
+          [
+            "Enterobacteriaceae",
+            "=GET_KVSTORE_VALUE(\"d35d8737-5747-408a-a4e3-4a883c79349a\",$B$2,$C$2,$A5,\"LOQ\")",
+            "=GET_KVSTORE_VALUE(\"d35d8737-5747-408a-a4e3-4a883c79349a\",$B$2,$C$2,$A5,\"Pass/Fail Limits\")",
+            "=IF(DATA!E2=\"\",\"\",DATA!E2)",
+            "=GET_KVSTORE_VALUE(\"d35d8737-5747-408a-a4e3-4a883c79349a\",$B$2,$C$2,$A5,\"MU\")",
+            "=IF(D5=\"\",\"Not Tested\",IF(OR(LEFT(D5,1)=\"<\",D5<C5),\"Pass\",IF(LEFT(D5,1)=\">\",\"Fail\",\"Fail\")))"
+          ]
+        ],
+        "style": {
+          "A1": 80,
+          "A2": 83,
+          "A3": 82,
+          "A4": 78,
+          "A5": 86,
+          "B1": 80,
+          "B2": 83,
+          "B3": 82,
+          "B4": 78,
+          "B5": 83,
+          "C1": 80,
+          "C2": 83,
+          "C3": 82,
+          "C4": 78,
+          "C5": 83,
+          "D1": 81,
+          "D2": 84,
+          "D3": 82,
+          "D4": 78,
+          "D5": 83,
+          "E1": 82,
+          "E2": 82,
+          "E3": 82,
+          "E4": 85,
+          "E5": 83,
+          "F1": 82,
+          "F2": 82,
+          "F3": 82,
+          "F4": 81,
+          "F5": 84
+        }
+      },
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A1": {
+            "readonly": false,
+            "type": "text",
+            "width": 159
+          },
+          "A2": {
+            "readonly": false,
+            "type": "text",
+            "width": 159
+          },
+          "B1": {
+            "readonly": false,
+            "type": "text",
+            "width": 98
+          },
+          "B2": {
+            "readonly": false,
+            "type": "text",
+            "width": 98
+          },
+          "C1": {
+            "readonly": false,
+            "type": "text",
+            "width": 97
+          },
+          "C2": {
+            "readonly": false,
+            "type": "text",
+            "width": 97
+          },
+          "D1": {
+            "readonly": false,
+            "type": "text",
+            "width": 89
+          },
+          "D2": {
+            "readonly": false,
+            "type": "text",
+            "width": 89
+          },
+          "E1": {
+            "readonly": false,
+            "type": "text",
+            "width": 136
+          },
+          "E2": {
+            "readonly": false,
+            "type": "text",
+            "width": 136
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "readonly": false,
+            "type": "text",
+            "width": 159
+          },
+          {
+            "readonly": false,
+            "type": "text",
+            "width": 98
+          },
+          {
+            "readonly": false,
+            "type": "text",
+            "width": 97
+          },
+          {
+            "readonly": false,
+            "type": "text",
+            "width": 89
+          },
+          {
+            "readonly": false,
+            "type": "text",
+            "width": 136
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {},
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 28
+          },
+          {
+            "height": 27
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 1274,
+        "worksheetId": "4856e03a-c78c-4981-8397-ea99f0af5ba5",
+        "worksheetName": "Report",
+        "data": [
+          [
+            "Analyte",
+            "Limit",
+            "Result",
+            "Status",
+            "Observed Species"
+          ],
+          [
+            "=SPECIFICATIONS!A5&\" (CFU/g)\"",
+            "=SPECIFICATIONS!C5",
+            "=SPECIFICATIONS!D5",
+            "=SPECIFICATIONS!F5",
+            ""
+          ]
+        ],
+        "style": {
+          "A1": 104,
+          "A2": 106,
+          "B1": 105,
+          "B2": 107,
+          "C1": 105,
+          "C2": 107,
+          "D1": 105,
+          "D2": 107,
+          "E1": 105,
+          "E2": 107
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "named_cells": {
+      "eb_limit": {
+        "cell": "Specifications!C5",
+        "display_name": "Enterobacteriaceae Limit",
+        "export": true
+      },
+      "eb_loq": {
+        "cell": "Specifications!B5",
+        "display_name": "Enterobacteriaceae LOQ",
+        "export": true
+      },
+      "eb_mu": {
+        "cell": "Specifications!E5",
+        "display_name": "Enterobacteriaceae MU",
+        "export": true
+      },
+      "eb_result": {
+        "cell": "Specifications!D5",
+        "display_name": "Enterobacteriaceae Result",
+        "export": true
+      },
+      "eb_results": {
+        "cell": "Data!E2",
+        "display_name": "Enterobacteriaceae Results",
+        "export": true
+      },
+      "eb_status": {
+        "cell": "Specifications!F5",
+        "display_name": "Enterobacteriaceae Status",
+        "export": true
+      },
+      "pass_fail": {
+        "cell": "Specifications!D2",
+        "display_name": "",
+        "export": true
+      },
+      "report_content": {
+        "cell": "Report!A2:E2",
+        "display_name": "",
+        "export": true
+      },
+      "report_header": {
+        "cell": "Report!A1:E1",
+        "display_name": "",
+        "export": true
+      },
+      "report_results": {
+        "cell": "Report!A1:E2",
+        "display_name": "",
+        "export": true
+      }
+    },
+    "kvstore_config": {
+      "d35d8737-5747-408a-a4e3-4a883c79349a": {
+        "MN OCM Cannabis": {
+          "Cannabis or Hemp Flower for Concentrate": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 150
+            },
+            "Listeria Monocytogenes": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            }
+          },
+          "Cannabis or Hemp Flower for Smoking": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 1000
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 100000
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 100000
+            }
+          },
+          "Cannabis or Hemp Infused Flower": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 150
+            },
+            "Listeria Monocytogenes": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            }
+          },
+          "Cannabis or Hemp Liquid Edible": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 25 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 150
+            },
+            "Listeria Monocytogenes": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 25 g"
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 25 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 25 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            }
+          },
+          "Cannabis or Hemp Non-Liquid Edibles": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 150
+            },
+            "Listeria Monocytogenes": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            }
+          },
+          "Cannabis or Hemp Resins": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 150
+            },
+            "Listeria Monocytogenes": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            }
+          },
+          "Cannabis or Hemp Rosins": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 150
+            },
+            "Listeria Monocytogenes": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            }
+          }
+        },
+        "MN OCM Hemp Derived Cannabis Products (HDCP)": {
+          "Cannabis or Hemp Flower for Concentrate": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 150
+            },
+            "Listeria Monocytogenes": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            }
+          },
+          "Cannabis or Hemp Flower for Smoking": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 1000
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 100000
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 100000
+            }
+          },
+          "Cannabis or Hemp Infused Flower": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 150
+            },
+            "Listeria Monocytogenes": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            }
+          },
+          "Cannabis or Hemp Liquid Edible": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 25 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 150
+            },
+            "Listeria Monocytogenes": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 25 g"
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 25 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 25 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            }
+          },
+          "Cannabis or Hemp Non-Liquid Edibles": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 150
+            },
+            "Listeria Monocytogenes": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 10 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            }
+          },
+          "Cannabis or Hemp Resins": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 150
+            },
+            "Listeria Monocytogenes": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            }
+          },
+          "Cannabis or Hemp Rosins": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 150
+            },
+            "Listeria Monocytogenes": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            }
+          },
+          "Hemp Resins - Artificially Derived": {
+            "Aspergillus spp.": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Enterobacteriaceae": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": 150
+            },
+            "Listeria Monocytogenes": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Salmonella species": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Shiga toxin-producing E. coli": {
+              "LOQ": "N/A",
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not detected in 5 g"
+            },
+            "Total aerobic microbial": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            },
+            "Total yeast and mold": {
+              "LOQ": 100,
+              "MU": "N/A",
+              "Pass/Fail Limits": "Not applicable"
+            }
+          }
+        },
+        "ND Medical": {
+          "Cannabis Concentrates": {
+            "Bile-Tolerant Gram-Negative Bacteria": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 100
+            },
+            "STEC": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 0
+            },
+            "Salmonella": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 0
+            },
+            "Total Coliforms": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 100
+            },
+            "Total Viable Aerobic Bacteria": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 10000
+            },
+            "Total Yeast and Mold": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 1000
+            }
+          },
+          "Cannabis End Products - Edibles": {
+            "Bile-Tolerant Gram-Negative Bacteria": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 100
+            },
+            "STEC": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 0
+            },
+            "Salmonella": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 0
+            },
+            "Total Coliforms": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 100
+            },
+            "Total Viable Aerobic Bacteria": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 10000
+            },
+            "Total Yeast and Mold": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 1000
+            }
+          },
+          "Cannabis End Products - Ingestibles": {
+            "Bile-Tolerant Gram-Negative Bacteria": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 100
+            },
+            "STEC": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 0
+            },
+            "Salmonella": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 0
+            },
+            "Total Coliforms": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 100
+            },
+            "Total Viable Aerobic Bacteria": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 10000
+            },
+            "Total Yeast and Mold": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 1000
+            }
+          },
+          "Cannabis End Products - Topicals": {
+            "Bile-Tolerant Gram-Negative Bacteria": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 100
+            },
+            "STEC": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 0
+            },
+            "Salmonella": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 0
+            },
+            "Total Coliforms": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 100
+            },
+            "Total Viable Aerobic Bacteria": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 10000
+            },
+            "Total Yeast and Mold": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 1000
+            }
+          },
+          "Cannabis Flower": {
+            "Bile-Tolerant Gram-Negative Bacteria": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 1000
+            },
+            "STEC": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 0
+            },
+            "Salmonella": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 0
+            },
+            "Total Coliforms": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 1000
+            },
+            "Total Viable Aerobic Bacteria": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 100000
+            },
+            "Total Yeast and Mold": {
+              "LOQ": null,
+              "MU": null,
+              "Pass/Fail Limits": 10000
+            }
+          }
+        }
+      }
+    },
+    "portal_export_range": "",
+    "report_export_range": "B1:G2"
+  },
+  "data": {
+    "Data": [
+      [
+        "Sample ID",
+        "Test ID",
+        "Product Matrix",
+        "Assay Name",
+        "Results"
+      ],
+      [
+        "${sample.custom_formatted_id}",
+        "${test.get_display_id()}",
+        "${test.sample.product_matrix}",
+        "${test.assay.title}",
+        ""
+      ]
+    ],
+    "Report": [
+      [
+        "Analyte",
+        "Limit",
+        "Result",
+        "Status",
+        "Observed Species"
+      ],
+      [
+        "Enterobacteriaceae (CFU/g)",
+        "",
+        "",
+        "Not Tested",
+        ""
+      ]
+    ],
+    "Specifications": [
+      [
+        "Customer",
+        "Program",
+        "Matrix",
+        "Overall Pass/Fail",
+        "",
+        ""
+      ],
+      [
+        "${test.sample.order.customer_account.customer_name}",
+        "${test.sample.order.customer_account.customer_program}",
+        "${test.sample.product_matrix}",
+        "Not Tested",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Analyte",
+        "LOQ (PPM)",
+        "Limit (PPM)",
+        "Result (PPM)",
+        "Measurement Uncertainty (%)",
+        "Status (Pass/Fail)"
+      ],
+      [
+        "Enterobacteriaceae",
+        "",
+        "",
+        "",
+        "",
+        "Not Tested"
+      ]
+    ]
+  }
+}

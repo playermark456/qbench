@@ -22,7 +22,7 @@ Important safety rules:
 | Confirm named cells are visible | Not started | Confirm at least `pass_fail`, `report_results`, `replicate_count`, `unique_cp_test_id_count`, `duplicate_cp_test_id_check`, `parent_sample_match_check`, and `validation_status`. |
 | Confirm worksheet opens without formula errors | Not started | Check Paste, Data, and COA tabs. |
 | Confirm label-source named cells are visible | Not started | Confirm `label_cannabinoid_1_source_status`, `label_cannabinoid_2_source_status`, manual override cells, and `qbench_sample_label_amount_lookup`. |
-| Confirm label source table remains raw | Not started | `Paste!P25:P36` should contain raw QBench sample label amount placeholders/values, not lookup formulas. |
+| Confirm label source table remains raw | Not started | `Paste!P25:P36` should contain raw QBench per-serving label amount placeholders/values, not lookup formulas or package/container `product_label_*` placeholders. |
 
 ## Test Data Setup
 
@@ -36,9 +36,9 @@ Important safety rules:
 | Confirm Target Cannabinoid 1 default | Not started | `Paste!B4` should default to `Total THC`. |
 | Enter Target Cannabinoid 1 | Not started | Keep `Total THC` for the primary Sandbox test; then test another supported target if needed. |
 | Optionally enter Target Cannabinoid 2 | Not started | Leave blank if not used. |
-| Confirm label cannabinoid claim auto-pull | Not started | Target 1 label claim should pull from the matching QBench sample `Product Label Amount` field when populated. |
-| Confirm label source/status | Not started | `Paste!Q4` and `Paste!U4` should show which QBench sample field was used, or whether manual override was used. |
-| Enter manual label override only if needed | Not started | Use the manual override cells only when the QBench sample label field is blank or not populated in Sandbox. |
+| Confirm label cannabinoid claim auto-pull | Not started | Target 1 label claim should pull from the matching QBench sample per-serving/unit label field when populated. |
+| Confirm label source/status | Not started | `Paste!Q4` and `Paste!U4` should show which per-serving QBench sample field was used, whether the field is blank/unavailable, or whether manual override was used. |
+| Enter manual label override only if needed | Not started | Use the manual override cells only when the QBench sample per-serving label field is blank, unavailable for that cannabinoid, or not populated in Sandbox. |
 | Enter label unit mass if available | Not started | If blank, worksheet should use average actual unit mass as the mass variance basis. |
 
 ## Unit Conversion Checks
@@ -48,10 +48,10 @@ Important safety rules:
 | `Paste!AI10` Total THC helper | `(D9-THC ug/g + THCa ug/g * 0.877) / 1000` |  |
 | `Paste!AJ10` Total CBD helper | `(CBD ug/g + CBDa ug/g * 0.877) / 1000` |  |
 | D9-THC `4058.954 ug/g` with blank/zero THCa | Total THC should be `4.058954 mg/g` |  |
-| Total THC `4.058954 mg/g` with `5 g` unit mass | Total THC should be about `20.29477 mg/container` |  |
+| Total THC `4.058954 mg/g` with `5 g` unit mass | Total THC should be about `20.29477 mg/unit` |  |
 | CBG `4105.178 ug/g` | CBG should be `4.105178 mg/g` |  |
-| CBG `4.105178 mg/g` with `5 g` unit mass | CBG should be about `20.52589 mg/container` |  |
-| Label Total THC `20 mg/container` with about `20 mg/container` actual | Variance should be a few percent, not a massive ug/g-based variance |  |
+| CBG `4.105178 mg/g` with `5 g` unit mass | CBG should be about `20.52589 mg/unit` |  |
+| Label Total THC `20 mg/serving` with about `20 mg/unit` actual | Variance should be a few percent, not a massive ug/g-based or package/container-based variance |  |
 
 ## Worksheet Validation Checks
 
@@ -113,13 +113,13 @@ For at least one passing and one failing case, manually verify:
 - Total THC conversion from pasted `ug/g` to `mg/g`.
 - Total CBD conversion from pasted `ug/g` to `mg/g`, if used.
 - Individual cannabinoid target conversion from pasted `ug/g` to `mg/g`.
-- mg/container for Target Cannabinoid 1.
-- mg/container for optional Target Cannabinoid 2, if used.
+- mg/unit for Target Cannabinoid 1.
+- mg/unit for optional Target Cannabinoid 2, if used.
 - cannabinoid variance from label claim.
 - unit mass variance from label mass when label mass is provided.
 - unit mass variance from average actual unit mass when label mass is blank.
 - highest reported unit mass and variance.
-- highest reported cannabinoid mg/container and variance.
+- highest reported cannabinoid mg/unit and variance.
 - final Homogeneity Pass/Fail.
 
 ## Acceptance Criteria

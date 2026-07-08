@@ -1,0 +1,831 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "dac13a34-c909-4ca6-9079-1194ae58f1fc",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "background-color:#e0e0e0",
+      "text-wrap:wrap",
+      "color:#c62828",
+      "text-wrap:wrap;color:#c62828",
+      "font-weight:bold",
+      "font-weight:normal",
+      "font-weight:normal;text-wrap:wrap",
+      "background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black",
+      "background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "font-weight:normal;text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "font-weight:normal;text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 415,
+            "x": 1
+          },
+          "B11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 415,
+            "x": 1
+          },
+          "B12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 415,
+            "x": 1
+          },
+          "B9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 415,
+            "x": 1
+          },
+          "C10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D2": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D3": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D4": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D5": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D6": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D7": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D8": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D9": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "E10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 399,
+            "x": 4
+          },
+          "E11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 399,
+            "x": 4
+          },
+          "E12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 399,
+            "x": 4
+          },
+          "E9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 399,
+            "x": 4
+          },
+          "F10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 415
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 399
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "A12": [
+            2,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 25
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 70
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 55
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40,
+            "id": null
+          },
+          {
+            "height": 55,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 1008,
+        "worksheetId": "321d2bf4-0b86-48b4-b4bc-a9b9495144ce",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "Criteria",
+            "Parameters",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.6.1",
+            "Sample enrichment is performed only for Aspergillus. ",
+            "",
+            "",
+            "Remove the appropriate amount of Test Kits from storage and allow to reach Room Temperature ",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.6.2",
+            "Remove the appropriate amount of Test Kits from storage and allow to reach Room Temperature ",
+            "",
+            "",
+            "Post Incubation, gently agitate bags for ~20 seconds to homogenize ",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.6.3",
+            "Remove samples from Incubation. Be sure to record the end date and time for sample incubation.",
+            "",
+            "",
+            "Transfer 500µL of each sample to a Blue VSD microcentrifuge tube and vortex for ~5 seconds",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.6.4",
+            "Gently agitate sample bags for ~20 seconds to homogenize. ",
+            "",
+            "",
+            "Transfer 100µL of each sample from the Blue VSD microcentrifuge tube to a new 1.5mL microcentrifuge tube. Add 100µL Buffer G to each sample. Vortex each sample for ~5 seconds",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.6.5",
+            "Transfer 500µL of each sample to a Blue VSD microcentrifuge tube and vortex for ~5 seconds",
+            "",
+            "",
+            "Transfer 50µL of each sample from the 1.5mL microcentrifuge tube to a digest tube and spin the digest plate for ~10 seconds",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.6.6",
+            "Transfer 100µL of each sample from the Blue VSD microcentrifuge tube to a new 1.5mL microcentrifuge tube. Add 100µL Buffer G to each sample. Vortex each sample for ~5 seconds",
+            "",
+            "",
+            "Place digest tubes on the Gene-Up and run the Digest program",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.6.7",
+            "Transfer 50µL of each sample from the 1.5mL microcentrifuge tube to a digest tube and spin the digest plate for ~10 seconds",
+            "",
+            "",
+            "Transfer 5µL from each sample digest tube to an appropriate PCR tube and spin the plate for ~10 seconds",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.6.8",
+            "Place digest tubes on the Gene-Up and run the Digest program",
+            null,
+            "",
+            "Place PCR tubes on the Gene-Up and prepare to run the PCR program ",
+            null,
+            null,
+            null
+          ],
+          [
+            "7.6.9",
+            "Within 5 minutes of completion of the digest program, transfer 5µL from each sample digest tube to an appropriate PCR tube and spin the plate for ~10 seconds",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "7.6.10",
+            "Place PCR tubes on the Gene-Up and prepare to run the PCR program ",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Be sure to assign inventory and equipment usage pertaining to this protocol step. ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            null,
+            null
+          ]
+        ],
+        "style": {
+          "A1": 7,
+          "A10": 9,
+          "A11": 11,
+          "A12": 2,
+          "A2": 9,
+          "A3": 9,
+          "A4": 9,
+          "A5": 9,
+          "A6": 9,
+          "A7": 9,
+          "A8": 9,
+          "A9": 9,
+          "B1": 8,
+          "B10": 10,
+          "B11": 12,
+          "B12": 3,
+          "B2": 10,
+          "B3": 10,
+          "B4": 10,
+          "B5": 10,
+          "B6": 10,
+          "B7": 10,
+          "B8": 10,
+          "B9": 10,
+          "D1": 7,
+          "D2": 9,
+          "D3": 9,
+          "D4": 9,
+          "D5": 9,
+          "D6": 9,
+          "D7": 9,
+          "D8": 11,
+          "D9": 11,
+          "E1": 8,
+          "E2": 13,
+          "E3": 13,
+          "E4": 13,
+          "E5": 13,
+          "E6": 13,
+          "E7": 13,
+          "E8": 14,
+          "E9": 12
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "Criteria",
+        "Parameters",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.6.1",
+        "Sample enrichment is performed only for Aspergillus. ",
+        "",
+        "",
+        "Remove the appropriate amount of Test Kits from storage and allow to reach Room Temperature ",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.6.2",
+        "Remove the appropriate amount of Test Kits from storage and allow to reach Room Temperature ",
+        "",
+        "",
+        "Post Incubation, gently agitate bags for ~20 seconds to homogenize ",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.6.3",
+        "Remove samples from Incubation. Be sure to record the end date and time for sample incubation.",
+        "",
+        "",
+        "Transfer 500µL of each sample to a Blue VSD microcentrifuge tube and vortex for ~5 seconds",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.6.4",
+        "Gently agitate sample bags for ~20 seconds to homogenize. ",
+        "",
+        "",
+        "Transfer 100µL of each sample from the Blue VSD microcentrifuge tube to a new 1.5mL microcentrifuge tube. Add 100µL Buffer G to each sample. Vortex each sample for ~5 seconds",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.6.5",
+        "Transfer 500µL of each sample to a Blue VSD microcentrifuge tube and vortex for ~5 seconds",
+        "",
+        "",
+        "Transfer 50µL of each sample from the 1.5mL microcentrifuge tube to a digest tube and spin the digest plate for ~10 seconds",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.6.6",
+        "Transfer 100µL of each sample from the Blue VSD microcentrifuge tube to a new 1.5mL microcentrifuge tube. Add 100µL Buffer G to each sample. Vortex each sample for ~5 seconds",
+        "",
+        "",
+        "Place digest tubes on the Gene-Up and run the Digest program",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.6.7",
+        "Transfer 50µL of each sample from the 1.5mL microcentrifuge tube to a digest tube and spin the digest plate for ~10 seconds",
+        "",
+        "",
+        "Transfer 5µL from each sample digest tube to an appropriate PCR tube and spin the plate for ~10 seconds",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.6.8",
+        "Place digest tubes on the Gene-Up and run the Digest program",
+        null,
+        "",
+        "Place PCR tubes on the Gene-Up and prepare to run the PCR program ",
+        null,
+        null,
+        null
+      ],
+      [
+        "7.6.9",
+        "Within 5 minutes of completion of the digest program, transfer 5µL from each sample digest tube to an appropriate PCR tube and spin the plate for ~10 seconds",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "7.6.10",
+        "Place PCR tubes on the Gene-Up and prepare to run the PCR program ",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "Be sure to assign inventory and equipment usage pertaining to this protocol step. ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        null,
+        null
+      ]
+    ]
+  }
+}

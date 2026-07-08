@@ -1,0 +1,591 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "5829dede-20fa-4c93-abae-1aea2ce09942",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "text-wrap:wrap",
+      "vertical-align:bottom",
+      "vertical-align:middle",
+      "text-wrap:wrap;border-top:1px solid black;border-left:1px solid black",
+      "vertical-align:middle;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "vertical-align:middle;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "background-color:#cfd8dc",
+      "background-color:#cfd8dc;border-top:1px solid black;border-left:1px solid black",
+      "background-color:#cfd8dc;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-left:1px solid black;border-right:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;border-right:1px solid black",
+      "text-wrap:wrap;color:#b71c1c",
+      "color:#b71c1c",
+      "text-wrap:wrap;color:#c62828",
+      "color:#c62828",
+      "text-wrap:wrap;color:#c62828;font-style:italic",
+      "color:#c62828;font-style:italic",
+      "vertical-align:middle;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "vertical-align:middle;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "border-top:1px solid black;border-left:1px solid black;background-color:#b0bec5",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;background-color:#b0bec5",
+      "background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black",
+      "background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A4": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 470,
+            "x": 0
+          },
+          "A9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 115,
+            "x": 0
+          },
+          "B2": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "B3": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "B4": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "B5": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "B9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 415,
+            "x": 1
+          },
+          "C4": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D2": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 1
+          },
+          "D3": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 1
+          },
+          "D4": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 1
+          },
+          "D5": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 1
+          },
+          "D9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E4": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 470,
+            "x": 0
+          },
+          "E9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 428,
+            "x": 4
+          },
+          "F4": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G4": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H4": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 115
+          },
+          {
+            "type": "text",
+            "width": 415
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 428
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "A6": [
+            2,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 55
+          },
+          {
+            "height": 55
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25,
+            "id": null
+          }
+        ],
+        "tableHeight": 474,
+        "tableOverflow": true,
+        "tableWidth": 1008,
+        "worksheetId": "29bd995a-03c7-4a69-a47d-98e4fc9766ad",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "Criteria",
+            "Parameters",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.3.1",
+            "If the enrichment broth is to be used for flower samples, weigh 2.0 mg ± 0.10mg of Dicloran and add to 1 L of Potato Dextrose Broth. Autoclave the preparation at 121°C for 15 minutes. Allow to cool to 50°C or lower.",
+            "",
+            "",
+            "Weigh 40.0mg ± 0.20mg of Chlortetracycline and bring to volume with 10.0mL of distilled water. Vortex until completely dissolved.",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.3.2",
+            "Weigh 40.0mg ± 0.20mg of Chlortetracycline and bring to volume with 10.0mL of distilled water. Vortex until completely dissolved.",
+            "",
+            "",
+            "If the enrichment broth is to be used for flower samples, weigh 2.0 mg ± 0.10mg of Dicloran and add to 1 L of Potato Dextrose Broth. Autoclave the preparation at 121°C for 15 minutes. Allow to cool to 50°C or lower.",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.3.3",
+            "Using a syringe with 0.22 µM filter, add 10.0mL of Chlortetracycline solution to 1L of Potato Dextrose Broth. ",
+            "",
+            "",
+            "Using a syringe with 0.22 µM filter, add 10.0mL of Chlortetracycline solution to 1L of Potato Dextrose Broth. ",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.3.4",
+            "Store at 5°C ± 3°C. Solution may be used for up to 30 days. The Solution ID will be the same as the assay ID.",
+            "",
+            "",
+            "Store at 5°C ± 3°C. Solution may be used for up to 30 days.",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Be sure to assign inventory and equipment usage pertaining to this protocol step. ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "style": {
+          "A1": 24,
+          "A2": 3,
+          "A3": 3,
+          "A4": 3,
+          "A5": 5,
+          "A6": 18,
+          "A7": 0,
+          "A8": 0,
+          "A9": 0,
+          "B1": 25,
+          "B2": 20,
+          "B3": 20,
+          "B4": 20,
+          "B5": 21,
+          "B6": 19,
+          "D1": 24,
+          "D2": 4,
+          "D3": 4,
+          "D4": 4,
+          "D5": 6,
+          "E1": 25,
+          "E2": 12,
+          "E3": 12,
+          "E4": 12,
+          "E5": 13
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "Criteria",
+        "Parameters",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.3.1",
+        "If the enrichment broth is to be used for flower samples, weigh 2.0 mg ± 0.10mg of Dicloran and add to 1 L of Potato Dextrose Broth. Autoclave the preparation at 121°C for 15 minutes. Allow to cool to 50°C or lower.",
+        "",
+        "",
+        "Weigh 40.0mg ± 0.20mg of Chlortetracycline and bring to volume with 10.0mL of distilled water. Vortex until completely dissolved.",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.3.2",
+        "Weigh 40.0mg ± 0.20mg of Chlortetracycline and bring to volume with 10.0mL of distilled water. Vortex until completely dissolved.",
+        "",
+        "",
+        "If the enrichment broth is to be used for flower samples, weigh 2.0 mg ± 0.10mg of Dicloran and add to 1 L of Potato Dextrose Broth. Autoclave the preparation at 121°C for 15 minutes. Allow to cool to 50°C or lower.",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.3.3",
+        "Using a syringe with 0.22 µM filter, add 10.0mL of Chlortetracycline solution to 1L of Potato Dextrose Broth. ",
+        "",
+        "",
+        "Using a syringe with 0.22 µM filter, add 10.0mL of Chlortetracycline solution to 1L of Potato Dextrose Broth. ",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.3.4",
+        "Store at 5°C ± 3°C. Solution may be used for up to 30 days. The Solution ID will be the same as the assay ID.",
+        "",
+        "",
+        "Store at 5°C ± 3°C. Solution may be used for up to 30 days.",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Be sure to assign inventory and equipment usage pertaining to this protocol step. ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  }
+}

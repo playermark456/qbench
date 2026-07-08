@@ -1,0 +1,1018 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "ea549c7c-90c3-407a-b58b-165de8528eb7",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "text-wrap:wrap",
+      "background-color:#e0e0e0",
+      "text-wrap:wrap;border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "background-color:#e0e0e0;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;color:#c62828"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 117,
+            "x": 0
+          },
+          "A3": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 340,
+            "x": 0
+          },
+          "A4": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 340,
+            "x": 0
+          },
+          "A5": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 340,
+            "x": 0
+          },
+          "A7": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 117,
+            "x": 0
+          },
+          "A8": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 117,
+            "x": 0
+          },
+          "A9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 117,
+            "x": 0
+          },
+          "B10": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "B2": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "B3": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "B4": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "B5": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "B6": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "B7": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "B8": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "B9": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "C10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C3": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C4": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C5": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C7": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C8": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D10": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "D2": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 1
+          },
+          "D3": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 1
+          },
+          "D4": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 1
+          },
+          "D5": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 1
+          },
+          "D6": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 1
+          },
+          "D7": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "D8": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "D9": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 1
+          },
+          "E10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 397,
+            "x": 4
+          },
+          "E3": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 340,
+            "x": 0
+          },
+          "E4": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 340,
+            "x": 0
+          },
+          "E5": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 340,
+            "x": 0
+          },
+          "E7": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 397,
+            "x": 4
+          },
+          "E8": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 397,
+            "x": 4
+          },
+          "E9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 397,
+            "x": 4
+          },
+          "F10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F3": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F4": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F5": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F7": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F8": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G3": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G4": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G5": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G7": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G8": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H3": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H4": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H5": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H7": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H8": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "I10": {
+            "type": "text",
+            "width": 100,
+            "x": 8
+          },
+          "J10": {
+            "type": "text",
+            "width": 100,
+            "x": 9
+          },
+          "K10": {
+            "type": "text",
+            "width": 100,
+            "x": 10
+          },
+          "L10": {
+            "type": "text",
+            "width": 100,
+            "x": 11
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 117
+          },
+          {
+            "type": "text",
+            "width": 366
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 397
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "A10": [
+            2,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 25,
+            "id": null
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 55
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 70,
+            "id": null
+          }
+        ],
+        "tableHeight": 474,
+        "tableOverflow": true,
+        "tableWidth": 1008,
+        "worksheetId": "f3366220-a4e3-4dde-824d-2245c4daa35b",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "Criteria",
+            "Parameters",
+            "",
+            "",
+            "",
+            "Parameters",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.4.1",
+            "Weigh the sample and place it into an appropriately sized Whirl-Pak bag.",
+            "",
+            "",
+            "For Flower or Infused Non-Edibles, weigh 10.00g ± 0.50g of sample into an appropriately sized Whirl-Pak bag ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.4.1.1",
+            "Flower samples: 10.00g ± 0.50g ",
+            "",
+            "",
+            "For Concentrates, weigh 5.00g ± 0.10g of sample into an appropriately sized Whirl-Pak bag ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.4.1.2",
+            "Edible samples: 25.00g ± 1.00g ",
+            "",
+            "",
+            "For Infused Edibles, weigh 25.00g ± 1.00g of sample into an appropriately sized Whirl-Pak bag ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.4.1.3",
+            "Concentrate samples: 5.00g ± 0.10g ",
+            "",
+            "",
+            "Dilute weighed samples to volume with enrichment broth (Potato Dextrose Broth with Chlortetracycline) (15mL broth per gram)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.4.2",
+            "Bring samples to volume utilizing the appropriate broth for the target organism. Samples are brought to volume using 15 mL of broth per 1.0g of sample.",
+            "",
+            "",
+            "Gently agitate bags for ~20 seconds to homogenize ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.4.2.1",
+            "Aspergillus: Enriched Aspergillus Broth",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.4.2.2",
+            "Salmonella/STEC: Buffered Peptone Water",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.4.2.3",
+            "Listeria: LPT Broth",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Be sure to assign inventory and equipment usage pertaining to this protocol step. ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "style": {
+          "A1": 10,
+          "A10": 12,
+          "A2": 2,
+          "A3": 2,
+          "A4": 2,
+          "A5": 2,
+          "A6": 2,
+          "A7": 2,
+          "A8": 2,
+          "A9": 4,
+          "B1": 11,
+          "B10": 12,
+          "B2": 7,
+          "B3": 7,
+          "B4": 7,
+          "B5": 7,
+          "B6": 7,
+          "B7": 7,
+          "B8": 7,
+          "B9": 9,
+          "D1": 10,
+          "D2": 6,
+          "D3": 6,
+          "D4": 6,
+          "D5": 6,
+          "D6": 8,
+          "E1": 11,
+          "E10": 0,
+          "E2": 7,
+          "E3": 7,
+          "E4": 7,
+          "E5": 7,
+          "E6": 9,
+          "E7": 0,
+          "E8": 0,
+          "E9": 0
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "Criteria",
+        "Parameters",
+        "",
+        "",
+        "",
+        "Parameters",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.4.1",
+        "Weigh the sample and place it into an appropriately sized Whirl-Pak bag.",
+        "",
+        "",
+        "For Flower or Infused Non-Edibles, weigh 10.00g ± 0.50g of sample into an appropriately sized Whirl-Pak bag ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.4.1.1",
+        "Flower samples: 10.00g ± 0.50g ",
+        "",
+        "",
+        "For Concentrates, weigh 5.00g ± 0.10g of sample into an appropriately sized Whirl-Pak bag ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.4.1.2",
+        "Edible samples: 25.00g ± 1.00g ",
+        "",
+        "",
+        "For Infused Edibles, weigh 25.00g ± 1.00g of sample into an appropriately sized Whirl-Pak bag ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.4.1.3",
+        "Concentrate samples: 5.00g ± 0.10g ",
+        "",
+        "",
+        "Dilute weighed samples to volume with enrichment broth (Potato Dextrose Broth with Chlortetracycline) (15mL broth per gram)",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.4.2",
+        "Bring samples to volume utilizing the appropriate broth for the target organism. Samples are brought to volume using 15 mL of broth per 1.0g of sample.",
+        "",
+        "",
+        "Gently agitate bags for ~20 seconds to homogenize ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.4.2.1",
+        "Aspergillus: Enriched Aspergillus Broth",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.4.2.2",
+        "Salmonella/STEC: Buffered Peptone Water",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.4.2.3",
+        "Listeria: LPT Broth",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Be sure to assign inventory and equipment usage pertaining to this protocol step. ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  }
+}

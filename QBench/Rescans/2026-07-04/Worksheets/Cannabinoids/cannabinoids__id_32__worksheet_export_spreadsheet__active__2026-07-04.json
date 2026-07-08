@@ -1,0 +1,2340 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "c4665492-5a93-4240-84e0-f9cf73b233e5",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "font-weight:bold",
+      "font-weight:bold;background-color:#e0e0e0",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black;background-color:#e0e0e0",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;background-color:#e0e0e0",
+      "border-top:1px solid black;border-left:1px solid black;background-color:#e0e0e0;font-weight:bold",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;background-color:#e0e0e0;font-weight:bold",
+      "border-top:1px solid black;border-left:1px solid black;background-color:#e0e0e0;font-weight:bold;text-wrap:wrap",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;background-color:#e0e0e0;font-weight:bold;text-wrap:wrap",
+      "border-top:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "text-align:left",
+      "text-align:left;font-style:italic",
+      "text-wrap:wrap",
+      "text-wrap:wrap;text-align:left",
+      "text-wrap:wrap;text-align:left;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;text-align:left;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "",
+      "border-top:1px solid black;border-left:1px solid black;font-weight:bold",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;font-weight:bold",
+      "background-color:#e0e0e0;font-weight:bold;text-wrap:wrap",
+      "border-top:1px solid black;border-left:1px solid black;background-color:#c5e1a5",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;background-color:#c5e1a5",
+      "text-align:left;background-color:#dcedc8",
+      "border-top:1px solid black;border-left:1px solid black;background-color:#dcedc8",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;background-color:#dcedc8"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A2": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A29": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A30": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A4": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Completed",
+                "name": "Completed"
+              },
+              {
+                "id": "Not Applicable",
+                "name": "Not Applicable"
+              }
+            ],
+            "type": "dropdown",
+            "x": 0
+          },
+          "A5": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Completed",
+                "name": "Completed"
+              },
+              {
+                "id": "Not Applicable",
+                "name": "Not Applicable"
+              }
+            ],
+            "type": "dropdown",
+            "x": 0
+          },
+          "A6": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Completed",
+                "name": "Completed"
+              },
+              {
+                "id": "Not Applicable",
+                "name": "Not Applicable"
+              }
+            ],
+            "type": "dropdown",
+            "x": 0
+          },
+          "A7": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Completed",
+                "name": "Completed"
+              },
+              {
+                "id": "Not Applicable",
+                "name": "Not Applicable"
+              }
+            ],
+            "type": "dropdown",
+            "x": 0
+          },
+          "B12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B2": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B29": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B30": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B6": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "B7": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "C12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C2": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C29": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C30": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C6": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C7": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D2": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D29": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D30": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D6": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D7": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E2": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E29": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E30": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E6": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E7": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "F12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F2": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F29": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F30": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F6": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F7": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G2": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G29": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G30": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G6": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G7": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H12": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H13": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H14": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H15": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H16": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H17": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H18": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H19": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H2": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H20": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H21": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H22": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H23": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H24": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H25": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H26": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H27": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H28": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H29": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H30": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H6": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H7": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "A12": [
+            2,
+            1
+          ],
+          "B1": [
+            6,
+            1
+          ],
+          "B10": [
+            6,
+            1
+          ],
+          "B11": [
+            6,
+            1
+          ],
+          "B18": [
+            6,
+            1
+          ],
+          "B2": [
+            6,
+            1
+          ],
+          "B9": [
+            6,
+            1
+          ],
+          "E13": [
+            2,
+            1
+          ],
+          "E14": [
+            2,
+            1
+          ],
+          "E15": [
+            2,
+            1
+          ],
+          "E16": [
+            2,
+            1
+          ],
+          "E17": [
+            2,
+            1
+          ],
+          "E3": [
+            2,
+            1
+          ],
+          "E4": [
+            2,
+            1
+          ],
+          "E5": [
+            2,
+            1
+          ],
+          "E6": [
+            2,
+            1
+          ],
+          "E7": [
+            2,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 27
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 61
+          },
+          {
+            "height": 27
+          },
+          {
+            "height": 27
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27
+          },
+          {
+            "height": 27
+          },
+          {
+            "height": 27
+          },
+          {
+            "height": 27
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 44,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 44,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 44,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          },
+          {
+            "height": 27,
+            "id": null
+          }
+        ],
+        "tableHeight": 637,
+        "tableOverflow": true,
+        "tableWidth": 990,
+        "worksheetId": "806bd3dc-ff5d-4c21-b5df-308aba1a5953",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "",
+            "Add Matrix and 13 Cannabinoid Mix Stock Solution to \"Inventory Usage\" tab of Batch. ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "Complete protocol step after all LCS samples below are prepared, that are applicable. ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            null
+          ],
+          [
+            "Completed with This Batch",
+            "Sample ID",
+            "Sample Type",
+            "Amount of Matrix",
+            "13 Cannabinoid Mix Stock Solution",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "FLCS",
+            "Flower/Plant",
+            "500 ± 10 mg",
+            "60.0 µL",
+            "60.0 µL",
+            "",
+            ""
+          ],
+          [
+            "",
+            "OLCS",
+            "Concentrate",
+            "38.0 µL",
+            "12.0 µL",
+            "12.0 µL",
+            "",
+            ""
+          ],
+          [
+            null,
+            "BLCS",
+            "Beverage",
+            "10.0 mL",
+            "60.0 µL",
+            "60.0 µL",
+            null,
+            null
+          ],
+          [
+            null,
+            "ELCS",
+            "Edible",
+            "50 ± 1 mg",
+            "60.0 µL",
+            "60.0 µL",
+            null,
+            null
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.6",
+            "Preparation of Laboratory Control Samples",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.6.1",
+            "LCSs should be prepared fresh each day if their respective sample type is to be assayed. ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Table 9. Preparation of LCSs.",
+            "",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Sample ID",
+            "Sample Type",
+            "Matrix",
+            "Amount of Matrix",
+            "Amount of 12 Cannabinoid Mix Stock Solution",
+            "",
+            null,
+            null
+          ],
+          [
+            "PLC",
+            "Flower/Plant",
+            "Cellulose",
+            "500 mg",
+            "60.0 µL",
+            "",
+            null,
+            null
+          ],
+          [
+            "CLC",
+            "Concentrate",
+            "Olive Oil",
+            "38.0 µL",
+            "12.0 µL",
+            "",
+            null,
+            null
+          ],
+          [
+            "BLC",
+            "Beverage",
+            "Carbonated Water",
+            "10 mL",
+            "60.0 µL",
+            "",
+            null,
+            null
+          ],
+          [
+            "ELC",
+            "Edibles",
+            "Gelatin Powder",
+            "50.0 mg",
+            "60.0 µL",
+            "",
+            null,
+            null
+          ],
+          [
+            "8.6.2",
+            "All LCSs have a final concentration of 3 µg/mL, except BLC at 1.5 µg/mL, after they have been processed following their respective sample type extraction.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "style": {
+          "A1": 18,
+          "A12": 19,
+          "A13": 12,
+          "A14": 14,
+          "A15": 14,
+          "A16": 14,
+          "A17": 16,
+          "A18": 20,
+          "A19": 24,
+          "A2": 18,
+          "A3": 12,
+          "A4": 31,
+          "A5": 31,
+          "A6": 31,
+          "A7": 32,
+          "A9": 2,
+          "B1": 18,
+          "B10": 18,
+          "B11": 18,
+          "B12": 19,
+          "B13": 12,
+          "B14": 14,
+          "B15": 14,
+          "B16": 14,
+          "B17": 16,
+          "B18": 21,
+          "B19": 24,
+          "B2": 18,
+          "B3": 12,
+          "B4": 4,
+          "B5": 4,
+          "B6": 4,
+          "B7": 6,
+          "B9": 3,
+          "C1": 18,
+          "C10": 18,
+          "C11": 18,
+          "C13": 12,
+          "C14": 14,
+          "C15": 14,
+          "C16": 14,
+          "C17": 16,
+          "C18": 21,
+          "C19": 24,
+          "C2": 18,
+          "C3": 12,
+          "C4": 4,
+          "C5": 4,
+          "C6": 4,
+          "C7": 6,
+          "C9": 2,
+          "D1": 18,
+          "D10": 18,
+          "D11": 18,
+          "D13": 12,
+          "D14": 14,
+          "D15": 14,
+          "D16": 14,
+          "D17": 16,
+          "D18": 21,
+          "D19": 24,
+          "D2": 18,
+          "D3": 12,
+          "D4": 4,
+          "D5": 4,
+          "D6": 4,
+          "D7": 6,
+          "D9": 2,
+          "E1": 18,
+          "E10": 18,
+          "E11": 18,
+          "E13": 13,
+          "E14": 15,
+          "E15": 15,
+          "E16": 15,
+          "E17": 17,
+          "E18": 21,
+          "E19": 24,
+          "E2": 18,
+          "E3": 13,
+          "E4": 5,
+          "E5": 5,
+          "E6": 5,
+          "E7": 7,
+          "E9": 2,
+          "F1": 18,
+          "F10": 18,
+          "F11": 18,
+          "F14": 5,
+          "F15": 5,
+          "F16": 5,
+          "F17": 7,
+          "F18": 21,
+          "F19": 24,
+          "F2": 18,
+          "F3": 5,
+          "F4": 5,
+          "F5": 5,
+          "F6": 5,
+          "F7": 7,
+          "F9": 2,
+          "G1": 18,
+          "G10": 18,
+          "G11": 18,
+          "G14": 24,
+          "G15": 24,
+          "G16": 24,
+          "G17": 24,
+          "G18": 21,
+          "G19": 24,
+          "G2": 18,
+          "G9": 3
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "",
+        "Add Matrix and 13 Cannabinoid Mix Stock Solution to \"Inventory Usage\" tab of Batch. ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "Complete protocol step after all LCS samples below are prepared, that are applicable. ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        null
+      ],
+      [
+        "Completed with This Batch",
+        "Sample ID",
+        "Sample Type",
+        "Amount of Matrix",
+        "13 Cannabinoid Mix Stock Solution",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "FLCS",
+        "Flower/Plant",
+        "500 ± 10 mg",
+        "60.0 µL",
+        "60.0 µL",
+        "",
+        ""
+      ],
+      [
+        "",
+        "OLCS",
+        "Concentrate",
+        "38.0 µL",
+        "12.0 µL",
+        "12.0 µL",
+        "",
+        ""
+      ],
+      [
+        null,
+        "BLCS",
+        "Beverage",
+        "10.0 mL",
+        "60.0 µL",
+        "60.0 µL",
+        null,
+        null
+      ],
+      [
+        null,
+        "ELCS",
+        "Edible",
+        "50 ± 1 mg",
+        "60.0 µL",
+        "60.0 µL",
+        null,
+        null
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.6",
+        "Preparation of Laboratory Control Samples",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.6.1",
+        "LCSs should be prepared fresh each day if their respective sample type is to be assayed. ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Table 9. Preparation of LCSs.",
+        "",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "Sample ID",
+        "Sample Type",
+        "Matrix",
+        "Amount of Matrix",
+        "Amount of 12 Cannabinoid Mix Stock Solution",
+        "",
+        null,
+        null
+      ],
+      [
+        "PLC",
+        "Flower/Plant",
+        "Cellulose",
+        "500 mg",
+        "60.0 µL",
+        "",
+        null,
+        null
+      ],
+      [
+        "CLC",
+        "Concentrate",
+        "Olive Oil",
+        "38.0 µL",
+        "12.0 µL",
+        "",
+        null,
+        null
+      ],
+      [
+        "BLC",
+        "Beverage",
+        "Carbonated Water",
+        "10 mL",
+        "60.0 µL",
+        "",
+        null,
+        null
+      ],
+      [
+        "ELC",
+        "Edibles",
+        "Gelatin Powder",
+        "50.0 mg",
+        "60.0 µL",
+        "",
+        null,
+        null
+      ],
+      [
+        "8.6.2",
+        "All LCSs have a final concentration of 3 µg/mL, except BLC at 1.5 µg/mL, after they have been processed following their respective sample type extraction.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  }
+}

@@ -1,0 +1,737 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "43219506-2c13-4df7-a0e8-14f1e26e3d7c",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "background-color:#e0e0e0",
+      "text-wrap:wrap",
+      "background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black",
+      "background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "color:#c62828",
+      "text-wrap:wrap;color:#c62828"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "A9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 376,
+            "x": 1
+          },
+          "B11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 376,
+            "x": 1
+          },
+          "B9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 376,
+            "x": 1
+          },
+          "C10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "C9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "D2": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D3": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D4": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D5": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D6": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D7": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D8": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 395,
+            "x": 4
+          },
+          "E11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 395,
+            "x": 4
+          },
+          "E8": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "E9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 395,
+            "x": 4
+          },
+          "F10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "F9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "G9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H10": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H11": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "H9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 376
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 395
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "A11": [
+            2,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 25
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 55
+          },
+          {
+            "height": 55,
+            "id": null
+          },
+          {
+            "height": 40,
+            "id": null
+          },
+          {
+            "height": 25,
+            "id": null
+          }
+        ],
+        "tableHeight": 474,
+        "tableOverflow": true,
+        "tableWidth": 1016,
+        "worksheetId": "6033c7e3-b432-4e2c-a6ea-4579c9018ef6",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "Criteria",
+            "Parameters",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.7.1",
+            "Sample lysis is performed only for Salmonella, STEC, and Listeria",
+            "",
+            "",
+            "Remove the appropriate amount of Lysis kits from storage and allow to reach Room Temperature ",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.7.2",
+            "Remove the appropriate amount of Lysis kits from storage and allow to reach Room Temperature ",
+            "",
+            "",
+            "Post Incubation, gently agitate bags for ~20 seconds to homogenize ",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.7.3",
+            "Remove samples from Incubation. Be sure to record the end date and time for sample incubation.",
+            "",
+            "",
+            "Transfer 20µL of each sample to a lysis tube ",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.7.4",
+            "Gently agitate sample bags for ~20 seconds to homogenize ",
+            "",
+            "",
+            "Vortex lysis tubes at 2200 RPM for 5 minutes",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.7.5",
+            "Transfer 20µL of each sample to a lysis tube",
+            "",
+            "",
+            "Transfer 5µL (Sal/STEC) or 10µL (Listeria) from each sample lysis tube to an appropriate PCR tube and spin the plate for ~10 seconds",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.7.6",
+            "Vortex lysis tubes at 2200 RPM for 5 minutes",
+            "",
+            "",
+            "For Listeria only, remove the septum caps from the PCR tubes and replace them with optical caps. Spin the plate for ~10 seconds",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.7.7",
+            "Transfer 5µL (for Salmonella/STEC) or 10µL (Listeria) from each sample lysis tube to an appropriate PCR tube and spin the plate for ~10 seconds",
+            "",
+            "",
+            "Place PCR tubes on the Gene-Up and prepare to run the PCR program",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.7.8",
+            "For Listeria only, remove the septum caps from the PCR tubes and replace them with optical caps. Spin the plate for ~10 seconds.",
+            null,
+            null,
+            "",
+            "",
+            null,
+            null
+          ],
+          [
+            "7.7.9",
+            "Place PCR tubes on the Gene-Up and prepare to run the PCR program",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Be sure to assign inventory and equipment usage pertaining to this protocol step. ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            null,
+            null
+          ]
+        ],
+        "style": {
+          "A1": 2,
+          "A10": 6,
+          "A11": 8,
+          "A2": 4,
+          "A3": 4,
+          "A4": 4,
+          "A5": 4,
+          "A6": 4,
+          "A7": 4,
+          "A8": 4,
+          "A9": 4,
+          "B1": 3,
+          "B10": 7,
+          "B11": 9,
+          "B2": 5,
+          "B3": 5,
+          "B4": 5,
+          "B5": 5,
+          "B6": 5,
+          "B7": 5,
+          "B8": 5,
+          "B9": 5,
+          "D1": 2,
+          "D2": 4,
+          "D3": 4,
+          "D4": 4,
+          "D5": 4,
+          "D6": 4,
+          "D7": 4,
+          "D8": 6,
+          "E1": 3,
+          "E2": 5,
+          "E3": 5,
+          "E4": 5,
+          "E5": 5,
+          "E6": 5,
+          "E7": 5,
+          "E8": 7
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "Criteria",
+        "Parameters",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.7.1",
+        "Sample lysis is performed only for Salmonella, STEC, and Listeria",
+        "",
+        "",
+        "Remove the appropriate amount of Lysis kits from storage and allow to reach Room Temperature ",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.7.2",
+        "Remove the appropriate amount of Lysis kits from storage and allow to reach Room Temperature ",
+        "",
+        "",
+        "Post Incubation, gently agitate bags for ~20 seconds to homogenize ",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.7.3",
+        "Remove samples from Incubation. Be sure to record the end date and time for sample incubation.",
+        "",
+        "",
+        "Transfer 20µL of each sample to a lysis tube ",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.7.4",
+        "Gently agitate sample bags for ~20 seconds to homogenize ",
+        "",
+        "",
+        "Vortex lysis tubes at 2200 RPM for 5 minutes",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.7.5",
+        "Transfer 20µL of each sample to a lysis tube",
+        "",
+        "",
+        "Transfer 5µL (Sal/STEC) or 10µL (Listeria) from each sample lysis tube to an appropriate PCR tube and spin the plate for ~10 seconds",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.7.6",
+        "Vortex lysis tubes at 2200 RPM for 5 minutes",
+        "",
+        "",
+        "For Listeria only, remove the septum caps from the PCR tubes and replace them with optical caps. Spin the plate for ~10 seconds",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.7.7",
+        "Transfer 5µL (for Salmonella/STEC) or 10µL (Listeria) from each sample lysis tube to an appropriate PCR tube and spin the plate for ~10 seconds",
+        "",
+        "",
+        "Place PCR tubes on the Gene-Up and prepare to run the PCR program",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.7.8",
+        "For Listeria only, remove the septum caps from the PCR tubes and replace them with optical caps. Spin the plate for ~10 seconds.",
+        null,
+        null,
+        "",
+        "",
+        null,
+        null
+      ],
+      [
+        "7.7.9",
+        "Place PCR tubes on the Gene-Up and prepare to run the PCR program",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "Be sure to assign inventory and equipment usage pertaining to this protocol step. ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        null,
+        null
+      ]
+    ]
+  }
+}

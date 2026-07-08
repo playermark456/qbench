@@ -1,0 +1,433 @@
+{
+  "reports": {
+    "path": "/templates/reports",
+    "url": "https://ait.qbench.net/templates/reports",
+    "len": 224866,
+    "login_form": false,
+    "links": [
+      {
+        "href": "/tests?global_filter=23",
+        "text": "Test Status for CoA Review"
+      },
+      {
+        "href": "/templates/reports",
+        "text": "Reports"
+      },
+      {
+        "href": "/templates/labels",
+        "text": "Labels"
+      },
+      {
+        "href": "/templates/emails",
+        "text": "Emails"
+      },
+      {
+        "href": "/templates/printdocs",
+        "text": "Print"
+      },
+      {
+        "href": "/templates/platemaps",
+        "text": "Platemaps"
+      },
+      {
+        "href": "/templates/invoices",
+        "text": "Invoice"
+      },
+      {
+        "href": "/templates/quotations",
+        "text": "Quotation"
+      },
+      {
+        "href": "/templates/payments",
+        "text": "Payment"
+      },
+      {
+        "href": "/templates/richtexts",
+        "text": "Rich Text"
+      },
+      {
+        "href": "/templates/internal_reports",
+        "text": "Internal Reports"
+      },
+      {
+        "href": "/templates/macros",
+        "text": "Template Macros"
+      },
+      {
+        "href": "/settings/report-generation/history",
+        "text": "Report Generation"
+      },
+      {
+        "href": "/templates/file-parsers",
+        "text": "File Parsers"
+      },
+      {
+        "href": "/templates/file-parser/history",
+        "text": "File Parser Results"
+      },
+      {
+        "href": "/automation",
+        "text": "+ New Automation"
+      },
+      {
+        "href": "/automations",
+        "text": "Automations"
+      },
+      {
+        "href": "/automation/history",
+        "text": "Automation Results"
+      },
+      {
+        "href": "/internal_report/31",
+        "text": "Test"
+      },
+      {
+        "href": "/templates/reports",
+        "text": "Report Template Configurations"
+      },
+      {
+        "href": "/templates/report",
+        "text": "+ New Report Template Configuration"
+      },
+      {
+        "href": "/templates/report?id=26",
+        "text": "Certificate of Analysis Report"
+      },
+      {
+        "href": "/templates/report?id=44",
+        "text": "Homogeneity"
+      },
+      {
+        "href": "/templates/report?id=20",
+        "text": "1Certificate of Analysis Report"
+      },
+      {
+        "href": "/templates/file-parser",
+        "text": "here"
+      }
+    ],
+    "snippets": {
+      "Certificate of Analysis": "ate Name</th> <th>Report Type</th> <th>Editor Type</th> <th>Active</th> </tr> </thead> <tbody> <tr> <td><input type=\"checkbox\" class=\"qbench-reportconfig-checkbox\" data-reportconfig-id=\"26\" data-display-id=\"26\"></td> <td>26</td> <td><a href=\"/templates/report?id=26\">Certificate of Analysis Report</a></td> <td>Sample Report</td> <td>Visual Editor</td> <td> <span class=\"active-status\" style=\"color: green; font-weight: bold;\" >Active</span> </td> </tr> <tr> <td><input type=\"checkbox\" class=\"qbench-reportconfig-checkbox\" data-reportconfig-id=\"44\" data-display-id=\"44\"></td> <td>44</td> <td><a href=\"/templates/report?id=44\">Homogeneity</a></td> <td>Sample Report</td> <td>Visual Editor</td> <td> ",
+      "Homogeneity": "ort</td> <td>Visual Editor</td> <td> <span class=\"active-status\" style=\"color: green; font-weight: bold;\" >Active</span> </td> </tr> <tr> <td><input type=\"checkbox\" class=\"qbench-reportconfig-checkbox\" data-reportconfig-id=\"44\" data-display-id=\"44\"></td> <td>44</td> <td><a href=\"/templates/report?id=44\">Homogeneity</a></td> <td>Sample Report</td> <td>Visual Editor</td> <td> <span class=\"active-status\" style=\"color: green; font-weight: bold;\" >Active</span> </td> </tr> <tr> <td><input type=\"checkbox\" class=\"qbench-reportconfig-checkbox\" data-reportconfig-id=\"20\" data-display-id=\"20\"></td> <td>20</td> <td><a href=\"/templates/report?id=20\">1Certificate of Analysis Report</a></td> <td>Sample Report</td> <td>Visual Editor</td> ",
+      "File Parser": " <li class=\"\"> <a href=\"/parameter-store\" id=\"None\">Parameter Store</a> </li> <li class=\"\"> <a href=\"/qii/downloads\" id=\"None\">Downloads</a> </li> <li class=\"\"> <a href=\"/templates/file-parsers\" id=\"None\">File Parsers</a> </li> <li class=\"\"> <a href=\"/templates/file-parser/history\" id=\"None\">File Parser Results</a> </li> </ul> </li> <li class=\"\"> <a href=\"/managed-interfaces\" id=\"None\">Managed Interfaces</a> </li> <li class=\"\"> <a href=\"/kvstores\"",
+      "Parser": " <li class=\"\"> <a href=\"/parameter-store\" id=\"None\">Parameter Store</a> </li> <li class=\"\"> <a href=\"/qii/downloads\" id=\"None\">Downloads</a> </li> <li class=\"\"> <a href=\"/templates/file-parsers\" id=\"None\">File Parsers</a> </li> <li class=\"\"> <a href=\"/templates/file-parser/history\" id=\"None\">File Parser Results</a> </li> </ul> </li> <li class=\"\"> <a href=\"/managed-interfaces\" id=\"None\">Managed Interfaces</a> </li> <li class=\"\"> ",
+      "Automation": "Managed Interfaces</a> </li> <li class=\"\"> <a href=\"/kvstores\" id=\"None\">Key/Value Store</a> </li> <li class=\"has-submenu \"> <a class=\"clickable\">Automations</a> <ul class=\"submenu\"> <li ><a href=\"/automation\">+ New Automation</a></li> <li ><a href=\"/automations\">Automations</a></li> <li ><a href=\"/automation/history\">Automation Results</a></li> </ul> </li> <li > <a href=\"/dropbox_sign\">Dropbox Sign</a> </li> </ul> </li> ",
+      "Trigger": "\" style=\"display: none;\" class=\"dropdown pull-right\"></li> <li id=\"qbenchNotificationsModuleLoading\" class=\"pull-right dropdown\"> <a href=\"#\" data-target=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"true\"> <i class=\"fa fa-bell-o\"></i> </a> </li> <li id=\"qbenchNotificationsModule\" style=\"display: none;\" data-bell-alert=\"False\" data-active-locks=\"False\" class=\"dropdown pull-right\"></li> <li id=\"qbenchTriggerFileParser\" class=\"pull-right clickable\"> <a> <i class=\"md md-file-upload\"></i> </a> </li> <li id=\"currentUserDivisionSettings\" class=\"dropdown\" style=\"display: none;\"> <a href=\"\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"true\"> <i class=\"fa fa-industry\"></i> <span style=\"padding-left: 3px;\" class=\"active-division\"></span> </a> </li> <li class=\"dropdown\"> <a href=\"\" class=\"dropdown-toggle profile\" style=\"white-space: nowrap",
+      "Active": "ghtyellow; border-width: thin; border-style: solid; padding: 10px; } .qbench-special-instructions { font-size: 1.25em; color:#ff8300; position: relative; top: 3px; } .qbench-dynamic-spreadsheet-insert-row-style { position: absolute; bottom: 0; left: 0; pointer-events: none; } .tox-tinymce-inline { z-index: 9999 !important; } .tox-toolbar { z-index: 9999 !important; /* Adjust the z-index value as needed */ } .inactive-entity-row, .inactive-entity-row .btn-white { background-color:#F0F0F0; } .input-with-border-validation { transition: border-color 0.3s ease; } .input-with-border-validation:focus { outline: none; } .input-with-border-validation:invalid { border-color: red; } .qbench-preview-modal-content { margin: auto; display: block; max-width: 700px; } .qbench-image-thumbnail { display: block; width: 150px; height: 150px; object-fit: contain; border: 1px solid #ccc; margin-top: 10px; border-radius: 10px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; cursor: pointer; } ",
+      "Inactive": "lightyellow; border-width: thin; border-style: solid; padding: 10px; } .qbench-special-instructions { font-size: 1.25em; color:#ff8300; position: relative; top: 3px; } .qbench-dynamic-spreadsheet-insert-row-style { position: absolute; bottom: 0; left: 0; pointer-events: none; } .tox-tinymce-inline { z-index: 9999 !important; } .tox-toolbar { z-index: 9999 !important; /* Adjust the z-index value as needed */ } .inactive-entity-row, .inactive-entity-row .btn-white { background-color:#F0F0F0; } .input-with-border-validation { transition: border-color 0.3s ease; } .input-with-border-validation:focus { outline: none; } .input-with-border-validation:invalid { border-color: red; } .qbench-preview-modal-content { margin: auto; display: block; max-width: 700px; } .qbench-image-thumbnail { display: block; width: 150px; height: 150px; object-fit: contain; border: 1px solid #ccc; margin-top: 10px; border-radius: 10px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; cursor: pointer; } ",
+      "download": " <li class=\"\"> <a href=\"/settings/developer\" id=\"None\">Settings</a> </li> <li class=\"\"> <a href=\"/parameter-store\" id=\"None\">Parameter Store</a> </li> <li class=\"\"> <a href=\"/qii/downloads\" id=\"None\">Downloads</a> </li> <li class=\"\"> <a href=\"/templates/file-parsers\" id=\"None\">File Parsers</a> </li> <li class=\"\"> <a href=\"/templates/file-parser/history\" id=\"None\">File Parser Results</a> </li> </ul> </li> <li class=\"\"> ",
+      "source": " </li> </ul> </li> </ul> </li> <li class=\"has-submenu \"> <a class=\"clickable\">Sources</a> <ul class=\"submenu has-qbench-filters\"> <li ><a href=\"/source\">+ New Source</a></li> <li ><a href=\"/sources\">All</a></li> </ul> </li> <li class=\"has-submenu \"> <a class=\"clickable\">Batches</a> <ul class=\"submenu has-qbench-filters\"> <li ><a href=\"/batch\">+ New Batch</a></l"
+    }
+  },
+  "file_parsers": {
+    "path": "/templates/file-parsers",
+    "url": "https://ait.qbench.net/templates/file-parsers",
+    "len": 227851,
+    "login_form": false,
+    "links": [
+      {
+        "href": "/tests?global_filter=23",
+        "text": "Test Status for CoA Review"
+      },
+      {
+        "href": "/templates/reports",
+        "text": "Reports"
+      },
+      {
+        "href": "/templates/labels",
+        "text": "Labels"
+      },
+      {
+        "href": "/templates/emails",
+        "text": "Emails"
+      },
+      {
+        "href": "/templates/printdocs",
+        "text": "Print"
+      },
+      {
+        "href": "/templates/platemaps",
+        "text": "Platemaps"
+      },
+      {
+        "href": "/templates/invoices",
+        "text": "Invoice"
+      },
+      {
+        "href": "/templates/quotations",
+        "text": "Quotation"
+      },
+      {
+        "href": "/templates/payments",
+        "text": "Payment"
+      },
+      {
+        "href": "/templates/richtexts",
+        "text": "Rich Text"
+      },
+      {
+        "href": "/templates/internal_reports",
+        "text": "Internal Reports"
+      },
+      {
+        "href": "/templates/macros",
+        "text": "Template Macros"
+      },
+      {
+        "href": "/settings/report-generation/history",
+        "text": "Report Generation"
+      },
+      {
+        "href": "/templates/file-parsers",
+        "text": "File Parsers"
+      },
+      {
+        "href": "/templates/file-parser/history",
+        "text": "File Parser Results"
+      },
+      {
+        "href": "/automation",
+        "text": "+ New Automation"
+      },
+      {
+        "href": "/automations",
+        "text": "Automations"
+      },
+      {
+        "href": "/automation/history",
+        "text": "Automation Results"
+      },
+      {
+        "href": "/internal_report/31",
+        "text": "Test"
+      },
+      {
+        "href": "/templates/file-parsers",
+        "text": "File Parsers"
+      },
+      {
+        "href": "/templates/file-parser",
+        "text": "+ Create File Parser"
+      },
+      {
+        "href": "/templates/file-parsers?page_num=1&page_size=20",
+        "text": "1"
+      },
+      {
+        "href": "/templates/file-parser?id=47",
+        "text": "Pest Myco Qualitative"
+      },
+      {
+        "href": "/templates/file-parser?id=46",
+        "text": "Cannabinoid Potency Parser"
+      },
+      {
+        "href": "/templates/file-parser?id=45",
+        "text": "Gene-up"
+      },
+      {
+        "href": "/templates/file-parser?id=41",
+        "text": "Heavy Metals DataManager"
+      },
+      {
+        "href": "/templates/file-parser?id=25",
+        "text": "Cannabis Heavy Metals ICPMS File Parser"
+      },
+      {
+        "href": "/templates/file-parser?id=22",
+        "text": "Heavy Metals File Parser - AMM"
+      },
+      {
+        "href": "/templates/file-parser?id=21",
+        "text": "Example [File Parser]"
+      },
+      {
+        "href": "/templates/file-parser",
+        "text": "here"
+      }
+    ],
+    "snippets": {
+      "File Parser": "li class=\"\"> <a href=\"/parameter-store\" id=\"None\">Parameter Store</a> </li> <li class=\"\"> <a href=\"/qii/downloads\" id=\"None\">Downloads</a> </li> <li class=\"active-bold\"> <a href=\"/templates/file-parsers\" id=\"None\">File Parsers</a> </li> <li class=\"\"> <a href=\"/templates/file-parser/history\" id=\"None\">File Parser Results</a> </li> </ul> </li> <li class=\"\"> <a href=\"/managed-interfaces\" id=\"None\">Managed Interfaces</a> </li> <li class=\"\"> <a href=\"/kvstores\"",
+      "Parser": " <li class=\"\"> <a href=\"/parameter-store\" id=\"None\">Parameter Store</a> </li> <li class=\"\"> <a href=\"/qii/downloads\" id=\"None\">Downloads</a> </li> <li class=\"active-bold\"> <a href=\"/templates/file-parsers\" id=\"None\">File Parsers</a> </li> <li class=\"\"> <a href=\"/templates/file-parser/history\" id=\"None\">File Parser Results</a> </li> </ul> </li> <li class=\"\"> <a href=\"/managed-interfaces\" id=\"None\">Managed Interfaces</a> </li> <li class=\"\"> ",
+      "Automation": "Managed Interfaces</a> </li> <li class=\"\"> <a href=\"/kvstores\" id=\"None\">Key/Value Store</a> </li> <li class=\"has-submenu \"> <a class=\"clickable\">Automations</a> <ul class=\"submenu\"> <li ><a href=\"/automation\">+ New Automation</a></li> <li ><a href=\"/automations\">Automations</a></li> <li ><a href=\"/automation/history\">Automation Results</a></li> </ul> </li> <li > <a href=\"/dropbox_sign\">Dropbox Sign</a> </li> </ul> </li> ",
+      "Trigger": "\" style=\"display: none;\" class=\"dropdown pull-right\"></li> <li id=\"qbenchNotificationsModuleLoading\" class=\"pull-right dropdown\"> <a href=\"#\" data-target=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"true\"> <i class=\"fa fa-bell-o\"></i> </a> </li> <li id=\"qbenchNotificationsModule\" style=\"display: none;\" data-bell-alert=\"False\" data-active-locks=\"False\" class=\"dropdown pull-right\"></li> <li id=\"qbenchTriggerFileParser\" class=\"pull-right clickable\"> <a> <i class=\"md md-file-upload\"></i> </a> </li> <li id=\"currentUserDivisionSettings\" class=\"dropdown\" style=\"display: none;\"> <a href=\"\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"true\"> <i class=\"fa fa-industry\"></i> <span style=\"padding-left: 3px;\" class=\"active-division\"></span> </a> </li> <li class=\"dropdown\"> <a href=\"\" class=\"dropdown-toggle profile\" style=\"white-space: nowrap",
+      "Active": "ghtyellow; border-width: thin; border-style: solid; padding: 10px; } .qbench-special-instructions { font-size: 1.25em; color:#ff8300; position: relative; top: 3px; } .qbench-dynamic-spreadsheet-insert-row-style { position: absolute; bottom: 0; left: 0; pointer-events: none; } .tox-tinymce-inline { z-index: 9999 !important; } .tox-toolbar { z-index: 9999 !important; /* Adjust the z-index value as needed */ } .inactive-entity-row, .inactive-entity-row .btn-white { background-color:#F0F0F0; } .input-with-border-validation { transition: border-color 0.3s ease; } .input-with-border-validation:focus { outline: none; } .input-with-border-validation:invalid { border-color: red; } .qbench-preview-modal-content { margin: auto; display: block; max-width: 700px; } .qbench-image-thumbnail { display: block; width: 150px; height: 150px; object-fit: contain; border: 1px solid #ccc; margin-top: 10px; border-radius: 10px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; cursor: pointer; } ",
+      "Inactive": "lightyellow; border-width: thin; border-style: solid; padding: 10px; } .qbench-special-instructions { font-size: 1.25em; color:#ff8300; position: relative; top: 3px; } .qbench-dynamic-spreadsheet-insert-row-style { position: absolute; bottom: 0; left: 0; pointer-events: none; } .tox-tinymce-inline { z-index: 9999 !important; } .tox-toolbar { z-index: 9999 !important; /* Adjust the z-index value as needed */ } .inactive-entity-row, .inactive-entity-row .btn-white { background-color:#F0F0F0; } .input-with-border-validation { transition: border-color 0.3s ease; } .input-with-border-validation:focus { outline: none; } .input-with-border-validation:invalid { border-color: red; } .qbench-preview-modal-content { margin: auto; display: block; max-width: 700px; } .qbench-image-thumbnail { display: block; width: 150px; height: 150px; object-fit: contain; border: 1px solid #ccc; margin-top: 10px; border-radius: 10px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; cursor: pointer; } ",
+      "download": " <li class=\"\"> <a href=\"/settings/developer\" id=\"None\">Settings</a> </li> <li class=\"\"> <a href=\"/parameter-store\" id=\"None\">Parameter Store</a> </li> <li class=\"\"> <a href=\"/qii/downloads\" id=\"None\">Downloads</a> </li> <li class=\"active-bold\"> <a href=\"/templates/file-parsers\" id=\"None\">File Parsers</a> </li> <li class=\"\"> <a href=\"/templates/file-parser/history\" id=\"None\">File Parser Results</a> </li> </ul> </li> <li clas",
+      "export": "ass=\"pull-right\"> <a href=\"/templates/file-parser\" class=\"btn btn-default btn-sm\">+ Create File Parser</a> </div> <div class=\"clearfix\"></div> </div> </div> </div> <div class=\"card-box\"> <div id=\"qbenchPagingBox\" style=\"z-index:100; border-radius: 0; -webkit-border-radius: 0; padding:10px;background:#fff;\"> <div class=\"pull-right\"> <div class=\"form-inline\"> <div class=\"qbench-import-export-container-div form-group\" data-type=\"fileparser\" data-display-name=\"FileParser\"> <div class=\"data-loading text-center\"> </div> <div class=\"data-loaded\" style=\"display: none;\"> </div> </div> <div class=\"form-group\"> <div class=\"btn-group qbench-set-page-size\" data-type=\"FILE_PARSER\" data-page-size=20 data-reload-page=> <button type=\"button\" class=\"btn btn-white btn-sm dropdown-toggle waves-effect waves-light\" data-toggle=\"dropdown\" aria-expanded=\"false\"><span class=\"current-page-size\">20</span> <span class=\"caret\"></span></button> <ul class=\"dropdown",
+      "source": " </li> </ul> </li> </ul> </li> <li class=\"has-submenu \"> <a class=\"clickable\">Sources</a> <ul class=\"submenu has-qbench-filters\"> <li ><a href=\"/source\">+ New Source</a></li> <li ><a href=\"/sources\">All</a></li> </ul> </li> <li class=\"has-submenu \"> <a class=\"clickable\">Batches</a> <ul class=\"submenu has-qbench-filters\"> <li ><a href=\"/batch\">+ New Batch</a></l"
+    }
+  },
+  "automations": {
+    "path": "/automations",
+    "url": "https://ait.qbench.net/automations",
+    "len": 255813,
+    "login_form": false,
+    "links": [
+      {
+        "href": "/tests?global_filter=23",
+        "text": "Test Status for CoA Review"
+      },
+      {
+        "href": "/templates/reports",
+        "text": "Reports"
+      },
+      {
+        "href": "/templates/labels",
+        "text": "Labels"
+      },
+      {
+        "href": "/templates/emails",
+        "text": "Emails"
+      },
+      {
+        "href": "/templates/printdocs",
+        "text": "Print"
+      },
+      {
+        "href": "/templates/platemaps",
+        "text": "Platemaps"
+      },
+      {
+        "href": "/templates/invoices",
+        "text": "Invoice"
+      },
+      {
+        "href": "/templates/quotations",
+        "text": "Quotation"
+      },
+      {
+        "href": "/templates/payments",
+        "text": "Payment"
+      },
+      {
+        "href": "/templates/richtexts",
+        "text": "Rich Text"
+      },
+      {
+        "href": "/templates/internal_reports",
+        "text": "Internal Reports"
+      },
+      {
+        "href": "/templates/macros",
+        "text": "Template Macros"
+      },
+      {
+        "href": "/settings/report-generation/history",
+        "text": "Report Generation"
+      },
+      {
+        "href": "/templates/file-parsers",
+        "text": "File Parsers"
+      },
+      {
+        "href": "/templates/file-parser/history",
+        "text": "File Parser Results"
+      },
+      {
+        "href": "/automation",
+        "text": "+ New Automation"
+      },
+      {
+        "href": "/automations",
+        "text": "Automations"
+      },
+      {
+        "href": "/automation/history",
+        "text": "Automation Results"
+      },
+      {
+        "href": "/internal_report/31",
+        "text": "Test"
+      },
+      {
+        "href": "/automations",
+        "text": "Automations"
+      },
+      {
+        "href": "/automation",
+        "text": "+ New Automation"
+      },
+      {
+        "href": "/automations?page_num=1&page_size=20",
+        "text": "1"
+      },
+      {
+        "href": "/automation?id=16",
+        "text": "Homogeneity - Pull potency mg/serving"
+      },
+      {
+        "href": "/automation?id=14",
+        "text": "AC EB YM Batch to Test WS"
+      },
+      {
+        "href": "/automation?id=13",
+        "text": "Listeria Batch to Test WS"
+      },
+      {
+        "href": "/automation?id=12",
+        "text": "Salmonella Species & STEC Batch to Test WS"
+      },
+      {
+        "href": "/automation?id=11",
+        "text": "Cannabinoid Potency Batch to Test WS"
+      },
+      {
+        "href": "/automation?id=10",
+        "text": "Pesticide (Quantitative) Analysis"
+      },
+      {
+        "href": "/automation?id=9",
+        "text": "Aspergillus Batch WS to Test WS"
+      },
+      {
+        "href": "/automation?id=8",
+        "text": "Pest Myco (Qualitative) Batch WS to Test WS"
+      },
+      {
+        "href": "/automation?id=6",
+        "text": "Residual Solvents Batch WS to Test WS"
+      },
+      {
+        "href": "/automation?id=4",
+        "text": "Water Activity Batch WS to Test WS"
+      },
+      {
+        "href": "/automation?id=3",
+        "text": "Mycotoxin (Quantitative) Batch WS to Test WS"
+      },
+      {
+        "href": "/automation?id=1",
+        "text": "Heavy Metals Batch WS to Test WS"
+      },
+      {
+        "href": "/automation?id=15",
+        "text": "Water Activity Protocol WS to Batch WS"
+      },
+      {
+        "href": "/automation?id=5",
+        "text": "test wa"
+      },
+      {
+        "href": "/automation?id=2",
+        "text": "Heavy Metals Batch WS to Test WS 2"
+      },
+      {
+        "href": "/templates/file-parser",
+        "text": "here"
+      }
+    ],
+    "snippets": {
+      "Homogeneity": "h-automation-checkbox\" data-automation-id=\"16\" data-display-id=\"16\"></td> <td class=\"qbench-sortable\" data-field-name=\"id\"> 16 </th> <td class=\"qbench-sortable\" data-field-name=\"name\"> <a class=\"clickable\" href=\"/automation?id=16\"> Homogeneity - Pull potency mg/serving </a> </th> <td class=\"qbench-sortable\" data-field-name=\"trigger\"> Data Modified </th> <td class=\"qbench-sortable\" data-field-name=\"type\"> Test </th> <td class=\"qbench-sortable\" data-field-name=\"description\"> When a Homogeneity",
+      "File Parser": " <li class=\"\"> <a href=\"/parameter-store\" id=\"None\">Parameter Store</a> </li> <li class=\"\"> <a href=\"/qii/downloads\" id=\"None\">Downloads</a> </li> <li class=\"\"> <a href=\"/templates/file-parsers\" id=\"None\">File Parsers</a> </li> <li class=\"\"> <a href=\"/templates/file-parser/history\" id=\"None\">File Parser Results</a> </li> </ul> </li> <li class=\"\"> <a href=\"/managed-interfaces\" id=\"None\">Managed Interfaces</a> </li> <li class=\"\"> <a href=\"/kvstores\"",
+      "Parser": " <li class=\"\"> <a href=\"/parameter-store\" id=\"None\">Parameter Store</a> </li> <li class=\"\"> <a href=\"/qii/downloads\" id=\"None\">Downloads</a> </li> <li class=\"\"> <a href=\"/templates/file-parsers\" id=\"None\">File Parsers</a> </li> <li class=\"\"> <a href=\"/templates/file-parser/history\" id=\"None\">File Parser Results</a> </li> </ul> </li> <li class=\"\"> <a href=\"/managed-interfaces\" id=\"None\">Managed Interfaces</a> </li> <li class=\"\"> ",
+      "Automation": "erfaces</a> </li> <li class=\"\"> <a href=\"/kvstores\" id=\"None\">Key/Value Store</a> </li> <li class=\"has-submenu active-bold\"> <a class=\"clickable\">Automations</a> <ul class=\"submenu\"> <li ><a href=\"/automation\">+ New Automation</a></li> <li class=\"active-bold\"><a href=\"/automations\">Automations</a></li> <li ><a href=\"/automation/history\">Automation Results</a></li> </ul> </li> <li > <a href=\"/dropbox_sign\">Dropbox Sign</a> </li> </ul> </li> ",
+      "Trigger": "\" style=\"display: none;\" class=\"dropdown pull-right\"></li> <li id=\"qbenchNotificationsModuleLoading\" class=\"pull-right dropdown\"> <a href=\"#\" data-target=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"true\"> <i class=\"fa fa-bell-o\"></i> </a> </li> <li id=\"qbenchNotificationsModule\" style=\"display: none;\" data-bell-alert=\"False\" data-active-locks=\"False\" class=\"dropdown pull-right\"></li> <li id=\"qbenchTriggerFileParser\" class=\"pull-right clickable\"> <a> <i class=\"md md-file-upload\"></i> </a> </li> <li id=\"currentUserDivisionSettings\" class=\"dropdown\" style=\"display: none;\"> <a href=\"\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"true\"> <i class=\"fa fa-industry\"></i> <span style=\"padding-left: 3px;\" class=\"active-division\"></span> </a> </li> <li class=\"dropdown\"> <a href=\"\" class=\"dropdown-toggle profile\" style=\"white-space: nowrap",
+      "Active": "ghtyellow; border-width: thin; border-style: solid; padding: 10px; } .qbench-special-instructions { font-size: 1.25em; color:#ff8300; position: relative; top: 3px; } .qbench-dynamic-spreadsheet-insert-row-style { position: absolute; bottom: 0; left: 0; pointer-events: none; } .tox-tinymce-inline { z-index: 9999 !important; } .tox-toolbar { z-index: 9999 !important; /* Adjust the z-index value as needed */ } .inactive-entity-row, .inactive-entity-row .btn-white { background-color:#F0F0F0; } .input-with-border-validation { transition: border-color 0.3s ease; } .input-with-border-validation:focus { outline: none; } .input-with-border-validation:invalid { border-color: red; } .qbench-preview-modal-content { margin: auto; display: block; max-width: 700px; } .qbench-image-thumbnail { display: block; width: 150px; height: 150px; object-fit: contain; border: 1px solid #ccc; margin-top: 10px; border-radius: 10px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; cursor: pointer; } ",
+      "Inactive": "lightyellow; border-width: thin; border-style: solid; padding: 10px; } .qbench-special-instructions { font-size: 1.25em; color:#ff8300; position: relative; top: 3px; } .qbench-dynamic-spreadsheet-insert-row-style { position: absolute; bottom: 0; left: 0; pointer-events: none; } .tox-tinymce-inline { z-index: 9999 !important; } .tox-toolbar { z-index: 9999 !important; /* Adjust the z-index value as needed */ } .inactive-entity-row, .inactive-entity-row .btn-white { background-color:#F0F0F0; } .input-with-border-validation { transition: border-color 0.3s ease; } .input-with-border-validation:focus { outline: none; } .input-with-border-validation:invalid { border-color: red; } .qbench-preview-modal-content { margin: auto; display: block; max-width: 700px; } .qbench-image-thumbnail { display: block; width: 150px; height: 150px; object-fit: contain; border: 1px solid #ccc; margin-top: 10px; border-radius: 10px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; cursor: pointer; } ",
+      "download": " <li class=\"\"> <a href=\"/settings/developer\" id=\"None\">Settings</a> </li> <li class=\"\"> <a href=\"/parameter-store\" id=\"None\">Parameter Store</a> </li> <li class=\"\"> <a href=\"/qii/downloads\" id=\"None\">Downloads</a> </li> <li class=\"\"> <a href=\"/templates/file-parsers\" id=\"None\">File Parsers</a> </li> <li class=\"\"> <a href=\"/templates/file-parser/history\" id=\"None\">File Parser Results</a> </li> </ul> </li> <li class=\"\"> ",
+      "export": "\"clickable qbench-automation-bulk-action\" data-field=\"active\" data-value=\"false\">Deactivate Automations</a></li> </ul> </div> <span style=\"display: none; position: relative; right: 15px; bottom: 10px; z-index: 1000\" class=\"badge badge-xs badge-success action-notification-icon\"><i class=\"fa fa-check\"></i></span> </div> <div class=\"pull-right\"> <div class=\"form-inline\"> <div class=\"qbench-import-export-container-div form-group\" data-type=\"automation\" data-display-name=\"Automation\"> <div class=\"data-loading text-center\"> </div> <div class=\"data-loaded\" style=\"display: none;\"> </div> </div> <div class=\"form-group\"> <div class=\"btn-group qbench-set-page-size\" data-type=\"AUTOMATION\" data-page-size=20 data-reload-page=> <button type=\"button\" class=\"btn btn-white btn-sm dropdown-toggle waves-effect waves-light\" data-toggle=\"dropdown\" aria-expanded=\"false\"><span class=\"current-page-size\">20</span> <span class=\"caret\"></span></button> <ul class=\"dropdown-",
+      "source": " </li> </ul> </li> </ul> </li> <li class=\"has-submenu \"> <a class=\"clickable\">Sources</a> <ul class=\"submenu has-qbench-filters\"> <li ><a href=\"/source\">+ New Source</a></li> <li ><a href=\"/sources\">All</a></li> </ul> </li> <li class=\"has-submenu \"> <a class=\"clickable\">Batches</a> <ul class=\"submenu has-qbench-filters\"> <li ><a href=\"/batch\">+ New Batch</a></l"
+    }
+  }
+}

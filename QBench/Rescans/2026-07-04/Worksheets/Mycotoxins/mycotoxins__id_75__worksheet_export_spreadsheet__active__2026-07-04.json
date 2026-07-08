@@ -1,0 +1,999 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "9513871b-6dd8-4413-814a-3103abab7218",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "font-weight:bold",
+      "font-weight:bold;background-color:#e0e0e0",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-align:left",
+      "text-align:left;text-wrap:wrap",
+      "text-wrap:wrap",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-align:center",
+      "text-align:center;font-weight:bold",
+      "text-wrap:wrap;font-style:italic",
+      "text-wrap:wrap;font-style:italic;color:#b71c1c",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      ""
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "C9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "F9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "I3": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 8
+          },
+          "I4": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 8
+          },
+          "I5": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 8
+          },
+          "I6": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 8
+          },
+          "I7": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 8
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 357
+          },
+          {
+            "type": "text",
+            "width": 121
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "A7": [
+            6,
+            1
+          ],
+          "B1": [
+            5,
+            1
+          ],
+          "B2": [
+            5,
+            1
+          ],
+          "B3": [
+            5,
+            1
+          ],
+          "B4": [
+            5,
+            1
+          ],
+          "B5": [
+            5,
+            1
+          ],
+          "B6": [
+            5,
+            1
+          ],
+          "H1": [
+            2,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 24
+          },
+          {
+            "height": 39
+          },
+          {
+            "height": 39
+          },
+          {
+            "height": 39
+          },
+          {
+            "height": 39
+          },
+          {
+            "height": 39
+          },
+          {
+            "height": 39
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 24,
+            "id": null
+          }
+        ],
+        "tableHeight": 579,
+        "tableOverflow": true,
+        "tableWidth": 1263,
+        "worksheetId": "4d764296-451b-41f1-a900-349736e0959d",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Section V. – Preparation of Samples                                                                                                  ",
+            "Section V. – Preparation of Samples                                                                                                  ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.5.1",
+            "Weigh 50.0 ± 1.0 mg of blended/ground/sliced/liquid sample into a 5 mL tube.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Step",
+            "Criteria",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.5.2",
+            "Add 1.00 mL IPA to each sample and vortex for the samples for 3 minutes.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Add 1.0 mL of IPA onto the 100 mg sample in the 5 mL tube and vortex the samples for 3 minutes.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.5.3",
+            "Add 1.00 mL of ACN and vortex the samples for 1 minute.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Add 1.0 mL of ACN and vortex the samples for 3 minutes to mix.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.5.4",
+            "PTFE filter and syringe filter the contents into an HPLC vial.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Use a PTFE syringe filter and dispense into a vial.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.5.5",
+            "These samples have been extracted in 40x volume/mass (DF = 40).",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Put the inventory and equipment into Inventory Usage, and any equipment/pipettes used in Equipment Usage in Batch. ",
+            "Put the inventory and equipment into Inventory Usage, and any equipment/pipettes used in Equipment Usage in Batch. ",
+            "Put the inventory and equipment into Inventory Usage, and any equipment/pipettes used in Equipment Usage in Batch. ",
+            "Put the inventory and equipment into Inventory Usage, and any equipment/pipettes used in Equipment Usage in Batch. ",
+            "Put the inventory and equipment into Inventory Usage, and any equipment/pipettes used in Equipment Usage in Batch. ",
+            "Put the inventory and equipment into Inventory Usage, and any equipment/pipettes used in Equipment Usage in Batch. ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "style": {
+          "A1": 2,
+          "A2": 9,
+          "A3": 9,
+          "A4": 9,
+          "A5": 9,
+          "A6": 11,
+          "A7": 16,
+          "B1": 3,
+          "B2": 17,
+          "B3": 17,
+          "B4": 17,
+          "B5": 17,
+          "B6": 19,
+          "B7": 16,
+          "B8": 5,
+          "B9": 5,
+          "C1": 2,
+          "C2": 18,
+          "C3": 18,
+          "C4": 18,
+          "C5": 18,
+          "C6": 20,
+          "C7": 16,
+          "C8": 5,
+          "C9": 5,
+          "D1": 2,
+          "D2": 18,
+          "D3": 18,
+          "D4": 18,
+          "D5": 18,
+          "D6": 20,
+          "D7": 16,
+          "D8": 5,
+          "D9": 5,
+          "E1": 2,
+          "E2": 18,
+          "E3": 18,
+          "E4": 18,
+          "E5": 18,
+          "E6": 20,
+          "E7": 16,
+          "E8": 5,
+          "E9": 5,
+          "F1": 3,
+          "F2": 17,
+          "F3": 17,
+          "F4": 17,
+          "F5": 17,
+          "F6": 19,
+          "F7": 16,
+          "F8": 5,
+          "F9": 5,
+          "H1": 14,
+          "H2": 7,
+          "H3": 18,
+          "H4": 18,
+          "H5": 20,
+          "H6": 22,
+          "H7": 22,
+          "H8": 16,
+          "I1": 14,
+          "I2": 8,
+          "I3": 10,
+          "I4": 10,
+          "I5": 12,
+          "I6": 22,
+          "I7": 22,
+          "I8": 16
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Section V. – Preparation of Samples                                                                                                  ",
+        "Section V. – Preparation of Samples                                                                                                  ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.5.1",
+        "Weigh 50.0 ± 1.0 mg of blended/ground/sliced/liquid sample into a 5 mL tube.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Step",
+        "Criteria",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.5.2",
+        "Add 1.00 mL IPA to each sample and vortex for the samples for 3 minutes.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Add 1.0 mL of IPA onto the 100 mg sample in the 5 mL tube and vortex the samples for 3 minutes.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.5.3",
+        "Add 1.00 mL of ACN and vortex the samples for 1 minute.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Add 1.0 mL of ACN and vortex the samples for 3 minutes to mix.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.5.4",
+        "PTFE filter and syringe filter the contents into an HPLC vial.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Use a PTFE syringe filter and dispense into a vial.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.5.5",
+        "These samples have been extracted in 40x volume/mass (DF = 40).",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Put the inventory and equipment into Inventory Usage, and any equipment/pipettes used in Equipment Usage in Batch. ",
+        "Put the inventory and equipment into Inventory Usage, and any equipment/pipettes used in Equipment Usage in Batch. ",
+        "Put the inventory and equipment into Inventory Usage, and any equipment/pipettes used in Equipment Usage in Batch. ",
+        "Put the inventory and equipment into Inventory Usage, and any equipment/pipettes used in Equipment Usage in Batch. ",
+        "Put the inventory and equipment into Inventory Usage, and any equipment/pipettes used in Equipment Usage in Batch. ",
+        "Put the inventory and equipment into Inventory Usage, and any equipment/pipettes used in Equipment Usage in Batch. ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  }
+}

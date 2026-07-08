@@ -1,0 +1,550 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "411246dd-579c-4c66-a724-0ec7910aff05",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "font-weight:bold",
+      "font-weight:bold;background-color:#e0e0e0",
+      "text-align:left",
+      "font-weight:bold;background-color:#e0e0e0;text-wrap:wrap",
+      "text-wrap:wrap",
+      "text-align:left;text-wrap:wrap",
+      "font-weight:bold;background-color:#e0e0e0;text-wrap:wrap;border-top:1px solid black;border-left:1px solid black",
+      "font-weight:bold;background-color:#e0e0e0;text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "font-weight:bold;font-style:italic",
+      "text-align:left;font-style:italic",
+      "text-wrap:wrap;font-weight:bold",
+      "border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      ""
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A5": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 0
+          },
+          "A6": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 0
+          },
+          "A7": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 0
+          },
+          "A8": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 0
+          },
+          "A9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "C9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "F9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "B1": [
+            5,
+            1
+          ],
+          "B2": [
+            5,
+            1
+          ],
+          "B3": [
+            5,
+            1
+          ],
+          "B5": [
+            1,
+            4
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 24
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 53
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 24,
+            "id": null
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 1016,
+        "worksheetId": "ca84562c-c4cf-40cd-bf84-75364d3c6021",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.7.1",
+            "Using the Sample Blank as the diluent, prepare the calibration curve following Table 8.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Table 8. ",
+            "Preparation of the Matrix Matched Calibration Curve",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Criteria",
+            "STD",
+            "Spiking Solution",
+            "Amount of STD 5 (µL)",
+            "Amount of Sample Blank (µL)",
+            "Mycotoxin Conc. (ppb)",
+            "",
+            ""
+          ],
+          [
+            "",
+            "4",
+            "STD 5",
+            "400",
+            "100",
+            "8.0",
+            "",
+            ""
+          ],
+          [
+            "",
+            "3",
+            "",
+            "100",
+            "400",
+            "2.0",
+            "",
+            ""
+          ],
+          [
+            "",
+            "2",
+            "",
+            "25",
+            "475",
+            "0.5",
+            "",
+            ""
+          ],
+          [
+            "",
+            "1",
+            "",
+            "10",
+            "490",
+            "0.2",
+            "",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "style": {
+          "A1": 6,
+          "A2": 8,
+          "A3": 11,
+          "A4": 6,
+          "A5": 14,
+          "A6": 14,
+          "A7": 14,
+          "A8": 16,
+          "A9": 18,
+          "B1": 7,
+          "B2": 9,
+          "B3": 12,
+          "B4": 6,
+          "B5": 16,
+          "B6": 14,
+          "B7": 14,
+          "B8": 16,
+          "B9": 18,
+          "C1": 6,
+          "C2": 10,
+          "C3": 12,
+          "C4": 6,
+          "C5": 14,
+          "C6": 14,
+          "C7": 14,
+          "C8": 16,
+          "C9": 18,
+          "D1": 6,
+          "D2": 10,
+          "D3": 12,
+          "D4": 6,
+          "D5": 14,
+          "D6": 14,
+          "D7": 14,
+          "D8": 16,
+          "D9": 18,
+          "E1": 6,
+          "E2": 10,
+          "E3": 12,
+          "E4": 6,
+          "E5": 14,
+          "E6": 14,
+          "E7": 14,
+          "E8": 16,
+          "E9": 18,
+          "F1": 7,
+          "F2": 9,
+          "F3": 12,
+          "F4": 7,
+          "F5": 15,
+          "F6": 15,
+          "F7": 15,
+          "F8": 17,
+          "F9": 18
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.7.1",
+        "Using the Sample Blank as the diluent, prepare the calibration curve following Table 8.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Table 8. ",
+        "Preparation of the Matrix Matched Calibration Curve",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Criteria",
+        "STD",
+        "Spiking Solution",
+        "Amount of STD 5 (µL)",
+        "Amount of Sample Blank (µL)",
+        "Mycotoxin Conc. (ppb)",
+        "",
+        ""
+      ],
+      [
+        "",
+        "4",
+        "STD 5",
+        "400",
+        "100",
+        "8.0",
+        "",
+        ""
+      ],
+      [
+        "",
+        "3",
+        "",
+        "100",
+        "400",
+        "2.0",
+        "",
+        ""
+      ],
+      [
+        "",
+        "2",
+        "",
+        "25",
+        "475",
+        "0.5",
+        "",
+        ""
+      ],
+      [
+        "",
+        "1",
+        "",
+        "10",
+        "490",
+        "0.2",
+        "",
+        ""
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  }
+}

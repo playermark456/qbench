@@ -7,7 +7,7 @@
 3. Enter the actual unit mass for each replicate.
 4. Enter Target Cannabinoid 1 and optional Target Cannabinoid 2.
 5. Enter the label cannabinoid content for each target.
-6. Enter label unit mass if available; otherwise the worksheet uses average actual mass for mass variance.
+6. Enter label unit mass if available; otherwise the worksheet uses average actual unit mass for mass variance.
 
 ## COA output
 
@@ -17,7 +17,7 @@ The Homogeneity page displays:
 - Label cannabinoid content.
 - Highest reported unit mass and variance.
 - Highest reported cannabinoid value and variance.
-- Ten replicate rows with unit mass, mass variance, mg/container, and cannabinoid variance.
+- Ten replicate rows with unit mass, mass variance, mg/unit, and cannabinoid variance.
 
 ## Target cannabinoid naming
 

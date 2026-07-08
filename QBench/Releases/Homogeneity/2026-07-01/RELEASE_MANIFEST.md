@@ -17,13 +17,13 @@ Release date folder: `2026-07-01`
 
 This release package is for QBench Sandbox testing only.
 
-The worksheet JSON has been updated after Sandbox feedback so pasted Cannabinoid Potency values are treated as `ug/g`, converted to `mg/g`, and then used for `mg/container` Homogeneity calculations. Target label claims are pulled from visible QBench sample label fields where supported, with manual override cells retained for blank or unavailable label fields.
+The worksheet JSON has been updated after Sandbox feedback so pasted Cannabinoid Potency values are treated as `ug/g`, converted to `mg/g`, and then used for `mg/unit` Homogeneity calculations. For Homogeneity, `mg/unit` is treated as the `mg/serving` value requested by OCM and is calculated as `mg/g x actual unit mass g`. Target label claims are pulled only from visible per-serving/unit QBench sample label fields where supported, with manual override cells retained for blank or unavailable per-serving label fields.
 
-Latest local fix: `Paste!D4` was checked for the invalid `P25IF` corruption and now uses the corrected label lookup structure. Label source values of blank, `None`, or unresolved `${...}` placeholders are treated as blank while `Paste!P25:P36` remains the raw QBench sample label amount source table.
+Latest local fix: `Paste!D4` and `Paste!H4` were checked for the invalid `P25IF` corruption and now use the required manual-override label lookup formulas. `Paste!P25:P36` remains the raw QBench per-serving label amount source table. Targets without an exported per-serving QBench sample field remain blank and require manual override rather than falling back to package/container label values.
 
 COA rendering update: the Homogeneity `report_results` worksheet range has been cleaned to remove spreadsheet-like fills and boxed borders, and the local COA CSS now neutralizes worksheet fills/gridlines while preserving simple header underlines.
 
 No QBench changes were made by this package step.
 No production QBench access was used.
 No automation was built.
-No COA source files were modified.
+COA source and footer files were modified locally for the 2026-07-07 update.

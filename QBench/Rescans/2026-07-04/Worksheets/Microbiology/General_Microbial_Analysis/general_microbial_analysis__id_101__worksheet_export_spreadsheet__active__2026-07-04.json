@@ -1,0 +1,497 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "2398d7eb-1143-414c-90b3-439764aff7c5",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "text-wrap:wrap",
+      "background-color:#e0e0e0",
+      "color:#c62828",
+      "color:#c62828;vertical-align:top",
+      "color:#c62828;vertical-align:middle",
+      "color:#c62828;vertical-align:bottom",
+      "color:#212121",
+      "vertical-align:top",
+      "color:#c62828;vertical-align:top;text-align:left",
+      "vertical-align:top;text-align:left",
+      "color:#212121;vertical-align:top;text-align:left",
+      "background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black",
+      "background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "color:#d32f2f",
+      "text-wrap:wrap;color:#d32f2f",
+      "text-wrap:wrap;color:#c62828"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 375,
+            "x": 1
+          },
+          "C9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D2": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D3": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 3
+          },
+          "D4": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 3
+          },
+          "D5": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 311,
+            "x": 4
+          },
+          "F9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G9": {
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H9": {
+            "type": "text",
+            "width": 100,
+            "x": 7
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 375
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 311
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "A5": [
+            2,
+            1
+          ],
+          "A6": [
+            2,
+            1
+          ],
+          "A7": [
+            2,
+            2
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 25
+          },
+          {
+            "height": 70
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25,
+            "id": null
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 1012,
+        "worksheetId": "f7d52b61-2ae6-49e5-b738-bb0b37562d63",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "Criteria",
+            "Parameters",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.5.1",
+            "Incubate each sample for the appropriate time and at the appropriate temperature for the target organism. Be sure to record the start date and time for sample incubation.",
+            "",
+            "",
+            "For Total Aerobic and Enterobacteriaceae, incubate samples 25 hours ± 2 hours @ 35°C ± 1°C",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.5.1.1",
+            "Total Aerobic and Enterobacteriaceae: 25 hours ± 2 hours at 35°C ± 1°C",
+            "",
+            "",
+            "Start Date and Time",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.5.1.2",
+            "Yeast/Mold: 74 hours ± 2 hours @ 25°C ± 1°C",
+            "",
+            "",
+            "End Date and Time",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Be sure to assign inventory and equipment usage pertaining to this protocol step. ",
+            "",
+            "",
+            "",
+            "For Yeast and Mold, incubate samples 74 hours ± 2 hours @ 25°C ± 1°C",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "Start Date and Time",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "End Date and Time",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "style": {
+          "A1": 11,
+          "A2": 13,
+          "A3": 13,
+          "A4": 15,
+          "A5": 2,
+          "A6": 4,
+          "A7": 10,
+          "A8": 10,
+          "B1": 12,
+          "B2": 14,
+          "B3": 14,
+          "B4": 16,
+          "B5": 19,
+          "B6": 4,
+          "B7": 10,
+          "B8": 10,
+          "D1": 11,
+          "D2": 13,
+          "D3": 13,
+          "D4": 13,
+          "D5": 13,
+          "D6": 13,
+          "D7": 15,
+          "E1": 12,
+          "E2": 14,
+          "E3": 14,
+          "E4": 14,
+          "E5": 14,
+          "E6": 14,
+          "E7": 16
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "Criteria",
+        "Parameters",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.5.1",
+        "Incubate each sample for the appropriate time and at the appropriate temperature for the target organism. Be sure to record the start date and time for sample incubation.",
+        "",
+        "",
+        "For Total Aerobic and Enterobacteriaceae, incubate samples 25 hours ± 2 hours @ 35°C ± 1°C",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.5.1.1",
+        "Total Aerobic and Enterobacteriaceae: 25 hours ± 2 hours at 35°C ± 1°C",
+        "",
+        "",
+        "Start Date and Time",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.5.1.2",
+        "Yeast/Mold: 74 hours ± 2 hours @ 25°C ± 1°C",
+        "",
+        "",
+        "End Date and Time",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Be sure to assign inventory and equipment usage pertaining to this protocol step. ",
+        "",
+        "",
+        "",
+        "For Yeast and Mold, incubate samples 74 hours ± 2 hours @ 25°C ± 1°C",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "Start Date and Time",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "End Date and Time",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  }
+}

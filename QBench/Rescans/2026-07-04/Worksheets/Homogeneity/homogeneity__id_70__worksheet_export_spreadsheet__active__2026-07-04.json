@@ -1,0 +1,768 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "868ff6ef-3517-4fa5-83cb-173207861aa9",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "font-weight:bold",
+      "font-weight:bold;background-color:#e0e0e0",
+      "text-align:left",
+      "text-align:left;text-wrap:wrap",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid #ffffff;border-left:1px solid #ffffff",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid #ffffff;border-right:1px solid black;border-left:1px solid #ffffff",
+      "border-top:1px solid #ffffff;border-left:1px solid #ffffff",
+      "border-top:1px solid #ffffff;border-right:1px solid #ffffff;border-left:1px solid #ffffff",
+      "text-align:left;text-wrap:wrap;border-top:1px solid #ffffff;border-right:1px solid black;border-left:1px solid #ffffff",
+      "text-align:left;text-wrap:wrap;border-top:1px solid #ffffff;border-left:1px solid #ffffff",
+      "border-top:1px solid #ffffff;border-bottom:1px solid black;border-left:1px solid #ffffff",
+      "text-align:left;text-wrap:wrap;border-top:1px solid #ffffff;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid #ffffff",
+      "text-align:left;text-wrap:wrap;border-top:1px solid #ffffff;border-bottom:1px solid black;border-left:1px solid #ffffff",
+      "border-top:1px solid #ffffff;border-bottom:1px solid #ffffff;border-left:1px solid #ffffff",
+      "border-top:1px solid #ffffff;border-right:1px solid #ffffff;border-bottom:1px solid #ffffff;border-left:1px solid #ffffff",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid #212121;border-left:1px solid #212121",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid #212121;border-right:1px solid #212121;border-left:1px solid #212121",
+      "border-top:1px solid #212121;border-left:1px solid #212121",
+      "text-align:left;text-wrap:wrap;border-top:1px solid #212121;border-right:1px solid #212121;border-left:1px solid #212121",
+      "text-align:left;text-wrap:wrap;border-top:1px solid #212121;border-left:1px solid #212121",
+      "border-top:1px solid #212121;border-bottom:1px solid #212121;border-left:1px solid #212121",
+      "text-align:left;text-wrap:wrap;border-top:1px solid #212121;border-right:1px solid #212121;border-bottom:1px solid #212121;border-left:1px solid #212121",
+      "text-align:left;text-wrap:wrap;border-top:1px solid #212121;border-bottom:1px solid #212121;border-left:1px solid #212121",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid #212121;border-left:1px solid #212121;color:#212121",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid #212121;border-right:1px solid #212121;border-left:1px solid #212121;color:#212121",
+      "border-top:1px solid #212121;border-left:1px solid #212121;color:#212121",
+      "text-align:left;text-wrap:wrap;border-top:1px solid #212121;border-right:1px solid #212121;border-left:1px solid #212121;color:#212121",
+      "text-align:left;text-wrap:wrap;border-top:1px solid #212121;border-left:1px solid #212121;color:#212121",
+      "border-top:1px solid #212121;border-bottom:1px solid #212121;border-left:1px solid #212121;color:#212121",
+      "text-align:left;text-wrap:wrap;border-top:1px solid #212121;border-right:1px solid #212121;border-bottom:1px solid #212121;border-left:1px solid #212121;color:#212121",
+      "text-align:left;text-wrap:wrap;border-top:1px solid #212121;border-bottom:1px solid #212121;border-left:1px solid #212121;color:#212121"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A1": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "A2": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "A3": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "A4": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "A5": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "A6": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "A7": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "A8": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "A9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B1": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "B2": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "B3": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "B4": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "B5": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "B6": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "B7": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "B8": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "B9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "C1": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "C2": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "C3": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "C4": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "C5": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "C6": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "C7": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "C8": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "C9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D1": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "D2": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "D3": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "D4": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "D5": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "D6": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "D7": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "D8": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "D9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E1": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "E2": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "E3": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "E4": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "E5": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "E6": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "E7": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "E8": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "E9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "F1": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "F2": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "F3": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "F4": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "F5": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "F6": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "F7": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "F8": {
+            "readonly": true,
+            "type": "text",
+            "width": 100
+          },
+          "F9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "B1": [
+            5,
+            1
+          ],
+          "B2": [
+            5,
+            1
+          ],
+          "B3": [
+            5,
+            1
+          ],
+          "B4": [
+            5,
+            1
+          ],
+          "B5": [
+            5,
+            1
+          ],
+          "B6": [
+            5,
+            1
+          ],
+          "B7": [
+            5,
+            1
+          ],
+          "B8": [
+            5,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 24
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 39
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 39
+          },
+          {
+            "height": 24,
+            "id": null
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 1440,
+        "worksheetId": "679e81a7-fad1-4443-b785-8385e5a709f1",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "9.0",
+            "SAMPLING EXPECTATION (PER OCM TECHNICAL AUTHORITY)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "9.1",
+            "Treat each unit as a separate individual sample.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "9.2",
+            "Sample a total of ten (10) units at random.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "9.3",
+            "If there are multiple units in a single package (e.g., multiple gummies in one package), ensure the random units tested represent:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "a)",
+            "different units within the same package, and",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "b)",
+            "units from different packages.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Note:",
+            "This SOP does not define a randomization method. Follow the OCM Technical Authority requirement above.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "style": {
+          "A1": 31,
+          "A2": 33,
+          "A3": 33,
+          "A4": 33,
+          "A5": 33,
+          "A6": 33,
+          "A7": 33,
+          "A8": 36,
+          "A9": 21,
+          "B1": 32,
+          "B2": 34,
+          "B3": 34,
+          "B4": 34,
+          "B5": 34,
+          "B6": 34,
+          "B7": 34,
+          "B8": 37,
+          "B9": 21,
+          "C1": 31,
+          "C2": 35,
+          "C3": 35,
+          "C4": 35,
+          "C5": 35,
+          "C6": 35,
+          "C7": 35,
+          "C8": 38,
+          "C9": 21,
+          "D1": 31,
+          "D2": 35,
+          "D3": 35,
+          "D4": 35,
+          "D5": 35,
+          "D6": 35,
+          "D7": 35,
+          "D8": 38,
+          "D9": 21,
+          "E1": 31,
+          "E2": 35,
+          "E3": 35,
+          "E4": 35,
+          "E5": 35,
+          "E6": 35,
+          "E7": 35,
+          "E8": 38,
+          "E9": 21,
+          "F1": 32,
+          "F2": 34,
+          "F3": 34,
+          "F4": 34,
+          "F5": 34,
+          "F6": 34,
+          "F7": 34,
+          "F8": 37,
+          "F9": 21,
+          "G1": 14,
+          "G2": 14,
+          "G3": 14,
+          "G4": 14,
+          "G5": 14,
+          "G6": 14,
+          "G7": 14,
+          "G8": 14,
+          "G9": 21,
+          "H1": 15,
+          "H2": 15,
+          "H3": 15,
+          "H4": 15,
+          "H5": 15,
+          "H6": 15,
+          "H7": 15,
+          "H8": 15,
+          "H9": 22
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "9.0",
+        "SAMPLING EXPECTATION (PER OCM TECHNICAL AUTHORITY)",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "9.1",
+        "Treat each unit as a separate individual sample.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "9.2",
+        "Sample a total of ten (10) units at random.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "9.3",
+        "If there are multiple units in a single package (e.g., multiple gummies in one package), ensure the random units tested represent:",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "a)",
+        "different units within the same package, and",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "b)",
+        "units from different packages.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Note:",
+        "This SOP does not define a randomization method. Follow the OCM Technical Authority requirement above.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  }
+}

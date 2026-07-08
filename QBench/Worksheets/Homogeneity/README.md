@@ -1,4 +1,4 @@
-﻿# Homogeneity
+# Homogeneity
 
 - QBench assay ID: 11
 - Assay code: HOM
@@ -19,3 +19,8 @@
 - `QBench/Worksheets/Homogeneity/homogeneity__protocol_run_potency_ws_id_71__worksheet_export_spreadsheet__active__2026-06-30.json`
 - `QBench/Worksheets/Homogeneity/homogeneity__protocol_subsampling_ws_id_70__worksheet_export_spreadsheet__active__2026-06-30.json`
 - `QBench/Worksheets/Homogeneity/homogeneity__test_ws_id_73__worksheet_export_spreadsheet__active__2026-06-29.json`
+## Current Homogeneity reporting note
+
+- Report-facing Homogeneity cannabinoid content is labeled `mg/unit`.
+- `mg/unit` is equivalent to the prior mg/serving calculation for each tested unit: `mg/g x actual unit mass g`.
+- Legacy internal named-cell system names containing `mg_container` are retained for COA and validation compatibility.

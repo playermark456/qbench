@@ -1,0 +1,1142 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "3002cafe-863c-4d26-aca8-4d2a0644a1c2",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "font-weight:bold",
+      "font-weight:bold;background-color:#e0e0e0",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-align:left",
+      "text-align:left;text-wrap:wrap",
+      "text-wrap:wrap",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-align:center",
+      "text-align:center;font-weight:bold",
+      "text-wrap:wrap;font-style:italic",
+      "text-wrap:wrap;font-style:italic;color:#b71c1c"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "C9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "F9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "I3": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "50 mg",
+                "name": "50 mg"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 8
+          },
+          "I4": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "50 mg",
+                "name": "50 mg"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 8
+          },
+          "I5": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "50 mg",
+                "name": "50 mg"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 8
+          },
+          "I6": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "50 mg",
+                "name": "50 mg"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 8
+          },
+          "I7": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "50 mg",
+                "name": "50 mg"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 8
+          },
+          "J3": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "10 µL",
+                "name": "10 µL"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 8
+          },
+          "J4": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "10 µL",
+                "name": "10 µL"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 8
+          },
+          "J5": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "10 µL",
+                "name": "10 µL"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 8
+          },
+          "J6": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "10 µL",
+                "name": "10 µL"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 8
+          },
+          "J7": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "10 µL",
+                "name": "10 µL"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 8
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 121
+          },
+          {
+            "type": "text",
+            "width": 119
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "B1": [
+            5,
+            1
+          ],
+          "B2": [
+            5,
+            1
+          ],
+          "B3": [
+            5,
+            1
+          ],
+          "B4": [
+            5,
+            1
+          ],
+          "B5": [
+            5,
+            1
+          ],
+          "B6": [
+            5,
+            1
+          ],
+          "B7": [
+            5,
+            1
+          ],
+          "B8": [
+            5,
+            1
+          ],
+          "H1": [
+            3,
+            1
+          ],
+          "H8": [
+            3,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 24
+          },
+          {
+            "height": 39
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 39
+          },
+          {
+            "height": 39
+          },
+          {
+            "height": 39
+          },
+          {
+            "height": 39
+          },
+          {
+            "height": 53
+          },
+          {
+            "height": 24,
+            "id": null
+          }
+        ],
+        "tableHeight": 579,
+        "tableOverflow": true,
+        "tableWidth": 1263,
+        "worksheetId": "4d764296-451b-41f1-a900-349736e0959d",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Section  IV. – Spiked QC Preparation",
+            "Section  IV. – Spiked QC Preparation                                                                                                                  ",
+            "Section  IV. – Spiked QC Preparation                                                                                                                  ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.4.1",
+            "Prepare relevant Laboratory Control Samples should be prepared for assays containing the relevant sample matrices:",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "QC Matrix Type",
+            "Amount of Matrix",
+            "Amount of PM Mix",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "•",
+            "Blank: No matrix added. This sample will be the Standard/CCV/LOQ for the batch.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Blank",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "•",
+            "Plant/Flower: use any hemp/marijuana flower that is known to be free of pesticides/mycotoxins",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Flower",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "•",
+            "Concentrates: Hemp/Olive oil or any concentrate that is known to be free of pesticides/mycotoxins",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Concentrate",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "•",
+            "Beverages: Any cannabinoid infused beverage sample or sparkling water that is known to be free of pesticides/mycotoxins",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Beverage",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "•",
+            "Edibles: Any gummy, chocolate, or edible sample that is known to be free of pesticides/mycotoxins",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Edible",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.4.2",
+            "Weigh 50.0 mg ± 1.0 mg of a blended/ground/sliced/liquid sample free of pesticides and mycotoxins into a 5.0 mL tube, add 10 µL of PM Mix, and proceed to the extraction steps.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Put the matrix and PM Mix into Inventory Usage, and any equipment/pipettes used in Equipment Usage in Batch. ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "style": {
+          "A1": 2,
+          "B1": 3,
+          "B2": 5,
+          "B3": 5,
+          "B4": 5,
+          "B5": 5,
+          "B6": 5,
+          "B7": 5,
+          "B8": 5,
+          "B9": 5,
+          "C1": 2,
+          "C2": 5,
+          "C3": 5,
+          "C4": 5,
+          "C5": 5,
+          "C6": 5,
+          "C7": 5,
+          "C8": 5,
+          "C9": 5,
+          "D1": 2,
+          "D2": 5,
+          "D3": 5,
+          "D4": 5,
+          "D5": 5,
+          "D6": 5,
+          "D7": 5,
+          "D8": 5,
+          "D9": 5,
+          "E1": 2,
+          "E2": 5,
+          "E3": 5,
+          "E4": 5,
+          "E5": 5,
+          "E6": 5,
+          "E7": 5,
+          "E8": 5,
+          "E9": 5,
+          "F1": 3,
+          "F2": 5,
+          "F3": 5,
+          "F4": 5,
+          "F5": 5,
+          "F6": 5,
+          "F7": 5,
+          "F8": 5,
+          "F9": 5,
+          "H1": 14,
+          "H2": 7,
+          "H3": 9,
+          "H4": 9,
+          "H5": 9,
+          "H6": 9,
+          "H7": 11,
+          "H8": 16,
+          "I1": 14,
+          "I2": 7,
+          "I3": 9,
+          "I4": 9,
+          "I5": 9,
+          "I6": 9,
+          "I7": 11,
+          "I8": 16,
+          "J1": 14,
+          "J2": 8,
+          "J3": 10,
+          "J4": 10,
+          "J5": 10,
+          "J6": 10,
+          "J7": 12,
+          "J8": 16
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Section  IV. – Spiked QC Preparation",
+        "Section  IV. – Spiked QC Preparation                                                                                                                  ",
+        "Section  IV. – Spiked QC Preparation                                                                                                                  ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.4.1",
+        "Prepare relevant Laboratory Control Samples should be prepared for assays containing the relevant sample matrices:",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "QC Matrix Type",
+        "Amount of Matrix",
+        "Amount of PM Mix",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "•",
+        "Blank: No matrix added. This sample will be the Standard/CCV/LOQ for the batch.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Blank",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "•",
+        "Plant/Flower: use any hemp/marijuana flower that is known to be free of pesticides/mycotoxins",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Flower",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "•",
+        "Concentrates: Hemp/Olive oil or any concentrate that is known to be free of pesticides/mycotoxins",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Concentrate",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "•",
+        "Beverages: Any cannabinoid infused beverage sample or sparkling water that is known to be free of pesticides/mycotoxins",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Beverage",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "•",
+        "Edibles: Any gummy, chocolate, or edible sample that is known to be free of pesticides/mycotoxins",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Edible",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.4.2",
+        "Weigh 50.0 mg ± 1.0 mg of a blended/ground/sliced/liquid sample free of pesticides and mycotoxins into a 5.0 mL tube, add 10 µL of PM Mix, and proceed to the extraction steps.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Put the matrix and PM Mix into Inventory Usage, and any equipment/pipettes used in Equipment Usage in Batch. ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  }
+}

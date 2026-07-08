@@ -1,0 +1,919 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "41b80e36-22fe-461a-ae8a-bb118f4f2c44",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "text-align:left",
+      "text-align:left;text-wrap:wrap",
+      "font-weight:bold",
+      "font-weight:bold;background-color:#e0e0e0",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap",
+      "font-style:italic",
+      "",
+      "font-style:italic;border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "font-style:italic;border-top:1px solid black;border-left:1px solid black;border-bottom:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;border-bottom:1px solid black",
+      "border-top:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "C9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "F9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H2": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Pass",
+                "name": "Pass"
+              },
+              {
+                "id": "Fail",
+                "name": "Fail"
+              }
+            ],
+            "type": "dropdown",
+            "x": 7
+          },
+          "H3": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Pass",
+                "name": "Pass"
+              },
+              {
+                "id": "Fail",
+                "name": "Fail"
+              }
+            ],
+            "type": "dropdown",
+            "x": 7
+          },
+          "H4": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Pass",
+                "name": "Pass"
+              },
+              {
+                "id": "Fail",
+                "name": "Fail"
+              }
+            ],
+            "type": "dropdown",
+            "x": 7
+          },
+          "H5": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Pass",
+                "name": "Pass"
+              },
+              {
+                "id": "Fail",
+                "name": "Fail"
+              }
+            ],
+            "type": "dropdown",
+            "x": 7
+          },
+          "H6": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Pass",
+                "name": "Pass"
+              },
+              {
+                "id": "Fail",
+                "name": "Fail"
+              }
+            ],
+            "type": "dropdown",
+            "x": 7
+          },
+          "H9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          },
+          "I9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 8
+          },
+          "J9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 9
+          },
+          "K9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 10
+          },
+          "L9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 11
+          },
+          "M9": {
+            "type": "text",
+            "width": 100,
+            "x": 12
+          },
+          "N9": {
+            "type": "text",
+            "width": 100,
+            "x": 13
+          },
+          "O9": {
+            "type": "text",
+            "width": 100,
+            "x": 14
+          },
+          "P9": {
+            "type": "text",
+            "width": 100,
+            "x": 15
+          },
+          "Q9": {
+            "type": "text",
+            "width": 100,
+            "x": 16
+          },
+          "R9": {
+            "type": "text",
+            "width": 100,
+            "x": 17
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "A7": [
+            1,
+            2
+          ],
+          "B1": [
+            5,
+            1
+          ],
+          "B2": [
+            5,
+            1
+          ],
+          "B3": [
+            5,
+            1
+          ],
+          "B4": [
+            5,
+            1
+          ],
+          "B5": [
+            5,
+            1
+          ],
+          "B6": [
+            5,
+            1
+          ],
+          "B7": [
+            5,
+            2
+          ],
+          "I1": [
+            4,
+            1
+          ],
+          "I2": [
+            4,
+            1
+          ],
+          "I3": [
+            4,
+            1
+          ],
+          "I4": [
+            4,
+            1
+          ],
+          "I5": [
+            4,
+            1
+          ],
+          "I6": [
+            4,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 24
+          },
+          {
+            "height": 97
+          },
+          {
+            "height": 53
+          },
+          {
+            "height": 97
+          },
+          {
+            "height": 53
+          },
+          {
+            "height": 68
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 24
+          },
+          {
+            "height": 39,
+            "id": null
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 1273,
+        "worksheetId": "a5c2a695-72ad-4545-ac53-9d352183a0fe",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Steps",
+            "SOP Description",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Criteria",
+            "Parameter",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.8.1",
+            "All Quality Control Requirements must be performed for each assay. Only analytes with >LOQ reportable results and do not meet all criteria must be re-injected in the same or be run using an applicable quantitative assay. If those analytes are not present in those sample(s), then system suitability does not need to be considered for those analytes. Sequences may be stopped early, and restarted, to address any issues relating to Quality Control.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "The blank injection is free of interfering peaks",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.8.2",
+            "The blank injection should be free of any interfering peaks and/or background contamination. ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Laboratory Control Samples show each spike analyte",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.8.3",
+            "Laboratory Control Samples need to show that each analyte is present in the different matrices. There is no accuracy requirement since this is a qualitative screening assay whose results may significantly be impacted by matrix effects. If a sample contains any pesticide or mycotoxin within the scope of this SOP that has a concentration of ≥90% of the RL or the LCS (whichever is lower), then a quantitative assay should be conducted with the appropriate matrix to confirm the result.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "The sample Duplicate contains the same analytes as the original sample/LCS",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.8.4",
+            "One sample duplicate must be prepped every 20 samples. Duplicate LCSs may be used as well. The duplicate samples need to show that the same analytes are present between both samples.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "The bracketing CCV injections have integrated peaks for each analyte",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.8.5",
+            "The STD injections should bracket every 10 sample and LCS injections and have integrated peaks for each analyte.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Retention time drift between the STD injections is ±0.1 min for all analytes of interest",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.8.6",
+            "Retention Time Drift between the STD injections is ±0.1 min for all detectable analytes.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "style": {
+          "A1": 4,
+          "A2": 6,
+          "A3": 6,
+          "A4": 6,
+          "A5": 6,
+          "A6": 9,
+          "A7": 17,
+          "A8": 17,
+          "A9": 19,
+          "B1": 5,
+          "B2": 7,
+          "B3": 7,
+          "B4": 7,
+          "B5": 7,
+          "B6": 10,
+          "B7": 18,
+          "B8": 9,
+          "B9": 20,
+          "C1": 4,
+          "C2": 8,
+          "C3": 8,
+          "C4": 8,
+          "C5": 8,
+          "C6": 11,
+          "C7": 6,
+          "C8": 9,
+          "C9": 20,
+          "D1": 4,
+          "D2": 8,
+          "D3": 8,
+          "D4": 8,
+          "D5": 8,
+          "D6": 11,
+          "D7": 6,
+          "D8": 9,
+          "D9": 20,
+          "E1": 4,
+          "E2": 8,
+          "E3": 8,
+          "E4": 8,
+          "E5": 8,
+          "E6": 11,
+          "E7": 6,
+          "E8": 9,
+          "E9": 20,
+          "F1": 5,
+          "F2": 7,
+          "F3": 7,
+          "F4": 7,
+          "F5": 7,
+          "F6": 10,
+          "F7": 16,
+          "F8": 18,
+          "F9": 20,
+          "H1": 4,
+          "H2": 6,
+          "H3": 6,
+          "H4": 6,
+          "H5": 6,
+          "H6": 9,
+          "I1": 5,
+          "I2": 7,
+          "I3": 7,
+          "I4": 7,
+          "I5": 7,
+          "I6": 10,
+          "J1": 4,
+          "J2": 8,
+          "J3": 8,
+          "J4": 8,
+          "J5": 8,
+          "J6": 11,
+          "K1": 4,
+          "K2": 8,
+          "K3": 8,
+          "K4": 8,
+          "K5": 8,
+          "K6": 11,
+          "L1": 5,
+          "L2": 7,
+          "L3": 7,
+          "L4": 7,
+          "L5": 7,
+          "L6": 10
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Steps",
+        "SOP Description",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Criteria",
+        "Parameter",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.8.1",
+        "All Quality Control Requirements must be performed for each assay. Only analytes with >LOQ reportable results and do not meet all criteria must be re-injected in the same or be run using an applicable quantitative assay. If those analytes are not present in those sample(s), then system suitability does not need to be considered for those analytes. Sequences may be stopped early, and restarted, to address any issues relating to Quality Control.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "The blank injection is free of interfering peaks",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.8.2",
+        "The blank injection should be free of any interfering peaks and/or background contamination. ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Laboratory Control Samples show each spike analyte",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.8.3",
+        "Laboratory Control Samples need to show that each analyte is present in the different matrices. There is no accuracy requirement since this is a qualitative screening assay whose results may significantly be impacted by matrix effects. If a sample contains any pesticide or mycotoxin within the scope of this SOP that has a concentration of ≥90% of the RL or the LCS (whichever is lower), then a quantitative assay should be conducted with the appropriate matrix to confirm the result.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "The sample Duplicate contains the same analytes as the original sample/LCS",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.8.4",
+        "One sample duplicate must be prepped every 20 samples. Duplicate LCSs may be used as well. The duplicate samples need to show that the same analytes are present between both samples.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "The bracketing CCV injections have integrated peaks for each analyte",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.8.5",
+        "The STD injections should bracket every 10 sample and LCS injections and have integrated peaks for each analyte.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Retention time drift between the STD injections is ±0.1 min for all analytes of interest",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.8.6",
+        "Retention Time Drift between the STD injections is ±0.1 min for all detectable analytes.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  }
+}

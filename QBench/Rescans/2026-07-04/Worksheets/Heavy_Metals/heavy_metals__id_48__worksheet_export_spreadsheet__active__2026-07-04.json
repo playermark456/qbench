@@ -1,0 +1,673 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "78b8dc3c-ca16-4942-b395-39b439d7cf3d",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "font-weight:bold",
+      "text-align:left",
+      "text-align:left;text-wrap:wrap",
+      "font-weight:bold;background-color:#e0e0e0",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black",
+      "font-weight:bold;background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-align:left;text-wrap:wrap;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "font-weight:bold;font-style:italic",
+      "text-wrap:wrap"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "C9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "F9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H3": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 7
+          },
+          "H4": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 7
+          },
+          "H9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "B1": [
+            5,
+            1
+          ],
+          "B2": [
+            5,
+            1
+          ],
+          "B3": [
+            5,
+            1
+          ],
+          "B4": [
+            5,
+            1
+          ],
+          "B5": [
+            5,
+            1
+          ],
+          "B6": [
+            5,
+            1
+          ],
+          "B7": [
+            5,
+            1
+          ],
+          "B8": [
+            5,
+            1
+          ],
+          "B9": [
+            5,
+            1
+          ],
+          "H1": [
+            5,
+            1
+          ],
+          "I2": [
+            4,
+            1
+          ],
+          "I3": [
+            4,
+            1
+          ],
+          "I4": [
+            4,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 27
+          },
+          {
+            "height": 44
+          },
+          {
+            "height": 44
+          },
+          {
+            "height": 44
+          },
+          {
+            "height": 44
+          },
+          {
+            "height": 27
+          },
+          {
+            "height": 44
+          },
+          {
+            "height": 44
+          },
+          {
+            "height": 44,
+            "id": null
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 1273,
+        "worksheetId": "e2f53879-8013-43e8-9a74-5a419354cc90",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Section X. – Digestion of Samples",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.8.6",
+            "Once digestion is complete, use a disposable tissue to clean any vented fluid from the top of the digestion vessel in the fume hood.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Criteria",
+            "Parameter",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.8.7",
+            "Secure the digestion vessel and place the vessel handling tool onto the cap; place a disposable tissue inside of the vessel handling tool.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Quantitatively transfer (3x rinse with water) the contents of each digestion vessel to a 50 mL conical tube",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.8.8",
+            "Inside the fume hood, hold the digestion vessel cap up and carefully twist off the cap of the digestion vessel. Set the cap and tool aside.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Dilute to volume to 50 mL with H2O and vortex/invert to mix",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.8.9",
+            "While removing the cap, pressurized gases inside of the vessel may forcefully escape. This is not uncommon and is not cause for concern.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.8.10",
+            "Carefully pour the contents of the digestion vessel into a 50 mL conical tube.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.8.11",
+            "Rinse the reaction vessel plug with a small amount of water into the same 50 mL conical tube.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.8.12",
+            "Rinse the reaction vessel with a small amount of water and transfer this rinse solution to the same 50 mL conical tube. Repeat this step two more times. ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.8.13",
+            "Using a beaker and disposable pipettes, dilute to 50 mL with water. Mix the contents via gentle inversion and/or vortexing (DF = 500). Store at 4°C.",
+            "",
+            "",
+            "",
+            "",
+            null,
+            null,
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "style": {
+          "A1": 4,
+          "A2": 6,
+          "A3": 6,
+          "A4": 6,
+          "A5": 6,
+          "A6": 6,
+          "A7": 6,
+          "A8": 6,
+          "A9": 9,
+          "B1": 5,
+          "B2": 7,
+          "B3": 7,
+          "B4": 7,
+          "B5": 7,
+          "B6": 7,
+          "B7": 7,
+          "B8": 7,
+          "B9": 10,
+          "C1": 4,
+          "C2": 8,
+          "C3": 8,
+          "C4": 8,
+          "C5": 8,
+          "C6": 8,
+          "C7": 8,
+          "C8": 8,
+          "C9": 11,
+          "D1": 4,
+          "D2": 8,
+          "D3": 8,
+          "D4": 8,
+          "D5": 8,
+          "D6": 8,
+          "D7": 8,
+          "D8": 8,
+          "D9": 11,
+          "E1": 4,
+          "E2": 8,
+          "E3": 8,
+          "E4": 8,
+          "E5": 8,
+          "E6": 8,
+          "E7": 8,
+          "E8": 8,
+          "E9": 11,
+          "F1": 5,
+          "F2": 7,
+          "F3": 7,
+          "F4": 7,
+          "F5": 7,
+          "F6": 7,
+          "F7": 7,
+          "F8": 7,
+          "F9": 10,
+          "H1": 12,
+          "H2": 4,
+          "H3": 6,
+          "H4": 9,
+          "I1": 12,
+          "I2": 5,
+          "I3": 7,
+          "I4": 10,
+          "J1": 12,
+          "J2": 4,
+          "J3": 8,
+          "J4": 11,
+          "K1": 12,
+          "K2": 4,
+          "K3": 8,
+          "K4": 11,
+          "L1": 12,
+          "L2": 5,
+          "L3": 7,
+          "L4": 10
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Section X. – Digestion of Samples",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.8.6",
+        "Once digestion is complete, use a disposable tissue to clean any vented fluid from the top of the digestion vessel in the fume hood.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Criteria",
+        "Parameter",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.8.7",
+        "Secure the digestion vessel and place the vessel handling tool onto the cap; place a disposable tissue inside of the vessel handling tool.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Quantitatively transfer (3x rinse with water) the contents of each digestion vessel to a 50 mL conical tube",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.8.8",
+        "Inside the fume hood, hold the digestion vessel cap up and carefully twist off the cap of the digestion vessel. Set the cap and tool aside.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Dilute to volume to 50 mL with H2O and vortex/invert to mix",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.8.9",
+        "While removing the cap, pressurized gases inside of the vessel may forcefully escape. This is not uncommon and is not cause for concern.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.8.10",
+        "Carefully pour the contents of the digestion vessel into a 50 mL conical tube.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.8.11",
+        "Rinse the reaction vessel plug with a small amount of water into the same 50 mL conical tube.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.8.12",
+        "Rinse the reaction vessel with a small amount of water and transfer this rinse solution to the same 50 mL conical tube. Repeat this step two more times. ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.8.13",
+        "Using a beaker and disposable pipettes, dilute to 50 mL with water. Mix the contents via gentle inversion and/or vortexing (DF = 500). Store at 4°C.",
+        "",
+        "",
+        "",
+        "",
+        null,
+        null,
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "d9d7f0b9-e7fb-4f21-bd89-66888a33b71c",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "background-color:#e0e0e0",
+      "text-wrap:wrap"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "D2": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 3
+          },
+          "D3": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 3
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 311
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 206
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {},
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 25
+          },
+          {
+            "height": 55
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 101
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 55
+          },
+          {
+            "height": 25
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 792,
+        "worksheetId": "c7f98201-89a1-4d75-8668-f4374afbdbde",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "Criteria",
+            "Parameter",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.2.1",
+            "Prior to use each day, the system requires a Daily Self-Test to ensure optimal operation.",
+            "",
+            "",
+            "Check to ensure the PCR plate holder is in the Gene-Up.",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.2.2",
+            "Open and login to the appropriate software (either the Open or Routine software).",
+            "",
+            "",
+            "Perform the self test.",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.2.3",
+            "Open the Gene Up by pressing the top panel. Ensure that the PCR plate holder is inserted in the machine. If the PCR plate holder is not in the machine, insert the PCR plate holder into the machine. Close the Gene Up by gently pulling the top panel.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.2.4",
+            "Select the “Self Test” and click the check mark to confirm the “Self Test” to be performed.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.2.5",
+            "Upon completion, a new window will appear. Ensure each test confirms “Passed”.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.2.6",
+            "If an error occurs, reboot the PC and rerun the “Self Test”. If a second “Self Test” does not pass, contact technical support.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "style": {
+          "A1": 0,
+          "B1": 0,
+          "B2": 1,
+          "B3": 1,
+          "B4": 1,
+          "B5": 1,
+          "B6": 1,
+          "B7": 1,
+          "D1": 0,
+          "E1": 0,
+          "E2": 1,
+          "E3": 1
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "Criteria",
+        "Parameter",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.2.1",
+        "Prior to use each day, the system requires a Daily Self-Test to ensure optimal operation.",
+        "",
+        "",
+        "Check to ensure the PCR plate holder is in the Gene-Up.",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.2.2",
+        "Open and login to the appropriate software (either the Open or Routine software).",
+        "",
+        "",
+        "Perform the self test.",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.2.3",
+        "Open the Gene Up by pressing the top panel. Ensure that the PCR plate holder is inserted in the machine. If the PCR plate holder is not in the machine, insert the PCR plate holder into the machine. Close the Gene Up by gently pulling the top panel.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.2.4",
+        "Select the “Self Test” and click the check mark to confirm the “Self Test” to be performed.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.2.5",
+        "Upon completion, a new window will appear. Ensure each test confirms “Passed”.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.2.6",
+        "If an error occurs, reboot the PC and rerun the “Self Test”. If a second “Self Test” does not pass, contact technical support.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  }
+}

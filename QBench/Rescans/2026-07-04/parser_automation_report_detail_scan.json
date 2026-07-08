@@ -1,0 +1,339 @@
+{
+  "file_parsers": [
+    {
+      "id": "47",
+      "name": "Pest Myco Qualitative",
+      "values": {
+        "description": "",
+        "notes": "",
+        "reason": "",
+        "qbench_update_reason": ""
+      },
+      "has_export_word": true,
+      "code_markers": []
+    },
+    {
+      "id": "46",
+      "name": "Cannabinoid Potency Parser",
+      "values": {
+        "description": "",
+        "qbench_update_reason": "",
+        "notes": "",
+        "reason": "",
+        "active_template_version_id": "1 - AIT-135 Cannabinoid Potency Parser - DRAFT"
+      },
+      "has_export_word": true,
+      "code_markers": []
+    },
+    {
+      "id": "45",
+      "name": "Gene-up",
+      "values": {
+        "description": "",
+        "qbench_update_reason": "",
+        "notes": "",
+        "reason": ""
+      },
+      "has_export_word": true,
+      "code_markers": []
+    },
+    {
+      "id": "41",
+      "name": "Heavy Metals DataManager",
+      "values": {
+        "description": "",
+        "notes": "",
+        "reason": "",
+        "qbench_update_reason": ""
+      },
+      "has_export_word": true,
+      "code_markers": []
+    },
+    {
+      "id": "25",
+      "name": "Cannabis Heavy Metals ICPMS File Parser",
+      "values": {
+        "description": "This file parser is for the .csv output from the ICP-MS for Heavy Metals for Cannabis and Hemp",
+        "notes": "",
+        "reason": "",
+        "qbench_update_reason": ""
+      },
+      "has_export_word": true,
+      "code_markers": []
+    },
+    {
+      "id": "22",
+      "name": "Heavy Metals File Parser - AMM",
+      "values": {
+        "description": "",
+        "notes": "",
+        "reason": "",
+        "qbench_update_reason": ""
+      },
+      "has_export_word": true,
+      "code_markers": []
+    },
+    {
+      "id": "21",
+      "name": "Example [File Parser]",
+      "values": {
+        "description": "",
+        "notes": "",
+        "reason": "",
+        "qbench_update_reason": ""
+      },
+      "has_export_word": true,
+      "code_markers": []
+    }
+  ],
+  "automations": [
+    {
+      "id": "16",
+      "name": "Homogeneity - Pull potency mg/serving",
+      "values": {
+        "description": "When a Homogeneity worksheet has manually entered Cannabinoid Potency Test IDs, pull the target cannabinoid mg/serving result into the Homogeneity worksheet.",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Test"
+      },
+      "has_export_word": true
+    },
+    {
+      "id": "14",
+      "name": "AC EB YM Batch to Test WS",
+      "values": {
+        "description": "",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Batch"
+      },
+      "has_export_word": true
+    },
+    {
+      "id": "13",
+      "name": "Listeria Batch to Test WS",
+      "values": {
+        "description": "",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Batch"
+      },
+      "has_export_word": true
+    },
+    {
+      "id": "12",
+      "name": "Salmonella Species & STEC Batch to Test WS",
+      "values": {
+        "description": "",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Batch"
+      },
+      "has_export_word": true
+    },
+    {
+      "id": "11",
+      "name": "Cannabinoid Potency Batch to Test WS",
+      "values": {
+        "description": "",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Batch"
+      },
+      "has_export_word": true
+    },
+    {
+      "id": "10",
+      "name": "Pesticide (Quantitative) Analysis",
+      "values": {
+        "description": "",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Batch"
+      },
+      "has_export_word": true
+    },
+    {
+      "id": "9",
+      "name": "Aspergillus Batch WS to Test WS",
+      "values": {
+        "description": "",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Batch"
+      },
+      "has_export_word": true
+    },
+    {
+      "id": "8",
+      "name": "Pest Myco (Qualitative) Batch WS to Test WS",
+      "values": {
+        "description": "",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Batch"
+      },
+      "has_export_word": true
+    },
+    {
+      "id": "6",
+      "name": "Residual Solvents Batch WS to Test WS",
+      "values": {
+        "description": "",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Batch"
+      },
+      "has_export_word": true
+    },
+    {
+      "id": "4",
+      "name": "Water Activity Batch WS to Test WS",
+      "values": {
+        "description": "",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Batch"
+      },
+      "has_export_word": true
+    },
+    {
+      "id": "3",
+      "name": "Mycotoxin (Quantitative) Batch WS to Test WS",
+      "values": {
+        "description": "",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Batch"
+      },
+      "has_export_word": true
+    },
+    {
+      "id": "1",
+      "name": "Heavy Metals Batch WS to Test WS",
+      "values": {
+        "description": "",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Batch"
+      },
+      "has_export_word": true
+    },
+    {
+      "id": "15",
+      "name": "Water Activity Protocol WS to Batch WS",
+      "values": {
+        "description": "",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Batch Object Protocol Step"
+      },
+      "has_export_word": true
+    },
+    {
+      "id": "5",
+      "name": "test wa",
+      "values": {
+        "description": "",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Batch"
+      },
+      "has_export_word": true
+    },
+    {
+      "id": "2",
+      "name": "Heavy Metals Batch WS to Test WS 2",
+      "values": {
+        "description": "",
+        "reason": "",
+        "notes": "",
+        "qbench_update_reason": "",
+        "trigger": "Data Modified",
+        "type": "Batch"
+      },
+      "has_export_word": true
+    }
+  ],
+  "reports": [
+    {
+      "id": "26",
+      "name": "Certificate of Analysis Report",
+      "values": {
+        "description": "",
+        "config": "",
+        "notes": "",
+        "reason": "",
+        "qbench_update_reason": "",
+        "report_level": "Sample",
+        "page_number_position": "Bottom Middle",
+        "active_template_version_id": "20 - Homogeneity approved 2 - APPROVED (ACTIVE)"
+      },
+      "has_export_word": true,
+      "has_source_textarea": true,
+      "mentions_visual_editor": true
+    },
+    {
+      "id": "44",
+      "name": "Homogeneity",
+      "values": {
+        "description": "",
+        "config": "",
+        "notes": "",
+        "reason": "",
+        "qbench_update_reason": "",
+        "report_level": "Sample",
+        "page_number_position": "Bottom Middle",
+        "active_template_version_id": "2 - 3.0 - APPROVED (ACTIVE)"
+      },
+      "has_export_word": true,
+      "has_source_textarea": true,
+      "mentions_visual_editor": true
+    },
+    {
+      "id": "20",
+      "name": "1Certificate of Analysis Report",
+      "values": {
+        "description": "",
+        "config": "",
+        "notes": "",
+        "reason": "",
+        "qbench_update_reason": "",
+        "report_level": "Sample",
+        "page_number_position": "Top Left",
+        "active_template_version_id": "1 - APPROVED (ACTIVE)"
+      },
+      "has_export_word": true,
+      "has_source_textarea": true,
+      "mentions_visual_editor": true
+    }
+  ]
+}

@@ -41,18 +41,12 @@ REQUIRED_LABEL_SOURCE_NAMED_CELLS = {
 }
 
 REQUIRED_SAMPLE_LABEL_FIELDS = {
-    "${test.sample.product_label_totalthc}",
-    "${test.sample.product_label_totalcbd}",
-    "${test.sample.product_label_cbd}",
-    "${test.sample.product_label_cbda}",
-    "${test.sample.product_label_cbn}",
-    "${test.sample.product_label_cbg}",
-    "${test.sample.product_label_cbga}",
-    "${test.sample.product_label_d8thc}",
-    "${test.sample.product_label_thc}",
-    "${test.sample.product_label_thcv}",
-    "${test.sample.product_label_cbc}",
-    "${test.sample.product_label_thca}",
+    "${test.sample.totalthc_persrv}",
+    "${test.sample.totalcbd_persrv}",
+    "${test.sample.cbd_persrv}",
+    "${test.sample.d8thc_persrv}",
+    "${test.sample.d9thc_persrv}",
+    "${test.sample.cbc_persrv}",
 }
 
 
@@ -265,10 +259,10 @@ def validate(json_path: Path, report_path: Path) -> int:
         errors.append("Data!G12 does not return Target 2 result in mg/g for both total and individual cannabinoids.")
 
     if not isinstance(data_m12, str) or "E12*H12" not in data_m12:
-        errors.append("Data!M12 does not calculate Target 1 mg/container from converted mg/g times unit mass.")
+        errors.append("Data!M12 does not calculate Target 1 mg/unit from converted mg/g times unit mass.")
 
     if not isinstance(data_p12, str) or "G12*H12" not in data_p12:
-        errors.append("Data!P12 does not calculate Target 2 mg/container from converted mg/g times unit mass.")
+        errors.append("Data!P12 does not calculate Target 2 mg/unit from converted mg/g times unit mass.")
 
     required_percent_cells = ["B9", "B26", "B28", "B30"]
     for col in ("K", "N", "Q"):
@@ -291,29 +285,28 @@ def validate(json_path: Path, report_path: Path) -> int:
     if not isinstance(paste_d4, str) or paste_d4.startswith("=P25IF") or "P25IF" in paste_d4:
         errors.append("Paste!D4 contains the invalid P25IF formula corruption.")
 
-    if not isinstance(paste_d4, str) or not paste_d4.startswith('=IF(O4<>"",O4,IF(B4=""'):
-        errors.append("Paste!D4 does not start with the expected manual-override label lookup structure.")
+    expected_d4 = '=IF(O4<>"",O4,IF(B4="","",IFERROR(IF(OR(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0))="",LOWER(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0)))="none",LEFT(INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0)),2)="${"),"",INDEX($P$25:$P$36,MATCH(B4,$N$25:$N$36,0))),"")))'
+    expected_h4 = '=IF(S4<>"",S4,IF(F4="","",IFERROR(IF(OR(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0))="",LOWER(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0)))="none",LEFT(INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0)),2)="${"),"",INDEX($P$25:$P$36,MATCH(F4,$N$25:$N$36,0))),"")))'
+    if paste_d4 != expected_d4:
+        errors.append("Paste!D4 does not match the required manual-override label lookup formula.")
 
-    if not isinstance(paste_h4, str) or not paste_h4.startswith('=IF(S4<>"",S4,IF(F4=""'):
-        errors.append("Paste!H4 does not start with the expected manual-override label lookup structure.")
-
-    for ref, formula in (("Paste!D4", paste_d4), ("Paste!H4", paste_h4)):
-        if not isinstance(formula, str) or "INDEX($P$25:$P$36" not in formula:
-            errors.append(f"{ref} does not auto-pull from the visible QBench sample label source table.")
-        if not isinstance(formula, str) or 'LOWER(' not in formula or '="none"' not in formula or 'LEFT(' not in formula or '="${"' not in formula:
-            errors.append(f"{ref} does not treat blank, None, and unresolved ${{...}} source values as blank.")
+    if paste_h4 != expected_h4:
+        errors.append("Paste!H4 does not match the required manual-override label lookup formula.")
 
     formula_source_cells = [f"Paste!P{idx + 25}" for idx, value in enumerate(p25_p36) if isinstance(value, str) and value.startswith("=")]
     if formula_source_cells:
         errors.append(f"P25:P36 must remain raw QBench sample label source values, but formulas were found in: {', '.join(formula_source_cells)}")
 
-    if not isinstance(paste_q4, str) or "Pulled from" not in paste_q4:
+    if not isinstance(paste_q4, str) or "Pulled per-serving/unit value from" not in paste_q4:
         errors.append("Paste!Q4 does not expose Label Claim 1 source/status.")
 
-    if not isinstance(paste_u4, str) or "Pulled from" not in paste_u4:
+    if not isinstance(paste_u4, str) or "Pulled per-serving/unit value from" not in paste_u4:
         errors.append("Paste!U4 does not expose Label Claim 2 source/status.")
 
     all_strings = flatten_values(data.get("data", {}))
+    named_display_strings = [info.get("display_name", "") for info in named.values() if isinstance(info, dict)]
+    if any("mg/container" in value for value in all_strings + named_display_strings):
+        errors.append("Worksheet report-facing labels still contain mg/container; expected mg/unit.")
     if any("Worst" in value or "worst" in value for value in all_strings):
         errors.append('Worksheet output contains "Worst"; Phase 1 requires "Highest".')
 
@@ -322,16 +315,28 @@ def validate(json_path: Path, report_path: Path) -> int:
 
     missing_sample_label_fields = sorted(REQUIRED_SAMPLE_LABEL_FIELDS - set(all_strings))
     if missing_sample_label_fields:
-        errors.append(f"Missing QBench sample label field placeholders: {', '.join(missing_sample_label_fields)}")
+        errors.append(f"Missing QBench per-serving sample label field placeholders: {', '.join(missing_sample_label_fields)}")
+
+    paste_label_sources = [get_cell_value(data, f"Paste!P{row}") for row in range(25, 37)]
+    legacy_label_sources = [
+        f"Paste!P{idx + 25}"
+        for idx, value in enumerate(paste_label_sources)
+        if isinstance(value, str) and "product_label_" in value
+    ]
+    if legacy_label_sources:
+        errors.append(
+            "Homogeneity label claim source table still uses package/container product_label fields in: "
+            + ", ".join(legacy_label_sources)
+        )
 
     example_d9_ug_g = 4058.954
     example_thca_ug_g = 0.0
     example_mass_g = 5.0
     example_total_thc_mg_g = (example_d9_ug_g + example_thca_ug_g * 0.877) / 1000
-    example_total_thc_mg_container = example_total_thc_mg_g * example_mass_g
+    example_total_thc_mg_unit = example_total_thc_mg_g * example_mass_g
     example_cbg_ug_g = 4105.178
     example_cbg_mg_g = example_cbg_ug_g / 1000
-    example_cbg_mg_container = example_cbg_mg_g * example_mass_g
+    example_cbg_mg_unit = example_cbg_mg_g * example_mass_g
     example_positive_variance_display = display_percent(0.0147385)
     example_negative_variance_display = display_percent(-0.0108085)
     example_allowed_variance_display = display_percent(0.15)
@@ -361,15 +366,15 @@ def validate(json_path: Path, report_path: Path) -> int:
         ("Total THC helper converts ug/g to mg/g", not any("Paste!AI10" in error for error in errors)),
         ("Total CBD helper converts ug/g to mg/g", not any("Paste!AJ10" in error for error in errors)),
         ("individual cannabinoid targets convert ug/g to mg/g", not any("Data!E12" in error or "Data!G12" in error for error in errors)),
-        ("mg/container uses converted mg/g times unit mass", not any("Data!M12" in error or "Data!P12" in error for error in errors)),
+        ("mg/unit uses converted mg/g times unit mass", not any("Data!M12" in error or "Data!P12" in error for error in errors)),
         ("Data tab variance cells use 0.0% display format", not missing_percent_styles),
         ("allowed variance remains decimal threshold from Paste!L4", data_b9 == "=Paste!L4"),
         ("pass/fail logic compares decimal variances against 0.15 threshold", not any("pass/fail logic" in error for error in errors)),
         ("Paste!D4 has no P25IF corruption", not any("Paste!D4 contains" in error or "P25IF" in error for error in errors)),
-        ("Paste!D4/Paste!H4 blank None and unresolved placeholders", not any("source values as blank" in error for error in errors)),
+        ("Paste!D4/Paste!H4 use required label lookup formulas", not any("required manual-override label lookup" in error for error in errors)),
         ("P25:P36 remains raw QBench source table", not formula_source_cells),
         ("Actual unit mass validation requires all 10 AH values", not any("Required Unit Mass" in error for error in errors) and isinstance(get_cell_value(data, "Data!B39"), str) and "COUNT(H12:H21)=10" in get_cell_value(data, "Data!B39")),
-        ("QBench sample label fields are documented/pulled", not missing_sample_label_fields and not any("label claim" in error.lower() for error in errors)),
+        ("QBench per-serving sample label fields are documented/pulled", not missing_sample_label_fields and not legacy_label_sources and not any("label claim" in error.lower() for error in errors)),
         ('worksheet uses "Highest" terminology only', not any("Worst" in error for error in errors)),
         ("report_results range has content", not any("report_results target" in error for error in errors)),
     ]
@@ -406,8 +411,8 @@ def validate(json_path: Path, report_path: Path) -> int:
     lines.append(f"- Total CBD helper `Paste!AJ10`: `{paste_aj10}`")
     lines.append(f"- Target 1 result `Data!E12`: `{data_e12}`")
     lines.append(f"- Target 2 result `Data!G12`: `{data_g12}`")
-    lines.append(f"- Target 1 mg/container `Data!M12`: `{data_m12}`")
-    lines.append(f"- Target 2 mg/container `Data!P12`: `{data_p12}`")
+    lines.append(f"- Target 1 mg/unit `Data!M12`: `{data_m12}`")
+    lines.append(f"- Target 2 mg/unit `Data!P12`: `{data_p12}`")
     lines.append(f"- Allowed variance `Data!B9`: `{data_b9}`")
     lines.append(f"- Mass pass/fail sample `Data!R12`: `{data_r12}`")
     lines.append(f"- Cannabinoid 1 pass/fail sample `Data!S12`: `{data_s12}`")
@@ -419,9 +424,9 @@ def validate(json_path: Path, report_path: Path) -> int:
     lines.append("## Numeric Example Checks")
     lines.append("")
     lines.append(f"- D9-THC `{example_d9_ug_g}` ug/g with THCa `{example_thca_ug_g}` ug/g -> Total THC `{example_total_thc_mg_g:.6f}` mg/g.")
-    lines.append(f"- Total THC `{example_total_thc_mg_g:.6f}` mg/g with `{example_mass_g:g}` g unit mass -> `{example_total_thc_mg_container:.5f}` mg/container.")
+    lines.append(f"- Total THC `{example_total_thc_mg_g:.6f}` mg/g with `{example_mass_g:g}` g unit mass -> `{example_total_thc_mg_unit:.5f}` mg/unit.")
     lines.append(f"- CBG `{example_cbg_ug_g}` ug/g -> `{example_cbg_mg_g:.6f}` mg/g.")
-    lines.append(f"- CBG `{example_cbg_mg_g:.6f}` mg/g with `{example_mass_g:g}` g unit mass -> `{example_cbg_mg_container:.5f}` mg/container.")
+    lines.append(f"- CBG `{example_cbg_mg_g:.6f}` mg/g with `{example_mass_g:g}` g unit mass -> `{example_cbg_mg_unit:.5f}` mg/unit.")
     lines.append(f"- Data variance display `0.0147385` -> `{example_positive_variance_display}` with 0.0% formatting.")
     lines.append(f"- Data variance display `-0.0108085` -> `{example_negative_variance_display}` with 0.0% formatting.")
     lines.append(f"- Allowed variance display `0.15` -> `{example_allowed_variance_display}` with 0.0% formatting.")
@@ -455,9 +460,10 @@ def validate(json_path: Path, report_path: Path) -> int:
     lines.append("")
     lines.append("## Label Claim Source Logic")
     lines.append("")
-    lines.append("- Direct QBench sample label placeholders were found in exported worksheet templates and are used in this release.")
-    lines.append("- Target 1 label claim `Paste!D4` pulls from `Paste!N25:P36` unless manual override `Paste!O4` is populated.")
-    lines.append("- Target 2 label claim `Paste!H4` pulls from `Paste!N25:P36` unless manual override `Paste!S4` is populated.")
+    lines.append("- For Homogeneity, `mg/unit` is treated as the `mg/serving` value requested by OCM and is calculated as `mg/g x actual unit mass g`.")
+    lines.append("- Target 1 label claim `Paste!D4` pulls per-serving/unit values from `Paste!N25:P36` unless manual override `Paste!O4` is populated.")
+    lines.append("- Target 2 label claim `Paste!H4` pulls per-serving/unit values from `Paste!N25:P36` unless manual override `Paste!S4` is populated.")
+    lines.append("- Targets without an exported per-serving QBench sample field remain blank and require manual override rather than falling back to package/container label values.")
     lines.append(f"- Label Claim 1 source/status `Paste!Q4`: `{paste_q4}`")
     lines.append(f"- Label Claim 2 source/status `Paste!U4`: `{paste_u4}`")
     lines.append("")

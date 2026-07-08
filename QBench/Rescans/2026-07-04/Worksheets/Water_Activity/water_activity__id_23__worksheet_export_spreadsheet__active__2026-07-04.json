@@ -1,0 +1,511 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "55cc1f6c-6894-4b28-9a41-b5ab5bfa1689",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "",
+      "text-wrap:wrap",
+      "text-wrap:wrap;text-align:left",
+      "text-wrap:wrap;text-align:center",
+      "font-weight:bold",
+      "text-wrap:wrap;text-align:center;font-weight:bold",
+      "font-weight:bold;background-color:#f7f1e9",
+      "text-wrap:wrap;text-align:center;font-weight:bold;background-color:#f7f1e9",
+      "font-weight:bold;background-color:#e0e0e0",
+      "text-wrap:wrap;text-align:center;font-weight:bold;background-color:#e0e0e0",
+      "font-weight:bold;background-color:#eeeeee",
+      "text-wrap:wrap;text-align:center;font-weight:bold;background-color:#eeeeee",
+      "font-weight:bold;background-color:#eeeeee;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;text-align:center;font-weight:bold;background-color:#eeeeee;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A1": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "A2": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "A3": {
+            "readonly": false,
+            "type": "text",
+            "width": "403px"
+          },
+          "A4": {
+            "readonly": false,
+            "type": "text",
+            "width": "403px"
+          },
+          "A5": {
+            "readonly": false,
+            "type": "text",
+            "width": "403px"
+          },
+          "A6": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "A7": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "A8": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "B1": {
+            "readonly": false,
+            "type": "text",
+            "width": "403px"
+          },
+          "B2": {
+            "readonly": false,
+            "type": "text",
+            "width": "403px"
+          },
+          "B3": {
+            "readonly": false,
+            "type": "text",
+            "width": "386px"
+          },
+          "B4": {
+            "readonly": false,
+            "type": "text",
+            "width": "386px"
+          },
+          "B5": {
+            "readonly": false,
+            "type": "text",
+            "width": "386px"
+          },
+          "B6": {
+            "readonly": false,
+            "type": "text",
+            "width": "403px"
+          },
+          "B7": {
+            "readonly": false,
+            "type": "text",
+            "width": "403px"
+          },
+          "B8": {
+            "readonly": false,
+            "type": "text",
+            "width": "403px"
+          },
+          "C1": {
+            "readonly": false,
+            "type": "text",
+            "width": "386px"
+          },
+          "C2": {
+            "readonly": false,
+            "type": "text",
+            "width": "386px"
+          },
+          "C3": {
+            "readonly": false,
+            "type": "text",
+            "width": "386px"
+          },
+          "C4": {
+            "readonly": false,
+            "type": "text",
+            "width": "386px"
+          },
+          "C5": {
+            "readonly": false,
+            "type": "text",
+            "width": "386px"
+          },
+          "C6": {
+            "readonly": false,
+            "type": "text",
+            "width": "386px"
+          },
+          "C7": {
+            "readonly": false,
+            "type": "text",
+            "width": "386px"
+          },
+          "C8": {
+            "readonly": false,
+            "type": "text",
+            "width": "386px"
+          },
+          "D1": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "D2": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "D3": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "D4": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "D5": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "D6": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "D7": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "D8": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "E1": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "E2": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "E3": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "E4": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "E5": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "E6": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "E7": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          },
+          "E8": {
+            "readonly": false,
+            "type": "text",
+            "width": "50px"
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "visibile": true,
+            "width": 104
+          },
+          {
+            "type": "text",
+            "visibile": true,
+            "width": 638
+          },
+          {
+            "type": "text",
+            "visibile": true,
+            "width": 386
+          },
+          {
+            "type": "text",
+            "visibile": true,
+            "width": 50
+          },
+          {
+            "type": "text",
+            "visibile": true,
+            "width": 50
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {},
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 27,
+            "visibile": false
+          },
+          {
+            "height": 27,
+            "visibile": false
+          },
+          {
+            "height": 27,
+            "visibile": false
+          },
+          {
+            "height": 27,
+            "visibile": false
+          },
+          {
+            "height": 27,
+            "visibile": false
+          },
+          {
+            "height": 27,
+            "visibile": false
+          },
+          {
+            "height": 27,
+            "visibile": false
+          },
+          {
+            "height": 56,
+            "visibile": false
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 1906,
+        "worksheetId": "6252bfda-f196-472d-9d22-3538904f2342",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.1.1",
+            "The water activity meter’s sample chamber shall be cleaned each day prior to performing any testing. To clean the sample chamber follow the steps below:",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.1.1",
+            "The water activity meter’s sample chamber shall be cleaned each day prior to performing any testing. To clean the sample chamber follow the steps below:",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.1.1.2",
+            "Remove sample debris from the sample chamber, if applicable.",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.1.1.3",
+            "Rinse everything with distilled water.",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.1.1.5",
+            "Leave the meter to dry for 1.5 hours before operation. To expedite the drying process, a container of activated charcoal may be placed into the chamber.",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "style": {
+          "A1": 12,
+          "A2": 0,
+          "A3": 0,
+          "A4": 0,
+          "A5": 0,
+          "A6": 0,
+          "A7": 0,
+          "A8": 0,
+          "B1": 13,
+          "B2": 2,
+          "B3": 2,
+          "B4": 2,
+          "B5": 2,
+          "B6": 2,
+          "B7": 2,
+          "B8": 2,
+          "C1": 0,
+          "C2": 0,
+          "C3": 0,
+          "C4": 0,
+          "C5": 0,
+          "C6": 0,
+          "C7": 0,
+          "C8": 0,
+          "D1": 0,
+          "D2": 0,
+          "D3": 0,
+          "D4": 0,
+          "D5": 0,
+          "D6": 0,
+          "D7": 0,
+          "D8": 0,
+          "E1": 0,
+          "E2": 0,
+          "E3": 0,
+          "E4": 0,
+          "E5": 0,
+          "E6": 0,
+          "E7": 0,
+          "E8": 0
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.1.1",
+        "The water activity meter’s sample chamber shall be cleaned each day prior to performing any testing. To clean the sample chamber follow the steps below:",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.1.1",
+        "The water activity meter’s sample chamber shall be cleaned each day prior to performing any testing. To clean the sample chamber follow the steps below:",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.1.1.2",
+        "Remove sample debris from the sample chamber, if applicable.",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.1.1.3",
+        "Rinse everything with distilled water.",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.1.1.5",
+        "Leave the meter to dry for 1.5 hours before operation. To expedite the drying process, a container of activated charcoal may be placed into the chamber.",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  }
+}

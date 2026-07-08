@@ -1,0 +1,379 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "c337d8c3-a52e-442c-abf6-338b0fcaf533",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "background-color:#e0e0e0",
+      "text-wrap:wrap",
+      "color:#c62828",
+      "background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black",
+      "background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "text-wrap:wrap;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "color:#212121",
+      "color:#212121;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "color:#212121;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "D2": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          },
+          "D3": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 3
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 379
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 234
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "A7": [
+            2,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 25
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 55
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 1012,
+        "worksheetId": "2110da28-f0c0-48b7-8f10-cef177b71732",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "Criteria",
+            "Parameters",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.6.1",
+            "Log into the Tempo Reader software",
+            "",
+            "",
+            "Insert incubation rack into Tempo Reader and Start Tempo Reader. ",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.6.2",
+            "Insert incubation rack into Tempo Reader and Start Tempo Reader. ",
+            "",
+            "",
+            "Upon completion of sample reading, export results from Tempo Reader.",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.6.3",
+            "The Tempo Reader will scan each sample barcode and automatically associate the found result with the scanned barcode located on the Tempo Card",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.6.4",
+            "The Tempo Reader will automatically calculate the CFU/g of the sample",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7.6.5",
+            "Upon completion of sample reading, export results from Tempo Reader.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Be sure to assign inventory and equipment usage pertaining to this protocol step. ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "style": {
+          "A1": 3,
+          "A2": 5,
+          "A3": 5,
+          "A4": 5,
+          "A5": 7,
+          "A6": 10,
+          "A7": 2,
+          "B1": 4,
+          "B2": 6,
+          "B3": 6,
+          "B4": 6,
+          "B5": 8,
+          "B6": 11,
+          "B7": 2,
+          "D1": 3,
+          "D2": 5,
+          "D3": 7,
+          "E1": 4,
+          "E2": 6,
+          "E3": 8
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "Criteria",
+        "Parameters",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.6.1",
+        "Log into the Tempo Reader software",
+        "",
+        "",
+        "Insert incubation rack into Tempo Reader and Start Tempo Reader. ",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.6.2",
+        "Insert incubation rack into Tempo Reader and Start Tempo Reader. ",
+        "",
+        "",
+        "Upon completion of sample reading, export results from Tempo Reader.",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.6.3",
+        "The Tempo Reader will scan each sample barcode and automatically associate the found result with the scanned barcode located on the Tempo Card",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.6.4",
+        "The Tempo Reader will automatically calculate the CFU/g of the sample",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "7.6.5",
+        "Upon completion of sample reading, export results from Tempo Reader.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Be sure to assign inventory and equipment usage pertaining to this protocol step. ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  }
+}

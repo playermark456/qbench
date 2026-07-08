@@ -778,3 +778,1966 @@ Generated from the exported worksheet JSON files under QBench/Worksheets.
 | Water_Activity | water activity test ws id 28 | wateractivity_metrc | Specifications!D5 | METRC reporting field | Yes/likely | Exportable=True |
 | Water_Activity | water activity test ws id 28 | wateractivityaw | Data!D2 | Worksheet named cell | Unknown | Exportable=True; Display=Water Activity aw |
 
+## Rescan 2026-07-04 Named-Cell Changes
+
+| Assay | Worksheet | Named Cell | Cell/Range | Purpose | Used by COA? | Notes |
+|---|---|---|---|---|---|---|
+| Other | Example Batch Worksheet | control | D2 | Control  | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Other | [Batch] Example Worksheet | control | D2 | Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Other | Training Worksheet | example_named_cell | General!A18 | Example | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic | Data!E2 | Arsenic | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_limit | Specifications!C5 | Arsenic Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_loq | Specifications!B5 | Arsenic LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_mu | Specifications!E5 | Arsenic MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_result | Specifications!D5 | Arsenic Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_status | Specifications!F5 | Arsenic Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium | Data!F2 | Cadmium  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_limit | Specifications!C6 | Cadmium Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_loq | Specifications!B6 | Cadmium LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_mu | Specifications!E6 | Cadmium MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_result | Specifications!D6 | Cadmium Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_status | Specifications!F6 | Cadmium Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | df | Data!I2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead | Data!G2 | Lead | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_limit | Specifications!C7 | Lead Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_loq | Specifications!B7 | Lead LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_mu | Specifications!E7 | Lead MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_result | Specifications!D7 | Lead Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury | Data!H2 | Mercury | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_limit | Specifications!C8 | Mercury Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_loq | Specifications!B8 | Mercury LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_mu | Specifications!E8 | Mercury MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_result | Specifications!D8 | Mercury Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_status | Specifications!F8 | Mercury Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | report_results | Report!A1:F6 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | df | Data!G2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | purity_results | 'Purity Data'!C2:R2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | report_results | Report!A1:F21 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_1 | Data!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_10 | Data!N5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_11 | Data!O5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_12 | Data!P5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_13 | Data!Q5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_14 | 'Purity Data'!C2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_15 | 'Purity Data'!D2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_16 | 'Purity Data'!E2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_17 | 'Purity Data'!F2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_18 | 'Purity Data'!G2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_19 | 'Purity Data'!H2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_2 | Data!F5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_20 | 'Purity Data'!I2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_21 | 'Purity Data'!J2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_22 | 'Purity Data'!K2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_23 | 'Purity Data'!L2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_24 | 'Purity Data'!M2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_25 | 'Purity Data'!N2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_26 | 'Purity Data'!O2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_27 | 'Purity Data'!P2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_28 | 'Purity Data'!Q2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_29 | 'Purity Data'!R2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_3 | Data!G5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_4 | Data!H5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_5 | Data!I5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_6 | Data!J5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_7 | Data!K5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_8 | Data!L5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_9 | Data!M5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | results | Data!E5:Q5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | total_thc | Report!B1 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | total_thc_report_result | Data!C11 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb1 | Data!E2 | Aflatoxin B1 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb1_metrc | Specifications!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb2 | Data!F2 | Aflatoxin B2 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb2_metrc | Specifications!D6 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing1 | Data!G2 | Aflatoxin G1 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing1_metrc | Specifications!D7 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing2 | Data!H2 | Aflatoxin G2 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing2_metrc | Specifications!D8 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | df | Data!J2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | mycotoxin_results | Data!E2:I2 | Mycotoxin Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | ochratoxina | Data!I2 | Ochratoxin A | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | ochratoxina_metrc | Specifications!D9 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | report_results | Report!A1:F8 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | totalmycod_b1b2g1g2_metrc | Specifications!D11 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | totalmycod_b1b2g1g2oa_metrc | Specifications!D10 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | acetone | Data!F2 | Acetone | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | acetone_metrc | Specifications!E9 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | acetonitrile | Data!G2 | Acetonitrile | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | benzene | Data!H2 | Benzene | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | benzene_metrc | Specifications!E11 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | butane_metrc | Specifications!E12 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | butanes | Data!I2 | Butanes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | butanol_metrc | Specifications!E6 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | chloroform | Data!J2 | Chloroform | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | chloroform_metrc | Specifications!E13 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | cyclohexane | Data!K2 | Cyclohexane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | cyclohexane_metrc | Specifications!E15 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | df | Data!X2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | dichloromethane | Data!L2 | Dichloromethane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | dichloromethane_metrc | Specifications!E16 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | dioxane14_metrc | Specifications!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethanol | Data!M2 | Ethanol | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethanol_metrc | Specifications!E17 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethoxyethanol_metrc | Specifications!E7 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethylacetate | Data!O2 | Ethyl Acetate | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethylacetate_metrc | Specifications!E19 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethylether | Data!N2 | Ethyl Ether | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | heptane | Data!P2 | Heptane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | heptane_metrc | Specifications!E22 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | hexane_metrc | Specifications!E23 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | hexanes | Data!Q2 | Hexanes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | isopropanol2_metrc | Specifications!E8 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | methanol | Data!R2 | Methanol | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | methanol_metrc | Specifications!E25 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | pentane_metrc | Specifications!E26 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | pentanes | Data!S2 | Pentanes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | propane | Data!T2 | Propane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | propane_metrc | Specifications!E27 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | propranolipa2 | Data!E2 | 2 Propanol IPA | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | report_results | Report!A1:F31 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | residual_solvents_results | Data!E2:W2 | Residual Solvents Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | toluene | Data!U2 | Toluene | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | toluene_metrc | Specifications!E29 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | totalxylenes | Data!V2 | Total Xylenes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | totalxylenes_metrc | Specifications!E30 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | trichloroethene | Data!W2 | Trichloroethene | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | trichloroethene_metrc | Specifications!E31 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | abamectin_metrc | Specifications!E5 | Abamectin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | acephate_metrc | Specifications!E6 | Acephate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | acequinocyl_metrc | Specifications!E7 | Acequinocyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | acetamiprid_metrc | Specifications!E8 | Acetamiprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | azadirachtin_metrc | Specifications!E9 | Azadirachtin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | azoxystrobin_metrc | Specifications!E10 | Azoxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | bifenazate_metrc | Specifications!E11 | Bifenazate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | bifenthrin_metrc | Specifications!E12 | Bifenthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | boscalid_metrc | Specifications!E13 | Boscalid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | carbaryl_metrc | Specifications!E14 | Carbaryl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlorantraniliprole_metrc | Specifications!E15 | Chlorantraniliprole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlorfenapyr_metrc | Specifications!E16 | Chlorfenapyr METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlormequatchloride_metrc | Specifications!E17 | Chlormequat Chloride METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlorpyrifos_metrc | Specifications!E18 | Chlorpyrifos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | clofentezine_metrc | Specifications!E19 | Clofentezine METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | cyfluthrin_metrc | Specifications!E20 | Cyfluthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | cypermethrin_metrc | Specifications!E21 | Cypermethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | daminozide_metrc | Specifications!E22 | Daminozide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | df | Data!BH2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | diazinon_metrc | Specifications!E23 | Diazinon METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | dimethoate_metrc | Specifications!E25 | Dimethoate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | etofenprox_metrc | Specifications!E26 | Etofenprox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | etoxazole_metrc | Specifications!E27 | Etoxazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fenoxycarb_metrc | Specifications!E28 | Fenoxycarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fenpyroximate_metrc | Specifications!E29 | Fenpyroximate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fipronil_metrc | Specifications!E30 | Fipronil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | flonicamid_metrc | Specifications!E31 | Flonicamid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fludioxonil_metrc | Specifications!E32 | Fludioxonil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | hexythiazox_metrc | Specifications!E33 | Hexythiazox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | imazalil_metrc | Specifications!E34 | Imazalil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | imidacloprid_metrc | Specifications!E35 | Imidacloprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | kresoximmethyl_metrc | Specifications!E36 | Kresoxim Methyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | malathion_metrc | Specifications!E37 | Malathion METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | metalaxyl_metrc | Specifications!E38 | Metalaxyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | methiocarb_metrc | Specifications!E39 | Methiocarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | methomyl_metrc | Specifications!E40 | Methomyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | myclobutanil_metrc | Specifications!E41 | Myclobutanil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | naled_metrc | Specifications!E42 | Naled METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | oxamyl_metrc | Specifications!E43 | Oxamyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | paclobutrazol_metrc | Specifications!E44 | Paclobutrazol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | permethrins_metrc | Specifications!E45 | Permethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pesticides_results | Data!E2:BG2 | Pesticide Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | phosmet_metrc | Specifications!E46 | Phosmet METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | piperonyl_butoxide_metrc | Specifications!E47 | Piperonyl Butoxide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | prallethrin_metrc | Specifications!E48 | Prallethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | propiconazole_metrc | Specifications!E49 | Propiconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | propoxur_metrc | Specifications!E50 | Propoxur METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pyrethrins_metrc | Specifications!E51 | Pyrethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pyridaben_metrc | Specifications!E52 | Pyridaben METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | report_results | Report!A1:R25 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | report_results_single | A1:F75 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | spinosad_metrc | Specifications!E55 | Spinosad METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | spiromesifen_metrc | Specifications!E56 | Spiromesifen METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | spirotetramat_metrc | Specifications!E57 | Spirotetramat METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | tebuconazole_metrc | Specifications!E58 | Tebuconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | thiamethoxam_metrc | Specifications!E59 | Thiamethoxam METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | trifloxystrobin_metrc | Specifications!E60 | Trifloxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | abamectin_metrc | Specifications!E5 | Abamectin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | acephate_metrc | Specifications!E6 | Acephate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | acequinocyl_metrc | Specifications!E7 | Acequinocyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | acetamiprid_metrc | Specifications!E8 | Acetamiprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | aldicarb_metrc | Specifications!E9 | Aldicarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | azadirachtin_metrc | Specifications!E10 | Azadirachtin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | azoxystrobin_metrc | Specifications!E11 | Azoxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | bifenazate_metrc | Specifications!E12 | Bifenazate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | bifenthrin_metrc | Specifications!E13 | Bifenthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | boscalid_metrc | Specifications!E14 | Boscalid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | carbaryl_metrc | Specifications!E15 | Carbaryl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | carbofuran_metrc | Specifications!E16 | Carbofuran METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlorantraniliprole_metrc | Specifications!E17 | Chlorantraniliprole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlorfenapyr_metrc | Specifications!E18 | Chlorfenapyr METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlormequat_metrc | Specifications!E19 | Chlormequat METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlormequatchloride_metrc | Specifications!E20 | Chlormequat Chloride METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlorpyrifos_metrc | Specifications!E21 | Chlorpyrifos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | clofentezine_metrc | Specifications!E22 | Clofentezine METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | coumaphos_metrc | Specifications!E23 | Coumaphos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | cyfluthrin_metrc | Specifications!E24 | Cyfluthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | cypermethrin_metrc | Specifications!E25 | Cypermethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | daminozide_metrc | Specifications!E27 | Daminozide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | ddvp_metrc | Specifications!E26 | DDVP METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | diazinon_metrc | Specifications!E28 | Diazinon METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | dimethoate_metrc | Specifications!E29 | Dimethoate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | dimethomorph_metrc | Specifications!E30 | Dimethomorph METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | ethoprophos_metrc | Specifications!E31 | Ethoprophos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | etofenprox_metrc | Specifications!E32 | Etofenprox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | etoxazole_metrc | Specifications!E33 | Etoxazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fenhexamid_metrc | Specifications!E34 | Fenhexamid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fenoxycarb_metrc | Specifications!E35 | Fenoxycarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fenpyroximate_metrc | Specifications!E36 | Fenpyroximate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fipronil_metrc | Specifications!E37 | Fipronil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | flonicamid_metrc | Specifications!E38 | Flonicamid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fludioxonil_metrc | Specifications!E39 | Fludioxonil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | hexythiazox_metrc | Specifications!E40 | Hexythiazox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | imazalil_metrc | Specifications!E41 | Imazalil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | imidacloprid_metrc | Specifications!E42 | Imidacloprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | kresoximmethyl_metrc | Specifications!E43 | Kresoxim Methyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | malathion_metrc | Specifications!E45 | Malathion METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | metalaxyl_metrc | Specifications!E46 | Metalaxyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | metalaxylmefenoxam_metrc | Specifications!E47 | Metalaxyl/Mefenoxam METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | methiocarb_metrc | Specifications!E48 | Methiocarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | methomyl_metrc | Specifications!E49 | Methomyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | methyl_parathion_metrc | Specifications!E50 | Methyl Parathion METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | mevinphos_metrc | Specifications!E51 | Mevinphos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | mgk264_metrc | Specifications!E44 | MGK-264 METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | myclobutanil_metrc | Specifications!E52 | Myclobutanil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | naled_metrc | Specifications!E53 | Naled METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | oxamyl_metrc | Specifications!E54 | Oxamyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | paclobutrazol_metrc | Specifications!E55 | Paclobutrazol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pentachlorobenzene_metrc | Specifications!E56 | Pentachlorobenzene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | permethrins_metrc | Specifications!E57 | Permethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pesticides_results | Data!E2:BU2 | Pesticide Results | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | phosmet_metrc | Specifications!E58 | Phosmet METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | piperonyl_butoxide_metrc | Specifications!E59 | Piperonyl Butoxide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | prallethrin_metrc | Specifications!E60 | Prallethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | propiconazole_metrc | Specifications!E61 | Propiconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | propoxur_metrc | Specifications!E62 | Propoxur METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pyrethrins_metrc | Specifications!E63 | Pyrethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pyridaben_metrc | Specifications!E64 | Pyridaben METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | report_results | Report!A1:L40 |  | Yes | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spinetoram_metrc | Specifications!E65 | Spinetoram METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spinosad_metrc | Specifications!E66 | Spinosad METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spiromesifen_metrc | Specifications!E67 | Spiromesifen METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spirotetramat_metrc | Specifications!E68 | Spirotetramat METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spiroxamine_metrc | Specifications!E69 | Spiroxamine METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | tebuconazole_metrc | Specifications!E70 | Tebuconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | thiacloprid_metrc | Specifications!E71 | Thiacloprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | thiamethoxam_metrc | Specifications!E72 | Thiamethoxam METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | trifloxystrobin_metrc | Specifications!E73 | Trifloxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_0 | F3 | Water Activity 0 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_1 | F4 | Water Activity 1 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_10 | F15 | Water Activity 10 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_11 | F16 | Water Activity 11 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_12 | F17 | Water Activity 12 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_13 | F18 | Water Activity 13 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_14 | F19 | Water Activity 14 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_15 | F20 | Water Activity 15 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_16 | F21 | Water Activity 16 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_17 | F22 | Water Activity 17 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_18 | F23 | Water Activity 18 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_19 | F24 | Water Activity 19 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_2 | F5 | Water Activity 2 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_20 | F27 | Water Activity 20 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_21 | F28 | Water Activity 21 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_22 | F29 | Water Activity 22 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_23 | F30 | Water Activity 23 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_24 | F31 | Water Activity 24 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_25 | F32 | Water Activity 25 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_26 | F33 | Water Activity 26 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_27 | F34 | Water Activity 27 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_28 | F35 | Water Activity 28 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_29 | F36 | Water Activity 29 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_3 | F6 | Water Activity 3 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_30 | F39 | Water Activity 30 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_31 | F40 | Water Activity 31 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_32 | F41 | Water Activity 32 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_33 | F42 | Water Activity 33 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_34 | F43 | Water Activity 34 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_35 | F44 | Water Activity 35 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_36 | F45 | Water Activity 36 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_37 | F46 | Water Activity 37 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_38 | F47 | Water Activity 38 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_39 | F48 | Water Activity 39 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_4 | F7 | Water Activity 4 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_5 | F8 | Water Activity 5 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_6 | F9 | Water Activity 6 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_7 | F10 | Water Activity 7 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_8 | F11 | Water Activity 8 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_9 | F12 | Water Activity 9 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_1 | F13 | Water Activity SS 1 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_1_control | F14 | Water Activity SS 1 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_2 | F25 | Water Activity SS 2 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_2_control | F26 | Water Activity SS 2 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_3 | F37 | Water Activity SS 3 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_3_control | F38 | Water Activity SS 3 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_4 | F49 | Water Activity SS 4 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_4_control | F50 | Water Activity SS 4 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Test WS] | metrc_analyte_name_wateractivity | METRC!A5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_notes_wateractivity | METRC!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_pass_fail_wateractivity | METRC!C5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_quantity_wateractivity | METRC!B5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_to_include_wateractivity | METRC!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | pass_fail_report | Specifications!B7 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | wateractivity_metrc | Specifications!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | wateractivityaw | Data!D2 | Water Activity aw | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Batch WS] | test | F2 | stes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Batch WS] | test2 | F3 | steste | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Foreign_Material | Foreign Material [Test WS] | ffm_metrc | Report!C2 | Foreign Material METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Foreign_Material | Foreign Material [Test WS] | pass_fail | Data!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Foreign_Material | Foreign Material [Test WS] | report_results | Report!A1:C5 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | ahumulene_metrc | D22 | A Humulene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | ahumulene_metrc_mgg | E22 | A Humulene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | apinene_metrc | D5 | A Pinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | apinene_metrc_mgg | E5 | A Pinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | aterpinene_metrc | D10 | A Terpinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | aterpinene_metrc_mgg | E10 | A Terpinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bcaryophyllene_metrc | D21 | B Caryophyllene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bcaryophyllene_metrc_mgg | E21 | B Caryophyllene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bisabolol_metrc | D27 | Bisabolol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bisabolol_metrc_mgg | E27 | Bisabolol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bmyrcene_metrc | D7 | B Myrcene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bmyrcene_metrc_mgg | E7 | B Myrcene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bpinene_metrc | D8 | B Pinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bpinene_metrc_mgg | E8 | B Pinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | camphene_metrc | D6 | Camphene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | camphene_metrc_mgg | E6 | Camphene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | caryophylleneoxide_metrc | D26 | Caryophyllene Oxide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | caryophylleneoxide_metrc_mgg | E26 | Caryophyllene Oxide METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisnerolidol_metrc | D23 | Cis Nerolidol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisnerolidol_metrc_mgg | E23 | Cis Nerolidol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisocimene_metrc | D11 | Cis Ocimene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisocimene_metrc_mgg | E11 | Cis Ocimene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | delta3carene_metrc | D9 | Delta 3 Carene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | delta3carene_metrc_mgg | E9 | Delta 3 Carene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | dlimonene_metrc | D12 | D Limonene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | dlimonene_metrc_mgg | E12 | D Limonene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | eucalyptol_metrc | D15 | Eucalyptol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | eucalyptol_metrc_mgg | E15 | Eucalyptol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | geraniol_metrc | D20 | Geraniol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | geraniol_metrc_mgg | E20 | Geraniol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | gterpinene_metrc | D16 | G Terpinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | gterpinene_metrc_mgg | E16 | G Terpinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | guaiol_metrc | D25 | Guaiol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | guaiol_metrc_mgg | E25 | Guaiol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | isopulegol_metrc | D19 | Isopulegol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | isopulegol_metrc_mgg | E19 | Isopulegol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | linalool_metrc | D18 | Linalool METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | linalool_metrc_mgg | E18 | Linalool METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | pcymene_metrc | D13 | P Cymene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | pcymene_metrc_mgg | E13 | P Cymene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | terpinolene_metrc | D17 | Terpinolene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | terpinolene_metrc_mgg | E17 | Terpinolene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | testterpenes | E4 | Test Terpenes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transnerolidol_metrc | D24 | Trans Nerolidol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transnerolidol_metrc_mgg | E24 | Trans Nerolidol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transocimene_metrc | D14 | Trans Ocimene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transocimene_metrc_mgg | E14 | Trans Ocimene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | aspergillusspp | I2 | Aspergillus spp. | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | aspergillusspp_metrc | Specifications!E10 | Aspergillus Spp METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | enterobacteriaceae | F2 | Enterobacteriaceae | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | enterobacteriaceae_metrc | Specifications!E7 | Enterobacteriaceae METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | lmonocytogenes | J2 | L. monocytogenes | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | lmonocytogenes_metrc | Specifications!E11 | L Monocytogenes METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | microbials_results | Data!D2:J2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | report_result | Report!A1:F9 |  | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | salmonellaspecies | G2 | Salmonella species | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | salmonellaspecies_metrc | Specifications!E8 | Salmonella Species METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | shigatoxin_producingecoli_metrc | Specifications!E9 | Shiga Toxin-Producing E Coli METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | shigatoxinproducingecoli | H2 | Shiga toxin-producing E. coli | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | totalaerobic | D2 | Total aerobic microbial | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | totalaerobicmicrobial_metrc | Specifications!E5 | Total Aerobic Microbial METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | totalyeastandmold_metrc | Specifications!E6 | Total Yeast And Mold METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | yeastmold | E2 | Total yeast and mold | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Homogeneity | Homogeneity [Test WS] | average_actual_unit_mass_g | Data!B8 | Average Actual Unit Mass g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | duplicate_cp_test_id_check | Data!B36 | Duplicate CP Test ID Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | extra_pasted_rows_check | Data!B37 | Extra Pasted Rows Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_cannabinoid_1_label_variance | Data!B28 | Cannabinoid 1 Label Variance for Highest Cannabinoid | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_cannabinoid_2_label_variance | Data!B30 | Cannabinoid 2 Label Variance for Highest Cannabinoid | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_mass_label_variance | Data!B26 | Mass Label Variance for Highest Unit Mass | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_reported_cannabinoid_1_mg_container | Data!B27 | Highest Reported Cannabinoid 1 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_reported_cannabinoid_2_mg_container | Data!B29 | Highest Reported Cannabinoid 2 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_reported_unit_mass_g | Data!B25 | Highest Reported Unit Mass g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | homogeneity_metrc | COA!F1 | Homogeneity METRC | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_1_mg_container | Data!B4 | Label Cannabinoid 1 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_1_source_status | Paste!Q4 | Label Cannabinoid 1 Source Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_2_mg_container | Data!B6 | Label Cannabinoid 2 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_2_source_status | Paste!U4 | Label Cannabinoid 2 Source Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_unit_mass_g | Data!B7 | Label Unit Mass g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | manual_label_cannabinoid_1_mg_container | Paste!O4 | Manual Label Cannabinoid 1 mg/container Override | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | manual_label_cannabinoid_2_mg_container | Paste!S4 | Manual Label Cannabinoid 2 mg/container Override | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | optional_target_2_label_claim_check | Data!B41 | Optional Target 2 Label Claim Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | parent_sample_match_check | Data!B38 | Parent Sample Match Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | pass_fail | Data!B31 | Pass/Fail | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | qbench_sample_label_amount_lookup | Paste!N24:P36 | QBench Sample Label Amount Lookup | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | replicate_count | Data!B34 | Replicate Rows Present | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | replicate_results | COA!A10:G20 | Homogeneity Replicate Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | report_results | COA!A1:G20 | Homogeneity COA Output | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | required_target_fields_check | Data!B40 | Required Target 1 and Label Claim Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | required_unit_mass_check | Data!B39 | Required Unit Mass Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | reviewer_parent_sample_confirmation | Paste!D6 | Reviewer Parent Sample Confirmation | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | target_cannabinoid_1 | Data!B3 | Target Cannabinoid 1 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | target_cannabinoid_2 | Data!B5 | Target Cannabinoid 2 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | unique_cp_test_id_count | Data!B35 | Unique CP Test IDs Counted | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | validation_status | Data!B42 | Overall Input Validation Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_limit | Specifications!C5 | Aspergillus Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_loq | Specifications!B5 | Aspergillus LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_mu | Specifications!E5 | Aspergillus MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_result | Specifications!D9 | Aspergillus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_status | Specifications!F9 | Aspergillus Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | aspergillusspp_metrc | Report!C6 | Aspergillus Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | flavus_result | Data!E3 | A. Flavus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | fumigatus_result | Data!E4 | A. fumigatus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_analyte_name_aspergillusspp | METRC!A5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_notes_aspergillusspp | METRC!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_pass_fail_aspergillusspp | METRC!C5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_quantity_aspergillusspp | METRC!B5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_to_include_aspergillusspp | METRC!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | niger_result | Data!E2 | A. niger (HEX) Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | report_content | Report!A2:D5 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | report_header | Report!A1:D1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | report_results | Report!A1:D5 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | sub_species | Data!F2 | Asp Sub Species | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | terreus_result | Data!E5 | A. terreus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_limit | Specifications!C5 | Salmonella Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_loq | Specifications!B5 | Salmonella LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_mu | Specifications!E5 | Salmonella MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_result | Specifications!D5 | Salmonella Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_status | Specifications!F5 | Salmonella Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salmonella_results | Data!E2 | Salmonella Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_limit | Specifications!C5 | STEC Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_loq | Specifications!B5 | STEC LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_mu | Specifications!E5 | STEC MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_result | Specifications!D5 | STEC Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_results | Data!E2 | STEC Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_status | Specifications!F5 | STEC Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | lis_results | Data!E2 | Listeria Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_limit | Specifications!C5 | Total Aerobic Count Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_loq | Specifications!B5 | Total Aerobic Count LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_mu | Specifications!E5 | Total Aerobic Count MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_result | Specifications!D5 | Total Aerobic Count Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_results | Data!E2 | Total Aerobic Count Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_status | Specifications!F5 | Total Aerobic Count Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_limit | Specifications!C5 | Total Yeast and Mold Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_loq | Specifications!B5 | Total Yeast and Mold LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_mu | Specifications!E5 | Total Yeast and Mold MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_result | Specifications!D5 | Total Yeast and Mold Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_results | Data!E2 | YM Automation Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_status | Specifications!F5 | Total Yeast and Mold Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_limit | Specifications!C5 | Enterobacteriaceae Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_loq | Specifications!B5 | Enterobacteriaceae LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_mu | Specifications!E5 | Enterobacteriaceae MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_result | Specifications!D5 | Enterobacteriaceae Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_results | Data!E2 | Enterobacteriaceae Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_status | Specifications!F5 | Enterobacteriaceae Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+
+## Rescan 2026-07-04 Named-Cell Changes
+
+| Assay | Worksheet | Named Cell | Cell/Range | Purpose | Used by COA? | Notes |
+|---|---|---|---|---|---|---|
+| Other | Example Batch Worksheet | control | D2 | Control  | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Other | [Batch] Example Worksheet | control | D2 | Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Other | Training Worksheet | example_named_cell | General!A18 | Example | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic | Data!E2 | Arsenic | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_limit | Specifications!C5 | Arsenic Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_loq | Specifications!B5 | Arsenic LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_mu | Specifications!E5 | Arsenic MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_result | Specifications!D5 | Arsenic Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_status | Specifications!F5 | Arsenic Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium | Data!F2 | Cadmium  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_limit | Specifications!C6 | Cadmium Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_loq | Specifications!B6 | Cadmium LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_mu | Specifications!E6 | Cadmium MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_result | Specifications!D6 | Cadmium Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_status | Specifications!F6 | Cadmium Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | df | Data!I2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead | Data!G2 | Lead | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_limit | Specifications!C7 | Lead Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_loq | Specifications!B7 | Lead LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_mu | Specifications!E7 | Lead MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_result | Specifications!D7 | Lead Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury | Data!H2 | Mercury | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_limit | Specifications!C8 | Mercury Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_loq | Specifications!B8 | Mercury LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_mu | Specifications!E8 | Mercury MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_result | Specifications!D8 | Mercury Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_status | Specifications!F8 | Mercury Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | report_results | Report!A1:F6 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | df | Data!G2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | purity_results | 'Purity Data'!C2:R2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | report_results | Report!A1:F21 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_1 | Data!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_10 | Data!N5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_11 | Data!O5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_12 | Data!P5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_13 | Data!Q5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_14 | 'Purity Data'!C2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_15 | 'Purity Data'!D2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_16 | 'Purity Data'!E2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_17 | 'Purity Data'!F2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_18 | 'Purity Data'!G2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_19 | 'Purity Data'!H2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_2 | Data!F5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_20 | 'Purity Data'!I2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_21 | 'Purity Data'!J2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_22 | 'Purity Data'!K2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_23 | 'Purity Data'!L2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_24 | 'Purity Data'!M2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_25 | 'Purity Data'!N2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_26 | 'Purity Data'!O2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_27 | 'Purity Data'!P2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_28 | 'Purity Data'!Q2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_29 | 'Purity Data'!R2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_3 | Data!G5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_4 | Data!H5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_5 | Data!I5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_6 | Data!J5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_7 | Data!K5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_8 | Data!L5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_9 | Data!M5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | results | Data!E5:Q5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | total_thc | Report!B1 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | total_thc_report_result | Data!C11 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb1 | Data!E2 | Aflatoxin B1 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb1_metrc | Specifications!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb2 | Data!F2 | Aflatoxin B2 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb2_metrc | Specifications!D6 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing1 | Data!G2 | Aflatoxin G1 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing1_metrc | Specifications!D7 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing2 | Data!H2 | Aflatoxin G2 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing2_metrc | Specifications!D8 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | df | Data!J2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | mycotoxin_results | Data!E2:I2 | Mycotoxin Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | ochratoxina | Data!I2 | Ochratoxin A | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | ochratoxina_metrc | Specifications!D9 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | report_results | Report!A1:F8 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | totalmycod_b1b2g1g2_metrc | Specifications!D11 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | totalmycod_b1b2g1g2oa_metrc | Specifications!D10 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | acetone | Data!F2 | Acetone | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | acetone_metrc | Specifications!E9 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | acetonitrile | Data!G2 | Acetonitrile | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | benzene | Data!H2 | Benzene | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | benzene_metrc | Specifications!E11 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | butane_metrc | Specifications!E12 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | butanes | Data!I2 | Butanes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | butanol_metrc | Specifications!E6 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | chloroform | Data!J2 | Chloroform | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | chloroform_metrc | Specifications!E13 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | cyclohexane | Data!K2 | Cyclohexane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | cyclohexane_metrc | Specifications!E15 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | df | Data!X2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | dichloromethane | Data!L2 | Dichloromethane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | dichloromethane_metrc | Specifications!E16 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | dioxane14_metrc | Specifications!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethanol | Data!M2 | Ethanol | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethanol_metrc | Specifications!E17 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethoxyethanol_metrc | Specifications!E7 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethylacetate | Data!O2 | Ethyl Acetate | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethylacetate_metrc | Specifications!E19 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethylether | Data!N2 | Ethyl Ether | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | heptane | Data!P2 | Heptane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | heptane_metrc | Specifications!E22 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | hexane_metrc | Specifications!E23 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | hexanes | Data!Q2 | Hexanes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | isopropanol2_metrc | Specifications!E8 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | methanol | Data!R2 | Methanol | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | methanol_metrc | Specifications!E25 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | pentane_metrc | Specifications!E26 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | pentanes | Data!S2 | Pentanes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | propane | Data!T2 | Propane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | propane_metrc | Specifications!E27 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | propranolipa2 | Data!E2 | 2 Propanol IPA | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | report_results | Report!A1:F31 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | residual_solvents_results | Data!E2:W2 | Residual Solvents Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | toluene | Data!U2 | Toluene | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | toluene_metrc | Specifications!E29 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | totalxylenes | Data!V2 | Total Xylenes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | totalxylenes_metrc | Specifications!E30 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | trichloroethene | Data!W2 | Trichloroethene | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | trichloroethene_metrc | Specifications!E31 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | abamectin_metrc | Specifications!E5 | Abamectin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | acephate_metrc | Specifications!E6 | Acephate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | acequinocyl_metrc | Specifications!E7 | Acequinocyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | acetamiprid_metrc | Specifications!E8 | Acetamiprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | azadirachtin_metrc | Specifications!E9 | Azadirachtin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | azoxystrobin_metrc | Specifications!E10 | Azoxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | bifenazate_metrc | Specifications!E11 | Bifenazate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | bifenthrin_metrc | Specifications!E12 | Bifenthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | boscalid_metrc | Specifications!E13 | Boscalid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | carbaryl_metrc | Specifications!E14 | Carbaryl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlorantraniliprole_metrc | Specifications!E15 | Chlorantraniliprole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlorfenapyr_metrc | Specifications!E16 | Chlorfenapyr METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlormequatchloride_metrc | Specifications!E17 | Chlormequat Chloride METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlorpyrifos_metrc | Specifications!E18 | Chlorpyrifos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | clofentezine_metrc | Specifications!E19 | Clofentezine METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | cyfluthrin_metrc | Specifications!E20 | Cyfluthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | cypermethrin_metrc | Specifications!E21 | Cypermethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | daminozide_metrc | Specifications!E22 | Daminozide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | df | Data!BH2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | diazinon_metrc | Specifications!E23 | Diazinon METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | dimethoate_metrc | Specifications!E25 | Dimethoate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | etofenprox_metrc | Specifications!E26 | Etofenprox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | etoxazole_metrc | Specifications!E27 | Etoxazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fenoxycarb_metrc | Specifications!E28 | Fenoxycarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fenpyroximate_metrc | Specifications!E29 | Fenpyroximate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fipronil_metrc | Specifications!E30 | Fipronil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | flonicamid_metrc | Specifications!E31 | Flonicamid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fludioxonil_metrc | Specifications!E32 | Fludioxonil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | hexythiazox_metrc | Specifications!E33 | Hexythiazox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | imazalil_metrc | Specifications!E34 | Imazalil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | imidacloprid_metrc | Specifications!E35 | Imidacloprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | kresoximmethyl_metrc | Specifications!E36 | Kresoxim Methyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | malathion_metrc | Specifications!E37 | Malathion METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | metalaxyl_metrc | Specifications!E38 | Metalaxyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | methiocarb_metrc | Specifications!E39 | Methiocarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | methomyl_metrc | Specifications!E40 | Methomyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | myclobutanil_metrc | Specifications!E41 | Myclobutanil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | naled_metrc | Specifications!E42 | Naled METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | oxamyl_metrc | Specifications!E43 | Oxamyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | paclobutrazol_metrc | Specifications!E44 | Paclobutrazol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | permethrins_metrc | Specifications!E45 | Permethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pesticides_results | Data!E2:BG2 | Pesticide Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | phosmet_metrc | Specifications!E46 | Phosmet METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | piperonyl_butoxide_metrc | Specifications!E47 | Piperonyl Butoxide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | prallethrin_metrc | Specifications!E48 | Prallethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | propiconazole_metrc | Specifications!E49 | Propiconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | propoxur_metrc | Specifications!E50 | Propoxur METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pyrethrins_metrc | Specifications!E51 | Pyrethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pyridaben_metrc | Specifications!E52 | Pyridaben METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | report_results | Report!A1:R25 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | report_results_single | A1:F75 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | spinosad_metrc | Specifications!E55 | Spinosad METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | spiromesifen_metrc | Specifications!E56 | Spiromesifen METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | spirotetramat_metrc | Specifications!E57 | Spirotetramat METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | tebuconazole_metrc | Specifications!E58 | Tebuconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | thiamethoxam_metrc | Specifications!E59 | Thiamethoxam METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | trifloxystrobin_metrc | Specifications!E60 | Trifloxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | abamectin_metrc | Specifications!E5 | Abamectin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | acephate_metrc | Specifications!E6 | Acephate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | acequinocyl_metrc | Specifications!E7 | Acequinocyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | acetamiprid_metrc | Specifications!E8 | Acetamiprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | aldicarb_metrc | Specifications!E9 | Aldicarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | azadirachtin_metrc | Specifications!E10 | Azadirachtin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | azoxystrobin_metrc | Specifications!E11 | Azoxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | bifenazate_metrc | Specifications!E12 | Bifenazate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | bifenthrin_metrc | Specifications!E13 | Bifenthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | boscalid_metrc | Specifications!E14 | Boscalid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | carbaryl_metrc | Specifications!E15 | Carbaryl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | carbofuran_metrc | Specifications!E16 | Carbofuran METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlorantraniliprole_metrc | Specifications!E17 | Chlorantraniliprole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlorfenapyr_metrc | Specifications!E18 | Chlorfenapyr METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlormequat_metrc | Specifications!E19 | Chlormequat METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlormequatchloride_metrc | Specifications!E20 | Chlormequat Chloride METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlorpyrifos_metrc | Specifications!E21 | Chlorpyrifos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | clofentezine_metrc | Specifications!E22 | Clofentezine METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | coumaphos_metrc | Specifications!E23 | Coumaphos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | cyfluthrin_metrc | Specifications!E24 | Cyfluthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | cypermethrin_metrc | Specifications!E25 | Cypermethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | daminozide_metrc | Specifications!E27 | Daminozide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | ddvp_metrc | Specifications!E26 | DDVP METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | diazinon_metrc | Specifications!E28 | Diazinon METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | dimethoate_metrc | Specifications!E29 | Dimethoate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | dimethomorph_metrc | Specifications!E30 | Dimethomorph METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | ethoprophos_metrc | Specifications!E31 | Ethoprophos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | etofenprox_metrc | Specifications!E32 | Etofenprox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | etoxazole_metrc | Specifications!E33 | Etoxazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fenhexamid_metrc | Specifications!E34 | Fenhexamid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fenoxycarb_metrc | Specifications!E35 | Fenoxycarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fenpyroximate_metrc | Specifications!E36 | Fenpyroximate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fipronil_metrc | Specifications!E37 | Fipronil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | flonicamid_metrc | Specifications!E38 | Flonicamid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fludioxonil_metrc | Specifications!E39 | Fludioxonil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | hexythiazox_metrc | Specifications!E40 | Hexythiazox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | imazalil_metrc | Specifications!E41 | Imazalil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | imidacloprid_metrc | Specifications!E42 | Imidacloprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | kresoximmethyl_metrc | Specifications!E43 | Kresoxim Methyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | malathion_metrc | Specifications!E45 | Malathion METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | metalaxyl_metrc | Specifications!E46 | Metalaxyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | metalaxylmefenoxam_metrc | Specifications!E47 | Metalaxyl/Mefenoxam METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | methiocarb_metrc | Specifications!E48 | Methiocarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | methomyl_metrc | Specifications!E49 | Methomyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | methyl_parathion_metrc | Specifications!E50 | Methyl Parathion METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | mevinphos_metrc | Specifications!E51 | Mevinphos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | mgk264_metrc | Specifications!E44 | MGK-264 METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | myclobutanil_metrc | Specifications!E52 | Myclobutanil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | naled_metrc | Specifications!E53 | Naled METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | oxamyl_metrc | Specifications!E54 | Oxamyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | paclobutrazol_metrc | Specifications!E55 | Paclobutrazol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pentachlorobenzene_metrc | Specifications!E56 | Pentachlorobenzene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | permethrins_metrc | Specifications!E57 | Permethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pesticides_results | Data!E2:BU2 | Pesticide Results | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | phosmet_metrc | Specifications!E58 | Phosmet METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | piperonyl_butoxide_metrc | Specifications!E59 | Piperonyl Butoxide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | prallethrin_metrc | Specifications!E60 | Prallethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | propiconazole_metrc | Specifications!E61 | Propiconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | propoxur_metrc | Specifications!E62 | Propoxur METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pyrethrins_metrc | Specifications!E63 | Pyrethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pyridaben_metrc | Specifications!E64 | Pyridaben METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | report_results | Report!A1:L40 |  | Yes | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spinetoram_metrc | Specifications!E65 | Spinetoram METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spinosad_metrc | Specifications!E66 | Spinosad METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spiromesifen_metrc | Specifications!E67 | Spiromesifen METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spirotetramat_metrc | Specifications!E68 | Spirotetramat METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spiroxamine_metrc | Specifications!E69 | Spiroxamine METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | tebuconazole_metrc | Specifications!E70 | Tebuconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | thiacloprid_metrc | Specifications!E71 | Thiacloprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | thiamethoxam_metrc | Specifications!E72 | Thiamethoxam METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | trifloxystrobin_metrc | Specifications!E73 | Trifloxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_0 | F3 | Water Activity 0 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_1 | F4 | Water Activity 1 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_10 | F15 | Water Activity 10 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_11 | F16 | Water Activity 11 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_12 | F17 | Water Activity 12 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_13 | F18 | Water Activity 13 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_14 | F19 | Water Activity 14 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_15 | F20 | Water Activity 15 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_16 | F21 | Water Activity 16 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_17 | F22 | Water Activity 17 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_18 | F23 | Water Activity 18 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_19 | F24 | Water Activity 19 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_2 | F5 | Water Activity 2 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_20 | F27 | Water Activity 20 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_21 | F28 | Water Activity 21 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_22 | F29 | Water Activity 22 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_23 | F30 | Water Activity 23 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_24 | F31 | Water Activity 24 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_25 | F32 | Water Activity 25 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_26 | F33 | Water Activity 26 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_27 | F34 | Water Activity 27 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_28 | F35 | Water Activity 28 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_29 | F36 | Water Activity 29 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_3 | F6 | Water Activity 3 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_30 | F39 | Water Activity 30 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_31 | F40 | Water Activity 31 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_32 | F41 | Water Activity 32 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_33 | F42 | Water Activity 33 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_34 | F43 | Water Activity 34 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_35 | F44 | Water Activity 35 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_36 | F45 | Water Activity 36 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_37 | F46 | Water Activity 37 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_38 | F47 | Water Activity 38 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_39 | F48 | Water Activity 39 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_4 | F7 | Water Activity 4 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_5 | F8 | Water Activity 5 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_6 | F9 | Water Activity 6 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_7 | F10 | Water Activity 7 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_8 | F11 | Water Activity 8 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_9 | F12 | Water Activity 9 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_1 | F13 | Water Activity SS 1 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_1_control | F14 | Water Activity SS 1 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_2 | F25 | Water Activity SS 2 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_2_control | F26 | Water Activity SS 2 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_3 | F37 | Water Activity SS 3 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_3_control | F38 | Water Activity SS 3 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_4 | F49 | Water Activity SS 4 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_4_control | F50 | Water Activity SS 4 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Test WS] | metrc_analyte_name_wateractivity | METRC!A5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_notes_wateractivity | METRC!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_pass_fail_wateractivity | METRC!C5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_quantity_wateractivity | METRC!B5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_to_include_wateractivity | METRC!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | pass_fail_report | Specifications!B7 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | wateractivity_metrc | Specifications!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | wateractivityaw | Data!D2 | Water Activity aw | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Batch WS] | test | F2 | stes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Batch WS] | test2 | F3 | steste | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Foreign_Material | Foreign Material [Test WS] | ffm_metrc | Report!C2 | Foreign Material METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Foreign_Material | Foreign Material [Test WS] | pass_fail | Data!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Foreign_Material | Foreign Material [Test WS] | report_results | Report!A1:C5 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | ahumulene_metrc | D22 | A Humulene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | ahumulene_metrc_mgg | E22 | A Humulene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | apinene_metrc | D5 | A Pinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | apinene_metrc_mgg | E5 | A Pinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | aterpinene_metrc | D10 | A Terpinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | aterpinene_metrc_mgg | E10 | A Terpinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bcaryophyllene_metrc | D21 | B Caryophyllene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bcaryophyllene_metrc_mgg | E21 | B Caryophyllene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bisabolol_metrc | D27 | Bisabolol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bisabolol_metrc_mgg | E27 | Bisabolol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bmyrcene_metrc | D7 | B Myrcene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bmyrcene_metrc_mgg | E7 | B Myrcene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bpinene_metrc | D8 | B Pinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bpinene_metrc_mgg | E8 | B Pinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | camphene_metrc | D6 | Camphene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | camphene_metrc_mgg | E6 | Camphene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | caryophylleneoxide_metrc | D26 | Caryophyllene Oxide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | caryophylleneoxide_metrc_mgg | E26 | Caryophyllene Oxide METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisnerolidol_metrc | D23 | Cis Nerolidol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisnerolidol_metrc_mgg | E23 | Cis Nerolidol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisocimene_metrc | D11 | Cis Ocimene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisocimene_metrc_mgg | E11 | Cis Ocimene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | delta3carene_metrc | D9 | Delta 3 Carene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | delta3carene_metrc_mgg | E9 | Delta 3 Carene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | dlimonene_metrc | D12 | D Limonene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | dlimonene_metrc_mgg | E12 | D Limonene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | eucalyptol_metrc | D15 | Eucalyptol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | eucalyptol_metrc_mgg | E15 | Eucalyptol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | geraniol_metrc | D20 | Geraniol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | geraniol_metrc_mgg | E20 | Geraniol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | gterpinene_metrc | D16 | G Terpinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | gterpinene_metrc_mgg | E16 | G Terpinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | guaiol_metrc | D25 | Guaiol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | guaiol_metrc_mgg | E25 | Guaiol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | isopulegol_metrc | D19 | Isopulegol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | isopulegol_metrc_mgg | E19 | Isopulegol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | linalool_metrc | D18 | Linalool METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | linalool_metrc_mgg | E18 | Linalool METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | pcymene_metrc | D13 | P Cymene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | pcymene_metrc_mgg | E13 | P Cymene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | terpinolene_metrc | D17 | Terpinolene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | terpinolene_metrc_mgg | E17 | Terpinolene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | testterpenes | E4 | Test Terpenes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transnerolidol_metrc | D24 | Trans Nerolidol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transnerolidol_metrc_mgg | E24 | Trans Nerolidol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transocimene_metrc | D14 | Trans Ocimene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transocimene_metrc_mgg | E14 | Trans Ocimene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | aspergillusspp | I2 | Aspergillus spp. | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | aspergillusspp_metrc | Specifications!E10 | Aspergillus Spp METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | enterobacteriaceae | F2 | Enterobacteriaceae | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | enterobacteriaceae_metrc | Specifications!E7 | Enterobacteriaceae METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | lmonocytogenes | J2 | L. monocytogenes | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | lmonocytogenes_metrc | Specifications!E11 | L Monocytogenes METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | microbials_results | Data!D2:J2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | report_result | Report!A1:F9 |  | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | salmonellaspecies | G2 | Salmonella species | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | salmonellaspecies_metrc | Specifications!E8 | Salmonella Species METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | shigatoxin_producingecoli_metrc | Specifications!E9 | Shiga Toxin-Producing E Coli METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | shigatoxinproducingecoli | H2 | Shiga toxin-producing E. coli | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | totalaerobic | D2 | Total aerobic microbial | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | totalaerobicmicrobial_metrc | Specifications!E5 | Total Aerobic Microbial METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | totalyeastandmold_metrc | Specifications!E6 | Total Yeast And Mold METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | yeastmold | E2 | Total yeast and mold | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Homogeneity | Homogeneity [Test WS] | average_actual_unit_mass_g | Data!B8 | Average Actual Unit Mass g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | duplicate_cp_test_id_check | Data!B36 | Duplicate CP Test ID Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | extra_pasted_rows_check | Data!B37 | Extra Pasted Rows Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_cannabinoid_1_label_variance | Data!B28 | Cannabinoid 1 Label Variance for Highest Cannabinoid | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_cannabinoid_2_label_variance | Data!B30 | Cannabinoid 2 Label Variance for Highest Cannabinoid | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_mass_label_variance | Data!B26 | Mass Label Variance for Highest Unit Mass | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_reported_cannabinoid_1_mg_container | Data!B27 | Highest Reported Cannabinoid 1 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_reported_cannabinoid_2_mg_container | Data!B29 | Highest Reported Cannabinoid 2 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_reported_unit_mass_g | Data!B25 | Highest Reported Unit Mass g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | homogeneity_metrc | COA!F1 | Homogeneity METRC | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_1_mg_container | Data!B4 | Label Cannabinoid 1 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_1_source_status | Paste!Q4 | Label Cannabinoid 1 Source Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_2_mg_container | Data!B6 | Label Cannabinoid 2 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_2_source_status | Paste!U4 | Label Cannabinoid 2 Source Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_unit_mass_g | Data!B7 | Label Unit Mass g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | manual_label_cannabinoid_1_mg_container | Paste!O4 | Manual Label Cannabinoid 1 mg/container Override | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | manual_label_cannabinoid_2_mg_container | Paste!S4 | Manual Label Cannabinoid 2 mg/container Override | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | optional_target_2_label_claim_check | Data!B41 | Optional Target 2 Label Claim Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | parent_sample_match_check | Data!B38 | Parent Sample Match Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | pass_fail | Data!B31 | Pass/Fail | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | qbench_sample_label_amount_lookup | Paste!N24:P36 | QBench Sample Label Amount Lookup | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | replicate_count | Data!B34 | Replicate Rows Present | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | replicate_results | COA!A10:G20 | Homogeneity Replicate Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | report_results | COA!A1:G20 | Homogeneity COA Output | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | required_target_fields_check | Data!B40 | Required Target 1 and Label Claim Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | required_unit_mass_check | Data!B39 | Required Unit Mass Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | reviewer_parent_sample_confirmation | Paste!D6 | Reviewer Parent Sample Confirmation | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | target_cannabinoid_1 | Data!B3 | Target Cannabinoid 1 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | target_cannabinoid_2 | Data!B5 | Target Cannabinoid 2 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | unique_cp_test_id_count | Data!B35 | Unique CP Test IDs Counted | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | validation_status | Data!B42 | Overall Input Validation Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_limit | Specifications!C5 | Aspergillus Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_loq | Specifications!B5 | Aspergillus LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_mu | Specifications!E5 | Aspergillus MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_result | Specifications!D9 | Aspergillus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_status | Specifications!F9 | Aspergillus Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | aspergillusspp_metrc | Report!C6 | Aspergillus Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | flavus_result | Data!E3 | A. Flavus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | fumigatus_result | Data!E4 | A. fumigatus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_analyte_name_aspergillusspp | METRC!A5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_notes_aspergillusspp | METRC!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_pass_fail_aspergillusspp | METRC!C5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_quantity_aspergillusspp | METRC!B5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_to_include_aspergillusspp | METRC!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | niger_result | Data!E2 | A. niger (HEX) Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | report_content | Report!A2:D5 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | report_header | Report!A1:D1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | report_results | Report!A1:D5 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | sub_species | Data!F2 | Asp Sub Species | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | terreus_result | Data!E5 | A. terreus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_limit | Specifications!C5 | Salmonella Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_loq | Specifications!B5 | Salmonella LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_mu | Specifications!E5 | Salmonella MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_result | Specifications!D5 | Salmonella Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_status | Specifications!F5 | Salmonella Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salmonella_results | Data!E2 | Salmonella Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_limit | Specifications!C5 | STEC Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_loq | Specifications!B5 | STEC LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_mu | Specifications!E5 | STEC MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_result | Specifications!D5 | STEC Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_results | Data!E2 | STEC Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_status | Specifications!F5 | STEC Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | lis_results | Data!E2 | Listeria Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_limit | Specifications!C5 | Total Aerobic Count Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_loq | Specifications!B5 | Total Aerobic Count LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_mu | Specifications!E5 | Total Aerobic Count MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_result | Specifications!D5 | Total Aerobic Count Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_results | Data!E2 | Total Aerobic Count Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_status | Specifications!F5 | Total Aerobic Count Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_limit | Specifications!C5 | Total Yeast and Mold Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_loq | Specifications!B5 | Total Yeast and Mold LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_mu | Specifications!E5 | Total Yeast and Mold MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_result | Specifications!D5 | Total Yeast and Mold Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_results | Data!E2 | YM Automation Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_status | Specifications!F5 | Total Yeast and Mold Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_limit | Specifications!C5 | Enterobacteriaceae Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_loq | Specifications!B5 | Enterobacteriaceae LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_mu | Specifications!E5 | Enterobacteriaceae MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_result | Specifications!D5 | Enterobacteriaceae Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_results | Data!E2 | Enterobacteriaceae Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_status | Specifications!F5 | Enterobacteriaceae Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+
+## Rescan 2026-07-04 Named-Cell Changes
+
+| Assay | Worksheet | Named Cell | Cell/Range | Purpose | Used by COA? | Notes |
+|---|---|---|---|---|---|---|
+| Other | Example Batch Worksheet | control | D2 | Control  | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Other | [Batch] Example Worksheet | control | D2 | Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Other | Training Worksheet | example_named_cell | General!A18 | Example | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic | Data!E2 | Arsenic | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_limit | Specifications!C5 | Arsenic Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_loq | Specifications!B5 | Arsenic LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_mu | Specifications!E5 | Arsenic MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_result | Specifications!D5 | Arsenic Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_status | Specifications!F5 | Arsenic Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium | Data!F2 | Cadmium  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_limit | Specifications!C6 | Cadmium Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_loq | Specifications!B6 | Cadmium LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_mu | Specifications!E6 | Cadmium MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_result | Specifications!D6 | Cadmium Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_status | Specifications!F6 | Cadmium Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | df | Data!I2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead | Data!G2 | Lead | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_limit | Specifications!C7 | Lead Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_loq | Specifications!B7 | Lead LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_mu | Specifications!E7 | Lead MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_result | Specifications!D7 | Lead Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury | Data!H2 | Mercury | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_limit | Specifications!C8 | Mercury Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_loq | Specifications!B8 | Mercury LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_mu | Specifications!E8 | Mercury MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_result | Specifications!D8 | Mercury Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_status | Specifications!F8 | Mercury Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | report_results | Report!A1:F6 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | df | Data!G2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | purity_results | 'Purity Data'!C2:R2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | report_results | Report!A1:F21 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_1 | Data!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_10 | Data!N5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_11 | Data!O5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_12 | Data!P5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_13 | Data!Q5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_14 | 'Purity Data'!C2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_15 | 'Purity Data'!D2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_16 | 'Purity Data'!E2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_17 | 'Purity Data'!F2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_18 | 'Purity Data'!G2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_19 | 'Purity Data'!H2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_2 | Data!F5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_20 | 'Purity Data'!I2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_21 | 'Purity Data'!J2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_22 | 'Purity Data'!K2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_23 | 'Purity Data'!L2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_24 | 'Purity Data'!M2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_25 | 'Purity Data'!N2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_26 | 'Purity Data'!O2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_27 | 'Purity Data'!P2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_28 | 'Purity Data'!Q2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_29 | 'Purity Data'!R2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_3 | Data!G5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_4 | Data!H5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_5 | Data!I5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_6 | Data!J5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_7 | Data!K5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_8 | Data!L5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_9 | Data!M5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | results | Data!E5:Q5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | total_thc | Report!B1 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | total_thc_report_result | Data!C11 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb1 | Data!E2 | Aflatoxin B1 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb1_metrc | Specifications!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb2 | Data!F2 | Aflatoxin B2 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb2_metrc | Specifications!D6 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing1 | Data!G2 | Aflatoxin G1 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing1_metrc | Specifications!D7 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing2 | Data!H2 | Aflatoxin G2 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing2_metrc | Specifications!D8 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | df | Data!J2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | mycotoxin_results | Data!E2:I2 | Mycotoxin Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | ochratoxina | Data!I2 | Ochratoxin A | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | ochratoxina_metrc | Specifications!D9 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | report_results | Report!A1:F8 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | totalmycod_b1b2g1g2_metrc | Specifications!D11 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | totalmycod_b1b2g1g2oa_metrc | Specifications!D10 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | acetone | Data!F2 | Acetone | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | acetone_metrc | Specifications!E9 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | acetonitrile | Data!G2 | Acetonitrile | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | benzene | Data!H2 | Benzene | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | benzene_metrc | Specifications!E11 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | butane_metrc | Specifications!E12 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | butanes | Data!I2 | Butanes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | butanol_metrc | Specifications!E6 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | chloroform | Data!J2 | Chloroform | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | chloroform_metrc | Specifications!E13 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | cyclohexane | Data!K2 | Cyclohexane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | cyclohexane_metrc | Specifications!E15 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | df | Data!X2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | dichloromethane | Data!L2 | Dichloromethane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | dichloromethane_metrc | Specifications!E16 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | dioxane14_metrc | Specifications!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethanol | Data!M2 | Ethanol | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethanol_metrc | Specifications!E17 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethoxyethanol_metrc | Specifications!E7 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethylacetate | Data!O2 | Ethyl Acetate | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethylacetate_metrc | Specifications!E19 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethylether | Data!N2 | Ethyl Ether | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | heptane | Data!P2 | Heptane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | heptane_metrc | Specifications!E22 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | hexane_metrc | Specifications!E23 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | hexanes | Data!Q2 | Hexanes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | isopropanol2_metrc | Specifications!E8 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | methanol | Data!R2 | Methanol | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | methanol_metrc | Specifications!E25 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | pentane_metrc | Specifications!E26 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | pentanes | Data!S2 | Pentanes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | propane | Data!T2 | Propane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | propane_metrc | Specifications!E27 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | propranolipa2 | Data!E2 | 2 Propanol IPA | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | report_results | Report!A1:F31 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | residual_solvents_results | Data!E2:W2 | Residual Solvents Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | toluene | Data!U2 | Toluene | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | toluene_metrc | Specifications!E29 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | totalxylenes | Data!V2 | Total Xylenes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | totalxylenes_metrc | Specifications!E30 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | trichloroethene | Data!W2 | Trichloroethene | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | trichloroethene_metrc | Specifications!E31 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | abamectin_metrc | Specifications!E5 | Abamectin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | acephate_metrc | Specifications!E6 | Acephate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | acequinocyl_metrc | Specifications!E7 | Acequinocyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | acetamiprid_metrc | Specifications!E8 | Acetamiprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | azadirachtin_metrc | Specifications!E9 | Azadirachtin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | azoxystrobin_metrc | Specifications!E10 | Azoxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | bifenazate_metrc | Specifications!E11 | Bifenazate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | bifenthrin_metrc | Specifications!E12 | Bifenthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | boscalid_metrc | Specifications!E13 | Boscalid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | carbaryl_metrc | Specifications!E14 | Carbaryl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlorantraniliprole_metrc | Specifications!E15 | Chlorantraniliprole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlorfenapyr_metrc | Specifications!E16 | Chlorfenapyr METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlormequatchloride_metrc | Specifications!E17 | Chlormequat Chloride METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlorpyrifos_metrc | Specifications!E18 | Chlorpyrifos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | clofentezine_metrc | Specifications!E19 | Clofentezine METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | cyfluthrin_metrc | Specifications!E20 | Cyfluthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | cypermethrin_metrc | Specifications!E21 | Cypermethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | daminozide_metrc | Specifications!E22 | Daminozide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | df | Data!BH2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | diazinon_metrc | Specifications!E23 | Diazinon METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | dimethoate_metrc | Specifications!E25 | Dimethoate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | etofenprox_metrc | Specifications!E26 | Etofenprox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | etoxazole_metrc | Specifications!E27 | Etoxazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fenoxycarb_metrc | Specifications!E28 | Fenoxycarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fenpyroximate_metrc | Specifications!E29 | Fenpyroximate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fipronil_metrc | Specifications!E30 | Fipronil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | flonicamid_metrc | Specifications!E31 | Flonicamid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fludioxonil_metrc | Specifications!E32 | Fludioxonil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | hexythiazox_metrc | Specifications!E33 | Hexythiazox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | imazalil_metrc | Specifications!E34 | Imazalil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | imidacloprid_metrc | Specifications!E35 | Imidacloprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | kresoximmethyl_metrc | Specifications!E36 | Kresoxim Methyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | malathion_metrc | Specifications!E37 | Malathion METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | metalaxyl_metrc | Specifications!E38 | Metalaxyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | methiocarb_metrc | Specifications!E39 | Methiocarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | methomyl_metrc | Specifications!E40 | Methomyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | myclobutanil_metrc | Specifications!E41 | Myclobutanil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | naled_metrc | Specifications!E42 | Naled METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | oxamyl_metrc | Specifications!E43 | Oxamyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | paclobutrazol_metrc | Specifications!E44 | Paclobutrazol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | permethrins_metrc | Specifications!E45 | Permethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pesticides_results | Data!E2:BG2 | Pesticide Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | phosmet_metrc | Specifications!E46 | Phosmet METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | piperonyl_butoxide_metrc | Specifications!E47 | Piperonyl Butoxide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | prallethrin_metrc | Specifications!E48 | Prallethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | propiconazole_metrc | Specifications!E49 | Propiconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | propoxur_metrc | Specifications!E50 | Propoxur METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pyrethrins_metrc | Specifications!E51 | Pyrethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pyridaben_metrc | Specifications!E52 | Pyridaben METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | report_results | Report!A1:R25 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | report_results_single | A1:F75 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | spinosad_metrc | Specifications!E55 | Spinosad METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | spiromesifen_metrc | Specifications!E56 | Spiromesifen METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | spirotetramat_metrc | Specifications!E57 | Spirotetramat METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | tebuconazole_metrc | Specifications!E58 | Tebuconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | thiamethoxam_metrc | Specifications!E59 | Thiamethoxam METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | trifloxystrobin_metrc | Specifications!E60 | Trifloxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | abamectin_metrc | Specifications!E5 | Abamectin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | acephate_metrc | Specifications!E6 | Acephate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | acequinocyl_metrc | Specifications!E7 | Acequinocyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | acetamiprid_metrc | Specifications!E8 | Acetamiprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | aldicarb_metrc | Specifications!E9 | Aldicarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | azadirachtin_metrc | Specifications!E10 | Azadirachtin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | azoxystrobin_metrc | Specifications!E11 | Azoxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | bifenazate_metrc | Specifications!E12 | Bifenazate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | bifenthrin_metrc | Specifications!E13 | Bifenthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | boscalid_metrc | Specifications!E14 | Boscalid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | carbaryl_metrc | Specifications!E15 | Carbaryl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | carbofuran_metrc | Specifications!E16 | Carbofuran METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlorantraniliprole_metrc | Specifications!E17 | Chlorantraniliprole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlorfenapyr_metrc | Specifications!E18 | Chlorfenapyr METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlormequat_metrc | Specifications!E19 | Chlormequat METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlormequatchloride_metrc | Specifications!E20 | Chlormequat Chloride METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlorpyrifos_metrc | Specifications!E21 | Chlorpyrifos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | clofentezine_metrc | Specifications!E22 | Clofentezine METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | coumaphos_metrc | Specifications!E23 | Coumaphos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | cyfluthrin_metrc | Specifications!E24 | Cyfluthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | cypermethrin_metrc | Specifications!E25 | Cypermethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | daminozide_metrc | Specifications!E27 | Daminozide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | ddvp_metrc | Specifications!E26 | DDVP METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | diazinon_metrc | Specifications!E28 | Diazinon METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | dimethoate_metrc | Specifications!E29 | Dimethoate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | dimethomorph_metrc | Specifications!E30 | Dimethomorph METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | ethoprophos_metrc | Specifications!E31 | Ethoprophos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | etofenprox_metrc | Specifications!E32 | Etofenprox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | etoxazole_metrc | Specifications!E33 | Etoxazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fenhexamid_metrc | Specifications!E34 | Fenhexamid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fenoxycarb_metrc | Specifications!E35 | Fenoxycarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fenpyroximate_metrc | Specifications!E36 | Fenpyroximate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fipronil_metrc | Specifications!E37 | Fipronil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | flonicamid_metrc | Specifications!E38 | Flonicamid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fludioxonil_metrc | Specifications!E39 | Fludioxonil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | hexythiazox_metrc | Specifications!E40 | Hexythiazox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | imazalil_metrc | Specifications!E41 | Imazalil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | imidacloprid_metrc | Specifications!E42 | Imidacloprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | kresoximmethyl_metrc | Specifications!E43 | Kresoxim Methyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | malathion_metrc | Specifications!E45 | Malathion METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | metalaxyl_metrc | Specifications!E46 | Metalaxyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | metalaxylmefenoxam_metrc | Specifications!E47 | Metalaxyl/Mefenoxam METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | methiocarb_metrc | Specifications!E48 | Methiocarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | methomyl_metrc | Specifications!E49 | Methomyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | methyl_parathion_metrc | Specifications!E50 | Methyl Parathion METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | mevinphos_metrc | Specifications!E51 | Mevinphos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | mgk264_metrc | Specifications!E44 | MGK-264 METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | myclobutanil_metrc | Specifications!E52 | Myclobutanil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | naled_metrc | Specifications!E53 | Naled METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | oxamyl_metrc | Specifications!E54 | Oxamyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | paclobutrazol_metrc | Specifications!E55 | Paclobutrazol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pentachlorobenzene_metrc | Specifications!E56 | Pentachlorobenzene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | permethrins_metrc | Specifications!E57 | Permethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pesticides_results | Data!E2:BU2 | Pesticide Results | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | phosmet_metrc | Specifications!E58 | Phosmet METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | piperonyl_butoxide_metrc | Specifications!E59 | Piperonyl Butoxide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | prallethrin_metrc | Specifications!E60 | Prallethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | propiconazole_metrc | Specifications!E61 | Propiconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | propoxur_metrc | Specifications!E62 | Propoxur METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pyrethrins_metrc | Specifications!E63 | Pyrethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pyridaben_metrc | Specifications!E64 | Pyridaben METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | report_results | Report!A1:L40 |  | Yes | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spinetoram_metrc | Specifications!E65 | Spinetoram METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spinosad_metrc | Specifications!E66 | Spinosad METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spiromesifen_metrc | Specifications!E67 | Spiromesifen METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spirotetramat_metrc | Specifications!E68 | Spirotetramat METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spiroxamine_metrc | Specifications!E69 | Spiroxamine METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | tebuconazole_metrc | Specifications!E70 | Tebuconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | thiacloprid_metrc | Specifications!E71 | Thiacloprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | thiamethoxam_metrc | Specifications!E72 | Thiamethoxam METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | trifloxystrobin_metrc | Specifications!E73 | Trifloxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_0 | F3 | Water Activity 0 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_1 | F4 | Water Activity 1 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_10 | F15 | Water Activity 10 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_11 | F16 | Water Activity 11 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_12 | F17 | Water Activity 12 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_13 | F18 | Water Activity 13 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_14 | F19 | Water Activity 14 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_15 | F20 | Water Activity 15 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_16 | F21 | Water Activity 16 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_17 | F22 | Water Activity 17 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_18 | F23 | Water Activity 18 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_19 | F24 | Water Activity 19 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_2 | F5 | Water Activity 2 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_20 | F27 | Water Activity 20 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_21 | F28 | Water Activity 21 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_22 | F29 | Water Activity 22 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_23 | F30 | Water Activity 23 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_24 | F31 | Water Activity 24 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_25 | F32 | Water Activity 25 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_26 | F33 | Water Activity 26 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_27 | F34 | Water Activity 27 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_28 | F35 | Water Activity 28 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_29 | F36 | Water Activity 29 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_3 | F6 | Water Activity 3 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_30 | F39 | Water Activity 30 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_31 | F40 | Water Activity 31 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_32 | F41 | Water Activity 32 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_33 | F42 | Water Activity 33 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_34 | F43 | Water Activity 34 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_35 | F44 | Water Activity 35 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_36 | F45 | Water Activity 36 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_37 | F46 | Water Activity 37 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_38 | F47 | Water Activity 38 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_39 | F48 | Water Activity 39 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_4 | F7 | Water Activity 4 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_5 | F8 | Water Activity 5 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_6 | F9 | Water Activity 6 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_7 | F10 | Water Activity 7 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_8 | F11 | Water Activity 8 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_9 | F12 | Water Activity 9 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_1 | F13 | Water Activity SS 1 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_1_control | F14 | Water Activity SS 1 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_2 | F25 | Water Activity SS 2 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_2_control | F26 | Water Activity SS 2 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_3 | F37 | Water Activity SS 3 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_3_control | F38 | Water Activity SS 3 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_4 | F49 | Water Activity SS 4 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_4_control | F50 | Water Activity SS 4 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Test WS] | metrc_analyte_name_wateractivity | METRC!A5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_notes_wateractivity | METRC!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_pass_fail_wateractivity | METRC!C5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_quantity_wateractivity | METRC!B5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_to_include_wateractivity | METRC!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | pass_fail_report | Specifications!B7 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | wateractivity_metrc | Specifications!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | wateractivityaw | Data!D2 | Water Activity aw | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Batch WS] | test | F2 | stes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Batch WS] | test2 | F3 | steste | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Foreign_Material | Foreign Material [Test WS] | ffm_metrc | Report!C2 | Foreign Material METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Foreign_Material | Foreign Material [Test WS] | pass_fail | Data!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Foreign_Material | Foreign Material [Test WS] | report_results | Report!A1:C5 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | ahumulene_metrc | D22 | A Humulene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | ahumulene_metrc_mgg | E22 | A Humulene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | apinene_metrc | D5 | A Pinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | apinene_metrc_mgg | E5 | A Pinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | aterpinene_metrc | D10 | A Terpinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | aterpinene_metrc_mgg | E10 | A Terpinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bcaryophyllene_metrc | D21 | B Caryophyllene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bcaryophyllene_metrc_mgg | E21 | B Caryophyllene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bisabolol_metrc | D27 | Bisabolol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bisabolol_metrc_mgg | E27 | Bisabolol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bmyrcene_metrc | D7 | B Myrcene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bmyrcene_metrc_mgg | E7 | B Myrcene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bpinene_metrc | D8 | B Pinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bpinene_metrc_mgg | E8 | B Pinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | camphene_metrc | D6 | Camphene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | camphene_metrc_mgg | E6 | Camphene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | caryophylleneoxide_metrc | D26 | Caryophyllene Oxide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | caryophylleneoxide_metrc_mgg | E26 | Caryophyllene Oxide METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisnerolidol_metrc | D23 | Cis Nerolidol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisnerolidol_metrc_mgg | E23 | Cis Nerolidol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisocimene_metrc | D11 | Cis Ocimene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisocimene_metrc_mgg | E11 | Cis Ocimene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | delta3carene_metrc | D9 | Delta 3 Carene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | delta3carene_metrc_mgg | E9 | Delta 3 Carene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | dlimonene_metrc | D12 | D Limonene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | dlimonene_metrc_mgg | E12 | D Limonene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | eucalyptol_metrc | D15 | Eucalyptol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | eucalyptol_metrc_mgg | E15 | Eucalyptol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | geraniol_metrc | D20 | Geraniol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | geraniol_metrc_mgg | E20 | Geraniol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | gterpinene_metrc | D16 | G Terpinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | gterpinene_metrc_mgg | E16 | G Terpinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | guaiol_metrc | D25 | Guaiol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | guaiol_metrc_mgg | E25 | Guaiol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | isopulegol_metrc | D19 | Isopulegol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | isopulegol_metrc_mgg | E19 | Isopulegol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | linalool_metrc | D18 | Linalool METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | linalool_metrc_mgg | E18 | Linalool METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | pcymene_metrc | D13 | P Cymene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | pcymene_metrc_mgg | E13 | P Cymene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | terpinolene_metrc | D17 | Terpinolene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | terpinolene_metrc_mgg | E17 | Terpinolene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | testterpenes | E4 | Test Terpenes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transnerolidol_metrc | D24 | Trans Nerolidol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transnerolidol_metrc_mgg | E24 | Trans Nerolidol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transocimene_metrc | D14 | Trans Ocimene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transocimene_metrc_mgg | E14 | Trans Ocimene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | aspergillusspp | I2 | Aspergillus spp. | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | aspergillusspp_metrc | Specifications!E10 | Aspergillus Spp METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | enterobacteriaceae | F2 | Enterobacteriaceae | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | enterobacteriaceae_metrc | Specifications!E7 | Enterobacteriaceae METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | lmonocytogenes | J2 | L. monocytogenes | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | lmonocytogenes_metrc | Specifications!E11 | L Monocytogenes METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | microbials_results | Data!D2:J2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | report_result | Report!A1:F9 |  | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | salmonellaspecies | G2 | Salmonella species | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | salmonellaspecies_metrc | Specifications!E8 | Salmonella Species METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | shigatoxin_producingecoli_metrc | Specifications!E9 | Shiga Toxin-Producing E Coli METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | shigatoxinproducingecoli | H2 | Shiga toxin-producing E. coli | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | totalaerobic | D2 | Total aerobic microbial | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | totalaerobicmicrobial_metrc | Specifications!E5 | Total Aerobic Microbial METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | totalyeastandmold_metrc | Specifications!E6 | Total Yeast And Mold METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | yeastmold | E2 | Total yeast and mold | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Homogeneity | Homogeneity [Test WS] | average_actual_unit_mass_g | Data!B8 | Average Actual Unit Mass g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | duplicate_cp_test_id_check | Data!B36 | Duplicate CP Test ID Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | extra_pasted_rows_check | Data!B37 | Extra Pasted Rows Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_cannabinoid_1_label_variance | Data!B28 | Cannabinoid 1 Label Variance for Highest Cannabinoid | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_cannabinoid_2_label_variance | Data!B30 | Cannabinoid 2 Label Variance for Highest Cannabinoid | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_mass_label_variance | Data!B26 | Mass Label Variance for Highest Unit Mass | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_reported_cannabinoid_1_mg_container | Data!B27 | Highest Reported Cannabinoid 1 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_reported_cannabinoid_2_mg_container | Data!B29 | Highest Reported Cannabinoid 2 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_reported_unit_mass_g | Data!B25 | Highest Reported Unit Mass g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | homogeneity_metrc | COA!F1 | Homogeneity METRC | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_1_mg_container | Data!B4 | Label Cannabinoid 1 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_1_source_status | Paste!Q4 | Label Cannabinoid 1 Source Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_2_mg_container | Data!B6 | Label Cannabinoid 2 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_2_source_status | Paste!U4 | Label Cannabinoid 2 Source Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_unit_mass_g | Data!B7 | Label Unit Mass g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | manual_label_cannabinoid_1_mg_container | Paste!O4 | Manual Label Cannabinoid 1 mg/container Override | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | manual_label_cannabinoid_2_mg_container | Paste!S4 | Manual Label Cannabinoid 2 mg/container Override | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | optional_target_2_label_claim_check | Data!B41 | Optional Target 2 Label Claim Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | parent_sample_match_check | Data!B38 | Parent Sample Match Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | pass_fail | Data!B31 | Pass/Fail | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | qbench_sample_label_amount_lookup | Paste!N24:P36 | QBench Sample Label Amount Lookup | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | replicate_count | Data!B34 | Replicate Rows Present | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | replicate_results | COA!A10:G20 | Homogeneity Replicate Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | report_results | COA!A1:G20 | Homogeneity COA Output | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | required_target_fields_check | Data!B40 | Required Target 1 and Label Claim Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | required_unit_mass_check | Data!B39 | Required Unit Mass Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | reviewer_parent_sample_confirmation | Paste!D6 | Reviewer Parent Sample Confirmation | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | target_cannabinoid_1 | Data!B3 | Target Cannabinoid 1 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | target_cannabinoid_2 | Data!B5 | Target Cannabinoid 2 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | unique_cp_test_id_count | Data!B35 | Unique CP Test IDs Counted | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | validation_status | Data!B42 | Overall Input Validation Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_limit | Specifications!C5 | Aspergillus Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_loq | Specifications!B5 | Aspergillus LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_mu | Specifications!E5 | Aspergillus MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_result | Specifications!D9 | Aspergillus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_status | Specifications!F9 | Aspergillus Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | aspergillusspp_metrc | Report!C6 | Aspergillus Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | flavus_result | Data!E3 | A. Flavus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | fumigatus_result | Data!E4 | A. fumigatus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_analyte_name_aspergillusspp | METRC!A5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_notes_aspergillusspp | METRC!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_pass_fail_aspergillusspp | METRC!C5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_quantity_aspergillusspp | METRC!B5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_to_include_aspergillusspp | METRC!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | niger_result | Data!E2 | A. niger (HEX) Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | report_content | Report!A2:D5 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | report_header | Report!A1:D1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | report_results | Report!A1:D5 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | sub_species | Data!F2 | Asp Sub Species | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | terreus_result | Data!E5 | A. terreus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_limit | Specifications!C5 | Salmonella Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_loq | Specifications!B5 | Salmonella LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_mu | Specifications!E5 | Salmonella MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_result | Specifications!D5 | Salmonella Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_status | Specifications!F5 | Salmonella Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salmonella_results | Data!E2 | Salmonella Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_limit | Specifications!C5 | STEC Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_loq | Specifications!B5 | STEC LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_mu | Specifications!E5 | STEC MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_result | Specifications!D5 | STEC Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_results | Data!E2 | STEC Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_status | Specifications!F5 | STEC Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | lis_results | Data!E2 | Listeria Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_limit | Specifications!C5 | Total Aerobic Count Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_loq | Specifications!B5 | Total Aerobic Count LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_mu | Specifications!E5 | Total Aerobic Count MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_result | Specifications!D5 | Total Aerobic Count Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_results | Data!E2 | Total Aerobic Count Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_status | Specifications!F5 | Total Aerobic Count Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_limit | Specifications!C5 | Total Yeast and Mold Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_loq | Specifications!B5 | Total Yeast and Mold LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_mu | Specifications!E5 | Total Yeast and Mold MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_result | Specifications!D5 | Total Yeast and Mold Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_results | Data!E2 | YM Automation Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_status | Specifications!F5 | Total Yeast and Mold Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_limit | Specifications!C5 | Enterobacteriaceae Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_loq | Specifications!B5 | Enterobacteriaceae LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_mu | Specifications!E5 | Enterobacteriaceae MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_result | Specifications!D5 | Enterobacteriaceae Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_results | Data!E2 | Enterobacteriaceae Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_status | Specifications!F5 | Enterobacteriaceae Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+
+## Rescan 2026-07-04 Named-Cell Changes
+
+| Assay | Worksheet | Named Cell | Cell/Range | Purpose | Used by COA? | Notes |
+|---|---|---|---|---|---|---|
+| Other | Example Batch Worksheet | control | D2 | Control  | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Other | [Batch] Example Worksheet | control | D2 | Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Other | Training Worksheet | example_named_cell | General!A18 | Example | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic | Data!E2 | Arsenic | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_limit | Specifications!C5 | Arsenic Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_loq | Specifications!B5 | Arsenic LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_mu | Specifications!E5 | Arsenic MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_result | Specifications!D5 | Arsenic Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | arsenic_status | Specifications!F5 | Arsenic Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium | Data!F2 | Cadmium  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_limit | Specifications!C6 | Cadmium Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_loq | Specifications!B6 | Cadmium LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_mu | Specifications!E6 | Cadmium MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_result | Specifications!D6 | Cadmium Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | cadmium_status | Specifications!F6 | Cadmium Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | df | Data!I2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead | Data!G2 | Lead | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_limit | Specifications!C7 | Lead Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_loq | Specifications!B7 | Lead LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_mu | Specifications!E7 | Lead MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | lead_result | Specifications!D7 | Lead Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury | Data!H2 | Mercury | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_limit | Specifications!C8 | Mercury Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_loq | Specifications!B8 | Mercury LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_mu | Specifications!E8 | Mercury MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_result | Specifications!D8 | Mercury Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | mercury_status | Specifications!F8 | Mercury Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Heavy_Metals | Heavy Metals [Test] Worksheet | report_results | Report!A1:F6 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | df | Data!G2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | purity_results | 'Purity Data'!C2:R2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | report_results | Report!A1:F21 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_1 | Data!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_10 | Data!N5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_11 | Data!O5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_12 | Data!P5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_13 | Data!Q5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_14 | 'Purity Data'!C2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_15 | 'Purity Data'!D2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_16 | 'Purity Data'!E2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_17 | 'Purity Data'!F2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_18 | 'Purity Data'!G2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_19 | 'Purity Data'!H2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_2 | Data!F5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_20 | 'Purity Data'!I2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_21 | 'Purity Data'!J2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_22 | 'Purity Data'!K2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_23 | 'Purity Data'!L2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_24 | 'Purity Data'!M2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_25 | 'Purity Data'!N2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_26 | 'Purity Data'!O2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_27 | 'Purity Data'!P2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_28 | 'Purity Data'!Q2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_29 | 'Purity Data'!R2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_3 | Data!G5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_4 | Data!H5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_5 | Data!I5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_6 | Data!J5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_7 | Data!K5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_8 | Data!L5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | result_9 | Data!M5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | results | Data!E5:Q5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | total_thc | Report!B1 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Cannabinoids | Cannabinoid Potency [Test] Worksheet | total_thc_report_result | Data!C11 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb1 | Data!E2 | Aflatoxin B1 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb1_metrc | Specifications!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb2 | Data!F2 | Aflatoxin B2 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxinb2_metrc | Specifications!D6 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing1 | Data!G2 | Aflatoxin G1 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing1_metrc | Specifications!D7 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing2 | Data!H2 | Aflatoxin G2 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | aflatoxing2_metrc | Specifications!D8 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | df | Data!J2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | mycotoxin_results | Data!E2:I2 | Mycotoxin Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | ochratoxina | Data!I2 | Ochratoxin A | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | ochratoxina_metrc | Specifications!D9 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | report_results | Report!A1:F8 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | totalmycod_b1b2g1g2_metrc | Specifications!D11 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Mycotoxins | Mycotoxin (Qualitative) [Test] Worksheet | totalmycod_b1b2g1g2oa_metrc | Specifications!D10 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | acetone | Data!F2 | Acetone | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | acetone_metrc | Specifications!E9 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | acetonitrile | Data!G2 | Acetonitrile | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | benzene | Data!H2 | Benzene | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | benzene_metrc | Specifications!E11 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | butane_metrc | Specifications!E12 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | butanes | Data!I2 | Butanes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | butanol_metrc | Specifications!E6 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | chloroform | Data!J2 | Chloroform | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | chloroform_metrc | Specifications!E13 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | cyclohexane | Data!K2 | Cyclohexane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | cyclohexane_metrc | Specifications!E15 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | df | Data!X2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | dichloromethane | Data!L2 | Dichloromethane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | dichloromethane_metrc | Specifications!E16 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | dioxane14_metrc | Specifications!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethanol | Data!M2 | Ethanol | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethanol_metrc | Specifications!E17 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethoxyethanol_metrc | Specifications!E7 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethylacetate | Data!O2 | Ethyl Acetate | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethylacetate_metrc | Specifications!E19 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | ethylether | Data!N2 | Ethyl Ether | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | heptane | Data!P2 | Heptane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | heptane_metrc | Specifications!E22 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | hexane_metrc | Specifications!E23 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | hexanes | Data!Q2 | Hexanes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | isopropanol2_metrc | Specifications!E8 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | methanol | Data!R2 | Methanol | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | methanol_metrc | Specifications!E25 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | pentane_metrc | Specifications!E26 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | pentanes | Data!S2 | Pentanes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | propane | Data!T2 | Propane | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | propane_metrc | Specifications!E27 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | propranolipa2 | Data!E2 | 2 Propanol IPA | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | report_results | Report!A1:F31 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | residual_solvents_results | Data!E2:W2 | Residual Solvents Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | toluene | Data!U2 | Toluene | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | toluene_metrc | Specifications!E29 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | totalxylenes | Data!V2 | Total Xylenes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | totalxylenes_metrc | Specifications!E30 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | trichloroethene | Data!W2 | Trichloroethene | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Residual_Solvents | Residual Solvents [Test] Worksheet | trichloroethene_metrc | Specifications!E31 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | abamectin_metrc | Specifications!E5 | Abamectin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | acephate_metrc | Specifications!E6 | Acephate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | acequinocyl_metrc | Specifications!E7 | Acequinocyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | acetamiprid_metrc | Specifications!E8 | Acetamiprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | azadirachtin_metrc | Specifications!E9 | Azadirachtin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | azoxystrobin_metrc | Specifications!E10 | Azoxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | bifenazate_metrc | Specifications!E11 | Bifenazate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | bifenthrin_metrc | Specifications!E12 | Bifenthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | boscalid_metrc | Specifications!E13 | Boscalid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | carbaryl_metrc | Specifications!E14 | Carbaryl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlorantraniliprole_metrc | Specifications!E15 | Chlorantraniliprole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlorfenapyr_metrc | Specifications!E16 | Chlorfenapyr METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlormequatchloride_metrc | Specifications!E17 | Chlormequat Chloride METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | chlorpyrifos_metrc | Specifications!E18 | Chlorpyrifos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | clofentezine_metrc | Specifications!E19 | Clofentezine METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | cyfluthrin_metrc | Specifications!E20 | Cyfluthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | cypermethrin_metrc | Specifications!E21 | Cypermethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | daminozide_metrc | Specifications!E22 | Daminozide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | df | Data!BH2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | diazinon_metrc | Specifications!E23 | Diazinon METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | dimethoate_metrc | Specifications!E25 | Dimethoate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | etofenprox_metrc | Specifications!E26 | Etofenprox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | etoxazole_metrc | Specifications!E27 | Etoxazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fenoxycarb_metrc | Specifications!E28 | Fenoxycarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fenpyroximate_metrc | Specifications!E29 | Fenpyroximate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fipronil_metrc | Specifications!E30 | Fipronil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | flonicamid_metrc | Specifications!E31 | Flonicamid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | fludioxonil_metrc | Specifications!E32 | Fludioxonil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | hexythiazox_metrc | Specifications!E33 | Hexythiazox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | imazalil_metrc | Specifications!E34 | Imazalil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | imidacloprid_metrc | Specifications!E35 | Imidacloprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | kresoximmethyl_metrc | Specifications!E36 | Kresoxim Methyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | malathion_metrc | Specifications!E37 | Malathion METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | metalaxyl_metrc | Specifications!E38 | Metalaxyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | methiocarb_metrc | Specifications!E39 | Methiocarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | methomyl_metrc | Specifications!E40 | Methomyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | myclobutanil_metrc | Specifications!E41 | Myclobutanil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | naled_metrc | Specifications!E42 | Naled METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | oxamyl_metrc | Specifications!E43 | Oxamyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | paclobutrazol_metrc | Specifications!E44 | Paclobutrazol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | permethrins_metrc | Specifications!E45 | Permethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pesticides_results | Data!E2:BG2 | Pesticide Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | phosmet_metrc | Specifications!E46 | Phosmet METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | piperonyl_butoxide_metrc | Specifications!E47 | Piperonyl Butoxide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | prallethrin_metrc | Specifications!E48 | Prallethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | propiconazole_metrc | Specifications!E49 | Propiconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | propoxur_metrc | Specifications!E50 | Propoxur METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pyrethrins_metrc | Specifications!E51 | Pyrethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | pyridaben_metrc | Specifications!E52 | Pyridaben METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | report_results | Report!A1:R25 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | report_results_single | A1:F75 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | spinosad_metrc | Specifications!E55 | Spinosad METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | spiromesifen_metrc | Specifications!E56 | Spiromesifen METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | spirotetramat_metrc | Specifications!E57 | Spirotetramat METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | tebuconazole_metrc | Specifications!E58 | Tebuconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | thiamethoxam_metrc | Specifications!E59 | Thiamethoxam METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Qualitative) [Test] Worksheet | trifloxystrobin_metrc | Specifications!E60 | Trifloxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | abamectin_metrc | Specifications!E5 | Abamectin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | acephate_metrc | Specifications!E6 | Acephate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | acequinocyl_metrc | Specifications!E7 | Acequinocyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | acetamiprid_metrc | Specifications!E8 | Acetamiprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | aldicarb_metrc | Specifications!E9 | Aldicarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | azadirachtin_metrc | Specifications!E10 | Azadirachtin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | azoxystrobin_metrc | Specifications!E11 | Azoxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | bifenazate_metrc | Specifications!E12 | Bifenazate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | bifenthrin_metrc | Specifications!E13 | Bifenthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | boscalid_metrc | Specifications!E14 | Boscalid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | carbaryl_metrc | Specifications!E15 | Carbaryl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | carbofuran_metrc | Specifications!E16 | Carbofuran METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlorantraniliprole_metrc | Specifications!E17 | Chlorantraniliprole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlorfenapyr_metrc | Specifications!E18 | Chlorfenapyr METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlormequat_metrc | Specifications!E19 | Chlormequat METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlormequatchloride_metrc | Specifications!E20 | Chlormequat Chloride METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | chlorpyrifos_metrc | Specifications!E21 | Chlorpyrifos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | clofentezine_metrc | Specifications!E22 | Clofentezine METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | coumaphos_metrc | Specifications!E23 | Coumaphos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | cyfluthrin_metrc | Specifications!E24 | Cyfluthrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | cypermethrin_metrc | Specifications!E25 | Cypermethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | daminozide_metrc | Specifications!E27 | Daminozide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | ddvp_metrc | Specifications!E26 | DDVP METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | diazinon_metrc | Specifications!E28 | Diazinon METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | dimethoate_metrc | Specifications!E29 | Dimethoate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | dimethomorph_metrc | Specifications!E30 | Dimethomorph METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | ethoprophos_metrc | Specifications!E31 | Ethoprophos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | etofenprox_metrc | Specifications!E32 | Etofenprox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | etoxazole_metrc | Specifications!E33 | Etoxazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fenhexamid_metrc | Specifications!E34 | Fenhexamid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fenoxycarb_metrc | Specifications!E35 | Fenoxycarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fenpyroximate_metrc | Specifications!E36 | Fenpyroximate METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fipronil_metrc | Specifications!E37 | Fipronil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | flonicamid_metrc | Specifications!E38 | Flonicamid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | fludioxonil_metrc | Specifications!E39 | Fludioxonil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | hexythiazox_metrc | Specifications!E40 | Hexythiazox METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | imazalil_metrc | Specifications!E41 | Imazalil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | imidacloprid_metrc | Specifications!E42 | Imidacloprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | kresoximmethyl_metrc | Specifications!E43 | Kresoxim Methyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | malathion_metrc | Specifications!E45 | Malathion METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | metalaxyl_metrc | Specifications!E46 | Metalaxyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | metalaxylmefenoxam_metrc | Specifications!E47 | Metalaxyl/Mefenoxam METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | methiocarb_metrc | Specifications!E48 | Methiocarb METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | methomyl_metrc | Specifications!E49 | Methomyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | methyl_parathion_metrc | Specifications!E50 | Methyl Parathion METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | mevinphos_metrc | Specifications!E51 | Mevinphos METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | mgk264_metrc | Specifications!E44 | MGK-264 METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | myclobutanil_metrc | Specifications!E52 | Myclobutanil METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | naled_metrc | Specifications!E53 | Naled METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | oxamyl_metrc | Specifications!E54 | Oxamyl METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | paclobutrazol_metrc | Specifications!E55 | Paclobutrazol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pass_fail | Specifications!F2 |  | Yes | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pentachlorobenzene_metrc | Specifications!E56 | Pentachlorobenzene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | permethrins_metrc | Specifications!E57 | Permethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pesticides_results | Data!E2:BU2 | Pesticide Results | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | phosmet_metrc | Specifications!E58 | Phosmet METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | piperonyl_butoxide_metrc | Specifications!E59 | Piperonyl Butoxide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | prallethrin_metrc | Specifications!E60 | Prallethrin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | propiconazole_metrc | Specifications!E61 | Propiconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | propoxur_metrc | Specifications!E62 | Propoxur METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pyrethrins_metrc | Specifications!E63 | Pyrethrins METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | pyridaben_metrc | Specifications!E64 | Pyridaben METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | report_results | Report!A1:L40 |  | Yes | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spinetoram_metrc | Specifications!E65 | Spinetoram METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spinosad_metrc | Specifications!E66 | Spinosad METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spiromesifen_metrc | Specifications!E67 | Spiromesifen METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spirotetramat_metrc | Specifications!E68 | Spirotetramat METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | spiroxamine_metrc | Specifications!E69 | Spiroxamine METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | tebuconazole_metrc | Specifications!E70 | Tebuconazole METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | thiacloprid_metrc | Specifications!E71 | Thiacloprid METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | thiamethoxam_metrc | Specifications!E72 | Thiamethoxam METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Pesticides | Pesticides (Quantitative) [Test] Worksheet | trifloxystrobin_metrc | Specifications!E73 | Trifloxystrobin METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_0 | F3 | Water Activity 0 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_1 | F4 | Water Activity 1 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_10 | F15 | Water Activity 10 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_11 | F16 | Water Activity 11 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_12 | F17 | Water Activity 12 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_13 | F18 | Water Activity 13 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_14 | F19 | Water Activity 14 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_15 | F20 | Water Activity 15 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_16 | F21 | Water Activity 16 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_17 | F22 | Water Activity 17 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_18 | F23 | Water Activity 18 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_19 | F24 | Water Activity 19 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_2 | F5 | Water Activity 2 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_20 | F27 | Water Activity 20 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_21 | F28 | Water Activity 21 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_22 | F29 | Water Activity 22 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_23 | F30 | Water Activity 23 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_24 | F31 | Water Activity 24 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_25 | F32 | Water Activity 25 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_26 | F33 | Water Activity 26 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_27 | F34 | Water Activity 27 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_28 | F35 | Water Activity 28 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_29 | F36 | Water Activity 29 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_3 | F6 | Water Activity 3 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_30 | F39 | Water Activity 30 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_31 | F40 | Water Activity 31 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_32 | F41 | Water Activity 32 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_33 | F42 | Water Activity 33 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_34 | F43 | Water Activity 34 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_35 | F44 | Water Activity 35 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_36 | F45 | Water Activity 36 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_37 | F46 | Water Activity 37 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_38 | F47 | Water Activity 38 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_39 | F48 | Water Activity 39 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_4 | F7 | Water Activity 4 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_5 | F8 | Water Activity 5 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_6 | F9 | Water Activity 6 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_7 | F10 | Water Activity 7 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_8 | F11 | Water Activity 8 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_9 | F12 | Water Activity 9 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_1 | F13 | Water Activity SS 1 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_1_control | F14 | Water Activity SS 1 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_2 | F25 | Water Activity SS 2 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_2_control | F26 | Water Activity SS 2 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_3 | F37 | Water Activity SS 3 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_3_control | F38 | Water Activity SS 3 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_4 | F49 | Water Activity SS 4 | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Protocol WS] Sample Analysis | wateractivity_ss_4_control | F50 | Water Activity SS 4 Control | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Water_Activity | Water Activity [Test WS] | metrc_analyte_name_wateractivity | METRC!A5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_notes_wateractivity | METRC!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_pass_fail_wateractivity | METRC!C5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_quantity_wateractivity | METRC!B5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | metrc_to_include_wateractivity | METRC!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | pass_fail_report | Specifications!B7 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | wateractivity_metrc | Specifications!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Test WS] | wateractivityaw | Data!D2 | Water Activity aw | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Batch WS] | test | F2 | stes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Water_Activity | Water Activity [Batch WS] | test2 | F3 | steste | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Foreign_Material | Foreign Material [Test WS] | ffm_metrc | Report!C2 | Foreign Material METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Foreign_Material | Foreign Material [Test WS] | pass_fail | Data!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Foreign_Material | Foreign Material [Test WS] | report_results | Report!A1:C5 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | ahumulene_metrc | D22 | A Humulene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | ahumulene_metrc_mgg | E22 | A Humulene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | apinene_metrc | D5 | A Pinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | apinene_metrc_mgg | E5 | A Pinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | aterpinene_metrc | D10 | A Terpinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | aterpinene_metrc_mgg | E10 | A Terpinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bcaryophyllene_metrc | D21 | B Caryophyllene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bcaryophyllene_metrc_mgg | E21 | B Caryophyllene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bisabolol_metrc | D27 | Bisabolol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bisabolol_metrc_mgg | E27 | Bisabolol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bmyrcene_metrc | D7 | B Myrcene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bmyrcene_metrc_mgg | E7 | B Myrcene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bpinene_metrc | D8 | B Pinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | bpinene_metrc_mgg | E8 | B Pinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | camphene_metrc | D6 | Camphene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | camphene_metrc_mgg | E6 | Camphene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | caryophylleneoxide_metrc | D26 | Caryophyllene Oxide METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | caryophylleneoxide_metrc_mgg | E26 | Caryophyllene Oxide METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisnerolidol_metrc | D23 | Cis Nerolidol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisnerolidol_metrc_mgg | E23 | Cis Nerolidol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisocimene_metrc | D11 | Cis Ocimene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | cisocimene_metrc_mgg | E11 | Cis Ocimene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | delta3carene_metrc | D9 | Delta 3 Carene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | delta3carene_metrc_mgg | E9 | Delta 3 Carene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | dlimonene_metrc | D12 | D Limonene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | dlimonene_metrc_mgg | E12 | D Limonene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | eucalyptol_metrc | D15 | Eucalyptol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | eucalyptol_metrc_mgg | E15 | Eucalyptol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | geraniol_metrc | D20 | Geraniol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | geraniol_metrc_mgg | E20 | Geraniol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | gterpinene_metrc | D16 | G Terpinene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | gterpinene_metrc_mgg | E16 | G Terpinene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | guaiol_metrc | D25 | Guaiol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | guaiol_metrc_mgg | E25 | Guaiol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | isopulegol_metrc | D19 | Isopulegol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | isopulegol_metrc_mgg | E19 | Isopulegol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | linalool_metrc | D18 | Linalool METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | linalool_metrc_mgg | E18 | Linalool METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | pcymene_metrc | D13 | P Cymene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | pcymene_metrc_mgg | E13 | P Cymene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | terpinolene_metrc | D17 | Terpinolene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | terpinolene_metrc_mgg | E17 | Terpinolene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | testterpenes | E4 | Test Terpenes | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transnerolidol_metrc | D24 | Trans Nerolidol METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transnerolidol_metrc_mgg | E24 | Trans Nerolidol METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transocimene_metrc | D14 | Trans Ocimene METRC | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Terpenes | Terpenes [Test] Worksheet | transocimene_metrc_mgg | E14 | Trans Ocimene METRC mg/g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | aspergillusspp | I2 | Aspergillus spp. | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | aspergillusspp_metrc | Specifications!E10 | Aspergillus Spp METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | enterobacteriaceae | F2 | Enterobacteriaceae | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | enterobacteriaceae_metrc | Specifications!E7 | Enterobacteriaceae METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | lmonocytogenes | J2 | L. monocytogenes | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | lmonocytogenes_metrc | Specifications!E11 | L Monocytogenes METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | microbials_results | Data!D2:J2 |  | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | report_result | Report!A1:F9 |  | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | salmonellaspecies | G2 | Salmonella species | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | salmonellaspecies_metrc | Specifications!E8 | Salmonella Species METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | shigatoxin_producingecoli_metrc | Specifications!E9 | Shiga Toxin-Producing E Coli METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | shigatoxinproducingecoli | H2 | Shiga toxin-producing E. coli | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | totalaerobic | D2 | Total aerobic microbial | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | totalaerobicmicrobial_metrc | Specifications!E5 | Total Aerobic Microbial METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | totalyeastandmold_metrc | Specifications!E6 | Total Yeast And Mold METRC | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Microbiology/General_Microbial_Analysis | Microbial Analysis [Test] Worksheet | yeastmold | E2 | Total yeast and mold | Unknown | Discovered/verified in 2026-07-04 rescan (new). |
+| Homogeneity | Homogeneity [Test WS] | average_actual_unit_mass_g | Data!B8 | Average Actual Unit Mass g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | duplicate_cp_test_id_check | Data!B36 | Duplicate CP Test ID Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | extra_pasted_rows_check | Data!B37 | Extra Pasted Rows Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_cannabinoid_1_label_variance | Data!B28 | Cannabinoid 1 Label Variance for Highest Cannabinoid | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_cannabinoid_2_label_variance | Data!B30 | Cannabinoid 2 Label Variance for Highest Cannabinoid | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_mass_label_variance | Data!B26 | Mass Label Variance for Highest Unit Mass | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_reported_cannabinoid_1_mg_container | Data!B27 | Highest Reported Cannabinoid 1 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_reported_cannabinoid_2_mg_container | Data!B29 | Highest Reported Cannabinoid 2 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | highest_reported_unit_mass_g | Data!B25 | Highest Reported Unit Mass g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | homogeneity_metrc | COA!F1 | Homogeneity METRC | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_1_mg_container | Data!B4 | Label Cannabinoid 1 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_1_source_status | Paste!Q4 | Label Cannabinoid 1 Source Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_2_mg_container | Data!B6 | Label Cannabinoid 2 mg/container | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_cannabinoid_2_source_status | Paste!U4 | Label Cannabinoid 2 Source Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | label_unit_mass_g | Data!B7 | Label Unit Mass g | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | manual_label_cannabinoid_1_mg_container | Paste!O4 | Manual Label Cannabinoid 1 mg/container Override | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | manual_label_cannabinoid_2_mg_container | Paste!S4 | Manual Label Cannabinoid 2 mg/container Override | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | optional_target_2_label_claim_check | Data!B41 | Optional Target 2 Label Claim Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | parent_sample_match_check | Data!B38 | Parent Sample Match Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | pass_fail | Data!B31 | Pass/Fail | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | qbench_sample_label_amount_lookup | Paste!N24:P36 | QBench Sample Label Amount Lookup | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | replicate_count | Data!B34 | Replicate Rows Present | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | replicate_results | COA!A10:G20 | Homogeneity Replicate Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | report_results | COA!A1:G20 | Homogeneity COA Output | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | required_target_fields_check | Data!B40 | Required Target 1 and Label Claim Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | required_unit_mass_check | Data!B39 | Required Unit Mass Check | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | reviewer_parent_sample_confirmation | Paste!D6 | Reviewer Parent Sample Confirmation | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | target_cannabinoid_1 | Data!B3 | Target Cannabinoid 1 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | target_cannabinoid_2 | Data!B5 | Target Cannabinoid 2 | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | unique_cp_test_id_count | Data!B35 | Unique CP Test IDs Counted | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Homogeneity | Homogeneity [Test WS] | validation_status | Data!B42 | Overall Input Validation Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_limit | Specifications!C5 | Aspergillus Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_loq | Specifications!B5 | Aspergillus LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_mu | Specifications!E5 | Aspergillus MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_result | Specifications!D9 | Aspergillus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | asp_status | Specifications!F9 | Aspergillus Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | aspergillusspp_metrc | Report!C6 | Aspergillus Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | flavus_result | Data!E3 | A. Flavus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | fumigatus_result | Data!E4 | A. fumigatus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_analyte_name_aspergillusspp | METRC!A5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_notes_aspergillusspp | METRC!D5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_pass_fail_aspergillusspp | METRC!C5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_quantity_aspergillusspp | METRC!B5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | metrc_to_include_aspergillusspp | METRC!E5 |  | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | niger_result | Data!E2 | A. niger (HEX) Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | report_content | Report!A2:D5 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | report_header | Report!A1:D1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | report_results | Report!A1:D5 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | sub_species | Data!F2 | Asp Sub Species | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Aspergillus | Total Aspergillus Microbial Analysis [Test WS] | terreus_result | Data!E5 | A. terreus Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_limit | Specifications!C5 | Salmonella Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_loq | Specifications!B5 | Salmonella LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_mu | Specifications!E5 | Salmonella MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_result | Specifications!D5 | Salmonella Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salm_status | Specifications!F5 | Salmonella Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Salmonella | Salmonella Species [Test] Worksheet | salmonella_results | Data!E2 | Salmonella Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_limit | Specifications!C5 | STEC Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_loq | Specifications!B5 | STEC LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_mu | Specifications!E5 | STEC MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_result | Specifications!D5 | STEC Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_results | Data!E2 | STEC Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/STEC | STEC [Test] Worksheet | stec_status | Specifications!F5 | STEC Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | lis_results | Data!E2 | Listeria Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Listeria | Listeria Monocytogenes [Test] Worksheet | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_limit | Specifications!C5 | Total Aerobic Count Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_loq | Specifications!B5 | Total Aerobic Count LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_mu | Specifications!E5 | Total Aerobic Count MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_result | Specifications!D5 | Total Aerobic Count Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_results | Data!E2 | Total Aerobic Count Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | ac_status | Specifications!F5 | Total Aerobic Count Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TAMC | Total Aerobic Count [Test] WS | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_limit | Specifications!C5 | Total Yeast and Mold Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_loq | Specifications!B5 | Total Yeast and Mold LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_mu | Specifications!E5 | Total Yeast and Mold MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_result | Specifications!D5 | Total Yeast and Mold Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_results | Data!E2 | YM Automation Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/TYMC | Total Yeast and Mold {Test WS} | ym_status | Specifications!F5 | Total Yeast and Mold Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_limit | Specifications!C5 | Enterobacteriaceae Limit | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_loq | Specifications!B5 | Enterobacteriaceae LOQ | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_mu | Specifications!E5 | Enterobacteriaceae MU | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_result | Specifications!D5 | Enterobacteriaceae Result | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_results | Data!E2 | Enterobacteriaceae Results | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | eb_status | Specifications!F5 | Enterobacteriaceae Status | Unknown | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | pass_fail | Specifications!D2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_content | Report!A2:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
+| Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |

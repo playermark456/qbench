@@ -1,0 +1,366 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "47606b9b-1c80-40a5-b4e8-1084dd800c5f",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "background-color:#e0e0e0",
+      "background-color:#e0e0e0;font-weight:bold",
+      "text-wrap:wrap",
+      "text-wrap:wrap;text-align:left",
+      "text-align:left",
+      "font-weight:bold",
+      "text-align:left;font-weight:bold"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {},
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {
+          "B1": [
+            5,
+            1
+          ],
+          "B2": [
+            5,
+            1
+          ],
+          "B3": [
+            5,
+            1
+          ],
+          "B4": [
+            5,
+            1
+          ],
+          "B5": [
+            5,
+            1
+          ],
+          "B6": [
+            5,
+            1
+          ]
+        },
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 27
+          },
+          {
+            "height": 61
+          },
+          {
+            "height": 27
+          },
+          {
+            "height": 27
+          },
+          {
+            "height": 27
+          },
+          {
+            "height": 27
+          },
+          {
+            "height": 27
+          },
+          {
+            "height": 27
+          }
+        ],
+        "tableHeight": 350,
+        "tableOverflow": true,
+        "tableWidth": 1124,
+        "worksheetId": "2f4636a3-8acf-4c9a-9f1c-06fa486c6cac",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "SOP Step",
+            "SOP Description",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.4.1",
+            "For the initial measurement, weigh a 50 mg of sample into a 20 mL HS vial, crimp the aluminum cap with the crimping tool, and assay via GC-MS. If necessary, a sample weight ranging from 5-250 mg may be used instead. ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "Alternate Sample Preparation",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.5.1",
+            "Weigh ≥5 mg of sample into a 5 mL volumetric flask.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.5.2",
+            "Dilute to volume using DMA and vortex briefly to mix.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8.5.3",
+            "Transfer 100 µL of sample to a 20 mL headspace vial and crimp.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "style": {
+          "A1": 1,
+          "B1": 1,
+          "B2": 3,
+          "B3": 5,
+          "B4": 4,
+          "B5": 4,
+          "B6": 4,
+          "C1": 1,
+          "C2": 3,
+          "C3": 5,
+          "C4": 4,
+          "C5": 4,
+          "C6": 4,
+          "D1": 1,
+          "D2": 3,
+          "D3": 5,
+          "D4": 4,
+          "D5": 4,
+          "D6": 4,
+          "E1": 1,
+          "E2": 3,
+          "E3": 5,
+          "E4": 4,
+          "E5": 4,
+          "E6": 4,
+          "F1": 1,
+          "F2": 3,
+          "F3": 5,
+          "F4": 4,
+          "F5": 4,
+          "F6": 4
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "SOP Step",
+        "SOP Description",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.4.1",
+        "For the initial measurement, weigh a 50 mg of sample into a 20 mL HS vial, crimp the aluminum cap with the crimping tool, and assay via GC-MS. If necessary, a sample weight ranging from 5-250 mg may be used instead. ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "Alternate Sample Preparation",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.5.1",
+        "Weigh ≥5 mg of sample into a 5 mL volumetric flask.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.5.2",
+        "Dilute to volume using DMA and vortex briefly to mix.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.5.3",
+        "Transfer 100 µL of sample to a 20 mL headspace vial and crimp.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  }
+}

@@ -1,0 +1,944 @@
+{
+  "_id": "Type:WORKSHEET_VERSION;EntityId:387",
+  "table_config": {
+    "cell_settings": [
+      [
+        {
+          "value": "SOP Step",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 0,
+            "visualCol": 0,
+            "visualRow": 0,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#F3F3F3"
+                }
+              }
+            }
+          }
+        },
+        {
+          "value": "SOP Description",
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 0,
+            "visualCol": 1,
+            "visualRow": 0,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#F3F3F3"
+                }
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 0,
+            "visualCol": 2,
+            "visualRow": 0,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "Criteria",
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 0,
+            "visualCol": 3,
+            "visualRow": 0,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#F3F3F3"
+                }
+              }
+            }
+          }
+        },
+        {
+          "value": "Parameter",
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 0,
+            "visualCol": 4,
+            "visualRow": 0,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#F3F3F3"
+                }
+              }
+            }
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.1",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 1,
+            "visualCol": 0,
+            "visualRow": 1,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            }
+          }
+        },
+        {
+          "value": "Once per month, the QC Check needs to be performed to ensure optimal performance of the Tempo equipment",
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 1,
+            "visualCol": 1,
+            "visualRow": 1,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 1,
+            "visualCol": 2,
+            "visualRow": 1,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 1,
+            "visualCol": 3,
+            "visualRow": 1,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            },
+            "type": "dropdown",
+            "editor": "dropdown",
+            "source": [
+              "Performed",
+              "N/A"
+            ],
+            "options": {},
+            "_automaticallyAssignedMetaProps": [
+              "validator"
+            ]
+          }
+        },
+        {
+          "value": "Remove QC Kit from storage and verify the kit is valid for use.",
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 1,
+            "visualCol": 4,
+            "visualRow": 1,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            }
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.2",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 2,
+            "visualCol": 0,
+            "visualRow": 2,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "Remove the QC Kit from storage. Allow to warm to room temperature prior to removing the kit from the box.",
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 2,
+            "visualCol": 1,
+            "visualRow": 2,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 2,
+            "visualCol": 2,
+            "visualRow": 2,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 2,
+            "visualCol": 3,
+            "visualRow": 2,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            },
+            "type": "dropdown",
+            "editor": "dropdown",
+            "source": [
+              "Performed",
+              "N/A"
+            ],
+            "options": {},
+            "_automaticallyAssignedMetaProps": [
+              "validator"
+            ]
+          }
+        },
+        {
+          "value": "Place each vial and card in a Tempo Filling Rack and place the filler rack in the Tempo Filler.",
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 2,
+            "visualCol": 4,
+            "visualRow": 2,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            }
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.3",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 3,
+            "visualCol": 0,
+            "visualRow": 3,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "Check the expiration date to ensure that the kit is valid for use.",
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 3,
+            "visualCol": 1,
+            "visualRow": 3,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 3,
+            "visualCol": 2,
+            "visualRow": 3,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 3,
+            "visualCol": 3,
+            "visualRow": 3,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5",
+            "type": "dropdown",
+            "editor": "dropdown",
+            "source": [
+              "Performed",
+              "N/A"
+            ],
+            "options": {},
+            "_automaticallyAssignedMetaProps": [
+              "validator"
+            ]
+          }
+        },
+        {
+          "value": "Run the QC Check and validate the results.",
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 3,
+            "visualCol": 4,
+            "visualRow": 3,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            }
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.4",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 4,
+            "visualCol": 0,
+            "visualRow": 4,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "Place each vial and card in a Tempo Filling Rack. The vials and cards labeled with “8” should be in Positions 1-3 and vials and cards labeled with “20” should be in Positions 4-5.",
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 4,
+            "visualCol": 1,
+            "visualRow": 4,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 4,
+            "visualCol": 2,
+            "visualRow": 4,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 4,
+            "visualCol": 3,
+            "visualRow": 4,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 4,
+            "visualCol": 4,
+            "visualRow": 4,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.5",
+          "meta_data": {
+            "visualRow": 5,
+            "visualCol": 0,
+            "row": 5,
+            "col": 0,
+            "prop": 0,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "Place the filler rack in the Tempo Filler and press “Start”",
+          "meta_data": {
+            "visualRow": 5,
+            "visualCol": 1,
+            "row": 5,
+            "col": 1,
+            "prop": 1,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 5,
+            "visualCol": 2,
+            "row": 5,
+            "col": 2,
+            "prop": 2,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 5,
+            "visualCol": 3,
+            "row": 5,
+            "col": 3,
+            "prop": 3,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 5,
+            "visualCol": 4,
+            "row": 5,
+            "col": 4,
+            "prop": 4,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.6",
+          "meta_data": {
+            "visualRow": 6,
+            "visualCol": 0,
+            "row": 6,
+            "col": 0,
+            "prop": 0,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "Upon completion of the QC Check, properly dispose of the used vials.",
+          "meta_data": {
+            "visualRow": 6,
+            "visualCol": 1,
+            "row": 6,
+            "col": 1,
+            "prop": 1,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 6,
+            "visualCol": 2,
+            "row": 6,
+            "col": 2,
+            "prop": 2,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 6,
+            "visualCol": 3,
+            "row": 6,
+            "col": 3,
+            "prop": 3,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 6,
+            "visualCol": 4,
+            "row": 6,
+            "col": 4,
+            "prop": 4,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.7",
+          "meta_data": {
+            "visualRow": 7,
+            "visualCol": 0,
+            "row": 7,
+            "col": 0,
+            "prop": 0,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "Login to the Tempo Check software on the computer.",
+          "meta_data": {
+            "visualRow": 7,
+            "visualCol": 1,
+            "row": 7,
+            "col": 1,
+            "prop": 1,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 7,
+            "visualCol": 2,
+            "row": 7,
+            "col": 2,
+            "prop": 2,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 7,
+            "visualCol": 3,
+            "row": 7,
+            "col": 3,
+            "prop": 3,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 7,
+            "visualCol": 4,
+            "row": 7,
+            "col": 4,
+            "prop": 4,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.8",
+          "meta_data": {
+            "visualRow": 8,
+            "visualCol": 0,
+            "row": 8,
+            "col": 0,
+            "prop": 0,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "While computer loads, place the Tempo Cards on a Tempo Reader rack and load into the Tempo Reader and press “Start” once the software has properly loaded",
+          "meta_data": {
+            "visualRow": 8,
+            "visualCol": 1,
+            "row": 8,
+            "col": 1,
+            "prop": 1,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 8,
+            "visualCol": 2,
+            "row": 8,
+            "col": 2,
+            "prop": 2,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 8,
+            "visualCol": 3,
+            "row": 8,
+            "col": 3,
+            "prop": 3,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 8,
+            "visualCol": 4,
+            "row": 8,
+            "col": 4,
+            "prop": 4,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.9",
+          "meta_data": {
+            "visualRow": 9,
+            "visualCol": 0,
+            "row": 9,
+            "col": 0,
+            "prop": 0,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "Upon completion, dispose of the Tempo Cards.",
+          "meta_data": {
+            "visualRow": 9,
+            "visualCol": 1,
+            "row": 9,
+            "col": 1,
+            "prop": 1,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 9,
+            "visualCol": 2,
+            "row": 9,
+            "col": 2,
+            "prop": 2,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 9,
+            "visualCol": 3,
+            "row": 9,
+            "col": 3,
+            "prop": 3,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 9,
+            "visualCol": 4,
+            "row": 9,
+            "col": 4,
+            "prop": 4,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.10",
+          "meta_data": {
+            "visualRow": 10,
+            "visualCol": 0,
+            "row": 10,
+            "col": 0,
+            "prop": 0,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "In the software, click the “Eye” icon to open the Results Management window.",
+          "meta_data": {
+            "visualRow": 10,
+            "visualCol": 1,
+            "row": 10,
+            "col": 1,
+            "prop": 1,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 10,
+            "visualCol": 2,
+            "row": 10,
+            "col": 2,
+            "prop": 2,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 10,
+            "visualCol": 3,
+            "row": 10,
+            "col": 3,
+            "prop": 3,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 10,
+            "visualCol": 4,
+            "row": 10,
+            "col": 4,
+            "prop": 4,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.11",
+          "meta_data": {
+            "visualRow": 11,
+            "visualCol": 0,
+            "row": 11,
+            "col": 0,
+            "prop": 0,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "The status of each reader will be displayed on the screen. Green indicates the reader is functioning properly; yellow indicates the reader is functioning properly with controls in future runs being closely monitored; red indicates reader function failure. In the event of a failure, consult the User Manual for “Troubleshooting” options.",
+          "meta_data": {
+            "visualRow": 11,
+            "visualCol": 1,
+            "row": 11,
+            "col": 1,
+            "prop": 1,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 11,
+            "visualCol": 2,
+            "row": 11,
+            "col": 2,
+            "prop": 2,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 11,
+            "visualCol": 3,
+            "row": 11,
+            "col": 3,
+            "prop": 3,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 11,
+            "visualCol": 4,
+            "row": 11,
+            "col": 4,
+            "prop": 4,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        }
+      ],
+      [
+        {
+          "value": "7.2.12",
+          "meta_data": {
+            "visualRow": 12,
+            "visualCol": 0,
+            "row": 12,
+            "col": 0,
+            "prop": 0,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": "Select each control to be validated and click the “green checkmark” to validate the control.",
+          "meta_data": {
+            "visualRow": 12,
+            "visualCol": 1,
+            "row": 12,
+            "col": 1,
+            "prop": 1,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 12,
+            "visualCol": 2,
+            "row": 12,
+            "col": 2,
+            "prop": 2,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 12,
+            "visualCol": 3,
+            "row": 12,
+            "col": 3,
+            "prop": 3,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 12,
+            "visualCol": 4,
+            "row": 12,
+            "col": 4,
+            "prop": 4,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        }
+      ],
+      [
+        {
+          "value": "",
+          "meta_data": {
+            "visualRow": 13,
+            "visualCol": 0,
+            "row": 13,
+            "col": 0,
+            "prop": 0,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 13,
+            "visualCol": 1,
+            "row": 13,
+            "col": 1,
+            "prop": 1,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 13,
+            "visualCol": 2,
+            "row": 13,
+            "col": 2,
+            "prop": 2,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 13,
+            "visualCol": 3,
+            "row": 13,
+            "col": 3,
+            "prop": 3,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "visualRow": 13,
+            "visualCol": 4,
+            "row": 13,
+            "col": 4,
+            "prop": 4,
+            "renderer": "64ecc6e4-0d5b-4e6d-abe7-cbc2c4ca67c5"
+          }
+        }
+      ]
+    ],
+    "default_settings": {
+      "rowHeights": [
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23
+      ],
+      "colWidths": [
+        70,
+        250,
+        50,
+        80,
+        262
+      ],
+      "fixedRowsTop": 0,
+      "fixedColumnsStart": 0
+    },
+    "plugin_settings": {
+      "mergeCells": [],
+      "hiddenColumns": {
+        "copyPasteEnabled": false,
+        "indicators": true,
+        "columns": []
+      },
+      "hiddenRows": {
+        "copyPasteEnabled": false,
+        "indicators": true,
+        "rows": []
+      },
+      "customBorders": []
+    }
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "_qbench_entity_id": 387,
+  "qb46e8": "5e8e548ab"
+}

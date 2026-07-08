@@ -11,3 +11,14 @@ No parser-specific export/download control was visible during read-only inspecti
 | Heavy Metals File Parser - AMM | 22 | Heavy Metals | No Code | False | .csv | No-code internals not exposed in detail view. | Inactive Heavy Metals parser. |
 | Example [File Parser] | 21 | Other | No Code | True | .xlsx | Example parser only. | No assay dependency confirmed. |
 
+## Rescan 2026-07-04
+
+| Parser name | ID | Visible version/status | Export/download status | Notes |
+|---|---:|---|---|---|
+| Pest Myco Qualitative | 47 |  | No export/download control captured | No internals visible from parsed detail page |
+| Cannabinoid Potency Parser | 46 | 1 - AIT-135 Cannabinoid Potency Parser - DRAFT | No export/download control captured | No internals visible from parsed detail page |
+| Gene-up | 45 |  | No export/download control captured | No internals visible from parsed detail page |
+| Heavy Metals DataManager | 41 |  | No export/download control captured | No internals visible from parsed detail page |
+| Cannabis Heavy Metals ICPMS File Parser | 25 |  | No export/download control captured | No internals visible from parsed detail page |
+| Heavy Metals File Parser - AMM | 22 |  | No export/download control captured | No internals visible from parsed detail page |
+| Example [File Parser] | 21 |  | No export/download control captured | No internals visible from parsed detail page |

@@ -1,0 +1,465 @@
+{
+  "_id": "Type:WORKSHEET_VERSION;EntityId:389",
+  "table_config": {
+    "cell_settings": [
+      [
+        {
+          "value": "Target Weight (g)",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 0,
+            "visualCol": 0,
+            "visualRow": 0,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#69A84F"
+                }
+              }
+            }
+          }
+        },
+        {
+          "value": "Verification Check (g)",
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 0,
+            "visualCol": 1,
+            "visualRow": 0,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#69A84F"
+                }
+              }
+            }
+          }
+        },
+        {
+          "value": "% Agreement",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 0,
+            "visualCol": 2,
+            "visualRow": 0,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#69A84F"
+                }
+              }
+            }
+          }
+        },
+        {
+          "value": "Pass/Fail",
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 0,
+            "visualCol": 3,
+            "visualRow": 0,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#69A84F"
+                }
+              }
+            }
+          }
+        },
+        {
+          "value": "Weight ID",
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 0,
+            "visualCol": 4,
+            "visualRow": 0,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#69A84F"
+                }
+              }
+            }
+          }
+        }
+      ],
+      [
+        {
+          "value": "0.001",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 1,
+            "visualCol": 0,
+            "visualRow": 1,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            }
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 1,
+            "visualCol": 1,
+            "visualRow": 1,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#B7D7A8"
+                }
+              }
+            }
+          }
+        },
+        {
+          "value": "=IF(B2=\"\",\"\",(1-ABS(B2-A2)/A2)*100)",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 1,
+            "visualCol": 2,
+            "visualRow": 1,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            },
+            "valid": true
+          }
+        },
+        {
+          "value": "=IF(B2=\"\",\"\",IF(100-C2>2,\"Fail\",\"Pass\"))",
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 1,
+            "visualCol": 3,
+            "visualRow": 1,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            },
+            "valid": true
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 1,
+            "visualCol": 4,
+            "visualRow": 1,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#B7D7A8"
+                }
+              }
+            }
+          }
+        }
+      ],
+      [
+        {
+          "value": "50",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 2,
+            "visualCol": 0,
+            "visualRow": 2,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            }
+          }
+        },
+        {
+          "value": null,
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 2,
+            "visualCol": 1,
+            "visualRow": 2,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#B7D7A8"
+                }
+              }
+            }
+          }
+        },
+        {
+          "value": "=IF(B3=\"\",\"\",(1-ABS(B3-A3)/A3)*100)",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 2,
+            "visualCol": 2,
+            "visualRow": 2,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            },
+            "valid": true
+          }
+        },
+        {
+          "value": "=IF(B3=\"\",\"\",IF(100-C3>2,\"Fail\",\"Pass\"))",
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 2,
+            "visualCol": 3,
+            "visualRow": 2,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            },
+            "valid": true
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 2,
+            "visualCol": 4,
+            "visualRow": 2,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {
+                  "backgroundColor": "#B7D7A8"
+                }
+              }
+            }
+          }
+        }
+      ],
+      [
+        {
+          "value": "",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 3,
+            "visualCol": 0,
+            "visualRow": 3,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 3,
+            "visualCol": 1,
+            "visualRow": 3,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 3,
+            "visualCol": 2,
+            "visualRow": 3,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 3,
+            "visualCol": 3,
+            "visualRow": 3,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471",
+            "qbConfig": {
+              "td": {
+                "style": {}
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 3,
+            "visualCol": 4,
+            "visualRow": 3,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471"
+          }
+        }
+      ],
+      [
+        {
+          "value": "",
+          "meta_data": {
+            "col": 0,
+            "prop": 0,
+            "row": 4,
+            "visualCol": 0,
+            "visualRow": 4,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 1,
+            "prop": 1,
+            "row": 4,
+            "visualCol": 1,
+            "visualRow": 4,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 2,
+            "prop": 2,
+            "row": 4,
+            "visualCol": 2,
+            "visualRow": 4,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 3,
+            "prop": 3,
+            "row": 4,
+            "visualCol": 3,
+            "visualRow": 4,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471"
+          }
+        },
+        {
+          "value": "",
+          "meta_data": {
+            "col": 4,
+            "prop": 4,
+            "row": 4,
+            "visualCol": 4,
+            "visualRow": 4,
+            "renderer": "1cdc02aa-4ab2-4eb7-9157-b63df13aa471"
+          }
+        }
+      ]
+    ],
+    "default_settings": {
+      "rowHeights": [
+        23,
+        23,
+        23,
+        23,
+        23
+      ],
+      "colWidths": [
+        112,
+        112,
+        112,
+        112,
+        112
+      ],
+      "fixedRowsTop": 0,
+      "fixedColumnsStart": 0
+    },
+    "plugin_settings": {
+      "mergeCells": [],
+      "hiddenColumns": {
+        "copyPasteEnabled": false,
+        "indicators": true,
+        "columns": []
+      },
+      "hiddenRows": {
+        "copyPasteEnabled": false,
+        "indicators": true,
+        "rows": []
+      },
+      "customBorders": []
+    }
+  },
+  "qb_config": {
+    "kvstore_config": {},
+    "conditional_formatting": [
+      {
+        "id": "7aff0d41-139d-47ce-94f0-9c06845956cd",
+        "name": "PASS Green",
+        "range": "D2:D3",
+        "rule": "TEXT_CONTAINS",
+        "criteria_1": "PASS",
+        "style": {
+          "color": "#3CB54A",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "5fd908ac-1a78-45b3-8136-228a0c485858",
+        "name": "FAIL Red",
+        "range": "D2:D3",
+        "rule": "TEXT_CONTAINS",
+        "criteria_1": "FAIL",
+        "style": {
+          "color": "#CC0100",
+          "fontWeight": "bold"
+        }
+      }
+    ]
+  },
+  "_qbench_entity_id": 389,
+  "qbb91": "8ee96a914a434f"
+}

@@ -18,3 +18,22 @@
 | 5 | test wa | Data Modified | Batch | Inactive | Water Activity | Condition table present, specific row values not exposed in read-only summary | wateractivity_0 mapping visible but blank value. |
 | 2 | Heavy Metals Batch WS to Test WS 2 | Data Modified | Batch | Inactive | Heavy Metals | Condition table present, specific row values not exposed in read-only summary | Older mappings for arsenic, cadmium, lead, mercury using get_display_id. |
 
+## Rescan 2026-07-04
+
+| ID | Automation name | Trigger | Data type | Description / notes |
+|---:|---|---|---|---|
+| 16 | Homogeneity - Pull potency mg/serving | Data Modified | Test | When a Homogeneity worksheet has manually entered Cannabinoid Potency Test IDs, pull the target cannabinoid mg/serving result into the Homogeneity worksheet. |
+| 14 | AC EB YM Batch to Test WS | Data Modified | Batch | No description visible in parsed detail fields. |
+| 13 | Listeria Batch to Test WS | Data Modified | Batch | No description visible in parsed detail fields. |
+| 12 | Salmonella Species & STEC Batch to Test WS | Data Modified | Batch | No description visible in parsed detail fields. |
+| 11 | Cannabinoid Potency Batch to Test WS | Data Modified | Batch | No description visible in parsed detail fields. |
+| 10 | Pesticide (Quantitative) Analysis | Data Modified | Batch | No description visible in parsed detail fields. |
+| 9 | Aspergillus Batch WS to Test WS | Data Modified | Batch | No description visible in parsed detail fields. |
+| 8 | Pest Myco (Qualitative) Batch WS to Test WS | Data Modified | Batch | No description visible in parsed detail fields. |
+| 6 | Residual Solvents Batch WS to Test WS | Data Modified | Batch | No description visible in parsed detail fields. |
+| 4 | Water Activity Batch WS to Test WS | Data Modified | Batch | No description visible in parsed detail fields. |
+| 3 | Mycotoxin (Quantitative) Batch WS to Test WS | Data Modified | Batch | No description visible in parsed detail fields. |
+| 1 | Heavy Metals Batch WS to Test WS | Data Modified | Batch | No description visible in parsed detail fields. |
+| 15 | Water Activity Protocol WS to Batch WS | Data Modified | Batch Object Protocol Step | No description visible in parsed detail fields. |
+| 5 | test wa | Data Modified | Batch | No description visible in parsed detail fields. |
+| 2 | Heavy Metals Batch WS to Test WS 2 | Data Modified | Batch | No description visible in parsed detail fields. |

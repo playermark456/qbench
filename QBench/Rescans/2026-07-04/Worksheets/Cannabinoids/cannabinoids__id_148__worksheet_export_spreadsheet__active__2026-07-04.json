@@ -1,0 +1,535 @@
+{
+  "config": {
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "application": "QBench",
+    "autoCasting": false,
+    "bar": true,
+    "entityId": "SPREADSHEET_EDITOR",
+    "namespace": "05e36847-05ba-43bd-b745-34f1e9f4d909",
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "allowTabEditing": true,
+        "enableSpreadsheetCustomization": false,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    },
+    "tabs": {
+      "allowChangePosition": true,
+      "allowCreate": true,
+      "animation": true,
+      "maxWidth": "-50px",
+      "position": "top"
+    },
+    "style": [
+      "background-color:#e0e0e0",
+      "background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black",
+      "background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black",
+      "background-color:#e0e0e0;border-top:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "background-color:#e0e0e0;border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "text-wrap:wrap",
+      "border-top:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;text-wrap:wrap",
+      "border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;border-left:1px solid black;text-wrap:wrap"
+    ],
+    "worksheets": [
+      {
+        "allowComments": false,
+        "allowDeleteColumn": true,
+        "allowDeleteRow": true,
+        "allowInsertColumn": true,
+        "allowInsertRow": true,
+        "allowRenameColumn": false,
+        "cache": {},
+        "cells": {
+          "A9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 0
+          },
+          "B9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 1
+          },
+          "C9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 2
+          },
+          "D9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 3
+          },
+          "E9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 4
+          },
+          "F9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 5
+          },
+          "G1": {
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "type": "text",
+            "x": 6
+          },
+          "G2": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 6
+          },
+          "G3": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 6
+          },
+          "G4": {
+            "autocomplete": true,
+            "colElement": {},
+            "colWidth": "",
+            "element": {},
+            "rowHeight": "",
+            "source": [
+              {
+                "id": "Performed",
+                "name": "Performed"
+              },
+              {
+                "id": "N/A",
+                "name": "N/A"
+              }
+            ],
+            "type": "dropdown",
+            "x": 6
+          },
+          "G9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 6
+          },
+          "H9": {
+            "colElement": {},
+            "element": {},
+            "type": "text",
+            "width": 100,
+            "x": 7
+          }
+        },
+        "columnDrag": true,
+        "columnResize": true,
+        "columnSorting": false,
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 181
+          },
+          {
+            "type": "text",
+            "width": 122
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "comments": {},
+        "csvFileName": "worksheet_data",
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeColumns": [],
+        "freezeRowControl": true,
+        "freezeRows": [],
+        "mergeCells": {},
+        "meta": {},
+        "minDimensions": [
+          1,
+          1
+        ],
+        "resize": "vertical",
+        "rowDrag": true,
+        "rowResize": true,
+        "rows": [
+          {
+            "height": 40
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 40
+          },
+          {
+            "height": 40,
+            "id": null
+          }
+        ],
+        "tableHeight": 473,
+        "tableOverflow": true,
+        "tableWidth": 1012,
+        "worksheetId": "7ffd9a1e-5d81-4e4e-a0be-2775dccba132",
+        "worksheetName": "Sheet1",
+        "data": [
+          [
+            "Sample ID",
+            "Spiking Solution (µL)",
+            "Amount of Spiking Solution (µL)",
+            "Volume ACN (µL)",
+            "Concentration (µg/mL)",
+            "",
+            "Performed",
+            "Preparation"
+          ],
+          [
+            "STD 6",
+            "13 Cannabinoid Mix Stock Solution (500 ppm)",
+            "77.0",
+            "77.0",
+            "250",
+            "",
+            "N/A",
+            "Curve Prepared"
+          ],
+          [
+            "STD 5",
+            "STD 6",
+            "54.0",
+            "81.0",
+            "100",
+            "",
+            "N/A",
+            "CCV Prepared"
+          ],
+          [
+            "STD 4",
+            "STD 5",
+            "33.0",
+            "99.0",
+            "25",
+            "",
+            "N/A",
+            "LOQ Prepared"
+          ],
+          [
+            "STD 3",
+            "STD 4",
+            "32.0",
+            "128.0",
+            "5",
+            "",
+            "",
+            ""
+          ],
+          [
+            "STD 2",
+            "STD 3",
+            "60.0",
+            "90.0",
+            "2",
+            "",
+            "",
+            ""
+          ],
+          [
+            "STD 1",
+            "STD 2",
+            "50.0",
+            "50.0",
+            "1",
+            "",
+            "",
+            ""
+          ],
+          [
+            "CCV",
+            "13 Cannabinoid Mix Stock Solution (500 ppm)",
+            "200.0",
+            "4,800",
+            "20",
+            "",
+            "",
+            ""
+          ],
+          [
+            "LOQ",
+            "13 Cannabinoid Mix Stock Solution (500 ppm)",
+            "10.0",
+            "4,990",
+            "1",
+            null,
+            null,
+            null
+          ]
+        ],
+        "style": {
+          "A1": 7,
+          "A2": 10,
+          "A3": 10,
+          "A4": 10,
+          "A5": 10,
+          "A6": 10,
+          "A7": 10,
+          "A8": 10,
+          "A9": 12,
+          "B1": 7,
+          "B2": 10,
+          "B3": 10,
+          "B4": 10,
+          "B5": 10,
+          "B6": 10,
+          "B7": 10,
+          "B8": 10,
+          "B9": 12,
+          "C1": 7,
+          "C2": 10,
+          "C3": 10,
+          "C4": 10,
+          "C5": 10,
+          "C6": 10,
+          "C7": 10,
+          "C8": 10,
+          "C9": 12,
+          "D1": 7,
+          "D2": 10,
+          "D3": 10,
+          "D4": 10,
+          "D5": 10,
+          "D6": 10,
+          "D7": 10,
+          "D8": 10,
+          "D9": 12,
+          "E1": 8,
+          "E2": 11,
+          "E3": 11,
+          "E4": 11,
+          "E5": 11,
+          "E6": 11,
+          "E7": 11,
+          "E8": 11,
+          "E9": 13,
+          "F1": 9,
+          "F2": 9,
+          "F3": 9,
+          "F4": 9,
+          "F5": 9,
+          "F6": 9,
+          "F7": 9,
+          "F8": 9,
+          "F9": 9,
+          "G1": 7,
+          "G2": 10,
+          "G3": 10,
+          "G4": 12,
+          "G5": 9,
+          "G6": 9,
+          "G7": 9,
+          "G8": 9,
+          "G9": 9,
+          "H1": 8,
+          "H2": 11,
+          "H3": 11,
+          "H4": 13,
+          "H5": 9,
+          "H6": 9,
+          "H7": 9,
+          "H8": 9,
+          "H9": 9
+        }
+      }
+    ]
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "Sample ID",
+        "Spiking Solution (µL)",
+        "Amount of Spiking Solution (µL)",
+        "Volume ACN (µL)",
+        "Concentration (µg/mL)",
+        "",
+        "Performed",
+        "Preparation"
+      ],
+      [
+        "STD 6",
+        "13 Cannabinoid Mix Stock Solution (500 ppm)",
+        "77.0",
+        "77.0",
+        "250",
+        "",
+        "N/A",
+        "Curve Prepared"
+      ],
+      [
+        "STD 5",
+        "STD 6",
+        "54.0",
+        "81.0",
+        "100",
+        "",
+        "N/A",
+        "CCV Prepared"
+      ],
+      [
+        "STD 4",
+        "STD 5",
+        "33.0",
+        "99.0",
+        "25",
+        "",
+        "N/A",
+        "LOQ Prepared"
+      ],
+      [
+        "STD 3",
+        "STD 4",
+        "32.0",
+        "128.0",
+        "5",
+        "",
+        "",
+        ""
+      ],
+      [
+        "STD 2",
+        "STD 3",
+        "60.0",
+        "90.0",
+        "2",
+        "",
+        "",
+        ""
+      ],
+      [
+        "STD 1",
+        "STD 2",
+        "50.0",
+        "50.0",
+        "1",
+        "",
+        "",
+        ""
+      ],
+      [
+        "CCV",
+        "13 Cannabinoid Mix Stock Solution (500 ppm)",
+        "200.0",
+        "4,800",
+        "20",
+        "",
+        "",
+        ""
+      ],
+      [
+        "LOQ",
+        "13 Cannabinoid Mix Stock Solution (500 ppm)",
+        "10.0",
+        "4,990",
+        "1",
+        null,
+        null,
+        null
+      ]
+    ]
+  }
+}
