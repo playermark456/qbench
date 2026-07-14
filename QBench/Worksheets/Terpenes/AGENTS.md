@@ -1,0 +1,21 @@
+# AGENTS.md
+
+- Follow the repository-root `AGENTS.md`.
+- Never overwrite raw QBench exports.
+- Never directly modify QBench production.
+- Treat worksheet IDs 42 and 43 as immutable source exports.
+- Store production candidates under a dated candidates or release directory.
+- Use 23 internal chromatographic channels.
+- Default COA reporting uses the approved 21-measurand list.
+- Quantitation uses `Compound Results(Ch1) > Conc.`
+- Never use `Conc. %` or `Norm Conc.` as sample potency.
+- Exclude Dimethylacetamide from reportable terpene results.
+- Retain Dimethylacetamide and Peak Table data for audit and QC.
+- Store both mg/g and percent.
+- Roll resolved Ocimene channels into total Ocimene for default COA and METRC reporting.
+- Roll resolved Nerolidol channels according to the approved COA and METRC configurations.
+- Never apply dilution unless `df_application_mode` explicitly requires it.
+- Never silently map an analyte to Other Terpenes.
+- Do not create a general Terpenes Pass/Fail rule without an approved requirement.
+- Preserve existing named-cell system names when compatibility is required.
+- Validate all generated JSON, named cells, formulas, report ranges, mappings, and fixtures.
