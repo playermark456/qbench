@@ -216,10 +216,10 @@ There are no current formulas in worksheet 43. Source: T43; EXPORT-STATUS.
 | Data/Specifications/Report tab structure | Heavy Metals, Residual Solvents, and Pesticides active test worksheets use `Data`, `Specifications`, and `Report` tabs, while Terpenes already has those tabs but lacks formulas and a populated report range. | HM6; RS12; PE14; PE16; T42 |
 | Batch-to-test named result range | Residual Solvents exposes `residual_solvents_results` at `Data!E2:W2`; Pesticides exposes `pesticides_results` at `Data!E2:BG2` or `Data!E2:BU2`; Heavy Metals uses individual named cells plus `df`. Terpenes needs an equivalent automation target for 23 channel results and dilution/config metadata if batch import remains the source. | RS12; PE14; PE16; HM6; AUTOMATION-INDEX |
 | Dedicated dilution factor named cell | Heavy Metals, Residual Solvents, and Pesticides use `df` named cells; Terpenes source rules say never apply dilution unless `df_application_mode` explicitly requires it, so Terpenes should capture dilution separately before any application decision. | HM6; RS12; PE14; PE16; TR-AGENTS; WORKSHEET-SPEC |
-| Kvstore-driven matrix/program specifications | Heavy Metals, Residual Solvents, and Pesticides use `GET_KVSTORE_VALUE(uuid,$B$2,$C$2,analyte,field)` to retrieve LOQ, MU, and pass/fail limits by customer/program/matrix/analyte. Terpenes needs a comparable configuration only after reportable limits, units, and profile behavior are approved. | HM6; RS12; PE14 |
+| Kvstore-driven matrix/program specifications | Heavy Metals, Residual Solvents, and Pesticides use `GET_KVSTORE_VALUE(uuid,$B$2,$C$2,analyte,field)` to retrieve LOQ, MU, and pass/fail limits by customer/program/matrix/analyte. Terpenes may copy the matrix/program lookup pattern for non-status values only; do not copy any Pass/Fail key/value-store key or status behavior for Terpenes. | HM6; RS12; PE14; TR-AGENTS |
 | Kvstore key gating | Residual Solvents and Pesticides pull available keys with `CONCAT(GET_KVSTORE_VALUE(...,"keys"))` and conditionally include analytes only when present; this is useful for Terpenes METRC profile coverage because some profiles omit Guaiol, p-Cymene, or many subcontract analytes. | RS12; PE14; METRC-PROFILES; METRC-MAP |
 | LOQ display pattern | Existing methods display `<LOQ` when the numeric result is below the configured LOQ, then carry that display value into the report. Terpenes needs an approved below-LOQ reporting/METRC rule before copying this pattern. | HM6; RS12; PE14; WORKSHEET-SPEC |
-| Pass/fail rollup pattern | Existing methods compute `pass_fail` from row statuses, usually returning `Not Tested`, `Fail`, or `Pass`; Terpenes instructions explicitly forbid creating a general Terpenes pass/fail rule without approval. | HM6; RS12; PE14; TR-AGENTS |
+| Pass/fail rollup pattern | Do not copy for Terpenes. Existing methods compute `pass_fail` from row statuses, usually returning `Not Tested`, `Fail`, or `Pass`; Terpenes is quantitative-only and must never create or expose a Terpenes Pass/Fail named cell, field, report value, COA tile, METRC value, automation field, or label-claim status. | HM6; RS12; PE14; TR-AGENTS |
 | Compact report range | Heavy Metals uses `Report!A1:F6`, Residual Solvents uses `Report!A1:F31`, Pesticides qualitative uses `Report!A1:R25`, and Pesticides quantitative uses `Report!A1:L40`. Terpenes needs a compact `report_results` range sized for the approved default COA measurand list. | HM6; RS12; PE14; PE16; COA-BODY |
 | Unit conversion row | Pesticides qualitative converts row 2 values with row 3 formulas like `=E2/1000`; Terpenes similarly needs stable calculated cells for both `%` and `mg/g`, but must use the approved LabSolutions `Conc.` conversion rather than normalized `Conc. %` or `Norm Conc.`. | PE14; ASCII-SPEC; WORKSHEET-SPEC; TR-AGENTS |
 | Shared METRC/profile mapping UUID | The `ff2cde0c-abba-4522-991c-2473042479bc` kvstore mapping appears in the preserved Terpenes June 30 export and in Pesticides; it includes terpene-related METRC/profile labels that can guide later profile configuration, but the latest Terpenes July 4 export does not currently carry it. | T42-0630; PE14; T42 |
@@ -237,7 +237,7 @@ There are no current formulas in worksheet 43. Source: T43; EXPORT-STATUS.
 | Nerolidol METRC behavior | METRC provides `Cis-Nerolidol` and generic `Nerolidol`; source package maps trans-Nerolidol/Nerolidol 2 to generic Nerolidol unless total Nerolidol is approved. | T42 has separate cis/trans named cells but no profile-specific generic Nerolidol export logic. | BUILD-BRIEF; METRC-MAP; T42 |
 | p-Cymene METRC behavior | p-Cymene should map to `P-Isopropyltoluene (P-Cymene)` or `P. Isopropyltoluene`, not generic `Cymene`. | T42 has `pcymene_*` cells but no profile validation or fallback handling. | TR-AGENTS; BUILD-BRIEF; METRC-MAP; T42 |
 | Other Terpenes | Other Terpenes should not be silently populated and should remain blank/zero unless explicitly configured. | T42 has no Other Terpenes cells or policy implementation. | TR-AGENTS; WORKSHEET-SPEC; METRC-PROFILES; T42 |
-| Pass/fail | A general Terpenes pass/fail rule must not be created without approval. | T42 has no `pass_fail` named cell, which is consistent with the no-unapproved-pass/fail rule but leaves the first-page COA tile behavior unknown if Terpenes contributes to overall pass/fail. | TR-AGENTS; T42; COA-BODY |
+| No Pass/Fail result | Terpenes is quantitative-only and must never expose a sample-level, analyte-level, assay-level, COA-level, METRC-level, label-claim, automation, worksheet, formula, or key/value-store Pass/Fail result. | T42 has no `pass_fail` named cell; this must remain true. Internal batch QC must use `batch_qc_disposition` values `Accepted`, `Hold`, or `Rejected`, and `publish_ready` may be TRUE only when `batch_qc_disposition` is `Accepted`. | TR-AGENTS; T42; COA-BODY |
 
 ## Current active behavior vs proposed Terpenes behavior
 
@@ -249,7 +249,36 @@ There are no current formulas in worksheet 43. Source: T43; EXPORT-STATUS.
 | Batch worksheet | Current active T43 only lays out standards, blank/system suitability rows, and test display ID/matrix rows; it has no result import surface, named cells, or formulas. | Later implementation should define parser/import storage for Compound Results, Peak Table audit rows, Dimethylacetamide retention, sample metadata, dilution factor, and per-test result transfer. | T43; ASCII-SPEC; PARSER-SCRIPT; COMPOUND-FIXTURE; PEAK-FIXTURE |
 | Automation | Current repository indexes do not list any Terpenes automation. | Later implementation should add any batch-to-test automation only after batch/test named ranges are stable and approved. | AUTOMATION-INDEX; T42; T43 |
 | Parser | Current QBench parser index does not list a Terpenes QBench parser. | Later implementation can use the source-package parser and fixtures as repository inputs, but QBench parser configuration remains future work and not production-approved. | PARSER-INDEX; SOURCE-README; PARSER-SCRIPT |
-| Pass/fail | Current active T42 has no `pass_fail`; Terpenes instructions prohibit creating a general Terpenes pass/fail rule without approval. | Later implementation should only add pass/fail behavior if a scientific/reporting requirement is explicitly approved. | T42; TR-AGENTS |
+| Pass/Fail and status conclusions | Current active T42 has no `pass_fail`; Terpenes is quantitative-only and must never gain Terpenes Pass/Fail behavior. | Later implementation must not add a `pass_fail` named cell, Pass/Fail report column, first-page Pass/Fail tile, COA overall-status contribution, METRC Pass/Fail value, automation Pass/Fail field, or label-claim Pass/Fail conclusion. Internal batch QC uses `batch_qc_disposition` values `Accepted`, `Hold`, or `Rejected`; scientific qualifiers such as `<LOQ`, `Detected`, `Reported`, `Hold`, or `Review Required` remain allowed where appropriate. | T42; TR-AGENTS |
+
+## Resolved implementation decision — no Terpenes Pass/Fail
+
+This implementation decision is final and binding: Terpenes is quantitative-only. Sources: TR-AGENTS; T42; COA-BODY.
+
+| Requirement | Implementation consequence | Source |
+|---|---|---|
+| Worksheet 42 must not gain a `pass_fail` named cell. | Any Terpenes candidate that adds `pass_fail` is invalid. | TR-AGENTS; T42 |
+| The Report tab must contain no status or Pass/Fail column. | The future `report_results` range must report quantitative results and allowed qualifiers only, with no Pass/Fail conclusion. | TR-AGENTS; T42; COA-BODY |
+| Terpenes must not receive a first-page Pass/Fail tile. | COA tile logic must not include a Terpenes Pass/Fail cell, tile, or display. | TR-AGENTS; COA-BODY |
+| Terpenes must not contribute a Pass/Fail value to overall COA status logic. | Overall COA status logic must not read a Terpenes pass/fail field or infer one from Terpenes results. | TR-AGENTS; COA-BODY |
+| METRC exports must not derive or transmit a Terpenes Pass/Fail result. | METRC profile/export work must remain quantitative and must not create `metrc_pass_fail_*` values for Terpenes. | TR-AGENTS; METRC-PROFILES; METRC-MAP |
+| If a METRC CSV schema contains a required status column, the permitted blank or neutral schema value must be confirmed during implementation. | That value must never be populated as `Pass` or `Fail`. Unknown QBench/METRC schema internals remain to be confirmed during implementation. | TR-AGENTS; METRC-PROFILES |
+| Label-claim comparison, if implemented, is numerical only. | A numerical label-claim variance may be reported, but no `Claim Met`, `Claim Not Met`, `Pass`, or `Fail` conclusion may be generated. | TR-AGENTS |
+| Internal batch QC remains required but uses `batch_qc_disposition`. | Allowed internal analytical batch QC dispositions are `Accepted`, `Hold`, and `Rejected`; `publish_ready` may be TRUE only when `batch_qc_disposition` is `Accepted`. | TR-AGENTS |
+| Result qualifiers remain allowed when appropriate. | Qualifiers such as `<LOQ`, `Detected`, `Reported`, `Hold`, or `Review Required` may be used where scientifically and procedurally appropriate, but they must not become Pass/Fail conclusions. | TR-AGENTS |
+
+## Future validation requirement - no Pass/Fail artifacts
+
+Future Terpenes candidate validation must fail if any of the following artifacts are present. Sources: TR-AGENTS; T42; COA-BODY; METRC-PROFILES; METRC-MAP.
+
+| Invalid artifact | Validation consequence | Source |
+|---|---|---|
+| A named cell named `pass_fail`. | Reject the candidate because Worksheet 42 must not gain Terpenes sample-result Pass/Fail output. | TR-AGENTS; T42 |
+| A Terpenes Pass/Fail key/value-store entry. | Reject the candidate because Terpenes kvstore configuration may support non-status profile/config values only. | TR-AGENTS; HM6; RS12; PE14 |
+| A Pass/Fail report column. | Reject the candidate because the Terpenes Report tab must remain quantitative and qualifier-only. | TR-AGENTS; T42; COA-BODY |
+| A Terpenes Pass/Fail COA tile. | Reject the candidate because Terpenes must not receive a first-page Pass/Fail tile or status display. | TR-AGENTS; COA-BODY |
+| A METRC Pass/Fail value. | Reject the candidate because Terpenes METRC exports must not derive or transmit Pass/Fail results. | TR-AGENTS; METRC-PROFILES; METRC-MAP |
+| A label-claim Pass/Fail conclusion. | Reject the candidate because label-claim comparison, if implemented, is numerical only. | TR-AGENTS |
 
 ## Unresolved scientific and reporting decisions
 
@@ -264,7 +293,6 @@ Every item below remains unresolved or requires explicit approval before later i
 | Decide whether the COA should show total Ocimene, separate cis/trans Ocimene, or both. | The source package requires rolling resolved Ocimene channels into total Ocimene for default COA and METRC, while T42 currently exposes cis/trans cells separately. | TR-AGENTS; BUILD-BRIEF; METRC-MAP; T42 |
 | Decide COA and METRC treatment for Nerolidol. | The source package says to roll resolved Nerolidol channels according to approved COA and METRC configurations and asks whether generic METRC Nerolidol should receive trans-Nerolidol or total cis+trans Nerolidol. | TR-AGENTS; WORKSHEET-SPEC; BUILD-BRIEF; METRC-MAP |
 | Decide below-LOQ report and METRC behavior. | The worksheet spec asks whether below-LOQ METRC quantity should be `0` with `<LOQ` note or excluded. | WORKSHEET-SPEC |
-| Decide whether to create any Terpenes pass/fail output. | Terpenes instructions prohibit a general Terpenes pass/fail rule without approval; COA tile behavior for Terpenes therefore remains unknown. | TR-AGENTS; COA-BODY |
 | Decide whether Measurement Uncertainty and LOQ should be profile/matrix/program kvstore values, static worksheet values, or blank for Terpenes. | T42 has MU and LOQ columns but no formulas; comparison methods use kvstore values. | T42; HM6; RS12; PE14 |
 | Decide controlling bracketing CCV criterion. | The worksheet spec states SOP text says 10 percent while Analysis Form says 15 percent. | WORKSHEET-SPEC |
 | Decide how chromatographic QC and Peak Table audit data appear in QBench. | The source package requires retaining Peak Table data for review/QC, but current T43 has no Peak Table storage layout. | ASCII-SPEC; T43 |
@@ -278,15 +306,15 @@ Every item below remains unresolved or requires explicit approval before later i
 
 ## Proposed dependency order for later implementation
 
-1. Approve scientific/reporting decisions first: LabSolutions `Conc.` unit, sample mass/final volume source, dilution mode, below-LOQ behavior, default 21-measurand COA list, Ocimene/Nerolidol rollups, pass/fail policy, and METRC profile fallback rules. Sources: TR-AGENTS; WORKSHEET-SPEC; BUILD-BRIEF; METRC-PROFILES; METRC-MAP.
+1. Approve remaining scientific/reporting decisions first: LabSolutions `Conc.` unit, sample mass/final volume source, dilution mode, below-LOQ behavior, default 21-measurand COA list, Ocimene/Nerolidol rollups, and METRC profile fallback rules. Treat the resolved no-Pass/Fail rule as a fixed implementation constraint, not an open decision. Sources: TR-AGENTS; WORKSHEET-SPEC; BUILD-BRIEF; METRC-PROFILES; METRC-MAP.
 2. Freeze the Terpenes worksheet schema: preserve compatibility named cells that are still required, add `report_results`, define a batch-to-test results range, define audit/QC storage, and keep worksheet IDs 42/43 raw exports immutable. Sources: ROOT; TR-AGENTS; T42; T43; COA-BODY.
 3. Build and test the LabSolutions parser flow against the source fixtures: parse Compound Results and Peak Table, exclude Dimethylacetamide from reportable output, retain audit data, and normalize aliases. Sources: SOURCE-README; ASCII-SPEC; ANALYTE-MASTER.
 4. Design the batch worksheet import/storage surface before automation: include standards, blank/system suitability, sample rows, 23 reportable channels, Dimethylacetamide/audit fields, sample metadata, dilution factor, and Peak Table retention. Sources: T43; ASCII-SPEC; ANALYTE-MASTER.
-5. Implement test worksheet calculations: convert LabSolutions `Conc.` to `mg/g` and `%`, store both units, avoid double dilution, apply approved Ocimene/Nerolidol rollups, and avoid unapproved pass/fail logic. Sources: WORKSHEET-SPEC; TR-AGENTS; T42.
+5. Implement test worksheet calculations: convert LabSolutions `Conc.` to `mg/g` and `%`, store both units, avoid double dilution, apply approved Ocimene/Nerolidol rollups, and enforce the resolved no-Pass/Fail rule. Sources: WORKSHEET-SPEC; TR-AGENTS; T42.
 6. Implement kvstore/profile configuration after schema and calculations: use existing `GET_KVSTORE_VALUE` and key-gating patterns where appropriate, but keep profile gaps as validation warnings or failures rather than silent mappings. Sources: HM6; RS12; PE14; T42-0630; METRC-PROFILES.
 7. Add batch-to-test automation only after batch/test named ranges are stable: copy the Residual Solvents/Pesticides pattern of batch data updates into a test worksheet named result range plus `df`/metadata as approved. Sources: AUTOMATION-INDEX; RS12; PE14; PE16.
 8. Satisfy COA dependencies: create a compact `report_results` named cell and confirm the available COA body source or active report template renders it correctly before any report upload/change. Sources: COA-BODY; REPORT-MAP; T42.
-9. Validate in repository before QBench Sandbox import: parse JSON, confirm unique tabs and named cells, confirm formulas, confirm report range non-empty, confirm source exports are preserved, and add fixture-based parser/METRC tests. Sources: ROOT; TR-AGENTS; SOURCE-README.
+9. Validate in repository before QBench Sandbox import: parse JSON, confirm unique tabs and named cells, confirm formulas, confirm report range non-empty, confirm source exports are preserved, add fixture-based parser/METRC tests, and fail candidates containing any Terpenes Pass/Fail artifact. Sources: ROOT; TR-AGENTS; SOURCE-README.
 
 ## Implementation risk summary
 
@@ -296,4 +324,5 @@ Every item below remains unresolved or requires explicit approval before later i
 | Current Terpenes worksheet cells look like placeholders, not a working calculation template. | T42 has 0 formulas, row 3 asks `Result (mg/g or %?)`, and T43 has no result columns beyond sample IDs/matrices. | T42; T43 |
 | METRC export cannot be safely implemented by direct one-to-one named cells only. | Source package requires profile-specific units, Ocimene rollup, Nerolidol mapping, p-Cymene specificity, and warnings/failures for missing profile coverage. | BUILD-BRIEF; METRC-PROFILES; METRC-MAP |
 | Parser and automation are not currently configured in QBench for Terpenes based on repository indexes. | No Terpenes parser or automation appears in the current indexes; QBench internals not captured in the repository are unknown. | PARSER-INDEX; AUTOMATION-INDEX |
+| Existing assay Pass/Fail patterns must not be copied for Terpenes. | Heavy Metals, Residual Solvents, and Pesticides contain useful report, kvstore, parser, and automation patterns, but their Pass/Fail named cells, status fields, kvstore statuses, COA tiles, METRC statuses, and label-claim conclusions are explicitly invalid for Terpenes. | HM6; RS12; PE14; TR-AGENTS |
 | The July 4 kvstore state does not preserve the June 30 Terpenes METRC/profile mapping in the latest Terpenes export. | T42 has empty kvstore config; T42-0630 has `ff2cde0c-abba-4522-991c-2473042479bc`. | T42; T42-0630 |

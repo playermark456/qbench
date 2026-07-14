@@ -16,6 +16,11 @@
 - Roll resolved Nerolidol channels according to the approved COA and METRC configurations.
 - Never apply dilution unless `df_application_mode` explicitly requires it.
 - Never silently map an analyte to Other Terpenes.
-- Do not create a general Terpenes Pass/Fail rule without an approved requirement.
+- Never create or expose a Terpenes pass_fail named cell, worksheet field, formula, key/value-store key, report field, COA tile, METRC value, automation field, or label-claim status.
+- Terpenes is a quantitative-only assay.
+- Internal analytical batch QC must use batch_qc_disposition values Accepted, Hold, or Rejected rather than representing the sample result as Pass or Fail.
+- publish_ready may be TRUE only when batch_qc_disposition is Accepted.
+- Result qualifiers such as <LOQ, Detected, Reported, Hold, or Review Required are allowed where scientifically and procedurally appropriate.
+- A numerical label-claim variance may be reported, but no Claim Met, Claim Not Met, Pass, or Fail conclusion may be generated.
 - Preserve existing named-cell system names when compatibility is required.
 - Validate all generated JSON, named cells, formulas, report ranges, mappings, and fixtures.
