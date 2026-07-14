@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "criteria": {
+    "calibration_r_min": 0.99,
+    "initial_ccv_recovery_min": 85,
+    "initial_ccv_recovery_max": 115,
+    "initial_ccv_rsd_max": 10,
+    "blank_fraction_loq_max": 0.2,
+    "loq_recovery_min": 70,
+    "loq_recovery_max": 130,
+    "matrix_spike_recovery_min": 85,
+    "matrix_spike_recovery_max": 115,
+    "duplicate_difference_max": 20,
+    "retention_time_drift_max": 0.5,
+    "resolution_min": 1.0
+  },
+  "boundary_cases": [
+    {
+      "name": "calibration_minimum",
+      "kind": "minimum",
+      "value": 0.99,
+      "limit": 0.99,
+      "expected": "within_criteria"
+    },
+    {
+      "name": "calibration_below_minimum",
+      "kind": "minimum",
+      "value": 0.989,
+      "limit": 0.99,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "ccv_lower_boundary",
+      "kind": "range",
+      "value": 85,
+      "minimum": 85,
+      "maximum": 115,
+      "expected": "within_criteria"
+    },
+    {
+      "name": "ccv_upper_boundary",
+      "kind": "range",
+      "value": 115,
+      "minimum": 85,
+      "maximum": 115,
+      "expected": "within_criteria"
+    },
+    {
+      "name": "ccv_below_boundary",
+      "kind": "range",
+      "value": 84.999,
+      "minimum": 85,
+      "maximum": 115,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "ccv_above_boundary",
+      "kind": "range",
+      "value": 115.001,
+      "minimum": 85,
+      "maximum": 115,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "rsd_at_maximum",
+      "kind": "maximum",
+      "value": 10,
+      "limit": 10,
+      "expected": "within_criteria"
+    },
+    {
+      "name": "rsd_above_maximum",
+      "kind": "maximum",
+      "value": 10.001,
+      "limit": 10,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "not_applicable_bracketing",
+      "kind": "bracketing",
+      "criterion_status": "not_applicable",
+      "value": "",
+      "window": "",
+      "expected": "not_applicable"
+    },
+    {
+      "name": "unresolved_bracketing",
+      "kind": "bracketing",
+      "criterion_status": "decision_required",
+      "value": 100,
+      "window": "",
+      "expected": "decision_required"
+    }
+  ],
+  "overall_cases": [
+    {
+      "name": "all_within",
+      "evaluations": [
+        "within_criteria",
+        "within_criteria",
+        "within_criteria"
+      ],
+      "expected": "within_criteria"
+    },
+    {
+      "name": "outside_takes_priority",
+      "evaluations": [
+        "within_criteria",
+        "outside_criteria",
+        "decision_required"
+      ],
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "decision_required_blocks",
+      "evaluations": [
+        "within_criteria",
+        "decision_required"
+      ],
+      "expected": "decision_required"
+    },
+    {
+      "name": "not_evaluated_remains_incomplete",
+      "evaluations": [
+        "within_criteria",
+        "not_evaluated"
+      ],
+      "expected": "not_evaluated"
+    }
+  ]
+}

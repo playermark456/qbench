@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "package": "2026-07-14_batch_worksheet_candidate",
+  "prompt": "Prompt 4",
+  "nonproduction_candidate": true,
+  "stable_generation_date": "2026-07-14",
+  "source_active_export": {
+    "path": "QBench/Rescans/2026-07-04/Worksheets/Terpenes/terpenes__id_43__worksheet_export_spreadsheet__active__2026-07-04.json",
+    "sha256": "db6bfe7a7d306902b78c27af76b4a08a2a17b7d974f63c5593a3455e109bad07",
+    "worksheet_id_43_sheet1_id": "c97d47f0-0159-4998-93c3-3fd6abb80b86",
+    "publish_row_capacity": 86,
+    "unchanged_source_required": true
+  },
+  "prompt2_config_files": [
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_config_parser_foundation/config/terpenes_analytes.json",
+      "sha256": "89fede84a359767685f33d51d029c9cf5df90b153db7efda78579f6416176343"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_config_parser_foundation/config/terpenes_qc.json",
+      "sha256": "df583b6621336e9b99e218e3bc5080f91ccff82ec660dc66f15b4644147ebd1a"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_config_parser_foundation/config/metrc_profiles.json",
+      "sha256": "50dda0845cefe5e90c347f74f65170a83181ecdea5f47f9e7ebb22f9554ffb5c"
+    }
+  ],
+  "prompt3_dependency_files": [
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_test_worksheet_candidate/dist/terpenes__test_ws_id_42__candidate_v1__2026-07-14.json",
+      "sha256": "90686b980882b221008f281be33984dc5232e2f3d2632300db3f4a27b529640a"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_test_worksheet_candidate/dist/candidate_manifest.json",
+      "sha256": "b7e5189f21f25fd52e53acc50cb082f1cf0184b84e0bef538033c938c6c55071"
+    }
+  ],
+  "local_config_files": [
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_batch_worksheet_candidate/config/terpenes_batch_layout.json",
+      "sha256": "4ecd38ee96bd0b593bf11a5004fc7a00f12911bfb8685322a323f0a238d5e6bf"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_batch_worksheet_candidate/config/terpenes_batch_import_contract.json",
+      "sha256": "1569eb8b10ad1848d0f4324e1cc1e0206a829f642e4c8c88de0a1783614741d6"
+    }
+  ],
+  "generated_candidate": {
+    "path": "QBench/Worksheets/Terpenes/development/2026-07-14_batch_worksheet_candidate/dist/terpenes__batch_ws_id_43__candidate_v1__2026-07-14.json",
+    "sha256": "0bcb2c2f422fba572c95f0a0bac27d47b0d758e74e422c075712078bbe4fb61e",
+    "tabs": [
+      "Run Setup",
+      "Instrument Import",
+      "QC Review",
+      "Publish"
+    ],
+    "worksheet_ids": {
+      "Run Setup": "cf71364f-84b3-4558-a14c-241b452bd7bb",
+      "Instrument Import": "f11a5887-6f11-4a45-ae16-9a0f9f64dd16",
+      "QC Review": "adc806c8-3a02-4c6f-b8c6-6738df2fe02d",
+      "Publish": "c97d47f0-0159-4998-93c3-3fd6abb80b86"
+    },
+    "new_tab_ids": {
+      "Run Setup": "cf71364f-84b3-4558-a14c-241b452bd7bb",
+      "Instrument Import": "f11a5887-6f11-4a45-ae16-9a0f9f64dd16",
+      "QC Review": "adc806c8-3a02-4c6f-b8c6-6738df2fe02d"
+    },
+    "publish_tab_preserves_source_sheet1_id": true,
+    "formula_count": 1180,
+    "named_cell_count": 64,
+    "instrument_import_row_capacity": 200,
+    "publish_row_capacity": 86,
+    "publish_table_range": "Publish!A1:BD87",
+    "publish_analyte_range": "Publish!D2:Z87",
+    "batch_qc_disposition_cell": "QC Review!B12",
+    "batch_publish_ready_cell": "QC Review!B15",
+    "bracketing_ccv_criterion_status_cell": "QC Review!B3",
+    "kvstore_config_empty": true,
+    "conditional_formatting_rule_count": 0
+  },
+  "controlled_values": {
+    "sample_types": [
+      "Calibration Standard",
+      "Initial CCV",
+      "Continuing CCV",
+      "Blank",
+      "LOQ Check",
+      "Matrix Spike",
+      "Duplicate",
+      "Unknown",
+      "Dilution",
+      "Other QC"
+    ],
+    "manual_integration": [
+      "No",
+      "Yes"
+    ],
+    "integration_review_status": [
+      "Not Reviewed",
+      "Reviewed",
+      "Review Required"
+    ],
+    "import_validation_status": [
+      "Valid",
+      "Review Required",
+      "Rejected"
+    ],
+    "df_application_modes": [
+      "already_applied_by_labsolutions",
+      "apply_in_qbench"
+    ],
+    "batch_qc_dispositions": [
+      "Accepted",
+      "Hold",
+      "Rejected"
+    ],
+    "internal_qc_evaluation_values": [
+      "within_criteria",
+      "outside_criteria",
+      "decision_required",
+      "not_evaluated",
+      "not_applicable",
+      "review_required"
+    ]
+  },
+  "default_release_gates": {
+    "bracketing_ccv_criterion_status": "decision_required",
+    "qc_configuration_complete": "FALSE by formula/default behavior",
+    "batch_qc_disposition": "Hold",
+    "batch_publish_ready": "FALSE by formula/default behavior",
+    "batch_publication_blocked_by_default": true
+  },
+  "unresolved_scientific_qc_decisions": [
+    "Bracketing CCV criterion remains decision_required; Prompt 4 does not choose 10 percent or 15 percent.",
+    "No separate controlled Terpenes LCS requirement was found in repository source files.",
+    "LabSolutions Conc. unit, sample mass/final volume sources, and dilution application remain Sandbox-confirmation items from Prompt 3.",
+    "Below-LOQ, MU, final sample calculations, COA, METRC, key/value-store, and automation remain out of Prompt 4 scope."
+  ],
+  "scope_controls": {
+    "active_or_raw_qbench_export_modified": false,
+    "test_worksheet_candidate_modified": false,
+    "coa_source_modified": false,
+    "qbench_automation_modified": false,
+    "qbench_parser_configuration_modified": false,
+    "protocol_worksheet_modified": false,
+    "kvstore_configuration_modified": false,
+    "metrc_export_configuration_modified": false,
+    "report_configuration_modified": false,
+    "qbench_production_object_modified": false,
+    "prompt5_started": false
+  },
+  "deterministic_generation": {
+    "uses_stable_constants_only": true,
+    "generation_timestamps_omitted": true,
+    "random_uuid_values_omitted": true,
+    "machine_specific_paths_omitted": true
+  }
+}

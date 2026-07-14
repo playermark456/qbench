@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "created_for": "2026-07-14_batch_worksheet_candidate",
+  "quantitative_source": {
+    "source_table": "Compound Results(Ch1)",
+    "source_field": "Conc.",
+    "blocked_potency_fields": [
+      "Conc. %",
+      "Norm Conc."
+    ],
+    "compound_result_row_count_required": 24,
+    "reportable_compound_row_count_required": 23,
+    "dimethylacetamide": {
+      "retained_for_audit": true,
+      "transfer_as_reportable_terpene": false
+    }
+  },
+  "instrument_import_columns": {
+    "leading_columns": [
+      "import_row_id",
+      "run_order",
+      "vial",
+      "sample_type",
+      "qbench_test_id",
+      "qbench_sample_id",
+      "product_matrix",
+      "sample_mass_g",
+      "final_volume_ml",
+      "qbench_df",
+      "df_application_mode",
+      "labsolutions_sample_amount",
+      "labsolutions_dilution_factor",
+      "source_instrument_file",
+      "source_file_hash",
+      "source_data_file",
+      "source_method_file",
+      "source_sequence_file",
+      "acquired_at",
+      "instrument_name",
+      "detector_id",
+      "detector_name",
+      "parser_version",
+      "compound_result_row_count",
+      "peak_table_row_count",
+      "reportable_compound_row_count",
+      "dimethylacetamide_conc",
+      "unknown_peak_count",
+      "manual_integration",
+      "integration_reason",
+      "integration_review_status",
+      "import_validation_status",
+      "import_message"
+    ],
+    "analyte_columns": "AH:BD",
+    "source_row_hash_column": "BE"
+  },
+  "controlled_values": {
+    "sample_type": [
+      "Calibration Standard",
+      "Initial CCV",
+      "Continuing CCV",
+      "Blank",
+      "LOQ Check",
+      "Matrix Spike",
+      "Duplicate",
+      "Unknown",
+      "Dilution",
+      "Other QC"
+    ],
+    "manual_integration": [
+      "No",
+      "Yes"
+    ],
+    "integration_review_status": [
+      "Not Reviewed",
+      "Reviewed",
+      "Review Required"
+    ],
+    "import_validation_status": [
+      "Valid",
+      "Review Required",
+      "Rejected"
+    ],
+    "df_application_mode": [
+      "already_applied_by_labsolutions",
+      "apply_in_qbench"
+    ],
+    "batch_qc_disposition": [
+      "Accepted",
+      "Hold",
+      "Rejected"
+    ],
+    "internal_qc_evaluation": [
+      "within_criteria",
+      "outside_criteria",
+      "decision_required",
+      "not_evaluated",
+      "not_applicable",
+      "review_required"
+    ]
+  },
+  "numeric_contract": {
+    "qbench_numeric_type_available_in_comparators": false,
+    "worksheet_cell_type_used": "text",
+    "validation_method": "ISNUMBER and COUNT formulas plus Sandbox testing",
+    "numeric_zero_valid": true,
+    "negative_instrument_concentration_auto_rejected": false,
+    "numeric_looking_text_silently_coerced": false,
+    "value_function_allowed": false,
+    "iferror_function_allowed": false
+  },
+  "publish_requirements": {
+    "qbench_test_id_is_join_key": true,
+    "unknown_and_dilution_require_qbench_test_id": true,
+    "all_23_analytes_numeric_for_publish": true,
+    "sample_mass_positive": true,
+    "final_volume_positive": true,
+    "df_required_only_when_apply_in_qbench": true,
+    "labsolutions_conc_unit": "ug/mL",
+    "unit_confirmed_value": "TRUE",
+    "preparation_values_confirmed_value": "TRUE",
+    "compound_results_complete_value": "TRUE",
+    "integration_review_status_value": "Reviewed",
+    "import_validation_status_value": "Valid",
+    "batch_qc_disposition_value": "Accepted",
+    "publish_ready_true_requires_batch_publish_ready": true
+  },
+  "out_of_scope": [
+    "final mg/g",
+    "final percent",
+    "qualifiers",
+    "totals",
+    "COA results",
+    "LOQ conclusions",
+    "measurement uncertainty",
+    "METRC values",
+    "key/value-store configuration",
+    "QBench automation"
+  ]
+}

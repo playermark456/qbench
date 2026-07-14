@@ -1,0 +1,26 @@
+source_publish_column,source_publish_header,source_named_range,destination_test_named_cell,transfer_type,required,notes
+D:Z,23 analyte concentration columns,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc,range,true,Transfer by QBench Test ID join key; preserve Prompt 2 analyte order.
+AA,Sample Mass,terpenes_batch_publish_sample_mass_g,sample_mass_g,scalar,true,Positive numeric value required.
+AB,Final Volume,terpenes_batch_publish_final_volume_ml,final_volume_ml,scalar,true,Positive numeric value required.
+AC,DF,terpenes_batch_publish_df,df,scalar,conditional,Required only when DF Application Mode is apply_in_qbench.
+AD,DF Application Mode,terpenes_batch_publish_df_application_mode,df_application_mode,scalar,true,Allowed values are already_applied_by_labsolutions and apply_in_qbench.
+AE,LabSolutions Conc. Unit,terpenes_batch_publish_conc_unit,labsolutions_conc_unit,scalar,true,Must equal ug/mL.
+AF,Unit Confirmed,terpenes_batch_publish_unit_confirmed,labsolutions_conc_unit_confirmed,scalar,true,Must equal TRUE.
+AG,Preparation Values Confirmed,terpenes_batch_publish_preparation_confirmed,preparation_values_confirmed,scalar,true,Must equal TRUE.
+AH,Source Batch ID,terpenes_batch_publish_source_batch_ids,source_batch_id,scalar,true,Source traceability.
+AI,Source Instrument File,terpenes_batch_publish_source_files,source_instrument_file,scalar,true,Source traceability.
+AJ,Source File Hash,terpenes_batch_publish_source_hashes,source_file_hash,scalar,true,Source traceability.
+AK,Source Data File,terpenes_batch_publish_table,source_data_file,scalar,true,Source traceability.
+AL,Source Method File,terpenes_batch_publish_table,source_method_file,scalar,true,Source traceability.
+AM,Source Sequence File,terpenes_batch_publish_table,source_sequence_file,scalar,true,Source traceability.
+AN,Parser Version,terpenes_batch_publish_table,parser_version,scalar,true,Source traceability.
+AO,Imported At,terpenes_batch_publish_table,imported_at,scalar,true,Source traceability.
+AP,Instrument Name,terpenes_batch_publish_table,instrument_name,scalar,true,Source traceability.
+AQ,Detector ID,terpenes_batch_publish_table,detector_id,scalar,true,Source traceability.
+AR,Detector Name,terpenes_batch_publish_table,detector_name,scalar,true,Source traceability.
+AY,Batch QC Disposition,terpenes_batch_publish_batch_disposition,batch_qc_disposition,scalar,true,Must equal Accepted for transfer readiness.
+BC,Publish Ready,terpenes_batch_publish_ready,publish_ready,scalar,true,Exact text TRUE or FALSE.
+A,QBench Test ID,terpenes_batch_publish_test_ids,,join_key,true,Primary join key; do not use Sample ID as the primary join key.
+B,QBench Sample ID,terpenes_batch_publish_sample_ids,,context,false,Context only; not the primary join key.
+AU,Dimethylacetamide Conc.,terpenes_batch_publish_table,,not_mapped,true,Audit-only value; do not transfer as reportable terpene.
+AS:AT,Source Injection ID and Source Row Hash,terpenes_batch_publish_table,,not_mapped,true,Prompt 5 may use these for audit logging but not as Test Worksheet named cells.
