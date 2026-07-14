@@ -13,6 +13,7 @@ import csv
 import json
 import re
 import unicodedata
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -47,6 +48,13 @@ NUMERIC_KEYS = {
     "Constant",
     "ID#",
     "Peak#",
+}
+
+COMPOUND_RESULTS_UNKNOWN_NAME_BEHAVIOR = "capture_for_strict_validation"
+PEAK_TABLE_UNKNOWN_NAME_BEHAVIOR = "audit_non_reportable"
+UNKNOWN_NAME_BEHAVIORS = {
+    COMPOUND_RESULTS_UNKNOWN_NAME_BEHAVIOR,
+    PEAK_TABLE_UNKNOWN_NAME_BEHAVIOR,
 }
 
 GREEK_TO_WORD = {
@@ -98,6 +106,15 @@ def reportable_channels(config: dict[str, Any]) -> list[dict[str, Any]]:
 
 def audit_channels(config: dict[str, Any]) -> list[dict[str, Any]]:
     return list(config.get("audit_only_channels", []))
+
+
+def configured_compound_channels(config: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    channels: dict[str, dict[str, Any]] = {}
+    for channel in reportable_channels(config) + audit_channels(config):
+        key = str(channel.get("internal_key", ""))
+        if key:
+            channels[key] = channel
+    return channels
 
 
 def _require_false_controls(config: dict[str, Any]) -> None:
@@ -224,8 +241,11 @@ def parse_table(
     header_prefix: str,
     alias_map: dict[str, dict[str, Any]],
     *,
-    strict_aliases: bool,
+    unknown_name_behavior: str,
 ) -> list[dict[str, Any]]:
+    if unknown_name_behavior not in UNKNOWN_NAME_BEHAVIORS:
+        raise ValueError(f"Unsupported unknown_name_behavior: {unknown_name_behavior}")
+
     rows: list[dict[str, Any]] = []
     headers: list[str] | None = None
     for line in sections.get(section_name, []):
@@ -248,22 +268,93 @@ def parse_table(
         source_name = str(row.get("Name", "")).strip()
         channel = alias_map.get(normalize_analyte_name(source_name))
         if channel is None:
-            if strict_aliases:
-                raise LabSolutionsParseError(f"Unconfigured LabSolutions analyte name: {source_name}")
             row["internal_key"] = ""
             row["worksheet_label"] = source_name
             row["reportable"] = False
             row["retain_for_audit"] = True
+            row["_unconfigured_analyte"] = True
+            row["_unknown_name_behavior"] = unknown_name_behavior
         else:
             row["internal_key"] = channel.get("internal_key", "")
             row["worksheet_label"] = channel.get("worksheet_label", source_name)
             row["reportable"] = bool(channel.get("reportable"))
             row["retain_for_audit"] = bool(channel.get("retain_for_audit")) or not bool(channel.get("reportable"))
+            row["configured_labsolutions_compound_id"] = channel.get("labsolutions_compound_id", "")
+            row["_unconfigured_analyte"] = False
         rows.append(row)
     return rows
 
 
-def parse_file(path: Path, config: dict[str, Any], *, strict_aliases: bool = True) -> dict[str, Any]:
+def _display_name(value: Any) -> str:
+    text = str(value).strip()
+    return text if text else "<blank>"
+
+
+def validate_compound_results(rows: list[dict[str, Any]], config: dict[str, Any]) -> None:
+    """Validate Compound Results against configured Terpenes channels and IDs."""
+    reportable_by_key = {row["internal_key"]: row for row in reportable_channels(config)}
+    configured_by_key = configured_compound_channels(config)
+    expected_keys = set(configured_by_key)
+    expected_reportable_keys = set(reportable_by_key)
+    expected_total_rows = len(configured_by_key)
+
+    configured_rows = [row for row in rows if row.get("internal_key") in expected_keys]
+    reportable_rows = [row for row in configured_rows if row.get("reportable")]
+    unexpected_rows = [row for row in rows if row.get("_unconfigured_analyte")]
+    key_counts = Counter(str(row.get("internal_key", "")) for row in configured_rows if row.get("internal_key"))
+
+    errors: list[str] = []
+    if len(rows) != expected_total_rows:
+        errors.append(f"Compound Results row count: expected {expected_total_rows}, found {len(rows)}")
+    if len(configured_rows) != expected_total_rows:
+        errors.append(
+            f"configured Compound Results row count: expected {expected_total_rows}, found {len(configured_rows)}"
+        )
+    if len(reportable_rows) != len(expected_reportable_keys):
+        errors.append(
+            f"reportable channel count: expected {len(expected_reportable_keys)}, found {len(reportable_rows)}"
+        )
+
+    dimethylacetamide_count = key_counts.get("dimethylacetamide", 0)
+    if dimethylacetamide_count != 1:
+        errors.append(f"Dimethylacetamide audit-only count: expected 1, found {dimethylacetamide_count}")
+
+    duplicate_keys = sorted(key for key, count in key_counts.items() if count > 1)
+    if duplicate_keys:
+        details = ", ".join(f"{key} ({key_counts[key]})" for key in duplicate_keys)
+        errors.append(f"duplicate keys: {details}")
+
+    missing_keys = sorted(expected_keys - set(key_counts))
+    if missing_keys:
+        errors.append(f"missing keys: {', '.join(missing_keys)}")
+
+    if unexpected_rows:
+        unexpected_names = ", ".join(_display_name(row.get("Name", "")) for row in unexpected_rows)
+        errors.append(f"unexpected names: {unexpected_names}")
+
+    id_mismatches: list[str] = []
+    for row in configured_rows:
+        key = str(row.get("internal_key", ""))
+        expected_id = configured_by_key[key].get("labsolutions_compound_id")
+        actual_id = row.get("ID#")
+        if actual_id != expected_id:
+            id_mismatches.append(
+                f"{_display_name(row.get('Name', ''))} -> {key} ID# {actual_id!r} expected {expected_id!r}"
+            )
+    if id_mismatches:
+        errors.append(f"ID/name mismatches: {'; '.join(id_mismatches)}")
+
+    if errors:
+        raise LabSolutionsParseError("Invalid Compound Results(Ch1): " + " | ".join(errors))
+
+
+def parse_file(
+    path: Path,
+    config: dict[str, Any],
+    *,
+    compound_results_unknown_name_behavior: str = COMPOUND_RESULTS_UNKNOWN_NAME_BEHAVIOR,
+    peak_table_unknown_name_behavior: str = PEAK_TABLE_UNKNOWN_NAME_BEHAVIOR,
+) -> dict[str, Any]:
     validate_analyte_config(config)
     alias_map = build_alias_map(config)
     sections = parse_sections(path)
@@ -295,15 +386,16 @@ def parse_file(path: Path, config: dict[str, Any], *, strict_aliases: bool = Tru
         "Peak Table(Ch1)",
         "Peak#",
         alias_map,
-        strict_aliases=strict_aliases,
+        unknown_name_behavior=peak_table_unknown_name_behavior,
     )
     parsed["Compound Results(Ch1)"] = parse_table(
         sections,
         "Compound Results(Ch1)",
         "ID#",
         alias_map,
-        strict_aliases=strict_aliases,
+        unknown_name_behavior=compound_results_unknown_name_behavior,
     )
+    validate_compound_results(parsed["Compound Results(Ch1)"], config)
 
     sample_info = parsed.get("Sample Information", {})
     original_files = parsed.get("Original Files", {})

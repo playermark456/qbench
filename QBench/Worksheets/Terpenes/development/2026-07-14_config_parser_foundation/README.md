@@ -46,6 +46,33 @@ QBench automation, QBench protocol worksheets, or any QBench object.
 - Both percent and mg/g result slots are preserved. Final numeric conversion
   remains blocked on unit, mass, final-volume, and dilution decisions.
 
+## Parser runtime safety
+
+`Compound Results(Ch1)` is the only quantitative input table. The parser maps
+each row to the controlled analyte configuration, then validates the actual
+parsed channel set and LabSolutions IDs. Runtime validation requires:
+
+- exactly 23 configured reportable internal channels;
+- exactly one Dimethylacetamide audit-only channel;
+- exactly 24 configured Compound Results rows in total;
+- every configured reportable internal key appears exactly once;
+- Dimethylacetamide appears exactly once;
+- no duplicate mapped internal key;
+- no missing configured internal key;
+- no unknown Compound Results analyte;
+- every mapped Compound Results `ID#` matches the configured
+  `labsolutions_compound_id`.
+
+If any of those rules fail, the parser raises `LabSolutionsParseError` with the
+specific missing keys, duplicate keys, unexpected names, or ID/name mismatches.
+This is set validation, not fixture-count-only validation.
+
+`Peak Table(Ch1)` is raw chromatographic audit data. Known Peak Table names are
+mapped to configured analytes for audit traceability, but unknown, blank, or
+unidentified Peak Table names are retained as non-reportable audit rows instead
+of failing the parse. Peak Table rows never populate normalized quantitative
+results and never drive potency calculations.
+
 ## Validation commands
 
 Run from this directory with the bundled or system Python runtime:
