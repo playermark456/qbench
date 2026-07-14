@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-14",
+  "source_files": [
+    "QBench/Worksheets/Terpenes/source/metrc_terpene_export_profiles.json",
+    "QBench/Worksheets/Terpenes/source/metrc_terpene_reportable_mapping.csv",
+    "QBench/Worksheets/Terpenes/source/terpenes_codex_build_brief_v3.md"
+  ],
+  "reporting_mode": "quantitative_only",
+  "profile_driven": true,
+  "silent_other_terpenes_mapping_enabled": false,
+  "schema_outcome_column_policy": {
+    "required_by_current_profiles": false,
+    "if_required_by_external_schema": {
+      "output_value": "",
+      "neutral_output_values": [
+        "",
+        "N/A"
+      ],
+      "include_formula_depends_on_column": false
+    }
+  },
+  "include_formula_policy": {
+    "depends_on": [
+      "configured_profile",
+      "configured_mapping",
+      "numeric_result_present"
+    ],
+    "does_not_depend_on": [
+      "schema_outcome_column"
+    ]
+  },
+  "profiles": {
+    "additional_raw_concentrate": {
+      "template_sheet": "Additional-Terpenes (%)",
+      "matrix_scope": "Raw Plant Material & Concentrate/Extract",
+      "individual_analyte_unit": "%",
+      "total_terpenes_unit": "%",
+      "automatic_export_enabled": true,
+      "warnings_requiring_confirmation": []
+    },
+    "additional_infused": {
+      "template_sheet": "Additional-Terpenes (mg_g)",
+      "matrix_scope": "Infused Products",
+      "individual_analyte_unit": "mg/g",
+      "total_terpenes_unit": "mg/g",
+      "automatic_export_enabled": true,
+      "warnings_requiring_confirmation": []
+    },
+    "full_panel_concentrates_tribal_only": {
+      "template_sheet": "Full Panel (Conc.) Tribal Only",
+      "matrix_scope": "Concentrates",
+      "individual_analyte_unit": "%",
+      "total_terpenes_unit": "%",
+      "automatic_export_enabled": false,
+      "warnings_requiring_confirmation": [
+        "Guaiol row is absent from this profile."
+      ]
+    },
+    "full_panel_flower_tribal_only": {
+      "template_sheet": "Full Panel (Flower) Tribal Only",
+      "matrix_scope": "Flower",
+      "individual_analyte_unit": "%",
+      "total_terpenes_unit": "%",
+      "automatic_export_enabled": false,
+      "warnings_requiring_confirmation": [
+        "Explicit p-Cymene row is absent from this profile."
+      ]
+    },
+    "full_panel_finished_products_tribal_only": {
+      "template_sheet": "Full Panel (FinPrd) Tribal Only",
+      "matrix_scope": "Finished Products",
+      "individual_analyte_unit": "%",
+      "total_terpenes_unit": "mg/g",
+      "automatic_export_enabled": false,
+      "warnings_requiring_confirmation": [
+        "Individual terpene rows use percent but Total Terpenes uses mg/g."
+      ]
+    },
+    "rd_terpenes": {
+      "template_sheet": "R&D Terpenes",
+      "matrix_scope": "R&D Testing",
+      "individual_analyte_unit": "%",
+      "total_terpenes_unit": "%",
+      "automatic_export_enabled": false,
+      "warnings_requiring_confirmation": [
+        "Alpha-Humulene appears as ppm in this template."
+      ]
+    },
+    "subcontract_concentrate_extract": {
+      "template_sheet": "Sub-Contract - Terpenes (ConEx)",
+      "matrix_scope": "Concentrate/Extract",
+      "individual_analyte_unit": "%",
+      "total_terpenes_unit": null,
+      "automatic_export_enabled": false,
+      "warnings_requiring_confirmation": [
+        "Profile contains a limited analyte set."
+      ]
+    },
+    "subcontract_infused": {
+      "template_sheet": "Sub-Contact - Terpenes(Infused)",
+      "matrix_scope": "Infused Products",
+      "individual_analyte_unit": "mg/g",
+      "total_terpenes_unit": null,
+      "automatic_export_enabled": false,
+      "warnings_requiring_confirmation": [
+        "Profile contains a limited analyte set."
+      ]
+    },
+    "subcontract_raw_pm": {
+      "template_sheet": "Sub-Contract - Terpenes (RawPM)",
+      "matrix_scope": "Raw Plant Material",
+      "individual_analyte_unit": "%",
+      "total_terpenes_unit": null,
+      "automatic_export_enabled": false,
+      "warnings_requiring_confirmation": [
+        "Profile contains a limited analyte set."
+      ]
+    }
+  },
+  "metrc_mappings": [
+    {
+      "internal_key": "apinene",
+      "metrc_target_analyte_label": "Alpha-Pinene",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "camphene",
+      "metrc_target_analyte_label": "Camphene",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "bmyrcene",
+      "metrc_target_analyte_label": "Beta-Myrcene",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "bpinene",
+      "metrc_target_analyte_label": "Beta-Pinene",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "delta3carene",
+      "metrc_target_analyte_label": "Delta-3 Carene",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "aterpinene",
+      "metrc_target_analyte_label": "Alpha-Terpinene",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "cisocimene",
+      "metrc_target_analyte_label": "Ocimene",
+      "rule": "rollup_component",
+      "rollup": "metrc_ocimene"
+    },
+    {
+      "internal_key": "dlimonene",
+      "metrc_target_analyte_label": "Limonene",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "pcymene",
+      "metrc_target_analyte_label": "P-Isopropyltoluene (P-Cymene)",
+      "rule": "direct_preferred_over_generic"
+    },
+    {
+      "internal_key": "transocimene",
+      "metrc_target_analyte_label": "Ocimene",
+      "rule": "rollup_component",
+      "rollup": "metrc_ocimene"
+    },
+    {
+      "internal_key": "eucalyptol",
+      "metrc_target_analyte_label": "Eucalyptol",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "gterpinene",
+      "metrc_target_analyte_label": "Gamma-Terpinene",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "terpinolene",
+      "metrc_target_analyte_label": "Terpinolene",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "linalool",
+      "metrc_target_analyte_label": "Linalool",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "isopulegol",
+      "metrc_target_analyte_label": "Isopulegol",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "geraniol",
+      "metrc_target_analyte_label": "Geraniol",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "bcaryophyllene",
+      "metrc_target_analyte_label": "Beta-Caryophyllene",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "ahumulene",
+      "metrc_target_analyte_label": "Alpha-Humulene",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "cisnerolidol",
+      "metrc_target_analyte_label": "Cis-Nerolidol",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "transnerolidol",
+      "metrc_target_analyte_label": "Nerolidol",
+      "rule": "direct_assumed_trans"
+    },
+    {
+      "internal_key": "guaiol",
+      "metrc_target_analyte_label": "Guaiol",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "caryophylleneoxide",
+      "metrc_target_analyte_label": "Caryophyllene Oxide",
+      "rule": "direct"
+    },
+    {
+      "internal_key": "bisabolol",
+      "metrc_target_analyte_label": "Alpha-Bisabolol",
+      "rule": "direct"
+    }
+  ],
+  "rollups": {
+    "metrc_ocimene": {
+      "metrc_target_analyte_label": "Ocimene",
+      "components": [
+        "cisocimene",
+        "transocimene"
+      ],
+      "rule": "sum_components"
+    }
+  },
+  "profile_coverage_missing_internal_keys": {
+    "additional_raw_concentrate": [],
+    "additional_infused": [],
+    "full_panel_concentrates_tribal_only": [
+      "guaiol"
+    ],
+    "full_panel_flower_tribal_only": [
+      "pcymene"
+    ],
+    "full_panel_finished_products_tribal_only": [],
+    "rd_terpenes": [],
+    "subcontract_concentrate_extract": [
+      "camphene",
+      "delta3carene",
+      "cisocimene",
+      "pcymene",
+      "transocimene",
+      "gterpinene",
+      "terpinolene",
+      "isopulegol",
+      "geraniol",
+      "cisnerolidol",
+      "guaiol"
+    ],
+    "subcontract_infused": [
+      "camphene",
+      "delta3carene",
+      "cisocimene",
+      "pcymene",
+      "transocimene",
+      "gterpinene",
+      "terpinolene",
+      "isopulegol",
+      "geraniol",
+      "cisnerolidol",
+      "guaiol"
+    ],
+    "subcontract_raw_pm": [
+      "camphene",
+      "delta3carene",
+      "cisocimene",
+      "pcymene",
+      "transocimene",
+      "gterpinene",
+      "terpinolene",
+      "isopulegol",
+      "geraniol",
+      "cisnerolidol",
+      "guaiol"
+    ]
+  }
+}

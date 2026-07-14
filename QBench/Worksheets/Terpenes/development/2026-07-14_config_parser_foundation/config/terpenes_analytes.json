@@ -1,0 +1,436 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-14",
+  "source_files": [
+    "QBench/Worksheets/Terpenes/source/terpenes_analyte_master_v3.csv",
+    "QBench/Worksheets/Terpenes/source/labsolutions_ascii_integration_spec.md",
+    "QBench/Worksheets/Terpenes/source/terpenes_worksheet_spec_v3.json"
+  ],
+  "reporting_mode": "quantitative_only",
+  "result_status_controls": {
+    "sample_pass_fail_enabled": false,
+    "analyte_pass_fail_enabled": false,
+    "coa_pass_fail_enabled": false,
+    "metrc_pass_fail_enabled": false,
+    "kvstore_pass_fail_enabled": false,
+    "label_claim_pass_fail_enabled": false
+  },
+  "quantitation": {
+    "source_table": "Compound Results(Ch1)",
+    "source_field": "Conc.",
+    "integration_review_source_table": "Peak Table(Ch1)",
+    "blocked_potency_fields": [
+      "Conc. %",
+      "Norm Conc."
+    ],
+    "extract_concentration_unit_requires_confirmation": "ug/mL",
+    "preserve_result_units": [
+      "percent",
+      "mg_g"
+    ],
+    "df_application_mode": "capture_only_until_method_validated"
+  },
+  "audit_only_channels": [
+    {
+      "internal_key": "dimethylacetamide",
+      "worksheet_label": "Dimethylacetamide",
+      "labsolutions_compound_id": 1,
+      "labsolutions_compound_name": "Dimethylacetamide",
+      "reportable": false,
+      "retain_for_audit": true,
+      "aliases": [
+        "Dimethylacetamide",
+        "dimethylacetamide"
+      ]
+    }
+  ],
+  "internal_reportable_channels": [
+    {
+      "order": 1,
+      "internal_key": "apinene",
+      "worksheet_label": "\u03b1-Pinene",
+      "labsolutions_compound_id": 2,
+      "labsolutions_compound_name": "alpha-Pinene",
+      "reportable": true,
+      "aliases": [
+        "alpha-Pinene",
+        "Alpha-Pinene",
+        "alpha pinene",
+        "\u03b1-Pinene"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 2,
+      "internal_key": "camphene",
+      "worksheet_label": "Camphene",
+      "labsolutions_compound_id": 3,
+      "labsolutions_compound_name": "Camphene",
+      "reportable": true,
+      "aliases": [
+        "Camphene",
+        "camphene"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 3,
+      "internal_key": "bmyrcene",
+      "worksheet_label": "\u03b2-Myrcene",
+      "labsolutions_compound_id": 4,
+      "labsolutions_compound_name": "beta-Myrcene",
+      "reportable": true,
+      "aliases": [
+        "beta-Myrcene",
+        "Beta-Myrcene",
+        "beta myrcene",
+        "\u03b2-Myrcene"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 4,
+      "internal_key": "bpinene",
+      "worksheet_label": "(-)-\u03b2-pinene",
+      "labsolutions_compound_id": 5,
+      "labsolutions_compound_name": "(-)-beta-Pinene",
+      "reportable": true,
+      "aliases": [
+        "(-)-beta-Pinene",
+        "beta-Pinene",
+        "Beta-Pinene",
+        "(-)-\u03b2-pinene"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 5,
+      "internal_key": "delta3carene",
+      "worksheet_label": "Delta-3-carene",
+      "labsolutions_compound_id": 6,
+      "labsolutions_compound_name": "delta-3-Carene",
+      "reportable": true,
+      "aliases": [
+        "delta-3-Carene",
+        "Delta-3-carene",
+        "delta 3 carene",
+        "\u03b4-3-Carene"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 6,
+      "internal_key": "aterpinene",
+      "worksheet_label": "\u03b1-Terpinene",
+      "labsolutions_compound_id": 7,
+      "labsolutions_compound_name": "alpha-Terpinene",
+      "reportable": true,
+      "aliases": [
+        "alpha-Terpinene",
+        "Alpha-Terpinene",
+        "alpha terpinene",
+        "\u03b1-Terpinene"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 7,
+      "internal_key": "cisocimene",
+      "worksheet_label": "cis-Ocimene",
+      "labsolutions_compound_id": 8,
+      "labsolutions_compound_name": "Ocimene 1",
+      "reportable": true,
+      "aliases": [
+        "Ocimene 1",
+        "ocimene-1",
+        "cis-Ocimene",
+        "cis ocimene"
+      ],
+      "default_coa_behavior": "rollup_component",
+      "default_coa_rollup": "total_ocimene"
+    },
+    {
+      "order": 8,
+      "internal_key": "dlimonene",
+      "worksheet_label": "d-Limonene",
+      "labsolutions_compound_id": 9,
+      "labsolutions_compound_name": "D-Limonene",
+      "reportable": true,
+      "aliases": [
+        "D-Limonene",
+        "d-Limonene",
+        "d limonene",
+        "Limonene"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 9,
+      "internal_key": "pcymene",
+      "worksheet_label": "p-Cymene",
+      "labsolutions_compound_id": 10,
+      "labsolutions_compound_name": "p-Cymene",
+      "reportable": true,
+      "aliases": [
+        "p-Cymene",
+        "P-Cymene",
+        "p cymene",
+        "P-Isopropyltoluene (P-Cymene)"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 10,
+      "internal_key": "transocimene",
+      "worksheet_label": "trans-Ocimene",
+      "labsolutions_compound_id": 11,
+      "labsolutions_compound_name": "Ocimene 2",
+      "reportable": true,
+      "aliases": [
+        "Ocimene 2",
+        "ocimene-2",
+        "trans-Ocimene",
+        "trans ocimene"
+      ],
+      "default_coa_behavior": "rollup_component",
+      "default_coa_rollup": "total_ocimene"
+    },
+    {
+      "order": 11,
+      "internal_key": "eucalyptol",
+      "worksheet_label": "Eucalyptol",
+      "labsolutions_compound_id": 12,
+      "labsolutions_compound_name": "Eucalyptol",
+      "reportable": true,
+      "aliases": [
+        "Eucalyptol",
+        "eucalyptol",
+        "1,8-Cineole",
+        "1 8 Cineole"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 12,
+      "internal_key": "gterpinene",
+      "worksheet_label": "\u03b3-Terpinene",
+      "labsolutions_compound_id": 13,
+      "labsolutions_compound_name": "Gamma terpinene",
+      "reportable": true,
+      "aliases": [
+        "Gamma terpinene",
+        "gamma-Terpinene",
+        "gamma terpinene",
+        "\u03b3-Terpinene"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 13,
+      "internal_key": "terpinolene",
+      "worksheet_label": "Terpinolene",
+      "labsolutions_compound_id": 14,
+      "labsolutions_compound_name": "Terpinolene",
+      "reportable": true,
+      "aliases": [
+        "Terpinolene",
+        "terpinolene"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 14,
+      "internal_key": "linalool",
+      "worksheet_label": "Linalool",
+      "labsolutions_compound_id": 15,
+      "labsolutions_compound_name": "Linalool",
+      "reportable": true,
+      "aliases": [
+        "Linalool",
+        "linalool"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 15,
+      "internal_key": "isopulegol",
+      "worksheet_label": "(-)-Isopulegol",
+      "labsolutions_compound_id": 16,
+      "labsolutions_compound_name": "(-)-Isopulegol",
+      "reportable": true,
+      "aliases": [
+        "(-)-Isopulegol",
+        "Isopulegol",
+        "isopulegol"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 16,
+      "internal_key": "geraniol",
+      "worksheet_label": "Geraniol",
+      "labsolutions_compound_id": 17,
+      "labsolutions_compound_name": "Geraniol",
+      "reportable": true,
+      "aliases": [
+        "Geraniol",
+        "geraniol"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 17,
+      "internal_key": "bcaryophyllene",
+      "worksheet_label": "\u03b2-Caryophyllene",
+      "labsolutions_compound_id": 18,
+      "labsolutions_compound_name": "beta-Caryophyllene",
+      "reportable": true,
+      "aliases": [
+        "beta-Caryophyllene",
+        "Beta-Caryophyllene",
+        "beta caryophyllene",
+        "\u03b2-Caryophyllene"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 18,
+      "internal_key": "ahumulene",
+      "worksheet_label": "\u03b1-Humulene",
+      "labsolutions_compound_id": 19,
+      "labsolutions_compound_name": "alpha-Humulene",
+      "reportable": true,
+      "aliases": [
+        "alpha-Humulene",
+        "Alpha-Humulene",
+        "alpha humulene",
+        "\u03b1-Humulene"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 19,
+      "internal_key": "cisnerolidol",
+      "worksheet_label": "cis-Nerolidol",
+      "labsolutions_compound_id": 20,
+      "labsolutions_compound_name": "Nerolidol 1",
+      "reportable": true,
+      "aliases": [
+        "Nerolidol 1",
+        "nerolidol-1",
+        "cis-Nerolidol",
+        "cis nerolidol"
+      ],
+      "default_coa_behavior": "rollup_component",
+      "default_coa_rollup": "total_nerolidol"
+    },
+    {
+      "order": 20,
+      "internal_key": "transnerolidol",
+      "worksheet_label": "trans-Nerolidol",
+      "labsolutions_compound_id": 21,
+      "labsolutions_compound_name": "Nerolidol 2",
+      "reportable": true,
+      "aliases": [
+        "Nerolidol 2",
+        "nerolidol-2",
+        "trans-Nerolidol",
+        "trans nerolidol"
+      ],
+      "default_coa_behavior": "rollup_component",
+      "default_coa_rollup": "total_nerolidol"
+    },
+    {
+      "order": 21,
+      "internal_key": "guaiol",
+      "worksheet_label": "(-)-Guaiol",
+      "labsolutions_compound_id": 22,
+      "labsolutions_compound_name": "(-)-Guaiol",
+      "reportable": true,
+      "aliases": [
+        "(-)-Guaiol",
+        "Guaiol",
+        "guaiol"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 22,
+      "internal_key": "caryophylleneoxide",
+      "worksheet_label": "Caryophyllene Oxide",
+      "labsolutions_compound_id": 23,
+      "labsolutions_compound_name": "Caryophyllene oxide",
+      "reportable": true,
+      "aliases": [
+        "Caryophyllene oxide",
+        "Caryophyllene Oxide",
+        "caryophyllene oxide"
+      ],
+      "default_coa_behavior": "direct"
+    },
+    {
+      "order": 23,
+      "internal_key": "bisabolol",
+      "worksheet_label": "(-)-\u03b1-Bisabolol",
+      "labsolutions_compound_id": 24,
+      "labsolutions_compound_name": "(-)-alpha-Bisabolol",
+      "reportable": true,
+      "aliases": [
+        "(-)-alpha-Bisabolol",
+        "alpha-Bisabolol",
+        "Alpha-Bisabolol",
+        "(-)-\u03b1-Bisabolol"
+      ],
+      "default_coa_behavior": "direct"
+    }
+  ],
+  "default_coa_reporting": {
+    "mode": "approved_21_measurand_list",
+    "result_units": [
+      "percent",
+      "mg_g"
+    ],
+    "direct_internal_keys": [
+      "apinene",
+      "camphene",
+      "bmyrcene",
+      "bpinene",
+      "delta3carene",
+      "aterpinene",
+      "dlimonene",
+      "pcymene",
+      "eucalyptol",
+      "gterpinene",
+      "terpinolene",
+      "linalool",
+      "isopulegol",
+      "geraniol",
+      "bcaryophyllene",
+      "ahumulene",
+      "guaiol",
+      "caryophylleneoxide",
+      "bisabolol"
+    ],
+    "rollups": [
+      {
+        "output_key": "total_ocimene",
+        "output_label": "Ocimene",
+        "components": [
+          "cisocimene",
+          "transocimene"
+        ],
+        "rule": "sum_components"
+      },
+      {
+        "output_key": "total_nerolidol",
+        "output_label": "Nerolidol",
+        "components": [
+          "cisnerolidol",
+          "transnerolidol"
+        ],
+        "rule": "sum_components"
+      }
+    ],
+    "measurand_count": 21
+  }
+}
