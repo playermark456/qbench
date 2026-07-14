@@ -9,7 +9,7 @@ Date: 2026-07-14
 | `Data!A1:C1` | QBench metadata headers | No |
 | `Data!A2:C2` | QBench test/sample/matrix placeholders | No |
 | `Data!D1:Z1` | 23 LabSolutions analyte headers in Prompt 2 config order | No |
-| `Data!D2:Z2` | LabSolutions `Compound Results(Ch1) > Conc.` inputs | Yes |
+| `Data!D2:Z2` | LabSolutions `Compound Results(Ch1) > Conc.` inputs; must be actual QBench numeric values for calculation and completeness | Yes |
 | `Data!D3:Z3` | Effective concentration formulas | No |
 | `Data!D4:Z4` | Result mg/g formulas | No |
 | `Data!D5:Z5` | Result percent formulas | No |
@@ -62,6 +62,8 @@ Controlled values for `below_loq_reporting_mode`:
 - `display_numeric_result`
 
 Only `display_less_than_loq` and `display_numeric_result` can allow `reporting_ready = TRUE`. The final laboratory decision remains unresolved.
+
+`Data!D2:Z2` inputs are guarded by `ISNUMBER`. Blank inputs leave channel outputs blank. Nonnumeric inputs, including numeric-looking text if QBench stores it as text, leave effective concentration, mg/g, and percent blank and set the channel qualifier to `Review Required`.
 
 ## Specifications tab
 

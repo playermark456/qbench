@@ -80,6 +80,8 @@ The dilution multiplier is:
 
 Blank instrument inputs produce blank channel outputs. Unconfirmed or invalid calculation configuration blocks numerical output.
 
+Each instrument concentration input in `Data!D2:Z2` is checked with `ISNUMBER` before the effective concentration multiplication. Blank inputs stay blank. Nonnumeric inputs stay blank in the effective concentration, mg/g, and percent layers and produce `Review Required` in the qualifier layer. The worksheet does not use `IFERROR` or `VALUE` to hide errors or coerce numeric-looking text.
+
 Nonnumeric preparation inputs such as text mass, text volume, or text DF block calculation. Zero and negative mass, volume, or applicable DF also block calculation.
 
 ## Specifications tab

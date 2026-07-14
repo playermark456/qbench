@@ -272,17 +272,21 @@ def build_data_tab(channels: list[dict[str, Any]]) -> tuple[list[list[Any]], lis
         label = col_letter(col)
         spec_row = 5 + offset
         data[2][col - 1] = (
-            f'=IF({label}2="","",IF($B$25<>TRUE,"",{label}2*IF($B$15="already_applied_by_labsolutions",'
-            f'1,IF($B$15="apply_in_qbench",$B$14,""))))'
+            f'=IF({label}2="","",IF(ISNUMBER({label}2)<>TRUE,"",IF($B$25<>TRUE,"",'
+            f'{label}2*IF($B$15="already_applied_by_labsolutions",1,IF($B$15="apply_in_qbench",$B$14,"")))))'
         )
-        data[3][col - 1] = f'=IF({label}3="","",IF($B$25<>TRUE,"",{label}3*$B$13/$B$12/1000))'
-        data[4][col - 1] = f'=IF({label}4="","",{label}4/10)'
+        data[3][col - 1] = (
+            f'=IF({label}3="","",IF(ISNUMBER({label}3)<>TRUE,"",IF($B$25<>TRUE,"",'
+            f'{label}3*$B$13/$B$12/1000)))'
+        )
+        data[4][col - 1] = f'=IF({label}4="","",IF(ISNUMBER({label}4)<>TRUE,"",{label}4/10))'
         data[5][col - 1] = (
-            f'=IF({label}2="","",IF($B$25<>TRUE,"Review Required",IF($B$22<>"Accepted","Hold",'
+            f'=IF({label}2="","",IF(ISNUMBER({label}2)<>TRUE,"Review Required",'
+            f'IF($B$25<>TRUE,"Review Required",IF($B$22<>"Accepted","Hold",'
             f'IF($B$23<>"TRUE","Hold",IF(OR(AND($B$19<>"display_less_than_loq",'
             f'$B$19<>"display_numeric_result"),$B$20<>"confirmed",$B$21<>"confirmed"),'
             f'"Review Required",IF(AND(SPECIFICATIONS!$C${spec_row}<>"",{label}4<SPECIFICATIONS!$C${spec_row}),'
-            f'"<LOQ","Reported"))))))'
+            f'"<LOQ","Reported")))))))'
         )
 
     data[7][0:3] = ["Control/Audit Field", "Value", "Notes"]

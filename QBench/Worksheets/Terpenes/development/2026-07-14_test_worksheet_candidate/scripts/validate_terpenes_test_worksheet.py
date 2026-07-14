@@ -64,7 +64,7 @@ REPORT_LABELS = [
     "Total Terpenes",
 ]
 FORBIDDEN_TOKENS = ["pass_fail", "Pass", "Fail", "Not Tested", "Claim Met", "Claim Not Met"]
-FORBIDDEN_FORMULA_TEXT = ["#REF!", "#NAME?", "#VALUE!", "Conc. %", "Norm Conc."]
+FORBIDDEN_FORMULA_TEXT = ["#REF!", "#NAME?", "#VALUE!", "Conc. %", "Norm Conc.", "IFERROR", "VALUE("]
 CONTROLLED_BELOW_LOQ_REPORTING_MODES = [
     "decision_required",
     "display_less_than_loq",
@@ -404,19 +404,55 @@ def validate_formulas(workbook: dict[str, Any]) -> None:
         fail("reporting_ready must use the controlled below-LOQ value set, not a non-default shortcut.")
     if "IFERROR" in formula_text:
         fail("Prompt 3 formulas must not use IFERROR to hide invalid configuration.")
+    if "VALUE(" in formula_text:
+        fail("Prompt 3 formulas must not use VALUE to coerce arbitrary text into numbers.")
+
+
+def assert_fragments_in_order(formula: str, fragments: list[str], message: str) -> None:
+    position = 0
+    for fragment in fragments:
+        next_position = formula.find(fragment, position)
+        if next_position == -1:
+            fail(f"{message}: {formula}")
+        position = next_position + len(fragment)
 
 
 def validate_result_formulas(workbook: dict[str, Any]) -> None:
     data = worksheet_by_name(workbook)["Data"]["data"]
     for col in range(4, 27):
         label = build_mod.col_letter(col)
-        if not data[2][col - 1].startswith(f'=IF({label}2="","",IF($B$25<>TRUE,"",{label}2*'):
+        input_guard = f"ISNUMBER({label}2)<>TRUE"
+        effective_formula = data[2][col - 1]
+        mgg_formula = data[3][col - 1]
+        percent_formula = data[4][col - 1]
+        qualifier_formula = data[5][col - 1]
+        if not effective_formula.startswith(f'=IF({label}2="","",IF({input_guard},"",IF($B$25<>TRUE,"",'):
             fail(f"Missing effective concentration formula at Data!{label}3.")
-        if not data[3][col - 1].startswith(f'=IF({label}3="","",IF($B$25<>TRUE,"",{label}3*$B$13/$B$12/1000))'):
+        assert_fragments_in_order(
+            effective_formula,
+            [f'=IF({label}2=""', f"IF({input_guard}", f'IF($B$25<>TRUE,""', f"{label}2*"],
+            f"Nonnumeric input can reach effective concentration multiplication at Data!{label}3",
+        )
+        if mgg_formula != (
+            f'=IF({label}3="","",IF(ISNUMBER({label}3)<>TRUE,"",IF($B$25<>TRUE,"",'
+            f'{label}3*$B$13/$B$12/1000)))'
+        ):
             fail(f"Missing mg/g formula at Data!{label}4.")
-        if data[4][col - 1] != f'=IF({label}4="","",{label}4/10)':
+        assert_fragments_in_order(
+            mgg_formula,
+            [f'=IF({label}3=""', f"IF(ISNUMBER({label}3)<>TRUE", f'IF($B$25<>TRUE,""', f"{label}3*"],
+            f"Nonnumeric effective concentration can reach mg/g multiplication at Data!{label}4",
+        )
+        if percent_formula != f'=IF({label}4="","",IF(ISNUMBER({label}4)<>TRUE,"",{label}4/10))':
             fail(f"Missing percent formula at Data!{label}5.")
-        if not data[5][col - 1].startswith(f'=IF({label}2="","",IF($B$25<>TRUE,"Review Required"'):
+        assert_fragments_in_order(
+            percent_formula,
+            [f'=IF({label}4=""', f"IF(ISNUMBER({label}4)<>TRUE", f"{label}4/10"],
+            f"Nonnumeric mg/g result can reach percent calculation at Data!{label}5",
+        )
+        if not qualifier_formula.startswith(
+            f'=IF({label}2="","",IF({input_guard},"Review Required",IF($B$25<>TRUE,"Review Required"'
+        ):
             fail(f"Missing qualifier formula at Data!{label}6.")
 
 

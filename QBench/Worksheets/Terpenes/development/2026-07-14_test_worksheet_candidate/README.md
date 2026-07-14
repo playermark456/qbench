@@ -30,6 +30,8 @@ It adds a controlled sample-level input surface, calculation formulas for 23 int
 
 It intentionally leaves final report release blocked by default. LabSolutions unit confirmation, sample-prep source confirmation, dilution application, LOQ handling, MU source, active COA parity, and METRC profile export behavior remain unresolved.
 
+All 23 instrument input cells in `Data!D2:Z2` use explicit `ISNUMBER` guards. Blank or nonnumeric inputs leave effective concentration, mg/g, and percent results blank. Nonnumeric inputs produce `Review Required` in the qualifier layer. The candidate does not use `IFERROR` or `VALUE` to hide or coerce arbitrary text input.
+
 Current generated counts:
 
 - Formula count: 265

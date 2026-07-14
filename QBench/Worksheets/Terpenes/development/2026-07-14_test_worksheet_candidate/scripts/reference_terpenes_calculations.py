@@ -37,6 +37,16 @@ def is_numeric(value: Any) -> bool:
     return True
 
 
+def is_qbench_number(value: Any) -> bool:
+    if isinstance(value, bool) or value in ("", None) or isinstance(value, str):
+        return False
+    try:
+        result = to_decimal(value, "value")
+    except CalculationBlocked:
+        return False
+    return result.is_finite()
+
+
 def positive_decimal(value: Any, field_name: str) -> Decimal:
     result = to_decimal(value, field_name)
     if result <= 0:
@@ -105,6 +115,87 @@ def calculate_result(
     }
 
 
+def effective_concentration_or_blank(
+    *,
+    instrument_conc: Any,
+    calculation_is_ready: bool,
+    df_application_mode: str,
+    df: Any = None,
+) -> Decimal | str:
+    if instrument_conc in ("", None):
+        return ""
+    if not is_qbench_number(instrument_conc):
+        return ""
+    if not calculation_is_ready:
+        return ""
+    return to_decimal(instrument_conc, "instrument_conc") * dilution_multiplier(df_application_mode, df)
+
+
+def result_mg_g_or_blank(
+    *,
+    effective_concentration: Any,
+    final_volume_ml: Any,
+    sample_mass_g: Any,
+    calculation_is_ready: bool,
+) -> Decimal | str:
+    if effective_concentration in ("", None):
+        return ""
+    if not is_qbench_number(effective_concentration):
+        return ""
+    if not calculation_is_ready:
+        return ""
+    return (
+        to_decimal(effective_concentration, "effective_concentration")
+        * positive_decimal(final_volume_ml, "final_volume_ml")
+        / positive_decimal(sample_mass_g, "sample_mass_g")
+        / Decimal("1000")
+    )
+
+
+def result_percent_or_blank(result_mg_g: Any) -> Decimal | str:
+    if result_mg_g in ("", None):
+        return ""
+    if not is_qbench_number(result_mg_g):
+        return ""
+    return to_decimal(result_mg_g, "result_mg_g") / Decimal("10")
+
+
+def qualifier_for_instrument_input(
+    *,
+    instrument_conc: Any,
+    calculation_is_ready: bool,
+    batch_qc_disposition: str = "Accepted",
+    publish_ready: bool = True,
+    below_loq_reporting_mode: str = "display_numeric_result",
+    loq_source_status: str = "confirmed",
+    mu_source_status: str = "confirmed",
+    result_mg_g: Any = None,
+    loq_mg_g: Any = None,
+) -> str:
+    if instrument_conc in ("", None):
+        return ""
+    if not is_qbench_number(instrument_conc):
+        return "Review Required"
+    if not calculation_is_ready:
+        return "Review Required"
+    if batch_qc_disposition != "Accepted":
+        return "Hold"
+    if not publish_ready:
+        return "Hold"
+    if (
+        below_loq_reporting_mode not in REPORT_RELEASE_BELOW_LOQ_MODES
+        or loq_source_status != "confirmed"
+        or mu_source_status != "confirmed"
+    ):
+        return "Review Required"
+    if loq_mg_g not in ("", None):
+        if not is_numeric(loq_mg_g) or not is_numeric(result_mg_g):
+            return "Review Required"
+        if to_decimal(result_mg_g, "result_mg_g") < to_decimal(loq_mg_g, "loq_mg_g"):
+            return "<LOQ"
+    return "Reported"
+
+
 def reporting_ready(
     *,
     calculation_is_ready: bool,
@@ -130,8 +221,8 @@ def analytical_results_complete(instrument_inputs: list[Any], calculated_mg_g_re
     return (
         len(instrument_inputs) == 23
         and len(calculated_mg_g_results) == 23
-        and all(is_numeric(value) for value in instrument_inputs)
-        and all(is_numeric(value) for value in calculated_mg_g_results)
+        and all(is_qbench_number(value) for value in instrument_inputs)
+        and all(is_qbench_number(value) for value in calculated_mg_g_results)
     )
 
 

@@ -105,10 +105,37 @@ class TerpenesTestWorksheetCandidateTests(unittest.TestCase):
         data = self.worksheets["Data"]["data"]
         for col in range(4, 27):
             label = builder.col_letter(col)
-            self.assertTrue(data[2][col - 1].startswith(f'=IF({label}2="","",IF($B$25<>TRUE'))
+            self.assertTrue(
+                data[2][col - 1].startswith(
+                    f'=IF({label}2="","",IF(ISNUMBER({label}2)<>TRUE,"",IF($B$25<>TRUE'
+                )
+            )
             self.assertIn(f"{label}3*$B$13/$B$12/1000", data[3][col - 1])
-            self.assertEqual(data[4][col - 1], f'=IF({label}4="","",{label}4/10)')
+            self.assertEqual(
+                data[4][col - 1],
+                f'=IF({label}4="","",IF(ISNUMBER({label}4)<>TRUE,"",{label}4/10))',
+            )
             self.assertIn("Review Required", data[5][col - 1])
+
+    def test_all_23_instrument_input_formulas_have_isnumber_guards(self) -> None:
+        data = self.worksheets["Data"]["data"]
+        for col in range(4, 27):
+            label = builder.col_letter(col)
+            effective_formula = data[2][col - 1]
+            mgg_formula = data[3][col - 1]
+            percent_formula = data[4][col - 1]
+            qualifier_formula = data[5][col - 1]
+            guard = f"ISNUMBER({label}2)<>TRUE"
+            self.assertIn(f'IF({guard},""', effective_formula)
+            self.assertLess(effective_formula.index(guard), effective_formula.index(f"{label}2*"))
+            self.assertIn(f'IF({guard},"Review Required"', qualifier_formula)
+            self.assertIn(f"ISNUMBER({label}3)<>TRUE", mgg_formula)
+            self.assertIn(f"ISNUMBER({label}4)<>TRUE", percent_formula)
+
+    def test_formula_text_does_not_coerce_or_hide_text_inputs(self) -> None:
+        formula_text = "\n".join(validator.formulas(self.candidate))
+        self.assertNotIn("IFERROR", formula_text)
+        self.assertNotIn("VALUE(", formula_text)
 
     def test_total_ocimene_sums_only_cis_and_trans_ocimene(self) -> None:
         spec = self.worksheets["Specifications"]["data"]
@@ -372,11 +399,106 @@ class TerpenesTestWorksheetCandidateTests(unittest.TestCase):
                 )
 
     def test_analytical_results_complete_requires_23_numeric_inputs_and_results(self) -> None:
-        self.assertTrue(reference.analytical_results_complete(["0"] * 23, ["0"] * 23))
-        self.assertFalse(reference.analytical_results_complete(["1"] * 22, ["1"] * 23))
-        self.assertFalse(reference.analytical_results_complete(["1"] * 23, ["1"] * 22))
-        self.assertFalse(reference.analytical_results_complete(["1"] * 22 + ["abc"], ["1"] * 23))
-        self.assertFalse(reference.analytical_results_complete(["1"] * 23, ["1"] * 22 + ["text"]))
+        self.assertTrue(reference.analytical_results_complete([0] * 23, [Decimal("0")] * 23))
+        self.assertFalse(reference.analytical_results_complete([1] * 22, [Decimal("1")] * 23))
+        self.assertFalse(reference.analytical_results_complete([1] * 23, [Decimal("1")] * 22))
+        self.assertFalse(reference.analytical_results_complete([1] * 22 + ["abc"], [Decimal("1")] * 23))
+        self.assertFalse(reference.analytical_results_complete([1] * 23, [Decimal("1")] * 22 + ["text"]))
+        self.assertFalse(reference.analytical_results_complete(["1"] * 23, [Decimal("1")] * 23))
+
+    def test_nonnumeric_instrument_inputs_blank_calculations_and_require_review(self) -> None:
+        for instrument_conc in ["abc", "10 ug/mL", "N/A"]:
+            with self.subTest(instrument_conc=instrument_conc):
+                effective = reference.effective_concentration_or_blank(
+                    instrument_conc=instrument_conc,
+                    calculation_is_ready=True,
+                    df_application_mode="already_applied_by_labsolutions",
+                )
+                mgg = reference.result_mg_g_or_blank(
+                    effective_concentration=effective,
+                    final_volume_ml=Decimal("10"),
+                    sample_mass_g=Decimal("1"),
+                    calculation_is_ready=True,
+                )
+                percent = reference.result_percent_or_blank(mgg)
+                qualifier = reference.qualifier_for_instrument_input(
+                    instrument_conc=instrument_conc,
+                    calculation_is_ready=True,
+                    result_mg_g=mgg,
+                )
+                self.assertEqual(effective, "")
+                self.assertEqual(mgg, "")
+                self.assertEqual(percent, "")
+                self.assertEqual(qualifier, "Review Required")
+                self.assertFalse(
+                    reference.analytical_results_complete(
+                        [Decimal("1")] * 22 + [instrument_conc],
+                        [Decimal("0.01")] * 23,
+                    )
+                )
+
+    def test_blank_instrument_input_stays_blank(self) -> None:
+        effective = reference.effective_concentration_or_blank(
+            instrument_conc="",
+            calculation_is_ready=True,
+            df_application_mode="already_applied_by_labsolutions",
+        )
+        mgg = reference.result_mg_g_or_blank(
+            effective_concentration=effective,
+            final_volume_ml=Decimal("10"),
+            sample_mass_g=Decimal("1"),
+            calculation_is_ready=True,
+        )
+        self.assertEqual(effective, "")
+        self.assertEqual(mgg, "")
+        self.assertEqual(reference.result_percent_or_blank(mgg), "")
+        self.assertEqual(reference.qualifier_for_instrument_input(instrument_conc="", calculation_is_ready=True), "")
+        self.assertFalse(reference.analytical_results_complete([Decimal("1")] * 22 + [""], [Decimal("1")] * 23))
+
+    def test_numeric_zero_positive_and_negative_inputs_remain_numeric(self) -> None:
+        cases = [
+            (0, Decimal("0"), Decimal("0"), Decimal("0")),
+            (Decimal("10"), Decimal("10"), Decimal("0.1"), Decimal("0.01")),
+            (Decimal("-1"), Decimal("-1"), Decimal("-0.01"), Decimal("-0.001")),
+        ]
+        for instrument_conc, expected_effective, expected_mgg, expected_percent in cases:
+            with self.subTest(instrument_conc=instrument_conc):
+                effective = reference.effective_concentration_or_blank(
+                    instrument_conc=instrument_conc,
+                    calculation_is_ready=True,
+                    df_application_mode="already_applied_by_labsolutions",
+                )
+                mgg = reference.result_mg_g_or_blank(
+                    effective_concentration=effective,
+                    final_volume_ml=Decimal("10"),
+                    sample_mass_g=Decimal("1"),
+                    calculation_is_ready=True,
+                )
+                percent = reference.result_percent_or_blank(mgg)
+                self.assertEqual(effective, expected_effective)
+                self.assertEqual(mgg, expected_mgg)
+                self.assertEqual(percent, expected_percent)
+                self.assertEqual(
+                    reference.qualifier_for_instrument_input(
+                        instrument_conc=instrument_conc,
+                        calculation_is_ready=True,
+                        result_mg_g=mgg,
+                    ),
+                    "Reported",
+                )
+        self.assertTrue(reference.analytical_results_complete([0] * 23, [Decimal("0")] * 23))
+
+    def test_numeric_looking_text_input_is_not_silently_accepted(self) -> None:
+        effective = reference.effective_concentration_or_blank(
+            instrument_conc="10",
+            calculation_is_ready=True,
+            df_application_mode="already_applied_by_labsolutions",
+        )
+        self.assertEqual(effective, "")
+        self.assertEqual(
+            reference.qualifier_for_instrument_input(instrument_conc="10", calculation_is_ready=True),
+            "Review Required",
+        )
 
     def test_numerical_and_display_layers_are_separate(self) -> None:
         report_formulas = [
