@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "package": "2026-07-14_test_worksheet_candidate",
+  "prompt": "Prompt 3",
+  "nonproduction_candidate": true,
+  "stable_generation_date": "2026-07-14",
+  "source_active_export": {
+    "path": "QBench/Rescans/2026-07-04/Worksheets/Terpenes/terpenes__id_42__worksheet_export_spreadsheet__active__2026-07-04.json",
+    "sha256": "1ff46aadc31c32b8b176f3eb0091c8ae26d905271fcbc4f1a118a3776f7820e9",
+    "unchanged_source_required": true
+  },
+  "prompt2_config_files": [
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_config_parser_foundation/config/terpenes_analytes.json",
+      "sha256": "89fede84a359767685f33d51d029c9cf5df90b153db7efda78579f6416176343"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_config_parser_foundation/config/terpenes_qc.json",
+      "sha256": "df583b6621336e9b99e218e3bc5080f91ccff82ec660dc66f15b4644147ebd1a"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_config_parser_foundation/config/metrc_profiles.json",
+      "sha256": "50dda0845cefe5e90c347f74f65170a83181ecdea5f47f9e7ebb22f9554ffb5c"
+    }
+  ],
+  "generated_candidate": {
+    "path": "QBench/Worksheets/Terpenes/development/2026-07-14_test_worksheet_candidate/dist/terpenes__test_ws_id_42__candidate_v1__2026-07-14.json",
+    "sha256": "fd0c56e54fea6b4c82dfa1a4e5d8c7a0ec4da5049cecf952ab5fee06b89d0eca",
+    "tabs": [
+      "Report",
+      "Data",
+      "Specifications"
+    ],
+    "worksheet_ids": {
+      "Report": "cdb783ce-dea5-4779-9246-a0ab1b5b9eb6",
+      "Data": "562c5dc7-b622-4bf0-a9de-01e3d9076392",
+      "Specifications": "415aa1f9-b0fd-4256-9bb2-ebbc917179d0"
+    },
+    "formula_count": 264,
+    "named_cell_count": 90,
+    "preserved_compatibility_named_cell_count": 47,
+    "report_results_range": "Report!A1:E23",
+    "kvstore_config_empty": true,
+    "conditional_formatting_rule_count": 0
+  },
+  "deterministic_generation": {
+    "uses_stable_constants_only": true,
+    "generation_timestamps_omitted": true,
+    "random_uuid_values_omitted": true
+  },
+  "default_decision_gates": {
+    "labsolutions_conc_unit": "ug/mL",
+    "labsolutions_conc_unit_confirmed": "FALSE",
+    "preparation_values_confirmed": "FALSE",
+    "df_application_mode": "capture_only_until_method_validated",
+    "below_loq_reporting_mode": "decision_required",
+    "loq_source_status": "decision_required",
+    "mu_source_status": "decision_required",
+    "batch_qc_disposition": "Hold",
+    "publish_ready": "FALSE",
+    "final_report_release_blocked_by_default": true
+  },
+  "unresolved_scientific_reporting_decisions": [
+    "Confirm LabSolutions Conc. unit and whether it is extract concentration in ug/mL.",
+    "Confirm sample mass and final volume sources.",
+    "Confirm dilution factor application mode and avoid double application.",
+    "Confirm below-LOQ reporting and METRC handling.",
+    "Confirm Measurement Uncertainty and LOQ source.",
+    "Confirm active COA source parity before release.",
+    "Confirm METRC profile selection and export behavior in Prompt 7."
+  ],
+  "scope_controls": {
+    "active_or_raw_qbench_export_modified": false,
+    "coa_source_modified": false,
+    "qbench_automation_modified": false,
+    "qbench_parser_configuration_modified": false,
+    "protocol_worksheet_modified": false,
+    "report_configuration_modified": false,
+    "qbench_production_object_modified": false,
+    "prompt4_started": false
+  }
+}
