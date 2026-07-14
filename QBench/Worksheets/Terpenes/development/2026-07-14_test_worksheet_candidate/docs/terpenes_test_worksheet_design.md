@@ -48,7 +48,19 @@ The default calculation and reporting gates are intentionally closed:
 - `batch_qc_disposition = "Hold"`
 - `publish_ready = FALSE`
 
-`calculation_ready` is separate from `reporting_ready`. The report can release only after calculation prerequisites are complete, batch disposition is `Accepted`, `publish_ready` is `TRUE`, and LOQ/MU decisions are confirmed.
+`calculation_ready` is separate from `reporting_ready`. Sample mass and final volume must be numeric and greater than zero. If `df_application_mode = "apply_in_qbench"`, DF must also be numeric and greater than zero. When `df_application_mode = "already_applied_by_labsolutions"`, DF is not required and is not multiplied a second time.
+
+The candidate also adds `analytical_results_complete` at `Data!B24`. It is true only when all 23 instrument concentration inputs and all 23 calculated mg/g results are numeric.
+
+The report can release only after calculation prerequisites are complete, analytical results are complete, batch disposition is `Accepted`, `publish_ready` is `TRUE`, below-LOQ mode is one of the controlled report-release values, and LOQ/MU decisions are confirmed.
+
+Controlled below-LOQ modes are:
+
+- `decision_required`
+- `display_less_than_loq`
+- `display_numeric_result`
+
+The final laboratory decision remains unresolved. The candidate supports both nondefault display modes only so Sandbox testing can confirm safe worksheet behavior.
 
 ## Calculation formulas
 
@@ -67,6 +79,8 @@ The dilution multiplier is:
 `result percent = result mg/g / 10`
 
 Blank instrument inputs produce blank channel outputs. Unconfirmed or invalid calculation configuration blocks numerical output.
+
+Nonnumeric preparation inputs such as text mass, text volume, or text DF block calculation. Zero and negative mass, volume, or applicable DF also block calculation.
 
 ## Specifications tab
 
@@ -90,6 +104,12 @@ Rows 28:30 add controlled totals:
 - Total Nerolidol = cis-Nerolidol + trans-Nerolidol.
 - Total Terpenes = sum of the 23 internal numerical terpene channels, excluding rollup rows.
 
+Rollups and totals are completeness-gated:
+
+- Total Ocimene stays blank unless both component results are numeric.
+- Total Nerolidol stays blank unless both component results are numeric.
+- Total Terpenes stays blank unless all 23 internal channel results are numeric.
+
 MU and LOQ values remain blank until approved sources are confirmed.
 
 ## Report tab
@@ -103,6 +123,8 @@ The Report tab is a compact `A1:E23` table:
 - E: MU (%)
 
 The table contains the 21 default COA measurands in the required order plus Total Terpenes. Report result cells are formulas gated by `reporting_ready`. When `reporting_ready` is false, result cells stay blank.
+
+Report Result (%) and Result (mg/g) columns are display formulas. If `reporting_ready` is true and the Specifications qualifier is `<LOQ`, the report displays `<LOQ` only when `below_loq_reporting_mode = "display_less_than_loq"`. If `below_loq_reporting_mode = "display_numeric_result"`, the report displays the numerical result. `Hold` and `Review Required` messages remain outside `report_results`.
 
 The report uses Total Ocimene and Total Nerolidol rollups and keeps both percent and mg/g columns. It does not include a compliance status column.
 

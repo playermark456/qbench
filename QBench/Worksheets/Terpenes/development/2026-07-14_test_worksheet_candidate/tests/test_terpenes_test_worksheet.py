@@ -31,13 +31,14 @@ class TerpenesTestWorksheetCandidateTests(unittest.TestCase):
         cls.candidate, cls.manifest, cls.candidate_text, cls.manifest_text = builder.build_outputs()
         cls.worksheets = {ws["worksheetName"]: ws for ws in cls.candidate["config"]["worksheets"]}
         cls.named_cells = cls.candidate["qb_config"]["named_cells"]
-        cls.reference_cases = json.loads(FIXTURE_PATH.read_text(encoding="utf-8"))["cases"]
+        cls.fixture = json.loads(FIXTURE_PATH.read_text(encoding="utf-8"))
+        cls.reference_cases = cls.fixture["cases"]
 
     def test_static_validator_passes(self) -> None:
         summary = validator.validate_candidate()
         self.assertEqual(summary["status"], "ok")
-        self.assertEqual(summary["formula_count"], 264)
-        self.assertEqual(summary["named_cell_count"], 90)
+        self.assertEqual(summary["formula_count"], self.manifest["generated_candidate"]["formula_count"])
+        self.assertEqual(summary["named_cell_count"], self.manifest["generated_candidate"]["named_cell_count"])
 
     def test_generator_is_deterministic_in_memory(self) -> None:
         first = builder.build_outputs()
@@ -82,12 +83,20 @@ class TerpenesTestWorksheetCandidateTests(unittest.TestCase):
         self.assertEqual(data[20][1], "decision_required")
         self.assertEqual(data[21][1], "Hold")
         self.assertEqual(data[22][1], "FALSE")
+        self.assertIn("COUNT($D$2:$Z$2)=23", data[23][1])
+        self.assertIn("COUNT($D$4:$Z$4)=23", data[23][1])
+
+    def test_controlled_below_loq_modes_are_exact(self) -> None:
+        expected = ["decision_required", "display_less_than_loq", "display_numeric_result"]
+        self.assertEqual(self.fixture["controlled_below_loq_reporting_modes"], expected)
+        self.assertEqual(self.manifest["default_decision_gates"]["controlled_below_loq_reporting_modes"], expected)
+        self.assertEqual(sorted(reference.CONTROLLED_BELOW_LOQ_REPORTING_MODES), sorted(expected))
 
     def test_report_result_formulas_are_gated_by_reporting_ready(self) -> None:
         report = self.worksheets["Report"]["data"]
         for row in report[1:]:
             for formula in row[1:]:
-                self.assertTrue(formula.startswith('=IF(DATA!$B$25=TRUE,SPECIFICATIONS!'))
+                self.assertTrue(formula.startswith('=IF(DATA!$B$26'))
 
     def test_no_forbidden_outcome_tokens_in_candidate_json(self) -> None:
         validator.validate_no_forbidden_artifacts(self.candidate)
@@ -96,20 +105,20 @@ class TerpenesTestWorksheetCandidateTests(unittest.TestCase):
         data = self.worksheets["Data"]["data"]
         for col in range(4, 27):
             label = builder.col_letter(col)
-            self.assertTrue(data[2][col - 1].startswith(f'=IF({label}2="","",IF($B$24<>TRUE'))
+            self.assertTrue(data[2][col - 1].startswith(f'=IF({label}2="","",IF($B$25<>TRUE'))
             self.assertIn(f"{label}3*$B$13/$B$12/1000", data[3][col - 1])
             self.assertEqual(data[4][col - 1], f'=IF({label}4="","",{label}4/10)')
             self.assertIn("Review Required", data[5][col - 1])
 
     def test_total_ocimene_sums_only_cis_and_trans_ocimene(self) -> None:
         spec = self.worksheets["Specifications"]["data"]
-        self.assertEqual(spec[27][3], '=IF(AND(D11="",D14=""),"",SUM(D11,D14))')
-        self.assertEqual(spec[27][4], '=IF(AND(E11="",E14=""),"",SUM(E11,E14))')
+        self.assertEqual(spec[27][3], '=IF(COUNT(D11,D14)=2,SUM(D11,D14),"")')
+        self.assertEqual(spec[27][4], '=IF(COUNT(E11,E14)=2,SUM(E11,E14),"")')
 
     def test_total_nerolidol_sums_only_cis_and_trans_nerolidol(self) -> None:
         spec = self.worksheets["Specifications"]["data"]
-        self.assertEqual(spec[28][3], '=IF(AND(D23="",D24=""),"",SUM(D23,D24))')
-        self.assertEqual(spec[28][4], '=IF(AND(E23="",E24=""),"",SUM(E23,E24))')
+        self.assertEqual(spec[28][3], '=IF(COUNT(D23,D24)=2,SUM(D23,D24),"")')
+        self.assertEqual(spec[28][4], '=IF(COUNT(E23,E24)=2,SUM(E23,E24),"")')
 
     def test_total_terpenes_sums_internal_channels_once(self) -> None:
         spec = self.worksheets["Specifications"]["data"]
@@ -182,13 +191,64 @@ class TerpenesTestWorksheetCandidateTests(unittest.TestCase):
         )
         self.assertFalse(ready)
 
+    def test_nonnumeric_preparation_inputs_block_calculation_readiness(self) -> None:
+        base = {
+            "labsolutions_conc_unit": "ug/mL",
+            "labsolutions_conc_unit_confirmed": True,
+            "preparation_values_confirmed": True,
+            "sample_mass_g": "1",
+            "final_volume_ml": "10",
+            "df_application_mode": "already_applied_by_labsolutions",
+        }
+        cases = [
+            {"sample_mass_g": "abc"},
+            {"sample_mass_g": "1 g"},
+            {"final_volume_ml": "abc"},
+            {"final_volume_ml": "10 mL"},
+            {"sample_mass_g": "0"},
+            {"sample_mass_g": "-1"},
+            {"final_volume_ml": "0"},
+            {"final_volume_ml": "-10"},
+        ]
+        for override in cases:
+            with self.subTest(override=override):
+                values = {**base, **override}
+                self.assertFalse(reference.calculation_ready(**values))
+
+    def test_applicable_df_must_be_numeric_positive_for_calculation(self) -> None:
+        base = {
+            "labsolutions_conc_unit": "ug/mL",
+            "labsolutions_conc_unit_confirmed": True,
+            "preparation_values_confirmed": True,
+            "sample_mass_g": "1",
+            "final_volume_ml": "10",
+            "df_application_mode": "apply_in_qbench",
+        }
+        for df in ["abc", "", "0", "-2"]:
+            with self.subTest(df=df):
+                self.assertFalse(reference.calculation_ready(**base, df=df))
+
+    def test_captured_df_not_required_when_already_applied(self) -> None:
+        self.assertTrue(
+            reference.calculation_ready(
+                labsolutions_conc_unit="ug/mL",
+                labsolutions_conc_unit_confirmed=True,
+                preparation_values_confirmed=True,
+                sample_mass_g="1",
+                final_volume_ml="10",
+                df_application_mode="already_applied_by_labsolutions",
+                df="",
+            )
+        )
+
     def test_hold_disposition_blocks_reporting(self) -> None:
         self.assertFalse(
             reference.reporting_ready(
                 calculation_is_ready=True,
+                analytical_results_are_complete=True,
                 batch_qc_disposition="Hold",
                 publish_ready=True,
-                below_loq_reporting_mode="numeric_result",
+                below_loq_reporting_mode="display_numeric_result",
                 loq_source_status="confirmed",
                 mu_source_status="confirmed",
             )
@@ -198,9 +258,10 @@ class TerpenesTestWorksheetCandidateTests(unittest.TestCase):
         self.assertFalse(
             reference.reporting_ready(
                 calculation_is_ready=True,
+                analytical_results_are_complete=True,
                 batch_qc_disposition="Rejected",
                 publish_ready=True,
-                below_loq_reporting_mode="numeric_result",
+                below_loq_reporting_mode="display_numeric_result",
                 loq_source_status="confirmed",
                 mu_source_status="confirmed",
             )
@@ -210,9 +271,53 @@ class TerpenesTestWorksheetCandidateTests(unittest.TestCase):
         self.assertFalse(
             reference.reporting_ready(
                 calculation_is_ready=True,
+                analytical_results_are_complete=True,
                 batch_qc_disposition="Accepted",
                 publish_ready=False,
-                below_loq_reporting_mode="numeric_result",
+                below_loq_reporting_mode="display_numeric_result",
+                loq_source_status="confirmed",
+                mu_source_status="confirmed",
+            )
+        )
+
+    def test_invalid_below_loq_modes_block_reporting(self) -> None:
+        for mode in ["decision_required", *self.fixture["invalid_below_loq_reporting_modes"]]:
+            with self.subTest(mode=mode):
+                self.assertFalse(
+                    reference.reporting_ready(
+                        calculation_is_ready=True,
+                        analytical_results_are_complete=True,
+                        batch_qc_disposition="Accepted",
+                        publish_ready=True,
+                        below_loq_reporting_mode=mode,
+                        loq_source_status="confirmed",
+                        mu_source_status="confirmed",
+                    )
+                )
+
+    def test_supported_below_loq_modes_can_release_when_other_gates_are_met(self) -> None:
+        for mode in ["display_less_than_loq", "display_numeric_result"]:
+            with self.subTest(mode=mode):
+                self.assertTrue(
+                    reference.reporting_ready(
+                        calculation_is_ready=True,
+                        analytical_results_are_complete=True,
+                        batch_qc_disposition="Accepted",
+                        publish_ready=True,
+                        below_loq_reporting_mode=mode,
+                        loq_source_status="confirmed",
+                        mu_source_status="confirmed",
+                    )
+                )
+
+    def test_incomplete_analytical_results_block_reporting(self) -> None:
+        self.assertFalse(
+            reference.reporting_ready(
+                calculation_is_ready=True,
+                analytical_results_are_complete=False,
+                batch_qc_disposition="Accepted",
+                publish_ready=True,
+                below_loq_reporting_mode="display_numeric_result",
                 loq_source_status="confirmed",
                 mu_source_status="confirmed",
             )
@@ -233,14 +338,55 @@ class TerpenesTestWorksheetCandidateTests(unittest.TestCase):
         self.assertNotIn("Conc. %", formula_text)
         self.assertNotIn("Norm Conc.", formula_text)
 
+    def test_report_display_supports_both_below_loq_modes(self) -> None:
+        self.assertEqual(
+            reference.report_display_value(
+                reporting_is_ready=True,
+                qualifier="<LOQ",
+                below_loq_reporting_mode="display_less_than_loq",
+                numerical_result="0.004",
+            ),
+            "<LOQ",
+        )
+        self.assertEqual(
+            reference.report_display_value(
+                reporting_is_ready=True,
+                qualifier="<LOQ",
+                below_loq_reporting_mode="display_numeric_result",
+                numerical_result="0.004",
+            ),
+            Decimal("0.004"),
+        )
+
+    def test_report_display_suppresses_nonreport_qualifiers(self) -> None:
+        for qualifier in ["Hold", "Review Required", ""]:
+            with self.subTest(qualifier=qualifier):
+                self.assertEqual(
+                    reference.report_display_value(
+                        reporting_is_ready=True,
+                        qualifier=qualifier,
+                        below_loq_reporting_mode="display_numeric_result",
+                        numerical_result="0.004",
+                    ),
+                    "",
+                )
+
+    def test_analytical_results_complete_requires_23_numeric_inputs_and_results(self) -> None:
+        self.assertTrue(reference.analytical_results_complete(["0"] * 23, ["0"] * 23))
+        self.assertFalse(reference.analytical_results_complete(["1"] * 22, ["1"] * 23))
+        self.assertFalse(reference.analytical_results_complete(["1"] * 23, ["1"] * 22))
+        self.assertFalse(reference.analytical_results_complete(["1"] * 22 + ["abc"], ["1"] * 23))
+        self.assertFalse(reference.analytical_results_complete(["1"] * 23, ["1"] * 22 + ["text"]))
+
     def test_numerical_and_display_layers_are_separate(self) -> None:
         report_formulas = [
             value
             for row in self.worksheets["Report"]["data"][1:]
             for value in row[1:]
         ]
-        self.assertTrue(all("<LOQ" not in formula for formula in report_formulas))
-        self.assertTrue(all("Reported" not in formula for formula in report_formulas))
+        self.assertTrue(all('DATA!$B$19="display_less_than_loq"' in formula or "<LOQ" not in formula for formula in report_formulas))
+        self.assertTrue(all("Hold" not in formula for formula in report_formulas))
+        self.assertTrue(all("Review Required" not in formula for formula in report_formulas))
         self.assertTrue(any("<LOQ" in formula for formula in self.worksheets["Data"]["data"][5][3:26]))
 
     def test_manifest_records_source_hash(self) -> None:
@@ -259,10 +405,28 @@ class TerpenesTestWorksheetCandidateTests(unittest.TestCase):
         self.assertEqual(reference.sum_components(values, ["cisocimene", "transocimene"]), Decimal("0.025"))
         self.assertEqual(reference.sum_components(values, ["cisnerolidol", "transnerolidol"]), Decimal("0.025"))
 
+    def test_partial_ocimene_rollup_is_blank(self) -> None:
+        values = {"cisocimene": "0.010"}
+        self.assertIsNone(reference.complete_sum_components(values, ["cisocimene", "transocimene"]))
+
+    def test_partial_nerolidol_rollup_is_blank(self) -> None:
+        values = {"transnerolidol": "0.005"}
+        self.assertIsNone(reference.complete_sum_components(values, ["cisnerolidol", "transnerolidol"]))
+
     def test_reference_total_terpenes_uses_internal_channels_once(self) -> None:
         internal_keys = [f"k{index}" for index in range(23)]
         values = {key: "1" for key in internal_keys}
         self.assertEqual(reference.total_terpenes(values, internal_keys), Decimal("23"))
+
+    def test_partial_total_terpenes_is_blank(self) -> None:
+        internal_keys = [f"k{index}" for index in range(23)]
+        values = {key: "1" for key in internal_keys[:-1]}
+        self.assertIsNone(reference.complete_total_terpenes(values, internal_keys))
+
+    def test_complete_total_terpenes_sums_23_channels_once(self) -> None:
+        internal_keys = [f"k{index}" for index in range(23)]
+        values = {key: "1" for key in internal_keys}
+        self.assertEqual(reference.complete_total_terpenes(values, internal_keys), Decimal("23"))
 
 
 if __name__ == "__main__":

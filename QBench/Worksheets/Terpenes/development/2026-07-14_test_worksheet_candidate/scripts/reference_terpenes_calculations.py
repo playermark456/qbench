@@ -7,6 +7,12 @@ from typing import Any
 
 
 VALID_DF_APPLICATION_MODES = {"already_applied_by_labsolutions", "apply_in_qbench"}
+CONTROLLED_BELOW_LOQ_REPORTING_MODES = {
+    "decision_required",
+    "display_less_than_loq",
+    "display_numeric_result",
+}
+REPORT_RELEASE_BELOW_LOQ_MODES = {"display_less_than_loq", "display_numeric_result"}
 
 
 class CalculationBlocked(ValueError):
@@ -14,11 +20,21 @@ class CalculationBlocked(ValueError):
 
 
 def to_decimal(value: Any, field_name: str) -> Decimal:
+    if value in ("", None):
+        raise CalculationBlocked(f"{field_name} must be numeric.")
     try:
         result = Decimal(str(value))
     except (InvalidOperation, ValueError) as exc:
         raise CalculationBlocked(f"{field_name} must be numeric.") from exc
     return result
+
+
+def is_numeric(value: Any) -> bool:
+    try:
+        to_decimal(value, "value")
+    except CalculationBlocked:
+        return False
+    return True
 
 
 def positive_decimal(value: Any, field_name: str) -> Decimal:
@@ -92,6 +108,7 @@ def calculate_result(
 def reporting_ready(
     *,
     calculation_is_ready: bool,
+    analytical_results_are_complete: bool,
     batch_qc_disposition: str,
     publish_ready: bool,
     below_loq_reporting_mode: str,
@@ -100,12 +117,42 @@ def reporting_ready(
 ) -> bool:
     return (
         calculation_is_ready
+        and analytical_results_are_complete
         and batch_qc_disposition == "Accepted"
         and publish_ready
-        and below_loq_reporting_mode != "decision_required"
+        and below_loq_reporting_mode in REPORT_RELEASE_BELOW_LOQ_MODES
         and loq_source_status == "confirmed"
         and mu_source_status == "confirmed"
     )
+
+
+def analytical_results_complete(instrument_inputs: list[Any], calculated_mg_g_results: list[Any]) -> bool:
+    return (
+        len(instrument_inputs) == 23
+        and len(calculated_mg_g_results) == 23
+        and all(is_numeric(value) for value in instrument_inputs)
+        and all(is_numeric(value) for value in calculated_mg_g_results)
+    )
+
+
+def report_display_value(
+    *,
+    reporting_is_ready: bool,
+    qualifier: str,
+    below_loq_reporting_mode: str,
+    numerical_result: Any,
+) -> Any:
+    if not reporting_is_ready:
+        return ""
+    if qualifier == "<LOQ":
+        if below_loq_reporting_mode == "display_less_than_loq":
+            return "<LOQ"
+        if below_loq_reporting_mode == "display_numeric_result":
+            return to_decimal(numerical_result, "numerical_result")
+        return ""
+    if qualifier == "Reported":
+        return to_decimal(numerical_result, "numerical_result")
+    return ""
 
 
 def sum_components(values: dict[str, Any], components: list[str]) -> Decimal:
@@ -117,3 +164,17 @@ def sum_components(values: dict[str, Any], components: list[str]) -> Decimal:
 
 def total_terpenes(values: dict[str, Any], internal_keys: list[str]) -> Decimal:
     return sum_components(values, internal_keys)
+
+
+def complete_sum_components(values: dict[str, Any], components: list[str]) -> Decimal | None:
+    if any(component not in values or not is_numeric(values[component]) for component in components):
+        return None
+    return sum_components(values, components)
+
+
+def complete_total_terpenes(values: dict[str, Any], internal_keys: list[str]) -> Decimal | None:
+    if len(internal_keys) != 23:
+        return None
+    if any(key not in values or not is_numeric(values[key]) for key in internal_keys):
+        return None
+    return total_terpenes(values, internal_keys)

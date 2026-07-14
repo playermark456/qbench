@@ -26,9 +26,25 @@ The package does not modify active/raw worksheet exports, COA source, QBench aut
 
 The candidate preserves the three active tabs: `Report`, `Data`, and `Specifications`.
 
-It adds a controlled sample-level input surface, calculation formulas for 23 internal quantitative channels, 21 default COA measurands plus Total Terpenes, report gating, stable named cells for later automation, and static validation.
+It adds a controlled sample-level input surface, calculation formulas for 23 internal quantitative channels, 21 default COA measurands plus Total Terpenes, report display gating, stable named cells for later automation, and static validation.
 
 It intentionally leaves final report release blocked by default. LabSolutions unit confirmation, sample-prep source confirmation, dilution application, LOQ handling, MU source, active COA parity, and METRC profile export behavior remain unresolved.
+
+Current generated counts:
+
+- Formula count: 265
+- Named-cell count: 91
+- Preserved compatibility named-cell count: 47
+- `report_results`: `Report!A1:E23`
+- `analytical_results_complete`: `Data!B24`
+
+Controlled below-LOQ reporting modes:
+
+- `decision_required`
+- `display_less_than_loq`
+- `display_numeric_result`
+
+Only `display_less_than_loq` and `display_numeric_result` can allow report release, and neither value is scientific approval of final laboratory below-LOQ handling.
 
 ## Validation commands
 

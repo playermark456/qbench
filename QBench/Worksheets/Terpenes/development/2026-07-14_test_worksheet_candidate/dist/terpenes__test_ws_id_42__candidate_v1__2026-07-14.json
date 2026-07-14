@@ -884,157 +884,157 @@
           ],
           [
             "α-Pinene",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D5,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E5,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C5,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B5,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F5=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D5),IF(SPECIFICATIONS!F5=\"Reported\",SPECIFICATIONS!D5,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F5=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E5),IF(SPECIFICATIONS!F5=\"Reported\",SPECIFICATIONS!E5,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C5,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B5,\"\")"
           ],
           [
             "Camphene",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D6,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E6,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C6,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B6,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F6=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D6),IF(SPECIFICATIONS!F6=\"Reported\",SPECIFICATIONS!D6,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F6=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E6),IF(SPECIFICATIONS!F6=\"Reported\",SPECIFICATIONS!E6,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C6,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B6,\"\")"
           ],
           [
             "β-Myrcene",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D7,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E7,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C7,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B7,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F7=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D7),IF(SPECIFICATIONS!F7=\"Reported\",SPECIFICATIONS!D7,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F7=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E7),IF(SPECIFICATIONS!F7=\"Reported\",SPECIFICATIONS!E7,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C7,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B7,\"\")"
           ],
           [
             "β-Pinene",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D8,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E8,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C8,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B8,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F8=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D8),IF(SPECIFICATIONS!F8=\"Reported\",SPECIFICATIONS!D8,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F8=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E8),IF(SPECIFICATIONS!F8=\"Reported\",SPECIFICATIONS!E8,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C8,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B8,\"\")"
           ],
           [
             "Delta-3-Carene",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D9,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E9,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C9,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B9,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F9=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D9),IF(SPECIFICATIONS!F9=\"Reported\",SPECIFICATIONS!D9,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F9=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E9),IF(SPECIFICATIONS!F9=\"Reported\",SPECIFICATIONS!E9,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C9,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B9,\"\")"
           ],
           [
             "α-Terpinene",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D10,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E10,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C10,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B10,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F10=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D10),IF(SPECIFICATIONS!F10=\"Reported\",SPECIFICATIONS!D10,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F10=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E10),IF(SPECIFICATIONS!F10=\"Reported\",SPECIFICATIONS!E10,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C10,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B10,\"\")"
           ],
           [
             "Ocimene",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D28,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E28,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C28,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B28,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F28=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D28),IF(SPECIFICATIONS!F28=\"Reported\",SPECIFICATIONS!D28,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F28=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E28),IF(SPECIFICATIONS!F28=\"Reported\",SPECIFICATIONS!E28,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C28,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B28,\"\")"
           ],
           [
             "D-Limonene",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D12,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E12,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C12,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B12,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F12=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D12),IF(SPECIFICATIONS!F12=\"Reported\",SPECIFICATIONS!D12,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F12=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E12),IF(SPECIFICATIONS!F12=\"Reported\",SPECIFICATIONS!E12,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C12,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B12,\"\")"
           ],
           [
             "p-Cymene",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D13,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E13,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C13,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B13,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F13=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D13),IF(SPECIFICATIONS!F13=\"Reported\",SPECIFICATIONS!D13,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F13=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E13),IF(SPECIFICATIONS!F13=\"Reported\",SPECIFICATIONS!E13,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C13,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B13,\"\")"
           ],
           [
             "Eucalyptol",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D15,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E15,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C15,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B15,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F15=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D15),IF(SPECIFICATIONS!F15=\"Reported\",SPECIFICATIONS!D15,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F15=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E15),IF(SPECIFICATIONS!F15=\"Reported\",SPECIFICATIONS!E15,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C15,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B15,\"\")"
           ],
           [
             "γ-Terpinene",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D16,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E16,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C16,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B16,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F16=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D16),IF(SPECIFICATIONS!F16=\"Reported\",SPECIFICATIONS!D16,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F16=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E16),IF(SPECIFICATIONS!F16=\"Reported\",SPECIFICATIONS!E16,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C16,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B16,\"\")"
           ],
           [
             "Terpinolene",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D17,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E17,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C17,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B17,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F17=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D17),IF(SPECIFICATIONS!F17=\"Reported\",SPECIFICATIONS!D17,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F17=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E17),IF(SPECIFICATIONS!F17=\"Reported\",SPECIFICATIONS!E17,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C17,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B17,\"\")"
           ],
           [
             "Linalool",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D18,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E18,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C18,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B18,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F18=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D18),IF(SPECIFICATIONS!F18=\"Reported\",SPECIFICATIONS!D18,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F18=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E18),IF(SPECIFICATIONS!F18=\"Reported\",SPECIFICATIONS!E18,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C18,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B18,\"\")"
           ],
           [
             "Isopulegol",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D19,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E19,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C19,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B19,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F19=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D19),IF(SPECIFICATIONS!F19=\"Reported\",SPECIFICATIONS!D19,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F19=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E19),IF(SPECIFICATIONS!F19=\"Reported\",SPECIFICATIONS!E19,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C19,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B19,\"\")"
           ],
           [
             "Geraniol",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D20,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E20,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C20,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B20,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F20=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D20),IF(SPECIFICATIONS!F20=\"Reported\",SPECIFICATIONS!D20,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F20=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E20),IF(SPECIFICATIONS!F20=\"Reported\",SPECIFICATIONS!E20,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C20,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B20,\"\")"
           ],
           [
             "β-Caryophyllene",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D21,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E21,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C21,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B21,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F21=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D21),IF(SPECIFICATIONS!F21=\"Reported\",SPECIFICATIONS!D21,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F21=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E21),IF(SPECIFICATIONS!F21=\"Reported\",SPECIFICATIONS!E21,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C21,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B21,\"\")"
           ],
           [
             "α-Humulene",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D22,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E22,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C22,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B22,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F22=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D22),IF(SPECIFICATIONS!F22=\"Reported\",SPECIFICATIONS!D22,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F22=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E22),IF(SPECIFICATIONS!F22=\"Reported\",SPECIFICATIONS!E22,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C22,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B22,\"\")"
           ],
           [
             "Nerolidol",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D29,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E29,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C29,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B29,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F29=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D29),IF(SPECIFICATIONS!F29=\"Reported\",SPECIFICATIONS!D29,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F29=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E29),IF(SPECIFICATIONS!F29=\"Reported\",SPECIFICATIONS!E29,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C29,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B29,\"\")"
           ],
           [
             "Guaiol",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D25,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E25,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C25,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B25,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F25=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D25),IF(SPECIFICATIONS!F25=\"Reported\",SPECIFICATIONS!D25,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F25=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E25),IF(SPECIFICATIONS!F25=\"Reported\",SPECIFICATIONS!E25,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C25,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B25,\"\")"
           ],
           [
             "Caryophyllene Oxide",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D26,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E26,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C26,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B26,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F26=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D26),IF(SPECIFICATIONS!F26=\"Reported\",SPECIFICATIONS!D26,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F26=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E26),IF(SPECIFICATIONS!F26=\"Reported\",SPECIFICATIONS!E26,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C26,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B26,\"\")"
           ],
           [
             "α-Bisabolol",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D27,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E27,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C27,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B27,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F27=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D27),IF(SPECIFICATIONS!F27=\"Reported\",SPECIFICATIONS!D27,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F27=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E27),IF(SPECIFICATIONS!F27=\"Reported\",SPECIFICATIONS!E27,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C27,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B27,\"\")"
           ],
           [
             "Total Terpenes",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D30,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E30,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C30,\"\")",
-            "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B30,\"\")"
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F30=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D30),IF(SPECIFICATIONS!F30=\"Reported\",SPECIFICATIONS!D30,\"\")))",
+            "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F30=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E30),IF(SPECIFICATIONS!F30=\"Reported\",SPECIFICATIONS!E30,\"\")))",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C30,\"\")",
+            "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B30,\"\")"
           ]
         ],
         "style": {
@@ -2401,7 +2401,7 @@
             "x": 0
           },
           "B27": {
-            "readonly": false,
+            "readonly": true,
             "type": "text",
             "width": 150,
             "x": 1
@@ -2591,6 +2591,24 @@
             "type": "text",
             "width": 170,
             "x": 2
+          },
+          "A38": {
+            "readonly": true,
+            "type": "text",
+            "width": 150,
+            "x": 0
+          },
+          "B38": {
+            "readonly": false,
+            "type": "text",
+            "width": 150,
+            "x": 1
+          },
+          "C38": {
+            "readonly": true,
+            "type": "text",
+            "width": 170,
+            "x": 2
           }
         },
         "columnDrag": true,
@@ -2713,12 +2731,15 @@
         "meta": {},
         "minDimensions": [
           26,
-          37
+          38
         ],
         "resize": "vertical",
         "rowDrag": true,
         "rowResize": true,
         "rows": [
+          {
+            "height": 27
+          },
           {
             "height": 27
           },
@@ -2897,57 +2918,57 @@
             "",
             "",
             "Effective concentration (ug/mL)",
-            "=IF(D2=\"\",\"\",IF($B$24<>TRUE,\"\",D2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(E2=\"\",\"\",IF($B$24<>TRUE,\"\",E2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(F2=\"\",\"\",IF($B$24<>TRUE,\"\",F2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(G2=\"\",\"\",IF($B$24<>TRUE,\"\",G2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(H2=\"\",\"\",IF($B$24<>TRUE,\"\",H2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(I2=\"\",\"\",IF($B$24<>TRUE,\"\",I2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(J2=\"\",\"\",IF($B$24<>TRUE,\"\",J2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(K2=\"\",\"\",IF($B$24<>TRUE,\"\",K2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(L2=\"\",\"\",IF($B$24<>TRUE,\"\",L2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(M2=\"\",\"\",IF($B$24<>TRUE,\"\",M2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(N2=\"\",\"\",IF($B$24<>TRUE,\"\",N2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(O2=\"\",\"\",IF($B$24<>TRUE,\"\",O2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(P2=\"\",\"\",IF($B$24<>TRUE,\"\",P2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(Q2=\"\",\"\",IF($B$24<>TRUE,\"\",Q2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(R2=\"\",\"\",IF($B$24<>TRUE,\"\",R2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(S2=\"\",\"\",IF($B$24<>TRUE,\"\",S2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(T2=\"\",\"\",IF($B$24<>TRUE,\"\",T2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(U2=\"\",\"\",IF($B$24<>TRUE,\"\",U2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(V2=\"\",\"\",IF($B$24<>TRUE,\"\",V2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(W2=\"\",\"\",IF($B$24<>TRUE,\"\",W2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(X2=\"\",\"\",IF($B$24<>TRUE,\"\",X2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(Y2=\"\",\"\",IF($B$24<>TRUE,\"\",Y2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-            "=IF(Z2=\"\",\"\",IF($B$24<>TRUE,\"\",Z2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))"
+            "=IF(D2=\"\",\"\",IF($B$25<>TRUE,\"\",D2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(E2=\"\",\"\",IF($B$25<>TRUE,\"\",E2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(F2=\"\",\"\",IF($B$25<>TRUE,\"\",F2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(G2=\"\",\"\",IF($B$25<>TRUE,\"\",G2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(H2=\"\",\"\",IF($B$25<>TRUE,\"\",H2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(I2=\"\",\"\",IF($B$25<>TRUE,\"\",I2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(J2=\"\",\"\",IF($B$25<>TRUE,\"\",J2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(K2=\"\",\"\",IF($B$25<>TRUE,\"\",K2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(L2=\"\",\"\",IF($B$25<>TRUE,\"\",L2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(M2=\"\",\"\",IF($B$25<>TRUE,\"\",M2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(N2=\"\",\"\",IF($B$25<>TRUE,\"\",N2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(O2=\"\",\"\",IF($B$25<>TRUE,\"\",O2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(P2=\"\",\"\",IF($B$25<>TRUE,\"\",P2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(Q2=\"\",\"\",IF($B$25<>TRUE,\"\",Q2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(R2=\"\",\"\",IF($B$25<>TRUE,\"\",R2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(S2=\"\",\"\",IF($B$25<>TRUE,\"\",S2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(T2=\"\",\"\",IF($B$25<>TRUE,\"\",T2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(U2=\"\",\"\",IF($B$25<>TRUE,\"\",U2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(V2=\"\",\"\",IF($B$25<>TRUE,\"\",V2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(W2=\"\",\"\",IF($B$25<>TRUE,\"\",W2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(X2=\"\",\"\",IF($B$25<>TRUE,\"\",X2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(Y2=\"\",\"\",IF($B$25<>TRUE,\"\",Y2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+            "=IF(Z2=\"\",\"\",IF($B$25<>TRUE,\"\",Z2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))"
           ],
           [
             "",
             "",
             "Result (mg/g)",
-            "=IF(D3=\"\",\"\",IF($B$24<>TRUE,\"\",D3*$B$13/$B$12/1000))",
-            "=IF(E3=\"\",\"\",IF($B$24<>TRUE,\"\",E3*$B$13/$B$12/1000))",
-            "=IF(F3=\"\",\"\",IF($B$24<>TRUE,\"\",F3*$B$13/$B$12/1000))",
-            "=IF(G3=\"\",\"\",IF($B$24<>TRUE,\"\",G3*$B$13/$B$12/1000))",
-            "=IF(H3=\"\",\"\",IF($B$24<>TRUE,\"\",H3*$B$13/$B$12/1000))",
-            "=IF(I3=\"\",\"\",IF($B$24<>TRUE,\"\",I3*$B$13/$B$12/1000))",
-            "=IF(J3=\"\",\"\",IF($B$24<>TRUE,\"\",J3*$B$13/$B$12/1000))",
-            "=IF(K3=\"\",\"\",IF($B$24<>TRUE,\"\",K3*$B$13/$B$12/1000))",
-            "=IF(L3=\"\",\"\",IF($B$24<>TRUE,\"\",L3*$B$13/$B$12/1000))",
-            "=IF(M3=\"\",\"\",IF($B$24<>TRUE,\"\",M3*$B$13/$B$12/1000))",
-            "=IF(N3=\"\",\"\",IF($B$24<>TRUE,\"\",N3*$B$13/$B$12/1000))",
-            "=IF(O3=\"\",\"\",IF($B$24<>TRUE,\"\",O3*$B$13/$B$12/1000))",
-            "=IF(P3=\"\",\"\",IF($B$24<>TRUE,\"\",P3*$B$13/$B$12/1000))",
-            "=IF(Q3=\"\",\"\",IF($B$24<>TRUE,\"\",Q3*$B$13/$B$12/1000))",
-            "=IF(R3=\"\",\"\",IF($B$24<>TRUE,\"\",R3*$B$13/$B$12/1000))",
-            "=IF(S3=\"\",\"\",IF($B$24<>TRUE,\"\",S3*$B$13/$B$12/1000))",
-            "=IF(T3=\"\",\"\",IF($B$24<>TRUE,\"\",T3*$B$13/$B$12/1000))",
-            "=IF(U3=\"\",\"\",IF($B$24<>TRUE,\"\",U3*$B$13/$B$12/1000))",
-            "=IF(V3=\"\",\"\",IF($B$24<>TRUE,\"\",V3*$B$13/$B$12/1000))",
-            "=IF(W3=\"\",\"\",IF($B$24<>TRUE,\"\",W3*$B$13/$B$12/1000))",
-            "=IF(X3=\"\",\"\",IF($B$24<>TRUE,\"\",X3*$B$13/$B$12/1000))",
-            "=IF(Y3=\"\",\"\",IF($B$24<>TRUE,\"\",Y3*$B$13/$B$12/1000))",
-            "=IF(Z3=\"\",\"\",IF($B$24<>TRUE,\"\",Z3*$B$13/$B$12/1000))"
+            "=IF(D3=\"\",\"\",IF($B$25<>TRUE,\"\",D3*$B$13/$B$12/1000))",
+            "=IF(E3=\"\",\"\",IF($B$25<>TRUE,\"\",E3*$B$13/$B$12/1000))",
+            "=IF(F3=\"\",\"\",IF($B$25<>TRUE,\"\",F3*$B$13/$B$12/1000))",
+            "=IF(G3=\"\",\"\",IF($B$25<>TRUE,\"\",G3*$B$13/$B$12/1000))",
+            "=IF(H3=\"\",\"\",IF($B$25<>TRUE,\"\",H3*$B$13/$B$12/1000))",
+            "=IF(I3=\"\",\"\",IF($B$25<>TRUE,\"\",I3*$B$13/$B$12/1000))",
+            "=IF(J3=\"\",\"\",IF($B$25<>TRUE,\"\",J3*$B$13/$B$12/1000))",
+            "=IF(K3=\"\",\"\",IF($B$25<>TRUE,\"\",K3*$B$13/$B$12/1000))",
+            "=IF(L3=\"\",\"\",IF($B$25<>TRUE,\"\",L3*$B$13/$B$12/1000))",
+            "=IF(M3=\"\",\"\",IF($B$25<>TRUE,\"\",M3*$B$13/$B$12/1000))",
+            "=IF(N3=\"\",\"\",IF($B$25<>TRUE,\"\",N3*$B$13/$B$12/1000))",
+            "=IF(O3=\"\",\"\",IF($B$25<>TRUE,\"\",O3*$B$13/$B$12/1000))",
+            "=IF(P3=\"\",\"\",IF($B$25<>TRUE,\"\",P3*$B$13/$B$12/1000))",
+            "=IF(Q3=\"\",\"\",IF($B$25<>TRUE,\"\",Q3*$B$13/$B$12/1000))",
+            "=IF(R3=\"\",\"\",IF($B$25<>TRUE,\"\",R3*$B$13/$B$12/1000))",
+            "=IF(S3=\"\",\"\",IF($B$25<>TRUE,\"\",S3*$B$13/$B$12/1000))",
+            "=IF(T3=\"\",\"\",IF($B$25<>TRUE,\"\",T3*$B$13/$B$12/1000))",
+            "=IF(U3=\"\",\"\",IF($B$25<>TRUE,\"\",U3*$B$13/$B$12/1000))",
+            "=IF(V3=\"\",\"\",IF($B$25<>TRUE,\"\",V3*$B$13/$B$12/1000))",
+            "=IF(W3=\"\",\"\",IF($B$25<>TRUE,\"\",W3*$B$13/$B$12/1000))",
+            "=IF(X3=\"\",\"\",IF($B$25<>TRUE,\"\",X3*$B$13/$B$12/1000))",
+            "=IF(Y3=\"\",\"\",IF($B$25<>TRUE,\"\",Y3*$B$13/$B$12/1000))",
+            "=IF(Z3=\"\",\"\",IF($B$25<>TRUE,\"\",Z3*$B$13/$B$12/1000))"
           ],
           [
             "",
@@ -2981,29 +3002,29 @@
             "",
             "",
             "Qualifier",
-            "=IF(D2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$5<>\"\",D4<SPECIFICATIONS!$C$5),\"<LOQ\",\"Reported\"))))))",
-            "=IF(E2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$6<>\"\",E4<SPECIFICATIONS!$C$6),\"<LOQ\",\"Reported\"))))))",
-            "=IF(F2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$7<>\"\",F4<SPECIFICATIONS!$C$7),\"<LOQ\",\"Reported\"))))))",
-            "=IF(G2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$8<>\"\",G4<SPECIFICATIONS!$C$8),\"<LOQ\",\"Reported\"))))))",
-            "=IF(H2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$9<>\"\",H4<SPECIFICATIONS!$C$9),\"<LOQ\",\"Reported\"))))))",
-            "=IF(I2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$10<>\"\",I4<SPECIFICATIONS!$C$10),\"<LOQ\",\"Reported\"))))))",
-            "=IF(J2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$11<>\"\",J4<SPECIFICATIONS!$C$11),\"<LOQ\",\"Reported\"))))))",
-            "=IF(K2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$12<>\"\",K4<SPECIFICATIONS!$C$12),\"<LOQ\",\"Reported\"))))))",
-            "=IF(L2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$13<>\"\",L4<SPECIFICATIONS!$C$13),\"<LOQ\",\"Reported\"))))))",
-            "=IF(M2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$14<>\"\",M4<SPECIFICATIONS!$C$14),\"<LOQ\",\"Reported\"))))))",
-            "=IF(N2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$15<>\"\",N4<SPECIFICATIONS!$C$15),\"<LOQ\",\"Reported\"))))))",
-            "=IF(O2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$16<>\"\",O4<SPECIFICATIONS!$C$16),\"<LOQ\",\"Reported\"))))))",
-            "=IF(P2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$17<>\"\",P4<SPECIFICATIONS!$C$17),\"<LOQ\",\"Reported\"))))))",
-            "=IF(Q2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$18<>\"\",Q4<SPECIFICATIONS!$C$18),\"<LOQ\",\"Reported\"))))))",
-            "=IF(R2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$19<>\"\",R4<SPECIFICATIONS!$C$19),\"<LOQ\",\"Reported\"))))))",
-            "=IF(S2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$20<>\"\",S4<SPECIFICATIONS!$C$20),\"<LOQ\",\"Reported\"))))))",
-            "=IF(T2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$21<>\"\",T4<SPECIFICATIONS!$C$21),\"<LOQ\",\"Reported\"))))))",
-            "=IF(U2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$22<>\"\",U4<SPECIFICATIONS!$C$22),\"<LOQ\",\"Reported\"))))))",
-            "=IF(V2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$23<>\"\",V4<SPECIFICATIONS!$C$23),\"<LOQ\",\"Reported\"))))))",
-            "=IF(W2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$24<>\"\",W4<SPECIFICATIONS!$C$24),\"<LOQ\",\"Reported\"))))))",
-            "=IF(X2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$25<>\"\",X4<SPECIFICATIONS!$C$25),\"<LOQ\",\"Reported\"))))))",
-            "=IF(Y2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$26<>\"\",Y4<SPECIFICATIONS!$C$26),\"<LOQ\",\"Reported\"))))))",
-            "=IF(Z2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$27<>\"\",Z4<SPECIFICATIONS!$C$27),\"<LOQ\",\"Reported\"))))))"
+            "=IF(D2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$5<>\"\",D4<SPECIFICATIONS!$C$5),\"<LOQ\",\"Reported\"))))))",
+            "=IF(E2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$6<>\"\",E4<SPECIFICATIONS!$C$6),\"<LOQ\",\"Reported\"))))))",
+            "=IF(F2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$7<>\"\",F4<SPECIFICATIONS!$C$7),\"<LOQ\",\"Reported\"))))))",
+            "=IF(G2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$8<>\"\",G4<SPECIFICATIONS!$C$8),\"<LOQ\",\"Reported\"))))))",
+            "=IF(H2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$9<>\"\",H4<SPECIFICATIONS!$C$9),\"<LOQ\",\"Reported\"))))))",
+            "=IF(I2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$10<>\"\",I4<SPECIFICATIONS!$C$10),\"<LOQ\",\"Reported\"))))))",
+            "=IF(J2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$11<>\"\",J4<SPECIFICATIONS!$C$11),\"<LOQ\",\"Reported\"))))))",
+            "=IF(K2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$12<>\"\",K4<SPECIFICATIONS!$C$12),\"<LOQ\",\"Reported\"))))))",
+            "=IF(L2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$13<>\"\",L4<SPECIFICATIONS!$C$13),\"<LOQ\",\"Reported\"))))))",
+            "=IF(M2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$14<>\"\",M4<SPECIFICATIONS!$C$14),\"<LOQ\",\"Reported\"))))))",
+            "=IF(N2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$15<>\"\",N4<SPECIFICATIONS!$C$15),\"<LOQ\",\"Reported\"))))))",
+            "=IF(O2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$16<>\"\",O4<SPECIFICATIONS!$C$16),\"<LOQ\",\"Reported\"))))))",
+            "=IF(P2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$17<>\"\",P4<SPECIFICATIONS!$C$17),\"<LOQ\",\"Reported\"))))))",
+            "=IF(Q2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$18<>\"\",Q4<SPECIFICATIONS!$C$18),\"<LOQ\",\"Reported\"))))))",
+            "=IF(R2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$19<>\"\",R4<SPECIFICATIONS!$C$19),\"<LOQ\",\"Reported\"))))))",
+            "=IF(S2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$20<>\"\",S4<SPECIFICATIONS!$C$20),\"<LOQ\",\"Reported\"))))))",
+            "=IF(T2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$21<>\"\",T4<SPECIFICATIONS!$C$21),\"<LOQ\",\"Reported\"))))))",
+            "=IF(U2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$22<>\"\",U4<SPECIFICATIONS!$C$22),\"<LOQ\",\"Reported\"))))))",
+            "=IF(V2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$23<>\"\",V4<SPECIFICATIONS!$C$23),\"<LOQ\",\"Reported\"))))))",
+            "=IF(W2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$24<>\"\",W4<SPECIFICATIONS!$C$24),\"<LOQ\",\"Reported\"))))))",
+            "=IF(X2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$25<>\"\",X4<SPECIFICATIONS!$C$25),\"<LOQ\",\"Reported\"))))))",
+            "=IF(Y2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$26<>\"\",Y4<SPECIFICATIONS!$C$26),\"<LOQ\",\"Reported\"))))))",
+            "=IF(Z2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$27<>\"\",Z4<SPECIFICATIONS!$C$27),\"<LOQ\",\"Reported\"))))))"
           ],
           [
             "",
@@ -3482,8 +3503,36 @@
             ""
           ],
           [
+            "analytical_results_complete",
+            "=IF(AND(COUNT($D$2:$Z$2)=23,COUNT($D$4:$Z$4)=23),TRUE,FALSE)",
+            "TRUE only when all 23 inputs and all 23 mg/g results are numeric",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
             "calculation_ready",
-            "=IF(AND($B$17=\"TRUE\",$B$16=\"ug/mL\",$B$18=\"TRUE\",$B$12>0,$B$13>0,OR($B$15=\"already_applied_by_labsolutions\",AND($B$15=\"apply_in_qbench\",$B$14>0))),TRUE,FALSE)",
+            "=IF(AND($B$17=\"TRUE\",$B$16=\"ug/mL\",$B$18=\"TRUE\",AND(ISNUMBER($B$12),$B$12>0),AND(ISNUMBER($B$13),$B$13>0),OR($B$15=\"already_applied_by_labsolutions\",AND($B$15=\"apply_in_qbench\",ISNUMBER($B$14),$B$14>0))),TRUE,FALSE)",
             "TRUE only when unit, prep, mass, volume, and dilution prerequisites are met",
             "",
             "",
@@ -3511,7 +3560,7 @@
           ],
           [
             "reporting_ready",
-            "=IF(AND($B$24=TRUE,$B$22=\"Accepted\",$B$23=\"TRUE\",$B$19<>\"decision_required\",$B$20=\"confirmed\",$B$21=\"confirmed\"),TRUE,FALSE)",
+            "=IF(AND($B$25=TRUE,$B$24=TRUE,$B$22=\"Accepted\",$B$23=\"TRUE\",OR($B$19=\"display_less_than_loq\",$B$19=\"display_numeric_result\"),$B$20=\"confirmed\",$B$21=\"confirmed\"),TRUE,FALSE)",
             "TRUE only when calculation and reporting gates are complete",
             "",
             "",
@@ -3539,7 +3588,7 @@
           ],
           [
             "calculation_message",
-            "=IF($B$17<>\"TRUE\",\"Unit confirmation required\",IF($B$16<>\"ug/mL\",\"Unit confirmation required\",IF($B$18<>\"TRUE\",\"Preparation values required\",IF(OR($B$12=\"\",$B$12<=0),\"Preparation values required\",IF(OR($B$13=\"\",$B$13<=0),\"Preparation values required\",IF(AND($B$15<>\"already_applied_by_labsolutions\",$B$15<>\"apply_in_qbench\"),\"Dilution mode required\",IF(AND($B$15=\"apply_in_qbench\",OR($B$14=\"\",$B$14<=0)),\"Dilution mode required\",IF($B$19=\"decision_required\",\"LOQ configuration required\",IF($B$20<>\"confirmed\",\"LOQ configuration required\",IF($B$21<>\"confirmed\",\"MU configuration required\",IF($B$22<>\"Accepted\",\"Batch on hold\",IF($B$23<>\"TRUE\",\"Review required\",\"Ready\"))))))))))))",
+            "=IF($B$17<>\"TRUE\",\"Unit confirmation required\",IF($B$16<>\"ug/mL\",\"Unit confirmation required\",IF($B$18<>\"TRUE\",\"Preparation values required\",IF(ISNUMBER($B$12)<>TRUE,\"Preparation values required\",IF($B$12<=0,\"Preparation values required\",IF(ISNUMBER($B$13)<>TRUE,\"Preparation values required\",IF($B$13<=0,\"Preparation values required\",IF(AND($B$15<>\"already_applied_by_labsolutions\",$B$15<>\"apply_in_qbench\"),\"Dilution mode required\",IF(AND($B$15=\"apply_in_qbench\",ISNUMBER($B$14)<>TRUE),\"Dilution mode required\",IF(AND($B$15=\"apply_in_qbench\",$B$14<=0),\"Dilution mode required\",IF($B$24<>TRUE,\"Analytical results incomplete\",IF(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),\"Below-LOQ reporting mode required\",IF($B$20<>\"confirmed\",\"LOQ configuration required\",IF($B$21<>\"confirmed\",\"MU configuration required\",IF($B$22<>\"Accepted\",\"Batch on hold\",IF($B$23<>\"TRUE\",\"Review required\",\"Ready\"))))))))))))))))",
             "First neutral prerequisite message",
             "",
             "",
@@ -4089,7 +4138,7 @@
           "B26": 1,
           "C26": 1,
           "A27": 2,
-          "B27": 9,
+          "B27": 1,
           "C27": 1,
           "A28": 2,
           "B28": 9,
@@ -4120,7 +4169,10 @@
           "C36": 1,
           "A37": 2,
           "B37": 9,
-          "C37": 1
+          "C37": 1,
+          "A38": 2,
+          "B38": 9,
+          "C38": 1
         }
       },
       {
@@ -5578,9 +5630,9 @@
             "Total Ocimene",
             "",
             "",
-            "=IF(AND(D11=\"\",D14=\"\"),\"\",SUM(D11,D14))",
-            "=IF(AND(E11=\"\",E14=\"\"),\"\",SUM(E11,E14))",
-            "=IF(E28=\"\",\"\",IF(DATA!$B$25<>TRUE,\"Review Required\",\"Reported\"))",
+            "=IF(COUNT(D11,D14)=2,SUM(D11,D14),\"\")",
+            "=IF(COUNT(E11,E14)=2,SUM(E11,E14),\"\")",
+            "=IF(E28=\"\",\"\",IF(DATA!$B$26<>TRUE,\"Review Required\",\"Reported\"))",
             "total_ocimene",
             "total_ocimene"
           ],
@@ -5588,9 +5640,9 @@
             "Total Nerolidol",
             "",
             "",
-            "=IF(AND(D23=\"\",D24=\"\"),\"\",SUM(D23,D24))",
-            "=IF(AND(E23=\"\",E24=\"\"),\"\",SUM(E23,E24))",
-            "=IF(E29=\"\",\"\",IF(DATA!$B$25<>TRUE,\"Review Required\",\"Reported\"))",
+            "=IF(COUNT(D23,D24)=2,SUM(D23,D24),\"\")",
+            "=IF(COUNT(E23,E24)=2,SUM(E23,E24),\"\")",
+            "=IF(E29=\"\",\"\",IF(DATA!$B$26<>TRUE,\"Review Required\",\"Reported\"))",
             "total_nerolidol",
             "total_nerolidol"
           ],
@@ -5598,9 +5650,9 @@
             "Total Terpenes",
             "",
             "",
-            "=IF(AND(D5=\"\",D6=\"\",D7=\"\",D8=\"\",D9=\"\",D10=\"\",D11=\"\",D12=\"\",D13=\"\",D14=\"\",D15=\"\",D16=\"\",D17=\"\",D18=\"\",D19=\"\",D20=\"\",D21=\"\",D22=\"\",D23=\"\",D24=\"\",D25=\"\",D26=\"\",D27=\"\"),\"\",SUM(D5:D27))",
-            "=IF(AND(E5=\"\",E6=\"\",E7=\"\",E8=\"\",E9=\"\",E10=\"\",E11=\"\",E12=\"\",E13=\"\",E14=\"\",E15=\"\",E16=\"\",E17=\"\",E18=\"\",E19=\"\",E20=\"\",E21=\"\",E22=\"\",E23=\"\",E24=\"\",E25=\"\",E26=\"\",E27=\"\"),\"\",SUM(E5:E27))",
-            "=IF(E30=\"\",\"\",IF(DATA!$B$25<>TRUE,\"Review Required\",\"Reported\"))",
+            "=IF(COUNT(D5:D27)=23,SUM(D5:D27),\"\")",
+            "=IF(COUNT(E5:E27)=23,SUM(E5:E27),\"\")",
+            "=IF(E30=\"\",\"\",IF(DATA!$B$26<>TRUE,\"Review Required\",\"Reported\"))",
             "total_terpenes",
             "total_terpenes"
           ]
@@ -6214,73 +6266,78 @@
         "display_name": "Publish Ready",
         "export": true
       },
-      "calculation_ready": {
+      "analytical_results_complete": {
         "cell": "Data!B24",
+        "display_name": "Analytical Results Complete",
+        "export": true
+      },
+      "calculation_ready": {
+        "cell": "Data!B25",
         "display_name": "Calculation Ready",
         "export": true
       },
       "reporting_ready": {
-        "cell": "Data!B25",
+        "cell": "Data!B26",
         "display_name": "Reporting Ready",
         "export": true
       },
       "calculation_message": {
-        "cell": "Data!B26",
+        "cell": "Data!B27",
         "display_name": "Calculation Message",
         "export": true
       },
       "source_batch_id": {
-        "cell": "Data!B27",
+        "cell": "Data!B28",
         "display_name": "Source Batch Id",
         "export": true
       },
       "source_instrument_file": {
-        "cell": "Data!B28",
+        "cell": "Data!B29",
         "display_name": "Source Instrument File",
         "export": true
       },
       "source_file_hash": {
-        "cell": "Data!B29",
+        "cell": "Data!B30",
         "display_name": "Source File Hash",
         "export": true
       },
       "source_data_file": {
-        "cell": "Data!B30",
+        "cell": "Data!B31",
         "display_name": "Source Data File",
         "export": true
       },
       "source_method_file": {
-        "cell": "Data!B31",
+        "cell": "Data!B32",
         "display_name": "Source Method File",
         "export": true
       },
       "source_sequence_file": {
-        "cell": "Data!B32",
+        "cell": "Data!B33",
         "display_name": "Source Sequence File",
         "export": true
       },
       "parser_version": {
-        "cell": "Data!B33",
+        "cell": "Data!B34",
         "display_name": "Parser Version",
         "export": true
       },
       "imported_at": {
-        "cell": "Data!B34",
+        "cell": "Data!B35",
         "display_name": "Imported At",
         "export": true
       },
       "instrument_name": {
-        "cell": "Data!B35",
+        "cell": "Data!B36",
         "display_name": "Instrument Name",
         "export": true
       },
       "detector_id": {
-        "cell": "Data!B36",
+        "cell": "Data!B37",
         "display_name": "Detector Id",
         "export": true
       },
       "detector_name": {
-        "cell": "Data!B37",
+        "cell": "Data!B38",
         "display_name": "Detector Name",
         "export": true
       }
@@ -6351,57 +6408,57 @@
         "",
         "",
         "Effective concentration (ug/mL)",
-        "=IF(D2=\"\",\"\",IF($B$24<>TRUE,\"\",D2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(E2=\"\",\"\",IF($B$24<>TRUE,\"\",E2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(F2=\"\",\"\",IF($B$24<>TRUE,\"\",F2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(G2=\"\",\"\",IF($B$24<>TRUE,\"\",G2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(H2=\"\",\"\",IF($B$24<>TRUE,\"\",H2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(I2=\"\",\"\",IF($B$24<>TRUE,\"\",I2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(J2=\"\",\"\",IF($B$24<>TRUE,\"\",J2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(K2=\"\",\"\",IF($B$24<>TRUE,\"\",K2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(L2=\"\",\"\",IF($B$24<>TRUE,\"\",L2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(M2=\"\",\"\",IF($B$24<>TRUE,\"\",M2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(N2=\"\",\"\",IF($B$24<>TRUE,\"\",N2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(O2=\"\",\"\",IF($B$24<>TRUE,\"\",O2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(P2=\"\",\"\",IF($B$24<>TRUE,\"\",P2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(Q2=\"\",\"\",IF($B$24<>TRUE,\"\",Q2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(R2=\"\",\"\",IF($B$24<>TRUE,\"\",R2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(S2=\"\",\"\",IF($B$24<>TRUE,\"\",S2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(T2=\"\",\"\",IF($B$24<>TRUE,\"\",T2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(U2=\"\",\"\",IF($B$24<>TRUE,\"\",U2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(V2=\"\",\"\",IF($B$24<>TRUE,\"\",V2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(W2=\"\",\"\",IF($B$24<>TRUE,\"\",W2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(X2=\"\",\"\",IF($B$24<>TRUE,\"\",X2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(Y2=\"\",\"\",IF($B$24<>TRUE,\"\",Y2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
-        "=IF(Z2=\"\",\"\",IF($B$24<>TRUE,\"\",Z2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))"
+        "=IF(D2=\"\",\"\",IF($B$25<>TRUE,\"\",D2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(E2=\"\",\"\",IF($B$25<>TRUE,\"\",E2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(F2=\"\",\"\",IF($B$25<>TRUE,\"\",F2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(G2=\"\",\"\",IF($B$25<>TRUE,\"\",G2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(H2=\"\",\"\",IF($B$25<>TRUE,\"\",H2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(I2=\"\",\"\",IF($B$25<>TRUE,\"\",I2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(J2=\"\",\"\",IF($B$25<>TRUE,\"\",J2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(K2=\"\",\"\",IF($B$25<>TRUE,\"\",K2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(L2=\"\",\"\",IF($B$25<>TRUE,\"\",L2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(M2=\"\",\"\",IF($B$25<>TRUE,\"\",M2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(N2=\"\",\"\",IF($B$25<>TRUE,\"\",N2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(O2=\"\",\"\",IF($B$25<>TRUE,\"\",O2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(P2=\"\",\"\",IF($B$25<>TRUE,\"\",P2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(Q2=\"\",\"\",IF($B$25<>TRUE,\"\",Q2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(R2=\"\",\"\",IF($B$25<>TRUE,\"\",R2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(S2=\"\",\"\",IF($B$25<>TRUE,\"\",S2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(T2=\"\",\"\",IF($B$25<>TRUE,\"\",T2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(U2=\"\",\"\",IF($B$25<>TRUE,\"\",U2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(V2=\"\",\"\",IF($B$25<>TRUE,\"\",V2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(W2=\"\",\"\",IF($B$25<>TRUE,\"\",W2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(X2=\"\",\"\",IF($B$25<>TRUE,\"\",X2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(Y2=\"\",\"\",IF($B$25<>TRUE,\"\",Y2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))",
+        "=IF(Z2=\"\",\"\",IF($B$25<>TRUE,\"\",Z2*IF($B$15=\"already_applied_by_labsolutions\",1,IF($B$15=\"apply_in_qbench\",$B$14,\"\"))))"
       ],
       [
         "",
         "",
         "Result (mg/g)",
-        "=IF(D3=\"\",\"\",IF($B$24<>TRUE,\"\",D3*$B$13/$B$12/1000))",
-        "=IF(E3=\"\",\"\",IF($B$24<>TRUE,\"\",E3*$B$13/$B$12/1000))",
-        "=IF(F3=\"\",\"\",IF($B$24<>TRUE,\"\",F3*$B$13/$B$12/1000))",
-        "=IF(G3=\"\",\"\",IF($B$24<>TRUE,\"\",G3*$B$13/$B$12/1000))",
-        "=IF(H3=\"\",\"\",IF($B$24<>TRUE,\"\",H3*$B$13/$B$12/1000))",
-        "=IF(I3=\"\",\"\",IF($B$24<>TRUE,\"\",I3*$B$13/$B$12/1000))",
-        "=IF(J3=\"\",\"\",IF($B$24<>TRUE,\"\",J3*$B$13/$B$12/1000))",
-        "=IF(K3=\"\",\"\",IF($B$24<>TRUE,\"\",K3*$B$13/$B$12/1000))",
-        "=IF(L3=\"\",\"\",IF($B$24<>TRUE,\"\",L3*$B$13/$B$12/1000))",
-        "=IF(M3=\"\",\"\",IF($B$24<>TRUE,\"\",M3*$B$13/$B$12/1000))",
-        "=IF(N3=\"\",\"\",IF($B$24<>TRUE,\"\",N3*$B$13/$B$12/1000))",
-        "=IF(O3=\"\",\"\",IF($B$24<>TRUE,\"\",O3*$B$13/$B$12/1000))",
-        "=IF(P3=\"\",\"\",IF($B$24<>TRUE,\"\",P3*$B$13/$B$12/1000))",
-        "=IF(Q3=\"\",\"\",IF($B$24<>TRUE,\"\",Q3*$B$13/$B$12/1000))",
-        "=IF(R3=\"\",\"\",IF($B$24<>TRUE,\"\",R3*$B$13/$B$12/1000))",
-        "=IF(S3=\"\",\"\",IF($B$24<>TRUE,\"\",S3*$B$13/$B$12/1000))",
-        "=IF(T3=\"\",\"\",IF($B$24<>TRUE,\"\",T3*$B$13/$B$12/1000))",
-        "=IF(U3=\"\",\"\",IF($B$24<>TRUE,\"\",U3*$B$13/$B$12/1000))",
-        "=IF(V3=\"\",\"\",IF($B$24<>TRUE,\"\",V3*$B$13/$B$12/1000))",
-        "=IF(W3=\"\",\"\",IF($B$24<>TRUE,\"\",W3*$B$13/$B$12/1000))",
-        "=IF(X3=\"\",\"\",IF($B$24<>TRUE,\"\",X3*$B$13/$B$12/1000))",
-        "=IF(Y3=\"\",\"\",IF($B$24<>TRUE,\"\",Y3*$B$13/$B$12/1000))",
-        "=IF(Z3=\"\",\"\",IF($B$24<>TRUE,\"\",Z3*$B$13/$B$12/1000))"
+        "=IF(D3=\"\",\"\",IF($B$25<>TRUE,\"\",D3*$B$13/$B$12/1000))",
+        "=IF(E3=\"\",\"\",IF($B$25<>TRUE,\"\",E3*$B$13/$B$12/1000))",
+        "=IF(F3=\"\",\"\",IF($B$25<>TRUE,\"\",F3*$B$13/$B$12/1000))",
+        "=IF(G3=\"\",\"\",IF($B$25<>TRUE,\"\",G3*$B$13/$B$12/1000))",
+        "=IF(H3=\"\",\"\",IF($B$25<>TRUE,\"\",H3*$B$13/$B$12/1000))",
+        "=IF(I3=\"\",\"\",IF($B$25<>TRUE,\"\",I3*$B$13/$B$12/1000))",
+        "=IF(J3=\"\",\"\",IF($B$25<>TRUE,\"\",J3*$B$13/$B$12/1000))",
+        "=IF(K3=\"\",\"\",IF($B$25<>TRUE,\"\",K3*$B$13/$B$12/1000))",
+        "=IF(L3=\"\",\"\",IF($B$25<>TRUE,\"\",L3*$B$13/$B$12/1000))",
+        "=IF(M3=\"\",\"\",IF($B$25<>TRUE,\"\",M3*$B$13/$B$12/1000))",
+        "=IF(N3=\"\",\"\",IF($B$25<>TRUE,\"\",N3*$B$13/$B$12/1000))",
+        "=IF(O3=\"\",\"\",IF($B$25<>TRUE,\"\",O3*$B$13/$B$12/1000))",
+        "=IF(P3=\"\",\"\",IF($B$25<>TRUE,\"\",P3*$B$13/$B$12/1000))",
+        "=IF(Q3=\"\",\"\",IF($B$25<>TRUE,\"\",Q3*$B$13/$B$12/1000))",
+        "=IF(R3=\"\",\"\",IF($B$25<>TRUE,\"\",R3*$B$13/$B$12/1000))",
+        "=IF(S3=\"\",\"\",IF($B$25<>TRUE,\"\",S3*$B$13/$B$12/1000))",
+        "=IF(T3=\"\",\"\",IF($B$25<>TRUE,\"\",T3*$B$13/$B$12/1000))",
+        "=IF(U3=\"\",\"\",IF($B$25<>TRUE,\"\",U3*$B$13/$B$12/1000))",
+        "=IF(V3=\"\",\"\",IF($B$25<>TRUE,\"\",V3*$B$13/$B$12/1000))",
+        "=IF(W3=\"\",\"\",IF($B$25<>TRUE,\"\",W3*$B$13/$B$12/1000))",
+        "=IF(X3=\"\",\"\",IF($B$25<>TRUE,\"\",X3*$B$13/$B$12/1000))",
+        "=IF(Y3=\"\",\"\",IF($B$25<>TRUE,\"\",Y3*$B$13/$B$12/1000))",
+        "=IF(Z3=\"\",\"\",IF($B$25<>TRUE,\"\",Z3*$B$13/$B$12/1000))"
       ],
       [
         "",
@@ -6435,29 +6492,29 @@
         "",
         "",
         "Qualifier",
-        "=IF(D2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$5<>\"\",D4<SPECIFICATIONS!$C$5),\"<LOQ\",\"Reported\"))))))",
-        "=IF(E2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$6<>\"\",E4<SPECIFICATIONS!$C$6),\"<LOQ\",\"Reported\"))))))",
-        "=IF(F2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$7<>\"\",F4<SPECIFICATIONS!$C$7),\"<LOQ\",\"Reported\"))))))",
-        "=IF(G2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$8<>\"\",G4<SPECIFICATIONS!$C$8),\"<LOQ\",\"Reported\"))))))",
-        "=IF(H2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$9<>\"\",H4<SPECIFICATIONS!$C$9),\"<LOQ\",\"Reported\"))))))",
-        "=IF(I2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$10<>\"\",I4<SPECIFICATIONS!$C$10),\"<LOQ\",\"Reported\"))))))",
-        "=IF(J2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$11<>\"\",J4<SPECIFICATIONS!$C$11),\"<LOQ\",\"Reported\"))))))",
-        "=IF(K2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$12<>\"\",K4<SPECIFICATIONS!$C$12),\"<LOQ\",\"Reported\"))))))",
-        "=IF(L2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$13<>\"\",L4<SPECIFICATIONS!$C$13),\"<LOQ\",\"Reported\"))))))",
-        "=IF(M2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$14<>\"\",M4<SPECIFICATIONS!$C$14),\"<LOQ\",\"Reported\"))))))",
-        "=IF(N2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$15<>\"\",N4<SPECIFICATIONS!$C$15),\"<LOQ\",\"Reported\"))))))",
-        "=IF(O2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$16<>\"\",O4<SPECIFICATIONS!$C$16),\"<LOQ\",\"Reported\"))))))",
-        "=IF(P2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$17<>\"\",P4<SPECIFICATIONS!$C$17),\"<LOQ\",\"Reported\"))))))",
-        "=IF(Q2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$18<>\"\",Q4<SPECIFICATIONS!$C$18),\"<LOQ\",\"Reported\"))))))",
-        "=IF(R2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$19<>\"\",R4<SPECIFICATIONS!$C$19),\"<LOQ\",\"Reported\"))))))",
-        "=IF(S2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$20<>\"\",S4<SPECIFICATIONS!$C$20),\"<LOQ\",\"Reported\"))))))",
-        "=IF(T2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$21<>\"\",T4<SPECIFICATIONS!$C$21),\"<LOQ\",\"Reported\"))))))",
-        "=IF(U2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$22<>\"\",U4<SPECIFICATIONS!$C$22),\"<LOQ\",\"Reported\"))))))",
-        "=IF(V2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$23<>\"\",V4<SPECIFICATIONS!$C$23),\"<LOQ\",\"Reported\"))))))",
-        "=IF(W2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$24<>\"\",W4<SPECIFICATIONS!$C$24),\"<LOQ\",\"Reported\"))))))",
-        "=IF(X2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$25<>\"\",X4<SPECIFICATIONS!$C$25),\"<LOQ\",\"Reported\"))))))",
-        "=IF(Y2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$26<>\"\",Y4<SPECIFICATIONS!$C$26),\"<LOQ\",\"Reported\"))))))",
-        "=IF(Z2=\"\",\"\",IF($B$24<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR($B$19=\"decision_required\",$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$27<>\"\",Z4<SPECIFICATIONS!$C$27),\"<LOQ\",\"Reported\"))))))"
+        "=IF(D2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$5<>\"\",D4<SPECIFICATIONS!$C$5),\"<LOQ\",\"Reported\"))))))",
+        "=IF(E2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$6<>\"\",E4<SPECIFICATIONS!$C$6),\"<LOQ\",\"Reported\"))))))",
+        "=IF(F2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$7<>\"\",F4<SPECIFICATIONS!$C$7),\"<LOQ\",\"Reported\"))))))",
+        "=IF(G2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$8<>\"\",G4<SPECIFICATIONS!$C$8),\"<LOQ\",\"Reported\"))))))",
+        "=IF(H2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$9<>\"\",H4<SPECIFICATIONS!$C$9),\"<LOQ\",\"Reported\"))))))",
+        "=IF(I2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$10<>\"\",I4<SPECIFICATIONS!$C$10),\"<LOQ\",\"Reported\"))))))",
+        "=IF(J2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$11<>\"\",J4<SPECIFICATIONS!$C$11),\"<LOQ\",\"Reported\"))))))",
+        "=IF(K2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$12<>\"\",K4<SPECIFICATIONS!$C$12),\"<LOQ\",\"Reported\"))))))",
+        "=IF(L2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$13<>\"\",L4<SPECIFICATIONS!$C$13),\"<LOQ\",\"Reported\"))))))",
+        "=IF(M2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$14<>\"\",M4<SPECIFICATIONS!$C$14),\"<LOQ\",\"Reported\"))))))",
+        "=IF(N2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$15<>\"\",N4<SPECIFICATIONS!$C$15),\"<LOQ\",\"Reported\"))))))",
+        "=IF(O2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$16<>\"\",O4<SPECIFICATIONS!$C$16),\"<LOQ\",\"Reported\"))))))",
+        "=IF(P2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$17<>\"\",P4<SPECIFICATIONS!$C$17),\"<LOQ\",\"Reported\"))))))",
+        "=IF(Q2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$18<>\"\",Q4<SPECIFICATIONS!$C$18),\"<LOQ\",\"Reported\"))))))",
+        "=IF(R2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$19<>\"\",R4<SPECIFICATIONS!$C$19),\"<LOQ\",\"Reported\"))))))",
+        "=IF(S2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$20<>\"\",S4<SPECIFICATIONS!$C$20),\"<LOQ\",\"Reported\"))))))",
+        "=IF(T2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$21<>\"\",T4<SPECIFICATIONS!$C$21),\"<LOQ\",\"Reported\"))))))",
+        "=IF(U2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$22<>\"\",U4<SPECIFICATIONS!$C$22),\"<LOQ\",\"Reported\"))))))",
+        "=IF(V2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$23<>\"\",V4<SPECIFICATIONS!$C$23),\"<LOQ\",\"Reported\"))))))",
+        "=IF(W2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$24<>\"\",W4<SPECIFICATIONS!$C$24),\"<LOQ\",\"Reported\"))))))",
+        "=IF(X2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$25<>\"\",X4<SPECIFICATIONS!$C$25),\"<LOQ\",\"Reported\"))))))",
+        "=IF(Y2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$26<>\"\",Y4<SPECIFICATIONS!$C$26),\"<LOQ\",\"Reported\"))))))",
+        "=IF(Z2=\"\",\"\",IF($B$25<>TRUE,\"Review Required\",IF($B$22<>\"Accepted\",\"Hold\",IF($B$23<>\"TRUE\",\"Hold\",IF(OR(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),$B$20<>\"confirmed\",$B$21<>\"confirmed\"),\"Review Required\",IF(AND(SPECIFICATIONS!$C$27<>\"\",Z4<SPECIFICATIONS!$C$27),\"<LOQ\",\"Reported\"))))))"
       ],
       [
         "",
@@ -6936,8 +6993,36 @@
         ""
       ],
       [
+        "analytical_results_complete",
+        "=IF(AND(COUNT($D$2:$Z$2)=23,COUNT($D$4:$Z$4)=23),TRUE,FALSE)",
+        "TRUE only when all 23 inputs and all 23 mg/g results are numeric",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
         "calculation_ready",
-        "=IF(AND($B$17=\"TRUE\",$B$16=\"ug/mL\",$B$18=\"TRUE\",$B$12>0,$B$13>0,OR($B$15=\"already_applied_by_labsolutions\",AND($B$15=\"apply_in_qbench\",$B$14>0))),TRUE,FALSE)",
+        "=IF(AND($B$17=\"TRUE\",$B$16=\"ug/mL\",$B$18=\"TRUE\",AND(ISNUMBER($B$12),$B$12>0),AND(ISNUMBER($B$13),$B$13>0),OR($B$15=\"already_applied_by_labsolutions\",AND($B$15=\"apply_in_qbench\",ISNUMBER($B$14),$B$14>0))),TRUE,FALSE)",
         "TRUE only when unit, prep, mass, volume, and dilution prerequisites are met",
         "",
         "",
@@ -6965,7 +7050,7 @@
       ],
       [
         "reporting_ready",
-        "=IF(AND($B$24=TRUE,$B$22=\"Accepted\",$B$23=\"TRUE\",$B$19<>\"decision_required\",$B$20=\"confirmed\",$B$21=\"confirmed\"),TRUE,FALSE)",
+        "=IF(AND($B$25=TRUE,$B$24=TRUE,$B$22=\"Accepted\",$B$23=\"TRUE\",OR($B$19=\"display_less_than_loq\",$B$19=\"display_numeric_result\"),$B$20=\"confirmed\",$B$21=\"confirmed\"),TRUE,FALSE)",
         "TRUE only when calculation and reporting gates are complete",
         "",
         "",
@@ -6993,7 +7078,7 @@
       ],
       [
         "calculation_message",
-        "=IF($B$17<>\"TRUE\",\"Unit confirmation required\",IF($B$16<>\"ug/mL\",\"Unit confirmation required\",IF($B$18<>\"TRUE\",\"Preparation values required\",IF(OR($B$12=\"\",$B$12<=0),\"Preparation values required\",IF(OR($B$13=\"\",$B$13<=0),\"Preparation values required\",IF(AND($B$15<>\"already_applied_by_labsolutions\",$B$15<>\"apply_in_qbench\"),\"Dilution mode required\",IF(AND($B$15=\"apply_in_qbench\",OR($B$14=\"\",$B$14<=0)),\"Dilution mode required\",IF($B$19=\"decision_required\",\"LOQ configuration required\",IF($B$20<>\"confirmed\",\"LOQ configuration required\",IF($B$21<>\"confirmed\",\"MU configuration required\",IF($B$22<>\"Accepted\",\"Batch on hold\",IF($B$23<>\"TRUE\",\"Review required\",\"Ready\"))))))))))))",
+        "=IF($B$17<>\"TRUE\",\"Unit confirmation required\",IF($B$16<>\"ug/mL\",\"Unit confirmation required\",IF($B$18<>\"TRUE\",\"Preparation values required\",IF(ISNUMBER($B$12)<>TRUE,\"Preparation values required\",IF($B$12<=0,\"Preparation values required\",IF(ISNUMBER($B$13)<>TRUE,\"Preparation values required\",IF($B$13<=0,\"Preparation values required\",IF(AND($B$15<>\"already_applied_by_labsolutions\",$B$15<>\"apply_in_qbench\"),\"Dilution mode required\",IF(AND($B$15=\"apply_in_qbench\",ISNUMBER($B$14)<>TRUE),\"Dilution mode required\",IF(AND($B$15=\"apply_in_qbench\",$B$14<=0),\"Dilution mode required\",IF($B$24<>TRUE,\"Analytical results incomplete\",IF(AND($B$19<>\"display_less_than_loq\",$B$19<>\"display_numeric_result\"),\"Below-LOQ reporting mode required\",IF($B$20<>\"confirmed\",\"LOQ configuration required\",IF($B$21<>\"confirmed\",\"MU configuration required\",IF($B$22<>\"Accepted\",\"Batch on hold\",IF($B$23<>\"TRUE\",\"Review required\",\"Ready\"))))))))))))))))",
         "First neutral prerequisite message",
         "",
         "",
@@ -7338,157 +7423,157 @@
       ],
       [
         "α-Pinene",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D5,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E5,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C5,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B5,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F5=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D5),IF(SPECIFICATIONS!F5=\"Reported\",SPECIFICATIONS!D5,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F5=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E5),IF(SPECIFICATIONS!F5=\"Reported\",SPECIFICATIONS!E5,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C5,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B5,\"\")"
       ],
       [
         "Camphene",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D6,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E6,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C6,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B6,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F6=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D6),IF(SPECIFICATIONS!F6=\"Reported\",SPECIFICATIONS!D6,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F6=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E6),IF(SPECIFICATIONS!F6=\"Reported\",SPECIFICATIONS!E6,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C6,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B6,\"\")"
       ],
       [
         "β-Myrcene",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D7,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E7,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C7,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B7,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F7=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D7),IF(SPECIFICATIONS!F7=\"Reported\",SPECIFICATIONS!D7,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F7=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E7),IF(SPECIFICATIONS!F7=\"Reported\",SPECIFICATIONS!E7,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C7,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B7,\"\")"
       ],
       [
         "β-Pinene",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D8,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E8,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C8,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B8,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F8=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D8),IF(SPECIFICATIONS!F8=\"Reported\",SPECIFICATIONS!D8,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F8=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E8),IF(SPECIFICATIONS!F8=\"Reported\",SPECIFICATIONS!E8,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C8,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B8,\"\")"
       ],
       [
         "Delta-3-Carene",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D9,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E9,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C9,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B9,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F9=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D9),IF(SPECIFICATIONS!F9=\"Reported\",SPECIFICATIONS!D9,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F9=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E9),IF(SPECIFICATIONS!F9=\"Reported\",SPECIFICATIONS!E9,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C9,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B9,\"\")"
       ],
       [
         "α-Terpinene",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D10,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E10,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C10,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B10,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F10=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D10),IF(SPECIFICATIONS!F10=\"Reported\",SPECIFICATIONS!D10,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F10=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E10),IF(SPECIFICATIONS!F10=\"Reported\",SPECIFICATIONS!E10,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C10,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B10,\"\")"
       ],
       [
         "Ocimene",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D28,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E28,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C28,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B28,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F28=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D28),IF(SPECIFICATIONS!F28=\"Reported\",SPECIFICATIONS!D28,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F28=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E28),IF(SPECIFICATIONS!F28=\"Reported\",SPECIFICATIONS!E28,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C28,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B28,\"\")"
       ],
       [
         "D-Limonene",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D12,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E12,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C12,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B12,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F12=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D12),IF(SPECIFICATIONS!F12=\"Reported\",SPECIFICATIONS!D12,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F12=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E12),IF(SPECIFICATIONS!F12=\"Reported\",SPECIFICATIONS!E12,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C12,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B12,\"\")"
       ],
       [
         "p-Cymene",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D13,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E13,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C13,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B13,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F13=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D13),IF(SPECIFICATIONS!F13=\"Reported\",SPECIFICATIONS!D13,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F13=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E13),IF(SPECIFICATIONS!F13=\"Reported\",SPECIFICATIONS!E13,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C13,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B13,\"\")"
       ],
       [
         "Eucalyptol",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D15,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E15,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C15,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B15,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F15=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D15),IF(SPECIFICATIONS!F15=\"Reported\",SPECIFICATIONS!D15,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F15=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E15),IF(SPECIFICATIONS!F15=\"Reported\",SPECIFICATIONS!E15,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C15,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B15,\"\")"
       ],
       [
         "γ-Terpinene",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D16,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E16,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C16,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B16,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F16=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D16),IF(SPECIFICATIONS!F16=\"Reported\",SPECIFICATIONS!D16,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F16=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E16),IF(SPECIFICATIONS!F16=\"Reported\",SPECIFICATIONS!E16,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C16,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B16,\"\")"
       ],
       [
         "Terpinolene",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D17,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E17,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C17,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B17,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F17=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D17),IF(SPECIFICATIONS!F17=\"Reported\",SPECIFICATIONS!D17,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F17=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E17),IF(SPECIFICATIONS!F17=\"Reported\",SPECIFICATIONS!E17,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C17,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B17,\"\")"
       ],
       [
         "Linalool",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D18,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E18,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C18,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B18,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F18=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D18),IF(SPECIFICATIONS!F18=\"Reported\",SPECIFICATIONS!D18,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F18=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E18),IF(SPECIFICATIONS!F18=\"Reported\",SPECIFICATIONS!E18,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C18,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B18,\"\")"
       ],
       [
         "Isopulegol",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D19,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E19,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C19,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B19,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F19=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D19),IF(SPECIFICATIONS!F19=\"Reported\",SPECIFICATIONS!D19,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F19=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E19),IF(SPECIFICATIONS!F19=\"Reported\",SPECIFICATIONS!E19,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C19,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B19,\"\")"
       ],
       [
         "Geraniol",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D20,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E20,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C20,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B20,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F20=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D20),IF(SPECIFICATIONS!F20=\"Reported\",SPECIFICATIONS!D20,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F20=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E20),IF(SPECIFICATIONS!F20=\"Reported\",SPECIFICATIONS!E20,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C20,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B20,\"\")"
       ],
       [
         "β-Caryophyllene",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D21,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E21,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C21,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B21,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F21=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D21),IF(SPECIFICATIONS!F21=\"Reported\",SPECIFICATIONS!D21,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F21=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E21),IF(SPECIFICATIONS!F21=\"Reported\",SPECIFICATIONS!E21,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C21,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B21,\"\")"
       ],
       [
         "α-Humulene",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D22,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E22,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C22,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B22,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F22=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D22),IF(SPECIFICATIONS!F22=\"Reported\",SPECIFICATIONS!D22,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F22=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E22),IF(SPECIFICATIONS!F22=\"Reported\",SPECIFICATIONS!E22,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C22,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B22,\"\")"
       ],
       [
         "Nerolidol",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D29,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E29,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C29,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B29,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F29=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D29),IF(SPECIFICATIONS!F29=\"Reported\",SPECIFICATIONS!D29,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F29=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E29),IF(SPECIFICATIONS!F29=\"Reported\",SPECIFICATIONS!E29,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C29,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B29,\"\")"
       ],
       [
         "Guaiol",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D25,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E25,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C25,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B25,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F25=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D25),IF(SPECIFICATIONS!F25=\"Reported\",SPECIFICATIONS!D25,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F25=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E25),IF(SPECIFICATIONS!F25=\"Reported\",SPECIFICATIONS!E25,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C25,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B25,\"\")"
       ],
       [
         "Caryophyllene Oxide",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D26,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E26,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C26,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B26,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F26=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D26),IF(SPECIFICATIONS!F26=\"Reported\",SPECIFICATIONS!D26,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F26=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E26),IF(SPECIFICATIONS!F26=\"Reported\",SPECIFICATIONS!E26,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C26,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B26,\"\")"
       ],
       [
         "α-Bisabolol",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D27,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E27,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C27,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B27,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F27=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D27),IF(SPECIFICATIONS!F27=\"Reported\",SPECIFICATIONS!D27,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F27=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E27),IF(SPECIFICATIONS!F27=\"Reported\",SPECIFICATIONS!E27,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C27,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B27,\"\")"
       ],
       [
         "Total Terpenes",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D30,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E30,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C30,\"\")",
-        "=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B30,\"\")"
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F30=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!D30),IF(SPECIFICATIONS!F30=\"Reported\",SPECIFICATIONS!D30,\"\")))",
+        "=IF(DATA!$B$26<>TRUE,\"\",IF(SPECIFICATIONS!F30=\"<LOQ\",IF(DATA!$B$19=\"display_less_than_loq\",\"<LOQ\",SPECIFICATIONS!E30),IF(SPECIFICATIONS!F30=\"Reported\",SPECIFICATIONS!E30,\"\")))",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C30,\"\")",
+        "=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B30,\"\")"
       ]
     ],
     "Specifications": [
@@ -7766,9 +7851,9 @@
         "Total Ocimene",
         "",
         "",
-        "=IF(AND(D11=\"\",D14=\"\"),\"\",SUM(D11,D14))",
-        "=IF(AND(E11=\"\",E14=\"\"),\"\",SUM(E11,E14))",
-        "=IF(E28=\"\",\"\",IF(DATA!$B$25<>TRUE,\"Review Required\",\"Reported\"))",
+        "=IF(COUNT(D11,D14)=2,SUM(D11,D14),\"\")",
+        "=IF(COUNT(E11,E14)=2,SUM(E11,E14),\"\")",
+        "=IF(E28=\"\",\"\",IF(DATA!$B$26<>TRUE,\"Review Required\",\"Reported\"))",
         "total_ocimene",
         "total_ocimene"
       ],
@@ -7776,9 +7861,9 @@
         "Total Nerolidol",
         "",
         "",
-        "=IF(AND(D23=\"\",D24=\"\"),\"\",SUM(D23,D24))",
-        "=IF(AND(E23=\"\",E24=\"\"),\"\",SUM(E23,E24))",
-        "=IF(E29=\"\",\"\",IF(DATA!$B$25<>TRUE,\"Review Required\",\"Reported\"))",
+        "=IF(COUNT(D23,D24)=2,SUM(D23,D24),\"\")",
+        "=IF(COUNT(E23,E24)=2,SUM(E23,E24),\"\")",
+        "=IF(E29=\"\",\"\",IF(DATA!$B$26<>TRUE,\"Review Required\",\"Reported\"))",
         "total_nerolidol",
         "total_nerolidol"
       ],
@@ -7786,9 +7871,9 @@
         "Total Terpenes",
         "",
         "",
-        "=IF(AND(D5=\"\",D6=\"\",D7=\"\",D8=\"\",D9=\"\",D10=\"\",D11=\"\",D12=\"\",D13=\"\",D14=\"\",D15=\"\",D16=\"\",D17=\"\",D18=\"\",D19=\"\",D20=\"\",D21=\"\",D22=\"\",D23=\"\",D24=\"\",D25=\"\",D26=\"\",D27=\"\"),\"\",SUM(D5:D27))",
-        "=IF(AND(E5=\"\",E6=\"\",E7=\"\",E8=\"\",E9=\"\",E10=\"\",E11=\"\",E12=\"\",E13=\"\",E14=\"\",E15=\"\",E16=\"\",E17=\"\",E18=\"\",E19=\"\",E20=\"\",E21=\"\",E22=\"\",E23=\"\",E24=\"\",E25=\"\",E26=\"\",E27=\"\"),\"\",SUM(E5:E27))",
-        "=IF(E30=\"\",\"\",IF(DATA!$B$25<>TRUE,\"Review Required\",\"Reported\"))",
+        "=IF(COUNT(D5:D27)=23,SUM(D5:D27),\"\")",
+        "=IF(COUNT(E5:E27)=23,SUM(E5:E27),\"\")",
+        "=IF(E30=\"\",\"\",IF(DATA!$B$26<>TRUE,\"Review Required\",\"Reported\"))",
         "total_terpenes",
         "total_terpenes"
       ]

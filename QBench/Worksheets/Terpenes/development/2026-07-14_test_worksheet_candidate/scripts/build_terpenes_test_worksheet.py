@@ -68,6 +68,12 @@ REPORT_ROWS = [
     ("Total Terpenes", 30),
 ]
 
+CONTROLLED_BELOW_LOQ_REPORTING_MODES = [
+    "decision_required",
+    "display_less_than_loq",
+    "display_numeric_result",
+]
+
 CONTROL_ROWS = [
     ("qbench_test_id", "=A2", "QBench test display ID placeholder"),
     ("qbench_sample_id", "=B2", "QBench sample display ID placeholder"),
@@ -85,28 +91,39 @@ CONTROL_ROWS = [
     ("batch_qc_disposition", "Hold", "Internal batch QC disposition"),
     ("publish_ready", "FALSE", "Must be TRUE with Accepted batch disposition"),
     (
+        "analytical_results_complete",
+        "=IF(AND(COUNT($D$2:$Z$2)=23,COUNT($D$4:$Z$4)=23),TRUE,FALSE)",
+        "TRUE only when all 23 inputs and all 23 mg/g results are numeric",
+    ),
+    (
         "calculation_ready",
-        '=IF(AND($B$17="TRUE",$B$16="ug/mL",$B$18="TRUE",$B$12>0,$B$13>0,'
-        'OR($B$15="already_applied_by_labsolutions",AND($B$15="apply_in_qbench",$B$14>0))),TRUE,FALSE)',
+        '=IF(AND($B$17="TRUE",$B$16="ug/mL",$B$18="TRUE",'
+        "AND(ISNUMBER($B$12),$B$12>0),AND(ISNUMBER($B$13),$B$13>0),"
+        'OR($B$15="already_applied_by_labsolutions",'
+        'AND($B$15="apply_in_qbench",ISNUMBER($B$14),$B$14>0))),TRUE,FALSE)',
         "TRUE only when unit, prep, mass, volume, and dilution prerequisites are met",
     ),
     (
         "reporting_ready",
-        '=IF(AND($B$24=TRUE,$B$22="Accepted",$B$23="TRUE",$B$19<>"decision_required",'
+        '=IF(AND($B$25=TRUE,$B$24=TRUE,$B$22="Accepted",$B$23="TRUE",'
+        'OR($B$19="display_less_than_loq",$B$19="display_numeric_result"),'
         '$B$20="confirmed",$B$21="confirmed"),TRUE,FALSE)',
         "TRUE only when calculation and reporting gates are complete",
     ),
     (
         "calculation_message",
         '=IF($B$17<>"TRUE","Unit confirmation required",IF($B$16<>"ug/mL","Unit confirmation required",'
-        'IF($B$18<>"TRUE","Preparation values required",IF(OR($B$12="",$B$12<=0),'
-        '"Preparation values required",IF(OR($B$13="",$B$13<=0),"Preparation values required",'
-        'IF(AND($B$15<>"already_applied_by_labsolutions",$B$15<>"apply_in_qbench"),'
-        '"Dilution mode required",IF(AND($B$15="apply_in_qbench",OR($B$14="",$B$14<=0)),'
-        '"Dilution mode required",IF($B$19="decision_required","LOQ configuration required",'
-        'IF($B$20<>"confirmed","LOQ configuration required",IF($B$21<>"confirmed",'
-        '"MU configuration required",IF($B$22<>"Accepted","Batch on hold",'
-        'IF($B$23<>"TRUE","Review required","Ready"))))))))))))',
+        'IF($B$18<>"TRUE","Preparation values required",IF(ISNUMBER($B$12)<>TRUE,'
+        '"Preparation values required",IF($B$12<=0,"Preparation values required",'
+        'IF(ISNUMBER($B$13)<>TRUE,"Preparation values required",IF($B$13<=0,'
+        '"Preparation values required",IF(AND($B$15<>"already_applied_by_labsolutions",'
+        '$B$15<>"apply_in_qbench"),"Dilution mode required",IF(AND($B$15="apply_in_qbench",'
+        'ISNUMBER($B$14)<>TRUE),"Dilution mode required",IF(AND($B$15="apply_in_qbench",'
+        '$B$14<=0),"Dilution mode required",IF($B$24<>TRUE,"Analytical results incomplete",'
+        'IF(AND($B$19<>"display_less_than_loq",$B$19<>"display_numeric_result"),'
+        '"Below-LOQ reporting mode required",IF($B$20<>"confirmed","LOQ configuration required",'
+        'IF($B$21<>"confirmed","MU configuration required",IF($B$22<>"Accepted","Batch on hold",'
+        'IF($B$23<>"TRUE","Review required","Ready"))))))))))))))))',
         "First neutral prerequisite message",
     ),
     ("source_batch_id", "", "Deferred batch-to-test automation field"),
@@ -239,7 +256,7 @@ def update_worksheet(
 
 def build_data_tab(channels: list[dict[str, Any]]) -> tuple[list[list[Any]], list[int], dict[str, int], dict[str, dict[str, Any]]]:
     widths = [150, 150, 170] + [115] * 23
-    data = blank_grid(37, 26)
+    data = blank_grid(38, 26)
 
     data[0][0:3] = ["QBench Test ID", "QBench Sample ID", "Product Matrix"]
     for index, channel in enumerate(channels, start=4):
@@ -255,14 +272,15 @@ def build_data_tab(channels: list[dict[str, Any]]) -> tuple[list[list[Any]], lis
         label = col_letter(col)
         spec_row = 5 + offset
         data[2][col - 1] = (
-            f'=IF({label}2="","",IF($B$24<>TRUE,"",{label}2*IF($B$15="already_applied_by_labsolutions",'
+            f'=IF({label}2="","",IF($B$25<>TRUE,"",{label}2*IF($B$15="already_applied_by_labsolutions",'
             f'1,IF($B$15="apply_in_qbench",$B$14,""))))'
         )
-        data[3][col - 1] = f'=IF({label}3="","",IF($B$24<>TRUE,"",{label}3*$B$13/$B$12/1000))'
+        data[3][col - 1] = f'=IF({label}3="","",IF($B$25<>TRUE,"",{label}3*$B$13/$B$12/1000))'
         data[4][col - 1] = f'=IF({label}4="","",{label}4/10)'
         data[5][col - 1] = (
-            f'=IF({label}2="","",IF($B$24<>TRUE,"Review Required",IF($B$22<>"Accepted","Hold",'
-            f'IF($B$23<>"TRUE","Hold",IF(OR($B$19="decision_required",$B$20<>"confirmed",$B$21<>"confirmed"),'
+            f'=IF({label}2="","",IF($B$25<>TRUE,"Review Required",IF($B$22<>"Accepted","Hold",'
+            f'IF($B$23<>"TRUE","Hold",IF(OR(AND($B$19<>"display_less_than_loq",'
+            f'$B$19<>"display_numeric_result"),$B$20<>"confirmed",$B$21<>"confirmed"),'
             f'"Review Required",IF(AND(SPECIFICATIONS!$C${spec_row}<>"",{label}4<SPECIFICATIONS!$C${spec_row}),'
             f'"<LOQ","Reported"))))))'
         )
@@ -279,25 +297,25 @@ def build_data_tab(channels: list[dict[str, Any]]) -> tuple[list[list[Any]], lis
     for row in range(3, 7):
         style_range(style, row, 1, 3, 4)
         style_range(style, row, 4, 26, 1)
-    for row in range(9, 38):
+    for row in range(9, 39):
         style[cell_ref(row, 1)] = 2
-        style[cell_ref(row, 2)] = 9 if row not in {9, 10, 11, 24, 25, 26} else 1
+        style[cell_ref(row, 2)] = 9 if row not in {9, 10, 11, 24, 25, 26, 27} else 1
         style[cell_ref(row, 3)] = 1
 
     cells: dict[str, dict[str, Any]] = {}
-    for row in range(1, 38):
+    for row in range(1, 39):
         for col in range(1, 27):
             has_value = data[row - 1][col - 1] not in ("", None)
             in_formula_layer = row in {3, 4, 5, 6} and col >= 4
             instrument_input = row == 2 and col >= 4
-            control_value = col == 2 and 9 <= row <= 37
+            control_value = col == 2 and 9 <= row <= 38
             metadata_value = row == 2 and col <= 3
             if not (has_value or in_formula_layer or instrument_input or control_value):
                 continue
             readonly = True
             if instrument_input:
                 readonly = False
-            elif control_value and row not in {9, 10, 11, 24, 25, 26}:
+            elif control_value and row not in {9, 10, 11, 24, 25, 26, 27}:
                 readonly = False
             elif metadata_value:
                 readonly = True
@@ -343,23 +361,23 @@ def build_specifications_tab(
         data[row - 1][7] = channel.get("default_coa_rollup", channel["internal_key"])
 
     data[27][0] = "Total Ocimene"
-    data[27][3] = '=IF(AND(D11="",D14=""),"",SUM(D11,D14))'
-    data[27][4] = '=IF(AND(E11="",E14=""),"",SUM(E11,E14))'
-    data[27][5] = '=IF(E28="","",IF(DATA!$B$25<>TRUE,"Review Required","Reported"))'
+    data[27][3] = '=IF(COUNT(D11,D14)=2,SUM(D11,D14),"")'
+    data[27][4] = '=IF(COUNT(E11,E14)=2,SUM(E11,E14),"")'
+    data[27][5] = '=IF(E28="","",IF(DATA!$B$26<>TRUE,"Review Required","Reported"))'
     data[27][6] = "total_ocimene"
     data[27][7] = "total_ocimene"
 
     data[28][0] = "Total Nerolidol"
-    data[28][3] = '=IF(AND(D23="",D24=""),"",SUM(D23,D24))'
-    data[28][4] = '=IF(AND(E23="",E24=""),"",SUM(E23,E24))'
-    data[28][5] = '=IF(E29="","",IF(DATA!$B$25<>TRUE,"Review Required","Reported"))'
+    data[28][3] = '=IF(COUNT(D23,D24)=2,SUM(D23,D24),"")'
+    data[28][4] = '=IF(COUNT(E23,E24)=2,SUM(E23,E24),"")'
+    data[28][5] = '=IF(E29="","",IF(DATA!$B$26<>TRUE,"Review Required","Reported"))'
     data[28][6] = "total_nerolidol"
     data[28][7] = "total_nerolidol"
 
     data[29][0] = "Total Terpenes"
-    data[29][3] = f'=IF({spec_blank_check("D")},"",SUM(D5:D27))'
-    data[29][4] = f'=IF({spec_blank_check("E")},"",SUM(E5:E27))'
-    data[29][5] = '=IF(E30="","",IF(DATA!$B$25<>TRUE,"Review Required","Reported"))'
+    data[29][3] = '=IF(COUNT(D5:D27)=23,SUM(D5:D27),"")'
+    data[29][4] = '=IF(COUNT(E5:E27)=23,SUM(E5:E27),"")'
+    data[29][5] = '=IF(E30="","",IF(DATA!$B$26<>TRUE,"Review Required","Reported"))'
     data[29][6] = "total_terpenes"
     data[29][7] = "total_terpenes"
 
@@ -391,10 +409,18 @@ def build_report_tab() -> tuple[list[list[Any]], list[int], dict[str, int], dict
     data[0] = REPORT_HEADERS[:]
     for row_index, (label, spec_row) in enumerate(REPORT_ROWS, start=2):
         data[row_index - 1][0] = label
-        data[row_index - 1][1] = f'=IF(DATA!$B$25=TRUE,SPECIFICATIONS!D{spec_row},"")'
-        data[row_index - 1][2] = f'=IF(DATA!$B$25=TRUE,SPECIFICATIONS!E{spec_row},"")'
-        data[row_index - 1][3] = f'=IF(DATA!$B$25=TRUE,SPECIFICATIONS!C{spec_row},"")'
-        data[row_index - 1][4] = f'=IF(DATA!$B$25=TRUE,SPECIFICATIONS!B{spec_row},"")'
+        data[row_index - 1][1] = (
+            f'=IF(DATA!$B$26<>TRUE,"",IF(SPECIFICATIONS!F{spec_row}="<LOQ",'
+            f'IF(DATA!$B$19="display_less_than_loq","<LOQ",SPECIFICATIONS!D{spec_row}),'
+            f'IF(SPECIFICATIONS!F{spec_row}="Reported",SPECIFICATIONS!D{spec_row},"")))'
+        )
+        data[row_index - 1][2] = (
+            f'=IF(DATA!$B$26<>TRUE,"",IF(SPECIFICATIONS!F{spec_row}="<LOQ",'
+            f'IF(DATA!$B$19="display_less_than_loq","<LOQ",SPECIFICATIONS!E{spec_row}),'
+            f'IF(SPECIFICATIONS!F{spec_row}="Reported",SPECIFICATIONS!E{spec_row},"")))'
+        )
+        data[row_index - 1][3] = f'=IF(DATA!$B$26=TRUE,SPECIFICATIONS!C{spec_row},"")'
+        data[row_index - 1][4] = f'=IF(DATA!$B$26=TRUE,SPECIFICATIONS!B{spec_row},"")'
 
     style: dict[str, int] = {}
     style_range(style, 1, 1, 5, 23)
@@ -545,10 +571,12 @@ def build_manifest(candidate: dict[str, Any], candidate_text: str) -> dict[str, 
             "preparation_values_confirmed": "FALSE",
             "df_application_mode": "capture_only_until_method_validated",
             "below_loq_reporting_mode": "decision_required",
+            "controlled_below_loq_reporting_modes": CONTROLLED_BELOW_LOQ_REPORTING_MODES,
             "loq_source_status": "decision_required",
             "mu_source_status": "decision_required",
             "batch_qc_disposition": "Hold",
             "publish_ready": "FALSE",
+            "analytical_results_complete": "formula_false_by_default",
             "final_report_release_blocked_by_default": True,
         },
         "unresolved_scientific_reporting_decisions": [
@@ -584,8 +612,8 @@ def build_outputs() -> tuple[dict[str, Any], dict[str, Any], str, str]:
 def write_outputs(candidate_path: Path = CANDIDATE_PATH, manifest_path: Path = MANIFEST_PATH) -> dict[str, Any]:
     candidate, manifest, candidate_text, manifest_text = build_outputs()
     candidate_path.parent.mkdir(parents=True, exist_ok=True)
-    candidate_path.write_text(candidate_text, encoding="utf-8")
-    manifest_path.write_text(manifest_text, encoding="utf-8")
+    candidate_path.write_text(candidate_text, encoding="utf-8", newline="\n")
+    manifest_path.write_text(manifest_text, encoding="utf-8", newline="\n")
     return {
         "status": "ok",
         "candidate_path": repo_relative(candidate_path),

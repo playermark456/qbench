@@ -34,25 +34,34 @@ Date: 2026-07-14
 | `mu_source_status` | `Data!B21` | `decision_required` |
 | `batch_qc_disposition` | `Data!B22` | `Hold` |
 | `publish_ready` | `Data!B23` | `FALSE` |
-| `calculation_ready` | `Data!B24` | formula |
-| `reporting_ready` | `Data!B25` | formula |
-| `calculation_message` | `Data!B26` | formula |
-| `source_batch_id` | `Data!B27` | blank |
-| `source_instrument_file` | `Data!B28` | blank |
-| `source_file_hash` | `Data!B29` | blank |
-| `source_data_file` | `Data!B30` | blank |
-| `source_method_file` | `Data!B31` | blank |
-| `source_sequence_file` | `Data!B32` | blank |
-| `parser_version` | `Data!B33` | blank |
-| `imported_at` | `Data!B34` | blank |
-| `instrument_name` | `Data!B35` | blank |
-| `detector_id` | `Data!B36` | blank |
-| `detector_name` | `Data!B37` | blank |
+| `analytical_results_complete` | `Data!B24` | formula |
+| `calculation_ready` | `Data!B25` | formula |
+| `reporting_ready` | `Data!B26` | formula |
+| `calculation_message` | `Data!B27` | formula |
+| `source_batch_id` | `Data!B28` | blank |
+| `source_instrument_file` | `Data!B29` | blank |
+| `source_file_hash` | `Data!B30` | blank |
+| `source_data_file` | `Data!B31` | blank |
+| `source_method_file` | `Data!B32` | blank |
+| `source_sequence_file` | `Data!B33` | blank |
+| `parser_version` | `Data!B34` | blank |
+| `imported_at` | `Data!B35` | blank |
+| `instrument_name` | `Data!B36` | blank |
+| `detector_id` | `Data!B37` | blank |
+| `detector_name` | `Data!B38` | blank |
 | `terpenes_instrument_conc` | `Data!D2:Z2` | writable input range |
 | `terpenes_effective_conc` | `Data!D3:Z3` | formula range |
 | `terpenes_results_mgg` | `Data!D4:Z4` | formula range |
 | `terpenes_results_percent` | `Data!D5:Z5` | formula range |
 | `terpenes_qualifiers` | `Data!D6:Z6` | formula range |
+
+Controlled values for `below_loq_reporting_mode`:
+
+- `decision_required`
+- `display_less_than_loq`
+- `display_numeric_result`
+
+Only `display_less_than_loq` and `display_numeric_result` can allow `reporting_ready = TRUE`. The final laboratory decision remains unresolved.
 
 ## Specifications tab
 
@@ -79,6 +88,8 @@ Date: 2026-07-14
 | `report_results` | `Report!A1:E23` | COA render range |
 
 Report rows use the required 21-measurand display list plus Total Terpenes. Result cells are formula-driven and blank until `reporting_ready` is true.
+
+Report result columns B and C are display-only formulas. They may display `<LOQ` only when `reporting_ready` is true, the Specifications qualifier is `<LOQ`, and `below_loq_reporting_mode = display_less_than_loq`. With `display_numeric_result`, the report displays numerical values. Numerical totals are calculated only in the Data and Specifications layers.
 
 ## Compatibility named cells
 

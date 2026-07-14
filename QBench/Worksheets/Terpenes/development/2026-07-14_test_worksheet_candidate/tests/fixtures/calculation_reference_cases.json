@@ -1,6 +1,21 @@
 {
   "schema_version": 1,
   "note": "Prompt 3 test-only reference cases. These do not approve unresolved production assumptions.",
+  "controlled_below_loq_reporting_modes": [
+    "decision_required",
+    "display_less_than_loq",
+    "display_numeric_result"
+  ],
+  "report_release_below_loq_modes": [
+    "display_less_than_loq",
+    "display_numeric_result"
+  ],
+  "invalid_below_loq_reporting_modes": [
+    "approved",
+    "complete",
+    "x",
+    ""
+  ],
   "cases": [
     {
       "name": "already_applied_no_extra_dilution",

@@ -65,6 +65,11 @@ REPORT_LABELS = [
 ]
 FORBIDDEN_TOKENS = ["pass_fail", "Pass", "Fail", "Not Tested", "Claim Met", "Claim Not Met"]
 FORBIDDEN_FORMULA_TEXT = ["#REF!", "#NAME?", "#VALUE!", "Conc. %", "Norm Conc."]
+CONTROLLED_BELOW_LOQ_REPORTING_MODES = [
+    "decision_required",
+    "display_less_than_loq",
+    "display_numeric_result",
+]
 NEW_REQUIRED_NAMED_CELLS = [
     "total_ocimene_percent",
     "total_ocimene_mgg",
@@ -80,6 +85,7 @@ NEW_REQUIRED_NAMED_CELLS = [
     "terpenes_results_mgg",
     "terpenes_results_percent",
     "terpenes_qualifiers",
+    "analytical_results_complete",
 ]
 CONTROL_NAMED_CELLS = [
     "qbench_test_id",
@@ -97,6 +103,7 @@ CONTROL_NAMED_CELLS = [
     "mu_source_status",
     "batch_qc_disposition",
     "publish_ready",
+    "analytical_results_complete",
     "calculation_ready",
     "reporting_ready",
     "calculation_message",
@@ -301,12 +308,32 @@ def validate_report_tab(workbook: dict[str, Any]) -> None:
     labels = [row[0] for row in report[1:]]
     if labels != REPORT_LABELS:
         fail("Report labels do not match the required 21-measurand order plus Total Terpenes.")
-    for row in report[1:]:
+    for row_number, row in enumerate(report[1:], start=2):
+        spec_row = build_mod.REPORT_ROWS[row_number - 2][1]
+        percent_formula = row[1]
+        mgg_formula = row[2]
+        expected_percent = (
+            f'=IF(DATA!$B$26<>TRUE,"",IF(SPECIFICATIONS!F{spec_row}="<LOQ",'
+            f'IF(DATA!$B$19="display_less_than_loq","<LOQ",SPECIFICATIONS!D{spec_row}),'
+            f'IF(SPECIFICATIONS!F{spec_row}="Reported",SPECIFICATIONS!D{spec_row},"")))'
+        )
+        expected_mgg = (
+            f'=IF(DATA!$B$26<>TRUE,"",IF(SPECIFICATIONS!F{spec_row}="<LOQ",'
+            f'IF(DATA!$B$19="display_less_than_loq","<LOQ",SPECIFICATIONS!E{spec_row}),'
+            f'IF(SPECIFICATIONS!F{spec_row}="Reported",SPECIFICATIONS!E{spec_row},"")))'
+        )
+        if percent_formula != expected_percent:
+            fail(f"Report percent formula at row {row_number} does not match controlled display logic.")
+        if mgg_formula != expected_mgg:
+            fail(f"Report mg/g formula at row {row_number} does not match controlled display logic.")
         for value in row[1:]:
-            if not (isinstance(value, str) and value.startswith("=IF(DATA!$B$25=TRUE,SPECIFICATIONS!")):
-                fail("Report result cells must be formula-driven and gated by reporting_ready.")
-            if "<LOQ" in value or "Reported" in value or "Hold" in value:
-                fail("Report numerical display cells must stay separate from qualifier text.")
+            if not (isinstance(value, str) and value.startswith("=IF(DATA!$B$26")):
+                fail("Report cells must be formula-driven and gated by reporting_ready.")
+            for forbidden in ["Hold", "Review Required", "Pass", "Fail", "Not Tested"]:
+                if forbidden in value:
+                    fail(f"Report formula contains forbidden display text: {forbidden}")
+            if "<LOQ" in value and 'DATA!$B$19="display_less_than_loq"' not in value:
+                fail("<LOQ may appear only through controlled below-LOQ display logic.")
 
 
 def validate_named_cells(workbook: dict[str, Any]) -> dict[str, Any]:
@@ -356,16 +383,25 @@ def validate_formulas(workbook: dict[str, Any]) -> None:
         '$B$17="TRUE"',
         '$B$16="ug/mL"',
         '$B$18="TRUE"',
-        "$B$12>0",
-        "$B$13>0",
+        "AND(ISNUMBER($B$12),$B$12>0)",
+        "AND(ISNUMBER($B$13),$B$13>0)",
+        "AND($B$15=\"apply_in_qbench\",ISNUMBER($B$14),$B$14>0)",
         '"already_applied_by_labsolutions"',
         '"apply_in_qbench"',
-        "$B$14>0",
+        "COUNT($D$2:$Z$2)=23",
+        "COUNT($D$4:$Z$4)=23",
+        '$B$24=TRUE',
         '$B$22="Accepted"',
         '$B$23="TRUE"',
+        '$B$19="display_less_than_loq"',
+        '$B$19="display_numeric_result"',
+        "Below-LOQ reporting mode required",
+        "Analytical results incomplete",
     ]:
         if required not in formula_text:
             fail(f"Required gate fragment missing from formulas: {required}")
+    if '$B$19<>"decision_required"' in formula_text:
+        fail("reporting_ready must use the controlled below-LOQ value set, not a non-default shortcut.")
     if "IFERROR" in formula_text:
         fail("Prompt 3 formulas must not use IFERROR to hide invalid configuration.")
 
@@ -374,26 +410,30 @@ def validate_result_formulas(workbook: dict[str, Any]) -> None:
     data = worksheet_by_name(workbook)["Data"]["data"]
     for col in range(4, 27):
         label = build_mod.col_letter(col)
-        if not data[2][col - 1].startswith(f'=IF({label}2="","",IF($B$24<>TRUE,"",{label}2*'):
+        if not data[2][col - 1].startswith(f'=IF({label}2="","",IF($B$25<>TRUE,"",{label}2*'):
             fail(f"Missing effective concentration formula at Data!{label}3.")
-        if not data[3][col - 1].startswith(f'=IF({label}3="","",IF($B$24<>TRUE,"",{label}3*$B$13/$B$12/1000))'):
+        if not data[3][col - 1].startswith(f'=IF({label}3="","",IF($B$25<>TRUE,"",{label}3*$B$13/$B$12/1000))'):
             fail(f"Missing mg/g formula at Data!{label}4.")
         if data[4][col - 1] != f'=IF({label}4="","",{label}4/10)':
             fail(f"Missing percent formula at Data!{label}5.")
-        if not data[5][col - 1].startswith(f'=IF({label}2="","",IF($B$24<>TRUE,"Review Required"'):
+        if not data[5][col - 1].startswith(f'=IF({label}2="","",IF($B$25<>TRUE,"Review Required"'):
             fail(f"Missing qualifier formula at Data!{label}6.")
 
 
 def validate_totals(workbook: dict[str, Any]) -> None:
     spec = worksheet_by_name(workbook)["Specifications"]["data"]
-    if spec[27][3] != '=IF(AND(D11="",D14=""),"",SUM(D11,D14))':
-        fail("Total Ocimene percent formula must sum cis-Ocimene and trans-Ocimene.")
-    if spec[27][4] != '=IF(AND(E11="",E14=""),"",SUM(E11,E14))':
-        fail("Total Ocimene mg/g formula must sum cis-Ocimene and trans-Ocimene.")
-    if spec[28][3] != '=IF(AND(D23="",D24=""),"",SUM(D23,D24))':
-        fail("Total Nerolidol percent formula must sum cis-Nerolidol and trans-Nerolidol.")
-    if spec[28][4] != '=IF(AND(E23="",E24=""),"",SUM(E23,E24))':
-        fail("Total Nerolidol mg/g formula must sum cis-Nerolidol and trans-Nerolidol.")
+    if spec[27][3] != '=IF(COUNT(D11,D14)=2,SUM(D11,D14),"")':
+        fail("Total Ocimene percent formula must require both numeric components.")
+    if spec[27][4] != '=IF(COUNT(E11,E14)=2,SUM(E11,E14),"")':
+        fail("Total Ocimene mg/g formula must require both numeric components.")
+    if spec[28][3] != '=IF(COUNT(D23,D24)=2,SUM(D23,D24),"")':
+        fail("Total Nerolidol percent formula must require both numeric components.")
+    if spec[28][4] != '=IF(COUNT(E23,E24)=2,SUM(E23,E24),"")':
+        fail("Total Nerolidol mg/g formula must require both numeric components.")
+    if spec[29][3] != '=IF(COUNT(D5:D27)=23,SUM(D5:D27),"")':
+        fail("Total Terpenes percent formula must require 23 numeric internal channel results.")
+    if spec[29][4] != '=IF(COUNT(E5:E27)=23,SUM(E5:E27),"")':
+        fail("Total Terpenes mg/g formula must require 23 numeric internal channel results.")
     for expected in ["SUM(D5:D27)", "SUM(E5:E27)"]:
         if expected not in "\n".join([spec[29][3], spec[29][4]]):
             fail(f"Total Terpenes formula must include {expected}.")
@@ -418,6 +458,25 @@ def validate_default_gates(workbook: dict[str, Any]) -> None:
     for row, value in expected.items():
         if data[row - 1][1] != value:
             fail(f"Default gate Data!B{row} must be {value!r}.")
+    if data[23][1] != "=IF(AND(COUNT($D$2:$Z$2)=23,COUNT($D$4:$Z$4)=23),TRUE,FALSE)":
+        fail("analytical_results_complete must require 23 numeric inputs and 23 numeric mg/g results.")
+    calculation_formula = data[24][1]
+    for fragment in [
+        "AND(ISNUMBER($B$12),$B$12>0)",
+        "AND(ISNUMBER($B$13),$B$13>0)",
+        'AND($B$15="apply_in_qbench",ISNUMBER($B$14),$B$14>0)',
+    ]:
+        if fragment not in calculation_formula:
+            fail(f"calculation_ready missing numeric preparation gate: {fragment}")
+    reporting_formula = data[25][1]
+    for fragment in [
+        "$B$25=TRUE",
+        "$B$24=TRUE",
+        '$B$19="display_less_than_loq"',
+        '$B$19="display_numeric_result"',
+    ]:
+        if fragment not in reporting_formula:
+            fail(f"reporting_ready missing required gate: {fragment}")
 
 
 def validate_readonly_metadata(workbook: dict[str, Any]) -> None:
@@ -478,6 +537,14 @@ def validate_hashes_and_determinism(workbook_text: str, manifest_text: str, mani
         fail("Manifest JSON is not byte-identical to generator output.")
 
 
+def validate_manifest_controls(manifest: dict[str, Any]) -> None:
+    gates = manifest["default_decision_gates"]
+    if gates.get("controlled_below_loq_reporting_modes") != CONTROLLED_BELOW_LOQ_REPORTING_MODES:
+        fail("Manifest must record the exact controlled below-LOQ reporting mode set.")
+    if gates.get("analytical_results_complete") != "formula_false_by_default":
+        fail("Manifest must record analytical_results_complete as a default reporting gate.")
+
+
 def validate_candidate(candidate_path: Path = CANDIDATE_PATH, manifest_path: Path = MANIFEST_PATH) -> dict[str, Any]:
     workbook_text = candidate_path.read_text(encoding="utf-8")
     manifest_text = manifest_path.read_text(encoding="utf-8")
@@ -498,6 +565,7 @@ def validate_candidate(candidate_path: Path = CANDIDATE_PATH, manifest_path: Pat
     validate_readonly_metadata(workbook)
     validate_internal_metadata(workbook)
     validate_hashes_and_determinism(workbook_text, manifest_text, manifest)
+    validate_manifest_controls(manifest)
 
     if workbook["qb_config"]["kvstore_config"] != {}:
         fail("qb_config.kvstore_config must remain empty for Prompt 3.")
@@ -514,6 +582,8 @@ def validate_candidate(candidate_path: Path = CANDIDATE_PATH, manifest_path: Pat
         "named_cell_count": named_summary["candidate_named_count"],
         "preserved_compatibility_named_cell_count": named_summary["source_named_count"],
         "report_results_range": workbook["qb_config"]["named_cells"]["report_results"]["cell"],
+        "analytical_results_complete": workbook["qb_config"]["named_cells"]["analytical_results_complete"]["cell"],
+        "controlled_below_loq_reporting_modes": CONTROLLED_BELOW_LOQ_REPORTING_MODES,
         "tabs": workbook_tabs(workbook),
         "kvstore_config_empty": workbook["qb_config"]["kvstore_config"] == {},
         "deterministic_generation": True,
