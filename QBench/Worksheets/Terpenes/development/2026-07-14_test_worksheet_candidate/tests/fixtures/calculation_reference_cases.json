@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "note": "Prompt 3 test-only reference cases. These do not approve unresolved production assumptions.",
+  "controlled_below_loq_reporting_modes": [
+    "decision_required",
+    "display_less_than_loq",
+    "display_numeric_result"
+  ],
+  "report_release_below_loq_modes": [
+    "display_less_than_loq",
+    "display_numeric_result"
+  ],
+  "invalid_below_loq_reporting_modes": [
+    "approved",
+    "complete",
+    "x",
+    ""
+  ],
+  "cases": [
+    {
+      "name": "already_applied_no_extra_dilution",
+      "conc_ug_ml": "10",
+      "final_volume_ml": "10",
+      "sample_mass_g": "1",
+      "df_application_mode": "already_applied_by_labsolutions",
+      "df": "",
+      "expected_effective_concentration_ug_ml": "10",
+      "expected_mg_g": "0.1",
+      "expected_percent": "0.01"
+    },
+    {
+      "name": "apply_dilution_in_qbench",
+      "conc_ug_ml": "10",
+      "final_volume_ml": "10",
+      "sample_mass_g": "1",
+      "df_application_mode": "apply_in_qbench",
+      "df": "2",
+      "expected_effective_concentration_ug_ml": "20",
+      "expected_mg_g": "0.2",
+      "expected_percent": "0.02"
+    },
+    {
+      "name": "already_applied_ignores_captured_df",
+      "conc_ug_ml": "10",
+      "final_volume_ml": "10",
+      "sample_mass_g": "1",
+      "df_application_mode": "already_applied_by_labsolutions",
+      "df": "2",
+      "expected_effective_concentration_ug_ml": "10",
+      "expected_mg_g": "0.1",
+      "expected_percent": "0.01"
+    }
+  ]
+}
