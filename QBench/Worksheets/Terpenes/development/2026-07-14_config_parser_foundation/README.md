@@ -43,6 +43,10 @@ QBench automation, QBench protocol worksheets, or any QBench object.
   required analytical and audit fields are complete.
 - METRC mappings are profile-driven. Analytes must not silently fall back to
   Other Terpenes.
+- Default COA Nerolidol is one generic row calculated as
+  `cis-Nerolidol + trans-Nerolidol`.
+- METRC keeps the separate configured rule: `cis-Nerolidol` maps to
+  `Cis-Nerolidol`, while `trans-Nerolidol` maps to generic `Nerolidol`.
 - Both percent and mg/g result slots are preserved. Final numeric conversion
   remains blocked on unit, mass, final-volume, and dilution decisions.
 
@@ -99,8 +103,6 @@ non_reportable_compounds: [Dimethylacetamide]
 - Confirm whether exported dilution factor is already reflected in `Conc.`.
 - Confirm below-LOQ report and METRC handling.
 - Confirm default COA display units and row labels for the 21-measurand list.
-- Confirm whether default COA Nerolidol should remain total cis plus trans or
-  follow a split display.
 - Confirm R&D Alpha-Humulene ppm handling.
 - Confirm Full Panel Finished Products mixed-unit behavior.
 - Confirm p-Cymene handling for profiles where the explicit row is absent.

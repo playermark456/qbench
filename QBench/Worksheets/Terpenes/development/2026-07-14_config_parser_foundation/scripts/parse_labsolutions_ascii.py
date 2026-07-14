@@ -112,6 +112,8 @@ def configured_compound_channels(config: dict[str, Any]) -> dict[str, dict[str, 
     channels: dict[str, dict[str, Any]] = {}
     for channel in reportable_channels(config) + audit_channels(config):
         key = str(channel.get("internal_key", ""))
+        if key in channels:
+            raise TerpenesConfigError(f"Duplicate configured internal key: {key}")
         if key:
             channels[key] = channel
     return channels
@@ -149,23 +151,52 @@ def validate_analyte_config(config: dict[str, Any]) -> None:
         raise TerpenesConfigError(f"Blocked potency source selected: {source_field}")
 
     channels = reportable_channels(config)
+    audits = audit_channels(config)
     if len(channels) != 23:
         raise TerpenesConfigError(f"Expected 23 reportable channels, found {len(channels)}.")
+    if len(audits) != 1:
+        raise TerpenesConfigError(f"Expected exactly one audit-only channel, found {len(audits)}.")
 
-    keys = [row.get("internal_key") for row in channels]
+    audit = audits[0]
+    if audit.get("internal_key") != "dimethylacetamide":
+        raise TerpenesConfigError("The only audit-only channel must be dimethylacetamide.")
+    if audit.get("reportable") is not False:
+        raise TerpenesConfigError("Dimethylacetamide must have reportable = false.")
+    if audit.get("retain_for_audit") is not True:
+        raise TerpenesConfigError("Dimethylacetamide must have retain_for_audit = true.")
+
+    configured_channels = channels + audits
+    if len(configured_channels) != 24:
+        raise TerpenesConfigError(
+            f"Expected 24 configured Compound Results channels, found {len(configured_channels)}."
+        )
+
+    keys = [row.get("internal_key") for row in configured_channels]
+    blank_keys = [index for index, key in enumerate(keys, start=1) if not str(key or "").strip()]
+    if blank_keys:
+        raise TerpenesConfigError(f"Configured internal keys must be nonblank; blank at row(s): {blank_keys}.")
     if len(keys) != len(set(keys)):
-        raise TerpenesConfigError("Duplicate reportable internal keys are not allowed.")
+        duplicates = sorted({key for key in keys if keys.count(key) > 1})
+        raise TerpenesConfigError(f"Duplicate configured internal keys are not allowed: {duplicates}.")
 
-    compound_ids = [row.get("labsolutions_compound_id") for row in channels]
+    compound_ids = [row.get("labsolutions_compound_id") for row in configured_channels]
+    blank_ids = [index for index, value in enumerate(compound_ids, start=1) if value in ("", None)]
+    if blank_ids:
+        raise TerpenesConfigError(f"LabSolutions compound IDs must be nonblank; blank at row(s): {blank_ids}.")
+    non_integer_ids = [value for value in compound_ids if not isinstance(value, int)]
+    if non_integer_ids:
+        raise TerpenesConfigError(f"LabSolutions compound IDs must be integers: {non_integer_ids}.")
     if len(compound_ids) != len(set(compound_ids)):
-        raise TerpenesConfigError("Duplicate LabSolutions compound IDs are not allowed.")
+        duplicates = sorted({value for value in compound_ids if compound_ids.count(value) > 1})
+        raise TerpenesConfigError(f"Duplicate LabSolutions compound IDs are not allowed: {duplicates}.")
 
-    audit_keys = [row.get("internal_key") for row in audit_channels(config)]
-    if "dimethylacetamide" not in audit_keys:
-        raise TerpenesConfigError("Dimethylacetamide must be retained as an audit-only channel.")
-    for row in audit_channels(config):
-        if row.get("internal_key") == "dimethylacetamide" and row.get("reportable") is not False:
-            raise TerpenesConfigError("Dimethylacetamide must not be reportable.")
+    controlled_id_set = set(range(1, 25))
+    configured_id_set = set(compound_ids)
+    if configured_id_set != controlled_id_set and not config.get("future_approved_compound_id_alternative"):
+        raise TerpenesConfigError(
+            "Configured LabSolutions compound IDs must resolve to the controlled set 1 through 24 "
+            "unless future_approved_compound_id_alternative documents an approved alternative."
+        )
 
     build_alias_map(config)
 
@@ -173,7 +204,7 @@ def validate_analyte_config(config: dict[str, Any]) -> None:
     direct = set(coa.get("direct_internal_keys", []))
     rollups = coa.get("rollups", [])
     rollup_components = {key for rollup in rollups for key in rollup.get("components", [])}
-    expected_keys = set(keys)
+    expected_keys = {str(row.get("internal_key", "")) for row in channels}
     accounted_keys = direct | rollup_components
     if accounted_keys != expected_keys:
         missing = sorted(expected_keys - accounted_keys)

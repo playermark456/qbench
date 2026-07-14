@@ -196,6 +196,59 @@ class TerpenesParserConfigTests(unittest.TestCase):
         with self.assertRaises(parser_mod.TerpenesConfigError):
             parser_mod.validate_analyte_config(bad)
 
+    def test_second_audit_only_channel_fails_validation(self) -> None:
+        bad = copy.deepcopy(self.analytes)
+        extra_audit = copy.deepcopy(bad["audit_only_channels"][0])
+        extra_audit["internal_key"] = "audit_extra"
+        extra_audit["labsolutions_compound_id"] = 25
+        bad["audit_only_channels"].append(extra_audit)
+
+        with self.assertRaisesRegex(parser_mod.TerpenesConfigError, "exactly one audit-only channel"):
+            parser_mod.validate_analyte_config(bad)
+
+    def test_audit_only_channel_other_than_dimethylacetamide_fails_validation(self) -> None:
+        bad = copy.deepcopy(self.analytes)
+        bad["audit_only_channels"][0]["internal_key"] = "audit_other"
+        bad["audit_only_channels"][0]["worksheet_label"] = "Audit Other"
+
+        with self.assertRaisesRegex(parser_mod.TerpenesConfigError, "only audit-only channel"):
+            parser_mod.validate_analyte_config(bad)
+
+    def test_dimethylacetamide_without_retain_for_audit_fails_validation(self) -> None:
+        bad = copy.deepcopy(self.analytes)
+        bad["audit_only_channels"][0]["retain_for_audit"] = False
+
+        with self.assertRaisesRegex(parser_mod.TerpenesConfigError, "retain_for_audit = true"):
+            parser_mod.validate_analyte_config(bad)
+
+    def test_duplicate_internal_key_between_audit_and_reportable_fails_validation(self) -> None:
+        bad = copy.deepcopy(self.analytes)
+        bad["internal_reportable_channels"][0]["internal_key"] = "dimethylacetamide"
+
+        with self.assertRaisesRegex(parser_mod.TerpenesConfigError, "Duplicate configured internal keys"):
+            parser_mod.validate_analyte_config(bad)
+
+    def test_duplicate_compound_id_between_audit_and_reportable_fails_validation(self) -> None:
+        bad = copy.deepcopy(self.analytes)
+        bad["internal_reportable_channels"][0]["labsolutions_compound_id"] = 1
+
+        with self.assertRaisesRegex(parser_mod.TerpenesConfigError, "Duplicate LabSolutions compound IDs"):
+            parser_mod.validate_analyte_config(bad)
+
+    def test_blank_internal_key_fails_validation(self) -> None:
+        bad = copy.deepcopy(self.analytes)
+        bad["internal_reportable_channels"][0]["internal_key"] = ""
+
+        with self.assertRaisesRegex(parser_mod.TerpenesConfigError, "internal keys must be nonblank"):
+            parser_mod.validate_analyte_config(bad)
+
+    def test_blank_compound_id_fails_validation(self) -> None:
+        bad = copy.deepcopy(self.analytes)
+        bad["internal_reportable_channels"][0]["labsolutions_compound_id"] = ""
+
+        with self.assertRaisesRegex(parser_mod.TerpenesConfigError, "compound IDs must be nonblank"):
+            parser_mod.validate_analyte_config(bad)
+
     def test_duplicate_internal_keys_fail_validation(self) -> None:
         bad = copy.deepcopy(self.analytes)
         bad["internal_reportable_channels"][1]["internal_key"] = bad["internal_reportable_channels"][0]["internal_key"]
