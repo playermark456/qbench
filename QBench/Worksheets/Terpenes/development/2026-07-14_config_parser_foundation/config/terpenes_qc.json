@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-14",
+  "source_files": [
+    "QBench/Worksheets/Terpenes/source/terpenes_worksheet_spec_v3.json",
+    "QBench/Worksheets/Terpenes/AGENTS.md"
+  ],
+  "reporting_mode": "quantitative_only",
+  "sample_pass_fail_enabled": false,
+  "analyte_pass_fail_enabled": false,
+  "coa_pass_fail_enabled": false,
+  "metrc_pass_fail_enabled": false,
+  "kvstore_pass_fail_enabled": false,
+  "label_claim_pass_fail_enabled": false,
+  "batch_qc_disposition_values": [
+    "Accepted",
+    "Hold",
+    "Rejected"
+  ],
+  "internal_qc_evaluation_values": [
+    "within_criteria",
+    "outside_criteria",
+    "Accepted",
+    "Hold",
+    "Rejected",
+    "review_required"
+  ],
+  "publish_ready_requires": [
+    "batch_qc_disposition == Accepted",
+    "required analytical and audit fields complete"
+  ],
+  "publish_ready_logic": {
+    "allowed_true_batch_qc_disposition": "Accepted",
+    "requires_required_analytical_fields_complete": true,
+    "requires_required_audit_fields_complete": true
+  },
+  "qc_criteria": {
+    "initial_ccv_accuracy_percent_window": 15,
+    "initial_ccv_rsd_max_percent": 10,
+    "calibration_r_min": 0.99,
+    "blank_max_fraction_of_loq": 0.2,
+    "loq_recovery_min_percent": 70,
+    "loq_recovery_max_percent": 130,
+    "matrix_spike_recovery_min_percent": 85,
+    "matrix_spike_recovery_max_percent": 115,
+    "duplicate_difference_max_percent": 20,
+    "bracketing_ccv_accuracy_percent_window": "DECISION_NEEDED: SOP text says 10 percent; Analysis Form says 15 percent.",
+    "rt_drift_window_min": 0.5,
+    "resolution_min": 1.0
+  }
+}
