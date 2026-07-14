@@ -1,0 +1,337 @@
+{
+  "units": {
+    "extract_concentration": "ug/mL",
+    "result_primary_units": [
+      "%",
+      "mg/g"
+    ],
+    "conversion": {
+      "mg_g": "extract_conc_ug_mL * final_volume_mL / sample_mass_g / 1000",
+      "pct": "mg_g / 10"
+    }
+  },
+  "qc_rules": {
+    "initial_ccv_accuracy_percent_window": 15,
+    "initial_ccv_rsd_max_percent": 10,
+    "calibration_r_min": 0.99,
+    "blank_max_fraction_of_loq": 0.2,
+    "loq_recovery_min_percent": 70,
+    "loq_recovery_max_percent": 130,
+    "matrix_spike_recovery_min_percent": 85,
+    "matrix_spike_recovery_max_percent": 115,
+    "duplicate_difference_max_percent": 20,
+    "bracketing_ccv_accuracy_percent_window": "DECISION_NEEDED: SOP text says 10, Analysis Form says 15",
+    "rt_drift_window_min": 0.5,
+    "resolution_min": 1.0
+  },
+  "integration_decisions_needed": [
+    "Confirm instrument export unit and columns from LabSolutions Insight.",
+    "Decide trans-Ocimene reporting/export: separate result field or sum with cis-Ocimene.",
+    "Decide controlling bracketing CCV criterion: ±10% or ±15%.",
+    "Decide below-LOQ METRC behavior: quantity 0 with <LOQ note, or exclude.",
+    "Confirm Full Panel Finished Products mixed-unit behavior: individual terpene rows are %, Total Terpenes is mg/g.",
+    "Confirm whether R&D Terpenes Alpha-Humulene (ppm) is a template typo or requires a profile-specific ppm conversion.",
+    "Confirm that generic METRC Nerolidol should receive trans-Nerolidol/Nerolidol 2 rather than total cis+trans Nerolidol.",
+    "Confirm whether the generic Cymene row should remain unused because p-Cymene maps to P-Isopropyltoluene (P-Cymene)."
+  ],
+  "labsolutions_ascii_import": {
+    "source_file_example": "Output.txt",
+    "application": "LabSolutions",
+    "application_version": 5.141,
+    "sections_required": [
+      "Header",
+      "Sample Information",
+      "Original Files",
+      "Configuration",
+      "Peak Table(Ch1)",
+      "Compound Results(Ch1)"
+    ],
+    "quantitation_source_table": "Compound Results(Ch1)",
+    "integration_review_source_table": "Peak Table(Ch1)",
+    "rationale": "Compound Results has one row per compound ID and sums duplicate peak-table integrations for compounds with multiple peak segments; Peak Table is needed for retention-time, resolution, and integration-review details.",
+    "ignore_for_report": [
+      "Dimethylacetamide"
+    ],
+    "do_not_use_for_potency": [
+      "Conc. %",
+      "Norm Conc."
+    ],
+    "potency_warning": "In the provided export, Compound Results Conc. % / Norm Conc. sum to approximately 100 across compounds, so these fields are normalized composition values, not sample potency %. Use Conc. with the worksheet unit conversion after confirming the Conc. unit.",
+    "sample_metadata_fields": {
+      "sample_name": "Sample Information > Sample Name",
+      "sample_id": "Sample Information > Sample ID",
+      "sample_amount_export": "Sample Information > Sample Amount",
+      "dilution_factor_export": "Sample Information > Dilution Factor",
+      "vial_number": "Sample Information > Vial#",
+      "injection_volume_uL": "Sample Information > Injection Volume",
+      "injection_count": "Sample Information > Injection Count",
+      "acquired_at": "Sample Information > Acquired",
+      "data_file": "Original Files > Data File",
+      "method_file": "Original Files > Method File",
+      "batch_file": "Original Files > Batch File",
+      "instrument_name": "Configuration > Instrument Name",
+      "detector_name": "Configuration > Detector Name"
+    },
+    "compound_result_field_mapping": {
+      "source_id": "ID#",
+      "source_name": "Name",
+      "retention_time_min": "R.Time",
+      "area": "Area",
+      "height": "Height",
+      "extract_concentration_input": "Conc.",
+      "curve_type": "Curve",
+      "slope_or_linear_1st_coefficient": "1st",
+      "constant": "Constant",
+      "area_ratio": "Area Ratio",
+      "height_ratio": "Height Ratio"
+    },
+    "name_aliases": {
+      "alpha-Pinene": "α-Pinene",
+      "beta-Myrcene": "β-Myrcene",
+      "(-)-beta-Pinene": "(-)-β-pinene",
+      "delta-3-Carene": "Delta-3-carene",
+      "alpha-Terpinene": "α-Terpinene",
+      "Ocimene 1": "cis-Ocimene",
+      "D-Limonene": "d-Limonene",
+      "Ocimene 2": "trans-Ocimene",
+      "Gamma terpinene": "γ-Terpinene",
+      "beta-Caryophyllene": "β-Caryophyllene",
+      "alpha-Humulene": "α-Humulene",
+      "Nerolidol 1": "cis-Nerolidol",
+      "Nerolidol 2": "trans-Nerolidol",
+      "Caryophyllene oxide": "Caryophyllene Oxide",
+      "(-)-alpha-Bisabolol": "(-)-α-Bisabolol"
+    },
+    "dilution_factor_handling": "Store Dilution Factor from the export. Do not multiply by it unless method validation confirms LabSolutions Conc. has not already applied it.",
+    "sample_amount_handling": "Store Sample Amount from the export, but use QBench/sample-prep mass for final mg/g and % calculations unless the export amount is confirmed authoritative.",
+    "validation_rules": [
+      "Fail if required sections are missing.",
+      "Fail if Compound Results is missing any configured reportable LabSolutions compound name.",
+      "Fail if Dimethylacetamide appears in reportable analytes.",
+      "Warn if Conc. % or Norm Conc. is used in a result formula.",
+      "Warn if Sample Amount or Dilution Factor is not numeric.",
+      "Warn if Compound Results row count changes without a corresponding analyte config decision.",
+      "Warn if Peak Table has multiple rows for a compound and Compound Results does not aggregate to the expected Area/Height."
+    ]
+  },
+  "metrc_csv_upload_template": {
+    "source_file": "6867a117-96f8-4aa6-87ba-7fe7fdc49931.xlsx",
+    "parsed_at": "2026-07-04T18:56:36",
+    "terpene_related_row_count": 193,
+    "terpene_related_sheets": [
+      "Additional-Terpenes (%)",
+      "Additional-Terpenes (mg_g)",
+      "Full Panel (Conc.) Tribal Only",
+      "Full Panel (FinPrd) Tribal Only",
+      "Full Panel (Flower) Tribal Only",
+      "R&D Terpenes",
+      "Sub-Contact - Terpenes(Infused)",
+      "Sub-Contract - Terpenes (ConEx)",
+      "Sub-Contract - Terpenes (RawPM)"
+    ],
+    "export_profiles": {
+      "additional_raw_concentrate": {
+        "template_sheet": "Additional-Terpenes (%)",
+        "matrix_scope": "Raw Plant Material & Concentrate/Extract",
+        "individual_analyte_unit": "%",
+        "total_terpenes_unit": "%",
+        "notes": "Additional terpene upload tab for raw plant material and concentrate/extract."
+      },
+      "additional_infused": {
+        "template_sheet": "Additional-Terpenes (mg_g)",
+        "matrix_scope": "Infused Products",
+        "individual_analyte_unit": "mg/g",
+        "total_terpenes_unit": "mg/g",
+        "notes": "Additional terpene upload tab for infused products."
+      },
+      "full_panel_concentrates_tribal_only": {
+        "template_sheet": "Full Panel (Conc.) Tribal Only",
+        "matrix_scope": "Concentrates",
+        "individual_analyte_unit": "%",
+        "total_terpenes_unit": "%",
+        "notes": "Tribal-only full panel concentrate tab."
+      },
+      "full_panel_flower_tribal_only": {
+        "template_sheet": "Full Panel (Flower) Tribal Only",
+        "matrix_scope": "Flower",
+        "individual_analyte_unit": "%",
+        "total_terpenes_unit": "%",
+        "notes": "Tribal-only full panel flower tab."
+      },
+      "full_panel_finished_products_tribal_only": {
+        "template_sheet": "Full Panel (FinPrd) Tribal Only",
+        "matrix_scope": "Finished Products",
+        "individual_analyte_unit": "%",
+        "total_terpenes_unit": "mg/g",
+        "notes": "Template has individual terpenes as % but Total Terpenes as mg/g. This mixed-unit profile needs confirmation before automatic export."
+      },
+      "rd_terpenes": {
+        "template_sheet": "R&D Terpenes",
+        "matrix_scope": "R&D Testing",
+        "individual_analyte_unit": "%",
+        "total_terpenes_unit": "%",
+        "notes": "Mostly %, but Alpha-Humulene appears as ppm in the template; treat as an exception/possible typo."
+      },
+      "subcontract_concentrate_extract": {
+        "template_sheet": "Sub-Contract - Terpenes (ConEx)",
+        "matrix_scope": "Concentrate/Extract",
+        "individual_analyte_unit": "%",
+        "total_terpenes_unit": null,
+        "notes": "Limited analyte set; several in-house analytes are absent."
+      },
+      "subcontract_infused": {
+        "template_sheet": "Sub-Contact - Terpenes(Infused)",
+        "matrix_scope": "Infused Products",
+        "individual_analyte_unit": "mg/g",
+        "total_terpenes_unit": null,
+        "notes": "Limited analyte set; several in-house analytes are absent."
+      },
+      "subcontract_raw_pm": {
+        "template_sheet": "Sub-Contract - Terpenes (RawPM)",
+        "matrix_scope": "Raw Plant Material",
+        "individual_analyte_unit": "%",
+        "total_terpenes_unit": null,
+        "notes": "Limited analyte set; several in-house analytes are absent."
+      }
+    },
+    "mapping_decisions": {
+      "ocimene": "Keep cis-Ocimene and trans-Ocimene in LabSolutions/QBench, export METRC Ocimene as cis + trans.",
+      "nerolidol": "Export cis-Nerolidol to Cis-Nerolidol and trans-Nerolidol/Nerolidol 2 to generic Nerolidol unless total Nerolidol is required.",
+      "p_cymene": "Use explicit P-Isopropyltoluene (P-Cymene) / P. Isopropyltoluene rows, not generic Cymene.",
+      "total_terpenes": "Compute from the final METRC-exported analyte values after isomer rollups and unit selection.",
+      "other_terpenes": "Leave blank/0 unless unconfigured terpenes are tested and a specific Other Terpenes policy is approved."
+    },
+    "issues_requiring_confirmation": [
+      {
+        "issue": "No separate trans-Ocimene row in METRC template",
+        "impact": "Worksheet can keep cis/trans integration, but METRC export should use one Ocimene field.",
+        "recommended_action": "Export Ocimene as cis-Ocimene + trans-Ocimene for the selected unit profile."
+      },
+      {
+        "issue": "No separate Trans-Nerolidol row in METRC template",
+        "impact": "Worksheet can keep cis/trans integration, but METRC uses Cis-Nerolidol plus generic Nerolidol.",
+        "recommended_action": "Map cis-Nerolidol to Cis-Nerolidol and trans-Nerolidol/Nerolidol 2 to Nerolidol unless method owner requires total Nerolidol."
+      },
+      {
+        "issue": "p-Cymene has both generic Cymene and explicit P-Isopropyltoluene/P-Cymene rows",
+        "impact": "Using generic Cymene would make the result less specific than the method analyte.",
+        "recommended_action": "Use P-Isopropyltoluene (P-Cymene) or P. Isopropyltoluene. Ignore generic Cymene unless the method adds generic cymene."
+      },
+      {
+        "issue": "R&D Terpenes Alpha-Humulene unit is ppm",
+        "impact": "All other Alpha-Humulene terpene rows are % or mg/g. Automatic export may use the wrong unit for R&D.",
+        "recommended_action": "Confirm whether this is a template typo. If not, add a profile-specific ppm conversion."
+      },
+      {
+        "issue": "Full Panel Finished Products mixed terpene units",
+        "impact": "Individual terpene rows are %, but Total Terpenes is mg/g.",
+        "recommended_action": "Keep both % and mg/g in QBench and choose units by export profile. Confirm mixed-unit behavior before enabling automatic Full Panel Finished Products export."
+      },
+      {
+        "issue": "Sub-contract terpene tabs only include a limited analyte set",
+        "impact": "Guaiol, p-Cymene, Ocimene, Terpinolene, Geraniol, Isopulegol, and others may be absent depending on tab.",
+        "recommended_action": "Do not force absent analytes into sub-contract sheets. Use only present rows or a separate agreed Other Terpenes rule."
+      },
+      {
+        "issue": "Explicit p-Cymene row is absent from Full Panel Flower",
+        "impact": "The Full Panel Flower sheet has generic Cymene but not P-Isopropyltoluene (P-Cymene).",
+        "recommended_action": "Do not map p-Cymene to generic Cymene without compliance approval. Use an additional terpene tab or approve a profile-specific fallback."
+      },
+      {
+        "issue": "Guaiol row is absent from Full Panel Concentrates",
+        "impact": "The Additional-Terpenes (%) tab includes Guaiol for raw/concentrate, but the Full Panel Concentrates tribal tab does not.",
+        "recommended_action": "Use the Additional-Terpenes (%) profile for Guaiol or approve an Other Terpenes/profile-specific fallback."
+      }
+    ],
+    "template_unit_summary_by_sheet": {
+      "Additional-Terpenes (%)": {
+        "%": 26
+      },
+      "Additional-Terpenes (mg_g)": {
+        "mg/g": 26
+      },
+      "Full Panel (Conc.) Tribal Only": {
+        "%": 25
+      },
+      "Full Panel (FinPrd) Tribal Only": {
+        "%": 25,
+        "mg/g": 1
+      },
+      "Full Panel (Flower) Tribal Only": {
+        "%": 25
+      },
+      "R&D Terpenes": {
+        "%": 25,
+        "ppm": 1
+      },
+      "Sub-Contract - Terpenes (ConEx)": {
+        "%": 13
+      },
+      "Sub-Contact - Terpenes(Infused)": {
+        "mg/g": 13
+      },
+      "Sub-Contract - Terpenes (RawPM)": {
+        "%": 13
+      }
+    },
+    "reportable_mapping_count": 23,
+    "profile_coverage": {
+      "coverage_file": "metrc_terpene_profile_coverage.csv",
+      "summary_file": "metrc_terpene_profile_coverage_summary.md",
+      "status_counts": {
+        "present": 151,
+        "present_rollup_component": 12,
+        "present_generic_nerolidol_assumed_trans": 9,
+        "missing": 34,
+        "missing_explicit_p_cymene_generic_cymene_present": 1
+      },
+      "missing_by_profile": {
+        "full_panel_concentrates_tribal_only": [
+          "(-)-Guaiol"
+        ],
+        "full_panel_flower_tribal_only": [
+          "p-Cymene"
+        ],
+        "subcontract_concentrate_extract": [
+          "Camphene",
+          "Delta-3-carene",
+          "cis-Ocimene",
+          "p-Cymene",
+          "trans-Ocimene",
+          "γ-Terpinene",
+          "Terpinolene",
+          "(-)-Isopulegol",
+          "Geraniol",
+          "cis-Nerolidol",
+          "(-)-Guaiol"
+        ],
+        "subcontract_infused": [
+          "Camphene",
+          "Delta-3-carene",
+          "cis-Ocimene",
+          "p-Cymene",
+          "trans-Ocimene",
+          "γ-Terpinene",
+          "Terpinolene",
+          "(-)-Isopulegol",
+          "Geraniol",
+          "cis-Nerolidol",
+          "(-)-Guaiol"
+        ],
+        "subcontract_raw_pm": [
+          "Camphene",
+          "Delta-3-carene",
+          "cis-Ocimene",
+          "p-Cymene",
+          "trans-Ocimene",
+          "γ-Terpinene",
+          "Terpinolene",
+          "(-)-Isopulegol",
+          "Geraniol",
+          "cis-Nerolidol",
+          "(-)-Guaiol"
+        ]
+      }
+    }
+  }
+}
