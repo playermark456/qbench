@@ -4,12 +4,19 @@
 
 `qbench_runtime_contract_status = insufficient_for_prompt_4_6`
 
+`qbench_sandbox_probe_status = sufficient_to_begin_controlled_prompt_4_6_probe`
+
 Official QBench documentation and read-only AIT tenant inspection now prove the
 base Code File Parser wrapper, selected-file access, logging/progress, completion
-calls, current imports, and Batch service availability. The remaining targeted
-Spreadsheet Worksheet destination, range, numeric, Batch-context, and
-partial-write questions still block a native Terpenes wrapper. Prompt 4.6 and
-Prompt 5 have not started.
+calls, current imports, Batch service availability, and the distinct replacement
+versus patch semantics of `updateWorksheet` and `patchWorksheet`.
+
+Enough is known for a future explicitly authorized Prompt 4.6 effort to build a
+no-write runtime probe and perform disposable scalar/range patch tests. The
+Spreadsheet Worksheet destination, range, numeric, Batch-context, atomicity,
+rollback, and debugging questions still block a completed native Terpenes
+writer. No production action is authorized. Prompt 4.6 and Prompt 5 have not
+started.
 
 ## Version separation
 
@@ -54,6 +61,29 @@ The local reviewed Publish adapter emits:
 - No direct Test Worksheet, Publish worksheet, QC Review, COA, METRC, or
   automation execution.
 
+## Worksheet API disposition
+
+| API | Official QBJS v2.7.0 behavior | Project disposition |
+|---|---|---|
+| `QBBatchService.updateWorksheet` | Uses `worksheetData` and completely replaces Batch worksheet data. | Documented evidence only; unsuitable for the proposed Terpenes writer because it could replace unrelated worksheet data, formulas, tabs, or metadata. |
+| `QBBatchService.patchWorksheet` | Uses `batchId` and `data`; updates only payload fields and does not remove omitted data. | Preferred candidate for controlled Prompt 4.6 Sandbox investigation. Named ranges, arrays, noncontiguous ranges, numeric typing, atomicity, rollback, and debugging behavior remain unproven. |
+
+## Resolved Batch-context decision
+
+- The raw LabSolutions file will not include a QBench Batch ID.
+- The user uploads the file while working inside the intended named QBench
+  Batch.
+- The parser must obtain the current Batch's internal numeric ID from supported
+  runtime or attachment context.
+- The parser must not infer the Batch from customer or sample data.
+- The parser must not hardcode a Batch ID.
+- The parser must not require the instrument export to contain a QBench Batch
+  ID.
+
+Sandbox discovery question: when a parser is triggered by a Batch attachment,
+what supported runtime property or attachment context exposes the current
+Batch's internal numeric ID?
+
 ## Runtime blockers
 
 The first two targeted live questions are resolved: the current AIT templates
@@ -61,20 +91,21 @@ use `file_parser.js` 1.1.0 with the documented `run`/`QB`/`QBBatchService` base
 contract, and parser 46 imports `qbjs.js` 2.7.0. Only these targeted blockers
 remain:
 
-1. Does `QBBatchService.updateWorksheet` support Spreadsheet Worksheet named
+1. Does `QBBatchService.patchWorksheet` support Spreadsheet Worksheet named
    cells and named ranges?
-2. Can `worksheetData` values contain a one-dimensional or two-dimensional
-   array for a named spreadsheet range?
-3. Can one update request safely write the two noncontiguous blocks
-   `Instrument Import!A:AE` and `Instrument Import!AH:BE` while leaving AF/AG
-   untouched?
-4. When triggered by a Batch attachment, how is the triggering Batch ID exposed
-   to the Code parser?
-5. Are JavaScript Number values written as actual numeric Spreadsheet Worksheet
+2. Can `patchWorksheet` `data` values contain a one-dimensional or
+   two-dimensional array for a spreadsheet named range?
+3. Can one patch operation or two sequential patch operations safely update
+   `Instrument Import!A:AE` and `Instrument Import!AH:BE` while preserving
+   AF/AG and all omitted worksheet content?
+4. Are JavaScript Number values patched as numeric Spreadsheet Worksheet
    cells recognized by `ISNUMBER` and `COUNT`?
-6. Is `updateWorksheet` transactional, staged, or capable of partial field
-   updates after an error?
-7. Is there a dry-run, preview, or disposable Sandbox testing method?
+5. Are `patchWorksheet` calls transactional, atomic per request, or capable of
+   partial field updates?
+6. What failure or rollback behavior applies when the second of two patch
+   operations fails?
+7. Is there a supported dry-run, preview, or disposable Sandbox debugging
+   workflow?
 
 Until those are proven, `dist/terpenes_qbench_file_parser_candidate_v1.js` must
 not be created.
@@ -97,8 +128,8 @@ Detailed citations and limits are in `qbench_parser_api_evidence.md`.
 | 7 | Successful completion | proven | Official documentation and both current templates use `QB.success()`. | The success completion call is established. |
 | 8 | Failed completion | proven | Official documentation and both current templates use `QB.error()`. | The failure completion call is established; transactionality is separate. |
 | 9 | Batch service | proven | Official documentation, QBJS v2.7.0, and parser 46 identify `QBBatchService`. | The Batch service class is available in the current tenant. |
-| 10 | `updateWorksheet` parameter object | proven | The official tutorial and QBJS v2.7.0 document `batchId`, `worksheetData`, success, and error; v2.7.0 also documents optional `urlParams`. | The basic Batch worksheet method signature is documented. |
-| 11 | Simple `worksheetData` value form | proven | The official tutorial maps worksheet field names to `{ value: supplied_value }`. | Simple field writes are documented; Spreadsheet named ranges and array payloads are not. |
+| 10 | `updateWorksheet` replacement semantics | proven | QBJS v2.7.0 documents `batchId` and `worksheetData` plus optional `urlParams`, success, and error callbacks; it states that `worksheetData` completely replaces Batch worksheet data. | The method is documented evidence only and is unsuitable for the proposed Terpenes writer because omitted worksheet content may be replaced. |
+| 11 | `patchWorksheet` omission semantics | proven | QBJS v2.7.0 documents `batchId` and `data` plus optional `urlParams`, success, and error callbacks; it states that only payload fields are updated and omitted data is not removed. | This is the preferred candidate API for controlled Sandbox investigation; named ranges, arrays, noncontiguous ranges, and atomicity are not proven. |
 | 12 | Attachment trigger | proven | Official documentation describes attachment triggers; parser 46 is configured for Batch attachments ending in `.csv`. | Attachment-triggered execution is established. |
 | 13 | API-triggered attachment parsing | proven | The Introduction states that attachment-triggered parsing also works through API attachment upload. | API upload can initiate a configured parser trigger. |
 | 14 | Official tutorial library versions | proven | The tutorial imports `file_parser.js` 1.0.0 and `qbjs.js` 1.0.0. | These are tutorial versions only and are not tenant-version claims. |

@@ -12,16 +12,31 @@ store configuration, production records, or Prompt 5.
 
 `qbench_runtime_contract_status = insufficient_for_prompt_4_6`
 
+`qbench_sandbox_probe_status = sufficient_to_begin_controlled_prompt_4_6_probe`
+
 `qbench_native_status = blocked_missing_targeted_qbench_runtime_contract`
 
 The pure JavaScript parser core and adapters are complete and locally tested.
 The QBench Code File Parser wrapper is intentionally retained as
 `src/qbench_file_parser_entry.template.js`. Official documentation and current
 AIT tenant inspection now prove the base `run`/`QB`/`QBBatchService` model and
-current `file_parser.js` 1.1.0 / `qbjs.js` 2.7.0 imports. Spreadsheet named-range
-payloads, safe noncontiguous writes, triggering Batch context, numeric cell
-semantics, transaction/partial-write behavior, and a safe test method remain
-unproven. Prompt 4.6 and Prompt 5 have not started.
+current `file_parser.js` 1.1.0 / `qbjs.js` 2.7.0 imports. Official QBJS v2.7.0
+documentation makes `updateWorksheet` unsuitable for the proposed writer
+because it completely replaces Batch worksheet data. `patchWorksheet` is the
+preferred candidate for controlled Sandbox investigation because it updates
+only included fields and preserves omitted data. Spreadsheet named-range and
+array payloads, safe noncontiguous patching, current Batch context, numeric cell
+semantics, atomicity/rollback, and supported debugging remain unproven.
+
+The raw LabSolutions file will not contain a QBench Batch ID. A future parser
+must obtain the current named Batch's internal ID from supported runtime or
+attachment context; it must not infer the Batch from customer/sample data,
+hardcode an ID, or require the instrument export to contain one.
+
+Enough is documented for a future approved Prompt 4.6 effort to build a
+no-write runtime probe and disposable scalar/range patch tests. This does not
+authorize building or activating the final Terpenes writer or any production
+action. Prompt 4.6 and Prompt 5 have not started.
 
 ## Contents
 

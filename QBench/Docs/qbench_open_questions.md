@@ -10,12 +10,26 @@
 
 ## Prompt 4.6 targeted QBench support request
 
-The first two runtime questions were resolved by current-tenant read-only
-inspection. The remaining questions are maintained in the sanitized support
-request:
+Current-tenant read-only inspection resolved the base runtime and library
+version questions. Official QBJS v2.7.0 documentation also establishes that
+`updateWorksheet` completely replaces Batch worksheet data, so it is unsuitable
+for the proposed Terpenes writer. `patchWorksheet`, which updates only included
+fields and preserves omitted data, is the preferred candidate for a controlled
+Sandbox investigation. Named ranges, array payloads, noncontiguous writes,
+numeric cells, atomicity, rollback, and debugging behavior remain unproven.
+
+The raw LabSolutions file will not contain a QBench Batch ID. The future parser
+must obtain the current named Batch's internal numeric ID from supported runtime
+or attachment context and must not infer or hardcode it.
+
+Remaining questions are maintained in the sanitized fallback support request:
 
 `QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/docs/qbench_prompt_4_6_support_request.md`
 
 Current status:
 
-`qbench_runtime_contract_status = insufficient_for_prompt_4_6`
+- `qbench_runtime_contract_status = insufficient_for_prompt_4_6`
+- `qbench_sandbox_probe_status = sufficient_to_begin_controlled_prompt_4_6_probe`
+
+Prompt 4.6 and Prompt 5 have not started. No QBench action is authorized by
+these readiness labels.
