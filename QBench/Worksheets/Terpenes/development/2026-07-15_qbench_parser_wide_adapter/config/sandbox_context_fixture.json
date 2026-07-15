@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "fixture_only": true,
+  "fixture_note": "Sandbox smoke-test context only. These values are not approved production defaults.",
+  "qbench_test_id": "TR-0001",
+  "qbench_sample_id": "SAMPLE-0001",
+  "product_matrix": "Flower",
+  "sample_type": "Unknown",
+  "sample_mass_g": 1,
+  "final_volume_ml": 10,
+  "qbench_df": "",
+  "df_application_mode": "already_applied_by_labsolutions",
+  "labsolutions_conc_unit": "ug/mL",
+  "unit_confirmed": true,
+  "preparation_values_confirmed": true,
+  "source_batch_id": "BATCH-TR-SANDBOX-001",
+  "manual_integration": "No",
+  "integration_reason": "",
+  "integration_review_status": "Reviewed",
+  "imported_at": "2026-07-15T00:00:00Z",
+  "run_order": 1
+}

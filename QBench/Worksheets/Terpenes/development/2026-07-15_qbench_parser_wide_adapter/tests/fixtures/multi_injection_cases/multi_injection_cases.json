@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "fixture_strategy": "Generated in tests from the controlled redacted fixture plus different controlled contexts.",
+  "covered_cases": [
+    "duplicate source-row hash rejected",
+    "duplicate source file hash recorded",
+    "two injections for one QBench Test ID remain separate",
+    "multiple reviewed candidates for one Test ID require explicit selection",
+    "no automatic winner is selected"
+  ]
+}

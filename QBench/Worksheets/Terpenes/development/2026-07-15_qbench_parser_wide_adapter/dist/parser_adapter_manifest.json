@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "package": "2026-07-15_qbench_parser_wide_adapter",
+  "prompt": "Prompt 4.5",
+  "qbench_native_status": "blocked_missing_qbench_runtime_contract",
+  "runtime_contract_evidence_status": "missing_exact_qbench_runtime_contract",
+  "source_fixture": {
+    "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/tests/fixtures/Output_redacted_fixture.txt",
+    "sha256": "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b"
+  },
+  "prompt2_config_hashes": [
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_config_parser_foundation/config/terpenes_analytes.json",
+      "raw_sha256": "89fede84a359767685f33d51d029c9cf5df90b153db7efda78579f6416176343",
+      "canonical_lf_sha256": "8ed40f2e8312061f84b658f71666e75c955f9fbff7bcf96511f4f3c00bbeb295"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_config_parser_foundation/config/terpenes_qc.json",
+      "raw_sha256": "df583b6621336e9b99e218e3bc5080f91ccff82ec660dc66f15b4644147ebd1a",
+      "canonical_lf_sha256": "47ded812fc23cd06bed055b758d596999845decca75b10eff733bc96cd140047"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_config_parser_foundation/config/metrc_profiles.json",
+      "raw_sha256": "50dda0845cefe5e90c347f74f65170a83181ecdea5f47f9e7ebb22f9554ffb5c",
+      "canonical_lf_sha256": "e5f14131cbe5df1de1e901cf07a775330b3e7ad3dccd9b83563d0835fbb541b9"
+    }
+  ],
+  "prompt3_candidate_hashes": {
+    "candidate": {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_test_worksheet_candidate/dist/terpenes__test_ws_id_42__candidate_v1__2026-07-14.json",
+      "raw_sha256": "90686b980882b221008f281be33984dc5232e2f3d2632300db3f4a27b529640a",
+      "canonical_lf_sha256": "90686b980882b221008f281be33984dc5232e2f3d2632300db3f4a27b529640a"
+    },
+    "manifest": {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_test_worksheet_candidate/dist/candidate_manifest.json",
+      "raw_sha256": "b7e5189f21f25fd52e53acc50cb082f1cf0184b84e0bef538033c938c6c55071",
+      "canonical_lf_sha256": "b7e5189f21f25fd52e53acc50cb082f1cf0184b84e0bef538033c938c6c55071"
+    }
+  },
+  "prompt4_candidate_hashes": {
+    "candidate": {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_batch_worksheet_candidate/dist/terpenes__batch_ws_id_43__candidate_v1__2026-07-14.json",
+      "raw_sha256": "f779d0175a7aec09eb5f57a778fde91cccf07bb7078a9573132547ee158da151",
+      "canonical_lf_sha256": "e5c80b1213396cab4932e267fd786c6986c933d4b404f11daa5c5aba0629758e"
+    },
+    "manifest": {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_batch_worksheet_candidate/dist/candidate_manifest.json",
+      "raw_sha256": "381a6b5e1f98b9d0f661aa895e1e38310c14322eb780ae2e37ba965ca4d7b8f1",
+      "canonical_lf_sha256": "551ee51d7dc8e98c40ed304d76c1bc79b70e37534ea7492801e082d2424e5fd2"
+    },
+    "layout_config": {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_batch_worksheet_candidate/config/terpenes_batch_layout.json",
+      "raw_sha256": "7f1270063f689f9cac94ee22e4f69b0ea7953a6f5dc86e1f6b4c00bb4bed7ef0",
+      "canonical_lf_sha256": "fe137404165a044907a7fe31a7cc386f53f402bb643dd94bf2fbffe958571410"
+    },
+    "import_contract_config": {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_batch_worksheet_candidate/config/terpenes_batch_import_contract.json",
+      "raw_sha256": "7382a15789f8771b2888c908e69811898e5213454ec380d8efc68c0b7488b72a",
+      "canonical_lf_sha256": "b389c3d96447d6c3dfb5c879d3a624ce5f05bb39b16951305f609febe77f9a23"
+    }
+  },
+  "distribution_hashes": {
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/terpenes_labsolutions_parser_core_v1.js": "43f8ea802b7256cfde41cc302019cd09e0d6750b12f159a6a72d0553d0244442",
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/terpenes_wide_import_adapter_v1.js": "589eb16b90f2fdce1589e0eded91dbec802985841fe452eb3b8939ef7a52eb10",
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/terpenes_reviewed_publish_adapter_v1.js": "464dd06ff60dff34e7caac9e795cf6e1f5aadefc80d141b95c638cfff915b719"
+  },
+  "generated_output_hashes": {
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/Output_redacted_wide_import_row.json": "87294a4c0b9d23b728150eda0b055ed6f88e5605aec3a5d9a14f7743be6948a5",
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/Output_redacted_wide_import_row.tsv": "5847923e80738b2041417427f06b0757b61c8420ef50707e1262854faf2f35fc",
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/Output_redacted_block_A_AE.tsv": "12b2e4e631917b37e3a77ab8d56b680f8c7deafbd2e7b49f658833848a6d9761",
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/Output_redacted_block_AH_BE.tsv": "66a3a486a8653efa5c42dddab2eb209cc399bac52ea448f69e2891712ef226f7"
+  },
+  "parser_core_output_hash": "2f406f71ad4062a32cca24fcc496d81f9bf1f9e06e3bf2ac84f395dc49604616",
+  "adapter_output_hash": "87294a4c0b9d23b728150eda0b055ed6f88e5605aec3a5d9a14f7743be6948a5",
+  "qbench_wrapper_output_hash": null,
+  "expected_counts": {
+    "compound_result_rows": 24,
+    "peak_table_rows": 34,
+    "reportable_compound_rows": 23,
+    "dimethylacetamide_rows": 1
+  },
+  "analyte_order": [
+    "apinene",
+    "camphene",
+    "bmyrcene",
+    "bpinene",
+    "delta3carene",
+    "aterpinene",
+    "cisocimene",
+    "dlimonene",
+    "pcymene",
+    "transocimene",
+    "eucalyptol",
+    "gterpinene",
+    "terpinolene",
+    "linalool",
+    "isopulegol",
+    "geraniol",
+    "bcaryophyllene",
+    "ahumulene",
+    "cisnerolidol",
+    "transnerolidol",
+    "guaiol",
+    "caryophylleneoxide",
+    "bisabolol"
+  ],
+  "instrument_import_ranges": {
+    "full": "Instrument Import!A:BE",
+    "writable_blocks": [
+      "Instrument Import!A:AE",
+      "Instrument Import!AH:BE"
+    ],
+    "formula_owned_excluded_columns": [
+      "AF",
+      "AG"
+    ]
+  },
+  "publish_patch_range": "Publish!D:AX",
+  "security_limits": {
+    "schema_version": 1,
+    "maximum_raw_file_size_bytes": 2000000,
+    "maximum_section_count": 32,
+    "maximum_table_row_count": 2000,
+    "maximum_line_length": 20000,
+    "maximum_field_count": 128,
+    "maximum_files_per_run": 200,
+    "maximum_error_message_length": 500,
+    "allowed_file_extensions": [
+      ".txt"
+    ],
+    "forbidden_runtime_capabilities": [
+      "eval",
+      "Function constructor",
+      "dynamic code execution",
+      "arbitrary fetch",
+      "XMLHttpRequest",
+      "cookies",
+      "localStorage",
+      "credential access"
+    ]
+  },
+  "test_counts": {
+    "javascript_node_tests": 60,
+    "python_unittest_tests": 8,
+    "prompt2_unittest_tests": 27,
+    "prompt3_unittest_tests": 50,
+    "prompt4_unittest_tests": "39 run; stock suite has 2 CRLF raw-hash failures in this checkout; canonical validator passed"
+  },
+  "deterministic_generation": {
+    "stable_inputs_only": true,
+    "current_timestamps_omitted": true,
+    "local_paths_omitted_from_generated_metadata": true,
+    "source_file_hash": "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b",
+    "source_row_hash": "1a9145b25f46e8b0ba7e57b473500b9aeddbaa5d6d0d7c80889b153c59dd8899"
+  },
+  "unresolved_scientific_decisions": [
+    "Final LabSolutions Conc. unit confirmation remains required.",
+    "Approved sample mass and final volume source remains a Sandbox/release decision.",
+    "Dilution application mode remains controlled by explicit context.",
+    "Below-LOQ, MU, COA, METRC, totals, and final sample result behavior remain out of Prompt 4.5 scope."
+  ],
+  "sandbox_status": {
+    "test_worksheet_candidate_sandbox_record_present": true,
+    "batch_worksheet_candidate_sandbox_record_present": true,
+    "end_to_end_parser_sandbox_validation_required": true
+  },
+  "scope_controls": {
+    "repository_only": true,
+    "qbench_modified": false,
+    "prompt2_modified": false,
+    "prompt3_modified": false,
+    "prompt4_modified": false,
+    "test_worksheet_written": false,
+    "publish_written": false,
+    "qc_review_written": false,
+    "pass_fail_artifact_introduced": false,
+    "prompt5_started": false
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "package": "2026-07-15_qbench_parser_wide_adapter",
+  "prompt": "Prompt 4.5",
+  "parser_core_version": "terpenes-labsolutions-core-v1",
+  "wide_adapter_version": "terpenes-wide-import-adapter-v1",
+  "reviewed_publish_adapter_version": "terpenes-reviewed-publish-adapter-v1",
+  "qbench_native_status": "blocked_missing_qbench_runtime_contract",
+  "quantitation_source": {
+    "source_table": "Compound Results(Ch1)",
+    "source_field": "Conc.",
+    "blocked_potency_fields": [
+      "Conc. %",
+      "Norm Conc."
+    ]
+  },
+  "expected_counts": {
+    "compound_result_rows": 24,
+    "peak_table_rows": 34,
+    "reportable_compound_rows": 23,
+    "dimethylacetamide_rows": 1
+  },
+  "instrument_import_contract": {
+    "full_range": "Instrument Import!A:BE",
+    "writable_blocks": [
+      "Instrument Import!A:AE",
+      "Instrument Import!AH:BE"
+    ],
+    "formula_owned_excluded_columns": [
+      "AF",
+      "AG"
+    ],
+    "analyte_range": "AH:BD",
+    "source_row_hash_column": "BE"
+  },
+  "publish_preview_contract": {
+    "range": "Publish!D:AX",
+    "formula_owned_excluded_columns": [
+      "AY",
+      "AZ",
+      "BA",
+      "BB",
+      "BC",
+      "BD"
+    ],
+    "requires_explicit_reviewed_selection": true,
+    "does_not_write_test_worksheet": true
+  },
+  "scope_controls": {
+    "repository_only": true,
+    "qbench_modified": false,
+    "test_worksheet_modified": false,
+    "batch_worksheet_modified": false,
+    "coa_source_modified": false,
+    "automation_modified": false,
+    "metrc_or_kvstore_modified": false,
+    "prompt5_started": false
+  }
+}
