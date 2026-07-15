@@ -1,0 +1,86 @@
+{
+  "artifacts": [
+    {
+      "path": "QBench/Rescans/2026-07-15/File_Parsers/README.md",
+      "sha256": "097d402934af197afdc2796df21b1b8e01fea6beed3099fab1729cebb0ddea69"
+    },
+    {
+      "path": "QBench/Rescans/2026-07-15/File_Parsers/file_parser_inventory.csv",
+      "sha256": "4b93daac6812c821915bcb1b98d08bf6335b87cf14dc8254516908c04a7e73f7"
+    },
+    {
+      "path": "QBench/Rescans/2026-07-15/File_Parsers/file_parser_inventory.json",
+      "sha256": "3ae5405e977af7cbfd455c0e6e34983b34074079475278c72d5e669ce226e12d"
+    },
+    {
+      "path": "QBench/Rescans/2026-07-15/File_Parsers/file_parser_results_history_evidence.md",
+      "sha256": "0d4995d7ebe6905e8543919fb9fea428c33ee5f900e20b289c56bedb37150552"
+    },
+    {
+      "path": "QBench/Rescans/2026-07-15/File_Parsers/file_parser_results_history_inventory.csv",
+      "sha256": "ceb1d436b02f80d23d9dd9591e69835235eb5c6e8654b17dc7fa857c78b6a260"
+    },
+    {
+      "path": "QBench/Rescans/2026-07-15/File_Parsers/qbench_file_parser_runtime_contract_matrix.csv",
+      "sha256": "5294262088a7f6af8c67e4ba7c0e464b8c75e9e6f94d625afb09021d8c7a4fd7"
+    },
+    {
+      "path": "QBench/Rescans/2026-07-15/File_Parsers/qbench_file_parser_scan_limitations.md",
+      "sha256": "f844bc7a9bcf8766bb0ff235417d6ca0bb3e4b78bea6d44a24a1b2f0826915e3"
+    }
+  ],
+  "code_parser_count": 2,
+  "current_tenant_library_versions": {
+    "file_parser.js": "1.1.0",
+    "qbjs.js": "2.7.0"
+  },
+  "failed_job_count": 0,
+  "history_status_counts": {
+    "IN_PROGRESS": 1,
+    "SUCCESS": 38
+  },
+  "manifest_path": "QBench/Rescans/2026-07-15/File_Parsers/qbench_file_parser_scan_manifest.json",
+  "manifest_self_hash": {
+    "included": false,
+    "reason": "A manifest cannot contain its own stable SHA-256 without self-reference; validate and report the finalized manifest hash externally."
+  },
+  "official_documentation_sources": [
+    {
+      "name": "Introduction to File Parsers",
+      "url": "https://junctionconcepts.zendesk.com/hc/en-us/articles/4409122738701-Introduction-to-File-Parsers"
+    },
+    {
+      "name": "QBJS v2.7.0 QBBatchService",
+      "url": "https://qbjs.docs.qbench.net/v2.7.0/QBBatchService.html"
+    },
+    {
+      "name": "No-Code File Parsers",
+      "url": "https://junctionconcepts.zendesk.com/hc/en-us/articles/9147024166797-No-Code-File-Parsers"
+    },
+    {
+      "name": "Batch Spreadsheet Worksheets & Automations",
+      "url": "https://junctionconcepts.zendesk.com/hc/en-us/articles/9705726121229-Batch-Spreadsheet-Worksheets-Automations"
+    },
+    {
+      "name": "API - Attachments",
+      "url": "https://junctionconcepts.zendesk.com/hc/en-us/articles/360044230052-API-Attachments"
+    }
+  ],
+  "parser_count": 7,
+  "prompt_4_6_started": false,
+  "prompt_5_started": false,
+  "qbench_runtime_contract_status": "insufficient_for_prompt_4_6",
+  "qbench_sandbox_probe_status": "sufficient_to_begin_controlled_prompt_4_6_probe",
+  "result_history_job_count": 39,
+  "scan_date": "2026-07-15",
+  "scope_controls": [
+    "Read-only QBench Sandbox evidence only.",
+    "No QBench object was changed.",
+    "No parser was created, edited, saved, activated, previewed, or run.",
+    "No underlying parser-result file or destination worksheet was opened or downloaded.",
+    "No customer information, production identifiers, credentials, or session details are included.",
+    "The raw LabSolutions file is not required to contain a QBench Batch ID.",
+    "No production action is authorized."
+  ],
+  "support_request_path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/docs/qbench_prompt_4_6_support_request.md"
+}
