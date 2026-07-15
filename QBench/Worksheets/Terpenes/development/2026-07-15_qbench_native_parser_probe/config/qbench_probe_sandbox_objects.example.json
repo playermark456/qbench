@@ -1,0 +1,25 @@
+{
+  "batch_context": {
+    "documented_or_observed": "not_tested",
+    "safe_property_path": null,
+    "status": "not_tested",
+    "value_type": null
+  },
+  "disposable_batch": {
+    "internal_id_committed": false,
+    "name": "<AUTHORIZED EXACT DISPOSABLE SANDBOX BATCH NAME>",
+    "sandbox_only": true
+  },
+  "file_parser": {
+    "active": false,
+    "internal_id_committed": false,
+    "name": "ZZZ_SANDBOX_ONLY_Terpenes_Runtime_NoWrite_Probe",
+    "status": "not_created"
+  },
+  "schema_version": 1,
+  "worksheet": {
+    "imported": false,
+    "name": "Prompt 4.6 Runtime Probe",
+    "production": false
+  }
+}
