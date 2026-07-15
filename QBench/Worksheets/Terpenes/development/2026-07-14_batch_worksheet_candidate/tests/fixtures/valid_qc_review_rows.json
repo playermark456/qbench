@@ -1,0 +1,209 @@
+{
+  "schema_version": 2,
+  "criteria": {
+    "calibration_r_min": 0.99,
+    "calibration_r_max": 1.0,
+    "initial_ccv_recovery_min": 85,
+    "initial_ccv_recovery_max": 115,
+    "initial_ccv_rsd_max": 10,
+    "blank_fraction_loq_max": 0.2,
+    "loq_recovery_min": 70,
+    "loq_recovery_max": 130,
+    "matrix_spike_recovery_min": 85,
+    "matrix_spike_recovery_max": 115,
+    "duplicate_difference_max": 20,
+    "retention_time_drift_max": 0.5,
+    "resolution_min": 1.0
+  },
+  "boundary_cases": [
+    {
+      "name": "calibration_minimum",
+      "kind": "range",
+      "value": 0.99,
+      "minimum": 0.99,
+      "maximum": 1.0,
+      "expected": "within_criteria"
+    },
+    {
+      "name": "calibration_upper_boundary",
+      "kind": "range",
+      "value": 1.0,
+      "minimum": 0.99,
+      "maximum": 1.0,
+      "expected": "within_criteria"
+    },
+    {
+      "name": "calibration_below_minimum",
+      "kind": "range",
+      "value": 0.989,
+      "minimum": 0.99,
+      "maximum": 1.0,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "calibration_above_physical_maximum",
+      "kind": "range",
+      "value": 1.001,
+      "minimum": 0.99,
+      "maximum": 1.0,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "ccv_lower_boundary",
+      "kind": "range",
+      "value": 85,
+      "minimum": 85,
+      "maximum": 115,
+      "expected": "within_criteria"
+    },
+    {
+      "name": "ccv_upper_boundary",
+      "kind": "range",
+      "value": 115,
+      "minimum": 85,
+      "maximum": 115,
+      "expected": "within_criteria"
+    },
+    {
+      "name": "ccv_below_boundary",
+      "kind": "range",
+      "value": 84.999,
+      "minimum": 85,
+      "maximum": 115,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "ccv_above_boundary",
+      "kind": "range",
+      "value": 115.001,
+      "minimum": 85,
+      "maximum": 115,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "rsd_at_maximum",
+      "kind": "nonnegative_maximum",
+      "value": 10,
+      "limit": 10,
+      "expected": "within_criteria"
+    },
+    {
+      "name": "rsd_zero",
+      "kind": "nonnegative_maximum",
+      "value": 0,
+      "limit": 10,
+      "expected": "within_criteria"
+    },
+    {
+      "name": "rsd_negative",
+      "kind": "nonnegative_maximum",
+      "value": -0.001,
+      "limit": 10,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "rsd_above_maximum",
+      "kind": "nonnegative_maximum",
+      "value": 10.001,
+      "limit": 10,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "blank_fraction_negative",
+      "kind": "nonnegative_maximum",
+      "value": -0.001,
+      "limit": 0.2,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "duplicate_difference_negative",
+      "kind": "nonnegative_maximum",
+      "value": -0.001,
+      "limit": 20,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "rt_drift_negative",
+      "kind": "nonnegative_maximum",
+      "value": -0.001,
+      "limit": 0.5,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "unresolved_bracketing",
+      "kind": "bracketing",
+      "criterion_status": "decision_required",
+      "value": 100,
+      "window": "",
+      "expected": "decision_required"
+    },
+    {
+      "name": "confirmed_bracketing_at_lower_boundary",
+      "kind": "bracketing",
+      "criterion_status": "confirmed",
+      "value": 90,
+      "window": 10,
+      "expected": "within_criteria"
+    },
+    {
+      "name": "confirmed_bracketing_immediately_outside",
+      "kind": "bracketing",
+      "criterion_status": "confirmed",
+      "value": 89.999,
+      "window": 10,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "confirmed_bracketing_blank_window",
+      "kind": "bracketing",
+      "criterion_status": "confirmed",
+      "value": 100,
+      "window": "",
+      "expected": "decision_required"
+    }
+  ],
+  "overall_cases": [
+    {
+      "name": "all_within",
+      "evaluations": [
+        "within_criteria",
+        "within_criteria",
+        "within_criteria"
+      ],
+      "expected": "within_criteria"
+    },
+    {
+      "name": "outside_takes_priority",
+      "evaluations": [
+        "within_criteria",
+        "outside_criteria",
+        "decision_required"
+      ],
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "decision_required_blocks",
+      "evaluations": [
+        "within_criteria",
+        "decision_required"
+      ],
+      "expected": "decision_required"
+    },
+    {
+      "name": "not_evaluated_remains_incomplete",
+      "evaluations": [
+        "within_criteria",
+        "not_evaluated"
+      ],
+      "expected": "not_evaluated"
+    },
+    {
+      "name": "review_required_blocks",
+      "evaluations": [
+        "within_criteria",
+        "review_required"
+      ],
+      "expected": "review_required"
+    }
+  ]
+}

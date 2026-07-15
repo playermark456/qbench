@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "invalid_import_count_cases": [
+    {
+      "field": "compound_result_row_count",
+      "expected_message": "Compound Results row count required",
+      "values": [
+        "24",
+        "23",
+        "34",
+        "N/A",
+        "abc",
+        ""
+      ]
+    },
+    {
+      "field": "peak_table_row_count",
+      "expected_message": "Peak Table row count required",
+      "values": [
+        "24",
+        "23",
+        "34",
+        "N/A",
+        "abc",
+        ""
+      ]
+    },
+    {
+      "field": "reportable_compound_row_count",
+      "expected_message": "Reportable analyte count required",
+      "values": [
+        "24",
+        "23",
+        "34",
+        "N/A",
+        "abc",
+        ""
+      ]
+    },
+    {
+      "field": "dimethylacetamide_conc",
+      "expected_message": "Dimethylacetamide audit value required",
+      "values": [
+        "24",
+        "23",
+        "34",
+        "N/A",
+        "abc",
+        ""
+      ]
+    },
+    {
+      "field": "unknown_peak_count",
+      "expected_message": "Unknown peak count required",
+      "values": [
+        "24",
+        "23",
+        "34",
+        "N/A",
+        "abc",
+        ""
+      ]
+    }
+  ],
+  "invalid_publish_cases": [
+    {
+      "name": "blank_test_id",
+      "updates": {
+        "qbench_test_id": ""
+      },
+      "expected_message": ""
+    },
+    {
+      "name": "duplicate_test_id",
+      "duplicate_ids": [
+        "TR-0001"
+      ],
+      "expected_message": "Duplicate Test ID"
+    },
+    {
+      "name": "one_missing_analyte",
+      "updates": {
+        "analyte_values": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          ""
+        ]
+      },
+      "expected_message": "Analytical values incomplete"
+    },
+    {
+      "name": "text_analyte",
+      "updates": {
+        "analyte_values": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          "abc"
+        ]
+      },
+      "expected_message": "Analytical values incomplete"
+    },
+    {
+      "name": "numeric_looking_text",
+      "updates": {
+        "analyte_values": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          "10"
+        ]
+      },
+      "expected_message": "Analytical values incomplete"
+    },
+    {
+      "name": "negative_analyte_remains_numeric",
+      "updates": {
+        "analyte_values": [
+          -1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected_message": "Ready for transfer"
+    },
+    {
+      "name": "nonnumeric_sample_mass",
+      "updates": {
+        "sample_mass_g": "1 g"
+      },
+      "expected_message": "Sample mass required"
+    },
+    {
+      "name": "zero_sample_mass",
+      "updates": {
+        "sample_mass_g": 0
+      },
+      "expected_message": "Sample mass required"
+    },
+    {
+      "name": "negative_sample_mass",
+      "updates": {
+        "sample_mass_g": -1
+      },
+      "expected_message": "Sample mass required"
+    },
+    {
+      "name": "nonnumeric_final_volume",
+      "updates": {
+        "final_volume_ml": "10 mL"
+      },
+      "expected_message": "Final volume required"
+    },
+    {
+      "name": "zero_final_volume",
+      "updates": {
+        "final_volume_ml": 0
+      },
+      "expected_message": "Final volume required"
+    },
+    {
+      "name": "unresolved_df_mode",
+      "updates": {
+        "df_application_mode": "capture_only_until_method_validated"
+      },
+      "expected_message": "Dilution mode required"
+    },
+    {
+      "name": "nonnumeric_df_when_apply",
+      "updates": {
+        "df_application_mode": "apply_in_qbench",
+        "df": "two"
+      },
+      "expected_message": "Dilution factor required"
+    },
+    {
+      "name": "blank_df_when_apply",
+      "updates": {
+        "df_application_mode": "apply_in_qbench",
+        "df": ""
+      },
+      "expected_message": "Dilution factor required"
+    },
+    {
+      "name": "blank_df_when_already_applied",
+      "updates": {
+        "df_application_mode": "already_applied_by_labsolutions",
+        "df": ""
+      },
+      "expected_message": "Ready for transfer"
+    },
+    {
+      "name": "wrong_unit",
+      "updates": {
+        "labsolutions_conc_unit": "mg/mL"
+      },
+      "expected_message": "Unit confirmation required"
+    },
+    {
+      "name": "unit_not_confirmed",
+      "updates": {
+        "unit_confirmed": false
+      },
+      "expected_message": "Unit confirmation required"
+    },
+    {
+      "name": "preparation_not_confirmed",
+      "updates": {
+        "preparation_values_confirmed": false
+      },
+      "expected_message": "Preparation confirmation required"
+    },
+    {
+      "name": "missing_source_hash",
+      "updates": {
+        "source_file_hash": ""
+      },
+      "expected_message": "Source traceability incomplete"
+    },
+    {
+      "name": "missing_parser_version",
+      "updates": {
+        "parser_version": ""
+      },
+      "expected_message": "Source traceability incomplete"
+    },
+    {
+      "name": "missing_source_row_hash",
+      "updates": {
+        "source_row_hash": ""
+      },
+      "expected_message": "Source traceability incomplete"
+    },
+    {
+      "name": "nonnumeric_dimethylacetamide",
+      "updates": {
+        "dimethylacetamide_conc": "text"
+      },
+      "expected_message": "Dimethylacetamide audit value required"
+    },
+    {
+      "name": "compound_results_incomplete",
+      "updates": {
+        "compound_results_complete": false
+      },
+      "expected_message": "Compound Results validation required"
+    },
+    {
+      "name": "integration_not_reviewed",
+      "updates": {
+        "integration_review_status": "Not Reviewed"
+      },
+      "expected_message": "Integration review required"
+    },
+    {
+      "name": "manual_integration_without_reason",
+      "import_updates": {
+        "manual_integration": "Yes",
+        "integration_reason": ""
+      },
+      "expected_import_message": "Integration reason required"
+    },
+    {
+      "name": "import_status_review_required",
+      "updates": {
+        "import_validation_status": "Review Required"
+      },
+      "expected_message": "Import validation required"
+    },
+    {
+      "name": "import_status_rejected",
+      "updates": {
+        "import_validation_status": "Rejected"
+      },
+      "expected_message": "Import validation required"
+    },
+    {
+      "name": "batch_disposition_hold",
+      "updates": {
+        "batch_qc_disposition": "Hold"
+      },
+      "expected_message": "Batch QC on hold"
+    },
+    {
+      "name": "batch_disposition_rejected",
+      "updates": {
+        "batch_qc_disposition": "Rejected"
+      },
+      "expected_message": "Batch QC on hold"
+    }
+  ],
+  "batch_gate_cases": [
+    {
+      "name": "run_setup_incomplete_first",
+      "updates": {
+        "run_setup_is_complete": false
+      },
+      "expected_ready": false,
+      "expected_message": "Run setup incomplete"
+    },
+    {
+      "name": "qc_configuration_complete_false",
+      "updates": {
+        "qc_review_is_complete": false
+      },
+      "expected_ready": false,
+      "expected_message": "QC review incomplete"
+    },
+    {
+      "name": "bracketing_decision_required",
+      "qc_configuration": {
+        "bracketing_ccv_criterion_status": "decision_required",
+        "bracketing_ccv_accuracy_percent_window": "",
+        "lcs_requirement_status": "decision_required",
+        "lcs_requirement_controlled_source": "",
+        "lcs_requirement_reviewed_by": ""
+      },
+      "expected_configuration_complete": false
+    },
+    {
+      "name": "batch_publish_ready_false",
+      "updates": {
+        "all_publish_rows_are_valid": false
+      },
+      "expected_ready": false,
+      "expected_message": "Publish rows incomplete"
+    }
+  ]
+}

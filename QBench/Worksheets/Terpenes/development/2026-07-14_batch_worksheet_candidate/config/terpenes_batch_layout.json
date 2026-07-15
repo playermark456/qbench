@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "created_for": "2026-07-14_batch_worksheet_candidate",
+  "source_active_export": "QBench/Rescans/2026-07-04/Worksheets/Terpenes/terpenes__id_43__worksheet_export_spreadsheet__active__2026-07-04.json",
+  "source_sheet1_is_renamed_to": "Publish",
+  "stable_new_worksheet_ids": {
+    "Run Setup": "cf71364f-84b3-4558-a14c-241b452bd7bb",
+    "Instrument Import": "f11a5887-6f11-4a45-ae16-9a0f9f64dd16",
+    "QC Review": "adc806c8-3a02-4c6f-b8c6-6738df2fe02d"
+  },
+  "tabs": [
+    {
+      "name": "Run Setup",
+      "purpose": "Controlled analytical-run metadata and conservative setup gate",
+      "layout": "three-column field/value/notes block",
+      "field_requirements": {
+        "required": [
+          "batch_qbench_id",
+          "analytical_batch_id",
+          "batch_assay_name",
+          "run_instrument_name",
+          "run_detector_id",
+          "run_detector_name",
+          "run_method_file",
+          "run_sequence_file",
+          "run_analyst",
+          "run_start",
+          "run_end",
+          "parser_version",
+          "raw_ascii_attachment_reference",
+          "raw_batch_manifest_hash",
+          "run_setup_reviewed_by",
+          "run_setup_reviewed_at"
+        ],
+        "optional": [
+          "run_column",
+          "run_carrier_gas",
+          "calibration_id",
+          "standard_lot",
+          "extraction_solvent_lot",
+          "source_package_version"
+        ]
+      },
+      "named_cells": [
+        "batch_qbench_id",
+        "analytical_batch_id",
+        "batch_assay_name",
+        "run_instrument_name",
+        "run_detector_id",
+        "run_detector_name",
+        "run_method_file",
+        "run_sequence_file",
+        "run_column",
+        "run_carrier_gas",
+        "run_analyst",
+        "run_start",
+        "run_end",
+        "calibration_id",
+        "standard_lot",
+        "extraction_solvent_lot",
+        "parser_version",
+        "source_package_version",
+        "raw_ascii_attachment_reference",
+        "raw_batch_manifest_hash",
+        "run_setup_reviewed_by",
+        "run_setup_reviewed_at",
+        "run_setup_complete",
+        "run_setup_message"
+      ]
+    },
+    {
+      "name": "Instrument Import",
+      "purpose": "Normalized one-row-per-injection LabSolutions import surface",
+      "data_row_capacity": 200,
+      "table_range": "Instrument Import!A1:BE201",
+      "analyte_range": "Instrument Import!AH2:BD201",
+      "dimethylacetamide_range": "Instrument Import!AA2:AA201",
+      "validation_status_range": "Instrument Import!AF2:AF201",
+      "integration_review_status_range": "Instrument Import!AE2:AE201"
+    },
+    {
+      "name": "QC Review",
+      "purpose": "Batch-level QC configuration, analyte QC review, and release gate",
+      "control_range": "QC Review!A1:C19",
+      "qc_table_range": "QC Review!A22:X45",
+      "analyte_row_count": 23,
+      "default_release_state": {
+        "bracketing_ccv_criterion_status": "decision_required",
+        "bracketing_ccv_accuracy_percent_window": "",
+        "lcs_requirement_status": "decision_required",
+        "qc_configuration_complete": false,
+        "batch_qc_disposition": "Hold",
+        "batch_publish_ready": false
+      }
+    },
+    {
+      "name": "Publish",
+      "purpose": "Controlled one-row-per-QBench-Test source surface for later Prompt 5 transfer",
+      "source_sheet_id_preserved": true,
+      "data_row_capacity_source": "active Worksheet ID 43 test-row placeholders",
+      "table_range": "Publish!A1:BD87",
+      "test_id_range": "Publish!A2:A87",
+      "sample_id_range": "Publish!B2:B87",
+      "product_matrix_range": "Publish!C2:C87",
+      "analyte_range": "Publish!D2:Z87",
+      "publish_ready_range": "Publish!BC2:BC87",
+      "publish_message_range": "Publish!BD2:BD87"
+    }
+  ],
+  "publish_columns": {
+    "A": "QBench Test ID",
+    "B": "QBench Sample ID",
+    "C": "Product Matrix",
+    "D:Z": "23 Prompt 2 instrument concentration channels",
+    "AA": "Sample Mass",
+    "AB": "Final Volume",
+    "AC": "DF",
+    "AD": "DF Application Mode",
+    "AE": "LabSolutions Conc. Unit",
+    "AF": "Unit Confirmed",
+    "AG": "Preparation Values Confirmed",
+    "AH:AT": "Source traceability",
+    "AU:AX": "Audit and validation status",
+    "AY": "Batch QC Disposition",
+    "AZ:BD": "Structural validation and transfer gate"
+  },
+  "controlled_publish_column_contract_decision": {
+    "title": "Controlled Publish column-contract decision",
+    "decision": "Publish column A is QBench Test ID and Publish column B is QBench Sample ID.",
+    "reason": "QBench Test ID is the Prompt 5 join key and the active source Test ID placeholder is preserved in column A.",
+    "authoritative_interface": "Named ranges and source-contract mapping."
+  },
+  "prohibited_candidate_surfaces": [
+    "Report tab",
+    "METRC tab",
+    "key/value-store tab",
+    "final sample mg/g calculation",
+    "final sample percent calculation",
+    "qualifier calculation",
+    "total terpene calculation",
+    "COA result calculation",
+    "LOQ conclusion",
+    "MU value"
+  ]
+}
