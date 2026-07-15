@@ -1,0 +1,629 @@
+{
+  "schema_version": 1,
+  "adapter_version": "terpenes-wide-import-adapter-v1",
+  "worksheet": "Instrument Import",
+  "logical_range": "A:BE",
+  "formula_owned_excluded_columns": [
+    "AF",
+    "AG"
+  ],
+  "context": {
+    "qbench_test_id": "TR-0001",
+    "qbench_sample_id": "SAMPLE-0001",
+    "product_matrix": "Flower",
+    "sample_type": "Unknown",
+    "sample_mass_g": 1,
+    "final_volume_ml": 10,
+    "qbench_df": "",
+    "df_application_mode": "already_applied_by_labsolutions",
+    "labsolutions_conc_unit": "ug/mL",
+    "unit_confirmed": true,
+    "preparation_values_confirmed": true,
+    "source_batch_id": "BATCH-TR-SANDBOX-001",
+    "manual_integration": "No",
+    "integration_reason": "",
+    "integration_review_status": "Reviewed",
+    "imported_at": "2026-07-15T00:00:00Z",
+    "run_order": 1,
+    "schema_version": 1,
+    "fixture_only": true,
+    "fixture_note": "Sandbox smoke-test context only. These values are not approved production defaults."
+  },
+  "columns": [
+    {
+      "column": "A",
+      "header": "import_row_id",
+      "key": "import_row_id",
+      "value": "inj-cef4d2a0c117ae16",
+      "js_type": "string"
+    },
+    {
+      "column": "B",
+      "header": "run_order",
+      "key": "run_order",
+      "value": 1,
+      "js_type": "number"
+    },
+    {
+      "column": "C",
+      "header": "vial",
+      "key": "vial",
+      "value": 32,
+      "js_type": "number"
+    },
+    {
+      "column": "D",
+      "header": "sample_type",
+      "key": "sample_type",
+      "value": "Unknown",
+      "js_type": "string"
+    },
+    {
+      "column": "E",
+      "header": "qbench_test_id",
+      "key": "qbench_test_id",
+      "value": "TR-0001",
+      "js_type": "string"
+    },
+    {
+      "column": "F",
+      "header": "qbench_sample_id",
+      "key": "qbench_sample_id",
+      "value": "SAMPLE-0001",
+      "js_type": "string"
+    },
+    {
+      "column": "G",
+      "header": "product_matrix",
+      "key": "product_matrix",
+      "value": "Flower",
+      "js_type": "string"
+    },
+    {
+      "column": "H",
+      "header": "sample_mass_g",
+      "key": "sample_mass_g",
+      "value": 1,
+      "js_type": "number"
+    },
+    {
+      "column": "I",
+      "header": "final_volume_ml",
+      "key": "final_volume_ml",
+      "value": 10,
+      "js_type": "number"
+    },
+    {
+      "column": "J",
+      "header": "qbench_df",
+      "key": "qbench_df",
+      "value": "",
+      "js_type": "blank"
+    },
+    {
+      "column": "K",
+      "header": "df_application_mode",
+      "key": "df_application_mode",
+      "value": "already_applied_by_labsolutions",
+      "js_type": "string"
+    },
+    {
+      "column": "L",
+      "header": "labsolutions_sample_amount",
+      "key": "labsolutions_sample_amount",
+      "value": 1,
+      "js_type": "number"
+    },
+    {
+      "column": "M",
+      "header": "labsolutions_dilution_factor",
+      "key": "labsolutions_dilution_factor",
+      "value": 1,
+      "js_type": "number"
+    },
+    {
+      "column": "N",
+      "header": "source_instrument_file",
+      "key": "source_instrument_file",
+      "value": "Output_redacted_fixture.txt",
+      "js_type": "string"
+    },
+    {
+      "column": "O",
+      "header": "source_file_hash",
+      "key": "source_file_hash",
+      "value": "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b",
+      "js_type": "string"
+    },
+    {
+      "column": "P",
+      "header": "source_data_file",
+      "key": "source_data_file",
+      "value": "C:\\LabSolutions\\Data\\Terpenes\\REDACTED\\TERPENE_FIXTURE_001.gcd",
+      "js_type": "string"
+    },
+    {
+      "column": "Q",
+      "header": "source_method_file",
+      "key": "source_method_file",
+      "value": "C:\\LabSolutions\\Methods\\REDACTED_TERpenes_METHOD.gcm",
+      "js_type": "string"
+    },
+    {
+      "column": "R",
+      "header": "source_sequence_file",
+      "key": "source_sequence_file",
+      "value": "C:\\LabSolutions\\Batches\\REDACTED_TERPENE_BATCH.gcb",
+      "js_type": "string"
+    },
+    {
+      "column": "S",
+      "header": "acquired_at",
+      "key": "acquired_at",
+      "value": "6/24/2026 11:09:50 AM",
+      "js_type": "string"
+    },
+    {
+      "column": "T",
+      "header": "instrument_name",
+      "key": "instrument_name",
+      "value": "REDACTED_GCFID_INSTRUMENT",
+      "js_type": "string"
+    },
+    {
+      "column": "U",
+      "header": "detector_id",
+      "key": "detector_id",
+      "value": "DET#2",
+      "js_type": "string"
+    },
+    {
+      "column": "V",
+      "header": "detector_name",
+      "key": "detector_name",
+      "value": "FID1",
+      "js_type": "string"
+    },
+    {
+      "column": "W",
+      "header": "parser_version",
+      "key": "parser_version",
+      "value": "terpenes-wide-import-adapter-v1",
+      "js_type": "string"
+    },
+    {
+      "column": "X",
+      "header": "compound_result_row_count",
+      "key": "compound_result_row_count",
+      "value": 24,
+      "js_type": "number"
+    },
+    {
+      "column": "Y",
+      "header": "peak_table_row_count",
+      "key": "peak_table_row_count",
+      "value": 34,
+      "js_type": "number"
+    },
+    {
+      "column": "Z",
+      "header": "reportable_compound_row_count",
+      "key": "reportable_compound_row_count",
+      "value": 23,
+      "js_type": "number"
+    },
+    {
+      "column": "AA",
+      "header": "dimethylacetamide_conc",
+      "key": "dimethylacetamide_conc",
+      "value": 100,
+      "js_type": "number"
+    },
+    {
+      "column": "AB",
+      "header": "unknown_peak_count",
+      "key": "unknown_peak_count",
+      "value": 0,
+      "js_type": "number"
+    },
+    {
+      "column": "AC",
+      "header": "manual_integration",
+      "key": "manual_integration",
+      "value": "No",
+      "js_type": "string"
+    },
+    {
+      "column": "AD",
+      "header": "integration_reason",
+      "key": "integration_reason",
+      "value": "",
+      "js_type": "blank"
+    },
+    {
+      "column": "AE",
+      "header": "integration_review_status",
+      "key": "integration_review_status",
+      "value": "Reviewed",
+      "js_type": "string"
+    },
+    {
+      "column": "AF",
+      "header": "worksheet-owned Import Validation Status formula",
+      "key": "import_validation_status_formula",
+      "value": "",
+      "js_type": "blank"
+    },
+    {
+      "column": "AG",
+      "header": "worksheet-owned Import Message formula",
+      "key": "import_message_formula",
+      "value": "",
+      "js_type": "blank"
+    },
+    {
+      "column": "AH",
+      "header": "apinene",
+      "key": "apinene",
+      "value": 24.608,
+      "js_type": "number"
+    },
+    {
+      "column": "AI",
+      "header": "camphene",
+      "key": "camphene",
+      "value": 24.217,
+      "js_type": "number"
+    },
+    {
+      "column": "AJ",
+      "header": "bmyrcene",
+      "key": "bmyrcene",
+      "value": 25.418,
+      "js_type": "number"
+    },
+    {
+      "column": "AK",
+      "header": "bpinene",
+      "key": "bpinene",
+      "value": 24.345,
+      "js_type": "number"
+    },
+    {
+      "column": "AL",
+      "header": "delta3carene",
+      "key": "delta3carene",
+      "value": 23.937,
+      "js_type": "number"
+    },
+    {
+      "column": "AM",
+      "header": "aterpinene",
+      "key": "aterpinene",
+      "value": 18.121,
+      "js_type": "number"
+    },
+    {
+      "column": "AN",
+      "header": "cisocimene",
+      "key": "cisocimene",
+      "value": 23.686,
+      "js_type": "number"
+    },
+    {
+      "column": "AO",
+      "header": "dlimonene",
+      "key": "dlimonene",
+      "value": 23.913,
+      "js_type": "number"
+    },
+    {
+      "column": "AP",
+      "header": "pcymene",
+      "key": "pcymene",
+      "value": 23.284,
+      "js_type": "number"
+    },
+    {
+      "column": "AQ",
+      "header": "transocimene",
+      "key": "transocimene",
+      "value": 23.805,
+      "js_type": "number"
+    },
+    {
+      "column": "AR",
+      "header": "eucalyptol",
+      "key": "eucalyptol",
+      "value": 23.569,
+      "js_type": "number"
+    },
+    {
+      "column": "AS",
+      "header": "gterpinene",
+      "key": "gterpinene",
+      "value": 23.267,
+      "js_type": "number"
+    },
+    {
+      "column": "AT",
+      "header": "terpinolene",
+      "key": "terpinolene",
+      "value": 20.898,
+      "js_type": "number"
+    },
+    {
+      "column": "AU",
+      "header": "linalool",
+      "key": "linalool",
+      "value": 22.678,
+      "js_type": "number"
+    },
+    {
+      "column": "AV",
+      "header": "isopulegol",
+      "key": "isopulegol",
+      "value": 21.578,
+      "js_type": "number"
+    },
+    {
+      "column": "AW",
+      "header": "geraniol",
+      "key": "geraniol",
+      "value": 21.302,
+      "js_type": "number"
+    },
+    {
+      "column": "AX",
+      "header": "bcaryophyllene",
+      "key": "bcaryophyllene",
+      "value": 26.624,
+      "js_type": "number"
+    },
+    {
+      "column": "AY",
+      "header": "ahumulene",
+      "key": "ahumulene",
+      "value": 22.495,
+      "js_type": "number"
+    },
+    {
+      "column": "AZ",
+      "header": "cisnerolidol",
+      "key": "cisnerolidol",
+      "value": 31.756,
+      "js_type": "number"
+    },
+    {
+      "column": "BA",
+      "header": "transnerolidol",
+      "key": "transnerolidol",
+      "value": 25.004,
+      "js_type": "number"
+    },
+    {
+      "column": "BB",
+      "header": "guaiol",
+      "key": "guaiol",
+      "value": 31.204,
+      "js_type": "number"
+    },
+    {
+      "column": "BC",
+      "header": "caryophylleneoxide",
+      "key": "caryophylleneoxide",
+      "value": 14.307,
+      "js_type": "number"
+    },
+    {
+      "column": "BD",
+      "header": "bisabolol",
+      "key": "bisabolol",
+      "value": 286.135,
+      "js_type": "number"
+    },
+    {
+      "column": "BE",
+      "header": "source_row_hash",
+      "key": "source_row_hash",
+      "value": "cef4d2a0c117ae168d6431c3e918668870546c6d165e36fc5f971515249f4546",
+      "js_type": "string"
+    }
+  ],
+  "values": {
+    "import_row_id": "inj-cef4d2a0c117ae16",
+    "run_order": 1,
+    "vial": 32,
+    "sample_type": "Unknown",
+    "qbench_test_id": "TR-0001",
+    "qbench_sample_id": "SAMPLE-0001",
+    "product_matrix": "Flower",
+    "sample_mass_g": 1,
+    "final_volume_ml": 10,
+    "qbench_df": "",
+    "df_application_mode": "already_applied_by_labsolutions",
+    "labsolutions_sample_amount": 1,
+    "labsolutions_dilution_factor": 1,
+    "source_instrument_file": "Output_redacted_fixture.txt",
+    "source_file_hash": "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b",
+    "source_data_file": "C:\\LabSolutions\\Data\\Terpenes\\REDACTED\\TERPENE_FIXTURE_001.gcd",
+    "source_method_file": "C:\\LabSolutions\\Methods\\REDACTED_TERpenes_METHOD.gcm",
+    "source_sequence_file": "C:\\LabSolutions\\Batches\\REDACTED_TERPENE_BATCH.gcb",
+    "acquired_at": "6/24/2026 11:09:50 AM",
+    "instrument_name": "REDACTED_GCFID_INSTRUMENT",
+    "detector_id": "DET#2",
+    "detector_name": "FID1",
+    "parser_version": "terpenes-wide-import-adapter-v1",
+    "compound_result_row_count": 24,
+    "peak_table_row_count": 34,
+    "reportable_compound_row_count": 23,
+    "dimethylacetamide_conc": 100,
+    "unknown_peak_count": 0,
+    "manual_integration": "No",
+    "integration_reason": "",
+    "integration_review_status": "Reviewed",
+    "import_validation_status_formula": "",
+    "import_message_formula": "",
+    "source_row_hash": "cef4d2a0c117ae168d6431c3e918668870546c6d165e36fc5f971515249f4546",
+    "assignment_hash": "e69d1ece0eeff4a474ee91908b96cdb507f5864b01defec8b338d6c99baf327f",
+    "apinene": 24.608,
+    "camphene": 24.217,
+    "bmyrcene": 25.418,
+    "bpinene": 24.345,
+    "delta3carene": 23.937,
+    "aterpinene": 18.121,
+    "cisocimene": 23.686,
+    "dlimonene": 23.913,
+    "pcymene": 23.284,
+    "transocimene": 23.805,
+    "eucalyptol": 23.569,
+    "gterpinene": 23.267,
+    "terpinolene": 20.898,
+    "linalool": 22.678,
+    "isopulegol": 21.578,
+    "geraniol": 21.302,
+    "bcaryophyllene": 26.624,
+    "ahumulene": 22.495,
+    "cisnerolidol": 31.756,
+    "transnerolidol": 25.004,
+    "guaiol": 31.204,
+    "caryophylleneoxide": 14.307,
+    "bisabolol": 286.135
+  },
+  "write_plan": {
+    "target_worksheet": "Instrument Import",
+    "qbench_neutral": true,
+    "excludes_formula_owned_columns": [
+      "AF",
+      "AG"
+    ],
+    "blocks": [
+      {
+        "label": "Instrument Import A:AE",
+        "range": "Instrument Import!A2:AE2",
+        "columns": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z",
+          "AA",
+          "AB",
+          "AC",
+          "AD",
+          "AE"
+        ],
+        "values": [
+          "inj-cef4d2a0c117ae16",
+          1,
+          32,
+          "Unknown",
+          "TR-0001",
+          "SAMPLE-0001",
+          "Flower",
+          1,
+          10,
+          "",
+          "already_applied_by_labsolutions",
+          1,
+          1,
+          "Output_redacted_fixture.txt",
+          "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b",
+          "C:\\LabSolutions\\Data\\Terpenes\\REDACTED\\TERPENE_FIXTURE_001.gcd",
+          "C:\\LabSolutions\\Methods\\REDACTED_TERpenes_METHOD.gcm",
+          "C:\\LabSolutions\\Batches\\REDACTED_TERPENE_BATCH.gcb",
+          "6/24/2026 11:09:50 AM",
+          "REDACTED_GCFID_INSTRUMENT",
+          "DET#2",
+          "FID1",
+          "terpenes-wide-import-adapter-v1",
+          24,
+          34,
+          23,
+          100,
+          0,
+          "No",
+          "",
+          "Reviewed"
+        ]
+      },
+      {
+        "label": "Instrument Import AH:BE",
+        "range": "Instrument Import!AH2:BE2",
+        "columns": [
+          "AH",
+          "AI",
+          "AJ",
+          "AK",
+          "AL",
+          "AM",
+          "AN",
+          "AO",
+          "AP",
+          "AQ",
+          "AR",
+          "AS",
+          "AT",
+          "AU",
+          "AV",
+          "AW",
+          "AX",
+          "AY",
+          "AZ",
+          "BA",
+          "BB",
+          "BC",
+          "BD",
+          "BE"
+        ],
+        "values": [
+          24.608,
+          24.217,
+          25.418,
+          24.345,
+          23.937,
+          18.121,
+          23.686,
+          23.913,
+          23.284,
+          23.805,
+          23.569,
+          23.267,
+          20.898,
+          22.678,
+          21.578,
+          21.302,
+          26.624,
+          22.495,
+          31.756,
+          25.004,
+          31.204,
+          14.307,
+          286.135,
+          "cef4d2a0c117ae168d6431c3e918668870546c6d165e36fc5f971515249f4546"
+        ]
+      }
+    ]
+  }
+}
