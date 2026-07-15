@@ -155,7 +155,15 @@ def build_manifest(distribution_hashes: dict[str, str], generation_summary: dict
         },
         "reviewed_publish_contract": {
             "labsolutions_conc_unit_required_exact": "ug/mL",
+            "publish_confirmation_output_values": {
+                "AF_unit_confirmed": "TRUE",
+                "AG_preparation_values_confirmed": "TRUE",
+                "AV_compound_results_complete": "TRUE",
+            },
             "review_evidence_key": "source_row_hash",
+            "review_evidence_source_row_hash_required": True,
+            "review_evidence_must_match_reviewed_row": True,
+            "generic_hash_field_accepted": False,
             "required_review_evidence": {
                 "explicitly_selected": True,
                 "import_validation_status": "Valid",
@@ -170,6 +178,9 @@ def build_manifest(distribution_hashes: dict[str, str], generation_summary: dict
             "allowed_file_extensions": [
                 ".txt",
             ],
+            "explicit_source_filename_required": True,
+            "invented_source_filename_allowed": False,
+            "missing_filename_error_code": "SOURCE_FILENAME_REQUIRED",
             "duplicate_source_row_hash_rejected": True,
             "duplicate_source_file_hash_reported": True,
             "publish_selection_status_for_multiple_reviewed_injections": "decision_required",
@@ -177,8 +188,8 @@ def build_manifest(distribution_hashes: dict[str, str], generation_summary: dict
         },
         "security_limits": limits,
         "test_counts": {
-            "javascript_node_tests": 122,
-            "python_unittest_tests": 11,
+            "javascript_node_tests": 143,
+            "python_unittest_tests": 13,
             "prompt2_unittest_tests": 27,
             "prompt3_unittest_tests": 50,
             "prompt4_unittest_tests": 39,

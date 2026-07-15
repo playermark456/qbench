@@ -9,6 +9,8 @@ A Publish preview is generated only when:
 
 - QBench Test ID is nonblank.
 - Row-specific review evidence keyed by `source_row_hash` is present.
+- The review evidence has nonblank `source_row_hash` that exactly matches the
+  reviewed row's `source_row_hash`.
 - The review evidence has `explicitly_selected = true`.
 - The review evidence has `import_validation_status = Valid`.
 - The review evidence has `import_message = Import row valid`.
@@ -19,6 +21,7 @@ A Publish preview is generated only when:
 - LabSolutions concentration unit is exactly `ug/mL`.
 - Unit confirmed is TRUE.
 - Preparation values confirmed is TRUE.
+- If a Compound Results Complete value is provided, it must be TRUE.
 - Dimethylacetamide is numeric.
 - Compound Results validation is complete.
 - Integration Review Status is `Reviewed`.
@@ -55,6 +58,19 @@ A Publish preview is generated only when:
 | AV | Compound Results Complete |
 | AW | Integration Review Status |
 | AX | Import Validation Status |
+
+For Publish output, AF, AG, and AV are always normalized to exact worksheet text:
+
+| Column | Output |
+|---|---|
+| AF | `"TRUE"` |
+| AG | `"TRUE"` |
+| AV | `"TRUE"` |
+
+Boolean `true` and exact text `"TRUE"` are accepted as validated inputs. Boolean
+false, `"FALSE"`, blank, arbitrary text, missing review-evidence
+`source_row_hash`, a generic `hash` field without `source_row_hash`, or evidence
+copied from another injection all block the preview.
 
 The adapter never writes AY or later formula/control columns and never writes
 directly to the Test Worksheet.

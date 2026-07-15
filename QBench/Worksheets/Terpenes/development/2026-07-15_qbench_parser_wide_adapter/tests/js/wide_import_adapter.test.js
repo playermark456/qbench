@@ -44,6 +44,16 @@ function buildFromRaw(ctx = context, rawBytes = raw, filename = "Output_redacted
   });
 }
 
+function assertWideImportRowsError(fileInput, pattern, code) {
+  assert.throws(() => wide.buildWideImportRows([
+    fileInput,
+  ], config, [context], { max_files_per_run: 1 }), (error) => {
+    assert.match(error.message, pattern);
+    if (code) assert.equal(error.code, code);
+    return true;
+  });
+}
+
 test("wide row has exactly 57 A:BE logical columns", () => {
   assert.equal(build().columns.length, 57);
   assert.equal(build().columns[0].column, "A");
@@ -204,6 +214,22 @@ test("buildWideImportRows accepts one controlled txt file", () => {
   assert.equal(result.duplicate_file_hashes.length, 0);
 });
 
+test("buildWideImportRows accepts uppercase .TXT filename", () => {
+  const result = wide.buildWideImportRows([
+    { filename: "one.TXT", rawBytes: raw },
+  ], config, [context], { max_files_per_run: 1 });
+  assert.equal(result.status, "ok");
+  assert.equal(result.rows[0].values.source_instrument_file, "one.TXT");
+});
+
+test("buildWideImportRows records explicit basename only", () => {
+  const result = wide.buildWideImportRows([
+    { filename: "C:\\LabSolutions\\Exports\\explicit_name.txt", rawBytes: raw },
+  ], config, [context], { max_files_per_run: 1 });
+  assert.equal(result.status, "ok");
+  assert.equal(result.rows[0].values.source_instrument_file, "explicit_name.txt");
+});
+
 test("buildWideImportRows accepts maximum file count", () => {
   const result = wide.buildWideImportRows([
     { filename: "one.txt", rawBytes: variantRaw("027") },
@@ -222,9 +248,16 @@ test("buildWideImportRows rejects maximum-plus-one file count", () => {
 });
 
 test("buildWideImportRows enforces .txt extension", () => {
-  assert.throws(() => wide.buildWideImportRows([
-    { filename: "one.csv", rawBytes: raw },
-  ], config, [context], { max_files_per_run: 1 }), /only \.txt/);
+  for (const filename of ["one", "one.csv", "one.json", "one.xlsx", "one.unsupported"]) {
+    assertWideImportRowsError({ filename, rawBytes: raw }, /only \.txt/, "UNSUPPORTED_SOURCE_EXTENSION");
+  }
+});
+
+test("buildWideImportRows requires explicit filename or name", () => {
+  assertWideImportRowsError({ rawBytes: raw }, /filename or name is required/, "SOURCE_FILENAME_REQUIRED");
+  assertWideImportRowsError({ filename: "", rawBytes: raw }, /filename or name is required/, "SOURCE_FILENAME_REQUIRED");
+  assertWideImportRowsError({ filename: "   ", rawBytes: raw }, /filename or name is required/, "SOURCE_FILENAME_REQUIRED");
+  assertWideImportRowsError({ path: "invented.txt", rawBytes: raw }, /filename or name is required/, "SOURCE_FILENAME_REQUIRED");
 });
 
 test("buildWideImportRows enforces per-file size limit", () => {

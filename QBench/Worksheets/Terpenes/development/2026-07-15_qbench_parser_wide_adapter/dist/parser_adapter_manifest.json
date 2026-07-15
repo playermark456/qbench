@@ -61,8 +61,8 @@
   },
   "distribution_hashes": {
     "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/terpenes_labsolutions_parser_core_v1.js": "f73106170a9062f52b393ae2e64efcdc08a290c4605185030fb89ee3aec20e8e",
-    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/terpenes_wide_import_adapter_v1.js": "93ba24ef311cfdaab5318dc4358591f722f4eaee10c86d886a3a4382e8c3b9d4",
-    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/terpenes_reviewed_publish_adapter_v1.js": "14d3b9133148e0e0deaef8b97d10d329515ee0715e042fbb03b80e5aac4628d6"
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/terpenes_wide_import_adapter_v1.js": "ad78e53e737831c13132f32c3c56ecd277989827637d6407f44566d47991ad42",
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/terpenes_reviewed_publish_adapter_v1.js": "a9b9a42a6b23191c2191b2dcde066f2f79e1e83be6c21684b751830a13244ae0"
   },
   "generated_output_hashes": {
     "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/Output_redacted_wide_import_row.json": "9e5645298c2f118952421762c07295a5fe44bd2bddd30952f80c08273f0e0a76",
@@ -131,7 +131,15 @@
   },
   "reviewed_publish_contract": {
     "labsolutions_conc_unit_required_exact": "ug/mL",
+    "publish_confirmation_output_values": {
+      "AF_unit_confirmed": "TRUE",
+      "AG_preparation_values_confirmed": "TRUE",
+      "AV_compound_results_complete": "TRUE"
+    },
     "review_evidence_key": "source_row_hash",
+    "review_evidence_source_row_hash_required": true,
+    "review_evidence_must_match_reviewed_row": true,
+    "generic_hash_field_accepted": false,
     "required_review_evidence": {
       "explicitly_selected": true,
       "import_validation_status": "Valid",
@@ -146,6 +154,9 @@
     "allowed_file_extensions": [
       ".txt"
     ],
+    "explicit_source_filename_required": true,
+    "invented_source_filename_allowed": false,
+    "missing_filename_error_code": "SOURCE_FILENAME_REQUIRED",
     "duplicate_source_row_hash_rejected": true,
     "duplicate_source_file_hash_reported": true,
     "publish_selection_status_for_multiple_reviewed_injections": "decision_required",
@@ -175,8 +186,8 @@
     ]
   },
   "test_counts": {
-    "javascript_node_tests": 122,
-    "python_unittest_tests": 11,
+    "javascript_node_tests": 143,
+    "python_unittest_tests": 13,
     "prompt2_unittest_tests": 27,
     "prompt3_unittest_tests": 50,
     "prompt4_unittest_tests": 39,

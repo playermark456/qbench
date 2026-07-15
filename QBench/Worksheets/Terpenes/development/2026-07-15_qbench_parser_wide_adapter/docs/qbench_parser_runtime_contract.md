@@ -18,6 +18,7 @@ The local parser core accepts:
 The local wide adapter emits:
 
 - One logical Instrument Import row per injection.
+- Explicit source filename or name is required; invented filenames are rejected.
 - 57 A:BE columns.
 - QBench-neutral write blocks for A:AE and AH:BE.
 - Explicit exclusion of AF and AG.
@@ -27,8 +28,11 @@ The local reviewed Publish adapter emits:
 
 - A D:AX preview patch only after row-specific review evidence keyed by
   `source_row_hash`.
+- Review evidence must contain nonblank `source_row_hash` and exactly match the
+  reviewed row.
 - Exact `labsolutions_conc_unit === "ug/mL"` validation; blank, case-changed,
   or alternate units are blocked.
+- Exact text `"TRUE"` output for Publish AF, AG, and AV.
 - Explicit QBench Test ID to Publish-row mapping.
 - Atomic multi-row preview behavior with no partial write plan.
 - No AY or later formula/control writes.

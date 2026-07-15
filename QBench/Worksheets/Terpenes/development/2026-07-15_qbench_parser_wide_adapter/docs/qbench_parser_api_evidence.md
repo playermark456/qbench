@@ -62,8 +62,19 @@ Baseline result summary:
 | Prompt 2 validation/parser/tests | Passed; 27 tests; fixture 24/34/23 |
 | Prompt 3 generator/validator/tests | Passed; generator hash matched; validator passed; 50 tests |
 | Prompt 4 generator/validator/tests | Passed during controlled baseline build; 39 tests; canonical LF hash matched the controlled Prompt 4 hash |
-| Prompt 4.5 JavaScript tests | Passed; 122 tests |
-| Prompt 4.5 Python tests | Passed; 11 tests |
+| Prompt 4.5 JavaScript tests | Passed; 143 tests |
+| Prompt 4.5 Python tests | Passed; 13 tests |
+
+Final Prompt 4.5 hardening controls:
+
+| Control | Status |
+|---|---|
+| Publish AF/AG/AV outputs | Exact text `"TRUE"` |
+| Boolean true output for AF/AG/AV | Not emitted |
+| Review evidence identity | `source_row_hash` required and must match reviewed row |
+| Generic `hash` review evidence | Rejected |
+| Missing source filename/name | Rejected with `SOURCE_FILENAME_REQUIRED` |
+| Invented source filename | Not allowed |
 
 Sandbox validation evidence status in the generated manifest:
 

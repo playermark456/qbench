@@ -118,6 +118,24 @@ function basenameOnly(filename) {
   return path.basename(String(filename).replace(/\\/g, "/"));
 }
 
+function adapterError(code, message, details = {}) {
+  const error = new Error(message);
+  error.code = code;
+  error.details = details;
+  return error;
+}
+
+function explicitSourceFilename(fileInput) {
+  if (!fileInput || typeof fileInput !== "object") {
+    throw adapterError("SOURCE_FILENAME_REQUIRED", "Source filename or name is required.");
+  }
+  const filename = fileInput.filename ?? fileInput.name;
+  if (filename === undefined || filename === null || String(filename).trim() === "") {
+    throw adapterError("SOURCE_FILENAME_REQUIRED", "Source filename or name is required.");
+  }
+  return String(filename);
+}
+
 function analyteValueMap(parsed) {
   const values = {};
   for (const row of parsed.reportable_analytes || []) {
@@ -340,7 +358,7 @@ function rawBytesFromInput(fileInput) {
 function contextForFile(contexts, fileInput, index) {
   if (Array.isArray(contexts)) return contexts[index] || {};
   if (contexts && typeof contexts === "object") {
-    const name = fileInput.filename || fileInput.name || fileInput.path || String(index);
+    const name = fileInput.filename || fileInput.name || String(index);
     return contexts[name] || contexts[index] || {};
   }
   return {};
@@ -357,9 +375,11 @@ function buildWideImportRows(fileInputs, config, contexts = {}, securityLimits =
   const rows = [];
   for (let index = 0; index < fileInputs.length; index += 1) {
     const fileInput = fileInputs[index] || {};
-    const filename = fileInput.filename || fileInput.name || fileInput.path || `input-${index}.txt`;
+    const filename = explicitSourceFilename(fileInput);
     if (path.extname(String(filename)).toLowerCase() !== ".txt") {
-      throw new Error(`Unsupported file extension for ${filename}; only .txt is allowed.`);
+      throw adapterError("UNSUPPORTED_SOURCE_EXTENSION", `Unsupported file extension for ${filename}; only .txt is allowed.`, {
+        filename,
+      });
     }
     const rawBytes = rawBytesFromInput(fileInput);
     if (rawBytes.length > limits.max_raw_file_size_bytes) {
@@ -405,6 +425,7 @@ module.exports = {
   buildWideImportRow,
   sourceRowHashPayload,
   assignmentHashPayload,
+  explicitSourceFilename,
   buildInstrumentImportWritePlan,
   rowToTsv,
   blockToTsv,

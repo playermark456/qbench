@@ -23,6 +23,10 @@
 - No automation was created or modified.
 - No Test Worksheet, Publish, QC Review, METRC, or key/value-store write is
   performed automatically.
+- Publish preview outputs AF, AG, and AV as exact text `"TRUE"`; this remains a
+  local preview contract until native QBench write semantics are proven.
+- Multi-file preview requires explicit source filenames and rejects invented
+  placeholders.
 - No paste-ready native QBench parser candidate is created while runtime
   contract evidence is missing.
 - Sandbox validation records are not claimed unless tracked in the repository;

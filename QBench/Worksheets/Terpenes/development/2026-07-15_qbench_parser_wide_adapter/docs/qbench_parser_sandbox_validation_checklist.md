@@ -27,6 +27,10 @@ inactive/draft parser candidate is created.
 21. Confirm multiple legitimate injections for one Test ID require explicit
     selection and do not auto-average or auto-select.
 22. Confirm reviewed-row Publish preview requires exact `ug/mL`,
-    row-specific review evidence, and QBench Test ID to Publish-row mapping.
-23. Confirm any invalid selected row blocks the entire multi-row preview.
-24. Confirm no production activation.
+    row-specific review evidence, matching `source_row_hash`, and QBench Test ID
+    to Publish-row mapping.
+23. Confirm Publish preview AF, AG, and AV output exact text `"TRUE"`, not
+    Boolean true.
+24. Confirm missing, blank, or unsupported source filenames are rejected.
+25. Confirm any invalid selected row blocks the entire multi-row preview.
+26. Confirm no production activation.

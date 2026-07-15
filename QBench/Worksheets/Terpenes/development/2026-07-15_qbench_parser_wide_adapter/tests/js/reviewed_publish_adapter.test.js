@@ -61,6 +61,10 @@ function patches(rows, mapping, options = {}) {
   });
 }
 
+function patchColumn(result, column) {
+  return result.columns.find((col) => col.column === column);
+}
+
 test("reviewed valid row produces D:AX patch with Test ID, row, range, and source hash", () => {
   const row = reviewedRow();
   const result = patch(row);
@@ -72,6 +76,37 @@ test("reviewed valid row produces D:AX patch with Test ID, row, range, and sourc
   assert.equal(result.writes[0].columns[0], "D");
   assert.equal(result.writes[0].columns.at(-1), "AX");
   assert.equal(result.writes[0].expected_qbench_test_id, context.qbench_test_id);
+});
+
+test("Boolean true input produces text TRUE in AF, AG, and AV", () => {
+  const row = reviewedRow({ unit_confirmed: true, preparation_values_confirmed: true });
+  row.values.compound_results_complete = true;
+  const result = patch(row, { review_evidence: evidenceFor(row) });
+  for (const column of ["AF", "AG", "AV"]) {
+    assert.equal(patchColumn(result, column).value, "TRUE");
+    assert.equal(patchColumn(result, column).js_type, "string");
+  }
+});
+
+test("text TRUE input produces text TRUE in AF, AG, and AV", () => {
+  const row = reviewedRow({ unit_confirmed: "TRUE", preparation_values_confirmed: "TRUE" });
+  row.values.compound_results_complete = "TRUE";
+  const result = patch(row, { review_evidence: evidenceFor(row) });
+  for (const column of ["AF", "AG", "AV"]) {
+    assert.equal(patchColumn(result, column).value, "TRUE");
+    assert.equal(patchColumn(result, column).js_type, "string");
+  }
+});
+
+test("generated Publish patch exactly matches Prompt 4 TRUE-string contract", () => {
+  const result = patch();
+  const columns = result.writes[0].columns;
+  const values = result.writes[0].values;
+  for (const column of ["AF", "AG", "AV"]) {
+    const value = values[columns.indexOf(column)];
+    assert.equal(value, "TRUE");
+    assert.equal(typeof value, "string");
+  }
 });
 
 test("AY and later formula/control columns are never written", () => {
@@ -115,6 +150,24 @@ test("only exact ug/mL plus unit confirmation proceeds", () => {
   assert.match(patch(row, { review_evidence: evidenceFor(row) }).errors.join(" "), /Unit confirmation/);
 });
 
+for (const badValue of [false, "FALSE", "", "arbitrary text"]) {
+  test(`Unit Confirmed ${String(badValue) || "<blank>"} blocks patch`, () => {
+    const row = reviewedRow({ unit_confirmed: badValue });
+    assert.match(patch(row, { review_evidence: evidenceFor(row) }).errors.join(" "), /Unit confirmation/);
+  });
+
+  test(`Preparation Values Confirmed ${String(badValue) || "<blank>"} blocks patch`, () => {
+    const row = reviewedRow({ preparation_values_confirmed: badValue });
+    assert.match(patch(row, { review_evidence: evidenceFor(row) }).errors.join(" "), /Preparation values confirmation/);
+  });
+
+  test(`Compound Results Complete ${String(badValue) || "<blank>"} blocks patch`, () => {
+    const row = reviewedRow();
+    row.values.compound_results_complete = badValue;
+    assert.match(patch(row, { review_evidence: evidenceFor(row) }).errors.join(" "), /Compound Results Complete/);
+  });
+}
+
 test("global import_validation_status cannot authorize a reviewed row", () => {
   const result = publish.buildReviewedPublishPatch(reviewedRow(), {
     explicitly_selected: true,
@@ -130,12 +183,36 @@ test("row-specific review evidence requires selected, Valid status, and exact va
   const row = reviewedRow();
   for (const evidence of [
     undefined,
+    { hash: row.values.source_row_hash, explicitly_selected: true, import_validation_status: "Valid", import_message: "Import row valid" },
+    evidenceFor(row, { source_row_hash: "" }),
     evidenceFor(row, { explicitly_selected: false }),
     evidenceFor(row, { import_validation_status: "Review Required" }),
     evidenceFor(row, { import_message: "Looks fine" }),
   ]) {
     assert.equal(patch(row, { review_evidence: evidence }).status, "blocked");
   }
+});
+
+test("direct patch rejects review evidence copied from another injection", () => {
+  const rowA = reviewedRow({ qbench_test_id: "TR-0001" }, variantRaw("014"));
+  const rowB = reviewedRow({ qbench_test_id: "TR-0002" }, variantRaw("015"));
+  const result = patch(rowB, { review_evidence: evidenceFor(rowA) });
+  assert.equal(result.status, "blocked");
+  assert.match(result.errors.join(" "), /does not match reviewed row/);
+});
+
+test("direct patch rejects review evidence using only generic hash field", () => {
+  const row = reviewedRow();
+  const result = patch(row, {
+    review_evidence: {
+      hash: row.values.source_row_hash,
+      explicitly_selected: true,
+      import_validation_status: "Valid",
+      import_message: "Import row valid",
+    },
+  });
+  assert.equal(result.status, "blocked");
+  assert.match(result.errors.join(" "), /must include source_row_hash/);
 });
 
 test("missing source hash blocks patch", () => {
@@ -235,6 +312,18 @@ test("unknown review evidence hash is rejected", () => {
   });
   assert.equal(result.status, "blocked");
   assert.match(result.errors.join(" "), /unknown source_row_hash/);
+});
+
+test("multi-row review evidence copied from another injection is rejected", () => {
+  const rowA = reviewedRow({ qbench_test_id: "TR-0001" }, variantRaw("016"));
+  const rowB = reviewedRow({ qbench_test_id: "TR-0002" }, variantRaw("017"));
+  const result = publish.buildPublishPatches([rowA, rowB], [rowA.values.source_row_hash, rowB.values.source_row_hash], {
+    review_evidence: [evidenceFor(rowA), evidenceFor(rowA, { source_row_hash: rowA.values.source_row_hash })],
+    source_batch_id: context.source_batch_id,
+    publish_row_mapping: { "TR-0001": 12, "TR-0002": 27 },
+  });
+  assert.equal(result.status, "blocked");
+  assert.match(result.errors.join(" "), /Duplicate review evidence|Missing review evidence/);
 });
 
 test("duplicate review evidence is rejected", () => {

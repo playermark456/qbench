@@ -4,6 +4,7 @@ const { INSTRUMENT_IMPORT_COLUMNS } = require("./wide_import_adapter");
 
 const REVIEWED_PUBLISH_ADAPTER_VERSION = "terpenes-reviewed-publish-adapter-v1";
 const REQUIRED_LABSOLUTIONS_CONC_UNIT = "ug/mL";
+const WORKSHEET_TRUE_TEXT = "TRUE";
 const DEFAULT_PUBLISH_ROW_MIN = 2;
 const DEFAULT_PUBLISH_ROW_MAX = 87;
 
@@ -102,7 +103,7 @@ function normalizeSelectedHashes(selections) {
 }
 
 function evidenceHash(evidence) {
-  return evidence && (evidence.source_row_hash || evidence.hash);
+  return evidence && evidence.source_row_hash;
 }
 
 function normalizeReviewEvidence(reviewEvidence = []) {
@@ -124,16 +125,17 @@ function normalizeReviewEvidence(reviewEvidence = []) {
 
   const byHash = new Map();
   const duplicateHashes = [];
+  let missingSourceRowHashCount = 0;
   for (const entry of entries) {
     const hash = evidenceHash(entry);
     if (!hash) {
-      duplicateHashes.push("<blank>");
+      missingSourceRowHashCount += 1;
       continue;
     }
     if (byHash.has(hash)) duplicateHashes.push(hash);
     byHash.set(hash, { ...entry, source_row_hash: hash });
   }
-  return { by_hash: byHash, duplicate_hashes: duplicateHashes, entries };
+  return { by_hash: byHash, duplicate_hashes: duplicateHashes, missing_source_row_hash_count: missingSourceRowHashCount, entries };
 }
 
 function reviewEvidenceErrors(row, evidence) {
@@ -141,6 +143,11 @@ function reviewEvidenceErrors(row, evidence) {
   if (!evidence) {
     errors.push(`Missing review evidence for source_row_hash ${row.source_row_hash}.`);
     return errors;
+  }
+  if (!evidence.source_row_hash) {
+    errors.push(`Review evidence for ${row.source_row_hash || "<blank>"} must include source_row_hash.`);
+  } else if (evidence.source_row_hash !== row.source_row_hash) {
+    errors.push(`Review evidence source_row_hash ${evidence.source_row_hash} does not match reviewed row ${row.source_row_hash}.`);
   }
   if (evidence.explicitly_selected !== true) {
     errors.push(`Review evidence for ${row.source_row_hash} must have explicitly_selected = true.`);
@@ -178,6 +185,9 @@ function validateReviewedRow(rowInput, options = {}) {
   }
   if (!isTrue(row.unit_confirmed)) errors.push("Unit confirmation must be TRUE.");
   if (!isTrue(row.preparation_values_confirmed)) errors.push("Preparation values confirmation must be TRUE.");
+  if (Object.prototype.hasOwnProperty.call(row, "compound_results_complete") && !isTrue(row.compound_results_complete)) {
+    errors.push("Compound Results Complete must be TRUE.");
+  }
   if (!isNumber(row.dimethylacetamide_conc)) errors.push("Dimethylacetamide must be numeric.");
   if (row.compound_result_row_count !== 24 || row.reportable_compound_row_count !== 23) {
     errors.push("Compound Results validation is incomplete.");
@@ -194,7 +204,9 @@ function buildReviewedPublishPatch(rowInput, options = {}) {
   const row = {
     ...validation.row,
     source_batch_id: options.source_batch_id || validation.row.source_batch_id,
-    compound_results_complete: true,
+    unit_confirmed: WORKSHEET_TRUE_TEXT,
+    preparation_values_confirmed: WORKSHEET_TRUE_TEXT,
+    compound_results_complete: WORKSHEET_TRUE_TEXT,
     import_validation_status: "Valid",
   };
   const targetRow = options.target_row;
@@ -258,6 +270,9 @@ function buildPublishPatches(rowsInput, selections, options = {}) {
   }
   if (evidence.duplicate_hashes.length) {
     errors.push(`Duplicate review evidence rejected: ${evidence.duplicate_hashes.join(", ")}`);
+  }
+  if (evidence.missing_source_row_hash_count) {
+    errors.push(`Review evidence without source_row_hash rejected: ${evidence.missing_source_row_hash_count}`);
   }
 
   for (const row of rowValues) {
@@ -380,6 +395,7 @@ function buildPublishPatches(rowsInput, selections, options = {}) {
 module.exports = {
   REVIEWED_PUBLISH_ADAPTER_VERSION,
   REQUIRED_LABSOLUTIONS_CONC_UNIT,
+  WORKSHEET_TRUE_TEXT,
   DEFAULT_PUBLISH_ROW_MIN,
   DEFAULT_PUBLISH_ROW_MAX,
   ANALYTE_KEYS,

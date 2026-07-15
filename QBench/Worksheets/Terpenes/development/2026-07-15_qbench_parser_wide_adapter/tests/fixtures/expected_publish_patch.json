@@ -100,8 +100,8 @@
         "",
         "already_applied_by_labsolutions",
         "ug/mL",
-        true,
-        true,
+        "TRUE",
+        "TRUE",
         "BATCH-TR-SANDBOX-001",
         "Output_redacted_fixture.txt",
         "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b",
@@ -116,7 +116,7 @@
         "inj-cef4d2a0c117ae16",
         "cef4d2a0c117ae168d6431c3e918668870546c6d165e36fc5f971515249f4546",
         100,
-        true,
+        "TRUE",
         "Reviewed",
         "Valid"
       ]
@@ -294,14 +294,14 @@
     {
       "column": "AF",
       "key": "unit_confirmed",
-      "value": true,
-      "js_type": "boolean"
+      "value": "TRUE",
+      "js_type": "string"
     },
     {
       "column": "AG",
       "key": "preparation_values_confirmed",
-      "value": true,
-      "js_type": "boolean"
+      "value": "TRUE",
+      "js_type": "string"
     },
     {
       "column": "AH",
@@ -390,8 +390,8 @@
     {
       "column": "AV",
       "key": "compound_results_complete",
-      "value": true,
-      "js_type": "boolean"
+      "value": "TRUE",
+      "js_type": "string"
     },
     {
       "column": "AW",

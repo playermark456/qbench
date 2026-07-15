@@ -27,12 +27,18 @@ and confirmation flags. The optional `assignment_hash` combines
 row detection uses `source_row_hash`.
 
 `buildWideImportRows(fileInputs, config, contexts, securityLimits)` accepts
-multiple `.txt` files, enforces `maximum_files_per_run` and per-file size
-limits, parses one row per file, rejects duplicate `source_row_hash`, reports
-duplicate `source_file_hash`, sorts deterministically, and returns
-`publish_selection_status = decision_required` when multiple reviewed
-injections remain plausible for one Test ID. It never averages or selects a
-winner.
+multiple `.txt` files with explicit `filename` or `name` values, enforces
+`maximum_files_per_run` and per-file size limits, parses one row per file,
+rejects duplicate `source_row_hash`, reports duplicate `source_file_hash`, sorts
+deterministically, and returns `publish_selection_status = decision_required`
+when multiple reviewed injections remain plausible for one Test ID. It never
+averages or selects a winner.
+
+Missing or blank source filenames are rejected with `SOURCE_FILENAME_REQUIRED`.
+The extension check is case-insensitive and accepts `.txt` or `.TXT`; files with
+no extension, `.csv`, `.json`, `.xlsx`, or other unsupported extensions are
+rejected. The recorded `source_instrument_file` is the explicit basename only,
+not an invented placeholder.
 
 ## Column map
 

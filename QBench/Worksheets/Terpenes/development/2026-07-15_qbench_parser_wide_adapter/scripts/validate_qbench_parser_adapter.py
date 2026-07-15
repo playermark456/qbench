@@ -25,6 +25,13 @@ def require(condition: bool, message: str) -> None:
         raise ValidationError(message)
 
 
+def patch_column(patch: dict, column: str) -> dict:
+    for item in patch["columns"]:
+        if item["column"] == column:
+            return item
+    raise ValidationError(f"Publish patch missing column {column}.")
+
+
 def validate_package() -> dict:
     manifest = load_json(DIST_DIR / "parser_adapter_manifest.json")
     row = load_json(DIST_DIR / "Output_redacted_wide_import_row.json")
@@ -44,12 +51,32 @@ def validate_package() -> dict:
     require(patch["target_publish_row"] == 2, "Publish patch must carry explicit target Publish row.")
     require(patch["source_row_hash"] == row["values"]["source_row_hash"], "Publish patch must carry source_row_hash.")
     require(all(col not in patch["writes"][0]["columns"] for col in ["AY", "AZ", "BA", "BB", "BC", "BD"]), "Publish formula/control columns must not be written.")
+    write_columns = patch["writes"][0]["columns"]
+    write_values = patch["writes"][0]["values"]
+    for column in ["AF", "AG", "AV"]:
+        item = patch_column(patch, column)
+        require(item["value"] == "TRUE", f"Publish {column} must emit exact text TRUE.")
+        require(item["js_type"] == "string", f"Publish {column} must be emitted as text, not Boolean.")
+        write_value = write_values[write_columns.index(column)]
+        require(write_value == "TRUE", f"Publish write for {column} must be exact text TRUE.")
+        require(isinstance(write_value, str), f"Publish write for {column} must not be Boolean true.")
     require(row["context"]["labsolutions_conc_unit"] == "ug/mL", "Expected fixture row must preserve exact ug/mL unit.")
     require(manifest["source_row_identity"]["source_derived_only"] is True, "source_row_hash must be source-derived only.")
     require(manifest["source_row_identity"]["assignment_hash_used_for_duplicate_detection"] is False, "assignment_hash must not drive duplicate detection.")
     require(manifest["reviewed_publish_contract"]["labsolutions_conc_unit_required_exact"] == "ug/mL", "Reviewed Publish contract must require exact ug/mL.")
+    require(manifest["reviewed_publish_contract"]["publish_confirmation_output_values"] == {
+        "AF_unit_confirmed": "TRUE",
+        "AG_preparation_values_confirmed": "TRUE",
+        "AV_compound_results_complete": "TRUE",
+    }, "Manifest must record exact Publish TRUE-string outputs.")
+    require(manifest["reviewed_publish_contract"]["review_evidence_source_row_hash_required"] is True, "Review evidence source_row_hash must be required.")
+    require(manifest["reviewed_publish_contract"]["review_evidence_must_match_reviewed_row"] is True, "Review evidence source_row_hash must match the reviewed row.")
+    require(manifest["reviewed_publish_contract"]["generic_hash_field_accepted"] is False, "Generic hash review evidence must not be accepted.")
     require(manifest["reviewed_publish_contract"]["publish_row_mapping_key"] == "qbench_test_id", "Publish row mapping must be Test-ID based.")
     require(manifest["reviewed_publish_contract"]["multi_row_preview_atomic"] is True, "Multi-row preview must be atomic.")
+    require(manifest["multi_file_orchestration"]["explicit_source_filename_required"] is True, "File inputs must require explicit filenames.")
+    require(manifest["multi_file_orchestration"]["invented_source_filename_allowed"] is False, "Invented source filenames must be disallowed.")
+    require(manifest["multi_file_orchestration"]["missing_filename_error_code"] == "SOURCE_FILENAME_REQUIRED", "Missing filename error code must be stable.")
     for sandbox_record in manifest["sandbox_evidence"].values():
         require(sandbox_record["status"] == "not_recorded_in_repository", "Sandbox evidence must not claim untracked records.")
         require(sandbox_record["path"] is None, "Unrecorded Sandbox evidence path must be null.")
@@ -69,6 +96,9 @@ def validate_package() -> dict:
     require(not re.search(r"\bnew\s+Function\b|\bFunction\s*\(", combined), "Function constructor must not be used.")
     require("fetch(" not in combined and "XMLHttpRequest" not in combined, "Arbitrary network APIs must not be used.")
     require("localStorage" not in combined and "cookie" not in combined.lower(), "Credential/browser storage access must not be used.")
+    require("SOURCE_FILENAME_REQUIRED" in combined, "Wide adapter must expose stable missing-filename error code.")
+    require("input-${index}.txt" not in combined, "Wide adapter must not fabricate source filenames.")
+    require("evidence.source_row_hash !== row.source_row_hash" in combined, "Reviewed adapter must check review evidence identity.")
     template = (BASE_DIR / "src" / "qbench_file_parser_entry.template.js").read_text(encoding="utf-8")
     require("INTEGRATION_BLOCKER" in template, "QBench template must retain integration blockers.")
     require("C:\\Users" not in json.dumps(row), "Local machine paths must not appear in generated wide row.")
