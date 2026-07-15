@@ -8,18 +8,23 @@ QBench and does not begin Prompt 5 automation.
 A Publish preview is generated only when:
 
 - QBench Test ID is nonblank.
-- The source injection is explicitly selected.
+- Row-specific review evidence keyed by `source_row_hash` is present.
+- The review evidence has `explicitly_selected = true`.
+- The review evidence has `import_validation_status = Valid`.
+- The review evidence has `import_message = Import row valid`.
 - All 23 analytes are JavaScript numbers.
 - Sample mass and final volume are positive numbers.
 - DF application mode is controlled.
 - DF is valid when `apply_in_qbench` is selected.
+- LabSolutions concentration unit is exactly `ug/mL`.
 - Unit confirmed is TRUE.
 - Preparation values confirmed is TRUE.
 - Dimethylacetamide is numeric.
 - Compound Results validation is complete.
 - Integration Review Status is `Reviewed`.
-- Import Validation Status is `Valid`.
 - Source Row Hash is nonblank.
+- Explicit QBench Test ID to Publish row mapping is present, unless the caller
+  requests a Test-ID-keyed preview without worksheet ranges.
 
 ## Publish preview map
 
@@ -53,3 +58,12 @@ A Publish preview is generated only when:
 
 The adapter never writes AY or later formula/control columns and never writes
 directly to the Test Worksheet.
+
+Each patch records `expected_qbench_test_id`, `target_publish_row`, `range`, and
+`source_row_hash`. Publish row mapping uses QBench Test ID only, never QBench
+Sample ID.
+
+Multi-row previews are atomic. If any selected row fails validation, has missing
+or duplicate review evidence, lacks a Publish row mapping, maps to a duplicate
+or out-of-range destination row, or shares a Test ID with another selected row,
+the overall status is `blocked` and `patches` is empty.

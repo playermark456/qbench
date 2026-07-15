@@ -71,6 +71,14 @@ def dependency_hash(path: Path) -> dict[str, str]:
     }
 
 
+def sandbox_record_not_recorded() -> dict[str, str | None]:
+    return {
+        "status": "not_recorded_in_repository",
+        "path": None,
+        "sha256": None,
+    }
+
+
 def build_manifest(distribution_hashes: dict[str, str], generation_summary: dict) -> dict:
     analytes = load_json(PROMPT2_DIR / "config" / "terpenes_analytes.json")
     limits = load_json(BASE_DIR / "config" / "parser_security_limits.json")
@@ -132,13 +140,49 @@ def build_manifest(distribution_hashes: dict[str, str], generation_summary: dict
             ],
         },
         "publish_patch_range": "Publish!D:AX",
+        "source_row_identity": {
+            "source_derived_only": True,
+            "qbench_context_excluded": [
+                "qbench_test_id",
+                "qbench_sample_id",
+                "product_matrix",
+                "source_batch_id",
+                "reviewer_selection",
+                "confirmation_flags",
+            ],
+            "assignment_hash_available": True,
+            "assignment_hash_used_for_duplicate_detection": False,
+        },
+        "reviewed_publish_contract": {
+            "labsolutions_conc_unit_required_exact": "ug/mL",
+            "review_evidence_key": "source_row_hash",
+            "required_review_evidence": {
+                "explicitly_selected": True,
+                "import_validation_status": "Valid",
+                "import_message": "Import row valid",
+            },
+            "publish_row_mapping_key": "qbench_test_id",
+            "sample_id_used_for_publish_row_mapping": False,
+            "multi_row_preview_atomic": True,
+        },
+        "multi_file_orchestration": {
+            "function": "buildWideImportRows(fileInputs, config, contexts, securityLimits)",
+            "allowed_file_extensions": [
+                ".txt",
+            ],
+            "duplicate_source_row_hash_rejected": True,
+            "duplicate_source_file_hash_reported": True,
+            "publish_selection_status_for_multiple_reviewed_injections": "decision_required",
+            "automatic_averaging_or_selection": False,
+        },
         "security_limits": limits,
         "test_counts": {
-            "javascript_node_tests": 60,
-            "python_unittest_tests": 8,
+            "javascript_node_tests": 122,
+            "python_unittest_tests": 11,
             "prompt2_unittest_tests": 27,
             "prompt3_unittest_tests": 50,
-            "prompt4_unittest_tests": "39 run; stock suite has 2 CRLF raw-hash failures in this checkout; canonical validator passed"
+            "prompt4_unittest_tests": 39,
+            "prompt4_canonical_lf_hash_gate": "passed"
         },
         "deterministic_generation": {
             "stable_inputs_only": True,
@@ -153,10 +197,10 @@ def build_manifest(distribution_hashes: dict[str, str], generation_summary: dict
             "Dilution application mode remains controlled by explicit context.",
             "Below-LOQ, MU, COA, METRC, totals, and final sample result behavior remain out of Prompt 4.5 scope."
         ],
-        "sandbox_status": {
-            "test_worksheet_candidate_sandbox_record_present": True,
-            "batch_worksheet_candidate_sandbox_record_present": True,
-            "end_to_end_parser_sandbox_validation_required": True,
+        "sandbox_evidence": {
+            "test_worksheet_sandbox_validation": sandbox_record_not_recorded(),
+            "batch_worksheet_sandbox_validation": sandbox_record_not_recorded(),
+            "end_to_end_qbench_parser_validation": sandbox_record_not_recorded(),
         },
         "scope_controls": {
             "repository_only": True,

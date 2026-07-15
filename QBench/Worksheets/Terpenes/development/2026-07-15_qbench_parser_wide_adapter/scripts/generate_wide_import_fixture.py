@@ -45,9 +45,14 @@ const row = wide.buildWideImportRow(parsed, config, context, {
   filename: "Output_redacted_fixture.txt",
   source_instrument_file: "Output_redacted_fixture.txt"
 });
-const patch = publish.buildReviewedPublishPatch(row, {
+const reviewEvidence = {
+  source_row_hash: row.values.source_row_hash,
   explicitly_selected: true,
   import_validation_status: "Valid",
+  import_message: "Import row valid"
+};
+const patch = publish.buildReviewedPublishPatch(row, {
+  review_evidence: reviewEvidence,
   source_batch_id: context.source_batch_id,
   target_row: 2
 });

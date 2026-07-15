@@ -32,6 +32,22 @@ function sectionLines(text, sectionName) {
   return { lines, start, end };
 }
 
+function duplicateSection(text, sectionName) {
+  const marker = `[${sectionName}]\n`;
+  return text.replace(marker, `${marker}${marker}`);
+}
+
+function duplicateTableHeader(text, sectionName, headerPrefix) {
+  const { lines, start, end } = sectionLines(text, sectionName);
+  for (let index = start + 1; index < end; index += 1) {
+    if (lines[index].startsWith(headerPrefix)) {
+      lines.splice(index + 1, 0, lines[index]);
+      return lines.join("\n");
+    }
+  }
+  throw new Error(`Missing table header in ${sectionName}`);
+}
+
 function mutateTableRow(text, sectionName, name, nameIndex, mutator) {
   const { lines, start, end } = sectionLines(text, sectionName);
   for (let index = start + 1; index < end; index += 1) {
@@ -45,12 +61,107 @@ function mutateTableRow(text, sectionName, name, nameIndex, mutator) {
   throw new Error(`Missing ${name} in ${sectionName}`);
 }
 
+function cloneConfig(mutator) {
+  const cloned = JSON.parse(JSON.stringify(config));
+  mutator(cloned);
+  return cloned;
+}
+
+function assertConfigError(mutator, pattern) {
+  assert.throws(() => core.validateConfig(cloneConfig(mutator)), pattern);
+}
+
 test("controlled fixture parses with 24/34/23 counts", () => {
   const parsed = parse();
   assert.equal(parsed.counts.compound_result_row_count, 24);
   assert.equal(parsed.counts.peak_table_row_count, 34);
   assert.equal(parsed.counts.reportable_compound_row_count, 23);
   assert.equal(parsed.dimethylacetamide_audit.reportable, false);
+});
+
+test("valid Prompt 2 config passes JavaScript validation", () => {
+  assert.doesNotThrow(() => core.validateConfig(config));
+});
+
+test("config rejects non-quantitative reporting mode", () => {
+  assertConfigError((cfg) => { cfg.reporting_mode = "qualitative"; }, /quantitative_only/);
+});
+
+test("config rejects non-Compound Results Conc quantitation source", () => {
+  assertConfigError((cfg) => { cfg.quantitation.source_field = "Norm Conc."; }, /Compound Results/);
+});
+
+test("config rejects blocked selected potency source", () => {
+  assertConfigError((cfg) => { cfg.quantitation.blocked_potency_fields.push("Conc."); }, /Blocked potency field/);
+});
+
+for (const controlKey of [
+  "sample_pass_fail_enabled",
+  "analyte_pass_fail_enabled",
+  "coa_pass_fail_enabled",
+  "metrc_pass_fail_enabled",
+  "kvstore_pass_fail_enabled",
+  "label_claim_pass_fail_enabled",
+]) {
+  test(`config rejects enabled ${controlKey}`, () => {
+    assertConfigError((cfg) => { cfg.result_status_controls[controlKey] = true; }, new RegExp(controlKey));
+  });
+}
+
+test("config rejects reportable count other than 23", () => {
+  assertConfigError((cfg) => { cfg.internal_reportable_channels.pop(); }, /Expected 23 reportable/);
+});
+
+test("config rejects reportable channel without reportable true", () => {
+  assertConfigError((cfg) => { cfg.internal_reportable_channels[0].reportable = false; }, /reportable = true/);
+});
+
+test("config rejects total configured channel count other than 24", () => {
+  assertConfigError((cfg) => { cfg.audit_only_channels.push({ ...cfg.audit_only_channels[0], internal_key: "extra_audit", labsolutions_compound_id: 99 }); }, /Expected 24 total/);
+});
+
+test("config rejects missing Dimethylacetamide audit-only channel", () => {
+  assertConfigError((cfg) => { cfg.audit_only_channels[0].internal_key = "not_dimethylacetamide"; }, /Dimethylacetamide/);
+});
+
+test("config rejects Dimethylacetamide reportable true", () => {
+  assertConfigError((cfg) => { cfg.audit_only_channels[0].reportable = true; }, /reportable = false/);
+});
+
+test("config rejects Dimethylacetamide without retain_for_audit true", () => {
+  assertConfigError((cfg) => { cfg.audit_only_channels[0].retain_for_audit = false; }, /retain_for_audit = true/);
+});
+
+test("config rejects blank internal keys", () => {
+  assertConfigError((cfg) => { cfg.internal_reportable_channels[0].internal_key = ""; }, /nonblank/);
+});
+
+test("config rejects duplicate internal keys across groups", () => {
+  assertConfigError((cfg) => { cfg.audit_only_channels[0].internal_key = cfg.internal_reportable_channels[0].internal_key; }, /Duplicate configured key/);
+});
+
+test("config rejects non-integer LabSolutions compound IDs", () => {
+  assertConfigError((cfg) => { cfg.internal_reportable_channels[0].labsolutions_compound_id = 2.5; }, /must be an integer/);
+});
+
+test("config rejects duplicate LabSolutions compound IDs", () => {
+  assertConfigError((cfg) => { cfg.internal_reportable_channels[1].labsolutions_compound_id = cfg.internal_reportable_channels[0].labsolutions_compound_id; }, /Duplicate LabSolutions ID/);
+});
+
+test("config rejects compound ID set outside 1 through 24 without approved alternative", () => {
+  assertConfigError((cfg) => { cfg.internal_reportable_channels[0].labsolutions_compound_id = 99; }, /controlled set 1 through 24/);
+});
+
+test("config allows compound ID alternative only when explicitly documented", () => {
+  const cfg = cloneConfig((draft) => {
+    draft.internal_reportable_channels[0].labsolutions_compound_id = 99;
+    draft.future_approved_compound_id_alternative = "Documented controlled alternative";
+  });
+  assert.doesNotThrow(() => core.validateConfig(cfg));
+});
+
+test("config rejects alias conflicts", () => {
+  assertConfigError((cfg) => { cfg.internal_reportable_channels[1].aliases.push(cfg.internal_reportable_channels[0].worksheet_label); }, /Conflicting analyte alias/);
 });
 
 test("UTF-8 BOM is accepted", () => {
@@ -67,6 +178,20 @@ test("CRLF line endings are accepted", () => {
 
 test("required sections are enforced", () => {
   assert.throws(() => parse(fixtureText.replace("[Original Files]\n", "")), /Missing required section/);
+});
+
+for (const sectionName of core.REQUIRED_SECTIONS) {
+  test(`duplicate required section ${sectionName} is rejected`, () => {
+    assert.throws(() => parse(duplicateSection(fixtureText, sectionName)), /Repeated required section/);
+  });
+}
+
+test("duplicate Compound Results table header is rejected as ambiguous", () => {
+  assert.throws(() => parse(duplicateTableHeader(fixtureText, "Compound Results(Ch1)", "ID#")), /multiple competing table headers/);
+});
+
+test("duplicate Peak Table header is rejected as ambiguous", () => {
+  assert.throws(() => parse(duplicateTableHeader(fixtureText, "Peak Table(Ch1)", "Peak#")), /multiple competing table headers/);
 });
 
 test("malformed row width is rejected", () => {

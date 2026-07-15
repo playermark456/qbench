@@ -34,7 +34,7 @@
       "column": "A",
       "header": "import_row_id",
       "key": "import_row_id",
-      "value": "inj-1a9145b25f46e8b0",
+      "value": "inj-cef4d2a0c117ae16",
       "js_type": "string"
     },
     {
@@ -426,12 +426,12 @@
       "column": "BE",
       "header": "source_row_hash",
       "key": "source_row_hash",
-      "value": "1a9145b25f46e8b0ba7e57b473500b9aeddbaa5d6d0d7c80889b153c59dd8899",
+      "value": "cef4d2a0c117ae168d6431c3e918668870546c6d165e36fc5f971515249f4546",
       "js_type": "string"
     }
   ],
   "values": {
-    "import_row_id": "inj-1a9145b25f46e8b0",
+    "import_row_id": "inj-cef4d2a0c117ae16",
     "run_order": 1,
     "vial": 32,
     "sample_type": "Unknown",
@@ -464,7 +464,8 @@
     "integration_review_status": "Reviewed",
     "import_validation_status_formula": "",
     "import_message_formula": "",
-    "source_row_hash": "1a9145b25f46e8b0ba7e57b473500b9aeddbaa5d6d0d7c80889b153c59dd8899",
+    "source_row_hash": "cef4d2a0c117ae168d6431c3e918668870546c6d165e36fc5f971515249f4546",
+    "assignment_hash": "e69d1ece0eeff4a474ee91908b96cdb507f5864b01defec8b338d6c99baf327f",
     "apinene": 24.608,
     "camphene": 24.217,
     "bmyrcene": 25.418,
@@ -534,7 +535,7 @@
           "AE"
         ],
         "values": [
-          "inj-1a9145b25f46e8b0",
+          "inj-cef4d2a0c117ae16",
           1,
           32,
           "Unknown",
@@ -620,7 +621,7 @@
           31.204,
           14.307,
           286.135,
-          "1a9145b25f46e8b0ba7e57b473500b9aeddbaa5d6d0d7c80889b153c59dd8899"
+          "cef4d2a0c117ae168d6431c3e918668870546c6d165e36fc5f971515249f4546"
         ]
       }
     ]

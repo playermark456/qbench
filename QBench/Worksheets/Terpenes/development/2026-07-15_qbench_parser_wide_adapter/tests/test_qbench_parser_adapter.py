@@ -49,6 +49,8 @@ class QBenchParserAdapterTests(unittest.TestCase):
         patch = load_json(BASE_DIR / "tests" / "fixtures" / "expected_publish_patch.json")
         self.assertEqual(patch["writes"][0]["columns"][-1], "AX")
         self.assertNotIn("AY", patch["writes"][0]["columns"])
+        self.assertEqual(patch["target_publish_row"], 2)
+        self.assertEqual(patch["range"], "Publish!D2:AX2")
 
     def test_no_native_candidate_file_when_blocked(self) -> None:
         self.assertFalse((DIST_DIR / "terpenes_qbench_file_parser_candidate_v1.js").exists())
@@ -58,6 +60,27 @@ class QBenchParserAdapterTests(unittest.TestCase):
         candidate = manifest["prompt4_candidate_hashes"]["candidate"]
         self.assertEqual(candidate["raw_sha256"], "f779d0175a7aec09eb5f57a778fde91cccf07bb7078a9573132547ee158da151")
         self.assertEqual(candidate["canonical_lf_sha256"], "e5c80b1213396cab4932e267fd786c6986c933d4b404f11daa5c5aba0629758e")
+
+    def test_source_row_identity_contract_is_context_independent(self) -> None:
+        manifest = load_json(DIST_DIR / "parser_adapter_manifest.json")
+        self.assertTrue(manifest["source_row_identity"]["source_derived_only"])
+        self.assertIn("qbench_test_id", manifest["source_row_identity"]["qbench_context_excluded"])
+        self.assertFalse(manifest["source_row_identity"]["assignment_hash_used_for_duplicate_detection"])
+
+    def test_review_and_publish_contracts_are_recorded(self) -> None:
+        manifest = load_json(DIST_DIR / "parser_adapter_manifest.json")
+        contract = manifest["reviewed_publish_contract"]
+        self.assertEqual(contract["labsolutions_conc_unit_required_exact"], "ug/mL")
+        self.assertEqual(contract["review_evidence_key"], "source_row_hash")
+        self.assertEqual(contract["publish_row_mapping_key"], "qbench_test_id")
+        self.assertTrue(contract["multi_row_preview_atomic"])
+
+    def test_sandbox_evidence_does_not_claim_untracked_records(self) -> None:
+        manifest = load_json(DIST_DIR / "parser_adapter_manifest.json")
+        for record in manifest["sandbox_evidence"].values():
+            self.assertEqual(record["status"], "not_recorded_in_repository")
+            self.assertIsNone(record["path"])
+            self.assertIsNone(record["sha256"])
 
 
 if __name__ == "__main__":

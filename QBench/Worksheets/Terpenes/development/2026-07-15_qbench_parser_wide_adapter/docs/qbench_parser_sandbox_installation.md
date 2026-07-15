@@ -16,6 +16,10 @@ Parser from this package yet.
 - Security limits and local tests.
 - QBench wrapper template with explicit integration blockers.
 
+The distribution intentionally omits
+`dist/terpenes_qbench_file_parser_candidate_v1.js` until the runtime contract is
+proved.
+
 ## Missing evidence
 
 Read-only QBench inspection must prove:

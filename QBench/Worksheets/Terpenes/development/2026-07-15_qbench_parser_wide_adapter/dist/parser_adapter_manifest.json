@@ -60,18 +60,18 @@
     }
   },
   "distribution_hashes": {
-    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/terpenes_labsolutions_parser_core_v1.js": "43f8ea802b7256cfde41cc302019cd09e0d6750b12f159a6a72d0553d0244442",
-    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/terpenes_wide_import_adapter_v1.js": "589eb16b90f2fdce1589e0eded91dbec802985841fe452eb3b8939ef7a52eb10",
-    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/terpenes_reviewed_publish_adapter_v1.js": "464dd06ff60dff34e7caac9e795cf6e1f5aadefc80d141b95c638cfff915b719"
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/terpenes_labsolutions_parser_core_v1.js": "f73106170a9062f52b393ae2e64efcdc08a290c4605185030fb89ee3aec20e8e",
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/terpenes_wide_import_adapter_v1.js": "93ba24ef311cfdaab5318dc4358591f722f4eaee10c86d886a3a4382e8c3b9d4",
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/terpenes_reviewed_publish_adapter_v1.js": "14d3b9133148e0e0deaef8b97d10d329515ee0715e042fbb03b80e5aac4628d6"
   },
   "generated_output_hashes": {
-    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/Output_redacted_wide_import_row.json": "87294a4c0b9d23b728150eda0b055ed6f88e5605aec3a5d9a14f7743be6948a5",
-    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/Output_redacted_wide_import_row.tsv": "5847923e80738b2041417427f06b0757b61c8420ef50707e1262854faf2f35fc",
-    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/Output_redacted_block_A_AE.tsv": "12b2e4e631917b37e3a77ab8d56b680f8c7deafbd2e7b49f658833848a6d9761",
-    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/Output_redacted_block_AH_BE.tsv": "66a3a486a8653efa5c42dddab2eb209cc399bac52ea448f69e2891712ef226f7"
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/Output_redacted_wide_import_row.json": "9e5645298c2f118952421762c07295a5fe44bd2bddd30952f80c08273f0e0a76",
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/Output_redacted_wide_import_row.tsv": "7abbcc188ff35ba09908cdfefd917da28d5d194e6f4031f77aad7c0d06b108d2",
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/Output_redacted_block_A_AE.tsv": "8c4b49f4b046724f225572b519be38080aaf737e751b32ab4018d6ac69a38f58",
+    "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/dist/Output_redacted_block_AH_BE.tsv": "8f2c7b9b6fbf82788f8469ff2d0da3a84b0a7f1433d2b04f117f9bb256fb7cb2"
   },
   "parser_core_output_hash": "2f406f71ad4062a32cca24fcc496d81f9bf1f9e06e3bf2ac84f395dc49604616",
-  "adapter_output_hash": "87294a4c0b9d23b728150eda0b055ed6f88e5605aec3a5d9a14f7743be6948a5",
+  "adapter_output_hash": "9e5645298c2f118952421762c07295a5fe44bd2bddd30952f80c08273f0e0a76",
   "qbench_wrapper_output_hash": null,
   "expected_counts": {
     "compound_result_rows": 24,
@@ -116,6 +116,41 @@
     ]
   },
   "publish_patch_range": "Publish!D:AX",
+  "source_row_identity": {
+    "source_derived_only": true,
+    "qbench_context_excluded": [
+      "qbench_test_id",
+      "qbench_sample_id",
+      "product_matrix",
+      "source_batch_id",
+      "reviewer_selection",
+      "confirmation_flags"
+    ],
+    "assignment_hash_available": true,
+    "assignment_hash_used_for_duplicate_detection": false
+  },
+  "reviewed_publish_contract": {
+    "labsolutions_conc_unit_required_exact": "ug/mL",
+    "review_evidence_key": "source_row_hash",
+    "required_review_evidence": {
+      "explicitly_selected": true,
+      "import_validation_status": "Valid",
+      "import_message": "Import row valid"
+    },
+    "publish_row_mapping_key": "qbench_test_id",
+    "sample_id_used_for_publish_row_mapping": false,
+    "multi_row_preview_atomic": true
+  },
+  "multi_file_orchestration": {
+    "function": "buildWideImportRows(fileInputs, config, contexts, securityLimits)",
+    "allowed_file_extensions": [
+      ".txt"
+    ],
+    "duplicate_source_row_hash_rejected": true,
+    "duplicate_source_file_hash_reported": true,
+    "publish_selection_status_for_multiple_reviewed_injections": "decision_required",
+    "automatic_averaging_or_selection": false
+  },
   "security_limits": {
     "schema_version": 1,
     "maximum_raw_file_size_bytes": 2000000,
@@ -140,18 +175,19 @@
     ]
   },
   "test_counts": {
-    "javascript_node_tests": 60,
-    "python_unittest_tests": 8,
+    "javascript_node_tests": 122,
+    "python_unittest_tests": 11,
     "prompt2_unittest_tests": 27,
     "prompt3_unittest_tests": 50,
-    "prompt4_unittest_tests": "39 run; stock suite has 2 CRLF raw-hash failures in this checkout; canonical validator passed"
+    "prompt4_unittest_tests": 39,
+    "prompt4_canonical_lf_hash_gate": "passed"
   },
   "deterministic_generation": {
     "stable_inputs_only": true,
     "current_timestamps_omitted": true,
     "local_paths_omitted_from_generated_metadata": true,
     "source_file_hash": "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b",
-    "source_row_hash": "1a9145b25f46e8b0ba7e57b473500b9aeddbaa5d6d0d7c80889b153c59dd8899"
+    "source_row_hash": "cef4d2a0c117ae168d6431c3e918668870546c6d165e36fc5f971515249f4546"
   },
   "unresolved_scientific_decisions": [
     "Final LabSolutions Conc. unit confirmation remains required.",
@@ -159,10 +195,22 @@
     "Dilution application mode remains controlled by explicit context.",
     "Below-LOQ, MU, COA, METRC, totals, and final sample result behavior remain out of Prompt 4.5 scope."
   ],
-  "sandbox_status": {
-    "test_worksheet_candidate_sandbox_record_present": true,
-    "batch_worksheet_candidate_sandbox_record_present": true,
-    "end_to_end_parser_sandbox_validation_required": true
+  "sandbox_evidence": {
+    "test_worksheet_sandbox_validation": {
+      "status": "not_recorded_in_repository",
+      "path": null,
+      "sha256": null
+    },
+    "batch_worksheet_sandbox_validation": {
+      "status": "not_recorded_in_repository",
+      "path": null,
+      "sha256": null
+    },
+    "end_to_end_qbench_parser_validation": {
+      "status": "not_recorded_in_repository",
+      "path": null,
+      "sha256": null
+    }
   },
   "scope_controls": {
     "repository_only": true,

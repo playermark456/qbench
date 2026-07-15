@@ -50,6 +50,7 @@ const DEFAULT_SECURITY_LIMITS = Object.freeze({
   max_table_row_count: 2000,
   max_line_length: 20000,
   max_field_count: 128,
+  max_files_per_run: 200,
   max_error_message_length: 500,
 });
 
@@ -107,7 +108,7 @@ function decodeInput(input, options = {}) {
     throw controlledError("UNSUPPORTED_INPUT_TYPE", "Input must be a string, Buffer, or Uint8Array.");
   }
 
-  const limits = { ...DEFAULT_SECURITY_LIMITS, ...(options.securityLimits || {}) };
+  const limits = normalizeSecurityLimits(options.securityLimits || {});
   if (bytes.length > limits.max_raw_file_size_bytes) {
     throw controlledError("RAW_FILE_TOO_LARGE", "LabSolutions export exceeds configured maximum file size.", {
       maxBytes: limits.max_raw_file_size_bytes,
@@ -118,6 +119,20 @@ function decodeInput(input, options = {}) {
   let text = bytes.toString("utf8");
   if (text.charCodeAt(0) === 0xfeff) text = text.slice(1);
   return { bytes, text, limits };
+}
+
+function normalizeSecurityLimits(input = {}) {
+  return {
+    ...DEFAULT_SECURITY_LIMITS,
+    ...input,
+    max_raw_file_size_bytes: input.max_raw_file_size_bytes ?? input.maximum_raw_file_size_bytes ?? DEFAULT_SECURITY_LIMITS.max_raw_file_size_bytes,
+    max_section_count: input.max_section_count ?? input.maximum_section_count ?? DEFAULT_SECURITY_LIMITS.max_section_count,
+    max_table_row_count: input.max_table_row_count ?? input.maximum_table_row_count ?? DEFAULT_SECURITY_LIMITS.max_table_row_count,
+    max_line_length: input.max_line_length ?? input.maximum_line_length ?? DEFAULT_SECURITY_LIMITS.max_line_length,
+    max_field_count: input.max_field_count ?? input.maximum_field_count ?? DEFAULT_SECURITY_LIMITS.max_field_count,
+    max_files_per_run: input.max_files_per_run ?? input.maximum_files_per_run ?? DEFAULT_SECURITY_LIMITS.max_files_per_run,
+    max_error_message_length: input.max_error_message_length ?? input.maximum_error_message_length ?? DEFAULT_SECURITY_LIMITS.max_error_message_length,
+  };
 }
 
 function parseNumberStrict(value) {
@@ -191,12 +206,18 @@ function validateConfig(config) {
   if (reportable.length !== 23) {
     throw controlledError("CONFIG_REPORTABLE_COUNT", `Expected 23 reportable channels, found ${reportable.length}.`);
   }
-  if (audits.length !== 1 || audits[0].internal_key !== "dimethylacetamide") {
-    throw controlledError("CONFIG_AUDIT_COUNT", "Expected exactly one Dimethylacetamide audit-only channel.");
+  for (const channel of reportable) {
+    if (channel.reportable !== true) {
+      throw controlledError("CONFIG_REPORTABLE_FLAG", `Reportable channel must have reportable = true: ${channel.internal_key || "<blank>"}`);
+    }
+  }
+  const configuredChannels = allConfiguredChannels(config);
+  if (configuredChannels.length !== 24) {
+    throw controlledError("CONFIG_TOTAL_CHANNEL_COUNT", `Expected 24 total configured Compound Results channels, found ${configuredChannels.length}.`);
   }
   const keys = new Set();
   const ids = new Set();
-  for (const channel of allConfiguredChannels(config)) {
+  for (const channel of configuredChannels) {
     if (!channel.internal_key) throw controlledError("CONFIG_BLANK_KEY", "Configured internal keys must be nonblank.");
     if (keys.has(channel.internal_key)) {
       throw controlledError("CONFIG_DUPLICATE_KEY", `Duplicate configured key: ${channel.internal_key}`);
@@ -210,6 +231,21 @@ function validateConfig(config) {
     }
     ids.add(channel.labsolutions_compound_id);
   }
+  const controlledIdSet = new Set(Array.from({ length: 24 }, (_value, index) => index + 1));
+  const idsMatchControlledSet = ids.size === controlledIdSet.size && Array.from(ids).every((id) => controlledIdSet.has(id));
+  if (!idsMatchControlledSet && !config.future_approved_compound_id_alternative) {
+    throw controlledError("CONFIG_ID_SET", "Configured LabSolutions compound IDs must equal the controlled set 1 through 24 unless an approved alternative is documented.");
+  }
+  if (audits.length !== 1 || audits[0].internal_key !== "dimethylacetamide") {
+    throw controlledError("CONFIG_AUDIT_COUNT", "Expected exactly one Dimethylacetamide audit-only channel.");
+  }
+  if (audits[0].reportable !== false) {
+    throw controlledError("CONFIG_AUDIT_REPORTABLE_FLAG", "Dimethylacetamide must have reportable = false.");
+  }
+  if (audits[0].retain_for_audit !== true) {
+    throw controlledError("CONFIG_AUDIT_RETAIN_FLAG", "Dimethylacetamide must have retain_for_audit = true.");
+  }
+  buildAliasMap(config);
 }
 
 function buildAliasMap(config) {
@@ -246,6 +282,12 @@ function splitSections(text, limits) {
     const match = line.match(/^\[(.+)]\s*$/);
     if (match) {
       current = match[1];
+      if (sections.has(current) && REQUIRED_SECTIONS.includes(current)) {
+        throw controlledError("DUPLICATE_REQUIRED_SECTION", `Repeated required section: ${current}`, {
+          section: current,
+          row: lineIndex + 1,
+        });
+      }
       sections.set(current, []);
       if (sections.size > limits.max_section_count) {
         throw controlledError("TOO_MANY_SECTIONS", "LabSolutions export contains too many sections.");
@@ -278,6 +320,12 @@ function parseTable(sections, sectionName, headerPrefix, aliasMap, limits) {
   for (const line of sections.get(sectionName) || []) {
     if (!line.trim() || line.startsWith("# of")) continue;
     if (line.startsWith(headerPrefix)) {
+      if (headers !== null) {
+        throw controlledError("AMBIGUOUS_TABLE_HEADER", `${sectionName} contains multiple competing table headers.`, {
+          section: sectionName,
+          row: rows.length + 1,
+        });
+      }
       headers = line.split("\t");
       if (headers.length > limits.max_field_count) {
         throw controlledError("TOO_MANY_FIELDS", `${sectionName} header has too many fields.`, { section: sectionName });
@@ -316,6 +364,11 @@ function parseTable(sections, sectionName, headerPrefix, aliasMap, limits) {
       row.unconfigured_analyte = true;
     }
     rows.push(row);
+  }
+  if (!headers) {
+    throw controlledError("MISSING_TABLE_HEADER", `${sectionName} is missing its controlled table header.`, {
+      section: sectionName,
+    });
   }
   return rows;
 }
@@ -466,6 +519,7 @@ module.exports = {
   NUMERIC_FIELDS,
   TerpenesParserError,
   controlledError,
+  normalizeSecurityLimits,
   parseNumberStrict,
   normalizeAnalyteName,
   orderedReportableChannels,

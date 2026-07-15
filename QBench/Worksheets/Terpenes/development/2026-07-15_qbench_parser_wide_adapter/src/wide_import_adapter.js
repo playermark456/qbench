@@ -2,7 +2,12 @@
 
 const crypto = require("crypto");
 const path = require("path");
-const { orderedReportableChannels, sha256Hex } = require("./labsolutions_ascii_core");
+const {
+  orderedReportableChannels,
+  parseLabSolutionsAscii,
+  sha256Hex,
+  normalizeSecurityLimits,
+} = require("./labsolutions_ascii_core");
 
 const WIDE_ADAPTER_VERSION = "terpenes-wide-import-adapter-v1";
 
@@ -124,7 +129,7 @@ function analyteValueMap(parsed) {
   return values;
 }
 
-function sourceRowHashPayload(parsed, context, sourceFileHash) {
+function sourceRowHashPayload(parsed, sourceFileHash) {
   const sample = parsed.source_metadata.sample_information || {};
   const original = parsed.source_metadata.original_files || {};
   const configuration = parsed.source_metadata.configuration || {};
@@ -133,13 +138,24 @@ function sourceRowHashPayload(parsed, context, sourceFileHash) {
     labsolutions_sample_name: sample["Sample Name"] || "",
     labsolutions_sample_id: sample["Sample ID"] || "",
     acquired_at: sample.Acquired || "",
+    vial: sample["Vial#"] ?? "",
     source_data_file: original["Data File"] || "",
+    source_method_file: original["Method File"] || "",
+    source_sequence_file: original["Batch File"] || "",
+    instrument_name: configuration["Instrument Name"] || "",
     detector_id: configuration["Detector ID"] || "",
     ordered_analyte_values: (parsed.reportable_analytes || []).map((row) => [row.internal_key, row.conc]),
     dimethylacetamide_conc: parsed.dimethylacetamide_audit.conc,
     compound_result_row_count: parsed.counts.compound_result_row_count,
     peak_table_row_count: parsed.counts.peak_table_row_count,
-    qbench_test_id: context.qbench_test_id || "",
+  };
+}
+
+function assignmentHashPayload(sourceRowHash, context) {
+  if (!context.qbench_test_id) return null;
+  return {
+    source_row_hash: sourceRowHash,
+    qbench_test_id: context.qbench_test_id,
   };
 }
 
@@ -151,7 +167,8 @@ function buildWideImportRow(parsed, config, contextInput = {}, source = {}) {
   const sourceBytes = source.rawBytes || source.rawText || "";
   const sourceFileHash = source.source_file_hash || parsed.source_provenance.source_file_hash || sha256Hex(sourceBytes);
   const valuesByAnalyte = analyteValueMap(parsed);
-  const rowHash = hashCanonical(sourceRowHashPayload(parsed, context, sourceFileHash));
+  const rowHash = hashCanonical(sourceRowHashPayload(parsed, sourceFileHash));
+  const assignmentPayload = assignmentHashPayload(rowHash, context);
   const importRowId = `inj-${rowHash.slice(0, 16)}`;
   const values = {
     import_row_id: importRowId,
@@ -188,6 +205,7 @@ function buildWideImportRow(parsed, config, contextInput = {}, source = {}) {
     import_validation_status_formula: "",
     import_message_formula: "",
     source_row_hash: rowHash,
+    assignment_hash: assignmentPayload ? hashCanonical(assignmentPayload) : "",
   };
   for (const channel of orderedReportableChannels(config)) {
     values[channel.internal_key] = valuesByAnalyte[channel.internal_key];
@@ -270,19 +288,31 @@ function sortWideRows(rows) {
   });
 }
 
-function validateWideRowSet(rows) {
+function summarizeWideRowSet(rows) {
   const seenRows = new Set();
   const fileHashes = new Map();
   const duplicateFileHashes = [];
+  const errors = [];
   for (const row of rows) {
     const rowHash = row.values.source_row_hash;
-    if (seenRows.has(rowHash)) throw new Error(`Duplicate source_row_hash rejected: ${rowHash}`);
+    if (seenRows.has(rowHash)) errors.push(`Duplicate source_row_hash rejected: ${rowHash}`);
     seenRows.add(rowHash);
     const fileHash = row.values.source_file_hash;
-    if (fileHashes.has(fileHash)) duplicateFileHashes.push(fileHash);
+    if (fileHashes.has(fileHash) && !duplicateFileHashes.includes(fileHash)) duplicateFileHashes.push(fileHash);
     fileHashes.set(fileHash, true);
   }
-  return { duplicate_file_hashes: duplicateFileHashes };
+  return { ok: errors.length === 0, errors, duplicate_file_hashes: duplicateFileHashes };
+}
+
+function validateWideRowSet(rows) {
+  const summary = summarizeWideRowSet(rows);
+  if (!summary.ok) {
+    const error = new Error(summary.errors.join(" | "));
+    error.code = "DUPLICATE_SOURCE_ROW_HASH";
+    error.duplicate_file_hashes = summary.duplicate_file_hashes;
+    throw error;
+  }
+  return { duplicate_file_hashes: summary.duplicate_file_hashes };
 }
 
 function publishSelectionStatus(rows) {
@@ -296,6 +326,75 @@ function publishSelectionStatus(rows) {
   return Array.from(reviewedByTest.values()).some((count) => count > 1) ? "decision_required" : "single_or_none";
 }
 
+function rawBytesFromInput(fileInput) {
+  if (Buffer.isBuffer(fileInput.rawBytes)) return Buffer.from(fileInput.rawBytes);
+  if (fileInput.rawBytes instanceof Uint8Array) return Buffer.from(fileInput.rawBytes);
+  if (typeof fileInput.rawText === "string") return Buffer.from(fileInput.rawText, "utf8");
+  if (typeof fileInput.text === "string") return Buffer.from(fileInput.text, "utf8");
+  if (typeof fileInput.content === "string") return Buffer.from(fileInput.content, "utf8");
+  if (Buffer.isBuffer(fileInput.content)) return Buffer.from(fileInput.content);
+  if (fileInput.content instanceof Uint8Array) return Buffer.from(fileInput.content);
+  throw new Error("File input must include rawBytes, rawText, text, or content.");
+}
+
+function contextForFile(contexts, fileInput, index) {
+  if (Array.isArray(contexts)) return contexts[index] || {};
+  if (contexts && typeof contexts === "object") {
+    const name = fileInput.filename || fileInput.name || fileInput.path || String(index);
+    return contexts[name] || contexts[index] || {};
+  }
+  return {};
+}
+
+function buildWideImportRows(fileInputs, config, contexts = {}, securityLimits = {}) {
+  const limits = normalizeSecurityLimits(securityLimits);
+  if (!Array.isArray(fileInputs)) {
+    throw new Error("fileInputs must be an array.");
+  }
+  if (fileInputs.length > limits.max_files_per_run) {
+    throw new Error(`File count ${fileInputs.length} exceeds maximum_files_per_run ${limits.max_files_per_run}.`);
+  }
+  const rows = [];
+  for (let index = 0; index < fileInputs.length; index += 1) {
+    const fileInput = fileInputs[index] || {};
+    const filename = fileInput.filename || fileInput.name || fileInput.path || `input-${index}.txt`;
+    if (path.extname(String(filename)).toLowerCase() !== ".txt") {
+      throw new Error(`Unsupported file extension for ${filename}; only .txt is allowed.`);
+    }
+    const rawBytes = rawBytesFromInput(fileInput);
+    if (rawBytes.length > limits.max_raw_file_size_bytes) {
+      throw new Error(`File ${filename} exceeds maximum raw file size.`);
+    }
+    const parsed = parseLabSolutionsAscii(rawBytes, config, { securityLimits: limits });
+    rows.push(buildWideImportRow(parsed, config, contextForFile(contexts, fileInput, index), {
+      rawBytes,
+      filename,
+      source_instrument_file: filename,
+    }));
+  }
+  const duplicateFileSummary = summarizeWideRowSet(rows);
+  const sortedRows = sortWideRows(rows);
+  if (!duplicateFileSummary.ok) {
+    return {
+      schema_version: 1,
+      adapter_version: WIDE_ADAPTER_VERSION,
+      status: "blocked",
+      errors: duplicateFileSummary.errors,
+      rows: [],
+      duplicate_file_hashes: duplicateFileSummary.duplicate_file_hashes,
+      publish_selection_status: "blocked_duplicate_source_row",
+    };
+  }
+  return {
+    schema_version: 1,
+    adapter_version: WIDE_ADAPTER_VERSION,
+    status: "ok",
+    rows: sortedRows,
+    duplicate_file_hashes: duplicateFileSummary.duplicate_file_hashes,
+    publish_selection_status: publishSelectionStatus(sortedRows),
+  };
+}
+
 module.exports = {
   WIDE_ADAPTER_VERSION,
   INSTRUMENT_IMPORT_COLUMNS,
@@ -304,10 +403,14 @@ module.exports = {
   hashCanonical,
   normalizeContext,
   buildWideImportRow,
+  sourceRowHashPayload,
+  assignmentHashPayload,
   buildInstrumentImportWritePlan,
   rowToTsv,
   blockToTsv,
   sortWideRows,
+  summarizeWideRowSet,
   validateWideRowSet,
   publishSelectionStatus,
+  buildWideImportRows,
 };

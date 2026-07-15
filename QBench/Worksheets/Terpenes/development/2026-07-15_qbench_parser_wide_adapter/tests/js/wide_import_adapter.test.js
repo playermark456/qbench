@@ -17,6 +17,12 @@ const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
 const context = JSON.parse(fs.readFileSync(contextPath, "utf8"));
 const raw = fs.readFileSync(fixturePath);
 
+function variantRaw(label) {
+  return Buffer.from(raw.toString("utf8")
+    .replaceAll("TERPENE_FIXTURE_001.gcd", `TERPENE_FIXTURE_${label}.gcd`)
+    .replace("6/24/2026 11:09:50 AM", `6/24/2026 11:${String(label).padStart(2, "0")}:50 AM`), "utf8");
+}
+
 function parsedWith(textBuffer = raw) {
   return core.parseLabSolutionsAscii(textBuffer, config, {});
 }
@@ -26,6 +32,15 @@ function build(ctx = context, parsed = parsedWith()) {
     rawBytes: raw,
     filename: "Output_redacted_fixture.txt",
     source_instrument_file: "Output_redacted_fixture.txt",
+  });
+}
+
+function buildFromRaw(ctx = context, rawBytes = raw, filename = "Output_redacted_fixture.txt") {
+  const parsed = parsedWith(rawBytes);
+  return wide.buildWideImportRow(parsed, config, ctx, {
+    rawBytes,
+    filename,
+    source_instrument_file: filename,
   });
 }
 
@@ -92,6 +107,25 @@ test("source row hash is deterministic", () => {
   assert.equal(build().values.source_row_hash, build().values.source_row_hash);
 });
 
+test("same raw injection under different Test IDs has same source_row_hash and different assignment_hash", () => {
+  const rowA = build({ ...context, qbench_test_id: "TR-0001" });
+  const rowB = build({ ...context, qbench_test_id: "TR-0002" });
+  assert.equal(rowA.values.source_row_hash, rowB.values.source_row_hash);
+  assert.notEqual(rowA.values.assignment_hash, rowB.values.assignment_hash);
+});
+
+test("QBench Sample ID and product matrix do not change source_row_hash", () => {
+  const rowA = build({ ...context, qbench_sample_id: "SAMPLE-A", product_matrix: "Flower" });
+  const rowB = build({ ...context, qbench_sample_id: "SAMPLE-B", product_matrix: "Concentrate" });
+  assert.equal(rowA.values.source_row_hash, rowB.values.source_row_hash);
+});
+
+test("genuinely different source injection produces a different source_row_hash", () => {
+  const rowA = buildFromRaw({ ...context, qbench_test_id: "TR-0001" }, variantRaw("021"));
+  const rowB = buildFromRaw({ ...context, qbench_test_id: "TR-0001" }, variantRaw("022"));
+  assert.notEqual(rowA.values.source_row_hash, rowB.values.source_row_hash);
+});
+
 test("generated output does not include local machine paths", () => {
   assert.equal(JSON.stringify(build()).includes("C:\\Users"), false);
 });
@@ -121,22 +155,28 @@ test("duplicate source row hash is rejected", () => {
   assert.throws(() => wide.validateWideRowSet([row, row]), /Duplicate source_row_hash/);
 });
 
-test("duplicate file hash is recorded while distinct injections are retained", () => {
+test("duplicate file hash with same source injection is not treated as distinct", () => {
   const rowA = build({ ...context, qbench_test_id: "TR-0001" });
   const rowB = build({ ...context, qbench_test_id: "TR-0002" });
-  const summary = wide.validateWideRowSet([rowA, rowB]);
-  assert.deepEqual(summary.duplicate_file_hashes, [rowA.values.source_file_hash]);
+  assert.equal(rowA.values.source_row_hash, rowB.values.source_row_hash);
+  try {
+    wide.validateWideRowSet([rowA, rowB]);
+    assert.fail("expected duplicate source row failure");
+  } catch (error) {
+    assert.match(error.message, /Duplicate source_row_hash/);
+    assert.deepEqual(error.duplicate_file_hashes, [rowA.values.source_file_hash]);
+  }
 });
 
 test("multiple reviewed rows for one Test ID require decision", () => {
-  const rowA = build({ ...context, run_order: 1 });
-  const rowB = build({ ...context, run_order: 2, imported_at: "2026-07-15T00:01:00Z" });
+  const rowA = buildFromRaw({ ...context, run_order: 1 }, variantRaw("023"));
+  const rowB = buildFromRaw({ ...context, run_order: 2 }, variantRaw("024"));
   assert.equal(wide.publishSelectionStatus([rowA, rowB]), "decision_required");
 });
 
 test("rows sort deterministically without selecting a winner", () => {
-  const rowA = build({ ...context, run_order: 2, qbench_test_id: "TR-0002" });
-  const rowB = build({ ...context, run_order: 1, qbench_test_id: "TR-0001" });
+  const rowA = buildFromRaw({ ...context, run_order: 2, qbench_test_id: "TR-0002" }, variantRaw("025"));
+  const rowB = buildFromRaw({ ...context, run_order: 1, qbench_test_id: "TR-0001" }, variantRaw("026"));
   const sorted = wide.sortWideRows([rowA, rowB]);
   assert.equal(sorted[0].values.run_order, 1);
   assert.equal(sorted.length, 2);
@@ -147,4 +187,72 @@ test("TSV is a human artifact and leaves AF/AG blanks in full row", () => {
   const values = tsv.trimEnd().split("\n")[1].split("\t");
   assert.equal(values[31], "");
   assert.equal(values[32], "");
+});
+
+test("buildWideImportRows accepts zero files", () => {
+  const result = wide.buildWideImportRows([], config, {}, { max_files_per_run: 1 });
+  assert.equal(result.status, "ok");
+  assert.equal(result.rows.length, 0);
+});
+
+test("buildWideImportRows accepts one controlled txt file", () => {
+  const result = wide.buildWideImportRows([
+    { filename: "one.txt", rawBytes: raw },
+  ], config, [context], { max_files_per_run: 1 });
+  assert.equal(result.status, "ok");
+  assert.equal(result.rows.length, 1);
+  assert.equal(result.duplicate_file_hashes.length, 0);
+});
+
+test("buildWideImportRows accepts maximum file count", () => {
+  const result = wide.buildWideImportRows([
+    { filename: "one.txt", rawBytes: variantRaw("027") },
+    { filename: "two.txt", rawBytes: variantRaw("028") },
+  ], config, [context, context], { max_files_per_run: 2 });
+  assert.equal(result.status, "ok");
+  assert.equal(result.rows.length, 2);
+});
+
+test("buildWideImportRows rejects maximum-plus-one file count", () => {
+  assert.throws(() => wide.buildWideImportRows([
+    { filename: "one.txt", rawBytes: variantRaw("029") },
+    { filename: "two.txt", rawBytes: variantRaw("030") },
+    { filename: "three.txt", rawBytes: variantRaw("031") },
+  ], config, [context, context, context], { max_files_per_run: 2 }), /maximum_files_per_run/);
+});
+
+test("buildWideImportRows enforces .txt extension", () => {
+  assert.throws(() => wide.buildWideImportRows([
+    { filename: "one.csv", rawBytes: raw },
+  ], config, [context], { max_files_per_run: 1 }), /only \.txt/);
+});
+
+test("buildWideImportRows enforces per-file size limit", () => {
+  assert.throws(() => wide.buildWideImportRows([
+    { filename: "one.txt", rawBytes: raw },
+  ], config, [context], { max_files_per_run: 1, max_raw_file_size_bytes: 10 }), /maximum raw file size/);
+});
+
+test("buildWideImportRows rejects duplicate source rows and reports duplicate file hash", () => {
+  const result = wide.buildWideImportRows([
+    { filename: "one.txt", rawBytes: raw },
+    { filename: "two.txt", rawBytes: raw },
+  ], config, [{ ...context, qbench_test_id: "TR-0001" }, { ...context, qbench_test_id: "TR-0002" }], { max_files_per_run: 2 });
+  assert.equal(result.status, "blocked");
+  assert.match(result.errors.join(" "), /Duplicate source_row_hash/);
+  assert.equal(result.duplicate_file_hashes.length, 1);
+});
+
+test("buildWideImportRows retains multiple legitimate injections for one Test ID without auto-selection", () => {
+  const result = wide.buildWideImportRows([
+    { filename: "one.txt", rawBytes: variantRaw("032") },
+    { filename: "two.txt", rawBytes: variantRaw("033") },
+  ], config, [
+    { ...context, qbench_test_id: "TR-SAME", run_order: 2 },
+    { ...context, qbench_test_id: "TR-SAME", run_order: 1 },
+  ], { max_files_per_run: 2 });
+  assert.equal(result.status, "ok");
+  assert.equal(result.rows.length, 2);
+  assert.equal(result.publish_selection_status, "decision_required");
+  assert.equal(result.rows[0].values.run_order, 1);
 });

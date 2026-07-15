@@ -12,6 +12,28 @@ The wide adapter creates one logical row for one LabSolutions injection.
 
 The generated write plan excludes `AF` and `AG`.
 
+## Source identity and multi-file behavior
+
+`source_row_hash` identifies the instrument source injection. It is built from
+controlled source-derived fields only: raw source file hash, LabSolutions sample
+name and sample ID, acquired time, vial, source data/method/sequence files,
+instrument name, detector ID, the ordered 23 analyte values, Dimethylacetamide,
+Compound Results count, and Peak Table count.
+
+QBench assignment fields are excluded from `source_row_hash`, including QBench
+Test ID, QBench Sample ID, product matrix, source batch ID, reviewer selection,
+and confirmation flags. The optional `assignment_hash` combines
+`source_row_hash` with QBench Test ID for traceability only; duplicate source
+row detection uses `source_row_hash`.
+
+`buildWideImportRows(fileInputs, config, contexts, securityLimits)` accepts
+multiple `.txt` files, enforces `maximum_files_per_run` and per-file size
+limits, parses one row per file, rejects duplicate `source_row_hash`, reports
+duplicate `source_file_hash`, sorts deterministically, and returns
+`publish_selection_status = decision_required` when multiple reviewed
+injections remain plausible for one Test ID. It never averages or selects a
+winner.
+
 ## Column map
 
 | Column | Field |

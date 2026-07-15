@@ -2,9 +2,12 @@
   "schema_version": 1,
   "adapter_version": "terpenes-reviewed-publish-adapter-v1",
   "status": "ok",
+  "expected_qbench_test_id": "TR-0001",
   "qbench_test_id": "TR-0001",
   "target_worksheet": "Publish",
+  "target_publish_row": 2,
   "range": "Publish!D2:AX2",
+  "source_row_hash": "cef4d2a0c117ae168d6431c3e918668870546c6d165e36fc5f971515249f4546",
   "excluded_formula_columns": [
     "AY",
     "AZ",
@@ -16,6 +19,9 @@
   "writes": [
     {
       "range": "Publish!D2:AX2",
+      "expected_qbench_test_id": "TR-0001",
+      "target_publish_row": 2,
+      "source_row_hash": "cef4d2a0c117ae168d6431c3e918668870546c6d165e36fc5f971515249f4546",
       "columns": [
         "D",
         "E",
@@ -107,8 +113,8 @@
         "REDACTED_GCFID_INSTRUMENT",
         "DET#2",
         "FID1",
-        "inj-1a9145b25f46e8b0",
-        "1a9145b25f46e8b0ba7e57b473500b9aeddbaa5d6d0d7c80889b153c59dd8899",
+        "inj-cef4d2a0c117ae16",
+        "cef4d2a0c117ae168d6431c3e918668870546c6d165e36fc5f971515249f4546",
         100,
         true,
         "Reviewed",
@@ -366,13 +372,13 @@
     {
       "column": "AS",
       "key": "import_row_id",
-      "value": "inj-1a9145b25f46e8b0",
+      "value": "inj-cef4d2a0c117ae16",
       "js_type": "string"
     },
     {
       "column": "AT",
       "key": "source_row_hash",
-      "value": "1a9145b25f46e8b0ba7e57b473500b9aeddbaa5d6d0d7c80889b153c59dd8899",
+      "value": "cef4d2a0c117ae168d6431c3e918668870546c6d165e36fc5f971515249f4546",
       "js_type": "string"
     },
     {

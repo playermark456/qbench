@@ -40,7 +40,20 @@ def validate_package() -> dict:
     require(all(col["js_type"] == "number" for col in row["columns"] if col["column"] >= "AH" and col["column"] <= "BD"), "AH:BD values must be numbers.")
     require(patch["status"] == "ok", "Expected publish preview patch to be valid.")
     require(patch["range"] == "Publish!D2:AX2", "Publish preview range must be D:AX.")
+    require(patch["expected_qbench_test_id"] == row["values"]["qbench_test_id"], "Publish patch must carry expected QBench Test ID.")
+    require(patch["target_publish_row"] == 2, "Publish patch must carry explicit target Publish row.")
+    require(patch["source_row_hash"] == row["values"]["source_row_hash"], "Publish patch must carry source_row_hash.")
     require(all(col not in patch["writes"][0]["columns"] for col in ["AY", "AZ", "BA", "BB", "BC", "BD"]), "Publish formula/control columns must not be written.")
+    require(row["context"]["labsolutions_conc_unit"] == "ug/mL", "Expected fixture row must preserve exact ug/mL unit.")
+    require(manifest["source_row_identity"]["source_derived_only"] is True, "source_row_hash must be source-derived only.")
+    require(manifest["source_row_identity"]["assignment_hash_used_for_duplicate_detection"] is False, "assignment_hash must not drive duplicate detection.")
+    require(manifest["reviewed_publish_contract"]["labsolutions_conc_unit_required_exact"] == "ug/mL", "Reviewed Publish contract must require exact ug/mL.")
+    require(manifest["reviewed_publish_contract"]["publish_row_mapping_key"] == "qbench_test_id", "Publish row mapping must be Test-ID based.")
+    require(manifest["reviewed_publish_contract"]["multi_row_preview_atomic"] is True, "Multi-row preview must be atomic.")
+    for sandbox_record in manifest["sandbox_evidence"].values():
+        require(sandbox_record["status"] == "not_recorded_in_repository", "Sandbox evidence must not claim untracked records.")
+        require(sandbox_record["path"] is None, "Unrecorded Sandbox evidence path must be null.")
+        require(sandbox_record["sha256"] is None, "Unrecorded Sandbox evidence sha256 must be null.")
 
     text_blobs = [
         path.read_text(encoding="utf-8")
@@ -74,6 +87,7 @@ def validate_package() -> dict:
         "wide_column_count": len(row["columns"]),
         "write_plan_blocks": len(row["write_plan"]["blocks"]),
         "publish_patch_range": patch["range"],
+        "source_row_hash": row["values"]["source_row_hash"],
     }
 
 
@@ -118,6 +132,13 @@ class ParserAdapterArtifactTests(unittest.TestCase):
         candidate = manifest["prompt4_candidate_hashes"]["candidate"]
         self.assertEqual(candidate["raw_sha256"], "f779d0175a7aec09eb5f57a778fde91cccf07bb7078a9573132547ee158da151")
         self.assertEqual(candidate["canonical_lf_sha256"], "e5c80b1213396cab4932e267fd786c6986c933d4b404f11daa5c5aba0629758e")
+
+    def test_manifest_records_sandbox_evidence_as_untracked(self) -> None:
+        manifest = load_json(DIST_DIR / "parser_adapter_manifest.json")
+        for record in manifest["sandbox_evidence"].values():
+            self.assertEqual(record["status"], "not_recorded_in_repository")
+            self.assertIsNone(record["path"])
+            self.assertIsNone(record["sha256"])
 
     def test_publish_patch_has_no_late_formula_columns(self) -> None:
         patch = load_json(BASE_DIR / "tests" / "fixtures" / "expected_publish_patch.json")

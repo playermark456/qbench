@@ -23,4 +23,9 @@
 - No automation was created or modified.
 - No Test Worksheet, Publish, QC Review, METRC, or key/value-store write is
   performed automatically.
+- No paste-ready native QBench parser candidate is created while runtime
+  contract evidence is missing.
+- Sandbox validation records are not claimed unless tracked in the repository;
+  the current manifest records Test Worksheet, Batch Worksheet, and end-to-end
+  parser validation as `not_recorded_in_repository`.
 - Prompt 5 was not started.

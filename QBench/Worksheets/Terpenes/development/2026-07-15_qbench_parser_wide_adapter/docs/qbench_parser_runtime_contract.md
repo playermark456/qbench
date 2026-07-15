@@ -25,7 +25,12 @@ The local wide adapter emits:
 
 The local reviewed Publish adapter emits:
 
-- A D:AX preview patch only after explicit reviewer selection.
+- A D:AX preview patch only after row-specific review evidence keyed by
+  `source_row_hash`.
+- Exact `labsolutions_conc_unit === "ug/mL"` validation; blank, case-changed,
+  or alternate units are blocked.
+- Explicit QBench Test ID to Publish-row mapping.
+- Atomic multi-row preview behavior with no partial write plan.
 - No AY or later formula/control writes.
 - No direct Test Worksheet, Publish worksheet, QC Review, COA, METRC, or
   automation execution.

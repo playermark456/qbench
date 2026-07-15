@@ -1,11 +1,13 @@
 {
   "schema_version": 1,
-  "fixture_strategy": "Generated in tests from the controlled redacted fixture plus different controlled contexts.",
+  "fixture_strategy": "Generated in tests from the controlled redacted fixture plus controlled source-file mutations and controlled contexts.",
   "covered_cases": [
-    "duplicate source-row hash rejected",
-    "duplicate source file hash recorded",
-    "two injections for one QBench Test ID remain separate",
+    "the same raw injection under different QBench Test IDs keeps the same source_row_hash",
+    "duplicate source_row_hash is rejected even when QBench Test ID changes",
+    "duplicate source_file_hash is reported",
+    "two genuinely different injections for one QBench Test ID remain separate",
     "multiple reviewed candidates for one Test ID require explicit selection",
+    "maximum_files_per_run is enforced at zero, one, maximum, and maximum-plus-one counts",
     "no automatic winner is selected"
   ]
 }

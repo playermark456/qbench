@@ -21,7 +21,12 @@ inactive/draft parser candidate is created.
 16. Confirm no QC Review write.
 17. Confirm no Terpenes Pass/Fail output or conclusion.
 18. Confirm malformed file rejection leaves no partial write.
-19. Confirm duplicate source file detection.
-20. Confirm multiple injections for one Test ID require explicit selection.
-21. Confirm reviewed-row Publish preview matches Prompt 4 D:AX contract.
-22. Confirm no production activation.
+19. Confirm the same source injection cannot be reused under another Test ID;
+    duplicate `source_row_hash` is blocked.
+20. Confirm duplicate source file hashes are reported.
+21. Confirm multiple legitimate injections for one Test ID require explicit
+    selection and do not auto-average or auto-select.
+22. Confirm reviewed-row Publish preview requires exact `ug/mL`,
+    row-specific review evidence, and QBench Test ID to Publish-row mapping.
+23. Confirm any invalid selected row blocks the entire multi-row preview.
+24. Confirm no production activation.

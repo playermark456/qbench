@@ -51,13 +51,26 @@ Controlled dependency hashes:
 | Prompt 4 layout config | `7f1270063f689f9cac94ee22e4f69b0ea7953a6f5dc86e1f6b4c00bb4bed7ef0` | `fe137404165a044907a7fe31a7cc386f53f402bb643dd94bf2fbffe958571410` | Canonical matches Prompt 4 manifest |
 | Prompt 4 import contract config | `7382a15789f8771b2888c908e69811898e5213454ec380d8efc68c0b7488b72a` | `b389c3d96447d6c3dfb5c879d3a624ce5f05bb39b16951305f609febe77f9a23` | Canonical matches Prompt 4 manifest |
 
+The Prompt 4 Batch candidate is controlled by the canonical LF hash. The raw
+Windows checkout hash mismatch is recorded and is not a dependency failure
+because canonical LF SHA-256 matches the controlled value.
+
 Baseline result summary:
 
 | Package | Result |
 |---|---|
 | Prompt 2 validation/parser/tests | Passed; 27 tests; fixture 24/34/23 |
 | Prompt 3 generator/validator/tests | Passed; generator hash matched; validator passed; 50 tests |
-| Prompt 4 generator/validator/tests | Generator canonical LF hash matched; LF scratch validator passed; stock unit suite ran 39 tests with 2 CRLF raw-hash failures in this checkout |
+| Prompt 4 generator/validator/tests | Passed during controlled baseline build; 39 tests; canonical LF hash matched the controlled Prompt 4 hash |
+| Prompt 4.5 JavaScript tests | Passed; 122 tests |
+| Prompt 4.5 Python tests | Passed; 11 tests |
 
-Sandbox validation records were present locally for both Prompt 3 and Prompt 4
-candidate packages. End-to-end parser Sandbox validation is still required.
+Sandbox validation evidence status in the generated manifest:
+
+| Validation record | Status | Path | SHA-256 |
+|---|---|---|---|
+| Test Worksheet Sandbox validation | `not_recorded_in_repository` | `null` | `null` |
+| Batch Worksheet Sandbox validation | `not_recorded_in_repository` | `null` | `null` |
+| End-to-end QBench parser validation | `not_recorded_in_repository` | `null` | `null` |
+
+Local untracked Sandbox notes are not used as generated evidence.

@@ -23,10 +23,12 @@ behavior, or numeric write semantics.
 
 - `src/labsolutions_ascii_core.js` parses LabSolutions ASCII exports with no
   external dependencies.
-- `src/wide_import_adapter.js` converts one parsed injection to one
-  Instrument Import A:BE logical row and write plan.
+- `src/wide_import_adapter.js` converts parsed injection files to Instrument
+  Import A:BE logical rows and write plans. `source_row_hash` is source-derived
+  only; QBench assignment context is excluded.
 - `src/reviewed_publish_adapter.js` creates a reviewed-row Publish D:AX preview
-  patch only after explicit selection and validation.
+  patch only after row-specific review evidence, exact `ug/mL` unit
+  confirmation, and explicit QBench Test ID to Publish-row mapping.
 - `src/qbench_file_parser_entry.template.js` documents the blocked QBench
   wrapper integration points.
 - `dist/` contains copied distribution JavaScript files, generated fixture JSON,
@@ -44,6 +46,9 @@ behavior, or numeric write semantics.
 - Instrument Import write blocks: `A:AE` and `AH:BE`
 - Formula-owned Instrument Import columns excluded: `AF`, `AG`
 - Publish preview range: `D:AX`
+- Source row hash: `cef4d2a0c117ae168d6431c3e918668870546c6d165e36fc5f971515249f4546`
+- JavaScript tests: 122
+- Python package tests: 11
 
 The parser never writes directly to the Test Worksheet, Publish, or QC Review.
 The reviewed Publish adapter is a preview transformation only; it is not Prompt
