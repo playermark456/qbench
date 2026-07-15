@@ -1,0 +1,25 @@
+ID#,Name,R.Time,Area,Height,Conc.,Curve,3rd,2nd,1st,Constant,Area Ratio,Height Ratio,Conc. %,Norm Conc.,internal_key,worksheet_label,reportable,retain_for_audit,configured_labsolutions_compound_id,_unconfigured_analyte
+1,Dimethylacetamide,5.635,201190,87973,100,Linear,0,0,0,0,1,1,11.036,11.036,dimethylacetamide,Dimethylacetamide,False,True,1,False
+2,alpha-Pinene,5.809,134208,52649,24.608,Linear,0,0,2.99236,-0.06927895,0.66707,0.598465,2.716,2.716,apinene,α-Pinene,True,False,2,False
+3,Camphene,6.22,131698,47036,24.217,Linear,0,0,2.971191,-0.06492606,0.654593,0.53467,2.672,2.672,camphene,Camphene,True,False,3,False
+4,beta-Myrcene,6.692,122439,43953,25.418,Linear,0,0,2.632827,-0.06064367,0.608572,0.499626,2.805,2.805,bmyrcene,β-Myrcene,True,False,4,False
+5,(-)-beta-Pinene,6.803,132033,43860,24.345,Linear,0,0,2.961397,-0.06467828,0.656261,0.498563,2.687,2.687,bpinene,(-)-β-pinene,True,False,5,False
+6,delta-3-Carene,7.383,140362,41370,23.937,Linear,0,0,3.216297,-0.07223298,0.697657,0.470264,2.642,2.642,delta3carene,Delta-3-carene,True,False,6,False
+7,alpha-Terpinene,7.62,94668,30256,18.121,Linear,0,0,2.952526,-0.06447868,0.470537,0.343923,2,2,aterpinene,α-Terpinene,True,False,7,False
+8,Ocimene 1,7.763,34193,10849,23.686,Linear,0,0,0.7930816,-0.0178933,0.169956,0.123322,2.614,2.614,cisocimene,cis-Ocimene,True,False,8,False
+9,D-Limonene,7.908,129120,39701,23.913,Linear,0,0,2.9529,-0.06433493,0.64178,0.451287,2.639,2.639,dlimonene,d-Limonene,True,False,9,False
+10,p-Cymene,8.001,130568,41038,23.284,Linear,0,0,3.033995,-0.05745874,0.648978,0.466488,2.57,2.57,pcymene,p-Cymene,True,False,10,False
+11,Ocimene 2,8.191,88344,26734,23.805,Linear,0,0,2.03406,-0.04509181,0.439107,0.30389,2.627,2.627,transocimene,trans-Ocimene,True,False,11,False
+12,Eucalyptol,8.297,99844,27564,23.569,Linear,0,0,2.30709,-0.04749467,0.496265,0.313319,2.601,2.601,eucalyptol,Eucalyptol,True,False,12,False
+13,Gamma terpinene,8.697,123249,35058,23.267,Linear,0,0,2.892055,-0.06029366,0.612599,0.398504,2.568,2.568,gterpinene,γ-Terpinene,True,False,13,False
+14,Terpinolene,9.569,105634,36934,20.898,Linear,0,0,2.83168,-0.06671818,0.525045,0.419837,2.306,2.306,terpinolene,Terpinolene,True,False,14,False
+15,Linalool,10.329,100543,43553,22.678,Linear,0,0,2.48561,-0.06395193,0.499743,0.495072,2.503,2.503,linalool,Linalool,True,False,15,False
+16,(-)-Isopulegol,11.325,87957,44293,21.578,Linear,0,0,2.279708,-0.05472895,0.437185,0.503488,2.381,2.381,isopulegol,(-)-Isopulegol,True,False,16,False
+17,Geraniol,12.465,88755,51604,21.302,Linear,0,0,2.345599,-0.05851728,0.441149,0.586586,2.351,2.351,geraniol,Geraniol,True,False,17,False
+18,beta-Caryophyllene,13.904,145002,83454,26.624,Linear,0,0,2.871534,-0.04378188,0.720721,0.948635,2.938,2.938,bcaryophyllene,β-Caryophyllene,True,False,18,False
+19,alpha-Humulene,14.157,116165,67623,22.495,Linear,0,0,2.774618,-0.0467583,0.577387,0.768677,2.482,2.482,ahumulene,α-Humulene,True,False,19,False
+20,Nerolidol 1,14.519,59501,28691,31.756,Linear,0,0,0.9649137,-0.01067578,0.295746,0.326135,3.505,3.505,cisnerolidol,cis-Nerolidol,True,False,20,False
+21,Nerolidol 2,14.697,69938,40202,25.004,Linear,0,0,1.430353,-0.01002828,0.34762,0.456979,2.759,2.759,transnerolidol,trans-Nerolidol,True,False,21,False
+22,(-)-Guaiol,15.113,134445,58264,31.204,Linear,0,0,2.379747,-0.07433985,0.668248,0.6623,3.444,3.444,guaiol,(-)-Guaiol,True,False,22,False
+23,Caryophyllene oxide,15.21,131824,65218,14.307,Linear,0,0,2.203852,0.3399077,0.655218,0.741346,1.579,1.579,caryophylleneoxide,Caryophyllene Oxide,True,False,23,False
+24,(-)-alpha-Bisabolol,15.692,1300220,209040,286.135,Linear,0,0,2.258391,0.0005882519,6.46263,2.37619,31.577,31.577,bisabolol,(-)-α-Bisabolol,True,False,24,False

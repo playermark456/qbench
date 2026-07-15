@@ -1,0 +1,25 @@
+source_id,source_name,internal_key,worksheet_label,reportable,labsolutions_conc,normalized_conc_percent_not_potency,norm_conc_not_potency
+1,Dimethylacetamide,dimethylacetamide,Dimethylacetamide,False,100,11.036,11.036
+2,alpha-Pinene,apinene,α-Pinene,True,24.608,2.716,2.716
+3,Camphene,camphene,Camphene,True,24.217,2.672,2.672
+4,beta-Myrcene,bmyrcene,β-Myrcene,True,25.418,2.805,2.805
+5,(-)-beta-Pinene,bpinene,(-)-β-pinene,True,24.345,2.687,2.687
+6,delta-3-Carene,delta3carene,Delta-3-carene,True,23.937,2.642,2.642
+7,alpha-Terpinene,aterpinene,α-Terpinene,True,18.121,2,2
+8,Ocimene 1,cisocimene,cis-Ocimene,True,23.686,2.614,2.614
+9,D-Limonene,dlimonene,d-Limonene,True,23.913,2.639,2.639
+10,p-Cymene,pcymene,p-Cymene,True,23.284,2.57,2.57
+11,Ocimene 2,transocimene,trans-Ocimene,True,23.805,2.627,2.627
+12,Eucalyptol,eucalyptol,Eucalyptol,True,23.569,2.601,2.601
+13,Gamma terpinene,gterpinene,γ-Terpinene,True,23.267,2.568,2.568
+14,Terpinolene,terpinolene,Terpinolene,True,20.898,2.306,2.306
+15,Linalool,linalool,Linalool,True,22.678,2.503,2.503
+16,(-)-Isopulegol,isopulegol,(-)-Isopulegol,True,21.578,2.381,2.381
+17,Geraniol,geraniol,Geraniol,True,21.302,2.351,2.351
+18,beta-Caryophyllene,bcaryophyllene,β-Caryophyllene,True,26.624,2.938,2.938
+19,alpha-Humulene,ahumulene,α-Humulene,True,22.495,2.482,2.482
+20,Nerolidol 1,cisnerolidol,cis-Nerolidol,True,31.756,3.505,3.505
+21,Nerolidol 2,transnerolidol,trans-Nerolidol,True,25.004,2.759,2.759
+22,(-)-Guaiol,guaiol,(-)-Guaiol,True,31.204,3.444,3.444
+23,Caryophyllene oxide,caryophylleneoxide,Caryophyllene Oxide,True,14.307,1.579,1.579
+24,(-)-alpha-Bisabolol,bisabolol,(-)-α-Bisabolol,True,286.135,31.577,31.577
