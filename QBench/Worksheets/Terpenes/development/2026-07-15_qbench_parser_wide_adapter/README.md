@@ -10,14 +10,18 @@ store configuration, production records, or Prompt 5.
 
 ## Status
 
-`qbench_native_status = blocked_missing_qbench_runtime_contract`
+`qbench_runtime_contract_status = insufficient_for_prompt_4_6`
+
+`qbench_native_status = blocked_missing_targeted_qbench_runtime_contract`
 
 The pure JavaScript parser core and adapters are complete and locally tested.
 The QBench Code File Parser wrapper is intentionally retained as
-`src/qbench_file_parser_entry.template.js` because repository evidence proves
-only the visible `importScripts` URL, not the exact parser entry point, input
-object, output API, worksheet-write API, error API, dry-run/transaction
-behavior, or numeric write semantics.
+`src/qbench_file_parser_entry.template.js`. Official documentation and current
+AIT tenant inspection now prove the base `run`/`QB`/`QBBatchService` model and
+current `file_parser.js` 1.1.0 / `qbjs.js` 2.7.0 imports. Spreadsheet named-range
+payloads, safe noncontiguous writes, triggering Batch context, numeric cell
+semantics, transaction/partial-write behavior, and a safe test method remain
+unproven. Prompt 4.6 and Prompt 5 have not started.
 
 ## Contents
 

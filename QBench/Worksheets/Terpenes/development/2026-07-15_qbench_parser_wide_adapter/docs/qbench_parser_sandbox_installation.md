@@ -2,7 +2,9 @@
 
 ## Current status
 
-`qbench_native_status = blocked_missing_qbench_runtime_contract`
+`qbench_runtime_contract_status = insufficient_for_prompt_4_6`
+
+`qbench_native_status = blocked_missing_targeted_qbench_runtime_contract`
 
 Do not create, paste, save, activate, run, or assign a Terpenes QBench Code File
 Parser from this package yet.
@@ -22,22 +24,26 @@ proved.
 
 ## Missing evidence
 
-Read-only QBench inspection must prove:
+The base wrapper and current AIT imports are proven. Only these targeted
+questions remain:
 
-- Code File Parser entry point.
-- Input file object and text/byte access.
-- Output and error APIs.
-- Worksheet write API and range targeting.
-- Dry-run or transaction behavior.
-- Numeric worksheet write semantics.
-- Safe `.txt` registration and assay assignment behavior.
+1. Does `QBBatchService.updateWorksheet` support Spreadsheet Worksheet named
+   cells and named ranges?
+2. Can `worksheetData` values contain a one-dimensional or two-dimensional
+   array for a named spreadsheet range?
+3. Can one update request safely write the two noncontiguous blocks
+   `Instrument Import!A:AE` and `Instrument Import!AH:BE` while leaving AF/AG
+   untouched?
+4. When triggered by a Batch attachment, how is the triggering Batch ID exposed
+   to the Code parser?
+5. Are JavaScript Number values written as actual numeric Spreadsheet Worksheet
+   cells recognized by `ISNUMBER` and `COUNT`?
+6. Is `updateWorksheet` transactional, staged, or capable of partial field
+   updates after an error?
+7. Is there a dry-run, preview, or disposable Sandbox testing method?
 
-## Next read-only investigation step
+## Next evidence step
 
-Inspect an existing Code File Parser such as parser ID 46 in QBench Sandbox
-without clicking Save, Create, Update, Activate, Run, Import, or Delete. Capture
-only visible runtime contract evidence: library import, entry function, input
-object access, output/write calls, and error handling.
-
-After that evidence is recorded, update the wrapper from the template and add a
-controlled runtime mock test before creating any Sandbox installation candidate.
+Obtain authoritative answers to the targeted support questions in
+`qbench_prompt_4_6_support_request.md`. Do not update the wrapper, create a
+candidate, or begin Prompt 4.6 until the remaining contract is sufficient.

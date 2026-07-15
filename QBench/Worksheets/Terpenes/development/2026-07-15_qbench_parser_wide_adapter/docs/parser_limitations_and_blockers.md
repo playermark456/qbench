@@ -2,10 +2,25 @@
 
 ## Blockers
 
-- Exact QBench Code File Parser runtime contract is not proven.
-- QBench write transactionality or dry-run behavior is not proven.
-- QBench JavaScript Number preservation during worksheet writes is not proven.
-- Safe range-targeted writes to Instrument Import A:AE and AH:BE are not proven.
+`qbench_runtime_contract_status = insufficient_for_prompt_4_6`
+
+The current AIT `run`/`QB`/`QBBatchService` model and current imports are now
+proven read-only. Only these targeted blockers remain:
+
+1. Does `QBBatchService.updateWorksheet` support Spreadsheet Worksheet named
+   cells and named ranges?
+2. Can `worksheetData` values contain a one-dimensional or two-dimensional
+   array for a named spreadsheet range?
+3. Can one update request safely write the two noncontiguous blocks
+   `Instrument Import!A:AE` and `Instrument Import!AH:BE` while leaving AF/AG
+   untouched?
+4. When triggered by a Batch attachment, how is the triggering Batch ID exposed
+   to the Code parser?
+5. Are JavaScript Number values written as actual numeric Spreadsheet Worksheet
+   cells recognized by `ISNUMBER` and `COUNT`?
+6. Is `updateWorksheet` transactional, staged, or capable of partial field
+   updates after an error?
+7. Is there a dry-run, preview, or disposable Sandbox testing method?
 
 ## Scientific and release limitations
 
