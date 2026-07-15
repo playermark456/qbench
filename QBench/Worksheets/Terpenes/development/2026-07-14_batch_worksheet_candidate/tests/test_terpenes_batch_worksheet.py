@@ -29,6 +29,15 @@ def load_fixture(name: str) -> dict:
     return json.loads((FIXTURE_DIR / name).read_text(encoding="utf-8"))
 
 
+def assert_fragments_in_order(testcase: unittest.TestCase, text: str, fragments: list[str]) -> None:
+    position = -1
+    for fragment in fragments:
+        next_position = text.find(fragment)
+        testcase.assertNotEqual(next_position, -1, f"Missing fragment: {fragment}")
+        testcase.assertGreater(next_position, position, f"Out-of-order fragment: {fragment}")
+        position = next_position
+
+
 class TerpenesBatchWorksheetCandidateTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -252,6 +261,46 @@ class TerpenesBatchWorksheetCandidateTests(unittest.TestCase):
                 duplicate_ids = set(case.get("duplicate_ids", []))
                 self.assertEqual(reference.publish_row_message(row, duplicate_ids), case["expected_message"])
 
+    def test_publish_message_specific_audit_messages_are_reachable(self) -> None:
+        cases = [
+            ("dimethylacetamide_conc", "text", "Dimethylacetamide audit value required"),
+            ("compound_results_complete", False, "Compound Results validation required"),
+            ("integration_review_status", "Not Reviewed", "Integration review required"),
+            ("import_validation_status", "Review Required", "Import validation required"),
+            ("source_file_hash", "", "Source traceability incomplete"),
+        ]
+        for field, value, expected in cases:
+            with self.subTest(field=field):
+                row = self.publish_row()
+                row[field] = value
+                self.assertEqual(reference.publish_row_message(row, set()), expected)
+
+    def test_publish_message_formula_matches_reference_decision_order(self) -> None:
+        formula = self.worksheets["Publish"]["data"][1][55]
+        assert_fragments_in_order(
+            self,
+            formula,
+            [
+                '"Duplicate Test ID"',
+                '"Analytical values incomplete"',
+                '"Sample mass required"',
+                '"Final volume required"',
+                '"Dilution mode required"',
+                '"Dilution factor required"',
+                '"Unit confirmation required"',
+                '"Preparation confirmation required"',
+                '"Dimethylacetamide audit value required"',
+                '"Compound Results validation required"',
+                '"Integration review required"',
+                '"Import validation required"',
+                '"Source traceability incomplete"',
+                '"Batch QC on hold"',
+                '"Batch release review required"',
+                '"Ready for transfer"',
+            ],
+        )
+        self.assertLess(formula.index('"Import validation required"'), formula.index('"Source traceability incomplete"'))
+
     def test_all_zero_publish_row_is_valid(self) -> None:
         row = self.publish_row("valid_all_zero_unknown_row")
         self.assertTrue(reference.row_prerequisites_complete(row, set()))
@@ -450,6 +499,46 @@ class TerpenesBatchWorksheetCandidateTests(unittest.TestCase):
                 values = {**base, **case.get("updates", {})}
                 self.assertEqual(reference.batch_publish_ready(**values), case["expected_ready"])
                 self.assertEqual(reference.batch_publish_message(**values), case["expected_message"])
+
+    def test_duplicate_message_precedes_generic_publish_rows_incomplete(self) -> None:
+        row = self.publish_row()
+        self.assertEqual(reference.publish_row_message(row, {"TR-0001"}), "Duplicate Test ID")
+
+        duplicate_batch = {
+            "run_setup_is_complete": True,
+            "integration_review_is_complete": True,
+            "qc_review_is_complete": True,
+            "all_publish_rows_are_valid": False,
+            "duplicate_test_id_count": 1,
+            "populated_publish_row_count": 1,
+            "batch_qc_disposition": "Accepted",
+        }
+        self.assertEqual(reference.batch_publish_message(**duplicate_batch), "Duplicate Test ID")
+
+        incomplete_batch = dict(duplicate_batch)
+        incomplete_batch["duplicate_test_id_count"] = 0
+        self.assertEqual(reference.batch_publish_message(**incomplete_batch), "Publish rows incomplete")
+
+        no_rows_batch = dict(incomplete_batch)
+        no_rows_batch["populated_publish_row_count"] = 0
+        self.assertEqual(reference.batch_publish_message(**no_rows_batch), "No Publish rows")
+
+    def test_batch_message_formula_matches_reference_decision_order(self) -> None:
+        formula = self.worksheets["QC Review"]["data"][18][1]
+        assert_fragments_in_order(
+            self,
+            formula,
+            [
+                '"Run setup incomplete"',
+                '"Integration review incomplete"',
+                '"QC review incomplete"',
+                '"Duplicate Test ID"',
+                '"No Publish rows"',
+                '"Publish rows incomplete"',
+                '"Batch QC on hold"',
+                '"Ready for transfer"',
+            ],
+        )
 
     def test_batch_publish_requires_accepted_disposition(self) -> None:
         for disposition in ["Hold", "Rejected"]:

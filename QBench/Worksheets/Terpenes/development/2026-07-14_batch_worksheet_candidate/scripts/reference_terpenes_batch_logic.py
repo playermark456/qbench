@@ -423,12 +423,12 @@ def batch_publish_message(
         return "Integration review incomplete"
     if not qc_review_is_complete:
         return "QC review incomplete"
-    if not all_publish_rows_are_valid:
-        return "Publish rows incomplete"
     if duplicate_test_id_count > 0:
         return "Duplicate Test ID"
     if populated_publish_row_count <= 0:
         return "No Publish rows"
+    if not all_publish_rows_are_valid:
+        return "Publish rows incomplete"
     if batch_qc_disposition != "Accepted":
         return "Batch QC on hold"
     return "Ready for transfer"

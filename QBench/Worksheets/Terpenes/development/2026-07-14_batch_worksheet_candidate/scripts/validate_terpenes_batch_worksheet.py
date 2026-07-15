@@ -154,6 +154,17 @@ def fail(message: str) -> None:
     raise CandidateValidationError(message)
 
 
+def assert_fragment_order(text: str, fragments: list[str], label: str) -> None:
+    position = -1
+    for fragment in fragments:
+        next_position = text.find(fragment)
+        if next_position == -1:
+            fail(f"{label} is missing expected fragment: {fragment}")
+        if next_position <= position:
+            fail(f"{label} has incorrect diagnostic order at fragment: {fragment}")
+        position = next_position
+
+
 def workbook_tabs(workbook: dict[str, Any]) -> list[str]:
     return [worksheet["worksheetName"] for worksheet in workbook["config"]["worksheets"]]
 
@@ -405,6 +416,44 @@ def validate_formulas(workbook: dict[str, Any]) -> None:
         fail("LCS not_required status must require controlled-source and reviewer fields.")
     if '"Run setup incomplete"' not in worksheet_by_name(workbook)["QC Review"]["data"][18][1]:
         fail("batch_publish_message must report run setup incomplete first.")
+    publish_message = worksheet_by_name(workbook)["Publish"]["data"][1][55]
+    assert_fragment_order(
+        publish_message,
+        [
+            '"Duplicate Test ID"',
+            '"Analytical values incomplete"',
+            '"Sample mass required"',
+            '"Final volume required"',
+            '"Dilution mode required"',
+            '"Dilution factor required"',
+            '"Unit confirmation required"',
+            '"Preparation confirmation required"',
+            '"Dimethylacetamide audit value required"',
+            '"Compound Results validation required"',
+            '"Integration review required"',
+            '"Import validation required"',
+            '"Source traceability incomplete"',
+            '"Batch QC on hold"',
+            '"Batch release review required"',
+            '"Ready for transfer"',
+        ],
+        "Publish Message formula",
+    )
+    batch_message = worksheet_by_name(workbook)["QC Review"]["data"][18][1]
+    assert_fragment_order(
+        batch_message,
+        [
+            '"Run setup incomplete"',
+            '"Integration review incomplete"',
+            '"QC review incomplete"',
+            '"Duplicate Test ID"',
+            '"No Publish rows"',
+            '"Publish rows incomplete"',
+            '"Batch QC on hold"',
+            '"Ready for transfer"',
+        ],
+        "batch_publish_message formula",
+    )
     import_formula = worksheet_by_name(workbook)["Instrument Import"]["data"][1][32]
     for fragment in [
         "ISNUMBER(X2)<>TRUE",

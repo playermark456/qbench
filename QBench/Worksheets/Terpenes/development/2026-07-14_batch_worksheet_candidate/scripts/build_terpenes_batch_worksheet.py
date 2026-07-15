@@ -261,7 +261,7 @@ QC_CONTROL_ROWS = [
     ),
     (
         "batch_publish_message",
-        '=IF(\'Run Setup\'!$B$24<>TRUE,"Run setup incomplete",IF($B$9<>TRUE,"Integration review incomplete",IF($B$11<>TRUE,"QC review incomplete",IF($B$12<>TRUE,"Publish rows incomplete",IF($B$13>0,"Duplicate Test ID",IF($B$14<=0,"No Publish rows",IF($B$15<>"Accepted","Batch QC on hold","Ready for transfer")))))))',
+        '=IF(\'Run Setup\'!$B$24<>TRUE,"Run setup incomplete",IF($B$9<>TRUE,"Integration review incomplete",IF($B$11<>TRUE,"QC review incomplete",IF($B$13>0,"Duplicate Test ID",IF($B$14<=0,"No Publish rows",IF($B$12<>TRUE,"Publish rows incomplete",IF($B$15<>"Accepted","Batch QC on hold","Ready for transfer")))))))',
         "First neutral batch release message",
     ),
 ]
@@ -724,11 +724,11 @@ def publish_message_formula(row: int) -> str:
         f'IF(AND(AD{row}="apply_in_qbench",OR(ISNUMBER(AC{row})<>TRUE,AC{row}<=0)),"Dilution factor required",'
         f'IF(OR(AE{row}<>"ug/mL",AF{row}<>"TRUE"),"Unit confirmation required",'
         f'IF(AG{row}<>"TRUE","Preparation confirmation required",'
-        f'IF(BA{row}<>TRUE,"Source traceability incomplete",'
         f'IF(ISNUMBER(AU{row})<>TRUE,"Dimethylacetamide audit value required",'
         f'IF(AV{row}<>"TRUE","Compound Results validation required",'
         f'IF(AW{row}<>"Reviewed","Integration review required",'
         f'IF(AX{row}<>"Valid","Import validation required",'
+        f'IF(BA{row}<>TRUE,"Source traceability incomplete",'
         f'IF(AY{row}<>"Accepted","Batch QC on hold",'
         f'IF(\'QC Review\'!$B$18<>TRUE,"Batch release review required","Ready for transfer"))))))))))))))))'
     )
