@@ -31,6 +31,10 @@ Date: 2026-07-14
 | `run_setup_complete` | `Run Setup!B24` | formula |
 | `run_setup_message` | `Run Setup!B25` | formula |
 
+Required Run Setup fields are `batch_qbench_id`, `analytical_batch_id`, `batch_assay_name`, `run_instrument_name`, `run_detector_id`, `run_detector_name`, `run_method_file`, `run_sequence_file`, `run_analyst`, `run_start`, `run_end`, `parser_version`, `raw_ascii_attachment_reference`, `raw_batch_manifest_hash`, `run_setup_reviewed_by`, and `run_setup_reviewed_at`.
+
+Optional Run Setup fields are `run_column`, `run_carrier_gas`, `calibration_id`, `standard_lot`, `extraction_solvent_lot`, and `source_package_version`.
+
 ## Instrument Import ranges
 
 | Named range | Range | Purpose |
@@ -49,19 +53,22 @@ Date: 2026-07-14
 | `qc_config_version` | `QC Review!B2` | `2026-07-14-prompt4` |
 | `bracketing_ccv_criterion_status` | `QC Review!B3` | `decision_required` |
 | `bracketing_ccv_accuracy_percent_window` | `QC Review!B4` | blank |
-| `qc_configuration_complete` | `QC Review!B5` | formula false by default |
-| `integration_review_complete` | `QC Review!B6` | formula false by default |
-| `qc_data_complete` | `QC Review!B7` | formula false by default |
-| `qc_review_complete` | `QC Review!B8` | formula false by default |
-| `all_publish_rows_valid` | `QC Review!B9` | formula false by default |
-| `duplicate_test_id_count` | `QC Review!B10` | formula |
-| `populated_publish_row_count` | `QC Review!B11` | formula |
-| `batch_qc_disposition` | `QC Review!B12` | `Hold` |
-| `batch_qc_reviewer` | `QC Review!B13` | blank |
-| `batch_qc_reviewed_at` | `QC Review!B14` | blank |
-| `batch_publish_ready` | `QC Review!B15` | formula false by default |
-| `batch_publish_message` | `QC Review!B16` | formula |
-| `terpenes_batch_qc_table` | `QC Review!A19:X42` | 23-analyte QC table |
+| `lcs_requirement_status` | `QC Review!B5` | `decision_required` |
+| `lcs_requirement_controlled_source` | `QC Review!B6` | blank |
+| `lcs_requirement_reviewed_by` | `QC Review!B7` | blank |
+| `qc_configuration_complete` | `QC Review!B8` | formula false by default |
+| `integration_review_complete` | `QC Review!B9` | formula false by default |
+| `qc_data_complete` | `QC Review!B10` | formula false by default |
+| `qc_review_complete` | `QC Review!B11` | formula false by default |
+| `all_publish_rows_valid` | `QC Review!B12` | formula false by default |
+| `duplicate_test_id_count` | `QC Review!B13` | formula |
+| `populated_publish_row_count` | `QC Review!B14` | formula |
+| `batch_qc_disposition` | `QC Review!B15` | `Hold` |
+| `batch_qc_reviewer` | `QC Review!B16` | blank |
+| `batch_qc_reviewed_at` | `QC Review!B17` | blank |
+| `batch_publish_ready` | `QC Review!B18` | formula false by default |
+| `batch_publish_message` | `QC Review!B19` | formula |
+| `terpenes_batch_qc_table` | `QC Review!A22:X45` | 23-analyte QC table |
 
 ## Publish named ranges
 
@@ -96,3 +103,9 @@ Date: 2026-07-14
 | `Publish!D2:Z87` | 23 raw instrument concentration channels | Yes |
 | `Publish!AA2:AX87` | Sample prep, source traceability, audit, and import status fields | Yes |
 | `Publish!AY2:BD87` | Batch disposition, row gates, Publish Ready, and first message formulas | No |
+
+## Controlled Publish column-contract decision
+
+Publish column A is intentionally `QBench Test ID`, and Publish column B is intentionally `QBench Sample ID`. This is a controlled deviation from the original draft Prompt 4 column list because QBench Test ID is the Prompt 5 join key and the active source Test ID placeholder is preserved in column A.
+
+The named-range and source-contract mapping is the authoritative Prompt 5 interface. The package does not claim exact column-order compliance with the earlier draft list.

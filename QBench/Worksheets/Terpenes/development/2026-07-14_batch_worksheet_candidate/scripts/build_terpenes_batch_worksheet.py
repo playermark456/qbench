@@ -63,7 +63,7 @@ PUBLISH_TAB_NAME = "Publish"
 
 IMPORT_CAPACITY = 200
 PUBLISH_HEADER_ROW_COUNT = 1
-QC_TABLE_START_ROW = 19
+QC_TABLE_START_ROW = 22
 
 SAMPLE_TYPES = [
     "Calibration Standard",
@@ -91,6 +91,51 @@ INTERNAL_QC_EVALUATION_VALUES = [
     "not_applicable",
     "review_required",
 ]
+BRACKETING_CCV_CRITERION_STATUS_VALUES = ["decision_required", "confirmed"]
+LCS_REQUIREMENT_STATUS_VALUES = ["decision_required", "required", "not_required"]
+
+RUN_SETUP_REQUIRED_FIELDS = [
+    ("batch_qbench_id", "$B$2", "QBench batch ID required"),
+    ("analytical_batch_id", "$B$3", "Analytical batch ID required"),
+    ("batch_assay_name", "$B$4", "Batch assay name must be Terpenes"),
+    ("run_instrument_name", "$B$5", "Instrument name required"),
+    ("run_detector_id", "$B$6", "Detector ID required"),
+    ("run_detector_name", "$B$7", "Detector name required"),
+    ("run_method_file", "$B$8", "Method file required"),
+    ("run_sequence_file", "$B$9", "Sequence file required"),
+    ("run_analyst", "$B$12", "Analyst required"),
+    ("run_start", "$B$13", "Run start required"),
+    ("run_end", "$B$14", "Run end required"),
+    ("parser_version", "$B$18", "Parser version required"),
+    ("raw_ascii_attachment_reference", "$B$20", "Raw ASCII attachment reference required"),
+    ("raw_batch_manifest_hash", "$B$21", "Raw batch manifest hash required"),
+    ("run_setup_reviewed_by", "$B$22", "Run setup reviewer required"),
+    ("run_setup_reviewed_at", "$B$23", "Run setup review time required"),
+]
+RUN_SETUP_OPTIONAL_FIELDS = [
+    "run_column",
+    "run_carrier_gas",
+    "calibration_id",
+    "standard_lot",
+    "extraction_solvent_lot",
+    "source_package_version",
+]
+
+
+def run_setup_complete_formula() -> str:
+    checks = [
+        '$B$4="Terpenes"' if field == "batch_assay_name" else f"{cell}<>\"\""
+        for field, cell, _message in RUN_SETUP_REQUIRED_FIELDS
+    ]
+    return f'=IF(AND({",".join(checks)}),TRUE,FALSE)'
+
+
+def run_setup_message_formula() -> str:
+    result = '"Run setup complete"'
+    for field, cell, message in reversed(RUN_SETUP_REQUIRED_FIELDS):
+        condition = f'{cell}<>"Terpenes"' if field == "batch_assay_name" else f'{cell}=""'
+        result = f'IF({condition},"{message}",{result})'
+    return f"={result}"
 
 RUN_SETUP_FIELDS = [
     ("batch_qbench_id", "", "QBench batch ID or display ID"),
@@ -117,12 +162,12 @@ RUN_SETUP_FIELDS = [
     ("run_setup_reviewed_at", "", "Required review timestamp"),
     (
         "run_setup_complete",
-        '=IF(AND($B$3<>"",$B$4<>"",$B$5<>"",$B$6<>"",$B$7<>"",$B$8<>"",$B$11<>"",$B$12<>"",$B$13<>"",$B$20<>"",$B$21<>"",$B$22<>""),TRUE,FALSE)',
+        run_setup_complete_formula(),
         "Formula gate only; not laboratory approval",
     ),
     (
         "run_setup_message",
-        '=IF($B$3="","Analytical batch ID required",IF($B$4="","Instrument required",IF($B$7="","Method file required",IF($B$8="","Sequence file required",IF($B$11="","Analyst required",IF(OR($B$12="",$B$13=""),"Run time required",IF($B$20="","Source manifest required",IF(OR($B$21="",$B$22=""),"Run setup review required","Run setup complete"))))))))',
+        run_setup_message_formula(),
         "First neutral run setup message",
     ),
 ]
@@ -168,10 +213,13 @@ QC_CONTROL_ROWS = [
     ("qc_config_version", "2026-07-14-prompt4", "Prompt 2 QC config version used"),
     ("bracketing_ccv_criterion_status", "decision_required", "Known unresolved criterion"),
     ("bracketing_ccv_accuracy_percent_window", "", "Blank until method owner decision"),
+    ("lcs_requirement_status", "decision_required", "Allowed: decision_required, required, not_required"),
+    ("lcs_requirement_controlled_source", "", "Controlled source supporting not_required status"),
+    ("lcs_requirement_reviewed_by", "", "Reviewer decision supporting not_required status"),
     (
         "qc_configuration_complete",
-        '=IF(AND($B$3<>"decision_required",OR($B$3="not_applicable",ISNUMBER($B$4))),TRUE,FALSE)',
-        "False while bracketing CCV is unresolved",
+        '=IF(AND($B$3="confirmed",ISNUMBER($B$4),$B$4>0,$B$5="not_required",$B$6<>"",$B$7<>""),TRUE,FALSE)',
+        "False while bracketing CCV or LCS requirement is unresolved",
     ),
     (
         "integration_review_complete",
@@ -180,17 +228,17 @@ QC_CONTROL_ROWS = [
     ),
     (
         "qc_data_complete",
-        '=IF(AND(COUNTIF(W20:W42,"not_evaluated")=0,COUNTIF(W20:W42,"review_required")=0),TRUE,FALSE)',
-        "All analyte QC rows evaluated",
+        '=IF(AND(COUNTIF(W23:W45,"not_evaluated")=0,COUNTIF(W23:W45,"review_required")=0),TRUE,FALSE)',
+        "All required analyte QC raw values are numeric or explicitly approved not applicable",
     ),
     (
         "qc_review_complete",
-        '=IF(AND($B$7=TRUE,COUNTIF(W20:W42,"decision_required")=0,$B$13<>"",$B$14<>""),TRUE,FALSE)',
-        "QC data reviewed with no release-blocking decision",
+        '=IF(AND($B$8=TRUE,$B$10=TRUE,COUNTIF(W23:W45,"within_criteria")=23,COUNTIF(W23:W45,"not_applicable")=0,COUNTIF(W23:W45,"outside_criteria")=0,COUNTIF(W23:W45,"decision_required")=0,COUNTIF(W23:W45,"not_evaluated")=0,COUNTIF(W23:W45,"review_required")=0,$B$16<>"",$B$17<>""),TRUE,FALSE)',
+        "QC reviewed with no out-of-criteria, unresolved, or unevaluated analytes",
     ),
     (
         "all_publish_rows_valid",
-        '=IF(AND($B$11>0,COUNTIF(Publish!BB2:BB87,FALSE)=0),TRUE,FALSE)',
+        '=IF(AND($B$14>0,COUNTIF(Publish!BB2:BB87,FALSE)=0),TRUE,FALSE)',
         "All populated Publish rows meet row prerequisites",
     ),
     (
@@ -208,12 +256,12 @@ QC_CONTROL_ROWS = [
     ("batch_qc_reviewed_at", "", "Required review timestamp before release"),
     (
         "batch_publish_ready",
-        '=IF(AND($B$5=TRUE,$B$6=TRUE,$B$7=TRUE,$B$8=TRUE,$B$9=TRUE,$B$10=0,$B$12="Accepted",$B$13<>"",$B$14<>""),TRUE,FALSE)',
+        '=IF(AND(\'Run Setup\'!$B$24=TRUE,$B$9=TRUE,$B$11=TRUE,$B$12=TRUE,$B$13=0,$B$14>0,$B$15="Accepted"),TRUE,FALSE)',
         "Batch release gate; false by default",
     ),
     (
         "batch_publish_message",
-        '=IF($B$5<>TRUE,"QC configuration incomplete",IF($B$6<>TRUE,"Integration review incomplete",IF($B$7<>TRUE,"QC data incomplete",IF($B$8<>TRUE,"QC review incomplete",IF($B$9<>TRUE,"Publish rows incomplete",IF($B$10>0,"Duplicate Test ID",IF($B$12<>"Accepted","Batch QC on hold",IF(OR($B$13="",$B$14=""),"Batch release review required","Ready for transfer"))))))))',
+        '=IF(\'Run Setup\'!$B$24<>TRUE,"Run setup incomplete",IF($B$9<>TRUE,"Integration review incomplete",IF($B$11<>TRUE,"QC review incomplete",IF($B$12<>TRUE,"Publish rows incomplete",IF($B$13>0,"Duplicate Test ID",IF($B$14<=0,"No Publish rows",IF($B$15<>"Accepted","Batch QC on hold","Ready for transfer")))))))',
         "First neutral batch release message",
     ),
 ]
@@ -397,25 +445,48 @@ def import_headers(analytes: list[dict[str, Any]]) -> list[str]:
 def import_issue_formula(row: int) -> str:
     analyte_range = f"AH{row}:BD{row}"
     sample_type_check = "OR(" + ",".join(f'D{row}="{value}"' for value in SAMPLE_TYPES) + ")"
-    return (
-        f'=IF(A{row}="","",'
-        f'IF({sample_type_check}<>TRUE,"Sample type required",'
-        f'IF(AND(OR(D{row}="Unknown",D{row}="Dilution"),E{row}=""),"QBench Test ID required",'
-        f'IF(AND(H{row}<>"",OR(ISNUMBER(H{row})<>TRUE,H{row}<=0)),"Sample mass required",'
-        f'IF(AND(I{row}<>"",OR(ISNUMBER(I{row})<>TRUE,I{row}<=0)),"Final volume required",'
-        f'IF(AND(K{row}<>"",K{row}<>"already_applied_by_labsolutions",K{row}<>"apply_in_qbench"),"Dilution mode required",'
-        f'IF(AND(K{row}="apply_in_qbench",OR(ISNUMBER(J{row})<>TRUE,J{row}<=0)),"Dilution factor required",'
-        f'IF(X{row}<>24,"Compound Results row count required",'
-        f'IF(Z{row}<>23,"Reportable analyte count required",'
-        f'IF(AND(OR(D{row}="Unknown",D{row}="Dilution"),COUNT({analyte_range})<>23),"Analytical values incomplete",'
-        f'IF(ISNUMBER(AA{row})<>TRUE,"Dimethylacetamide audit value required",'
-        f'IF(AND(AC{row}<>"No",AC{row}<>"Yes"),"Manual integration value required",'
-        f'IF(AND(AC{row}="Yes",AD{row}=""),"Integration reason required",'
-        f'IF(AND(AE{row}<>"Not Reviewed",AE{row}<>"Reviewed",AE{row}<>"Review Required"),"Integration review required",'
-        f'IF(AND(OR(AB{row}>0,AC{row}="Yes"),AE{row}<>"Reviewed"),"Integration review required",'
-        f'IF(OR(N{row}="",O{row}="",P{row}="",Q{row}="",R{row}="",T{row}="",U{row}="",V{row}="",W{row}="",BE{row}=""),"Source traceability incomplete",'
-        f'"Import row valid")))))))))))))))))'
-    )
+    checks = [
+        (f"{sample_type_check}<>TRUE", "Sample type required"),
+        (f'AND(OR(D{row}="Unknown",D{row}="Dilution"),E{row}="")', "QBench Test ID required"),
+        (f'AND(H{row}<>"",ISNUMBER(H{row})<>TRUE)', "Sample mass required"),
+        (f"AND(ISNUMBER(H{row}),H{row}<=0)", "Sample mass required"),
+        (f'AND(I{row}<>"",ISNUMBER(I{row})<>TRUE)', "Final volume required"),
+        (f"AND(ISNUMBER(I{row}),I{row}<=0)", "Final volume required"),
+        (
+            f'AND(K{row}<>"",K{row}<>"already_applied_by_labsolutions",K{row}<>"apply_in_qbench")',
+            "Dilution mode required",
+        ),
+        (f'AND(K{row}="apply_in_qbench",ISNUMBER(J{row})<>TRUE)', "Dilution factor required"),
+        (f'AND(K{row}="apply_in_qbench",ISNUMBER(J{row}),J{row}<=0)', "Dilution factor required"),
+        (f"ISNUMBER(X{row})<>TRUE", "Compound Results row count required"),
+        (f"X{row}<>24", "Compound Results row count required"),
+        (f"ISNUMBER(Y{row})<>TRUE", "Peak Table row count required"),
+        (f"Y{row}<0", "Peak Table row count required"),
+        (f"ISNUMBER(Z{row})<>TRUE", "Reportable analyte count required"),
+        (f"Z{row}<>23", "Reportable analyte count required"),
+        (f"ISNUMBER(AA{row})<>TRUE", "Dimethylacetamide audit value required"),
+        (f"ISNUMBER(AB{row})<>TRUE", "Unknown peak count required"),
+        (f"AB{row}<0", "Unknown peak count required"),
+        (
+            f'AND(OR(D{row}="Unknown",D{row}="Dilution"),COUNT({analyte_range})<>23)',
+            "Analytical values incomplete",
+        ),
+        (f'AND(AC{row}<>"No",AC{row}<>"Yes")', "Manual integration value required"),
+        (f'AND(AC{row}="Yes",AD{row}="")', "Integration reason required"),
+        (
+            f'AND(AE{row}<>"Not Reviewed",AE{row}<>"Reviewed",AE{row}<>"Review Required")',
+            "Integration review required",
+        ),
+        (f'AND(OR(AB{row}>0,AC{row}="Yes"),AE{row}<>"Reviewed")', "Integration review required"),
+        (
+            f'OR(N{row}="",O{row}="",P{row}="",Q{row}="",R{row}="",T{row}="",U{row}="",V{row}="",W{row}="",BE{row}="")',
+            "Source traceability incomplete",
+        ),
+    ]
+    result = '"Import row valid"'
+    for condition, message in reversed(checks):
+        result = f'IF({condition},"{message}",{result})'
+    return f'=IF(A{row}="","",{result})'
 
 
 def import_status_formula(row: int) -> str:
@@ -423,7 +494,8 @@ def import_status_formula(row: int) -> str:
         f'=IF(A{row}="","",'
         f'IF(OR(AG{row}="Sample type required",AG{row}="QBench Test ID required",'
         f'AG{row}="Compound Results row count required",AG{row}="Reportable analyte count required",'
-        f'AG{row}="Analytical values incomplete",AG{row}="Dimethylacetamide audit value required"),'
+        f'AG{row}="Peak Table row count required",AG{row}="Analytical values incomplete",'
+        f'AG{row}="Dimethylacetamide audit value required",AG{row}="Unknown peak count required"),'
         f'"Rejected",IF(AG{row}="Import row valid","Valid","Review Required")))'
     )
 
@@ -484,34 +556,44 @@ def build_import_tab(analytes: list[dict[str, Any]]) -> tuple[list[list[Any]], l
 def eval_between(value_cell: str, low: Any, high: Any) -> str:
     return (
         f'=IF({value_cell}="","not_evaluated",'
-        f'IF(AND(ISNUMBER({value_cell}),{value_cell}>={low},{value_cell}<={high}),'
-        f'"within_criteria","outside_criteria"))'
+        f'IF(ISNUMBER({value_cell})<>TRUE,"review_required",'
+        f'IF(AND({value_cell}>={low},{value_cell}<={high}),"within_criteria","outside_criteria")))'
     )
 
 
 def eval_max(value_cell: str, maximum: Any) -> str:
     return (
         f'=IF({value_cell}="","not_evaluated",'
-        f'IF(AND(ISNUMBER({value_cell}),{value_cell}<={maximum}),'
-        f'"within_criteria","outside_criteria"))'
+        f'IF(ISNUMBER({value_cell})<>TRUE,"review_required",'
+        f'IF({value_cell}<={maximum},"within_criteria","outside_criteria")))'
     )
 
 
 def eval_min(value_cell: str, minimum: Any) -> str:
     return (
         f'=IF({value_cell}="","not_evaluated",'
-        f'IF(AND(ISNUMBER({value_cell}),{value_cell}>={minimum}),'
-        f'"within_criteria","outside_criteria"))'
+        f'IF(ISNUMBER({value_cell})<>TRUE,"review_required",'
+        f'IF({value_cell}>={minimum},"within_criteria","outside_criteria")))'
+    )
+
+
+def eval_nonnegative_max(value_cell: str, maximum: Any) -> str:
+    return (
+        f'=IF({value_cell}="","not_evaluated",'
+        f'IF(ISNUMBER({value_cell})<>TRUE,"review_required",'
+        f'IF(AND({value_cell}>=0,{value_cell}<={maximum}),"within_criteria","outside_criteria")))'
     )
 
 
 def bracketing_eval_formula(row: int) -> str:
     return (
         f'=IF($B$3="decision_required","decision_required",'
+        f'IF($B$3<>"confirmed","review_required",'
+        f'IF(OR($B$4="",ISNUMBER($B$4)<>TRUE,$B$4<=0),"decision_required",'
         f'IF(Q{row}="","not_evaluated",'
-        f'IF(OR($B$4="",ISNUMBER($B$4)<>TRUE),"decision_required",'
-        f'IF(AND(ISNUMBER(Q{row}),Q{row}>=(100-$B$4),Q{row}<=(100+$B$4)),'
-        f'"within_criteria","outside_criteria"))))'
+        f'IF(ISNUMBER(Q{row})<>TRUE,"review_required",'
+        f'IF(AND(Q{row}>=(100-$B$4),Q{row}<=(100+$B$4)),'
+        f'"within_criteria","outside_criteria"))))))'
     )
 
 
@@ -540,14 +622,14 @@ def build_qc_review_tab(analytes: list[dict[str, Any]]) -> tuple[list[list[Any]]
         row = QC_TABLE_START_ROW + 1 + offset
         data[row - 1][0] = channel["worksheet_label"]
         data[row - 1][1] = channel["internal_key"]
-        data[row - 1][3] = eval_min(f"C{row}", qc["calibration_r_min"])
+        data[row - 1][3] = eval_between(f"C{row}", qc["calibration_r_min"], 1.0)
         data[row - 1][5] = eval_between(
             f"E{row}",
             100 - qc["initial_ccv_accuracy_percent_window"],
             100 + qc["initial_ccv_accuracy_percent_window"],
         )
-        data[row - 1][7] = eval_max(f"G{row}", qc["initial_ccv_rsd_max_percent"])
-        data[row - 1][9] = eval_max(f"I{row}", qc["blank_max_fraction_of_loq"])
+        data[row - 1][7] = eval_nonnegative_max(f"G{row}", qc["initial_ccv_rsd_max_percent"])
+        data[row - 1][9] = eval_nonnegative_max(f"I{row}", qc["blank_max_fraction_of_loq"])
         data[row - 1][11] = eval_between(
             f"K{row}",
             qc["loq_recovery_min_percent"],
@@ -558,9 +640,9 @@ def build_qc_review_tab(analytes: list[dict[str, Any]]) -> tuple[list[list[Any]]
             qc["matrix_spike_recovery_min_percent"],
             qc["matrix_spike_recovery_max_percent"],
         )
-        data[row - 1][15] = eval_max(f"O{row}", qc["duplicate_difference_max_percent"])
+        data[row - 1][15] = eval_nonnegative_max(f"O{row}", qc["duplicate_difference_max_percent"])
         data[row - 1][17] = bracketing_eval_formula(row)
-        data[row - 1][19] = eval_max(f"S{row}", qc["rt_drift_window_min"])
+        data[row - 1][19] = eval_nonnegative_max(f"S{row}", qc["rt_drift_window_min"])
         data[row - 1][21] = eval_min(f"U{row}", qc["resolution_min"])
         data[row - 1][22] = overall_qc_formula(row)
 
@@ -628,7 +710,7 @@ def publish_prereq_formula(row: int) -> str:
 
 def publish_ready_formula(row: int) -> str:
     return (
-        f'=IF(A{row}="","",IF(AND(BB{row}=TRUE,\'QC Review\'!$B$15=TRUE),"TRUE","FALSE"))'
+        f'=IF(A{row}="","",IF(AND(BB{row}=TRUE,\'QC Review\'!$B$18=TRUE),"TRUE","FALSE"))'
     )
 
 
@@ -648,7 +730,7 @@ def publish_message_formula(row: int) -> str:
         f'IF(AW{row}<>"Reviewed","Integration review required",'
         f'IF(AX{row}<>"Valid","Import validation required",'
         f'IF(AY{row}<>"Accepted","Batch QC on hold",'
-        f'IF(\'QC Review\'!$B$15<>TRUE,"Batch release review required","Ready for transfer"))))))))))))))))'
+        f'IF(\'QC Review\'!$B$18<>TRUE,"Batch release review required","Ready for transfer"))))))))))))))))'
     )
 
 
@@ -699,7 +781,7 @@ def build_publish_tab(
         data[offset - 1][0] = placeholder["test_id"]
         data[offset - 1][1] = f"${{tests[{offset - 2}].sample.get_display_id()}}"
         data[offset - 1][2] = placeholder["product_matrix"]
-        data[offset - 1][50] = '=\'QC Review\'!$B$12'
+        data[offset - 1][50] = '=\'QC Review\'!$B$15'
         data[offset - 1][51] = publish_analytical_complete_formula(offset)
         data[offset - 1][52] = publish_source_complete_formula(offset)
         data[offset - 1][53] = publish_prereq_formula(offset)
@@ -777,7 +859,13 @@ def build_named_cells(publish_capacity: int) -> dict[str, Any]:
 
     for offset, (field, _value, _note) in enumerate(QC_CONTROL_ROWS, start=2):
         add_named_cell(named_cells, field, f"QC Review!B{offset}", field.replace("_", " ").title())
-    add_named_cell(named_cells, "terpenes_batch_qc_table", "QC Review!A19:X42", "Terpenes Batch QC Table")
+    qc_end_row = QC_TABLE_START_ROW + len(channels())
+    add_named_cell(
+        named_cells,
+        "terpenes_batch_qc_table",
+        f"QC Review!A{QC_TABLE_START_ROW}:X{qc_end_row}",
+        "Terpenes Batch QC Table",
+    )
 
     end_row = 1 + publish_capacity
     add_named_cell(named_cells, "terpenes_batch_publish_table", f"Publish!A1:BD{end_row}", "Terpenes Batch Publish Table")
@@ -883,10 +971,23 @@ def build_manifest(candidate: dict[str, Any], candidate_text: str) -> dict[str, 
             "batch_qc_disposition_cell": named_cells["batch_qc_disposition"]["cell"],
             "batch_publish_ready_cell": named_cells["batch_publish_ready"]["cell"],
             "bracketing_ccv_criterion_status_cell": named_cells["bracketing_ccv_criterion_status"]["cell"],
+            "lcs_requirement_status_cell": named_cells["lcs_requirement_status"]["cell"],
             "kvstore_config_empty": candidate["qb_config"]["kvstore_config"] == {},
             "conditional_formatting_rule_count": len(
                 candidate["config"]["plugins"]["conditionalFormatting"]["rules"]
             ),
+        },
+        "run_setup_field_requirements": {
+            "required": [field for field, _cell, _message in RUN_SETUP_REQUIRED_FIELDS],
+            "optional": RUN_SETUP_OPTIONAL_FIELDS,
+            "run_setup_complete_requires": "All required fields populated, with batch_assay_name exactly Terpenes.",
+            "run_setup_message_behavior": "Reports the first missing or mismatched required field.",
+        },
+        "controlled_publish_column_contract_decision": {
+            "decision": "Publish column A is QBench Test ID and Publish column B is QBench Sample ID.",
+            "reason": "QBench Test ID is the Prompt 5 join key and the active source Test ID placeholder is preserved in column A.",
+            "deviation_from_original_draft": True,
+            "authoritative_interface": "Named ranges and source-contract mapping, not the original draft column order.",
         },
         "controlled_values": {
             "sample_types": SAMPLE_TYPES,
@@ -896,9 +997,12 @@ def build_manifest(candidate: dict[str, Any], candidate_text: str) -> dict[str, 
             "df_application_modes": DF_APPLICATION_MODES,
             "batch_qc_dispositions": BATCH_QC_DISPOSITIONS,
             "internal_qc_evaluation_values": INTERNAL_QC_EVALUATION_VALUES,
+            "bracketing_ccv_criterion_status_values": BRACKETING_CCV_CRITERION_STATUS_VALUES,
+            "lcs_requirement_status_values": LCS_REQUIREMENT_STATUS_VALUES,
         },
         "default_release_gates": {
             "bracketing_ccv_criterion_status": "decision_required",
+            "lcs_requirement_status": "decision_required",
             "qc_configuration_complete": "FALSE by formula/default behavior",
             "batch_qc_disposition": "Hold",
             "batch_publish_ready": "FALSE by formula/default behavior",
@@ -906,7 +1010,7 @@ def build_manifest(candidate: dict[str, Any], candidate_text: str) -> dict[str, 
         },
         "unresolved_scientific_qc_decisions": [
             "Bracketing CCV criterion remains decision_required; Prompt 4 does not choose 10 percent or 15 percent.",
-            "No separate controlled Terpenes LCS requirement was found in repository source files.",
+            "Terpenes LCS requirement remains decision_required; missing repository evidence does not resolve the requirement.",
             "LabSolutions Conc. unit, sample mass/final volume sources, and dilution application remain Sandbox-confirmation items from Prompt 3.",
             "Below-LOQ, MU, final sample calculations, COA, METRC, key/value-store, and automation remain out of Prompt 4 scope.",
         ],

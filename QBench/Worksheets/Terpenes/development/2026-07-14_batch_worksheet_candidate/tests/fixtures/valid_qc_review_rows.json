@@ -1,7 +1,8 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "criteria": {
     "calibration_r_min": 0.99,
+    "calibration_r_max": 1.0,
     "initial_ccv_recovery_min": 85,
     "initial_ccv_recovery_max": 115,
     "initial_ccv_rsd_max": 10,
@@ -17,16 +18,34 @@
   "boundary_cases": [
     {
       "name": "calibration_minimum",
-      "kind": "minimum",
+      "kind": "range",
       "value": 0.99,
-      "limit": 0.99,
+      "minimum": 0.99,
+      "maximum": 1.0,
+      "expected": "within_criteria"
+    },
+    {
+      "name": "calibration_upper_boundary",
+      "kind": "range",
+      "value": 1.0,
+      "minimum": 0.99,
+      "maximum": 1.0,
       "expected": "within_criteria"
     },
     {
       "name": "calibration_below_minimum",
-      "kind": "minimum",
+      "kind": "range",
       "value": 0.989,
-      "limit": 0.99,
+      "minimum": 0.99,
+      "maximum": 1.0,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "calibration_above_physical_maximum",
+      "kind": "range",
+      "value": 1.001,
+      "minimum": 0.99,
+      "maximum": 1.0,
       "expected": "outside_criteria"
     },
     {
@@ -63,30 +82,81 @@
     },
     {
       "name": "rsd_at_maximum",
-      "kind": "maximum",
+      "kind": "nonnegative_maximum",
       "value": 10,
       "limit": 10,
       "expected": "within_criteria"
     },
     {
+      "name": "rsd_zero",
+      "kind": "nonnegative_maximum",
+      "value": 0,
+      "limit": 10,
+      "expected": "within_criteria"
+    },
+    {
+      "name": "rsd_negative",
+      "kind": "nonnegative_maximum",
+      "value": -0.001,
+      "limit": 10,
+      "expected": "outside_criteria"
+    },
+    {
       "name": "rsd_above_maximum",
-      "kind": "maximum",
+      "kind": "nonnegative_maximum",
       "value": 10.001,
       "limit": 10,
       "expected": "outside_criteria"
     },
     {
-      "name": "not_applicable_bracketing",
-      "kind": "bracketing",
-      "criterion_status": "not_applicable",
-      "value": "",
-      "window": "",
-      "expected": "not_applicable"
+      "name": "blank_fraction_negative",
+      "kind": "nonnegative_maximum",
+      "value": -0.001,
+      "limit": 0.2,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "duplicate_difference_negative",
+      "kind": "nonnegative_maximum",
+      "value": -0.001,
+      "limit": 20,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "rt_drift_negative",
+      "kind": "nonnegative_maximum",
+      "value": -0.001,
+      "limit": 0.5,
+      "expected": "outside_criteria"
     },
     {
       "name": "unresolved_bracketing",
       "kind": "bracketing",
       "criterion_status": "decision_required",
+      "value": 100,
+      "window": "",
+      "expected": "decision_required"
+    },
+    {
+      "name": "confirmed_bracketing_at_lower_boundary",
+      "kind": "bracketing",
+      "criterion_status": "confirmed",
+      "value": 90,
+      "window": 10,
+      "expected": "within_criteria"
+    },
+    {
+      "name": "confirmed_bracketing_immediately_outside",
+      "kind": "bracketing",
+      "criterion_status": "confirmed",
+      "value": 89.999,
+      "window": 10,
+      "expected": "outside_criteria"
+    },
+    {
+      "name": "confirmed_bracketing_blank_window",
+      "kind": "bracketing",
+      "criterion_status": "confirmed",
       "value": 100,
       "window": "",
       "expected": "decision_required"
@@ -126,6 +196,14 @@
         "not_evaluated"
       ],
       "expected": "not_evaluated"
+    },
+    {
+      "name": "review_required_blocks",
+      "evaluations": [
+        "within_criteria",
+        "review_required"
+      ],
+      "expected": "review_required"
     }
   ]
 }

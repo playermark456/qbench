@@ -67,12 +67,17 @@ REQUIRED_NAMED_CELLS = [
     "run_detector_name",
     "run_method_file",
     "run_sequence_file",
+    "run_column",
+    "run_carrier_gas",
     "run_analyst",
     "run_start",
     "run_end",
     "calibration_id",
     "standard_lot",
+    "extraction_solvent_lot",
     "parser_version",
+    "source_package_version",
+    "raw_ascii_attachment_reference",
     "raw_batch_manifest_hash",
     "run_setup_complete",
     "run_setup_message",
@@ -85,6 +90,9 @@ REQUIRED_NAMED_CELLS = [
     "qc_config_version",
     "bracketing_ccv_criterion_status",
     "bracketing_ccv_accuracy_percent_window",
+    "lcs_requirement_status",
+    "lcs_requirement_controlled_source",
+    "lcs_requirement_reviewed_by",
     "qc_configuration_complete",
     "integration_review_complete",
     "qc_data_complete",
@@ -327,11 +335,13 @@ def validate_named_cells(workbook: dict[str, Any]) -> None:
     expected_ranges = {
         "terpenes_batch_import_table": "Instrument Import!A1:BE201",
         "terpenes_batch_import_analytes": "Instrument Import!AH2:BD201",
+        "terpenes_batch_qc_table": "QC Review!A22:X45",
         "terpenes_batch_publish_table": "Publish!A1:BD87",
         "terpenes_batch_publish_instrument_conc": "Publish!D2:Z87",
-        "batch_qc_disposition": "QC Review!B12",
-        "batch_publish_ready": "QC Review!B15",
+        "batch_qc_disposition": "QC Review!B15",
+        "batch_publish_ready": "QC Review!B18",
         "bracketing_ccv_criterion_status": "QC Review!B3",
+        "lcs_requirement_status": "QC Review!B5",
     }
     for name, target in expected_ranges.items():
         if named_cells[name]["cell"] != target:
@@ -355,8 +365,9 @@ def validate_formulas(workbook: dict[str, Any]) -> None:
         'AG2="TRUE"',
         'AW2="Reviewed"',
         'AX2="Valid"',
-        "'QC Review'!$B$15=TRUE",
-        "'QC Review'!$B$12",
+        "'QC Review'!$B$18=TRUE",
+        "'QC Review'!$B$15",
+        "'Run Setup'!$B$24=TRUE",
         'bracketing_ccv_accuracy_percent_window',
     ]
     # The named string is not in formulas; the cell target check covers it.
@@ -371,15 +382,52 @@ def validate_formulas(workbook: dict[str, Any]) -> None:
         ready = publish[row - 1][54]
         if f"COUNT(D{row}:Z{row})=23" not in analytical:
             fail(f"Publish row {row} analytical completeness must require 23 numeric analytes.")
-        if f"'QC Review'!$B$15=TRUE" in prereq:
+        if f"'QC Review'!$B$18=TRUE" in prereq:
             fail("Row Prerequisites Complete must not depend on batch_publish_ready.")
-        if f"BB{row}=TRUE" not in ready or "'QC Review'!$B$15=TRUE" not in ready:
+        if f"BB{row}=TRUE" not in ready or "'QC Review'!$B$18=TRUE" not in ready:
             fail("Publish Ready must require row prerequisites and batch_publish_ready.")
-    batch_formula = worksheet_by_name(workbook)["QC Review"]["data"][14][1]
+    batch_formula = worksheet_by_name(workbook)["QC Review"]["data"][17][1]
     if "Publish!BC" in batch_formula:
         fail("batch_publish_ready must not depend on row Publish Ready.")
-    if '$B$12="Accepted"' not in batch_formula:
+    if "'Run Setup'!$B$24=TRUE" not in batch_formula:
+        fail("batch_publish_ready must require run_setup_complete.")
+    if '$B$15="Accepted"' not in batch_formula:
         fail("batch_publish_ready must require Accepted batch disposition.")
+    if 'COUNTIF(W23:W45,"within_criteria")=23' not in formula_text:
+        fail("qc_review_complete must require all 23 overall evaluations within criteria.")
+    if 'COUNTIF(W23:W45,"outside_criteria")=0' not in formula_text:
+        fail("qc_review_complete must block outside_criteria.")
+    if 'COUNTIF(W23:W45,"decision_required")=0' not in formula_text:
+        fail("qc_review_complete must block decision_required.")
+    if '$B$3="confirmed"' not in formula_text or '$B$3<>"confirmed"' not in formula_text:
+        fail("Bracketing formulas must only open the confirmed status path.")
+    if '$B$5="not_required"' not in formula_text or '$B$6<>""' not in formula_text or '$B$7<>""' not in formula_text:
+        fail("LCS not_required status must require controlled-source and reviewer fields.")
+    if '"Run setup incomplete"' not in worksheet_by_name(workbook)["QC Review"]["data"][18][1]:
+        fail("batch_publish_message must report run setup incomplete first.")
+    import_formula = worksheet_by_name(workbook)["Instrument Import"]["data"][1][32]
+    for fragment in [
+        "ISNUMBER(X2)<>TRUE",
+        "ISNUMBER(Y2)<>TRUE",
+        "Y2<0",
+        "ISNUMBER(Z2)<>TRUE",
+        "ISNUMBER(AA2)<>TRUE",
+        "ISNUMBER(AB2)<>TRUE",
+        "AB2<0",
+        "COUNT(AH2:BD2)<>23",
+    ]:
+        if fragment not in import_formula:
+            fail(f"Import validation formula missing hardened check: {fragment}")
+    qc_review = worksheet_by_name(workbook)["QC Review"]["data"]
+    for row in range(23, 46):
+        for col in [3, 5, 7, 9, 11, 13, 15, 17, 19, 21]:
+            formula = qc_review[row - 1][col]
+            if "ISNUMBER(" not in formula:
+                fail(f"QC formula at row {row} col {col + 1} must classify nonnumeric values explicitly.")
+        for col in [7, 9, 15, 19]:
+            formula = qc_review[row - 1][col]
+            if ">=0" not in formula:
+                fail(f"Physically nonnegative QC formula at row {row} col {col + 1} must reject negatives.")
 
 
 def validate_defaults(workbook: dict[str, Any]) -> None:
@@ -390,15 +438,21 @@ def validate_defaults(workbook: dict[str, Any]) -> None:
         fail("batch_assay_name default must be Terpenes.")
     if run_setup[23][1] != build_mod.RUN_SETUP_FIELDS[22][1]:
         fail("run_setup_complete formula/default behavior changed.")
+    if build_mod.run_setup_complete_formula() != run_setup[23][1]:
+        fail("run_setup_complete formula must use the exact controlled field map.")
+    if build_mod.run_setup_message_formula() != run_setup[24][1]:
+        fail("run_setup_message formula must report the first missing controlled field.")
     if qc_review[2][1] != "decision_required":
         fail("bracketing_ccv_criterion_status default must be decision_required.")
     if qc_review[3][1] != "":
         fail("bracketing_ccv_accuracy_percent_window default must be blank.")
-    if qc_review[11][1] != "Hold":
+    if qc_review[4][1] != "decision_required":
+        fail("lcs_requirement_status default must be decision_required.")
+    if qc_review[14][1] != "Hold":
         fail("batch_qc_disposition default must be Hold.")
-    if "decision_required" not in qc_review[4][1]:
-        fail("qc_configuration_complete must be false while the bracketing criterion is unresolved.")
-    if qc_review[14][1].startswith("=") is not True:
+    if '$B$3="confirmed"' not in qc_review[7][1] or '$B$5="not_required"' not in qc_review[7][1]:
+        fail("qc_configuration_complete must require confirmed bracketing and controlled LCS not_required status.")
+    if qc_review[17][1].startswith("=") is not True:
         fail("batch_publish_ready must be formula-driven.")
 
 
@@ -438,7 +492,7 @@ def validate_qc_outputs(workbook: dict[str, Any]) -> None:
     for forbidden in ["Accepted", "Hold", "Rejected"]:
         qc_table_text = "\n".join(
             str(value)
-            for row in qc[19:42]
+            for row in qc[22:45]
             for value in row[3:23]
         )
         if forbidden in qc_table_text:
@@ -564,6 +618,7 @@ def validate_candidate(candidate_path: Path = CANDIDATE_PATH, manifest_path: Pat
         "batch_qc_disposition": named_cells["batch_qc_disposition"]["cell"],
         "batch_publish_ready": named_cells["batch_publish_ready"]["cell"],
         "bracketing_ccv_criterion_status": named_cells["bracketing_ccv_criterion_status"]["cell"],
+        "lcs_requirement_status": named_cells["lcs_requirement_status"]["cell"],
         "default_batch_publication_blocked": True,
         "deterministic_generation": True,
         "prompt5_started": False,

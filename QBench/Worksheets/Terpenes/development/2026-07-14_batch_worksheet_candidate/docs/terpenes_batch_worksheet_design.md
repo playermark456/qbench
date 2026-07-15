@@ -16,17 +16,17 @@ The source Publish-row capacity is 86 QBench test rows. The generated `Publish` 
 
 ### Run Setup
 
-`Run Setup` is a compact field/value/notes table. It captures analytical batch ID, instrument, detector, method, sequence, analyst, run time, parser version, source package version, source manifest hash, and review fields.
+`Run Setup` is a compact field/value/notes table. It captures QBench batch ID, analytical batch ID, instrument, detector, method, sequence, analyst, run time, parser version, source package version, raw ASCII attachment reference, source manifest hash, and review fields.
 
-`run_setup_complete` is formula-driven and conservative. It can become true only when the required run setup fields are present. It does not represent laboratory approval.
+`run_setup_complete` is formula-driven and conservative. It can become true only when the required run setup fields are present and `batch_assay_name` is exactly `Terpenes`. `run_column`, carrier gas, calibration ID, standard lot, and extraction solvent lot are retained as optional fields until a controlled source makes them mandatory. The formula does not represent laboratory approval.
 
-`run_setup_message` returns the first neutral missing-requirement message, such as `Analytical batch ID required`, `Instrument required`, `Source manifest required`, or `Run setup complete`.
+`run_setup_message` returns the first neutral missing-requirement message, such as `QBench batch ID required`, `Instrument name required`, `Raw batch manifest hash required`, or `Run setup complete`.
 
 ### Instrument Import
 
 `Instrument Import` is a fixed 200-row normalized import surface. Each row represents one injection or parsed LabSolutions result record. Leading columns A:AG match the required Prompt 4 order, analyte columns AH:BD hold the 23 Prompt 2 controlled Compound Results `Conc.` channels, and BE stores `source_row_hash`.
 
-The import formulas check row structure, sample type, source traceability, Compound Results row counts, reportable analyte count, Dimethylacetamide audit retention, manual integration review, and integration review status. Numeric fields use the worksheet-supported text cell type documented from comparator worksheets; numeric recognition is enforced with `ISNUMBER` and `COUNT` formulas plus Sandbox testing.
+The import formulas check row structure, sample type, source traceability, Compound Results row counts, Peak Table row count, reportable analyte count, Dimethylacetamide audit retention, unknown peak count, manual integration review, and integration review status. Numeric fields use the worksheet-supported text cell type documented from comparator worksheets; numeric recognition is enforced with `ISNUMBER` and `COUNT` formulas plus Sandbox testing. Numeric-looking text in required count/audit fields is rejected rather than coerced.
 
 ### QC Review
 
@@ -41,7 +41,9 @@ Allowed individual QC evaluation outputs are only:
 - `not_applicable`
 - `review_required`
 
-The known bracketing CCV discrepancy remains explicitly unresolved. The default `bracketing_ccv_criterion_status` is `decision_required`, the bracketing window is blank, and `qc_configuration_complete` remains false until the method owner decision is made.
+The known bracketing CCV discrepancy remains explicitly unresolved. The only controlled bracketing status values are `decision_required` and `confirmed`. The default `bracketing_ccv_criterion_status` is `decision_required`, the bracketing window is blank, and `qc_configuration_complete` remains false until the method owner decision is made.
+
+`lcs_requirement_status` defaults to `decision_required`. If it is later set to `required`, configuration remains incomplete until controlled LCS acceptance criteria and worksheet implementation exist. If it is later set to `not_required`, the worksheet also requires a controlled-source reference and reviewer before configuration can complete.
 
 ### Publish
 
@@ -55,20 +57,25 @@ The known bracketing CCV discrepancy remains explicitly unresolved. The default 
 
 `Publish Ready` can be `TRUE` only when row prerequisites are complete and `batch_publish_ready` is true.
 
+## Controlled Publish column-contract decision
+
+Publish column A is intentionally `QBench Test ID`, and Publish column B is intentionally `QBench Sample ID`. This is a controlled deviation from the original draft Prompt 4 column list because QBench Test ID is the Prompt 5 join key and the active source Test ID placeholder is preserved in column A.
+
+The named-range and source-contract mapping is the authoritative Prompt 5 interface. The package does not claim exact column-order compliance with the earlier draft list.
+
 ## Release gates
 
 `batch_publish_ready` requires:
 
-- QC configuration complete.
+- `Run Setup!B24 = TRUE`.
 - Integration review complete.
-- QC data complete.
 - QC review complete.
 - All populated Publish rows structurally valid.
 - Duplicate Test ID count equals zero.
+- Populated Publish row count greater than zero.
 - `batch_qc_disposition = Accepted`.
-- Batch QC reviewer and reviewed-at fields present.
 
-Defaults block release. Accepted disposition alone is insufficient.
+`qc_review_complete` requires QC configuration complete, QC data complete, all 23 Overall Analyte QC Evaluation cells within criteria, and the QC reviewer/reviewed-at fields. `outside_criteria`, `decision_required`, `not_evaluated`, and `review_required` block release. Accepted disposition alone is insufficient.
 
 ## Exclusions
 

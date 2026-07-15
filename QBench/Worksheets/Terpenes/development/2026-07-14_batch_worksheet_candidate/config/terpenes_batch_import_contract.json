@@ -97,6 +97,15 @@
       "not_evaluated",
       "not_applicable",
       "review_required"
+    ],
+    "bracketing_ccv_criterion_status": [
+      "decision_required",
+      "confirmed"
+    ],
+    "lcs_requirement_status": [
+      "decision_required",
+      "required",
+      "not_required"
     ]
   },
   "numeric_contract": {
@@ -107,7 +116,15 @@
     "negative_instrument_concentration_auto_rejected": false,
     "numeric_looking_text_silently_coerced": false,
     "value_function_allowed": false,
-    "iferror_function_allowed": false
+    "iferror_function_allowed": false,
+    "strict_count_and_audit_fields": [
+      "compound_result_row_count",
+      "peak_table_row_count",
+      "reportable_compound_row_count",
+      "dimethylacetamide_conc",
+      "unknown_peak_count"
+    ],
+    "numeric_looking_text_rejected_for_count_and_audit_fields": true
   },
   "publish_requirements": {
     "qbench_test_id_is_join_key": true,
@@ -124,6 +141,12 @@
     "import_validation_status_value": "Valid",
     "batch_qc_disposition_value": "Accepted",
     "publish_ready_true_requires_batch_publish_ready": true
+  },
+  "controlled_publish_column_contract_decision": {
+    "title": "Controlled Publish column-contract decision",
+    "decision": "Publish column A is QBench Test ID and Publish column B is QBench Sample ID.",
+    "reason": "QBench Test ID is the Prompt 5 join key and the active source Test ID placeholder is preserved in column A.",
+    "authoritative_interface": "Named ranges and source-contract mapping."
   },
   "out_of_scope": [
     "final mg/g",

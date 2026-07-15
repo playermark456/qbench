@@ -101,37 +101,96 @@ class TerpenesBatchWorksheetCandidateTests(unittest.TestCase):
     def test_named_cells_include_required_ranges(self) -> None:
         self.assertEqual(self.named_cells["terpenes_batch_import_table"]["cell"], "Instrument Import!A1:BE201")
         self.assertEqual(self.named_cells["terpenes_batch_import_analytes"]["cell"], "Instrument Import!AH2:BD201")
+        self.assertEqual(self.named_cells["terpenes_batch_qc_table"]["cell"], "QC Review!A22:X45")
         self.assertEqual(self.named_cells["terpenes_batch_publish_table"]["cell"], "Publish!A1:BD87")
         self.assertEqual(self.named_cells["terpenes_batch_publish_instrument_conc"]["cell"], "Publish!D2:Z87")
-        self.assertEqual(self.named_cells["batch_qc_disposition"]["cell"], "QC Review!B12")
-        self.assertEqual(self.named_cells["batch_publish_ready"]["cell"], "QC Review!B15")
+        self.assertEqual(self.named_cells["batch_qc_disposition"]["cell"], "QC Review!B15")
+        self.assertEqual(self.named_cells["batch_publish_ready"]["cell"], "QC Review!B18")
         self.assertEqual(self.named_cells["bracketing_ccv_criterion_status"]["cell"], "QC Review!B3")
+        self.assertEqual(self.named_cells["lcs_requirement_status"]["cell"], "QC Review!B5")
 
     def test_default_release_gates_are_closed(self) -> None:
         run_setup = self.worksheets["Run Setup"]["data"]
         qc = self.worksheets["QC Review"]["data"]
         self.assertEqual(run_setup[3][1], "Terpenes")
         self.assertEqual(run_setup[16][1], "")
-        self.assertIn("Analytical batch ID required", run_setup[24][1])
+        self.assertIn("QBench batch ID required", run_setup[24][1])
         self.assertEqual(qc[2][1], "decision_required")
         self.assertEqual(qc[3][1], "")
-        self.assertIn('decision_required', qc[4][1])
-        self.assertEqual(qc[11][1], "Hold")
-        self.assertIn('$B$12="Accepted"', qc[14][1])
+        self.assertEqual(qc[4][1], "decision_required")
+        self.assertIn('$B$3="confirmed"', qc[7][1])
+        self.assertIn('$B$5="not_required"', qc[7][1])
+        self.assertEqual(qc[14][1], "Hold")
+        self.assertIn("'Run Setup'!$B$24=TRUE", qc[17][1])
+        self.assertIn('$B$15="Accepted"', qc[17][1])
+
+    def test_run_setup_field_map_and_required_fields_are_exact(self) -> None:
+        expected_cells = {
+            "batch_qbench_id": "Run Setup!B2",
+            "analytical_batch_id": "Run Setup!B3",
+            "batch_assay_name": "Run Setup!B4",
+            "run_instrument_name": "Run Setup!B5",
+            "run_detector_id": "Run Setup!B6",
+            "run_detector_name": "Run Setup!B7",
+            "run_method_file": "Run Setup!B8",
+            "run_sequence_file": "Run Setup!B9",
+            "run_column": "Run Setup!B10",
+            "run_carrier_gas": "Run Setup!B11",
+            "run_analyst": "Run Setup!B12",
+            "run_start": "Run Setup!B13",
+            "run_end": "Run Setup!B14",
+            "calibration_id": "Run Setup!B15",
+            "standard_lot": "Run Setup!B16",
+            "extraction_solvent_lot": "Run Setup!B17",
+            "parser_version": "Run Setup!B18",
+            "source_package_version": "Run Setup!B19",
+            "raw_ascii_attachment_reference": "Run Setup!B20",
+            "raw_batch_manifest_hash": "Run Setup!B21",
+            "run_setup_reviewed_by": "Run Setup!B22",
+            "run_setup_reviewed_at": "Run Setup!B23",
+            "run_setup_complete": "Run Setup!B24",
+            "run_setup_message": "Run Setup!B25",
+        }
+        for name, cell in expected_cells.items():
+            self.assertEqual(self.named_cells[name]["cell"], cell)
+        complete_formula = self.worksheets["Run Setup"]["data"][23][1]
+        message_formula = self.worksheets["Run Setup"]["data"][24][1]
+        self.assertEqual(complete_formula, builder.run_setup_complete_formula())
+        self.assertEqual(message_formula, builder.run_setup_message_formula())
+        for _field, cell, message in builder.RUN_SETUP_REQUIRED_FIELDS:
+            self.assertIn(cell, complete_formula)
+            self.assertIn(message, message_formula)
+        for optional in ["$B$10", "$B$11", "$B$15", "$B$16", "$B$17"]:
+            self.assertNotIn(optional, complete_formula)
+
+    def test_run_setup_blank_required_fields_block_completion_with_correct_message(self) -> None:
+        base = {
+            field: ("Terpenes" if field == "batch_assay_name" else "present")
+            for field, _cell, _message in builder.RUN_SETUP_REQUIRED_FIELDS
+        }
+        self.assertTrue(reference.run_setup_complete(base))
+        self.assertEqual(reference.run_setup_message(base), "Run setup complete")
+        for field, _cell, message in builder.RUN_SETUP_REQUIRED_FIELDS:
+            with self.subTest(field=field):
+                values = dict(base)
+                values[field] = "Wrong Assay" if field == "batch_assay_name" else ""
+                self.assertFalse(reference.run_setup_complete(values))
+                self.assertEqual(reference.run_setup_message(values), message)
 
     def test_publish_row_prerequisites_do_not_depend_on_batch_publish_ready(self) -> None:
         publish = self.worksheets["Publish"]["data"]
         for row_number in range(2, 88):
             prereq_formula = publish[row_number - 1][53]
             ready_formula = publish[row_number - 1][54]
-            self.assertNotIn("'QC Review'!$B$15=TRUE", prereq_formula)
+            self.assertNotIn("'QC Review'!$B$18=TRUE", prereq_formula)
             self.assertIn(f"BB{row_number}=TRUE", ready_formula)
-            self.assertIn("'QC Review'!$B$15=TRUE", ready_formula)
+            self.assertIn("'QC Review'!$B$18=TRUE", ready_formula)
 
     def test_batch_publish_ready_does_not_depend_on_row_publish_ready(self) -> None:
-        batch_formula = self.worksheets["QC Review"]["data"][14][1]
+        batch_formula = self.worksheets["QC Review"]["data"][17][1]
         self.assertNotIn("Publish!BC", batch_formula)
-        self.assertIn("Publish!BB", self.worksheets["QC Review"]["data"][8][1])
+        self.assertIn("'Run Setup'!$B$24=TRUE", batch_formula)
+        self.assertIn("Publish!BB", self.worksheets["QC Review"]["data"][11][1])
 
     def test_no_final_sample_calculation_or_blocked_formula_text(self) -> None:
         formula_text = "\n".join(validator.formulas(self.candidate))
@@ -162,6 +221,15 @@ class TerpenesBatchWorksheetCandidateTests(unittest.TestCase):
         self.assertFalse(reference.is_strict_number("10"))
         self.assertFalse(reference.is_strict_number(True))
         self.assertFalse(reference.is_strict_number(""))
+
+    def test_import_count_and_audit_text_values_are_rejected(self) -> None:
+        for case in self.invalid_cases["invalid_import_count_cases"]:
+            for value in case["values"]:
+                with self.subTest(field=case["field"], value=value):
+                    row = dict(self.valid_rows["valid_unknown_row"])
+                    row[case["field"]] = value
+                    self.assertEqual(reference.import_row_message(row), case["expected_message"])
+                    self.assertEqual(reference.import_validation_status(row), "Rejected")
 
     def test_valid_publish_row_prerequisites(self) -> None:
         row = self.publish_row()
@@ -199,6 +267,8 @@ class TerpenesBatchWorksheetCandidateTests(unittest.TestCase):
                     result = reference.evaluate_minimum(case["value"], Decimal(str(case["limit"])))
                 elif case["kind"] == "maximum":
                     result = reference.evaluate_maximum(case["value"], Decimal(str(case["limit"])))
+                elif case["kind"] == "nonnegative_maximum":
+                    result = reference.evaluate_nonnegative_maximum(case["value"], Decimal(str(case["limit"])))
                 elif case["kind"] == "range":
                     result = reference.evaluate_range(
                         case["value"],
@@ -218,19 +288,30 @@ class TerpenesBatchWorksheetCandidateTests(unittest.TestCase):
             reference.qc_configuration_complete(
                 bracketing_ccv_criterion_status="decision_required",
                 bracketing_ccv_accuracy_percent_window="",
-            )
-        )
-        self.assertTrue(
-            reference.qc_configuration_complete(
-                bracketing_ccv_criterion_status="confirmed",
-                bracketing_ccv_accuracy_percent_window=15,
+                lcs_requirement_status="decision_required",
             )
         )
         self.assertFalse(
             reference.qc_configuration_complete(
                 bracketing_ccv_criterion_status="confirmed",
                 bracketing_ccv_accuracy_percent_window=15,
-                lcs_criterion_status="decision_required",
+                lcs_requirement_status="decision_required",
+            )
+        )
+        self.assertFalse(
+            reference.qc_configuration_complete(
+                bracketing_ccv_criterion_status="confirmed",
+                bracketing_ccv_accuracy_percent_window=15,
+                lcs_requirement_status="required",
+            )
+        )
+        self.assertTrue(
+            reference.qc_configuration_complete(
+                bracketing_ccv_criterion_status="confirmed",
+                bracketing_ccv_accuracy_percent_window=15,
+                lcs_requirement_status="not_required",
+                lcs_requirement_controlled_source="Controlled LCS decision memo",
+                lcs_requirement_reviewed_by="Reviewer",
             )
         )
 
@@ -242,32 +323,121 @@ class TerpenesBatchWorksheetCandidateTests(unittest.TestCase):
                     case["expected"],
                 )
 
+    def test_qc_review_complete_blocks_release_statuses(self) -> None:
+        base = ["within_criteria"] * 23
+        self.assertTrue(
+            reference.qc_review_complete(
+                qc_configuration_is_complete=True,
+                qc_data_is_complete=True,
+                overall_evaluations=base,
+                batch_qc_reviewer="Reviewer",
+                batch_qc_reviewed_at="2026-07-14",
+            )
+        )
+        for blocked in ["outside_criteria", "decision_required", "not_evaluated", "review_required"]:
+            with self.subTest(blocked=blocked):
+                values = list(base)
+                values[0] = blocked
+                self.assertFalse(
+                    reference.qc_review_complete(
+                        qc_configuration_is_complete=True,
+                        qc_data_is_complete=reference.qc_data_complete(values),
+                        overall_evaluations=values,
+                        batch_qc_reviewer="Reviewer",
+                        batch_qc_reviewed_at="2026-07-14",
+                    )
+                )
+        not_applicable_values = list(base)
+        not_applicable_values[0] = "not_applicable"
+        self.assertFalse(
+            reference.qc_review_complete(
+                qc_configuration_is_complete=True,
+                qc_data_is_complete=True,
+                overall_evaluations=not_applicable_values,
+                batch_qc_reviewer="Reviewer",
+                batch_qc_reviewed_at="2026-07-14",
+            )
+        )
+        self.assertTrue(
+            reference.qc_review_complete(
+                qc_configuration_is_complete=True,
+                qc_data_is_complete=True,
+                overall_evaluations=not_applicable_values,
+                batch_qc_reviewer="Reviewer",
+                batch_qc_reviewed_at="2026-07-14",
+                not_applicable_allowed=True,
+            )
+        )
+
+    def test_bracketing_status_values_are_controlled(self) -> None:
+        for status in ["approved", "complete", "done", "x", "", "not_applicable"]:
+            with self.subTest(status=status):
+                self.assertEqual(reference.bracketing_ccv_evaluation(100, status, 10), "review_required")
+                self.assertFalse(
+                    reference.qc_configuration_complete(
+                        bracketing_ccv_criterion_status=status,
+                        bracketing_ccv_accuracy_percent_window=10,
+                        lcs_requirement_status="not_required",
+                        lcs_requirement_controlled_source="source",
+                        lcs_requirement_reviewed_by="reviewer",
+                    )
+                )
+        for window in ["", "10", 0, -1]:
+            with self.subTest(window=window):
+                self.assertEqual(reference.bracketing_ccv_evaluation(100, "confirmed", window), "decision_required")
+                self.assertFalse(
+                    reference.qc_configuration_complete(
+                        bracketing_ccv_criterion_status="confirmed",
+                        bracketing_ccv_accuracy_percent_window=window,
+                        lcs_requirement_status="not_required",
+                        lcs_requirement_controlled_source="source",
+                        lcs_requirement_reviewed_by="reviewer",
+                    )
+                )
+
+    def test_formula_parity_fragments_match_reference_truth_table(self) -> None:
+        qc = self.worksheets["QC Review"]["data"]
+        calibration_formula = qc[22][3]
+        rsd_formula = qc[22][7]
+        bracketing_formula = qc[22][17]
+        overall_formula = qc[22][22]
+        self.assertIn('C23="","not_evaluated"', calibration_formula)
+        self.assertIn('ISNUMBER(C23)<>TRUE,"review_required"', calibration_formula)
+        self.assertIn("C23>=0.99", calibration_formula)
+        self.assertIn("C23<=1.0", calibration_formula)
+        self.assertIn('G23="","not_evaluated"', rsd_formula)
+        self.assertIn('ISNUMBER(G23)<>TRUE,"review_required"', rsd_formula)
+        self.assertIn("G23>=0", rsd_formula)
+        self.assertIn("G23<=10", rsd_formula)
+        self.assertIn('$B$3="decision_required","decision_required"', bracketing_formula)
+        self.assertIn('$B$3<>"confirmed","review_required"', bracketing_formula)
+        self.assertIn('$B$4<=0', bracketing_formula)
+        self.assertIn('ISNUMBER(Q23)<>TRUE,"review_required"', bracketing_formula)
+        self.assertIn('COUNTIF(D23:V23,"outside_criteria")>0,"outside_criteria"', overall_formula)
+        self.assertIn('COUNTIF(D23:V23,"decision_required")>0,"decision_required"', overall_formula)
+
     def test_batch_publish_ready_positive_case(self) -> None:
         self.assertTrue(
             reference.batch_publish_ready(
-                qc_configuration_is_complete=True,
+                run_setup_is_complete=True,
                 integration_review_is_complete=True,
-                qc_data_is_complete=True,
                 qc_review_is_complete=True,
                 all_publish_rows_are_valid=True,
                 duplicate_test_id_count=0,
+                populated_publish_row_count=1,
                 batch_qc_disposition="Accepted",
-                batch_qc_reviewer="Reviewer",
-                batch_qc_reviewed_at="2026-07-14",
             )
         )
 
     def test_batch_gate_invalid_cases(self) -> None:
         base = {
-            "qc_configuration_is_complete": True,
+            "run_setup_is_complete": True,
             "integration_review_is_complete": True,
-            "qc_data_is_complete": True,
             "qc_review_is_complete": True,
             "all_publish_rows_are_valid": True,
             "duplicate_test_id_count": 0,
+            "populated_publish_row_count": 1,
             "batch_qc_disposition": "Accepted",
-            "batch_qc_reviewer": "Reviewer",
-            "batch_qc_reviewed_at": "2026-07-14",
         }
         for case in self.invalid_cases["batch_gate_cases"]:
             with self.subTest(case=case["name"]):
@@ -286,15 +456,13 @@ class TerpenesBatchWorksheetCandidateTests(unittest.TestCase):
             with self.subTest(disposition=disposition):
                 self.assertFalse(
                     reference.batch_publish_ready(
-                        qc_configuration_is_complete=True,
+                        run_setup_is_complete=True,
                         integration_review_is_complete=True,
-                        qc_data_is_complete=True,
                         qc_review_is_complete=True,
                         all_publish_rows_are_valid=True,
                         duplicate_test_id_count=0,
+                        populated_publish_row_count=1,
                         batch_qc_disposition=disposition,
-                        batch_qc_reviewer="Reviewer",
-                        batch_qc_reviewed_at="2026-07-14",
                     )
                 )
 

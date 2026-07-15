@@ -10,6 +10,7 @@
     "qbench_df": "",
     "df_application_mode": "already_applied_by_labsolutions",
     "compound_result_row_count": 24,
+    "peak_table_row_count": 34,
     "reportable_compound_row_count": 23,
     "analyte_values": [
       0,
@@ -70,6 +71,7 @@
     "qbench_df": "",
     "df_application_mode": "already_applied_by_labsolutions",
     "compound_result_row_count": 24,
+    "peak_table_row_count": 0,
     "reportable_compound_row_count": 23,
     "analyte_values": [
       0,

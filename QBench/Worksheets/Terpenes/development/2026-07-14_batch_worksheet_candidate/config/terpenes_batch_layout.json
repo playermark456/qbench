@@ -13,6 +13,34 @@
       "name": "Run Setup",
       "purpose": "Controlled analytical-run metadata and conservative setup gate",
       "layout": "three-column field/value/notes block",
+      "field_requirements": {
+        "required": [
+          "batch_qbench_id",
+          "analytical_batch_id",
+          "batch_assay_name",
+          "run_instrument_name",
+          "run_detector_id",
+          "run_detector_name",
+          "run_method_file",
+          "run_sequence_file",
+          "run_analyst",
+          "run_start",
+          "run_end",
+          "parser_version",
+          "raw_ascii_attachment_reference",
+          "raw_batch_manifest_hash",
+          "run_setup_reviewed_by",
+          "run_setup_reviewed_at"
+        ],
+        "optional": [
+          "run_column",
+          "run_carrier_gas",
+          "calibration_id",
+          "standard_lot",
+          "extraction_solvent_lot",
+          "source_package_version"
+        ]
+      },
       "named_cells": [
         "batch_qbench_id",
         "analytical_batch_id",
@@ -53,12 +81,13 @@
     {
       "name": "QC Review",
       "purpose": "Batch-level QC configuration, analyte QC review, and release gate",
-      "control_range": "QC Review!A1:C16",
-      "qc_table_range": "QC Review!A19:X42",
+      "control_range": "QC Review!A1:C19",
+      "qc_table_range": "QC Review!A22:X45",
       "analyte_row_count": 23,
       "default_release_state": {
         "bracketing_ccv_criterion_status": "decision_required",
         "bracketing_ccv_accuracy_percent_window": "",
+        "lcs_requirement_status": "decision_required",
         "qc_configuration_complete": false,
         "batch_qc_disposition": "Hold",
         "batch_publish_ready": false
@@ -94,6 +123,12 @@
     "AU:AX": "Audit and validation status",
     "AY": "Batch QC Disposition",
     "AZ:BD": "Structural validation and transfer gate"
+  },
+  "controlled_publish_column_contract_decision": {
+    "title": "Controlled Publish column-contract decision",
+    "decision": "Publish column A is QBench Test ID and Publish column B is QBench Sample ID.",
+    "reason": "QBench Test ID is the Prompt 5 join key and the active source Test ID placeholder is preserved in column A.",
+    "authoritative_interface": "Named ranges and source-contract mapping."
   },
   "prohibited_candidate_surfaces": [
     "Report tab",

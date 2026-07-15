@@ -46,17 +46,26 @@ Default release gates are intentionally closed:
 
 The bracketing CCV decision remains unresolved; this package does not choose 10 percent or 15 percent.
 
+`lcs_requirement_status` also defaults to `decision_required`. The repository crosswalk does not contain controlled SOP, Analysis Form, or validation evidence sufficient to close the LCS requirement, so LCS remains a release-control decision rather than an invented worksheet limit.
+
+## Controlled Publish column-contract decision
+
+Publish column A is intentionally `QBench Test ID`, and Publish column B is intentionally `QBench Sample ID`. This is a controlled deviation from the original draft Prompt 4 column list because QBench Test ID is the Prompt 5 join key and the active source Test ID placeholder is preserved in column A.
+
+The named-range and source-contract mapping is the authoritative Prompt 5 interface. The package does not claim exact column-order compliance with the earlier draft list.
+
 ## Current generated counts
 
 - Formula count: 1180
-- Named-cell count: 64
+- Named-cell count: 67
 - Preserved Publish row capacity: 86
 - Instrument Import row capacity: 200
 - Publish table range: `Publish!A1:BD87`
 - Publish 23-analyte range: `Publish!D2:Z87`
-- `batch_qc_disposition`: `QC Review!B12`
-- `batch_publish_ready`: `QC Review!B15`
+- `batch_qc_disposition`: `QC Review!B15`
+- `batch_publish_ready`: `QC Review!B18`
 - `bracketing_ccv_criterion_status`: `QC Review!B3`
+- `lcs_requirement_status`: `QC Review!B5`
 
 ## Validation commands
 

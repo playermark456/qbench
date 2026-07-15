@@ -1,4 +1,7 @@
 source_publish_column,source_publish_header,source_named_range,destination_test_named_cell,transfer_type,required,notes
+CONTROLLED_DECISION,Controlled Publish column-contract decision,,,,,"Publish column A is intentionally QBench Test ID and column B is intentionally QBench Sample ID."
+CONTROLLED_DECISION,Controlled Publish column-contract decision,,,,,"This is a controlled deviation from the original draft Prompt 4 column list, not an accidental claim of exact column-order compliance."
+CONTROLLED_DECISION,Controlled Publish column-contract decision,,,,,"The named-range/source-contract mapping is the authoritative Prompt 5 interface."
 D:Z,23 analyte concentration columns,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc,range,true,Transfer by QBench Test ID join key; preserve Prompt 2 analyte order.
 AA,Sample Mass,terpenes_batch_publish_sample_mass_g,sample_mass_g,scalar,true,Positive numeric value required.
 AB,Final Volume,terpenes_batch_publish_final_volume_ml,final_volume_ml,scalar,true,Positive numeric value required.

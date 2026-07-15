@@ -38,16 +38,16 @@
   "local_config_files": [
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-14_batch_worksheet_candidate/config/terpenes_batch_layout.json",
-      "sha256": "4ecd38ee96bd0b593bf11a5004fc7a00f12911bfb8685322a323f0a238d5e6bf"
+      "sha256": "fe137404165a044907a7fe31a7cc386f53f402bb643dd94bf2fbffe958571410"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-14_batch_worksheet_candidate/config/terpenes_batch_import_contract.json",
-      "sha256": "1569eb8b10ad1848d0f4324e1cc1e0206a829f642e4c8c88de0a1783614741d6"
+      "sha256": "b389c3d96447d6c3dfb5c879d3a624ce5f05bb39b16951305f609febe77f9a23"
     }
   ],
   "generated_candidate": {
     "path": "QBench/Worksheets/Terpenes/development/2026-07-14_batch_worksheet_candidate/dist/terpenes__batch_ws_id_43__candidate_v1__2026-07-14.json",
-    "sha256": "0bcb2c2f422fba572c95f0a0bac27d47b0d758e74e422c075712078bbe4fb61e",
+    "sha256": "bcce7b4b40d5ed9488991516530d98266b1ab7146f646d04def454fb1db86ab9",
     "tabs": [
       "Run Setup",
       "Instrument Import",
@@ -67,16 +67,53 @@
     },
     "publish_tab_preserves_source_sheet1_id": true,
     "formula_count": 1180,
-    "named_cell_count": 64,
+    "named_cell_count": 67,
     "instrument_import_row_capacity": 200,
     "publish_row_capacity": 86,
     "publish_table_range": "Publish!A1:BD87",
     "publish_analyte_range": "Publish!D2:Z87",
-    "batch_qc_disposition_cell": "QC Review!B12",
-    "batch_publish_ready_cell": "QC Review!B15",
+    "batch_qc_disposition_cell": "QC Review!B15",
+    "batch_publish_ready_cell": "QC Review!B18",
     "bracketing_ccv_criterion_status_cell": "QC Review!B3",
+    "lcs_requirement_status_cell": "QC Review!B5",
     "kvstore_config_empty": true,
     "conditional_formatting_rule_count": 0
+  },
+  "run_setup_field_requirements": {
+    "required": [
+      "batch_qbench_id",
+      "analytical_batch_id",
+      "batch_assay_name",
+      "run_instrument_name",
+      "run_detector_id",
+      "run_detector_name",
+      "run_method_file",
+      "run_sequence_file",
+      "run_analyst",
+      "run_start",
+      "run_end",
+      "parser_version",
+      "raw_ascii_attachment_reference",
+      "raw_batch_manifest_hash",
+      "run_setup_reviewed_by",
+      "run_setup_reviewed_at"
+    ],
+    "optional": [
+      "run_column",
+      "run_carrier_gas",
+      "calibration_id",
+      "standard_lot",
+      "extraction_solvent_lot",
+      "source_package_version"
+    ],
+    "run_setup_complete_requires": "All required fields populated, with batch_assay_name exactly Terpenes.",
+    "run_setup_message_behavior": "Reports the first missing or mismatched required field."
+  },
+  "controlled_publish_column_contract_decision": {
+    "decision": "Publish column A is QBench Test ID and Publish column B is QBench Sample ID.",
+    "reason": "QBench Test ID is the Prompt 5 join key and the active source Test ID placeholder is preserved in column A.",
+    "deviation_from_original_draft": true,
+    "authoritative_interface": "Named ranges and source-contract mapping, not the original draft column order."
   },
   "controlled_values": {
     "sample_types": [
@@ -121,10 +158,20 @@
       "not_evaluated",
       "not_applicable",
       "review_required"
+    ],
+    "bracketing_ccv_criterion_status_values": [
+      "decision_required",
+      "confirmed"
+    ],
+    "lcs_requirement_status_values": [
+      "decision_required",
+      "required",
+      "not_required"
     ]
   },
   "default_release_gates": {
     "bracketing_ccv_criterion_status": "decision_required",
+    "lcs_requirement_status": "decision_required",
     "qc_configuration_complete": "FALSE by formula/default behavior",
     "batch_qc_disposition": "Hold",
     "batch_publish_ready": "FALSE by formula/default behavior",
@@ -132,7 +179,7 @@
   },
   "unresolved_scientific_qc_decisions": [
     "Bracketing CCV criterion remains decision_required; Prompt 4 does not choose 10 percent or 15 percent.",
-    "No separate controlled Terpenes LCS requirement was found in repository source files.",
+    "Terpenes LCS requirement remains decision_required; missing repository evidence does not resolve the requirement.",
     "LabSolutions Conc. unit, sample mass/final volume sources, and dilution application remain Sandbox-confirmation items from Prompt 3.",
     "Below-LOQ, MU, final sample calculations, COA, METRC, key/value-store, and automation remain out of Prompt 4 scope."
   ],

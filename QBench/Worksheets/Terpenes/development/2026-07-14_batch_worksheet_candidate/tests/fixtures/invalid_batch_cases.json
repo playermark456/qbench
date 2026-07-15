@@ -1,5 +1,67 @@
 {
   "schema_version": 1,
+  "invalid_import_count_cases": [
+    {
+      "field": "compound_result_row_count",
+      "expected_message": "Compound Results row count required",
+      "values": [
+        "24",
+        "23",
+        "34",
+        "N/A",
+        "abc",
+        ""
+      ]
+    },
+    {
+      "field": "peak_table_row_count",
+      "expected_message": "Peak Table row count required",
+      "values": [
+        "24",
+        "23",
+        "34",
+        "N/A",
+        "abc",
+        ""
+      ]
+    },
+    {
+      "field": "reportable_compound_row_count",
+      "expected_message": "Reportable analyte count required",
+      "values": [
+        "24",
+        "23",
+        "34",
+        "N/A",
+        "abc",
+        ""
+      ]
+    },
+    {
+      "field": "dimethylacetamide_conc",
+      "expected_message": "Dimethylacetamide audit value required",
+      "values": [
+        "24",
+        "23",
+        "34",
+        "N/A",
+        "abc",
+        ""
+      ]
+    },
+    {
+      "field": "unknown_peak_count",
+      "expected_message": "Unknown peak count required",
+      "values": [
+        "24",
+        "23",
+        "34",
+        "N/A",
+        "abc",
+        ""
+      ]
+    }
+  ],
   "invalid_publish_cases": [
     {
       "name": "blank_test_id",
@@ -307,18 +369,29 @@
   ],
   "batch_gate_cases": [
     {
-      "name": "qc_configuration_complete_false",
+      "name": "run_setup_incomplete_first",
       "updates": {
-        "qc_configuration_is_complete": false
+        "run_setup_is_complete": false
       },
       "expected_ready": false,
-      "expected_message": "QC configuration incomplete"
+      "expected_message": "Run setup incomplete"
+    },
+    {
+      "name": "qc_configuration_complete_false",
+      "updates": {
+        "qc_review_is_complete": false
+      },
+      "expected_ready": false,
+      "expected_message": "QC review incomplete"
     },
     {
       "name": "bracketing_decision_required",
       "qc_configuration": {
         "bracketing_ccv_criterion_status": "decision_required",
-        "bracketing_ccv_accuracy_percent_window": ""
+        "bracketing_ccv_accuracy_percent_window": "",
+        "lcs_requirement_status": "decision_required",
+        "lcs_requirement_controlled_source": "",
+        "lcs_requirement_reviewed_by": ""
       },
       "expected_configuration_complete": false
     },

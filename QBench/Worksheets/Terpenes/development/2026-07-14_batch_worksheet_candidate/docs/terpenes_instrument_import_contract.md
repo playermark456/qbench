@@ -22,12 +22,14 @@ Unknown and Dilution rows require a QBench Test ID. QC rows may have a blank QBe
 ## Required structural rules
 
 - `compound_result_row_count` must equal 24.
+- `peak_table_row_count` must be numeric and zero or greater.
 - `reportable_compound_row_count` must equal 23.
 - AH:BD must contain the 23 Prompt 2 analytes in exact config order.
 - Unknown and Dilution rows must have 23 actual numeric analyte values to become structurally publishable.
 - Numeric zero is valid.
-- Nonnumeric text remains invalid.
+- Nonnumeric text remains invalid. Numeric-looking text such as `24`, `23`, or `34` is not silently accepted if QBench stores it as text.
 - Dimethylacetamide must be numeric and retained for audit.
+- `unknown_peak_count` must be numeric and zero or greater.
 - Manual integration values are exactly `No` or `Yes`.
 - When manual integration is `Yes`, an integration reason is required.
 - Integration review status values are exactly `Not Reviewed`, `Reviewed`, or `Review Required`.
@@ -37,7 +39,7 @@ Unknown and Dilution rows require a QBench Test ID. QC rows may have a blank QBe
 
 Active comparator worksheets use the QBench-supported text cell type for batch import surfaces. The candidate therefore keeps the supported cell type and relies on `ISNUMBER` and `COUNT` formulas plus Sandbox testing to confirm numeric recognition.
 
-The worksheet does not use `VALUE` or `IFERROR` to coerce or conceal import errors.
+The worksheet does not use `VALUE` or `IFERROR` to coerce or conceal import errors. Nonnumeric values in count/audit fields return controlled import messages and are not intended to produce spreadsheet formula errors.
 
 ## Source traceability
 

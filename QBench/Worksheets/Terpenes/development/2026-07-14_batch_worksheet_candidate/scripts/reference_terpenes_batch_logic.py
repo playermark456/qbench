@@ -37,6 +37,26 @@ INTERNAL_QC_EVALUATION_VALUES = {
     "not_applicable",
     "review_required",
 }
+BRACKETING_CCV_CRITERION_STATUS_VALUES = {"decision_required", "confirmed"}
+LCS_REQUIREMENT_STATUS_VALUES = {"decision_required", "required", "not_required"}
+RUN_SETUP_REQUIRED_FIELDS = [
+    ("batch_qbench_id", "QBench batch ID required"),
+    ("analytical_batch_id", "Analytical batch ID required"),
+    ("batch_assay_name", "Batch assay name must be Terpenes"),
+    ("run_instrument_name", "Instrument name required"),
+    ("run_detector_id", "Detector ID required"),
+    ("run_detector_name", "Detector name required"),
+    ("run_method_file", "Method file required"),
+    ("run_sequence_file", "Sequence file required"),
+    ("run_analyst", "Analyst required"),
+    ("run_start", "Run start required"),
+    ("run_end", "Run end required"),
+    ("parser_version", "Parser version required"),
+    ("raw_ascii_attachment_reference", "Raw ASCII attachment reference required"),
+    ("raw_batch_manifest_hash", "Raw batch manifest hash required"),
+    ("run_setup_reviewed_by", "Run setup reviewer required"),
+    ("run_setup_reviewed_at", "Run setup review time required"),
+]
 
 SOURCE_FIELDS = [
     "source_batch_id",
@@ -77,6 +97,10 @@ def positive_number(value: Any) -> bool:
     return is_strict_number(value) and as_decimal(value) > 0
 
 
+def nonnegative_number(value: Any) -> bool:
+    return is_strict_number(value) and as_decimal(value) >= 0
+
+
 def all_strict_numbers(values: Iterable[Any], expected_count: int) -> bool:
     values = list(values)
     return len(values) == expected_count and all(is_strict_number(value) for value in values)
@@ -86,6 +110,21 @@ def duplicate_test_ids(test_ids: Iterable[str]) -> set[str]:
     normalized = [test_id for test_id in test_ids if test_id]
     counts = Counter(normalized)
     return {test_id for test_id, count in counts.items() if count > 1}
+
+
+def run_setup_message(fields: dict[str, Any]) -> str:
+    for field, message in RUN_SETUP_REQUIRED_FIELDS:
+        value = fields.get(field)
+        if field == "batch_assay_name":
+            if value != "Terpenes":
+                return message
+        elif value in ("", None):
+            return message
+    return "Run setup complete"
+
+
+def run_setup_complete(fields: dict[str, Any]) -> bool:
+    return run_setup_message(fields) == "Run setup complete"
 
 
 def import_row_message(row: dict[str, Any]) -> str:
@@ -105,23 +144,27 @@ def import_row_message(row: dict[str, Any]) -> str:
         return "Dilution mode required"
     if row.get("df_application_mode") == "apply_in_qbench" and not positive_number(row.get("qbench_df")):
         return "Dilution factor required"
-    if row.get("compound_result_row_count") != 24:
+    if not is_strict_number(row.get("compound_result_row_count")) or row.get("compound_result_row_count") != 24:
         return "Compound Results row count required"
-    if row.get("reportable_compound_row_count") != 23:
+    if not nonnegative_number(row.get("peak_table_row_count")):
+        return "Peak Table row count required"
+    if not is_strict_number(row.get("reportable_compound_row_count")) or row.get("reportable_compound_row_count") != 23:
         return "Reportable analyte count required"
-    if sample_type in PUBLISH_SAMPLE_TYPES and not all_strict_numbers(analytes, 23):
-        return "Analytical values incomplete"
     if not is_strict_number(row.get("dimethylacetamide_conc")):
         return "Dimethylacetamide audit value required"
+    if not nonnegative_number(row.get("unknown_peak_count")):
+        return "Unknown peak count required"
+    if sample_type in PUBLISH_SAMPLE_TYPES and not all_strict_numbers(analytes, 23):
+        return "Analytical values incomplete"
     if row.get("manual_integration") not in MANUAL_INTEGRATION_VALUES:
         return "Manual integration value required"
     if row.get("manual_integration") == "Yes" and not row.get("integration_reason"):
         return "Integration reason required"
     if row.get("integration_review_status") not in INTEGRATION_REVIEW_VALUES:
         return "Integration review required"
-    if (
-        row.get("manual_integration") == "Yes" or (row.get("unknown_peak_count") or 0) > 0
-    ) and row.get("integration_review_status") != "Reviewed":
+    if (row.get("manual_integration") == "Yes" or as_decimal(row.get("unknown_peak_count")) > 0) and row.get(
+        "integration_review_status"
+    ) != "Reviewed":
         return "Integration review required"
     for field in [
         "source_instrument_file",
@@ -148,9 +191,11 @@ def import_validation_status(row: dict[str, Any]) -> str:
         "Sample type required",
         "QBench Test ID required",
         "Compound Results row count required",
+        "Peak Table row count required",
         "Reportable analyte count required",
         "Analytical values incomplete",
         "Dimethylacetamide audit value required",
+        "Unknown peak count required",
     }
     if message in rejected_messages:
         return "Rejected"
@@ -246,6 +291,15 @@ def evaluate_maximum(value: Any, maximum: Decimal) -> str:
     return "within_criteria" if as_decimal(value) <= maximum else "outside_criteria"
 
 
+def evaluate_nonnegative_maximum(value: Any, maximum: Decimal) -> str:
+    if value in ("", None):
+        return "not_evaluated"
+    if not is_strict_number(value):
+        return "review_required"
+    numeric = as_decimal(value)
+    return "within_criteria" if Decimal("0") <= numeric <= maximum else "outside_criteria"
+
+
 def evaluate_range(value: Any, minimum: Decimal, maximum: Decimal) -> str:
     if value in ("", None):
         return "not_evaluated"
@@ -258,9 +312,9 @@ def evaluate_range(value: Any, minimum: Decimal, maximum: Decimal) -> str:
 def bracketing_ccv_evaluation(value: Any, criterion_status: str, accuracy_window: Any) -> str:
     if criterion_status == "decision_required":
         return "decision_required"
-    if criterion_status == "not_applicable":
-        return "not_applicable"
-    if not is_strict_number(accuracy_window):
+    if criterion_status != "confirmed":
+        return "review_required"
+    if not is_strict_number(accuracy_window) or as_decimal(accuracy_window) <= 0:
         return "decision_required"
     window = as_decimal(accuracy_window)
     return evaluate_range(value, Decimal("100") - window, Decimal("100") + window)
@@ -286,72 +340,97 @@ def qc_configuration_complete(
     *,
     bracketing_ccv_criterion_status: str,
     bracketing_ccv_accuracy_percent_window: Any = "",
-    lcs_criterion_status: str | None = None,
+    lcs_requirement_status: str = "decision_required",
+    lcs_requirement_controlled_source: str = "",
+    lcs_requirement_reviewed_by: str = "",
 ) -> bool:
-    if bracketing_ccv_criterion_status == "decision_required":
+    if bracketing_ccv_criterion_status != "confirmed":
         return False
-    if bracketing_ccv_criterion_status != "not_applicable" and not is_strict_number(
-        bracketing_ccv_accuracy_percent_window
+    if (
+        not is_strict_number(bracketing_ccv_accuracy_percent_window)
+        or as_decimal(bracketing_ccv_accuracy_percent_window) <= 0
     ):
         return False
-    if lcs_criterion_status == "decision_required":
+    if lcs_requirement_status != "not_required":
+        return False
+    if not lcs_requirement_controlled_source or not lcs_requirement_reviewed_by:
         return False
     return True
 
 
-def batch_publish_ready(
+def qc_data_complete(overall_evaluations: Iterable[str]) -> bool:
+    values = list(overall_evaluations)
+    return bool(values) and "not_evaluated" not in values and "review_required" not in values
+
+
+def qc_review_complete(
     *,
     qc_configuration_is_complete: bool,
-    integration_review_is_complete: bool,
     qc_data_is_complete: bool,
-    qc_review_is_complete: bool,
-    all_publish_rows_are_valid: bool,
-    duplicate_test_id_count: int,
-    batch_qc_disposition: str,
+    overall_evaluations: Iterable[str],
     batch_qc_reviewer: str,
     batch_qc_reviewed_at: str,
+    not_applicable_allowed: bool = False,
 ) -> bool:
+    values = list(overall_evaluations)
+    allowed = {"within_criteria"}
+    if not_applicable_allowed:
+        allowed.add("not_applicable")
     return (
         qc_configuration_is_complete
-        and integration_review_is_complete
         and qc_data_is_complete
-        and qc_review_is_complete
-        and all_publish_rows_are_valid
-        and duplicate_test_id_count == 0
-        and batch_qc_disposition == "Accepted"
+        and len(values) == 23
+        and all(value in allowed for value in values)
         and bool(batch_qc_reviewer)
         and bool(batch_qc_reviewed_at)
     )
 
 
-def batch_publish_message(
+def batch_publish_ready(
     *,
-    qc_configuration_is_complete: bool,
+    run_setup_is_complete: bool,
     integration_review_is_complete: bool,
-    qc_data_is_complete: bool,
     qc_review_is_complete: bool,
     all_publish_rows_are_valid: bool,
     duplicate_test_id_count: int,
+    populated_publish_row_count: int,
     batch_qc_disposition: str,
-    batch_qc_reviewer: str,
-    batch_qc_reviewed_at: str,
+) -> bool:
+    return (
+        run_setup_is_complete
+        and integration_review_is_complete
+        and qc_review_is_complete
+        and all_publish_rows_are_valid
+        and duplicate_test_id_count == 0
+        and populated_publish_row_count > 0
+        and batch_qc_disposition == "Accepted"
+    )
+
+
+def batch_publish_message(
+    *,
+    run_setup_is_complete: bool,
+    integration_review_is_complete: bool,
+    qc_review_is_complete: bool,
+    all_publish_rows_are_valid: bool,
+    duplicate_test_id_count: int,
+    populated_publish_row_count: int,
+    batch_qc_disposition: str,
 ) -> str:
-    if not qc_configuration_is_complete:
-        return "QC configuration incomplete"
+    if not run_setup_is_complete:
+        return "Run setup incomplete"
     if not integration_review_is_complete:
         return "Integration review incomplete"
-    if not qc_data_is_complete:
-        return "QC data incomplete"
     if not qc_review_is_complete:
         return "QC review incomplete"
     if not all_publish_rows_are_valid:
         return "Publish rows incomplete"
     if duplicate_test_id_count > 0:
         return "Duplicate Test ID"
+    if populated_publish_row_count <= 0:
+        return "No Publish rows"
     if batch_qc_disposition != "Accepted":
         return "Batch QC on hold"
-    if not batch_qc_reviewer or not batch_qc_reviewed_at:
-        return "Batch release review required"
     return "Ready for transfer"
 
 
