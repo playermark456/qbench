@@ -41,12 +41,32 @@ the controlled Prompt 4.6 disposable worksheet probe.
   fixture exactly once. QBench created one attachment and one job for the
   exact parser, but the job remained `IN_PROGRESS` through repeated reloads,
   exposed neither callback, and changed none of the 969 worksheet cells. The
-  final classification is `attachment_trigger_patch_error`, not a success
-  no-op. The parser was deactivated and the sanitized reusable Draft source
-  restored immediately after inspection.
+  final classification is `attachment_trigger_runtime_stalled`, not a success
+  no-op or confirmed patch error. The parser was deactivated and the sanitized
+  reusable Draft source restored immediately after inspection.
 - The synthetic Batch and inactive Draft parser remain isolated under the
   `SBX_ONLY_TERPENES_2026_07_16_` prefix. No internal Batch or parser ID is
   recorded in this package.
+
+Final statuses:
+
+- `code_parser_patchworksheet_status = blocked_old_sandbox_runtime_stall`
+- `qbench_code_parser_write_status = blocked`
+- `qbench_sandbox_scalar_probe_status = blocked_runtime_stall`
+- `recommended_next_route = no_code_file_parser_with_normalized_tsv`
+
+The recommended next route is a separate, unimplemented fallback:
+
+```text
+Raw LabSolutions ASCII
+    -> controlled local Prompt 4.5 parser/adapter
+    -> normalized tab-delimited wide-row file
+    -> QBench No-Code File Parser
+    -> Batch Instrument Import worksheet
+```
+
+That fallback must map only `A:AE` and `AH:BE` so `AF` and `AG` remain
+untouched. It is not implemented in this PR.
 
 ## Build and validation
 

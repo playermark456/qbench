@@ -62,7 +62,11 @@ def main() -> None:
         "manual_persistence_result = manual_persistence_passed",
         "batch_assignment_result = batch_assignment_verified",
         "runtime_mode_diagnostic_initial_attempt = blocked",
-        "runtime_mode_diagnostic = attachment_trigger_patch_error",
+        "runtime_mode_diagnostic = attachment_trigger_runtime_stalled",
+        "code_parser_patchworksheet_status = blocked_old_sandbox_runtime_stall",
+        "qbench_code_parser_write_status = blocked",
+        "qbench_sandbox_scalar_probe_status = blocked_runtime_stall",
+        "recommended_next_route = no_code_file_parser_with_normalized_tsv",
         "SBX_ONLY_TERPENES_SCALAR_PATCH_TRIGGER_01.txt",
         "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b",
         "File Parser Results status: not created",
@@ -70,7 +74,18 @@ def main() -> None:
         "exactly one File Parser Results job was created",
         "job remained `IN_PROGRESS`",
         "neither the success nor error callback was observable",
-        "attachment_trigger_patch_error",
+        "awaits a Promise that settles only when the",
+        "awaited execution did not settle",
+        "attachment_trigger_runtime_stalled",
+        "The old ait-sandbox.qbench.net File Parser attachment runtime did not complete the controlled patchWorksheet request and cannot currently be used as a reliable Spreadsheet Worksheet writer.",
+        "does not state that `patchWorksheet` is universally",
+        "Raw LabSolutions ASCII",
+        "controlled local Prompt 4.5 parser/adapter",
+        "normalized tab-delimited wide-row file",
+        "QBench No-Code File Parser",
+        "Batch Instrument Import worksheet",
+        "only `A:AE` and `AH:BE`",
+        "`AF` and `AG` untouched",
         "The exact trigger is inert because the parser is inactive",
         "patch_callback = success",
         "zero changed cells",
@@ -85,7 +100,7 @@ def main() -> None:
     assert not re.search(r"\b(?:Batch|parser|attachment|worksheet-version) ID\s*[:#]?\s*\d+\b", result, re.I)
     print(
         "scalar patch evidence validation: ok "
-        "(two Preview no-ops, manual persistence passed, attachment trigger error recorded safely)"
+        "(two Preview no-ops, manual persistence passed, attachment runtime stall blocked safely)"
     )
 
 

@@ -4,7 +4,14 @@ Date: 2026-07-16
 
 Sandbox hostname: `ait-sandbox.qbench.net`
 
-Result: `failed_safely_two_preview_noops_attachment_trigger_patch_error`
+Result: `blocked_old_sandbox_runtime_stall`
+
+Final status fields:
+
+- `code_parser_patchworksheet_status = blocked_old_sandbox_runtime_stall`
+- `qbench_code_parser_write_status = blocked`
+- `qbench_sandbox_scalar_probe_status = blocked_runtime_stall`
+- `recommended_next_route = no_code_file_parser_with_normalized_tsv`
 
 ## Controlled objects and configuration
 
@@ -167,7 +174,7 @@ Earlier browser-control classification:
 `runtime_mode_diagnostic_initial_attempt = blocked`.
 
 Final manual-handoff classification:
-`runtime_mode_diagnostic = attachment_trigger_patch_error`.
+`runtime_mode_diagnostic = attachment_trigger_runtime_stalled`.
 
 A byte-identical copy of the controlled redacted fixture was created as
 `SBX_ONLY_TERPENES_SCALAR_PATCH_TRIGGER_01.txt`. Both files are 8,692 bytes
@@ -210,6 +217,11 @@ clicked Upload exactly once. Inspection after navigation and reload confirmed:
 - the complete persisted worksheet contained the same 969 cells as the
   recorded blank baseline, with zero changed cells.
 
+The controlled parser source awaits a Promise that settles only when the
+`patchWorksheet` success or error callback runs. Because neither callback was
+observed, the awaited execution did not settle and the job remained in
+progress.
+
 Persisted scalar values after the attachment-trigger attempt were blank,
 blank, `FALSE`, `0`, and `UNCHANGED`. Therefore `probe_text` and
 `probe_number` were not patched, no numeric cell was stored, `ISNUMBER`
@@ -217,9 +229,11 @@ remained false, `COUNT` remained zero, the sentinel remained unchanged, and
 all omitted and unrelated cells were preserved.
 
 Because the job was created but never reported `SUCCESS`, this result is not
-classified `attachment_trigger_patch_noop`. The non-completing job and absent
-callback are recorded as `attachment_trigger_patch_error`; no alternate
-payload shape or fallback write path was attempted.
+classified `attachment_trigger_patch_noop`. It is also not classified as a
+confirmed patch error because QBench returned no error callback or patch error
+response. The non-completing job and absent callbacks are recorded as
+`attachment_trigger_runtime_stalled`; no alternate payload shape or write
+path was attempted.
 
 Immediately after inspecting the created job, the parser was deactivated. The
 temporary Batch context was removed from the saved Draft, the runtime-only
@@ -263,11 +277,53 @@ persistence and wrong-instance explanations. The manual handoff eliminated
 the browser file-input blocker: the exact attachment and parser job were
 created. The job did not complete, neither callback was observable, and the
 worksheet remained unchanged. The required final classification is therefore
-`attachment_trigger_patch_error`.
+`attachment_trigger_runtime_stalled`.
+
+The old ait-sandbox.qbench.net File Parser attachment runtime did not complete the controlled patchWorksheet request and cannot currently be used as a reliable Spreadsheet Worksheet writer.
+This conclusion is limited to the controlled old-Sandbox Code File Parser
+runtime investigation; it does not state that `patchWorksheet` is universally
+unsupported.
 
 No third payload shape was attempted. `updateWorksheet`, full worksheet
 replacement, service `update`, and direct HTTP writes were not used.
 Range/matrix testing did not start. Prompt 5 did not start.
+
+## Completed controls
+
+- Disposable worksheet import: passed.
+- Round-trip semantic verification: passed.
+- Manual text persistence: passed.
+- Manual numeric persistence: passed.
+- Manual numeric `ISNUMBER` and `COUNT`: passed.
+- Batch worksheet assignment: correct.
+- Named-cell mappings: correct.
+- Formula behavior: correct.
+- Two Preview patch attempts: success callbacks observed, zero persisted
+  worksheet changes.
+- Active attachment-trigger attempt: one exact job stalled at `IN_PROGRESS`.
+- Attachment-trigger callback: neither success nor error observed.
+- Complete worksheet comparison: all 969 cells unchanged.
+- Parser cleanup: deactivated.
+- Temporary Batch context: removed.
+- Sanitized Draft source: restored.
+- Exact attachment: retained as controlled evidence.
+- Production QBench access: none.
+
+## Recommended next route
+
+`recommended_next_route = no_code_file_parser_with_normalized_tsv`
+
+```text
+Raw LabSolutions ASCII
+    -> controlled local Prompt 4.5 parser/adapter
+    -> normalized tab-delimited wide-row file
+    -> QBench No-Code File Parser
+    -> Batch Instrument Import worksheet
+```
+
+The normalized wide-row mapping must include only `A:AE` and `AH:BE`, leaving
+`AF` and `AG` untouched. This fallback is documented only and is not
+implemented in this PR.
 
 ## Sandbox objects changed by the runtime-mode diagnostic
 
