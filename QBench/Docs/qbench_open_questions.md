@@ -52,3 +52,69 @@ are not authoritative. GitHub-controlled worksheet candidates, parser code,
 mappings, and specifications remain the source of truth. The next task is
 Prompt 4.6B: Full QBench Sandbox implementation and validation. Prompt 5 has
 not started.
+
+## Prompt 4.6B old-Sandbox worksheet import compatibility
+
+The first Prompt 4.6B import used a separate Terpenes-derived compatibility
+artifact rather than the controlled `Probe` candidate. The visible `Sheet1`,
+old Terpenes rows, and `Sheet1!B96` / `Sheet1!C96` mappings exactly match that
+uploaded file. This run therefore does not establish that the old Sandbox
+importer merged, ignored, translated, or partially imported the controlled
+candidate.
+
+Worksheet 61 retained the imported working configuration after reload even
+though its Versions tab reported no versions. It is quarantined and is not a
+valid probe destination.
+
+Worksheet 62 is a new inactive, unattached, blank Dynamic Spreadsheet created
+specifically as an old-Sandbox compatibility baseline. Its actual **Export
+Spreadsheet** file is preserved at:
+
+`QBench/Worksheets/Terpenes/development/2026-07-16_full_sandbox_implementation/source/2026-07-16_ait-sandbox_ws_id_62_blank_export_spreadsheet.json`
+
+Resolved: the old Sandbox importer accepted the controlled worksheet 62-native
+candidate. The unsaved working configuration and reopened saved draft both
+contained one `Probe` tab, 17 rows, 57 columns through `BE`, the exact 15 named
+cells, the nine required formula results/sentinels, the exact 64 writable
+cells, and no legacy Terpenes content. Worksheet 62 version 1 passed the saved
+round-trip gate before later being approved and activated solely for the
+controlled synthetic Batch assignment.
+
+Resolved: a manual **Export Spreadsheet** download of the reopened saved
+version was preserved and compared with
+`dist/qbench_runtime_probe_batch_ws_candidate__ait_sandbox_runtime.json`.
+The semantic round trip passed for the exact worksheet data and formulas,
+15 named cells, and writable/read-only settings. Differences were limited to
+documented old-Sandbox runtime normalization of namespace, worksheet-management
+flags, viewport metadata, empty style objects, and the evaluated top-level
+formula cache. No scalar patch was run during this verification.
+
+## Prompt 4.6B old-Sandbox scalar patch compatibility
+
+One separately authorized scalar Preview used the exact documented
+`QBBatchService.patchWorksheet` argument names and only these data fields:
+`probe_text = "sandbox_probe"` and JavaScript Number `probe_number = 1.25`.
+The reusable parser validated the complete request before the call and
+contained no saved Batch ID.
+
+The old Sandbox emitted `patch_callback = success`; the error callback did not
+fire. However, a fresh navigation and reload of the saved Batch worksheet
+showed `probe_text` and `probe_number` still blank, `probe_isnumber = FALSE`,
+`probe_count = 0`, and `probe_sentinel = UNCHANGED`. The complete 969-cell grid
+matched before and after the Preview, so every omitted field and all unrelated
+worksheet data were preserved because nothing was written.
+
+Current status:
+
+- `qbench_sandbox_scalar_patch_status = failed_safely_success_callback_without_persisted_cell_changes`
+- `qbench_sandbox_scalar_patch_compatibility = silent_no_op_in_old_sandbox_runtime`
+- `qbench_sandbox_numeric_cell_behavior = not_written_not_proven`
+- `qbench_sandbox_range_matrix_status = not_started`
+- `prompt_5_status = not_started`
+
+No alternate payload shape was attempted, and neither `updateWorksheet` nor a
+replacement API was used. The remaining support question is whether the older
+Sandbox `patchWorksheet` implementation ignores Spreadsheet Worksheet named
+cells, targets a different worksheet data model, or returns success before
+discarding an unsupported named-cell patch. Sanitized evidence is in
+`QBench/Worksheets/Terpenes/development/2026-07-16_full_sandbox_implementation/docs/sandbox_scalar_patch_result.md`.
