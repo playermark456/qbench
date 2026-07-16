@@ -1,0 +1,14 @@
+{
+  "allowed_file_extensions": [
+    ".txt"
+  ],
+  "controlled_fixture_filename": "Output_redacted_fixture.txt",
+  "maximum_error_message_length": 500,
+  "maximum_field_count": 128,
+  "maximum_files_per_run": 1,
+  "maximum_line_length": 20000,
+  "maximum_raw_file_size_bytes": 2000000,
+  "maximum_section_count": 32,
+  "maximum_table_row_count": 2000,
+  "schema_version": 1
+}

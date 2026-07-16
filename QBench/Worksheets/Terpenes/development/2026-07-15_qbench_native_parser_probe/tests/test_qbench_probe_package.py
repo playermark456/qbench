@@ -1,0 +1,234 @@
+"""Python validation tests for the Prompt 4.6 controlled probe package."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import sys
+import unittest
+from pathlib import Path
+
+
+PACKAGE_DIR = Path(__file__).resolve().parents[1]
+SCRIPTS_DIR = PACKAGE_DIR / "scripts"
+sys.path.insert(0, str(SCRIPTS_DIR))
+
+import build_probe_worksheet_candidate as worksheet_builder  # noqa: E402
+import build_qbench_probe_distribution as distribution_builder  # noqa: E402
+import validate_qbench_probe_package as validator  # noqa: E402
+
+
+def file_hash(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def generated_hashes() -> dict[str, str]:
+    paths = [
+        *sorted((PACKAGE_DIR / "dist").glob("*")),
+        *sorted((PACKAGE_DIR / "tests/fixtures").glob("*")),
+    ]
+    return {path.relative_to(PACKAGE_DIR).as_posix(): file_hash(path) for path in paths if path.is_file()}
+
+
+class QBenchProbePackageTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        distribution_builder.main()
+
+    def test_static_validator_passes(self) -> None:
+        summary = validator.validate_package()
+        self.assertEqual(summary["status"], "ok")
+        self.assertTrue(summary["qbench_configuration_draft_modified"])
+        self.assertTrue(summary["qbench_modified"])
+        self.assertTrue(summary["qbench_runtime_data_modified"])
+        self.assertEqual(summary["stage_1_status"], "passed")
+        self.assertEqual(summary["stage_2a_status"], "not_available_in_preview_runtime")
+        self.assertEqual(summary["stage_2b_status"], "unresolved_console_output_not_persisted")
+
+    def test_worksheet_generator_is_byte_identical(self) -> None:
+        output = PACKAGE_DIR / "dist/qbench_runtime_probe_batch_ws_candidate.json"
+        self.assertEqual(output.read_text(encoding="utf-8"), worksheet_builder.render_candidate())
+
+    def test_generators_are_byte_identical_across_two_runs(self) -> None:
+        distribution_builder.main()
+        first = generated_hashes()
+        distribution_builder.main()
+        second = generated_hashes()
+        self.assertEqual(first, second)
+
+    def test_worksheet_has_one_probe_tab(self) -> None:
+        workbook = json.loads(worksheet_builder.render_candidate())
+        worksheets = workbook["config"]["worksheets"]
+        self.assertEqual([worksheet["worksheetName"] for worksheet in worksheets], ["Probe"])
+        self.assertEqual(worksheets[0]["worksheetId"], worksheet_builder.PROBE_WORKSHEET_ID)
+
+    def test_required_named_cells_are_exact_and_unique(self) -> None:
+        workbook = worksheet_builder.build_candidate()
+        named = workbook["qb_config"]["named_cells"]
+        self.assertEqual(set(named), set(worksheet_builder.NAMED_TARGETS))
+        self.assertEqual(len(named), 15)
+
+    def test_formula_cells_are_read_only(self) -> None:
+        worksheet = worksheet_builder.build_candidate()["config"]["worksheets"][0]
+        for address in worksheet_builder.FORMULAS:
+            self.assertTrue(worksheet["cells"][address]["readonly"], address)
+
+    def test_controlled_input_cells_are_writable(self) -> None:
+        worksheet = worksheet_builder.build_candidate()["config"]["worksheets"][0]
+        for address in worksheet_builder.writable_cells():
+            self.assertFalse(worksheet["cells"][address]["readonly"], address)
+
+    def test_worksheet_has_no_report_or_key_value_configuration(self) -> None:
+        workbook = worksheet_builder.build_candidate()
+        self.assertEqual(workbook["qb_config"]["kvstore_config"], {})
+        self.assertEqual(workbook["qb_config"]["report_export_range"], "")
+        self.assertEqual(workbook["qb_config"]["portal_export_range"], "")
+
+    def test_controlled_fixture_copy_hash_matches(self) -> None:
+        fixture = PACKAGE_DIR / "tests/fixtures/Output_redacted_fixture.txt"
+        self.assertEqual(file_hash(fixture), "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b")
+
+    def test_stage_7_distribution_is_absent(self) -> None:
+        self.assertFalse((PACKAGE_DIR / "dist/terpenes_qbench_file_parser_sandbox_probe_v1.js").exists())
+
+    def test_manifest_marks_stage_2b_completed_and_later_stages_not_run(self) -> None:
+        manifest = json.loads((PACKAGE_DIR / "dist/qbench_probe_manifest.json").read_text(encoding="utf-8"))
+        self.assertEqual(manifest["stage_statuses"]["stage_0_repository_preparation"], "passed")
+        self.assertEqual(manifest["stage_statuses"]["stage_1_no_write_runtime"], "passed")
+        self.assertEqual(
+            manifest["stage_statuses"]["stage_2_batch_context"],
+            "unresolved_after_stage_2b_console_not_persisted",
+        )
+        self.assertEqual(
+            manifest["stage_statuses"]["stage_2a_preview_batch_context"],
+            "not_available_in_preview_runtime",
+        )
+        self.assertEqual(
+            manifest["stage_statuses"]["stage_2b_attachment_trigger"],
+            "completed_job_success_console_not_persisted",
+        )
+        self.assertEqual(
+            manifest["qbench_sandbox_probe_status"],
+            "stage_2b_completed_attachment_job_success_console_not_persisted_batch_context_unresolved",
+        )
+        self.assertTrue(all(
+            status == "not_run"
+            for stage, status in manifest["stage_statuses"].items()
+            if stage not in {
+                "stage_0_repository_preparation",
+                "stage_1_no_write_runtime",
+                "stage_2_batch_context",
+                "stage_2a_preview_batch_context",
+                "stage_2b_attachment_trigger",
+            }
+        ))
+
+    def test_manifest_records_only_the_authorized_qbench_draft_change(self) -> None:
+        manifest = json.loads((PACKAGE_DIR / "dist/qbench_probe_manifest.json").read_text(encoding="utf-8"))
+        self.assertTrue(manifest["scope_controls"]["qbench_configuration_draft_modified"])
+        self.assertTrue(manifest["scope_controls"]["qbench_modified"])
+        self.assertTrue(manifest["scope_controls"]["qbench_runtime_data_modified"])
+        self.assertTrue(manifest["scope_controls"]["authorized_attachment_added"])
+        self.assertFalse(manifest["scope_controls"]["worksheet_or_results_runtime_data_modified"])
+        self.assertFalse(manifest["scope_controls"]["production_modified"])
+        self.assertFalse(manifest["scope_controls"]["prompt_5_started"])
+
+    def test_manifest_records_initial_failure_and_corrected_stage_1_pass(self) -> None:
+        manifest = json.loads((PACKAGE_DIR / "dist/qbench_probe_manifest.json").read_text(encoding="utf-8"))
+        attempt = manifest["stage_1_initial_attempt"]
+        self.assertEqual(attempt["result"], "failed_safely_runtime_file_collection_compatibility")
+        self.assertEqual(attempt["observed_controlled_error"], "UNEXPECTED_PARSE_ERROR")
+        self.assertEqual(attempt["controlled_fixture_file_count"], 1)
+        self.assertEqual(attempt["cause_status"], "array_like_collection_confirmed_specific_constructor_not_logged")
+        self.assertFalse(attempt["runtime_data_modified"])
+        self.assertFalse(attempt["worksheet_service_invoked"])
+        retry = manifest["stage_1_retry_result"]
+        self.assertEqual(retry["result"], "passed")
+        self.assertEqual(retry["file_collection_kind"], "array_like")
+        self.assertEqual([
+            retry["compound_result_row_count"],
+            retry["peak_table_row_count"],
+            retry["reportable_channel_count"],
+            retry["dimethylacetamide_audit_row_count"],
+        ], [24, 34, 23, 1])
+        self.assertTrue(retry["qb_success_reached"])
+        self.assertTrue(retry["web_crypto_available"])
+        self.assertFalse(retry["runtime_data_modified"])
+        self.assertFalse(retry["worksheet_service_invoked"])
+        self.assertFalse(retry["parser_active"])
+        self.assertEqual(retry["parser_version_status"], "DRAFT")
+        self.assertFalse(retry["trigger_set"])
+        self.assertFalse(retry["assay_set"])
+
+    def test_stage_1_source_has_array_like_normalization_and_stable_codes(self) -> None:
+        source = (PACKAGE_DIR / "src/qbench_runtime_no_write_probe.js").read_text(encoding="utf-8")
+        for token in [
+            "fileCollectionKind",
+            "normalizeFileCollection",
+            "files.item(0)",
+            "CONTROLLED_FILE_COLLECTION_ERROR",
+            "CONTROLLED_FILE_COUNT_ERROR",
+            "CONTROLLED_FILE_OBJECT_ERROR",
+            "CONTROLLED_FILE_NAME_ERROR",
+            "CONTROLLED_FILE_READ_ERROR",
+            "failed step =",
+        ]:
+            self.assertIn(token, source)
+        self.assertNotIn("Array.from", source)
+
+    def test_manifest_records_stage_2a_observed_absence_and_no_write(self) -> None:
+        manifest = json.loads((PACKAGE_DIR / "dist/qbench_probe_manifest.json").read_text(encoding="utf-8"))
+        result = manifest["stage_2a_result"]
+        self.assertEqual(result["result"], "completed")
+        self.assertEqual(result["batch_context_status"], "not_available_in_preview_runtime")
+        self.assertEqual(result["documented_or_observed"], "observed_absent")
+        self.assertIsNone(result["safe_property_path"])
+        self.assertIsNone(result["value_type"])
+        self.assertEqual(result["preview_output_group_count_observed"], 2)
+        self.assertFalse(result["preview_rerun_by_codex"])
+        self.assertEqual(result["controlled_fixture_file_count_indicator"], 1)
+        self.assertTrue(all(
+            item == {"present": False, "value_type": "undefined"}
+            for item in result["candidate_paths"].values()
+        ))
+        self.assertFalse(result["full_qb_object_serialized"])
+        self.assertFalse(result["security_or_session_value_dereferenced"])
+        self.assertFalse(result["runtime_data_modified"])
+        self.assertFalse(result["worksheet_service_invoked"])
+        self.assertFalse(result["parser_active"])
+        self.assertEqual(result["parser_version_status"], "DRAFT")
+        self.assertFalse(result["trigger_set"])
+        self.assertFalse(result["assay_set"])
+
+        stage_2b = manifest["stage_2b_result"]
+        self.assertEqual(stage_2b["result"], "completed_inconclusive_batch_context")
+        self.assertEqual(stage_2b["batch_context_status"], "unresolved_console_output_not_persisted")
+        self.assertTrue(stage_2b["job_history_recorded"])
+        self.assertEqual(stage_2b["job_history_status"], "SUCCESS")
+        self.assertFalse(stage_2b["qbench_console_lines_persisted_in_history"])
+        self.assertIsNone(stage_2b["property_path_observed"])
+        self.assertIsNone(stage_2b["property_value_type_observed"])
+        self.assertTrue(stage_2b["attachment_added"])
+        self.assertTrue(stage_2b["attachment_remains_as_evidence"])
+        self.assertFalse(stage_2b["parser_active_after_stage"])
+        self.assertEqual(stage_2b["parser_version_status"], "APPROVED")
+        self.assertTrue(stage_2b["parser_version_active_within_disabled_parser"])
+        self.assertFalse(stage_2b["worksheet_service_invoked"])
+        self.assertFalse(stage_2b["worksheet_or_results_data_modified"])
+
+    def test_exact_file_parser_url_is_recorded_without_guessing_qbjs_url(self) -> None:
+        contract = json.loads((PACKAGE_DIR / "config/qbench_probe_contract.json").read_text(encoding="utf-8"))
+        self.assertEqual(contract["current_tenant_imports"]["file_parser_js"]["url"], distribution_builder.FILE_PARSER_IMPORT_URL)
+        self.assertIsNone(contract["current_tenant_imports"]["qbjs_js"]["url"])
+        self.assertEqual(contract["batch_context_stage_2a_status"], "not_available_in_preview_runtime")
+        self.assertEqual(contract["batch_context_stage_2b_status"], "unresolved_console_output_not_persisted")
+        self.assertEqual(contract["batch_context_status"], "unresolved_after_stage_2b_console_not_persisted")
+        self.assertIsNone(contract["batch_context_path"])
+
+    def test_expected_payload_fixtures_are_valid_json(self) -> None:
+        for path in sorted((PACKAGE_DIR / "tests/fixtures").glob("expected_*.json")):
+            self.assertIsInstance(json.loads(path.read_text(encoding="utf-8")), dict)
+
+
+if __name__ == "__main__":
+    unittest.main()

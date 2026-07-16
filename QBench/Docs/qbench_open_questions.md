@@ -22,6 +22,13 @@ The raw LabSolutions file will not contain a QBench Batch ID. The future parser
 must obtain the current named Batch's internal numeric ID from supported runtime
 or attachment context and must not infer or hardcode it.
 
+Stage 2A found no supported Batch-context path in draft Preview runtime. Stage
+2B then completed one exact-filename Batch-attachment trigger against the
+authorized disposable Sandbox Batch. File Parser History recorded `SUCCESS`,
+but did not persist the probe's safe property presence/type console lines.
+Batch context therefore remains unresolved; the successful trigger does not
+establish any property path or type.
+
 Remaining questions are maintained in the sanitized fallback support request:
 
 `QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/docs/qbench_prompt_4_6_support_request.md`
@@ -29,7 +36,19 @@ Remaining questions are maintained in the sanitized fallback support request:
 Current status:
 
 - `qbench_runtime_contract_status = insufficient_for_prompt_4_6`
-- `qbench_sandbox_probe_status = sufficient_to_begin_controlled_prompt_4_6_probe`
+- `qbench_sandbox_probe_status = stage_2b_completed_attachment_job_success_console_not_persisted_batch_context_unresolved`
+- `qbench_live_probe_status = closed_after_stage_2b`
+- `qbench_live_environment = read_only_reference_only`
+- `future_writable_environment = https://ait-sandbox.qbench.net/`
 
-Prompt 4.6 and Prompt 5 have not started. No QBench action is authorized by
-these readiness labels.
+Prompt 4.6 live probing is closed after Stage 2B with
+`batch_context_status = unresolved_console_output_not_persisted`. The Stage 3
+scalar patch and all later write probes were not run. No later live QBench
+action is authorized by these status labels.
+
+All future writable work moves to `https://ait-sandbox.qbench.net/`. That
+Sandbox is older and may not match live configuration, so its existing objects
+are not authoritative. GitHub-controlled worksheet candidates, parser code,
+mappings, and specifications remain the source of truth. The next task is
+Prompt 4.6B: Full QBench Sandbox implementation and validation. Prompt 5 has
+not started.

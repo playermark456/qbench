@@ -1,0 +1,47 @@
+{
+  "allowed_batch_write_api": "QBBatchService.patchWorksheet",
+  "batch_context_path": null,
+  "batch_context_stage_2a_status": "not_available_in_preview_runtime",
+  "batch_context_stage_2b_status": "unresolved_console_output_not_persisted",
+  "batch_context_status": "unresolved_after_stage_2b_console_not_persisted",
+  "controlled_counts": {
+    "compound_result_rows": 24,
+    "dimethylacetamide_audit_rows": 1,
+    "peak_table_rows": 34,
+    "reportable_channels": 23
+  },
+  "controlled_hashes": {
+    "prompt_3_test_candidate_sha256": "90686b980882b221008f281be33984dc5232e2f3d2632300db3f4a27b529640a",
+    "prompt_4_batch_candidate_canonical_lf_sha256": "e5c80b1213396cab4932e267fd786c6986c933d4b404f11daa5c5aba0629758e",
+    "prompt_4_5_source_fixture_sha256": "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b"
+  },
+  "current_tenant_imports": {
+    "file_parser_js": {
+      "status": "exact_url_recorded",
+      "url": "https://d30nr38ylt5b32.cloudfront.net/v1.1.0/file_parser.js",
+      "version": "1.1.0"
+    },
+    "qbjs_js": {
+      "status": "version_recorded_exact_url_not_recorded",
+      "url": null,
+      "version": "2.7.0"
+    }
+  },
+  "probe_tenant": "https://ait.qbench.net",
+  "prohibited_batch_write_apis": [
+    "full worksheet replacement",
+    "inherited full-entity replacement"
+  ],
+  "qbench_runtime_contract_status": "insufficient_for_prompt_4_6",
+  "qbench_sandbox_probe_status": "sufficient_to_begin_controlled_prompt_4_6_probe",
+  "schema_version": 1,
+  "stage_2b_attachment_trigger": {
+    "batch_name": "ZZZ_SANDBOX_ONLY_TERPENES_CONTEXT_PROBE_2026-07-16",
+    "controlled_fixture_name": "Output_redacted_fixture.txt",
+    "job_history_status": "SUCCESS",
+    "parser_active_after_stage": false,
+    "qbench_console_lines_persisted_in_history": false,
+    "worksheet_service_invoked": false
+  },
+  "stage_0_qbench_modified": false
+}

@@ -1,0 +1,11 @@
+{
+  "batchId": "SANITIZED_BATCH_CONTEXT",
+  "data": {
+    "probe_number": {
+      "value": 1.25
+    },
+    "probe_text": {
+      "value": "sandbox_probe"
+    }
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "artifact_hashes": [
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/.gitattributes",
+      "sha256": "43fe9ce931eb8d8faf7708a4939c1671a18e0f134f95d0341c22351b1a7e7497"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/config/qbench_probe_contract.json",
+      "sha256": "1eab1650270d4abb97ce525bf7ca6a9995cf14f4f4110f8d0889c6732bcb9c0e"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/config/qbench_probe_limits.json",
+      "sha256": "2c951c88174a89b9dccee11cd4b193f2658d3f5be1c78067dc81bd3109fb640b"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/config/qbench_probe_sandbox_objects.example.json",
+      "sha256": "9a7c060cc8e940f2c2f47cf1a985a7dd0b8c819152bd790210159021d72fa5a9"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/dist/qbench_attachment_context_probe_v1.js",
+      "sha256": "b78253516708c75444cfb4b1401c8d87bd206765851d9f8f56225dfe9478939f"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/dist/qbench_batch_context_probe_v1.js",
+      "sha256": "eeb8c72a1c5bd995be44a648ed65f6a48fe6f66cddf89d3ccdb1b4479621b82d"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/dist/qbench_failure_patch_probe_v1.js",
+      "sha256": "e4887fec9e3178b3fa51f6d20ddb0b122b24c7b1c64a868f1c3e382336b9ad26"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/dist/qbench_range_patch_probe_v1.js",
+      "sha256": "b27e200c9e1e61735a7362e58f1ad1f12d67776f7a60d3ed3d2f55df1a2455b1"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/dist/qbench_runtime_no_write_probe_v1.js",
+      "sha256": "aa89f52385548144d564825b52a58b1a2a2a7b19215a5f4c02abbbdd8efb7f38"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/dist/qbench_runtime_probe_batch_ws_candidate.json",
+      "sha256": "17fb418bffc9d5a4c96dc5f5d9c7da7890d6a9cbd33e0286ac478d22183785ea"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/dist/qbench_scalar_patch_probe_v1.js",
+      "sha256": "172f89b24b14d84e351b79d5015690a780ad9736a8b6fbb87123bdc2e7a2b282"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/dist/qbench_two_block_patch_probe_v1.js",
+      "sha256": "895eb53a548330461a7aad68f5ffba825262e37de70e5c65d1f4381d91f8d174"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/prompt_4_6_stage_plan.md",
+      "sha256": "5ea4a37bab5af7df1f7d5f78f330aa9bd8b4b5e3c8c5e71bf83dd6d7cd87caab"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_environment_transition_2026-07-16.md",
+      "sha256": "38e331bcd37c8700787de5ed7d04609ef88c577ea46f8d3885db37d83751858c"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_probe_rollback_and_cleanup.md",
+      "sha256": "04a8c9ecf9fb4314535444231c9fc1dd569c807a2de6168f0556a87a9b330923"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_probe_sandbox_checklist.md",
+      "sha256": "5b6e16b9683cd56e41732cdec6086f54f2bb55df33d533e4f75575ab36226d2b"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_probe_security_review.md",
+      "sha256": "ff1618073e9073172646b7ae9697d9be8b44824716aae7e363463d27405354b4"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_runtime_contract_updates.md",
+      "sha256": "7a181f34bac82d2c03392be4c5cd739ca46bbb1db68b8f6b6cfadd20812d4bc0"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_runtime_probe_results.md",
+      "sha256": "011d4335999c4b0d1ed83c1996a16012d44d95d222eef9377fd09c4ae31aed25"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_sandbox_change_log.md",
+      "sha256": "5f7ebd5c6b8bffeff8a539b653aa4aa09fb514444e87bb074ce33316e7503ae3"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/terpenes_fixture_probe_results.md",
+      "sha256": "5df1178dcc994d8741538df8dacc5180a75af9da096a5c0a332278bc0df2ae21"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/README.md",
+      "sha256": "10a4f9117eb74ed2e6a8ef59aab977c574d8158661fcbf085cd8ae3c965912f7"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/scripts/build_probe_worksheet_candidate.py",
+      "sha256": "90661464014dad298dd0ac8236e7c9b409033db5404c218c50d190d3a2a6ca34"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/scripts/build_qbench_probe_distribution.py",
+      "sha256": "e66042785e8d15cfe0cbad00371004888605aa976d54dc3e4f21c452f131fccd"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/scripts/validate_qbench_probe_package.py",
+      "sha256": "0c0ca37b0f7ea22aaebc944372b948da80d6d91b48231406e6f32da14c6d2df8"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/qbench_attachment_context_probe.js",
+      "sha256": "8570102714a4bba1015109345c9a58c1e4161dde96d3a4f36fd2a42e03115e94"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/qbench_batch_context_probe.js",
+      "sha256": "d61ea105e34bcae481b0a2771c8b699014da2a5e1eb10e77b79d438dcb2705c1"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/qbench_browser_parser_core.js",
+      "sha256": "424fe7fb581c5016fd87fc7989015bd2a2ddb116725459dd4b9fa10be16c03c5"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/qbench_failure_patch_probe.js",
+      "sha256": "bed415070675a5ed1fc64be569d539ef1e9ca61ceb524b88126260afb989c06a"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/qbench_range_patch_probe.js",
+      "sha256": "6a32a271d670f3ac64d9d2661feae8beeb0451a76601099aabaef5bb636d5441"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/qbench_runtime_no_write_probe.js",
+      "sha256": "5151e193b10e02d1bc20457c70fd674e72f7b4db793f9a3d5871959f792b0c83"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/qbench_scalar_patch_probe.js",
+      "sha256": "f70fdf14a48e9d19f5fd375b1d7e75b685705761ad823e3e5160a6c9d4e04b25"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/qbench_two_block_patch_probe.js",
+      "sha256": "333842a37031db9af1fa4ec924ec6d41b5f8b2629d28cdaf63a8ecfd4a943683"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/terpenes_qbench_sandbox_probe.template.js",
+      "sha256": "755506555d824287a5909d0ca575d52c93af6f904c644b3edfae36f780f32256"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/fixtures/expected_no_write_summary.json",
+      "sha256": "92686d17f4731d03557656fdeb7d44ce017eab09fbe872de3c76e91044fef46a"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/fixtures/expected_range_patch.json",
+      "sha256": "980da86199015462b1e2847d07b2041d86611a173dd60ebed6faa1c29f7abc78"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/fixtures/expected_scalar_patch.json",
+      "sha256": "61a6a541222ee969b8efff8ad2a226acc6d3bbea059495c6c8fbe6c0c63b9150"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/fixtures/expected_two_block_patch.json",
+      "sha256": "880fb30818b86c6052f2b5c83e0303fe9b3c96ba2e125292fa6e6d385da44930"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/fixtures/Output_redacted_fixture.txt",
+      "sha256": "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/js/qbench_attachment_context_probe.test.js",
+      "sha256": "5dfaf028fa53e035e204d4cd4ed35f7328ced75efc20b756cc157fd4e0b4afd2"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/js/qbench_browser_parser_core.test.js",
+      "sha256": "f642793173ab18ffb0d8de62c41ad772df672565c807151ea3c5964e003ef8ac"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/js/qbench_failure_guards.test.js",
+      "sha256": "c1738a4ac7a36dcd9b5199bfce49a15ba39d9084c45d7322b3017972bffd797b"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/js/qbench_patch_payloads.test.js",
+      "sha256": "9209e64ae572b27399d389348121bbb6b8cd11cc603794a47a702ccb7a8d041f"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/js/qbench_runtime_no_write_probe.test.js",
+      "sha256": "9ed6d47afa7040c04a3d435d2d158c2ea1909d14820388cd158329ce3b38d8d7"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/test_qbench_probe_package.py",
+      "sha256": "67b83eda4f3e932c0bfc7601d42b3995273520d933db3cb84c5c0a9888691249"
+    }
+  ],
+  "controlled_dependency_hashes": {
+    "prompt_3_test_candidate": "90686b980882b221008f281be33984dc5232e2f3d2632300db3f4a27b529640a",
+    "prompt_4_5_source_fixture": "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b",
+    "prompt_4_batch_candidate_canonical_lf": "e5c80b1213396cab4932e267fd786c6986c933d4b404f11daa5c5aba0629758e"
+  },
+  "manifest_self_hash": {
+    "included": false,
+    "reason": "Self-hash omitted to avoid recursive content."
+  },
+  "package": "2026-07-15_qbench_native_parser_probe",
+  "prompt": "Prompt 4.6",
+  "qbench_native_status": "blocked",
+  "qbench_sandbox_probe_status": "stage_2b_completed_attachment_job_success_console_not_persisted_batch_context_unresolved",
+  "schema_version": 1,
+  "scope_controls": {
+    "authorized_attachment_added": true,
+    "production_modified": false,
+    "prompt_5_started": false,
+    "qbench_configuration_draft_modified": true,
+    "qbench_configuration_modified": true,
+    "qbench_modified": true,
+    "qbench_runtime_data_modified": true,
+    "terpenes_result_outcome_artifact_introduced": false,
+    "worksheet_or_results_runtime_data_modified": false
+  },
+  "stage_1_initial_attempt": {
+    "cause_status": "array_like_collection_confirmed_specific_constructor_not_logged",
+    "controlled_fixture_file_count": 1,
+    "observed_controlled_error": "UNEXPECTED_PARSE_ERROR",
+    "parser_active": false,
+    "parser_version_status": "DRAFT",
+    "result": "failed_safely_runtime_file_collection_compatibility",
+    "runtime_data_modified": false,
+    "transient_qbench_error_notification": true,
+    "worksheet_service_invoked": false
+  },
+  "stage_1_retry_result": {
+    "assay_set": false,
+    "compound_result_row_count": 24,
+    "controlled_fixture_file_count": 1,
+    "dimethylacetamide_audit_row_count": 1,
+    "evidence_reference": "stage_1_corrected_preview_sanitized_console_2026-07-15",
+    "file_collection_kind": "array_like",
+    "file_extension": ".txt",
+    "parser_active": false,
+    "parser_version_status": "DRAFT",
+    "peak_table_row_count": 34,
+    "qb_success_reached": true,
+    "reportable_channel_count": 23,
+    "result": "passed",
+    "runtime_data_modified": false,
+    "trigger_set": false,
+    "web_crypto_available": true,
+    "worksheet_service_invoked": false
+  },
+  "stage_2a_result": {
+    "assay_set": false,
+    "batch_context_status": "not_available_in_preview_runtime",
+    "candidate_paths": {
+      "QB.attachment": {
+        "present": false,
+        "value_type": "undefined"
+      },
+      "QB.batch": {
+        "present": false,
+        "value_type": "undefined"
+      },
+      "QB.context": {
+        "present": false,
+        "value_type": "undefined"
+      },
+      "QB.currentBatch": {
+        "present": false,
+        "value_type": "undefined"
+      },
+      "QB.fileParserContext": {
+        "present": false,
+        "value_type": "undefined"
+      }
+    },
+    "controlled_fixture_file_count_indicator": 1,
+    "documented_or_observed": "observed_absent",
+    "evidence_reference": "stage_2a_existing_preview_sanitized_console_2026-07-15",
+    "file_metadata_logged": false,
+    "full_qb_object_serialized": false,
+    "parser_active": false,
+    "parser_version_status": "DRAFT",
+    "preview_output_group_count_observed": 2,
+    "preview_rerun_by_codex": false,
+    "result": "completed",
+    "runtime_data_modified": false,
+    "safe_property_path": null,
+    "security_or_session_value_dereferenced": false,
+    "trigger_set": false,
+    "value_type": null,
+    "worksheet_service_invoked": false
+  },
+  "stage_2b_result": {
+    "assay_set": false,
+    "attachment_added": true,
+    "attachment_remains_as_evidence": true,
+    "batch_context_status": "unresolved_console_output_not_persisted",
+    "batch_name": "ZZZ_SANDBOX_ONLY_TERPENES_CONTEXT_PROBE_2026-07-16",
+    "controlled_fixture_name": "Output_redacted_fixture.txt",
+    "evidence_reference": "stage_2b_attachment_job_history_2026-07-15",
+    "filename_match": "exact_equal",
+    "full_qb_object_serialized": false,
+    "job_history_recorded": true,
+    "job_history_status": "SUCCESS",
+    "job_trigger": "Attachment Added To Batch",
+    "parser_active_after_stage": false,
+    "parser_name": "ZZZ_SANDBOX_ONLY_Terpenes_Attachment_Context_Probe_2026-07-16",
+    "parser_version_active_within_disabled_parser": true,
+    "parser_version_status": "APPROVED",
+    "preview_rerun_by_codex": false,
+    "property_path_observed": null,
+    "property_value_type_observed": null,
+    "qbench_console_lines_persisted_in_history": false,
+    "result": "completed_inconclusive_batch_context",
+    "runtime_attachment_modified": true,
+    "security_or_session_value_dereferenced": false,
+    "trigger_scope": "Batch attachment exact filename",
+    "trigger_set": true,
+    "worksheet_or_results_data_modified": false,
+    "worksheet_service_invoked": false
+  },
+  "stage_statuses": {
+    "stage_0_repository_preparation": "passed",
+    "stage_1_no_write_runtime": "passed",
+    "stage_2_batch_context": "unresolved_after_stage_2b_console_not_persisted",
+    "stage_2a_preview_batch_context": "not_available_in_preview_runtime",
+    "stage_2b_attachment_trigger": "completed_job_success_console_not_persisted",
+    "stage_3_scalar_patch": "not_run",
+    "stage_4_range_patch": "not_run",
+    "stage_5_two_block_patch": "not_run",
+    "stage_6_failure_behavior": "not_run",
+    "stage_7_terpenes_fixture_probe": "not_run"
+  },
+  "test_counts": {
+    "prompt_2_python": 27,
+    "prompt_3_python": 50,
+    "prompt_4_5_javascript": 143,
+    "prompt_4_5_python": 13,
+    "prompt_4_6_javascript": 48,
+    "prompt_4_6_python": 17,
+    "prompt_4_canonical_lf_python": 39,
+    "total": 337
+  }
+}
