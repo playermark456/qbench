@@ -21,3 +21,22 @@ locally testable libraries but are runtime-guarded; no QBJS URL is guessed.
 
 Batch context is not yet known. The raw LabSolutions file contains no QBench
 Batch ID, and no final parser may require, infer, log, or hardcode one.
+
+## Stage 1 runtime observation
+
+The first authorized no-write Preview selected one controlled fixture and
+entered the runtime, but returned `UNEXPECTED_PARSE_ERROR`. No worksheet
+service or destination write occurred, and the controlled parser remained
+inactive/DRAFT with no trigger or assay.
+
+The initial probe assumed `Array.isArray(QB.files)`. QBench may instead expose
+a browser `FileList` or another array-like collection, but that cause is not
+yet proven. The corrected retry treats `QB.files` as a narrow runtime boundary:
+it accepts Arrays and finite, nonnegative-integer-length array-like objects,
+requires exactly one entry, retrieves index `0` or `item(0)`, and emits only a
+sanitized collection kind plus stable controlled errors. The retry will
+determine whether collection compatibility caused the first failure without
+logging the runtime collection itself.
+
+Stage 1 remains incomplete. Stage 2A has not started, and Batch context remains
+unobserved.

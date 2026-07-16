@@ -1,4 +1,4 @@
-"""Python validation tests for the Prompt 4.6 Stage 0 package."""
+"""Python validation tests for the Prompt 4.6 controlled probe package."""
 
 from __future__ import annotations
 
@@ -38,7 +38,10 @@ class QBenchProbePackageTests(unittest.TestCase):
     def test_static_validator_passes(self) -> None:
         summary = validator.validate_package()
         self.assertEqual(summary["status"], "ok")
-        self.assertFalse(summary["qbench_modified"])
+        self.assertTrue(summary["qbench_configuration_draft_modified"])
+        self.assertTrue(summary["qbench_modified"])
+        self.assertFalse(summary["qbench_runtime_data_modified"])
+        self.assertEqual(summary["stage_1_status"], "incomplete_retry_pending")
 
     def test_worksheet_generator_is_byte_identical(self) -> None:
         output = PACKAGE_DIR / "dist/qbench_runtime_probe_batch_ws_candidate.json"
@@ -86,16 +89,49 @@ class QBenchProbePackageTests(unittest.TestCase):
     def test_stage_7_distribution_is_absent(self) -> None:
         self.assertFalse((PACKAGE_DIR / "dist/terpenes_qbench_file_parser_sandbox_probe_v1.js").exists())
 
-    def test_manifest_marks_only_stage_0_passed(self) -> None:
+    def test_manifest_marks_stage_1_incomplete_and_later_stages_not_run(self) -> None:
         manifest = json.loads((PACKAGE_DIR / "dist/qbench_probe_manifest.json").read_text(encoding="utf-8"))
         self.assertEqual(manifest["stage_statuses"]["stage_0_repository_preparation"], "passed")
-        self.assertTrue(all(status == "not_run" for stage, status in manifest["stage_statuses"].items() if stage != "stage_0_repository_preparation"))
+        self.assertEqual(manifest["stage_statuses"]["stage_1_no_write_runtime"], "incomplete_retry_pending")
+        self.assertTrue(all(
+            status == "not_run"
+            for stage, status in manifest["stage_statuses"].items()
+            if stage not in {"stage_0_repository_preparation", "stage_1_no_write_runtime"}
+        ))
 
-    def test_manifest_records_no_qbench_or_production_change(self) -> None:
+    def test_manifest_records_only_the_authorized_qbench_draft_change(self) -> None:
         manifest = json.loads((PACKAGE_DIR / "dist/qbench_probe_manifest.json").read_text(encoding="utf-8"))
-        self.assertFalse(manifest["scope_controls"]["qbench_modified"])
+        self.assertTrue(manifest["scope_controls"]["qbench_configuration_draft_modified"])
+        self.assertTrue(manifest["scope_controls"]["qbench_modified"])
+        self.assertFalse(manifest["scope_controls"]["qbench_runtime_data_modified"])
         self.assertFalse(manifest["scope_controls"]["production_modified"])
         self.assertFalse(manifest["scope_controls"]["prompt_5_started"])
+
+    def test_manifest_records_initial_stage_1_attempt_as_failed_safely(self) -> None:
+        manifest = json.loads((PACKAGE_DIR / "dist/qbench_probe_manifest.json").read_text(encoding="utf-8"))
+        attempt = manifest["stage_1_initial_attempt"]
+        self.assertEqual(attempt["result"], "failed_safely_runtime_file_collection_compatibility")
+        self.assertEqual(attempt["observed_controlled_error"], "UNEXPECTED_PARSE_ERROR")
+        self.assertEqual(attempt["controlled_fixture_file_count"], 1)
+        self.assertEqual(attempt["cause_status"], "file_collection_compatibility_hypothesis_not_proven")
+        self.assertFalse(attempt["runtime_data_modified"])
+        self.assertFalse(attempt["worksheet_service_invoked"])
+
+    def test_stage_1_source_has_array_like_normalization_and_stable_codes(self) -> None:
+        source = (PACKAGE_DIR / "src/qbench_runtime_no_write_probe.js").read_text(encoding="utf-8")
+        for token in [
+            "fileCollectionKind",
+            "normalizeFileCollection",
+            "files.item(0)",
+            "CONTROLLED_FILE_COLLECTION_ERROR",
+            "CONTROLLED_FILE_COUNT_ERROR",
+            "CONTROLLED_FILE_OBJECT_ERROR",
+            "CONTROLLED_FILE_NAME_ERROR",
+            "CONTROLLED_FILE_READ_ERROR",
+            "failed step =",
+        ]:
+            self.assertIn(token, source)
+        self.assertNotIn("Array.from", source)
 
     def test_exact_file_parser_url_is_recorded_without_guessing_qbjs_url(self) -> None:
         contract = json.loads((PACKAGE_DIR / "config/qbench_probe_contract.json").read_text(encoding="utf-8"))

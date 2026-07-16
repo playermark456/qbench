@@ -30,7 +30,7 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/dist/qbench_runtime_no_write_probe_v1.js",
-      "sha256": "2a858ec230287a3c5eac2d1fd86135da145912db0305ca1ef1ac6251700325ac"
+      "sha256": "aa89f52385548144d564825b52a58b1a2a2a7b19215a5f4c02abbbdd8efb7f38"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/dist/qbench_runtime_probe_batch_ws_candidate.json",
@@ -58,19 +58,19 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_probe_security_review.md",
-      "sha256": "448870398540fd7332e0395d84959c312b60de356955708a9c999316e7accb5e"
+      "sha256": "2255e5271babcf3dc1310aae5d50fc5c2fbd001b981152d95af148e22a50bf17"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_runtime_contract_updates.md",
-      "sha256": "554828c9def53db34d598ea2db37ca3ca4f8e0a8a078d793eb6a3054b3196c45"
+      "sha256": "1b3fdbde80e6a9d18dd52026d056ed021993342ba05b2fd5361d7074273b5de3"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_runtime_probe_results.md",
-      "sha256": "6a6bc629ed442bdf6e0dd2a21f2a84ff898e78b37bc7b1d135defc8f8d6512e7"
+      "sha256": "ff8152af6e7ae1f40760b32d4944f96fc505cf1f65b062d407c4b105a78c7f21"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_sandbox_change_log.md",
-      "sha256": "beed9d841635be18d4c56667d295924c1bf3a444f510602fcdd26e5c1082a66c"
+      "sha256": "f5cd2a7c92b2cc283d679f0f79700d08e90ba1f577b79c4a85daf1c698153f04"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/terpenes_fixture_probe_results.md",
@@ -78,7 +78,7 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/README.md",
-      "sha256": "4fb8963ba1dce004163de06bcdb2dbb8670cf53f01739ee039d8065b1895de58"
+      "sha256": "c20fa14a0d769086fba4ccfce28620d3b8e53937e5841e8b6e4ebd817647c7d0"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/scripts/build_probe_worksheet_candidate.py",
@@ -86,11 +86,11 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/scripts/build_qbench_probe_distribution.py",
-      "sha256": "6ff528d3e0b4808be52f22fccc338a91a98153857ff3e1c4616f386e3a51f200"
+      "sha256": "f3ee3496b5a1d12aaea7415670d1fd25c013e376e55f330507da57e0448f5596"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/scripts/validate_qbench_probe_package.py",
-      "sha256": "3800d3fbb42c3eefa61a40f48dc40be1071b98fd656d48110534ce9a9d3e4227"
+      "sha256": "d2ee4367197d1e25d28efc41594116236f6fcb704ff264b7b43acc661b4652c6"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/qbench_batch_context_probe.js",
@@ -110,7 +110,7 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/qbench_runtime_no_write_probe.js",
-      "sha256": "cbc4a51a55e7cfb860717701090d3aef4baf7ee5e23e1614da4f0db0212e1f5d"
+      "sha256": "5151e193b10e02d1bc20457c70fd674e72f7b4db793f9a3d5871959f792b0c83"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/qbench_scalar_patch_probe.js",
@@ -158,11 +158,11 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/js/qbench_runtime_no_write_probe.test.js",
-      "sha256": "5dcda0ef52c9de26e10bd2400cbe13812801a2f07f13be4e18d98b9111ef71ae"
+      "sha256": "9ed6d47afa7040c04a3d435d2d158c2ea1909d14820388cd158329ce3b38d8d7"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/test_qbench_probe_package.py",
-      "sha256": "716d96ef6c1596353cd1e00750886372ce6e5c24e03e0f4152cb3fba8bf19906"
+      "sha256": "b09aed572ecd9b34f48ab9190d870ef0f200d30ccc1139e6b7e3e018ff5ad664"
     }
   ],
   "controlled_dependency_hashes": {
@@ -177,17 +177,30 @@
   "package": "2026-07-15_qbench_native_parser_probe",
   "prompt": "Prompt 4.6",
   "qbench_native_status": "blocked",
-  "qbench_sandbox_probe_status": "not_run",
+  "qbench_sandbox_probe_status": "stage_1_retry_pending",
   "schema_version": 1,
   "scope_controls": {
     "production_modified": false,
     "prompt_5_started": false,
-    "qbench_modified": false,
+    "qbench_configuration_draft_modified": true,
+    "qbench_modified": true,
+    "qbench_runtime_data_modified": false,
     "terpenes_result_outcome_artifact_introduced": false
+  },
+  "stage_1_initial_attempt": {
+    "cause_status": "file_collection_compatibility_hypothesis_not_proven",
+    "controlled_fixture_file_count": 1,
+    "observed_controlled_error": "UNEXPECTED_PARSE_ERROR",
+    "parser_active": false,
+    "parser_version_status": "DRAFT",
+    "result": "failed_safely_runtime_file_collection_compatibility",
+    "runtime_data_modified": false,
+    "transient_qbench_error_notification": true,
+    "worksheet_service_invoked": false
   },
   "stage_statuses": {
     "stage_0_repository_preparation": "passed",
-    "stage_1_no_write_runtime": "not_run",
+    "stage_1_no_write_runtime": "incomplete_retry_pending",
     "stage_2_batch_context": "not_run",
     "stage_3_scalar_patch": "not_run",
     "stage_4_range_patch": "not_run",
@@ -200,9 +213,9 @@
     "prompt_3_python": 50,
     "prompt_4_5_javascript": 143,
     "prompt_4_5_python": 13,
-    "prompt_4_6_javascript": 33,
-    "prompt_4_6_python": 14,
+    "prompt_4_6_javascript": 44,
+    "prompt_4_6_python": 16,
     "prompt_4_canonical_lf_python": 39,
-    "total": 319
+    "total": 332
   }
 }

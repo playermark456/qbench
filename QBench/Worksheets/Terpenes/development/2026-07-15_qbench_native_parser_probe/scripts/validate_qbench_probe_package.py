@@ -1,4 +1,4 @@
-"""Static validation for the Prompt 4.6 Stage 0 repository package."""
+"""Static validation for the Prompt 4.6 controlled Sandbox probe package."""
 
 from __future__ import annotations
 
@@ -160,8 +160,35 @@ def validate_scripts() -> dict[str, int]:
     no_write_source = (PACKAGE_DIR / "src/qbench_runtime_no_write_probe.js").read_text(encoding="utf-8")
     no_write_dist = (DIST_DIR / "qbench_runtime_no_write_probe_v1.js").read_text(encoding="utf-8")
     for text in [no_write_source, no_write_dist]:
-        if "QBBatchService" in text or "patchWorksheet" in text:
-            fail("Stage 1 no-write script references a Batch worksheet service.")
+        for token in [
+            "QBBatchService",
+            "patchWorksheet",
+            "updateWorksheet",
+            "fetch(",
+            "XMLHttpRequest",
+            "eval(",
+            "Function(",
+            "localStorage",
+            ".cookie",
+        ]:
+            if token in text:
+                fail(f"Stage 1 no-write script contains prohibited token: {token}")
+    if "Array.from" in no_write_source:
+        fail("Stage 1 file collection normalization must not use Array.from.")
+    for token in [
+        "fileCollectionKind",
+        "normalizeFileCollection",
+        "files.item(0)",
+        "probe step = file collection accepted",
+        "failed step =",
+        "CONTROLLED_FILE_COLLECTION_ERROR",
+        "CONTROLLED_FILE_COUNT_ERROR",
+        "CONTROLLED_FILE_OBJECT_ERROR",
+        "CONTROLLED_FILE_NAME_ERROR",
+        "CONTROLLED_FILE_READ_ERROR",
+    ]:
+        if token not in no_write_source or token not in no_write_dist:
+            fail(f"Stage 1 corrected runtime contract token is missing: {token}")
     if "run(async () =>" not in no_write_dist or "FileReader" not in no_write_dist or "qb.files" not in no_write_dist:
         fail("Generated Stage 1 script is missing the proven runtime contract.")
     exact_import = f'importScripts("{distribution_builder.FILE_PARSER_IMPORT_URL}");'
@@ -179,11 +206,23 @@ def validate_manifest() -> int:
     manifest = read_json(MANIFEST_PATH)
     if manifest["stage_statuses"]["stage_0_repository_preparation"] != "passed":
         fail("Stage 0 manifest status must be passed.")
+    if manifest["stage_statuses"]["stage_1_no_write_runtime"] != "incomplete_retry_pending":
+        fail("Stage 1 must remain incomplete while the corrected retry is pending.")
     for stage, status in manifest["stage_statuses"].items():
-        if stage != "stage_0_repository_preparation" and status != "not_run":
-            fail("Live stages must remain not_run during Stage 0.")
-    if manifest["scope_controls"]["qbench_modified"] is not False:
-        fail("Stage 0 manifest must record no QBench modification.")
+        if stage not in {"stage_0_repository_preparation", "stage_1_no_write_runtime"} and status != "not_run":
+            fail("Stages after Stage 1 must remain not_run.")
+    attempt = manifest["stage_1_initial_attempt"]
+    if attempt["result"] != "failed_safely_runtime_file_collection_compatibility":
+        fail("Stage 1 initial failed-safe result is missing.")
+    if attempt["cause_status"] != "file_collection_compatibility_hypothesis_not_proven":
+        fail("The unproven FileList cause must remain labeled as a hypothesis.")
+    if attempt["runtime_data_modified"] is not False or attempt["worksheet_service_invoked"] is not False:
+        fail("Stage 1 must record no runtime data modification or worksheet service invocation.")
+    scope = manifest["scope_controls"]
+    if scope["qbench_configuration_draft_modified"] is not True or scope["qbench_modified"] is not True:
+        fail("The authorized inactive parser draft change must be recorded accurately.")
+    if scope["qbench_runtime_data_modified"] is not False or scope["production_modified"] is not False:
+        fail("Stage 1 must record no runtime-data or production modification.")
     expected = distribution_builder.build_manifest()
     if manifest != expected:
         fail("Manifest is not byte-content-equivalent to current package artifacts.")
@@ -207,8 +246,11 @@ def validate_package() -> dict[str, Any]:
         "artifact_count": artifact_count,
         **worksheet_summary,
         **script_summary,
-        "qbench_modified": False,
-        "stage_1_authorized": False,
+        "qbench_configuration_draft_modified": True,
+        "qbench_modified": True,
+        "qbench_runtime_data_modified": False,
+        "stage_1_authorized": True,
+        "stage_1_status": "incomplete_retry_pending",
     }
 
 

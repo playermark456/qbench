@@ -28,8 +28,18 @@ class MockFileReader {
   }
 }
 
+class FailedFileReader {
+  readAsText() {
+    Promise.resolve().then(() => this.onerror(new Error("sanitized mock read failure")));
+  }
+}
+
+function controlledFile(name = "Output_redacted_fixture.txt") {
+  return { name, type: "text/plain", size: fixture.length, text: fixture };
+}
+
 function mockQB(files) {
-  const state = { logs: [], progress: [], success: 0, errors: [] };
+  const state = { logs: [], progress: [], success: 0, errors: [], serviceCalls: [] };
   return {
     state,
     QB: {
@@ -38,48 +48,155 @@ function mockQB(files) {
       progressBar: (value) => state.progress.push(value),
       success: () => { state.success += 1; },
       error: (value) => state.errors.push(value),
+      patchWorksheet: () => state.serviceCalls.push("patchWorksheet"),
+      updateWorksheet: () => state.serviceCalls.push("updateWorksheet"),
     },
   };
 }
 
-test("no-write runtime mock returns only the controlled sanitized summary", async () => {
+async function executeWith(files, Reader = MockFileReader) {
   const context = loadProbe();
-  const mock = mockQB([{ name: "Output_redacted_fixture.txt", type: "text/plain", size: fixture.length, text: fixture }]);
-  const summary = await context.QBenchRuntimeNoWriteProbe.execute(mock.QB, MockFileReader, config, context.QBenchTerpenesParserCore);
+  const mock = mockQB(files);
+  const summary = await context.QBenchRuntimeNoWriteProbe.execute(mock.QB, Reader, config, context.QBenchTerpenesParserCore);
+  return { context, mock, summary };
+}
+
+async function expectControlledFailure(files, expectedCode, expectedStep, Reader = MockFileReader) {
+  const context = loadProbe();
+  const mock = mockQB(files);
+  await assert.rejects(
+    () => context.QBenchRuntimeNoWriteProbe.execute(mock.QB, Reader, config, context.QBenchTerpenesParserCore),
+    (error) => {
+      assert.equal(error.code, expectedCode);
+      return true;
+    },
+  );
+  assert.equal(mock.state.success, 0);
+  assert.deepEqual(mock.state.errors, [expectedCode]);
+  assert.equal(mock.state.logs.includes(`controlled error = ${expectedCode}`), true);
+  assert.equal(mock.state.logs.includes(`failed step = ${expectedStep}`), true);
+  assert.deepEqual(mock.state.serviceCalls, []);
+  const logs = mock.state.logs.join("\n");
+  assert.equal(logs.includes(fixture), false);
+  assert.equal(logs.includes("[Header]"), false);
+  return { context, mock };
+}
+
+test("QB.files as a normal Array succeeds with the controlled sanitized summary", async () => {
+  const { mock, summary } = await executeWith([controlledFile()]);
   assert.deepEqual(JSON.parse(JSON.stringify(summary)), expected);
   assert.equal(mock.state.success, 1);
   assert.deepEqual(mock.state.errors, []);
-  assert.equal(mock.state.logs.length, 7);
+  assert.deepEqual(mock.state.serviceCalls, []);
+  assert.equal(mock.state.logs.length, 13);
+  assert.equal(mock.state.logs.includes("file collection kind = Array"), true);
   assert.equal(summary.web_crypto_available, false);
 });
 
-test("sanitized logs contain counts but no raw text or analyte values", async () => {
-  const context = loadProbe();
-  const mock = mockQB([{ name: "Output_redacted_fixture.txt", type: "text/plain", size: fixture.length, text: fixture }]);
-  await context.QBenchRuntimeNoWriteProbe.execute(mock.QB, MockFileReader, config, context.QBenchTerpenesParserCore);
-  const logs = mock.state.logs.join("\n");
-  assert.match(logs, /Compound Results rows = 24/);
-  assert.equal(logs.includes("24.608"), false);
-  assert.equal(logs.includes("alpha-Pinene"), false);
-  assert.equal(logs.includes("[Header]"), false);
+test("QB.files as a FileList-like object with item(index) succeeds", async () => {
+  const file = controlledFile();
+  const files = { 0: file, length: 1, item(index) { return index === 0 ? file : null; } };
+  const { mock, summary } = await executeWith(files);
+  assert.deepEqual(JSON.parse(JSON.stringify(summary)), expected);
+  assert.equal(mock.state.logs.includes("file collection kind = array_like"), true);
+  assert.equal(mock.state.success, 1);
+  assert.deepEqual(mock.state.serviceCalls, []);
 });
 
-test("exactly one controlled txt file is required", async () => {
-  const context = loadProbe();
-  for (const files of [[], [{ name: "wrong.txt", text: fixture }], [{ name: "Output_redacted_fixture.csv", text: fixture }], [{ name: "Output_redacted_fixture.txt", text: fixture }, { name: "second.txt", text: fixture }]]) {
-    const mock = mockQB(files);
-    await assert.rejects(() => context.QBenchRuntimeNoWriteProbe.execute(mock.QB, MockFileReader, config, context.QBenchTerpenesParserCore));
-    assert.equal(mock.state.success, 0);
-    assert.equal(mock.state.errors.length, 1);
+test("array-like QB.files with an indexed entry and no item method succeeds", async () => {
+  const { mock, summary } = await executeWith({ 0: controlledFile(), length: 1 });
+  assert.deepEqual(JSON.parse(JSON.stringify(summary)), expected);
+  assert.equal(mock.state.logs.includes("probe step = file collection accepted"), true);
+  assert.equal(mock.state.success, 1);
+  assert.deepEqual(mock.state.serviceCalls, []);
+});
+
+test("item(index) is used when an array-like collection has no indexed entry", async () => {
+  const file = controlledFile();
+  const { mock } = await executeWith({ length: 1, item(index) { return index === 0 ? file : null; } });
+  assert.equal(mock.state.success, 1);
+  assert.deepEqual(mock.state.serviceCalls, []);
+});
+
+test("sanitized success logs contain only steps, collection kind, counts, extension, and Web Crypto availability", async () => {
+  const { mock } = await executeWith([controlledFile()]);
+  const logs = mock.state.logs.join("\n");
+  for (const expectedLog of [
+    "probe step = runtime entered",
+    "probe step = file collection accepted",
+    "probe step = file metadata accepted",
+    "probe step = file read complete",
+    "probe step = controlled parse complete",
+    "file count = 1",
+    "extension accepted = .txt",
+    "Compound Results rows = 24",
+    "Peak Table rows = 34",
+    "reportable channels = 23",
+    "Dimethylacetamide audit rows = 1",
+    "Web Crypto available = false",
+  ]) assert.equal(logs.includes(expectedLog), true, expectedLog);
+  for (const prohibited of ["24.608", "alpha-Pinene", "[Header]", "Output_redacted_fixture.txt"]) {
+    assert.equal(logs.includes(prohibited), false, prohibited);
   }
 });
 
-test("Stage 1 source and distribution contain no worksheet service", () => {
+test("missing collection uses CONTROLLED_FILE_COLLECTION_ERROR", async () => {
+  await expectControlledFailure(undefined, "CONTROLLED_FILE_COLLECTION_ERROR", "file collection validation");
+});
+
+test("invalid collection lengths use CONTROLLED_FILE_COLLECTION_ERROR", async () => {
+  for (const length of [-1, 1.5, Number.POSITIVE_INFINITY, "1", Number.NaN]) {
+    await expectControlledFailure({ 0: controlledFile(), length }, "CONTROLLED_FILE_COLLECTION_ERROR", "file collection validation");
+  }
+});
+
+test("empty collection uses CONTROLLED_FILE_COUNT_ERROR", async () => {
+  await expectControlledFailure([], "CONTROLLED_FILE_COUNT_ERROR", "file collection validation");
+});
+
+test("two-file collection uses CONTROLLED_FILE_COUNT_ERROR", async () => {
+  await expectControlledFailure([controlledFile(), controlledFile()], "CONTROLLED_FILE_COUNT_ERROR", "file collection validation");
+});
+
+test("missing file object uses CONTROLLED_FILE_OBJECT_ERROR", async () => {
+  await expectControlledFailure({ length: 1, item() { return null; } }, "CONTROLLED_FILE_OBJECT_ERROR", "file collection validation");
+  await expectControlledFailure({ 0: "not a file object", length: 1 }, "CONTROLLED_FILE_OBJECT_ERROR", "file collection validation");
+});
+
+test("incorrect exact filename uses CONTROLLED_FILE_NAME_ERROR", async () => {
+  await expectControlledFailure([controlledFile("wrong.txt")], "CONTROLLED_FILE_NAME_ERROR", "file metadata validation");
+});
+
+test("uppercase TXT extension is recognized but does not weaken the exact controlled filename gate", async () => {
+  const context = loadProbe();
+  assert.equal(context.QBenchRuntimeNoWriteProbe.hasTxtExtension("fixture.TXT"), true);
+  await expectControlledFailure([controlledFile("Output_redacted_fixture.TXT")], "CONTROLLED_FILE_NAME_ERROR", "file metadata validation");
+});
+
+test("file-reader failure uses CONTROLLED_FILE_READ_ERROR", async () => {
+  await expectControlledFailure([controlledFile()], "CONTROLLED_FILE_READ_ERROR", "file read", FailedFileReader);
+});
+
+test("controlled runtime error codes survive toControlledError", () => {
+  const context = loadProbe();
+  for (const code of Object.values(JSON.parse(JSON.stringify(context.QBenchRuntimeNoWriteProbe.CONTROLLED_ERROR_CODES)))) {
+    const error = context.QBenchRuntimeNoWriteProbe.controlledError(code);
+    assert.equal(context.QBenchTerpenesParserCore.toControlledError(error).code, code);
+  }
+  assert.equal(context.QBenchTerpenesParserCore.toControlledError(new Error("unexpected")).code, "UNEXPECTED_PARSE_ERROR");
+});
+
+test("Stage 1 source and distribution contain no write, network, dynamic-code, or browser-storage capability", () => {
+  const prohibited = [
+    "patchWorksheet", "updateWorksheet", "QBBatchService", "fetch(", "XMLHttpRequest",
+    "eval(", "Function(", "localStorage", ".cookie",
+  ];
   for (const file of [path.join(PACKAGE, "src/qbench_runtime_no_write_probe.js"), path.join(PACKAGE, "dist/qbench_runtime_no_write_probe_v1.js")]) {
     const text = fs.readFileSync(file, "utf8");
-    assert.equal(text.includes("QBBatchService"), false);
-    assert.equal(text.includes("patchWorksheet"), false);
+    for (const token of prohibited) assert.equal(text.includes(token), false, `${token} in ${file}`);
   }
+  const source = fs.readFileSync(path.join(PACKAGE, "src/qbench_runtime_no_write_probe.js"), "utf8");
+  assert.equal(source.includes("Array.from"), false, "file collection normalization must not use Array.from");
 });
 
 test("Stage 1 distribution uses the exact proven import and run wrapper", () => {

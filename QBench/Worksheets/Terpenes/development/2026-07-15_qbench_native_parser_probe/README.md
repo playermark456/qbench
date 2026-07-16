@@ -10,20 +10,26 @@ candidate, mocks, tests, deterministic distributions, and sanitized evidence.
 ## Current status
 
 - `stage_0_repository_preparation = passed`
-- `stage_1_no_write_runtime = not_run`
+- `stage_1_no_write_runtime = incomplete_retry_pending`
 - `stage_2_batch_context = not_run`
 - `stage_3_scalar_patch = not_run`
 - `stage_4_range_patch = not_run`
 - `stage_5_two_block_patch = not_run`
 - `stage_6_failure_behavior = not_run`
 - `stage_7_terpenes_fixture_probe = not_run`
-- `qbench_sandbox_probe_status = not_run`
+- `qbench_sandbox_probe_status = stage_1_retry_pending`
 - `qbench_native_status = blocked`
 
-Stage 0 caused no QBench change. No parser was created, saved, previewed,
-run, or activated. No worksheet was imported. No Batch, attachment, parser
-result, assay, automation, key/value-store value, or production object was
-created or modified. Prompt 5 was not started.
+Stage 1 created the single controlled Sandbox-only parser configuration and an
+inactive/DRAFT version under explicit authorization. The first Preview used
+one controlled fixture and failed safely with `UNEXPECTED_PARSE_ERROR`. It
+invoked no worksheet service and modified no worksheet or File Parser Results
+destination. No trigger or assay was added, nothing was activated, no
+worksheet was imported, and Stage 2A and Prompt 5 were not started.
+
+The corrected retry accepts Array and FileList-like `QB.files` collections,
+uses stable controlled validation codes, and emits sanitized step diagnostics.
+The exact FileList cause remains a hypothesis until the retry runs.
 
 ## Package contents
 
@@ -74,6 +80,17 @@ with those two dependencies normalized to the canonical-LF hashes recorded by
 the Prompt 4.5 manifest; the controlled Prompt 4 candidate hash remained the
 required `e5c80b...9758e` throughout. No Prompt 4 file was edited.
 
+## Stage 1 correction validation
+
+- Prompt 4.6 JavaScript tests: 44 passed.
+- Prompt 4.6 Python/static tests: 16 passed.
+- Prompt 4.6 total: 60 passed.
+- Distribution and manifest generation: deterministic across repeated runs.
+
+These are local correction tests only. They do not mark Stage 1 passed. The
+corrected inactive/DRAFT parser must be retried with
+`Output_redacted_fixture.txt` before Stage 1 can be resolved.
+
 Run from this directory with Node.js and Python 3:
 
 ```powershell
@@ -88,7 +105,7 @@ python -m py_compile scripts/build_probe_worksheet_candidate.py scripts/build_qb
 Run both generators twice and compare all generated artifact hashes to confirm
 byte-identical output.
 
-## Next authorization
+## Next action
 
-No live Sandbox work may occur without the exact Stage 1 authorization phrase
-recorded in `docs/prompt_4_6_stage_plan.md`.
+Continue only under the existing Stage 1 authorization. Select the controlled
+fixture for the corrected no-write Preview. Do not begin Stage 2A.
