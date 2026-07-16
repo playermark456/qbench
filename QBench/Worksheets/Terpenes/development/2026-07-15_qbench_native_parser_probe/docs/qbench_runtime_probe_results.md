@@ -125,8 +125,57 @@ inactive/DRAFT version. No Stage 2B action, temporary trigger, activation,
 attachment upload, worksheet import, service call, or runtime-data write was
 performed.
 
+## Stage 2B — temporary Sandbox attachment trigger
+
+- Authorization:
+  `AUTHORIZE STAGE 2B — TEMPORARY SANDBOX ATTACHMENT TRIGGER — BATCH: ZZZ_SANDBOX_ONLY_TERPENES_CONTEXT_PROBE_2026-07-16`.
+- Evidence reference: `stage_2b_attachment_job_history_2026-07-15`.
+- Disposable Sandbox Batch:
+  `ZZZ_SANDBOX_ONLY_TERPENES_CONTEXT_PROBE_2026-07-16`.
+- Controlled parser:
+  `ZZZ_SANDBOX_ONLY_Terpenes_Attachment_Context_Probe_2026-07-16`.
+- Trigger: file added to Batch attachments.
+- Assay: unset.
+- Filename rule: exactly equal to `Output_redacted_fixture.txt`.
+- Controlled attachment upload count: 1.
+- Preview rerun: no.
+- File Parser History records: 1 matching execution.
+- Persisted trigger: `Attachment Added To Batch`.
+- Persisted job status: `SUCCESS`.
+- Persisted `QB.console` payload: unavailable.
+- Controlled presence/type lines available for inspection: no.
+- Safe Batch-context property path established: no.
+- Batch-context value type established: no.
+- `batch_context_status = unresolved_console_output_not_persisted`.
+- Full `QB` object serialized: no.
+- Security, authorization, session, or identifier value dereferenced or
+  committed: no.
+- Worksheet service invoked: no.
+- Worksheet or File Parser Results destination modified: no.
+- Authorized Batch runtime change: the controlled attachment was added and
+  remains as evidence.
+- Parser state after the run: inactive.
+- Version state after the run: `APPROVED`, still marked active within the
+  disabled parser.
+- Irreversible version obsolescence performed: no; the prompt was canceled.
+- Production accessed or modified: no.
+
+The attachment trigger completed successfully, but QBench File Parser History
+retained only execution metadata and did not expose the safe console lines
+emitted by the probe. Browser diagnostics also contained no retained matching
+lines. Success proves that the isolated attachment trigger ran; it does not
+prove any candidate Batch-context property present or absent. No property path
+or type is inferred from the trigger, attachment, URL, record name, or any
+internal identifier.
+
+The parser was deactivated immediately after the user-confirmed upload. QBench
+did not offer a non-destructive way to clear the version's active marker; the
+available status action would make the approved version obsolete and unusable.
+That action was canceled to preserve evidence. The stored exact-filename
+trigger is inert because the parser is inactive.
+
 ## Later stages
 
-Stages 2B through 7 are `not_run`. Stage 2B requires its own exact
-authorization including an exact disposable Sandbox Batch name. No later-stage
-result is implied by Stage 2A.
+Stages 3 through 7 are `not_run`. Stage 3 requires an explicit manual Sandbox
+Batch-ID decision in its exact authorization phrase. No later-stage result is
+implied by Stage 2B.

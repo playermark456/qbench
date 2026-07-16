@@ -40,9 +40,10 @@ class QBenchProbePackageTests(unittest.TestCase):
         self.assertEqual(summary["status"], "ok")
         self.assertTrue(summary["qbench_configuration_draft_modified"])
         self.assertTrue(summary["qbench_modified"])
-        self.assertFalse(summary["qbench_runtime_data_modified"])
+        self.assertTrue(summary["qbench_runtime_data_modified"])
         self.assertEqual(summary["stage_1_status"], "passed")
         self.assertEqual(summary["stage_2a_status"], "not_available_in_preview_runtime")
+        self.assertEqual(summary["stage_2b_status"], "unresolved_console_output_not_persisted")
 
     def test_worksheet_generator_is_byte_identical(self) -> None:
         output = PACKAGE_DIR / "dist/qbench_runtime_probe_batch_ws_candidate.json"
@@ -90,14 +91,25 @@ class QBenchProbePackageTests(unittest.TestCase):
     def test_stage_7_distribution_is_absent(self) -> None:
         self.assertFalse((PACKAGE_DIR / "dist/terpenes_qbench_file_parser_sandbox_probe_v1.js").exists())
 
-    def test_manifest_marks_stage_1_passed_stage_2a_completed_and_later_stages_not_run(self) -> None:
+    def test_manifest_marks_stage_2b_completed_and_later_stages_not_run(self) -> None:
         manifest = json.loads((PACKAGE_DIR / "dist/qbench_probe_manifest.json").read_text(encoding="utf-8"))
         self.assertEqual(manifest["stage_statuses"]["stage_0_repository_preparation"], "passed")
         self.assertEqual(manifest["stage_statuses"]["stage_1_no_write_runtime"], "passed")
-        self.assertEqual(manifest["stage_statuses"]["stage_2_batch_context"], "not_available_in_preview_runtime")
+        self.assertEqual(
+            manifest["stage_statuses"]["stage_2_batch_context"],
+            "unresolved_after_stage_2b_console_not_persisted",
+        )
+        self.assertEqual(
+            manifest["stage_statuses"]["stage_2a_preview_batch_context"],
+            "not_available_in_preview_runtime",
+        )
+        self.assertEqual(
+            manifest["stage_statuses"]["stage_2b_attachment_trigger"],
+            "completed_job_success_console_not_persisted",
+        )
         self.assertEqual(
             manifest["qbench_sandbox_probe_status"],
-            "stage_2a_completed_batch_context_not_available_stage_2b_not_authorized",
+            "stage_2b_completed_attachment_job_success_console_not_persisted_batch_context_unresolved",
         )
         self.assertTrue(all(
             status == "not_run"
@@ -106,6 +118,8 @@ class QBenchProbePackageTests(unittest.TestCase):
                 "stage_0_repository_preparation",
                 "stage_1_no_write_runtime",
                 "stage_2_batch_context",
+                "stage_2a_preview_batch_context",
+                "stage_2b_attachment_trigger",
             }
         ))
 
@@ -113,7 +127,9 @@ class QBenchProbePackageTests(unittest.TestCase):
         manifest = json.loads((PACKAGE_DIR / "dist/qbench_probe_manifest.json").read_text(encoding="utf-8"))
         self.assertTrue(manifest["scope_controls"]["qbench_configuration_draft_modified"])
         self.assertTrue(manifest["scope_controls"]["qbench_modified"])
-        self.assertFalse(manifest["scope_controls"]["qbench_runtime_data_modified"])
+        self.assertTrue(manifest["scope_controls"]["qbench_runtime_data_modified"])
+        self.assertTrue(manifest["scope_controls"]["authorized_attachment_added"])
+        self.assertFalse(manifest["scope_controls"]["worksheet_or_results_runtime_data_modified"])
         self.assertFalse(manifest["scope_controls"]["production_modified"])
         self.assertFalse(manifest["scope_controls"]["prompt_5_started"])
 
@@ -184,11 +200,29 @@ class QBenchProbePackageTests(unittest.TestCase):
         self.assertFalse(result["trigger_set"])
         self.assertFalse(result["assay_set"])
 
+        stage_2b = manifest["stage_2b_result"]
+        self.assertEqual(stage_2b["result"], "completed_inconclusive_batch_context")
+        self.assertEqual(stage_2b["batch_context_status"], "unresolved_console_output_not_persisted")
+        self.assertTrue(stage_2b["job_history_recorded"])
+        self.assertEqual(stage_2b["job_history_status"], "SUCCESS")
+        self.assertFalse(stage_2b["qbench_console_lines_persisted_in_history"])
+        self.assertIsNone(stage_2b["property_path_observed"])
+        self.assertIsNone(stage_2b["property_value_type_observed"])
+        self.assertTrue(stage_2b["attachment_added"])
+        self.assertTrue(stage_2b["attachment_remains_as_evidence"])
+        self.assertFalse(stage_2b["parser_active_after_stage"])
+        self.assertEqual(stage_2b["parser_version_status"], "APPROVED")
+        self.assertTrue(stage_2b["parser_version_active_within_disabled_parser"])
+        self.assertFalse(stage_2b["worksheet_service_invoked"])
+        self.assertFalse(stage_2b["worksheet_or_results_data_modified"])
+
     def test_exact_file_parser_url_is_recorded_without_guessing_qbjs_url(self) -> None:
         contract = json.loads((PACKAGE_DIR / "config/qbench_probe_contract.json").read_text(encoding="utf-8"))
         self.assertEqual(contract["current_tenant_imports"]["file_parser_js"]["url"], distribution_builder.FILE_PARSER_IMPORT_URL)
         self.assertIsNone(contract["current_tenant_imports"]["qbjs_js"]["url"])
-        self.assertEqual(contract["batch_context_status"], "not_available_in_preview_runtime")
+        self.assertEqual(contract["batch_context_stage_2a_status"], "not_available_in_preview_runtime")
+        self.assertEqual(contract["batch_context_stage_2b_status"], "unresolved_console_output_not_persisted")
+        self.assertEqual(contract["batch_context_status"], "unresolved_after_stage_2b_console_not_persisted")
         self.assertIsNone(contract["batch_context_path"])
 
     def test_expected_payload_fixtures_are_valid_json(self) -> None:

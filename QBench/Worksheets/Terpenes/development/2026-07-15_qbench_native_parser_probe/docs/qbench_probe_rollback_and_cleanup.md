@@ -20,3 +20,18 @@ For later authorized stages:
 
 Production cleanup is never applicable because production activity is
 permanently prohibited.
+
+## Stage 2B cleanup record
+
+- The temporary parser was deactivated after the single authorized attachment
+  event.
+- The approved version remains marked active within the disabled parser.
+  QBench offered only irreversible obsolescence as the version-status action;
+  it was canceled to preserve evidence.
+- The exact-filename Batch-attachment trigger remains stored but is inert while
+  the parser is inactive.
+- `Output_redacted_fixture.txt` remains attached to
+  `ZZZ_SANDBOX_ONLY_TERPENES_CONTEXT_PROBE_2026-07-16` as evidence.
+- No parser, version, Batch, attachment, or history record was deleted.
+- Any deletion or version obsolescence requires separate method-owner
+  authorization.

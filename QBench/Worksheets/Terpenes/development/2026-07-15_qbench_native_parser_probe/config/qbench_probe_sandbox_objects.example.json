@@ -1,20 +1,26 @@
 {
   "batch_context": {
-    "documented_or_observed": "observed_absent",
+    "documented_or_observed": "stage_2a_observed_absent_stage_2b_output_not_persisted",
     "safe_property_path": null,
-    "status": "not_available_in_preview_runtime",
+    "stage_2a_status": "not_available_in_preview_runtime",
+    "stage_2b_status": "unresolved_console_output_not_persisted",
+    "status": "unresolved_after_stage_2b_console_not_persisted",
     "value_type": null
   },
   "disposable_batch": {
+    "controlled_attachment_added": true,
+    "controlled_attachment_name": "Output_redacted_fixture.txt",
     "internal_id_committed": false,
-    "name": "<AUTHORIZED EXACT DISPOSABLE SANDBOX BATCH NAME>",
+    "name": "ZZZ_SANDBOX_ONLY_TERPENES_CONTEXT_PROBE_2026-07-16",
     "sandbox_only": true
   },
   "file_parser": {
     "active": false,
     "internal_id_committed": false,
-    "name": "ZZZ_SANDBOX_ONLY_Terpenes_Runtime_NoWrite_Probe",
-    "status": "inactive_with_two_draft_versions"
+    "name": "ZZZ_SANDBOX_ONLY_Terpenes_Attachment_Context_Probe_2026-07-16",
+    "status": "inactive_with_approved_active_version_marker",
+    "trigger": "Batch attachment filename exactly equals Output_redacted_fixture.txt",
+    "version_obsoleted": false
   },
   "schema_version": 1,
   "worksheet": {

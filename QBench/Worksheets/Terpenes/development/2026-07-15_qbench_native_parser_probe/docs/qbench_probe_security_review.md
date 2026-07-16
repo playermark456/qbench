@@ -67,3 +67,27 @@ because `QB.files` was array-like rather than a true Array, but the independent
 Batch-context presence/type checks completed. The recorded outcome is
 `not_available_in_preview_runtime`; no internal Batch ID was exposed, captured,
 or committed.
+
+The Stage 2B attachment-context probe:
+
+- uses a fixed allowlist rather than enumerating the runtime object;
+- checks only own-property presence and classifies values as `undefined`,
+  `null`, `array`, or the JavaScript `typeof` result;
+- logs property paths, presence booleans, and value types only;
+- never logs a Batch ID, attachment ID, job ID, runtime value, file content,
+  customer/sample data, credential, cookie, token, or storage value;
+- contains no worksheet service, patch, full replacement, network request,
+  dynamic code, browser storage, or destination-write capability;
+- was configured only for Batch attachments whose filename exactly equals the
+  controlled redacted fixture name;
+- ran once against the exact authorized disposable Sandbox Batch;
+- produced one persisted `SUCCESS` job-history record;
+- was deactivated after the controlled attachment upload.
+
+The persistent QBench history view did not retain the safe `QB.console` lines.
+No candidate property presence, absence, path, or type is therefore claimed
+from Stage 2B. Browser diagnostics contained no retained matching lines. The
+controlled attachment is the only authorized runtime-data change and remains
+as evidence. The approved version remains marked active only inside the
+disabled parser because the available alternative was irreversible
+obsolescence, which was canceled. No internal identifier is committed.

@@ -63,8 +63,12 @@ def validate_dependencies() -> None:
         fail("Merged Sandbox-probe readiness status is missing.")
     if contract["allowed_batch_write_api"] != "QBBatchService.patchWorksheet":
         fail("Only the documented patch method may be investigated.")
-    if contract["batch_context_status"] != "not_available_in_preview_runtime":
+    if contract["batch_context_stage_2a_status"] != "not_available_in_preview_runtime":
         fail("Stage 2A Batch-context status is missing from the runtime contract.")
+    if contract["batch_context_stage_2b_status"] != "unresolved_console_output_not_persisted":
+        fail("Stage 2B persisted-output limitation is missing from the runtime contract.")
+    if contract["batch_context_status"] != "unresolved_after_stage_2b_console_not_persisted":
+        fail("The post-Stage 2B Batch-context status must remain unresolved.")
     if contract["batch_context_path"] is not None:
         fail("Stage 2A must not invent a Batch-context path.")
     if contract["current_tenant_imports"]["qbjs_js"]["url"] is not None:
@@ -198,6 +202,34 @@ def validate_scripts() -> dict[str, int]:
     exact_import = f'importScripts("{distribution_builder.FILE_PARSER_IMPORT_URL}");'
     if exact_import not in no_write_dist:
         fail("Stage 1 script does not use the exact recorded File Parser import URL.")
+    attachment_source = (PACKAGE_DIR / "src/qbench_attachment_context_probe.js").read_text(encoding="utf-8")
+    attachment_dist = (DIST_DIR / "qbench_attachment_context_probe_v1.js").read_text(encoding="utf-8")
+    for text in [attachment_source, attachment_dist]:
+        for token in [
+            "QBBatchService",
+            "patchWorksheet",
+            "updateWorksheet",
+            "fetch(",
+            "XMLHttpRequest",
+            "eval(",
+            "Function(",
+            "localStorage",
+            ".cookie",
+            "Object.keys(QB)",
+        ]:
+            if token in text:
+                fail(f"Stage 2B attachment-context script contains prohibited token: {token}")
+        for token in [
+            "CANDIDATE_PATHS",
+            "Object.prototype.hasOwnProperty.call",
+            "Stage 2B context probe = entered",
+            "present=${item.present} type=${item.value_type}",
+            "Stage 2B context probe = complete",
+            "CONTROLLED_ATTACHMENT_CONTEXT_PROBE_ERROR",
+            "qb.success()",
+        ]:
+            if token not in text:
+                fail(f"Stage 2B attachment-context contract token is missing: {token}")
     template = (PACKAGE_DIR / "src/terpenes_qbench_sandbox_probe.template.js").read_text(encoding="utf-8")
     if template.index("const data = buildWritePlan") > template.index("service.patchWorksheet"):
         fail("Fixture write plan must be fully validated before the patch call.")
@@ -212,17 +244,23 @@ def validate_manifest() -> int:
         fail("Stage 0 manifest status must be passed.")
     if manifest["stage_statuses"]["stage_1_no_write_runtime"] != "passed":
         fail("Stage 1 corrected no-write Preview must be recorded as passed.")
-    if manifest["qbench_sandbox_probe_status"] != "stage_2a_completed_batch_context_not_available_stage_2b_not_authorized":
-        fail("Stage 2A completion / Stage 2B authorization boundary is missing.")
-    if manifest["stage_statuses"]["stage_2_batch_context"] != "not_available_in_preview_runtime":
-        fail("Stage 2A Batch-context result is missing.")
+    if manifest["qbench_sandbox_probe_status"] != "stage_2b_completed_attachment_job_success_console_not_persisted_batch_context_unresolved":
+        fail("Stage 2B completion and unresolved Batch-context status are missing.")
+    if manifest["stage_statuses"]["stage_2_batch_context"] != "unresolved_after_stage_2b_console_not_persisted":
+        fail("Combined Stage 2 Batch-context status is missing.")
+    if manifest["stage_statuses"]["stage_2a_preview_batch_context"] != "not_available_in_preview_runtime":
+        fail("Stage 2A Preview result is missing.")
+    if manifest["stage_statuses"]["stage_2b_attachment_trigger"] != "completed_job_success_console_not_persisted":
+        fail("Stage 2B attachment-trigger result is missing.")
     for stage, status in manifest["stage_statuses"].items():
         if stage not in {
             "stage_0_repository_preparation",
             "stage_1_no_write_runtime",
             "stage_2_batch_context",
+            "stage_2a_preview_batch_context",
+            "stage_2b_attachment_trigger",
         } and status != "not_run":
-            fail("Stages after Stage 2A must remain not_run.")
+            fail("Stages after Stage 2B must remain not_run.")
     attempt = manifest["stage_1_initial_attempt"]
     if attempt["result"] != "failed_safely_runtime_file_collection_compatibility":
         fail("Stage 1 initial failed-safe result is missing.")
@@ -279,11 +317,36 @@ def validate_manifest() -> int:
         fail("Stage 2A parser must remain without a trigger or assay.")
     if stage_2a["runtime_data_modified"] is not False or stage_2a["worksheet_service_invoked"] is not False:
         fail("Stage 2A must record no runtime data modification or worksheet service invocation.")
+    stage_2b = manifest["stage_2b_result"]
+    if stage_2b["result"] != "completed_inconclusive_batch_context":
+        fail("Stage 2B completion result is missing.")
+    if stage_2b["batch_context_status"] != "unresolved_console_output_not_persisted":
+        fail("Stage 2B must remain inconclusive when console output is not persisted.")
+    if stage_2b["job_history_status"] != "SUCCESS" or stage_2b["job_history_recorded"] is not True:
+        fail("The successful Stage 2B attachment-trigger job history is missing.")
+    if stage_2b["qbench_console_lines_persisted_in_history"] is not False:
+        fail("Stage 2B must not claim unavailable console output.")
+    if stage_2b["property_path_observed"] is not None or stage_2b["property_value_type_observed"] is not None:
+        fail("Stage 2B must not invent a Batch-context path or type.")
+    if stage_2b["attachment_added"] is not True or stage_2b["attachment_remains_as_evidence"] is not True:
+        fail("The authorized controlled attachment change is missing.")
+    if stage_2b["parser_active_after_stage"] is not False:
+        fail("The Stage 2B parser must be inactive after the controlled trigger.")
+    if stage_2b["parser_version_status"] != "APPROVED" or stage_2b["parser_version_active_within_disabled_parser"] is not True:
+        fail("The preserved approved version state is missing.")
+    if stage_2b["worksheet_service_invoked"] is not False or stage_2b["worksheet_or_results_data_modified"] is not False:
+        fail("Stage 2B must record no worksheet service or destination-data write.")
+    if stage_2b["full_qb_object_serialized"] is not False or stage_2b["security_or_session_value_dereferenced"] is not False:
+        fail("Stage 2B must record the safe inspection boundary.")
     scope = manifest["scope_controls"]
-    if scope["qbench_configuration_draft_modified"] is not True or scope["qbench_modified"] is not True:
-        fail("The authorized inactive parser draft change must be recorded accurately.")
-    if scope["qbench_runtime_data_modified"] is not False or scope["production_modified"] is not False:
-        fail("Stage 1 must record no runtime-data or production modification.")
+    if scope["qbench_configuration_draft_modified"] is not True or scope["qbench_configuration_modified"] is not True:
+        fail("The authorized QBench configuration changes must be recorded accurately.")
+    if scope["qbench_modified"] is not True or scope["authorized_attachment_added"] is not True:
+        fail("The authorized Stage 2B attachment change must be recorded accurately.")
+    if scope["qbench_runtime_data_modified"] is not True or scope["worksheet_or_results_runtime_data_modified"] is not False:
+        fail("Runtime modification must be limited to the authorized controlled attachment.")
+    if scope["production_modified"] is not False:
+        fail("Production must remain unchanged.")
     expected = distribution_builder.build_manifest()
     if manifest != expected:
         fail("Manifest is not byte-content-equivalent to current package artifacts.")
@@ -309,11 +372,13 @@ def validate_package() -> dict[str, Any]:
         **script_summary,
         "qbench_configuration_draft_modified": True,
         "qbench_modified": True,
-        "qbench_runtime_data_modified": False,
+        "qbench_runtime_data_modified": True,
         "stage_1_authorized": True,
         "stage_1_status": "passed",
         "stage_2a_authorized": True,
         "stage_2a_status": "not_available_in_preview_runtime",
+        "stage_2b_authorized": True,
+        "stage_2b_status": "unresolved_console_output_not_persisted",
     }
 
 

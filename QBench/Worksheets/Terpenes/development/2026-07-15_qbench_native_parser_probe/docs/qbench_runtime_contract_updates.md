@@ -66,4 +66,33 @@ array-like `QB.files` collection. That limitation does not affect the completed
 Batch-context presence/type checks and does not justify a Stage 2A retry.
 
 No worksheet service, destination write, activation, trigger, or assay was
-used. Stage 2B has not started and remains separately authorized.
+used in Stage 2A.
+
+## Stage 2B attachment-trigger observation
+
+The separately authorized Stage 2B probe used a dedicated Sandbox-only parser
+with an exact `Output_redacted_fixture.txt` filename rule on Batch attachment
+events. One controlled attachment was added to the exact authorized disposable
+Batch. File Parser History recorded one matching `SUCCESS` execution with the
+trigger `Attachment Added To Batch`.
+
+The no-write script checked a fixed allowlist of top-level and nested
+attachment/location/file context paths. It was designed to log only property
+presence and value type, never a value. It contains no worksheet service,
+network, dynamic-code, browser-storage, or destination-write capability.
+
+QBench's persisted job-history view retained the execution metadata but did
+not retain or expose the `QB.console` payload. Therefore the Stage 2B runtime
+contract result is:
+
+- `batch_context_stage_2b_status = unresolved_console_output_not_persisted`;
+- safe Batch-context property path: none established;
+- Batch-context value type: none established;
+- presence or absence of any candidate path: not claimable from Stage 2B;
+- attachment-trigger execution: proven successful;
+- worksheet service or worksheet/results destination write: none.
+
+The parser was deactivated after the single run. The approved version remains
+marked active only within that disabled parser because the available
+version-status action was irreversible obsolescence, which was canceled. The
+controlled attachment remains as evidence. Stage 3 has not started.

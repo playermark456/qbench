@@ -6,7 +6,7 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/config/qbench_probe_contract.json",
-      "sha256": "84332ed28ff6b0edec2ad5d292dfd49a50e99ef04aaf5edb1cd0e78dd9e621ed"
+      "sha256": "1eab1650270d4abb97ce525bf7ca6a9995cf14f4f4110f8d0889c6732bcb9c0e"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/config/qbench_probe_limits.json",
@@ -14,7 +14,11 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/config/qbench_probe_sandbox_objects.example.json",
-      "sha256": "caeec8f4b1d69ccb02b0652fe99c7bb755755c9278972c2917e67b6e15351c39"
+      "sha256": "9a7c060cc8e940f2c2f47cf1a985a7dd0b8c819152bd790210159021d72fa5a9"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/dist/qbench_attachment_context_probe_v1.js",
+      "sha256": "b78253516708c75444cfb4b1401c8d87bd206765851d9f8f56225dfe9478939f"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/dist/qbench_batch_context_probe_v1.js",
@@ -50,7 +54,7 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_probe_rollback_and_cleanup.md",
-      "sha256": "9788737e6baaf08e22c6dcd4ee78385b41ea311d117093acc8f46f9881063bcf"
+      "sha256": "04a8c9ecf9fb4314535444231c9fc1dd569c807a2de6168f0556a87a9b330923"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_probe_sandbox_checklist.md",
@@ -58,19 +62,19 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_probe_security_review.md",
-      "sha256": "f03474d09448ffaf1a6a27a81ad2617a62aa9cddb2fecf0543544fe4a0a2fa3c"
+      "sha256": "ff1618073e9073172646b7ae9697d9be8b44824716aae7e363463d27405354b4"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_runtime_contract_updates.md",
-      "sha256": "583fdf574990e5c45e1558b36a62a11bb899589246d271f23931bb7fd2afd90e"
+      "sha256": "7a181f34bac82d2c03392be4c5cd739ca46bbb1db68b8f6b6cfadd20812d4bc0"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_runtime_probe_results.md",
-      "sha256": "71abe035d6e8bbb32b3442d9c64832bf5ce5b36f5f7b3b31860a6970d63e414e"
+      "sha256": "a62ff4ab3e56dd5771bfff5fe3c67a35b5ff081a1e15183ca57f59c3aea1a34d"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_sandbox_change_log.md",
-      "sha256": "e5aaa030affa7959968d4244f3d7b8a0f67c2dd7ffc18ccc601ec66f5fa75b32"
+      "sha256": "249630d722d45535df9ea299b6d8741748dc6b83cebc17a5b9e442096fc23147"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/terpenes_fixture_probe_results.md",
@@ -78,7 +82,7 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/README.md",
-      "sha256": "51754c78d578b06dfbbc06121871ea358440ccc751005e22baa684fc240c78d1"
+      "sha256": "e288979ee5ed7027ad6d5166e52f430f67325430d1baf8e6a99cd568e7f56435"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/scripts/build_probe_worksheet_candidate.py",
@@ -86,11 +90,15 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/scripts/build_qbench_probe_distribution.py",
-      "sha256": "dff94291beb277d73f1872c1247477ff518890fd68f682d0dbefddda4db4d02e"
+      "sha256": "e66042785e8d15cfe0cbad00371004888605aa976d54dc3e4f21c452f131fccd"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/scripts/validate_qbench_probe_package.py",
-      "sha256": "134ee1ae8cc133d680c84344706bee4764f65a5c59db2845be83a4325dd4665c"
+      "sha256": "0c0ca37b0f7ea22aaebc944372b948da80d6d91b48231406e6f32da14c6d2df8"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/qbench_attachment_context_probe.js",
+      "sha256": "8570102714a4bba1015109345c9a58c1e4161dde96d3a4f36fd2a42e03115e94"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/qbench_batch_context_probe.js",
@@ -145,6 +153,10 @@
       "sha256": "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b"
     },
     {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/js/qbench_attachment_context_probe.test.js",
+      "sha256": "5dfaf028fa53e035e204d4cd4ed35f7328ced75efc20b756cc157fd4e0b4afd2"
+    },
+    {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/js/qbench_browser_parser_core.test.js",
       "sha256": "f642793173ab18ffb0d8de62c41ad772df672565c807151ea3c5964e003ef8ac"
     },
@@ -162,7 +174,7 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/test_qbench_probe_package.py",
-      "sha256": "1953af9bd81f2fcb31bffc96b75b4f14ca1cb2eca3be5aeb39b50e1570f3964b"
+      "sha256": "67b83eda4f3e932c0bfc7601d42b3995273520d933db3cb84c5c0a9888691249"
     }
   ],
   "controlled_dependency_hashes": {
@@ -177,15 +189,18 @@
   "package": "2026-07-15_qbench_native_parser_probe",
   "prompt": "Prompt 4.6",
   "qbench_native_status": "blocked",
-  "qbench_sandbox_probe_status": "stage_2a_completed_batch_context_not_available_stage_2b_not_authorized",
+  "qbench_sandbox_probe_status": "stage_2b_completed_attachment_job_success_console_not_persisted_batch_context_unresolved",
   "schema_version": 1,
   "scope_controls": {
+    "authorized_attachment_added": true,
     "production_modified": false,
     "prompt_5_started": false,
     "qbench_configuration_draft_modified": true,
+    "qbench_configuration_modified": true,
     "qbench_modified": true,
-    "qbench_runtime_data_modified": false,
-    "terpenes_result_outcome_artifact_introduced": false
+    "qbench_runtime_data_modified": true,
+    "terpenes_result_outcome_artifact_introduced": false,
+    "worksheet_or_results_runtime_data_modified": false
   },
   "stage_1_initial_attempt": {
     "cause_status": "array_like_collection_confirmed_specific_constructor_not_logged",
@@ -259,10 +274,41 @@
     "value_type": null,
     "worksheet_service_invoked": false
   },
+  "stage_2b_result": {
+    "assay_set": false,
+    "attachment_added": true,
+    "attachment_remains_as_evidence": true,
+    "batch_context_status": "unresolved_console_output_not_persisted",
+    "batch_name": "ZZZ_SANDBOX_ONLY_TERPENES_CONTEXT_PROBE_2026-07-16",
+    "controlled_fixture_name": "Output_redacted_fixture.txt",
+    "evidence_reference": "stage_2b_attachment_job_history_2026-07-15",
+    "filename_match": "exact_equal",
+    "full_qb_object_serialized": false,
+    "job_history_recorded": true,
+    "job_history_status": "SUCCESS",
+    "job_trigger": "Attachment Added To Batch",
+    "parser_active_after_stage": false,
+    "parser_name": "ZZZ_SANDBOX_ONLY_Terpenes_Attachment_Context_Probe_2026-07-16",
+    "parser_version_active_within_disabled_parser": true,
+    "parser_version_status": "APPROVED",
+    "preview_rerun_by_codex": false,
+    "property_path_observed": null,
+    "property_value_type_observed": null,
+    "qbench_console_lines_persisted_in_history": false,
+    "result": "completed_inconclusive_batch_context",
+    "runtime_attachment_modified": true,
+    "security_or_session_value_dereferenced": false,
+    "trigger_scope": "Batch attachment exact filename",
+    "trigger_set": true,
+    "worksheet_or_results_data_modified": false,
+    "worksheet_service_invoked": false
+  },
   "stage_statuses": {
     "stage_0_repository_preparation": "passed",
     "stage_1_no_write_runtime": "passed",
-    "stage_2_batch_context": "not_available_in_preview_runtime",
+    "stage_2_batch_context": "unresolved_after_stage_2b_console_not_persisted",
+    "stage_2a_preview_batch_context": "not_available_in_preview_runtime",
+    "stage_2b_attachment_trigger": "completed_job_success_console_not_persisted",
     "stage_3_scalar_patch": "not_run",
     "stage_4_range_patch": "not_run",
     "stage_5_two_block_patch": "not_run",
@@ -274,9 +320,9 @@
     "prompt_3_python": 50,
     "prompt_4_5_javascript": 143,
     "prompt_4_5_python": 13,
-    "prompt_4_6_javascript": 44,
-    "prompt_4_6_python": 16,
+    "prompt_4_6_javascript": 48,
+    "prompt_4_6_python": 17,
     "prompt_4_canonical_lf_python": 39,
-    "total": 332
+    "total": 337
   }
 }

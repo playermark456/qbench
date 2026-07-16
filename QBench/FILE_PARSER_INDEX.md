@@ -4,6 +4,7 @@ No parser-specific export/download control was visible during read-only inspecti
 
 | Parser name | ID | Assay | Parser type | Active | Expected file type | Key fields / visible internals | Output destination / notes |
 |---|---:|---|---|---|---|---|---|
+| ZZZ_SANDBOX_ONLY_Terpenes_Attachment_Context_Probe_2026-07-16 | Intentionally omitted | None | Code | False | Exact `Output_redacted_fixture.txt` | Stage 2B fixed-allowlist presence/type probe; approved version remains marked active inside the disabled parser; exact Batch-attachment filename trigger remains inert. | One authorized Sandbox attachment-trigger job recorded `SUCCESS`, but persistent history exposed no console payload; no worksheet service or worksheet/results destination write. |
 | Cannabinoid Potency Parser | 46 | Cannabinoid Potency | Code | True | .csv | Active version 1 imports `file_parser.js` 1.1.0 and `qbjs.js` 2.7.0; full source inspected read-only on 2026-07-15. | Current source uses `run`, `QB.files`, `QBBatchService`, and a dynamic Batch `Results` worksheet payload. This is tenant evidence, not the proposed Terpenes write contract. |
 | Gene-up | 45 | Microbiology | Code | False | Not visible | Visible inactive template imports `file_parser.js` 1.1.0 and `qbjs.js` 2.7.0 and uses the `run`/`QB` base template. | No versions found; no export control visible. |
 | Heavy Metals DataManager | 41 | Heavy Metals | No Code | True | .txt | No-code internals not exposed in detail view. | Heavy Metals import mapping, likely DataManager text output. |

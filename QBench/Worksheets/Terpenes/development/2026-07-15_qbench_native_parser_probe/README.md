@@ -11,13 +11,13 @@ candidate, mocks, tests, deterministic distributions, and sanitized evidence.
 
 - `stage_0_repository_preparation = passed`
 - `stage_1_no_write_runtime = passed`
-- `stage_2_batch_context = not_available_in_preview_runtime`
+- `stage_2_batch_context = unresolved_after_stage_2b_console_not_persisted`
 - `stage_3_scalar_patch = not_run`
 - `stage_4_range_patch = not_run`
 - `stage_5_two_block_patch = not_run`
 - `stage_6_failure_behavior = not_run`
 - `stage_7_terpenes_fixture_probe = not_run`
-- `qbench_sandbox_probe_status = stage_2a_completed_batch_context_not_available_stage_2b_not_authorized`
+- `qbench_sandbox_probe_status = stage_2b_completed_attachment_job_success_console_not_persisted_batch_context_unresolved`
 - `qbench_native_status = blocked`
 
 Stage 1 created the single controlled Sandbox-only parser configuration and an
@@ -43,6 +43,20 @@ file. Codex did not rerun Preview. No worksheet service or destination write
 occurred, and the parser remained inactive/DRAFT with Trigger and Assay unset.
 The observed outcome is `not_available_in_preview_runtime`; no safe Batch ID
 property path was established.
+
+Stage 2B used a separate Sandbox-only parser restricted to Batch attachments
+whose filename exactly equals `Output_redacted_fixture.txt`. The controlled
+fixture was attached once to
+`ZZZ_SANDBOX_ONLY_TERPENES_CONTEXT_PROBE_2026-07-16`, and File Parser History
+recorded one `SUCCESS` job with trigger `Attachment Added To Batch`. The job
+history retained no `QB.console` payload, so the allowlisted property
+presence/type lines were not available for inspection. No Batch-context path
+or type is claimed. The parser was deactivated immediately after the upload.
+QBench offered only irreversible version obsolescence rather than a
+non-destructive inactive state, so that action was canceled; the approved
+version remains marked active within the disabled parser. The controlled
+attachment remains as evidence. No worksheet service or worksheet/results
+destination write occurred, and Stage 3 was not started.
 
 ## Package contents
 
@@ -93,17 +107,18 @@ with those two dependencies normalized to the canonical-LF hashes recorded by
 the Prompt 4.5 manifest; the controlled Prompt 4 candidate hash remained the
 required `e5c80b...9758e` throughout. No Prompt 4 file was edited.
 
-## Stage 1 and Stage 2A evidence validation
+## Stage 1 through Stage 2B evidence validation
 
-- Prompt 4.6 JavaScript tests: 44 passed.
+- Prompt 4.6 JavaScript tests: 48 passed.
 - Prompt 4.6 Python/static tests: 17 passed.
-- Prompt 4.6 total: 61 passed.
+- Prompt 4.6 total: 65 passed.
 - Distribution and manifest generation: deterministic across repeated runs.
 
-These local checks support the live sanitized Preview evidence recorded in
-`docs/qbench_runtime_probe_results.md`. Stage 1 passed and Stage 2A completed
-with Batch context unavailable in draft Preview runtime. They do not imply any
-Stage 2B or later-stage result.
+These local checks support the live sanitized evidence recorded in
+`docs/qbench_runtime_probe_results.md`. Stage 1 passed, Stage 2A completed with
+Batch context unavailable in draft Preview runtime, and Stage 2B completed
+with a successful attachment-trigger job whose console payload was not
+persisted. They do not imply any Stage 3 or later-stage result.
 
 Run from this directory with Node.js and Python 3:
 
@@ -121,8 +136,8 @@ byte-identical output.
 
 ## Next action
 
-Stage 2B has not started. Because Stage 2A did not establish Batch context, the
-optional temporary attachment-trigger probe may begin only after the method
-owner supplies the exact phrase with an exact disposable Sandbox Batch name:
+Stage 2B is complete and Batch context remains unresolved. Stage 3 may begin
+only after the method owner makes the manual Sandbox Batch-ID decision and
+supplies the exact phrase:
 
-`AUTHORIZE STAGE 2B — TEMPORARY SANDBOX ATTACHMENT TRIGGER — BATCH: <EXACT DISPOSABLE SANDBOX BATCH NAME>`
+`AUTHORIZE STAGE 3 — DISPOSABLE SCALAR PATCH — BATCH: ZZZ_SANDBOX_ONLY_TERPENES_CONTEXT_PROBE_2026-07-16 — MANUAL SANDBOX BATCH ID: ALLOWED|NOT ALLOWED`
