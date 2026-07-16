@@ -1,0 +1,86 @@
+# Prompt 4.6B full Sandbox implementation
+
+This package holds the old-Sandbox compatibility baseline and candidate for
+the controlled Prompt 4.6 disposable worksheet probe.
+
+## Current status
+
+- Worksheet 61 is quarantined after the wrong Terpenes-derived compatibility
+  artifact was imported into its working draft. It has no versions and must
+  not be used.
+- Worksheet 62 is the disposable old-Sandbox probe. Version 1 was approved and
+  activated only because the old Sandbox required an active worksheet for the
+  controlled synthetic Batch assignment.
+- The controlled import passed pre-save and post-reload verification: one
+  `Probe` tab, 17 rows, 57 columns through `BE`, 15 named cells, nine required
+  formula results/sentinels, the exact 64 writable cells, and no legacy
+  Terpenes content.
+- The actual worksheet 62 **Export Spreadsheet** file is preserved under
+  `source/`.
+- The replacement candidate under `dist/` was imported into worksheet 62 and
+  saved as version 1 only after the controlled `Probe` layout passed the
+  pre-save gate.
+- A manual **Export Spreadsheet** download of the reopened saved version is
+  preserved under `round_trip/`. The semantic comparison passed: formulas,
+  named cells, data, and cell permissions are exact after excluding documented
+  old-Sandbox runtime normalization.
+- Scalar attempt 1 used nested update-style values; scalar attempt 2 used the
+  corrected direct string/Number values. Both `QBBatchService.patchWorksheet`
+  Previews completed their success callbacks but persisted no cell change.
+  Each exact 969-cell grid comparison reported zero changed cells. The second
+  result is recorded as a final old-Sandbox silent no-op; no third payload,
+  range/matrix test, or Prompt 5 work was attempted.
+- A manual Batch worksheet persistence control passed and restored the exact
+  blank baseline. The Batch assignment audit also passed: active version 1,
+  selected `Probe` tab, 15 named cells, exact scalar mappings, writable B2/B3,
+  and working formulas.
+- The first exact-filename attachment-trigger attempt was classified `blocked`
+  only because browser control could not populate QBench's HTML file input;
+  no upload or parser job occurred, and safe cleanup completed.
+- A controlled manual file-selection handoff then uploaded the byte-identical
+  fixture exactly once. QBench created one attachment and one job for the
+  exact parser, but the job remained `IN_PROGRESS` through repeated reloads,
+  exposed neither callback, and changed none of the 969 worksheet cells. The
+  final classification is `attachment_trigger_runtime_stalled`, not a success
+  no-op or confirmed patch error. The parser was deactivated and the sanitized
+  reusable Draft source restored immediately after inspection.
+- The synthetic Batch and inactive Draft parser remain isolated under the
+  `SBX_ONLY_TERPENES_2026_07_16_` prefix. No internal Batch or parser ID is
+  recorded in this package.
+
+Final statuses:
+
+- `code_parser_patchworksheet_status = blocked_old_sandbox_runtime_stall`
+- `qbench_code_parser_write_status = blocked`
+- `qbench_sandbox_scalar_probe_status = blocked_runtime_stall`
+- `recommended_next_route = no_code_file_parser_with_normalized_tsv`
+
+The recommended next route is a separate, unimplemented fallback:
+
+```text
+Raw LabSolutions ASCII
+    -> controlled local Prompt 4.5 parser/adapter
+    -> normalized tab-delimited wide-row file
+    -> QBench No-Code File Parser
+    -> Batch Instrument Import worksheet
+```
+
+That fallback must map only `A:AE` and `AH:BE` so `AF` and `AG` remain
+untouched. It is not implemented in this PR.
+
+## Build and validation
+
+From this directory:
+
+```text
+python scripts/build_sandbox_probe_from_minimal_export.py
+python scripts/validate_sandbox_probe_candidate.py
+python scripts/compare_sandbox_probe_round_trip.py
+python scripts/validate_scalar_patch_evidence.py
+node --test tests/js/qbench_scalar_patch_probe.test.js
+```
+
+See `docs/sandbox_import_compatibility_issue.md` for the evidence and the
+required QBench Sandbox verification gate. See
+`docs/sandbox_scalar_patch_result.md` for the scalar callback and persisted-cell
+evidence.

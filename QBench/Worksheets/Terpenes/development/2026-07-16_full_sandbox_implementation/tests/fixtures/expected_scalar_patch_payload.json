@@ -1,0 +1,9 @@
+{
+  "batchId": "<runtime-only synthetic Batch context>",
+  "data": {
+    "probe_text": "sandbox_probe",
+    "probe_number": 1.25
+  },
+  "success": "<success callback>",
+  "error": "<error callback>"
+}

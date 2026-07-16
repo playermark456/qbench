@@ -1,0 +1,299 @@
+{
+  "config": {
+    "worksheets": [
+      {
+        "data": [
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "worksheetId": "4ede8764-c75c-45c7-abfc-f179c0ae0a9d",
+        "tableOverflow": true,
+        "tableWidth": 876,
+        "tableHeight": 350,
+        "resize": "vertical",
+        "csvFileName": "worksheet_data",
+        "rowDrag": true,
+        "columnDrag": true,
+        "rowResize": true,
+        "columnResize": true,
+        "allowInsertRow": true,
+        "allowInsertColumn": true,
+        "allowDeleteRow": true,
+        "allowDeleteColumn": true,
+        "allowRenameColumn": false,
+        "allowComments": false,
+        "columnSorting": false,
+        "filters": false,
+        "freezeColumnControl": true,
+        "freezeRowControl": true,
+        "minDimensions": [
+          1,
+          1
+        ],
+        "columns": [
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          },
+          {
+            "type": "text",
+            "width": 100
+          }
+        ],
+        "worksheetName": "Sheet1",
+        "rows": [
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          },
+          {
+            "height": 25
+          }
+        ],
+        "meta": {},
+        "comments": {},
+        "cells": {},
+        "cache": {},
+        "mergeCells": {},
+        "freezeRows": [],
+        "freezeColumns": []
+      }
+    ],
+    "namespace": "95ea960a-fe9a-4a41-8aa7-5dad58aaf4f0",
+    "application": "QBench",
+    "autoCasting": false,
+    "entityId": "SPREADSHEET_EDITOR",
+    "bar": true,
+    "tabs": {
+      "allowCreate": true,
+      "allowChangePosition": true,
+      "animation": true,
+      "position": "top",
+      "maxWidth": "-50px"
+    },
+    "allowDeleteWorksheet": true,
+    "allowMoveWorksheet": true,
+    "allowRenameWorksheet": true,
+    "plugins": {
+      "conditionalFormatting": {
+        "rules": []
+      }
+    },
+    "qbConfigs": {
+      "generalSpreadsheetSettings": {
+        "enableSpreadsheetCustomization": false,
+        "allowTabEditing": true,
+        "showToolbar": true
+      },
+      "reportSpreadsheetSettings": {
+        "enableReportBorders": false
+      }
+    }
+  },
+  "qb_config": {
+    "kvstore_config": {}
+  },
+  "data": {
+    "Sheet1": [
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  }
+}
