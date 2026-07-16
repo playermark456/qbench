@@ -34,12 +34,16 @@ the controlled Prompt 4.6 disposable worksheet probe.
   blank baseline. The Batch assignment audit also passed: active version 1,
   selected `Probe` tab, 15 named cells, exact scalar mappings, writable B2/B3,
   and working formulas.
-- The exact-filename attachment-trigger diagnostic was classified `blocked`:
-  the available browser control could not populate QBench's HTML file input,
-  so no file was uploaded and no parser job or callback occurred. The parser
-  was immediately deactivated, the temporary Batch context was removed, and
-  the reusable Draft source was restored exactly. The complete post-cleanup
-  969-cell comparison reported zero changes.
+- The first exact-filename attachment-trigger attempt was classified `blocked`
+  only because browser control could not populate QBench's HTML file input;
+  no upload or parser job occurred, and safe cleanup completed.
+- A controlled manual file-selection handoff then uploaded the byte-identical
+  fixture exactly once. QBench created one attachment and one job for the
+  exact parser, but the job remained `IN_PROGRESS` through repeated reloads,
+  exposed neither callback, and changed none of the 969 worksheet cells. The
+  final classification is `attachment_trigger_patch_error`, not a success
+  no-op. The parser was deactivated and the sanitized reusable Draft source
+  restored immediately after inspection.
 - The synthetic Batch and inactive Draft parser remain isolated under the
   `SBX_ONLY_TERPENES_2026_07_16_` prefix. No internal Batch or parser ID is
   recorded in this package.

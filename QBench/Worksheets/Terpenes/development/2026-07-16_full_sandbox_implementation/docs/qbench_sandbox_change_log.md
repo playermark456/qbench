@@ -22,13 +22,20 @@ Environment: `https://ait-sandbox.qbench.net/`
 | Manual persistence control | Entered only `manual_persistence_control` and numeric `2.5` in B2/B3, saved, reopened, then cleared only B2/B3, saved, and reopened again | Manual values persisted with `TRUE`, `1`, and `UNCHANGED`; the second save restored blank, blank, `FALSE`, `0`, and `UNCHANGED` | `manual_persistence_passed`; general Batch worksheet persistence works |
 | Instantiated worksheet audit | Reverified the single controlled worksheet link, active version 1, selected `Probe` tab, 15 named cells, exact scalar mappings, B2/B3 writability, and formula behavior | Assignment and formula layer matched the controlled worksheet | `batch_assignment_verified` |
 | Runtime trigger preparation | Created byte-identical `SBX_ONLY_TERPENES_SCALAR_PATCH_TRIGGER_01.txt`, saved the exact Batch-attachment/Equal filename trigger with assay unset, captured 969 baseline cells, and briefly activated the isolated parser | SHA-256 `ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b`; direct payload unchanged | No alternate payload or write path introduced |
-| Runtime trigger blocker and cleanup | The available browser control could not populate the HTML file input; no upload, attachment, parser job, File Parser Result, or callback occurred | Parser immediately deactivated; temporary Batch context removed; reusable Draft source restored exactly; post-cleanup 969-cell comparison reported zero changes | `blocked`; exact trigger remains inert because parser is inactive |
+| Runtime trigger blocker and cleanup | The available browser control could not populate the HTML file input; no upload, attachment, parser job, File Parser Result, or callback occurred | Parser immediately deactivated; temporary Batch context removed; reusable Draft source restored; post-cleanup 969-cell comparison reported zero changes | Initial attempt `blocked`; exact trigger left inert |
+| Runtime trigger manual handoff | Reprepared the exact trigger and temporary runtime context, activated only the isolated parser, and paused for the method owner to select the byte-identical fixture and click Upload once | Exactly one controlled attachment and one parser-history job were created for the exact parser; the job remained `IN_PROGRESS`, neither callback was observable, and all 969 worksheet cells matched the blank baseline with zero changes | `attachment_trigger_patch_error`; no alternate payload or retry |
+| Runtime trigger final cleanup | Inspected only the created attachment/job, then deactivated the parser and removed the temporary Batch context from the saved Draft | Reload confirmed the runtime-only source segment was absent; parser inactive; exact trigger inert; controlled attachment retained | Safe cleanup passed |
 
 Worksheet 61 remains quarantined and unchanged. Worksheet 62 version 1 is
 approved/active and assigned only to the controlled synthetic Batch; it remains
 unassociated with an assay. Both the nested and corrected direct scalar
 requests produced no persisted write despite their success callbacks. Manual
 Batch worksheet persistence and the controlled worksheet assignment passed.
-The active attachment-trigger diagnostic was blocked before upload, cleaned up
-safely, and left the parser inactive. No third payload, range/matrix patch, or
-Prompt 5 work was started, and production `ait.qbench.net` was not accessed.
+The initial attachment-trigger attempt was blocked before upload and cleaned
+up safely. The approved manual handoff then created one attachment and one
+parser-history job, but the job remained `IN_PROGRESS`, exposed no callback,
+and changed zero of 969 worksheet cells. It is classified
+`attachment_trigger_patch_error`. The parser is inactive, its runtime-only
+context was removed, and the attachment remains isolated on the synthetic
+Batch. No third payload, range/matrix patch, or Prompt 5 work was started, and
+production `ait.qbench.net` was not accessed.

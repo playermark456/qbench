@@ -61,12 +61,17 @@ def main() -> None:
         "accepted_callback_but_noop_direct_scalar_shape",
         "manual_persistence_result = manual_persistence_passed",
         "batch_assignment_result = batch_assignment_verified",
-        "runtime_mode_diagnostic = blocked",
+        "runtime_mode_diagnostic_initial_attempt = blocked",
+        "runtime_mode_diagnostic = attachment_trigger_patch_error",
         "SBX_ONLY_TERPENES_SCALAR_PATCH_TRIGGER_01.txt",
         "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b",
-        "Results status: not created",
+        "File Parser Results status: not created",
         "Callback result: not reached",
-        "The exact trigger remains inert because the parser is inactive",
+        "exactly one File Parser Results job was created",
+        "job remained `IN_PROGRESS`",
+        "neither the success nor error callback was observable",
+        "attachment_trigger_patch_error",
+        "The exact trigger is inert because the parser is inactive",
         "patch_callback = success",
         "zero changed cells",
         "second silent no-op",
@@ -80,7 +85,7 @@ def main() -> None:
     assert not re.search(r"\b(?:Batch|parser|attachment|worksheet-version) ID\s*[:#]?\s*\d+\b", result, re.I)
     print(
         "scalar patch evidence validation: ok "
-        "(two Preview no-ops, manual persistence passed, runtime diagnostic blocked safely)"
+        "(two Preview no-ops, manual persistence passed, attachment trigger error recorded safely)"
     )
 
 

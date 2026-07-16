@@ -4,7 +4,7 @@ Date: 2026-07-16
 
 Sandbox hostname: `ait-sandbox.qbench.net`
 
-Result: `failed_safely_two_preview_noops_runtime_diagnostic_blocked`
+Result: `failed_safely_two_preview_noops_attachment_trigger_patch_error`
 
 ## Controlled objects and configuration
 
@@ -163,7 +163,11 @@ named-cell key, incorrect scalar address, or broken assigned formula layer.
 
 ## Runtime-mode diagnostic
 
-Classification: `runtime_mode_diagnostic = blocked`.
+Earlier browser-control classification:
+`runtime_mode_diagnostic_initial_attempt = blocked`.
+
+Final manual-handoff classification:
+`runtime_mode_diagnostic = attachment_trigger_patch_error`.
 
 A byte-identical copy of the controlled redacted fixture was created as
 `SBX_ONLY_TERPENES_SCALAR_PATCH_TRIGGER_01.txt`. Both files are 8,692 bytes
@@ -183,22 +187,48 @@ attempt 2 and no alternate payload, wrapper, `updateWorksheet`, service
 `update`, direct HTTP call, range, or matrix value. The isolated parser was
 briefly activated.
 
-The available in-app browser control could not populate QBench's HTML file
-input. The file input, File Name field, and attachment table remained empty,
-so no upload occurred and no attachment or parser job was created. File Parser
-Results status: not created. Callback result: not reached.
+The first attempt stopped at the approved manual-handoff boundary because the
+available in-app browser control could not populate QBench's HTML file input.
+No file was selected or uploaded, and no attachment or parser job was created.
+File Parser Results status: not created. Callback result: not reached. The
+parser was immediately deactivated, the temporary Batch context was removed,
+and the sanitized reusable Draft was restored.
 
-The parser was immediately deactivated. The temporary Batch context was
-removed from the saved Draft, and the reloaded source matched the reusable
-repository source byte-for-byte at SHA-256
-`c0e8f5567e8c770dbe1944a28299e8e94f4e5b282d32f9db807a063a22344550`.
-The exact trigger remains inert because the parser is inactive.
+For the approved manual handoff, the same baseline and exact trigger were
+prepared again. The method owner selected the byte-identical local fixture and
+clicked Upload exactly once. Inspection after navigation and reload confirmed:
 
-After cleanup, a second complete 969-cell capture matched the pre-activation
-baseline with zero changed cells. Persisted values remained blank, blank,
-`FALSE`, `0`, and `UNCHANGED`. This zero-change comparison confirms safe
-cleanup; it is not an attachment-trigger patch result because no parser job
-ran.
+- exactly one attachment with the controlled filename was created;
+- exactly one File Parser Results job was created for
+  `SBX_ONLY_TERPENES_2026_07_16_Scalar_Patch_Probe`;
+- the job identified the exact controlled parser, whose sole configured
+  execution version was version 1, `Scalar Patch Probe v1 - Runtime Context
+  Guard`;
+- the job remained `IN_PROGRESS` through repeated history reloads;
+- neither the success nor error callback was observable;
+- no completed success or sanitized error detail was exposed by QBench;
+- the complete persisted worksheet contained the same 969 cells as the
+  recorded blank baseline, with zero changed cells.
+
+Persisted scalar values after the attachment-trigger attempt were blank,
+blank, `FALSE`, `0`, and `UNCHANGED`. Therefore `probe_text` and
+`probe_number` were not patched, no numeric cell was stored, `ISNUMBER`
+remained false, `COUNT` remained zero, the sentinel remained unchanged, and
+all omitted and unrelated cells were preserved.
+
+Because the job was created but never reported `SUCCESS`, this result is not
+classified `attachment_trigger_patch_noop`. The non-completing job and absent
+callback are recorded as `attachment_trigger_patch_error`; no alternate
+payload shape or fallback write path was attempted.
+
+Immediately after inspecting the created job, the parser was deactivated. The
+temporary Batch context was removed from the saved Draft, the runtime-only
+source segment was absent after reload, and the reusable guarded direct-value
+source remained. The exact trigger is inert because the parser is inactive.
+
+After cleanup, a complete 969-cell capture matched the pre-activation baseline
+with zero changed cells. The single controlled attachment was retained as
+required and was not deleted.
 
 ## Reusable parser source
 
@@ -211,9 +241,9 @@ saved source contains no Batch ID and no nested value wrapper.
 The reloaded Sandbox editor source and repository file matched byte-for-byte
 at SHA-256
 `c0e8f5567e8c770dbe1944a28299e8e94f4e5b282d32f9db807a063a22344550`.
-After the runtime-mode cleanup, the saved Draft was reloaded and confirmed to
-contain only the reusable source; the temporary runtime context and Batch
-literal did not persist.
+After the manual-handoff cleanup, the saved Draft was reloaded and confirmed
+to contain the reusable guarded source without the runtime-only context
+segment.
 
 ## Compatibility assessment and stop condition
 
@@ -229,10 +259,11 @@ That remains a compatibility hypothesis, not a proven service contract,
 because no supported read-only UI exposed the service's internal target model.
 
 The manual control and assignment audit eliminate general worksheet
-persistence and wrong-instance explanations. The runtime-mode diagnostic did
-not distinguish Preview-only behavior from attachment-trigger compatibility,
-because the safe exact-trigger upload could not be completed. The required
-final classification is therefore `blocked`.
+persistence and wrong-instance explanations. The manual handoff eliminated
+the browser file-input blocker: the exact attachment and parser job were
+created. The job did not complete, neither callback was observable, and the
+worksheet remained unchanged. The required final classification is therefore
+`attachment_trigger_patch_error`.
 
 No third payload shape was attempted. `updateWorksheet`, full worksheet
 replacement, service `update`, and direct HTTP writes were not used.
@@ -245,12 +276,14 @@ Range/matrix testing did not start. Prompt 5 did not start.
    baseline.
 2. The existing parser configuration was narrowed to the exact Batch
    attachment filename while leaving assay unset.
-3. The isolated parser was activated briefly, then deactivated before any
-   attachment was uploaded.
+3. The isolated parser was activated for the controlled manual upload, then
+   deactivated immediately after the created job was inspected.
 4. The parser Draft briefly contained the runtime-only Batch context, then was
-   restored exactly to the sanitized reusable source.
+   restored to the sanitized reusable source.
+5. Exactly one controlled attachment and one associated File Parser Results
+   job were created. The attachment was retained; the job remained
+   `IN_PROGRESS`.
 
-No new worksheet, Batch, assay, sample, test, attachment, protocol, parser job,
-File Parser Result, Pass/Fail field, or range/matrix probe was created. No
-third payload shape was attempted. Range/matrix testing did not start. Prompt
-5 did not start. Production `ait.qbench.net` was not accessed or changed.
+No new worksheet, Batch, assay, sample, test, protocol, Pass/Fail field, or
+range/matrix probe was created. No third payload shape was attempted.
+Range/matrix testing did not start. Prompt 5 did not start. Production `ait.qbench.net` was not accessed or changed.
