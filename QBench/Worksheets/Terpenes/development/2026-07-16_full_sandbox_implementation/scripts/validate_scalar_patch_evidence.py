@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -12,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "src" / "qbench_scalar_patch_probe.js"
 FIXTURE = ROOT / "tests" / "fixtures" / "expected_scalar_patch_payload.json"
 ATTEMPT1_FIXTURE = ROOT / "tests" / "fixtures" / "attempt_1_nested_scalar_patch_payload.json"
+TRIGGER_FIXTURE = ROOT / "tests" / "fixtures" / "SBX_ONLY_TERPENES_SCALAR_PATCH_TRIGGER_01.txt"
+CONTROLLED_FIXTURE = ROOT.parent.parent / "source" / "Output_redacted_fixture.txt"
 RESULT = ROOT / "docs" / "sandbox_scalar_patch_result.md"
 
 
@@ -19,6 +22,8 @@ def main() -> None:
     source = SOURCE.read_text(encoding="utf-8")
     fixture = json.loads(FIXTURE.read_text(encoding="utf-8"))
     attempt1_fixture = json.loads(ATTEMPT1_FIXTURE.read_text(encoding="utf-8"))
+    trigger_fixture = TRIGGER_FIXTURE.read_bytes()
+    controlled_fixture = CONTROLLED_FIXTURE.read_bytes()
     result = RESULT.read_text(encoding="utf-8")
 
     assert source.count("service.patchWorksheet(") == 1
@@ -45,9 +50,23 @@ def main() -> None:
     assert attempt1_fixture["data"]["probe_text"] == {"value": "sandbox_probe"}
     assert attempt1_fixture["data"]["probe_number"] == {"value": 1.25}
 
+    assert trigger_fixture == controlled_fixture
+    assert len(trigger_fixture) == 8692
+    assert hashlib.sha256(trigger_fixture).hexdigest() == (
+        "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b"
+    )
+
     required_result_markers = (
         "accepted_callback_but_noop_nested_value_shape",
         "accepted_callback_but_noop_direct_scalar_shape",
+        "manual_persistence_result = manual_persistence_passed",
+        "batch_assignment_result = batch_assignment_verified",
+        "runtime_mode_diagnostic = blocked",
+        "SBX_ONLY_TERPENES_SCALAR_PATCH_TRIGGER_01.txt",
+        "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b",
+        "Results status: not created",
+        "Callback result: not reached",
+        "The exact trigger remains inert because the parser is inactive",
         "patch_callback = success",
         "zero changed cells",
         "second silent no-op",
@@ -59,7 +78,10 @@ def main() -> None:
         assert marker in result, marker
 
     assert not re.search(r"\b(?:Batch|parser|attachment|worksheet-version) ID\s*[:#]?\s*\d+\b", result, re.I)
-    print("scalar patch evidence validation: ok (direct values, no nested wrappers)")
+    print(
+        "scalar patch evidence validation: ok "
+        "(two Preview no-ops, manual persistence passed, runtime diagnostic blocked safely)"
+    )
 
 
 if __name__ == "__main__":

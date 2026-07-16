@@ -30,6 +30,16 @@ the controlled Prompt 4.6 disposable worksheet probe.
   Each exact 969-cell grid comparison reported zero changed cells. The second
   result is recorded as a final old-Sandbox silent no-op; no third payload,
   range/matrix test, or Prompt 5 work was attempted.
+- A manual Batch worksheet persistence control passed and restored the exact
+  blank baseline. The Batch assignment audit also passed: active version 1,
+  selected `Probe` tab, 15 named cells, exact scalar mappings, writable B2/B3,
+  and working formulas.
+- The exact-filename attachment-trigger diagnostic was classified `blocked`:
+  the available browser control could not populate QBench's HTML file input,
+  so no file was uploaded and no parser job or callback occurred. The parser
+  was immediately deactivated, the temporary Batch context was removed, and
+  the reusable Draft source was restored exactly. The complete post-cleanup
+  969-cell comparison reported zero changes.
 - The synthetic Batch and inactive Draft parser remain isolated under the
   `SBX_ONLY_TERPENES_2026_07_16_` prefix. No internal Batch or parser ID is
   recorded in this package.

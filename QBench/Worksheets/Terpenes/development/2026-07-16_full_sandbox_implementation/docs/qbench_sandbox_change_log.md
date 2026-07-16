@@ -19,10 +19,16 @@ Environment: `https://ait-sandbox.qbench.net/`
 | Scalar Preview attempt 1 | Ran one validated `QBBatchService.patchWorksheet` request with nested `probe_text: { value: ... }` and `probe_number: { value: ... }` data | Success callback fired; error callback did not; all 969 Batch worksheet cells were unchanged after reload | `accepted_callback_but_noop_nested_value_shape`; retained in the audit trail |
 | Scalar parser correction | Updated existing inactive parser version 1 in place as `DRAFT` to emit direct `probe_text: "sandbox_probe"` and `probe_number: 1.25` values | Reloaded saved source contained no nested wrapper, no Batch ID, and no forbidden write path; trigger, assay, and filename rule remained unset | Parser remained inactive |
 | Scalar Preview attempt 2 | Ran one corrected direct-value `QBBatchService.patchWorksheet` request after confirming the Batch link, active worksheet version, and exact named-cell keys/addresses | Success callback fired; error callback did not; all 969 Batch worksheet cells were unchanged after reopen/reload | `accepted_callback_but_noop_direct_scalar_shape`; second silent no-op; stopped before third payload or range testing |
+| Manual persistence control | Entered only `manual_persistence_control` and numeric `2.5` in B2/B3, saved, reopened, then cleared only B2/B3, saved, and reopened again | Manual values persisted with `TRUE`, `1`, and `UNCHANGED`; the second save restored blank, blank, `FALSE`, `0`, and `UNCHANGED` | `manual_persistence_passed`; general Batch worksheet persistence works |
+| Instantiated worksheet audit | Reverified the single controlled worksheet link, active version 1, selected `Probe` tab, 15 named cells, exact scalar mappings, B2/B3 writability, and formula behavior | Assignment and formula layer matched the controlled worksheet | `batch_assignment_verified` |
+| Runtime trigger preparation | Created byte-identical `SBX_ONLY_TERPENES_SCALAR_PATCH_TRIGGER_01.txt`, saved the exact Batch-attachment/Equal filename trigger with assay unset, captured 969 baseline cells, and briefly activated the isolated parser | SHA-256 `ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b`; direct payload unchanged | No alternate payload or write path introduced |
+| Runtime trigger blocker and cleanup | The available browser control could not populate the HTML file input; no upload, attachment, parser job, File Parser Result, or callback occurred | Parser immediately deactivated; temporary Batch context removed; reusable Draft source restored exactly; post-cleanup 969-cell comparison reported zero changes | `blocked`; exact trigger remains inert because parser is inactive |
 
 Worksheet 61 remains quarantined and unchanged. Worksheet 62 version 1 is
 approved/active and assigned only to the controlled synthetic Batch; it remains
 unassociated with an assay. Both the nested and corrected direct scalar
-requests produced no persisted write despite their success callbacks. No third
-payload, range/matrix patch, or Prompt 5 work was started, and production
-`ait.qbench.net` was not accessed.
+requests produced no persisted write despite their success callbacks. Manual
+Batch worksheet persistence and the controlled worksheet assignment passed.
+The active attachment-trigger diagnostic was blocked before upload, cleaned up
+safely, and left the parser inactive. No third payload, range/matrix patch, or
+Prompt 5 work was started, and production `ait.qbench.net` was not accessed.

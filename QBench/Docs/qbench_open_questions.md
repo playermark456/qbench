@@ -110,13 +110,33 @@ fire. After reopening and reloading the Batch worksheet, `probe_text` and
 and `probe_sentinel = UNCHANGED`. Its complete 969-cell comparison also
 reported zero changed cells.
 
+A manual Batch worksheet control then proved the instantiated worksheet can
+persist edits: `manual_persistence_control` and numeric `2.5` survived
+save/reopen, produced `TRUE` and `1`, and were cleared with a second
+save/reopen that restored the exact blank baseline. Read-only inspection also
+verified the selected `Probe` tab, active version 1, all 15 named cells, exact
+B2/B3 mappings, writable inputs, and functioning formulas.
+
+The exact-filename attachment-trigger diagnostic was prepared with a
+byte-identical controlled fixture, exact Batch-attachment trigger, no assay,
+and the same direct payload. The available in-app browser control could not
+populate QBench's HTML file input. No file was uploaded, no attachment or
+parser job was created, no File Parser Result existed, and no callback was
+reached. The parser was immediately deactivated, its temporary Batch context
+was removed, and the saved Draft source was restored exactly. The pre/post
+cleanup 969-cell comparison reported zero changes.
+
 Current status:
 
 - `qbench_sandbox_scalar_patch_attempt_1 = accepted_callback_but_noop_nested_value_shape`
 - `qbench_sandbox_scalar_patch_attempt_2 = accepted_callback_but_noop_direct_scalar_shape`
-- `qbench_sandbox_scalar_patch_status = failed_safely_two_success_callbacks_two_persisted_noops`
+- `qbench_sandbox_scalar_patch_status = runtime_mode_diagnostic_blocked_after_two_preview_noops`
 - `qbench_sandbox_scalar_patch_compatibility = possible_legacy_dynamic_qwml_target_only_unproven`
 - `qbench_sandbox_numeric_cell_behavior = not_written_not_proven`
+- `qbench_sandbox_manual_persistence = passed`
+- `qbench_sandbox_batch_assignment = verified`
+- `qbench_sandbox_runtime_mode_diagnostic = blocked_before_upload`
+- `qbench_sandbox_parser_final_state = inactive_sanitized_draft_exact_trigger_inert`
 - `qbench_sandbox_range_matrix_status = not_started`
 - `prompt_5_status = not_started`
 
@@ -124,5 +144,6 @@ No third payload shape was attempted, and neither `updateWorksheet` nor a
 replacement API was used. The two no-ops are consistent with the older
 Sandbox service targeting only legacy Dynamic/QWML named-field data rather
 than the Spreadsheet Worksheet named-cell layer, but that remains an unproven
-compatibility hypothesis. Sanitized evidence is in
+compatibility hypothesis. The blocked attachment upload did not distinguish
+Preview-only behavior from service incompatibility. Sanitized evidence is in
 `QBench/Worksheets/Terpenes/development/2026-07-16_full_sandbox_implementation/docs/sandbox_scalar_patch_result.md`.
