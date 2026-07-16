@@ -16,10 +16,13 @@ Environment: `https://ait-sandbox.qbench.net/`
 | 62 activation | Moved version 1 from `DRAFT` to `PENDING` without the optional lock/reviewer, approved it, made it active, and enabled the worksheet object's `Active` setting | The controlled worksheet became selectable on the synthetic Batch form | Minimum old-Sandbox activation needed for the scalar test |
 | Synthetic scalar Batch | Created `SBX_ONLY_TERPENES_2026_07_16_SCALAR_PATCH_PROBE_01` with only worksheet 62 selected; Assay, Tags, and Protocol left blank | Probe baseline was blank, blank, `FALSE`, `0`, `UNCHANGED` | Isolated Sandbox-only Batch retained for evidence; no internal ID recorded |
 | Scalar parser | Created inactive Code parser `SBX_ONLY_TERPENES_2026_07_16_Scalar_Patch_Probe` and version 1 `Scalar Patch Probe v1 - Runtime Context Guard` as `DRAFT` | Saved source contains no Batch ID; trigger, assay, and filename rule unset | Parser remains inactive |
-| Scalar Preview | Ran one validated `QBBatchService.patchWorksheet` request with only `probe_text` and `probe_number` | Success callback fired; error callback did not; all 969 Batch worksheet cells were unchanged after reload | Silent no-op compatibility failure; stopped before alternate payload or range testing |
+| Scalar Preview attempt 1 | Ran one validated `QBBatchService.patchWorksheet` request with nested `probe_text: { value: ... }` and `probe_number: { value: ... }` data | Success callback fired; error callback did not; all 969 Batch worksheet cells were unchanged after reload | `accepted_callback_but_noop_nested_value_shape`; retained in the audit trail |
+| Scalar parser correction | Updated existing inactive parser version 1 in place as `DRAFT` to emit direct `probe_text: "sandbox_probe"` and `probe_number: 1.25` values | Reloaded saved source contained no nested wrapper, no Batch ID, and no forbidden write path; trigger, assay, and filename rule remained unset | Parser remained inactive |
+| Scalar Preview attempt 2 | Ran one corrected direct-value `QBBatchService.patchWorksheet` request after confirming the Batch link, active worksheet version, and exact named-cell keys/addresses | Success callback fired; error callback did not; all 969 Batch worksheet cells were unchanged after reopen/reload | `accepted_callback_but_noop_direct_scalar_shape`; second silent no-op; stopped before third payload or range testing |
 
 Worksheet 61 remains quarantined and unchanged. Worksheet 62 version 1 is
 approved/active and assigned only to the controlled synthetic Batch; it remains
-unassociated with an assay. The scalar request produced no persisted write
-despite the success callback. No alternate scalar payload, range/matrix patch,
-or Prompt 5 work was started, and production `ait.qbench.net` was not accessed.
+unassociated with an assay. Both the nested and corrected direct scalar
+requests produced no persisted write despite their success callbacks. No third
+payload, range/matrix patch, or Prompt 5 work was started, and production
+`ait.qbench.net` was not accessed.

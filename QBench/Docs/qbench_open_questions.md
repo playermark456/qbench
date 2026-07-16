@@ -91,30 +91,38 @@ formula cache. No scalar patch was run during this verification.
 
 ## Prompt 4.6B old-Sandbox scalar patch compatibility
 
-One separately authorized scalar Preview used the exact documented
-`QBBatchService.patchWorksheet` argument names and only these data fields:
-`probe_text = "sandbox_probe"` and JavaScript Number `probe_number = 1.25`.
-The reusable parser validated the complete request before the call and
-contained no saved Batch ID.
+Scalar attempt 1 used nested update-style values. Its success callback fired,
+but the complete 969-cell Batch worksheet grid was unchanged. It is retained
+as `accepted_callback_but_noop_nested_value_shape`, not as proof that
+`patchWorksheet` or Spreadsheet named cells are unsupported.
 
-The old Sandbox emitted `patch_callback = success`; the error callback did not
-fire. However, a fresh navigation and reload of the saved Batch worksheet
-showed `probe_text` and `probe_number` still blank, `probe_isnumber = FALSE`,
-`probe_count = 0`, and `probe_sentinel = UNCHANGED`. The complete 969-cell grid
-matched before and after the Preview, so every omitted field and all unrelated
-worksheet data were preserved because nothing was written.
+Scalar attempt 2 used the official direct-value model: JavaScript string
+`probe_text = "sandbox_probe"` and JavaScript Number `probe_number = 1.25`.
+The reusable parser validated exactly the two direct data keys, emitted no
+`{ value: ... }` wrappers, and contained no saved Batch ID. Before and after
+the attempt, read-only inspection confirmed the synthetic Batch linked the
+controlled worksheet, version 1 was `APPROVED (ACTIVE)`, all 15 named cells
+were present, and the scalar addresses were `Probe!B2` and `Probe!B3`.
+
+Attempt 2 also emitted `patch_callback = success`; the error callback did not
+fire. After reopening and reloading the Batch worksheet, `probe_text` and
+`probe_number` remained blank, `probe_isnumber = FALSE`, `probe_count = 0`,
+and `probe_sentinel = UNCHANGED`. Its complete 969-cell comparison also
+reported zero changed cells.
 
 Current status:
 
-- `qbench_sandbox_scalar_patch_status = failed_safely_success_callback_without_persisted_cell_changes`
-- `qbench_sandbox_scalar_patch_compatibility = silent_no_op_in_old_sandbox_runtime`
+- `qbench_sandbox_scalar_patch_attempt_1 = accepted_callback_but_noop_nested_value_shape`
+- `qbench_sandbox_scalar_patch_attempt_2 = accepted_callback_but_noop_direct_scalar_shape`
+- `qbench_sandbox_scalar_patch_status = failed_safely_two_success_callbacks_two_persisted_noops`
+- `qbench_sandbox_scalar_patch_compatibility = possible_legacy_dynamic_qwml_target_only_unproven`
 - `qbench_sandbox_numeric_cell_behavior = not_written_not_proven`
 - `qbench_sandbox_range_matrix_status = not_started`
 - `prompt_5_status = not_started`
 
-No alternate payload shape was attempted, and neither `updateWorksheet` nor a
-replacement API was used. The remaining support question is whether the older
-Sandbox `patchWorksheet` implementation ignores Spreadsheet Worksheet named
-cells, targets a different worksheet data model, or returns success before
-discarding an unsupported named-cell patch. Sanitized evidence is in
+No third payload shape was attempted, and neither `updateWorksheet` nor a
+replacement API was used. The two no-ops are consistent with the older
+Sandbox service targeting only legacy Dynamic/QWML named-field data rather
+than the Spreadsheet Worksheet named-cell layer, but that remains an unproven
+compatibility hypothesis. Sanitized evidence is in
 `QBench/Worksheets/Terpenes/development/2026-07-16_full_sandbox_implementation/docs/sandbox_scalar_patch_result.md`.

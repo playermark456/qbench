@@ -24,11 +24,12 @@ the controlled Prompt 4.6 disposable worksheet probe.
   preserved under `round_trip/`. The semantic comparison passed: formulas,
   named cells, data, and cell permissions are exact after excluding documented
   old-Sandbox runtime normalization.
-- The one authorized scalar `QBBatchService.patchWorksheet` Preview completed
-  its success callback but persisted no cell change. The exact 969-cell grid
-  matched before and after the call. This is recorded as an old-Sandbox silent
-  no-op compatibility failure; no alternate payload, range/matrix test, or
-  Prompt 5 work was attempted.
+- Scalar attempt 1 used nested update-style values; scalar attempt 2 used the
+  corrected direct string/Number values. Both `QBBatchService.patchWorksheet`
+  Previews completed their success callbacks but persisted no cell change.
+  Each exact 969-cell grid comparison reported zero changed cells. The second
+  result is recorded as a final old-Sandbox silent no-op; no third payload,
+  range/matrix test, or Prompt 5 work was attempted.
 - The synthetic Batch and inactive Draft parser remain isolated under the
   `SBX_ONLY_TERPENES_2026_07_16_` prefix. No internal Batch or parser ID is
   recorded in this package.
@@ -42,6 +43,7 @@ python scripts/build_sandbox_probe_from_minimal_export.py
 python scripts/validate_sandbox_probe_candidate.py
 python scripts/compare_sandbox_probe_round_trip.py
 python scripts/validate_scalar_patch_evidence.py
+node --test tests/js/qbench_scalar_patch_probe.test.js
 ```
 
 See `docs/sandbox_import_compatibility_issue.md` for the evidence and the

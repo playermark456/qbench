@@ -1,61 +1,53 @@
-# Prompt 4.6B old-Sandbox scalar patch result
+# Prompt 4.6B old-Sandbox scalar patch results
 
 Date: 2026-07-16
 
 Sandbox hostname: `ait-sandbox.qbench.net`
 
-Result: `failed_safely_success_callback_without_persisted_cell_changes`
+Result: `failed_safely_two_success_callbacks_two_persisted_noops`
 
-## Controlled objects
+## Controlled objects and configuration
 
 - Synthetic Batch label:
   `SBX_ONLY_TERPENES_2026_07_16_SCALAR_PATCH_PROBE_01`.
 - Worksheet label:
   `SBX_ONLY_TERPENES_2026_07_16_Probe_Minimal_Runtime_Baseline`.
-- Worksheet version: version 1, approved and active for the disposable Batch
-  assignment.
+- Worksheet version: version 1, `APPROVED (ACTIVE)`.
 - Parser label: `SBX_ONLY_TERPENES_2026_07_16_Scalar_Patch_Probe`.
 - Parser version: version 1, `Scalar Patch Probe v1 - Runtime Context Guard`.
-- Parser state after the test: inactive; version status `DRAFT`; trigger,
-  assay, and filename rule unset.
+- Parser state after both attempts: inactive; version status `DRAFT`;
+  trigger, assay, and filename rule unset.
 - Quarantined worksheet 61 was not opened, changed, attached, or deleted.
 
 No internal Batch ID, parser ID, worksheet-version ID, attachment ID, or other
-numeric object ID is recorded here. The Batch context was used only in the
-one-time unsaved Preview buffer and was discarded without saving.
+numeric object ID is recorded here. For each attempt, the Batch context was
+used only in a one-time unsaved Preview buffer and was discarded without
+saving.
 
-## Worksheet activation and assignment
+## Read-only target audit
 
-The controlled worksheet did not appear on the new-Batch form while it was an
-inactive draft. The minimum required activation path was:
+Before attempt 2, and again after its second silent no-op, the following were
+verified in the old Sandbox UI:
 
-1. Move worksheet version 1 from `DRAFT` to `PENDING` and decline the optional
-   lock/reviewer step.
-2. Approve version 1 and answer yes when asked to make it active.
-3. Enable the worksheet object's `Active` setting and save the worksheet
-   details.
-4. Create the synthetic Batch with only the controlled worksheet selected;
-   Assay, Tags, and Protocol were left blank.
+- the synthetic Batch contained exactly one link to the controlled worksheet;
+- the linked worksheet configuration selected version 1 as
+  `APPROVED (ACTIVE)`;
+- the worksheet configuration contained exactly 15 named cells/ranges;
+- `probe_text` existed at `Probe!B2`;
+- `probe_number` existed at `Probe!B3`;
+- the scalar baseline was blank, blank, `FALSE`, `0`, and `UNCHANGED`;
+- no Pass/Fail field or result existed.
 
-The Batch worksheet was verified before the patch. Its five scalar cells were
-blank, blank, `FALSE`, `0`, and `UNCHANGED`, respectively.
+This rules out a missing Batch worksheet assignment, inactive worksheet
+version, missing scalar named-cell key, or incorrect scalar named-cell address
+as the explanation for attempt 2.
 
-## Parser execution
+## Attempt 1: nested update-style values
 
-The reusable parser source is preserved at
-`src/qbench_scalar_patch_probe.js`. It imports `file_parser.js` 1.1.0 and
-`qbjs.js` 2.7.0, validates the full request, calls only
-`QBBatchService.patchWorksheet`, and requires a guarded runtime context. The
-saved source contains no Batch ID. The reloaded Sandbox editor source and the
-repository file matched byte-for-byte at SHA-256
-`dee7fea032635bb4b19286b722c42c78414513373e852761a2d28bbaa044bbb7`.
+Classification:
+`scalar_patch_attempt_1 = accepted_callback_but_noop_nested_value_shape`
 
-For the one authorized Preview, the internal Batch context was supplied only
-through a one-time unsaved runtime prelude. The reusable source was reloaded
-after the Preview and matched the repository source; the prelude and Batch ID
-did not persist. No file or fixture was selected for the Preview.
-
-The exact sanitized request shape was:
+The first request used nested values:
 
 ```json
 {
@@ -69,21 +61,55 @@ The exact sanitized request shape was:
 }
 ```
 
-The validator required request keys to be exactly `batchId`, `data`, `error`,
-and `success`; data keys to be exactly `probe_number` and `probe_text`; and
-`probe_number.value` to be the finite JavaScript Number `1.25`.
+The callback record was `patch_callback = success`; the error callback did not
+fire. After navigating away and reloading the Batch worksheet, neither target
+persisted. The complete
+969-cell comparison reported zero changed cells. This attempt is retained in
+`tests/fixtures/attempt_1_nested_scalar_patch_payload.json` and in the Git
+history; it is not treated as proof that `patchWorksheet` or named cells are
+unsupported.
 
-## Callback and persisted result
+## Attempt 2: corrected direct scalar values
 
-- `patch_callback = success` was emitted once.
-- The error callback did not fire.
-- QBench displayed its Preview success state.
-- After a new navigation to the Batch worksheet, a wait, and a full reload,
-  neither target cell had changed.
+Classification:
+`scalar_patch_attempt_2 = accepted_callback_but_noop_direct_scalar_shape`
 
-Persisted scalar values were:
+The second and final authorized request used direct values:
 
-| Named cell | Expected patch result | Persisted result |
+```json
+{
+  "batchId": "<runtime-only synthetic Batch context>",
+  "data": {
+    "probe_text": "sandbox_probe",
+    "probe_number": 1.25
+  },
+  "success": "<success callback>",
+  "error": "<error callback>"
+}
+```
+
+The full request was validated before the call:
+
+- request keys were exactly `batchId`, `data`, `error`, and `success`;
+- data keys were exactly `probe_number` and `probe_text`;
+- `probe_text` was the JavaScript string `sandbox_probe`;
+- `probe_number` was the finite JavaScript Number `1.25`;
+- neither data value was an object or contained a `value` wrapper;
+- no `worksheetData`, `updateWorksheet`, service `update`, direct HTTP call,
+  or unrelated named cell was present.
+
+The callback record was `patch_callback = success`; the error callback did not
+fire, and QBench displayed its Preview success state. After navigating away,
+reopening the
+Batch worksheet, waiting, and reloading, neither direct value persisted.
+
+The complete 17 by 57 grid was captured immediately before and after attempt
+2. Both captures contained 969 cells and the comparison reported zero changed
+cells in displayed value and numeric/read-only class.
+
+Persisted scalar values after attempt 2 were:
+
+| Named cell | Expected result | Persisted result |
 |---|---:|---:|
 | `probe_text` | `sandbox_probe` | blank |
 | `probe_number` | numeric `1.25` | blank / no numeric-cell class |
@@ -91,41 +117,48 @@ Persisted scalar values were:
 | `probe_count` | `1` | `0` |
 | `probe_sentinel` | `UNCHANGED` | `UNCHANGED` |
 
-The complete 17 by 57 grid was captured before and after the Preview. All 969
-cells matched in both displayed value and numeric/read-only class. Therefore:
+Therefore no numeric cell was stored, `ISNUMBER` did not recognize a number,
+`COUNT` remained zero, the sentinel formula was unchanged, every omitted
+named cell/range remained unchanged, and no unrelated worksheet cell changed.
 
-- both requested target cells remained unchanged;
-- every omitted named cell/range remained unchanged;
-- all formulas and sentinels remained unchanged;
-- no unrelated worksheet data changed;
-- no numeric cell was stored, `ISNUMBER` remained false, and `COUNT` remained
-  zero;
-- no Pass/Fail field or result existed before or after the test.
+## Reusable parser source
 
-## Compatibility finding and stop condition
+The corrected reusable parser source is preserved at
+`src/qbench_scalar_patch_probe.js`. It imports `file_parser.js` 1.1.0 and
+`qbjs.js` 2.7.0, validates the direct-value request, calls only
+`QBBatchService.patchWorksheet`, and requires a guarded runtime context. The
+saved source contains no Batch ID and no nested value wrapper.
 
-In this older Sandbox runtime, the documented scalar request reached the
-`patchWorksheet` success callback but produced no persisted named-cell change
-in the controlled Batch Spreadsheet Worksheet. The observed behavior is a
-silent no-op compatibility failure. The evidence does not establish whether
-the service ignored named-cell keys, targeted another worksheet data model, or
-returned success before discarding an unsupported patch.
+The reloaded Sandbox editor source and repository file matched byte-for-byte
+at SHA-256
+`c0e8f5567e8c770dbe1944a28299e8e94f4e5b282d32f9db807a063a22344550`.
+After the Preview, the saved Draft was reloaded and confirmed to contain only
+the reusable source; the one-time runtime prelude and Batch ID did not persist.
 
-Per the failure rule, no alternate payload shape was attempted, no
-`updateWorksheet` or replacement API was used, and range/matrix testing did
-not start. Prompt 5 did not start.
+## Compatibility assessment and stop condition
 
-## Sandbox objects created or changed
+Attempt 2 is a second silent no-op. Both the nested and official direct scalar
+shapes reached the success callback without changing the controlled Batch
+Spreadsheet Worksheet. The Batch-to-worksheet link, active version, named-cell
+keys, and named-cell addresses were all present and correct.
 
-1. The controlled worksheet version changed from inactive `DRAFT` to approved
-   and active.
-2. The controlled worksheet object's `Active` setting was enabled.
-3. The synthetic Batch was created and assigned only the controlled worksheet.
-4. The disposable scalar parser object was created inactive.
-5. Parser version 1 was created as `DRAFT` and remained inactive.
-6. One Preview ran and returned the success callback without changing any
-   worksheet cell.
+The result is consistent with the old Sandbox `patchWorksheet` implementation
+targeting only a legacy Dynamic/QWML named-field data model rather than the
+Spreadsheet Worksheet named-cell layer used by this probe. That remains a
+compatibility hypothesis, not a proven service contract, because no supported
+read-only UI exposed the service's internal target model.
 
-No assay, sample, test, attachment, protocol, parser trigger, filename rule,
-Pass/Fail field, or range/matrix probe was created or changed. Production
-`ait.qbench.net` was not accessed or changed.
+No third payload shape was attempted. `updateWorksheet`, full worksheet
+replacement, service `update`, and direct HTTP writes were not used.
+Range/matrix testing did not start. Prompt 5 did not start.
+
+## Sandbox objects changed by attempt 2
+
+1. Existing inactive parser version 1 was updated in place as a `DRAFT` to use
+   direct scalar values.
+2. One controlled Preview ran and returned the success callback without
+   changing any worksheet cell.
+
+No worksheet, Batch, assay, sample, test, attachment, protocol, parser trigger,
+filename rule, Pass/Fail field, or range/matrix probe was created or changed
+during attempt 2. Production `ait.qbench.net` was not accessed or changed.

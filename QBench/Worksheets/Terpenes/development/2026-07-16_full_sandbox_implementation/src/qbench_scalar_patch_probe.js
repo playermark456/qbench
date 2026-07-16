@@ -25,8 +25,8 @@ importScripts("https://d731z7k534aiw.cloudfront.net/v2.7.0/qbjs.js");
     if (requestKeys !== "batchId,data,error,success") throw new Error("INVALID_REQUEST_KEYS");
     validateBatchId(request.batchId);
     if (dataKeys !== "probe_number,probe_text") throw new Error("INVALID_DATA_KEYS");
-    if (!request.data.probe_text || request.data.probe_text.value !== "sandbox_probe") throw new Error("INVALID_TEXT_VALUE");
-    if (!request.data.probe_number || typeof request.data.probe_number.value !== "number" || request.data.probe_number.value !== 1.25 || !Number.isFinite(request.data.probe_number.value)) throw new Error("INVALID_NUMBER_VALUE");
+    if (request.data.probe_text !== "sandbox_probe") throw new Error("INVALID_TEXT_VALUE");
+    if (typeof request.data.probe_number !== "number" || request.data.probe_number !== 1.25 || !Number.isFinite(request.data.probe_number)) throw new Error("INVALID_NUMBER_VALUE");
     if (typeof request.success !== "function" || typeof request.error !== "function") throw new Error("INVALID_CALLBACKS");
     return request;
   }
@@ -35,8 +35,8 @@ importScripts("https://d731z7k534aiw.cloudfront.net/v2.7.0/qbjs.js");
     return validateRequest({
       batchId: batchId,
       data: {
-        probe_text: { value: "sandbox_probe" },
-        probe_number: { value: 1.25 }
+        probe_text: "sandbox_probe",
+        probe_number: 1.25
       },
       success: function (result) {
         log("patch_callback = success");
