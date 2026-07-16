@@ -1,7 +1,7 @@
 {
   "allowed_batch_write_api": "QBBatchService.patchWorksheet",
   "batch_context_path": null,
-  "batch_context_status": "not_tested",
+  "batch_context_status": "not_available_in_preview_runtime",
   "controlled_counts": {
     "compound_result_rows": 24,
     "dimethylacetamide_audit_rows": 1,

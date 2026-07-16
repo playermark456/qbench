@@ -48,3 +48,22 @@ compatibility problem without logging or claiming a specific collection
 constructor. Neither attempt invoked a worksheet service or modified a
 worksheet or parser-result destination. The parser remained inactive/DRAFT
 with no trigger or assay.
+
+The Stage 2A read-only probe:
+
+- calls only `Object.keys(QB)` plus controlled own-property presence and value
+  type checks for five candidate Batch-context keys;
+- does not serialize `QB`, inspect nested objects, or dereference any security,
+  authorization, session, or identifier value;
+- logs no file contents, paths, QBench IDs, credentials, cookies, or storage;
+- contains no worksheet service or destination-write capability;
+- produced two existing identical sanitized output groups after accidental
+  Preview execution; Codex did not rerun Preview;
+- observed all five candidate Batch-context paths absent with type `undefined`;
+- left the parser inactive/DRAFT with trigger and assay unset.
+
+The UI showed one controlled selected file. File metadata was not emitted
+because `QB.files` was array-like rather than a true Array, but the independent
+Batch-context presence/type checks completed. The recorded outcome is
+`not_available_in_preview_runtime`; no internal Batch ID was exposed, captured,
+or committed.

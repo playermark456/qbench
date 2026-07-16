@@ -11,13 +11,13 @@ candidate, mocks, tests, deterministic distributions, and sanitized evidence.
 
 - `stage_0_repository_preparation = passed`
 - `stage_1_no_write_runtime = passed`
-- `stage_2_batch_context = not_run`
+- `stage_2_batch_context = not_available_in_preview_runtime`
 - `stage_3_scalar_patch = not_run`
 - `stage_4_range_patch = not_run`
 - `stage_5_two_block_patch = not_run`
 - `stage_6_failure_behavior = not_run`
 - `stage_7_terpenes_fixture_probe = not_run`
-- `qbench_sandbox_probe_status = stage_1_passed_stage_2a_not_authorized`
+- `qbench_sandbox_probe_status = stage_2a_completed_batch_context_not_available_stage_2b_not_authorized`
 - `qbench_native_status = blocked`
 
 Stage 1 created the single controlled Sandbox-only parser configuration and an
@@ -25,7 +25,7 @@ inactive/DRAFT version under explicit authorization. The first Preview used
 one controlled fixture and failed safely with `UNEXPECTED_PARSE_ERROR`. It
 invoked no worksheet service and modified no worksheet or File Parser Results
 destination. No trigger or assay was added, nothing was activated, no
-worksheet was imported, and Stage 2A and Prompt 5 were not started.
+worksheet was imported, and Prompt 5 was not started.
 
 The corrected retry accepts Array and FileList-like `QB.files` collections,
 uses stable controlled validation codes, and emits sanitized step diagnostics.
@@ -33,6 +33,16 @@ The live retry observed `array_like`, completed the exact 24/34/23/1 counts,
 reported Web Crypto available, reached `QB.success()`, and passed. The specific
 collection constructor was not logged. The parser remained inactive/DRAFT
 with Trigger and Assay unset.
+
+Stage 2A used a separately saved inactive/DRAFT version containing only the
+tracked read-only Batch-context probe. The existing console contained two
+identical completed output groups after an accidental Preview execution. Both
+showed the five controlled candidate Batch-context properties absent with
+value type `undefined`. The controlled fixture indicator showed one selected
+file. Codex did not rerun Preview. No worksheet service or destination write
+occurred, and the parser remained inactive/DRAFT with Trigger and Assay unset.
+The observed outcome is `not_available_in_preview_runtime`; no safe Batch ID
+property path was established.
 
 ## Package contents
 
@@ -46,7 +56,7 @@ with Trigger and Assay unset.
   Python package tests, the controlled fixture copy, and expected payloads.
 - `dist/` contains generated Stage 0 artifacts. It intentionally does not
   contain a Terpenes Sandbox writer.
-- `docs/` contains the stage plan, Stage 0 evidence, safety review, cleanup
+- `docs/` contains the stage plan, staged evidence, safety review, cleanup
   plan, and future Sandbox checklists.
 
 ## Controlled dependency gate
@@ -83,16 +93,17 @@ with those two dependencies normalized to the canonical-LF hashes recorded by
 the Prompt 4.5 manifest; the controlled Prompt 4 candidate hash remained the
 required `e5c80b...9758e` throughout. No Prompt 4 file was edited.
 
-## Stage 1 correction validation
+## Stage 1 and Stage 2A evidence validation
 
 - Prompt 4.6 JavaScript tests: 44 passed.
-- Prompt 4.6 Python/static tests: 16 passed.
-- Prompt 4.6 total: 60 passed.
+- Prompt 4.6 Python/static tests: 17 passed.
+- Prompt 4.6 total: 61 passed.
 - Distribution and manifest generation: deterministic across repeated runs.
 
-These local checks support the live corrected Preview evidence recorded in
-`docs/qbench_runtime_probe_results.md`. Stage 1 is passed; they do not imply
-any Stage 2A or later-stage result.
+These local checks support the live sanitized Preview evidence recorded in
+`docs/qbench_runtime_probe_results.md`. Stage 1 passed and Stage 2A completed
+with Batch context unavailable in draft Preview runtime. They do not imply any
+Stage 2B or later-stage result.
 
 Run from this directory with Node.js and Python 3:
 
@@ -110,7 +121,8 @@ byte-identical output.
 
 ## Next action
 
-Stage 2A has not started. It may begin only after the method owner supplies the
-exact phrase:
+Stage 2B has not started. Because Stage 2A did not establish Batch context, the
+optional temporary attachment-trigger probe may begin only after the method
+owner supplies the exact phrase with an exact disposable Sandbox Batch name:
 
-`AUTHORIZE STAGE 2A — READ-ONLY BATCH-CONTEXT PREVIEW`
+`AUTHORIZE STAGE 2B — TEMPORARY SANDBOX ATTACHMENT TRIGGER — BATCH: <EXACT DISPOSABLE SANDBOX BATCH NAME>`

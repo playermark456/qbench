@@ -82,7 +82,51 @@ Correction validation: 44 Prompt 4.6 JavaScript tests and 16 Prompt 4.6
 Python/static tests passed. The generated distribution and manifest were
 byte-identical across repeated builds. Stage 1 is `passed`.
 
+## Stage 2A — existing Preview output
+
+- Authorization:
+  `AUTHORIZE STAGE 2A — READ-ONLY BATCH-CONTEXT PREVIEW`.
+- Evidence reference:
+  `stage_2a_existing_preview_sanitized_console_2026-07-15`.
+- Controlled parser version: `2 - Stage 2A Read-Only Batch-Context Preview`.
+- Parser state: inactive; version status `DRAFT`.
+- Existing output inspection only: yes. Codex did not rerun Preview.
+- Existing completed output groups: 2, with identical sanitized results.
+- Controlled fixture selection indicator: 1 selected file.
+- Full `QB` object serialized: no.
+- Runtime-property values printed: no.
+- Candidate-path observations:
+  - `QB.batch`: absent; type `undefined`.
+  - `QB.currentBatch`: absent; type `undefined`.
+  - `QB.context`: absent; type `undefined`.
+  - `QB.fileParserContext`: absent; type `undefined`.
+  - `QB.attachment`: absent; type `undefined`.
+- `batch_context_status = not_available_in_preview_runtime`.
+- Safe Batch-context property path: none established.
+- Batch-context value type: none established.
+- Documentation status: observed absence in draft Preview runtime; not an
+  official documented context contract.
+- Worksheet service invoked: no.
+- Worksheet, Batch, attachment, or File Parser Results destination modified:
+  no.
+- Trigger, assay, and filename rule after Preview: unset.
+- Parser activated: no.
+
+The selected-file metadata lines were not emitted because the Stage 2A helper
+only maps `QB.files` when it is a true Array, while Stage 1 established that
+this tenant supplies an array-like collection. The visible selected-file
+indicator proves the controlled fixture was selected. This metadata limitation
+does not make the Batch-context result incomplete because all controlled
+candidate-property presence/type checks completed identically in both existing
+output groups. No retry was run or is needed for Stage 2A.
+
+Stage 2A changed only the controlled parser configuration by adding a second
+inactive/DRAFT version. No Stage 2B action, temporary trigger, activation,
+attachment upload, worksheet import, service call, or runtime-data write was
+performed.
+
 ## Later stages
 
-Stages 2A through 7 are `not_run`. Stage 2A has not started and requires its
-own exact authorization phrase. No later-stage result is implied by Stage 1.
+Stages 2B through 7 are `not_run`. Stage 2B requires its own exact
+authorization including an exact disposable Sandbox Batch name. No later-stage
+result is implied by Stage 2A.

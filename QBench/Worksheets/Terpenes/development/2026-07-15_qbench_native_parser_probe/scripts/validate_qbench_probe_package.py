@@ -63,6 +63,10 @@ def validate_dependencies() -> None:
         fail("Merged Sandbox-probe readiness status is missing.")
     if contract["allowed_batch_write_api"] != "QBBatchService.patchWorksheet":
         fail("Only the documented patch method may be investigated.")
+    if contract["batch_context_status"] != "not_available_in_preview_runtime":
+        fail("Stage 2A Batch-context status is missing from the runtime contract.")
+    if contract["batch_context_path"] is not None:
+        fail("Stage 2A must not invent a Batch-context path.")
     if contract["current_tenant_imports"]["qbjs_js"]["url"] is not None:
         fail("An unproven QBJS import URL must not be recorded.")
     for path, expected in EXPECTED_HASHES.items():
@@ -208,11 +212,17 @@ def validate_manifest() -> int:
         fail("Stage 0 manifest status must be passed.")
     if manifest["stage_statuses"]["stage_1_no_write_runtime"] != "passed":
         fail("Stage 1 corrected no-write Preview must be recorded as passed.")
-    if manifest["qbench_sandbox_probe_status"] != "stage_1_passed_stage_2a_not_authorized":
-        fail("Stage 1 pass / Stage 2A authorization boundary is missing.")
+    if manifest["qbench_sandbox_probe_status"] != "stage_2a_completed_batch_context_not_available_stage_2b_not_authorized":
+        fail("Stage 2A completion / Stage 2B authorization boundary is missing.")
+    if manifest["stage_statuses"]["stage_2_batch_context"] != "not_available_in_preview_runtime":
+        fail("Stage 2A Batch-context result is missing.")
     for stage, status in manifest["stage_statuses"].items():
-        if stage not in {"stage_0_repository_preparation", "stage_1_no_write_runtime"} and status != "not_run":
-            fail("Stages after Stage 1 must remain not_run.")
+        if stage not in {
+            "stage_0_repository_preparation",
+            "stage_1_no_write_runtime",
+            "stage_2_batch_context",
+        } and status != "not_run":
+            fail("Stages after Stage 2A must remain not_run.")
     attempt = manifest["stage_1_initial_attempt"]
     if attempt["result"] != "failed_safely_runtime_file_collection_compatibility":
         fail("Stage 1 initial failed-safe result is missing.")
@@ -238,6 +248,37 @@ def validate_manifest() -> int:
         fail("Stage 1 parser must remain without a trigger or assay.")
     if retry["runtime_data_modified"] is not False or retry["worksheet_service_invoked"] is not False:
         fail("Stage 1 retry must record no runtime data modification or worksheet service invocation.")
+    stage_2a = manifest["stage_2a_result"]
+    if stage_2a["result"] != "completed" or stage_2a["batch_context_status"] != "not_available_in_preview_runtime":
+        fail("Stage 2A completion or Batch-context status is missing.")
+    expected_paths = {
+        "QB.attachment",
+        "QB.batch",
+        "QB.context",
+        "QB.currentBatch",
+        "QB.fileParserContext",
+    }
+    if set(stage_2a["candidate_paths"]) != expected_paths:
+        fail("Stage 2A candidate-path evidence is incomplete.")
+    if any(
+        item != {"present": False, "value_type": "undefined"}
+        for item in stage_2a["candidate_paths"].values()
+    ):
+        fail("Stage 2A must record every candidate path as absent/undefined.")
+    if stage_2a["safe_property_path"] is not None or stage_2a["value_type"] is not None:
+        fail("Stage 2A must not invent a Batch-context path or type.")
+    if stage_2a["preview_output_group_count_observed"] != 2 or stage_2a["preview_rerun_by_codex"] is not False:
+        fail("Stage 2A existing-output inspection evidence is missing.")
+    if stage_2a["controlled_fixture_file_count_indicator"] != 1:
+        fail("Stage 2A controlled fixture selection evidence is missing.")
+    if stage_2a["full_qb_object_serialized"] is not False or stage_2a["security_or_session_value_dereferenced"] is not False:
+        fail("Stage 2A must record the safe inspection boundary.")
+    if stage_2a["parser_active"] is not False or stage_2a["parser_version_status"] != "DRAFT":
+        fail("Stage 2A parser must remain inactive/DRAFT.")
+    if stage_2a["trigger_set"] is not False or stage_2a["assay_set"] is not False:
+        fail("Stage 2A parser must remain without a trigger or assay.")
+    if stage_2a["runtime_data_modified"] is not False or stage_2a["worksheet_service_invoked"] is not False:
+        fail("Stage 2A must record no runtime data modification or worksheet service invocation.")
     scope = manifest["scope_controls"]
     if scope["qbench_configuration_draft_modified"] is not True or scope["qbench_modified"] is not True:
         fail("The authorized inactive parser draft change must be recorded accurately.")
@@ -271,6 +312,8 @@ def validate_package() -> dict[str, Any]:
         "qbench_runtime_data_modified": False,
         "stage_1_authorized": True,
         "stage_1_status": "passed",
+        "stage_2a_authorized": True,
+        "stage_2a_status": "not_available_in_preview_runtime",
     }
 
 

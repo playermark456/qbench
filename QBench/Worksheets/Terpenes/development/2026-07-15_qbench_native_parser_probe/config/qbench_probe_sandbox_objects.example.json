@@ -1,8 +1,8 @@
 {
   "batch_context": {
-    "documented_or_observed": "not_tested",
+    "documented_or_observed": "observed_absent",
     "safe_property_path": null,
-    "status": "not_tested",
+    "status": "not_available_in_preview_runtime",
     "value_type": null
   },
   "disposable_batch": {
@@ -14,7 +14,7 @@
     "active": false,
     "internal_id_committed": false,
     "name": "ZZZ_SANDBOX_ONLY_Terpenes_Runtime_NoWrite_Probe",
-    "status": "not_created"
+    "status": "inactive_with_two_draft_versions"
   },
   "schema_version": 1,
   "worksheet": {

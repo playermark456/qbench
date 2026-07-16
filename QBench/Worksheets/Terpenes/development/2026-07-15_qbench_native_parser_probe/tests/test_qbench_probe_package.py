@@ -42,6 +42,7 @@ class QBenchProbePackageTests(unittest.TestCase):
         self.assertTrue(summary["qbench_modified"])
         self.assertFalse(summary["qbench_runtime_data_modified"])
         self.assertEqual(summary["stage_1_status"], "passed")
+        self.assertEqual(summary["stage_2a_status"], "not_available_in_preview_runtime")
 
     def test_worksheet_generator_is_byte_identical(self) -> None:
         output = PACKAGE_DIR / "dist/qbench_runtime_probe_batch_ws_candidate.json"
@@ -89,15 +90,23 @@ class QBenchProbePackageTests(unittest.TestCase):
     def test_stage_7_distribution_is_absent(self) -> None:
         self.assertFalse((PACKAGE_DIR / "dist/terpenes_qbench_file_parser_sandbox_probe_v1.js").exists())
 
-    def test_manifest_marks_stage_1_passed_and_later_stages_not_run(self) -> None:
+    def test_manifest_marks_stage_1_passed_stage_2a_completed_and_later_stages_not_run(self) -> None:
         manifest = json.loads((PACKAGE_DIR / "dist/qbench_probe_manifest.json").read_text(encoding="utf-8"))
         self.assertEqual(manifest["stage_statuses"]["stage_0_repository_preparation"], "passed")
         self.assertEqual(manifest["stage_statuses"]["stage_1_no_write_runtime"], "passed")
-        self.assertEqual(manifest["qbench_sandbox_probe_status"], "stage_1_passed_stage_2a_not_authorized")
+        self.assertEqual(manifest["stage_statuses"]["stage_2_batch_context"], "not_available_in_preview_runtime")
+        self.assertEqual(
+            manifest["qbench_sandbox_probe_status"],
+            "stage_2a_completed_batch_context_not_available_stage_2b_not_authorized",
+        )
         self.assertTrue(all(
             status == "not_run"
             for stage, status in manifest["stage_statuses"].items()
-            if stage not in {"stage_0_repository_preparation", "stage_1_no_write_runtime"}
+            if stage not in {
+                "stage_0_repository_preparation",
+                "stage_1_no_write_runtime",
+                "stage_2_batch_context",
+            }
         ))
 
     def test_manifest_records_only_the_authorized_qbench_draft_change(self) -> None:
@@ -151,10 +160,36 @@ class QBenchProbePackageTests(unittest.TestCase):
             self.assertIn(token, source)
         self.assertNotIn("Array.from", source)
 
+    def test_manifest_records_stage_2a_observed_absence_and_no_write(self) -> None:
+        manifest = json.loads((PACKAGE_DIR / "dist/qbench_probe_manifest.json").read_text(encoding="utf-8"))
+        result = manifest["stage_2a_result"]
+        self.assertEqual(result["result"], "completed")
+        self.assertEqual(result["batch_context_status"], "not_available_in_preview_runtime")
+        self.assertEqual(result["documented_or_observed"], "observed_absent")
+        self.assertIsNone(result["safe_property_path"])
+        self.assertIsNone(result["value_type"])
+        self.assertEqual(result["preview_output_group_count_observed"], 2)
+        self.assertFalse(result["preview_rerun_by_codex"])
+        self.assertEqual(result["controlled_fixture_file_count_indicator"], 1)
+        self.assertTrue(all(
+            item == {"present": False, "value_type": "undefined"}
+            for item in result["candidate_paths"].values()
+        ))
+        self.assertFalse(result["full_qb_object_serialized"])
+        self.assertFalse(result["security_or_session_value_dereferenced"])
+        self.assertFalse(result["runtime_data_modified"])
+        self.assertFalse(result["worksheet_service_invoked"])
+        self.assertFalse(result["parser_active"])
+        self.assertEqual(result["parser_version_status"], "DRAFT")
+        self.assertFalse(result["trigger_set"])
+        self.assertFalse(result["assay_set"])
+
     def test_exact_file_parser_url_is_recorded_without_guessing_qbjs_url(self) -> None:
         contract = json.loads((PACKAGE_DIR / "config/qbench_probe_contract.json").read_text(encoding="utf-8"))
         self.assertEqual(contract["current_tenant_imports"]["file_parser_js"]["url"], distribution_builder.FILE_PARSER_IMPORT_URL)
         self.assertIsNone(contract["current_tenant_imports"]["qbjs_js"]["url"])
+        self.assertEqual(contract["batch_context_status"], "not_available_in_preview_runtime")
+        self.assertIsNone(contract["batch_context_path"])
 
     def test_expected_payload_fixtures_are_valid_json(self) -> None:
         for path in sorted((PACKAGE_DIR / "tests/fixtures").glob("expected_*.json")):
