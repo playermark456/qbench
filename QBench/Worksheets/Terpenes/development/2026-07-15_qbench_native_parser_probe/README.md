@@ -10,14 +10,14 @@ candidate, mocks, tests, deterministic distributions, and sanitized evidence.
 ## Current status
 
 - `stage_0_repository_preparation = passed`
-- `stage_1_no_write_runtime = incomplete_retry_pending`
+- `stage_1_no_write_runtime = passed`
 - `stage_2_batch_context = not_run`
 - `stage_3_scalar_patch = not_run`
 - `stage_4_range_patch = not_run`
 - `stage_5_two_block_patch = not_run`
 - `stage_6_failure_behavior = not_run`
 - `stage_7_terpenes_fixture_probe = not_run`
-- `qbench_sandbox_probe_status = stage_1_retry_pending`
+- `qbench_sandbox_probe_status = stage_1_passed_stage_2a_not_authorized`
 - `qbench_native_status = blocked`
 
 Stage 1 created the single controlled Sandbox-only parser configuration and an
@@ -29,7 +29,10 @@ worksheet was imported, and Stage 2A and Prompt 5 were not started.
 
 The corrected retry accepts Array and FileList-like `QB.files` collections,
 uses stable controlled validation codes, and emits sanitized step diagnostics.
-The exact FileList cause remains a hypothesis until the retry runs.
+The live retry observed `array_like`, completed the exact 24/34/23/1 counts,
+reported Web Crypto available, reached `QB.success()`, and passed. The specific
+collection constructor was not logged. The parser remained inactive/DRAFT
+with Trigger and Assay unset.
 
 ## Package contents
 
@@ -87,9 +90,9 @@ required `e5c80b...9758e` throughout. No Prompt 4 file was edited.
 - Prompt 4.6 total: 60 passed.
 - Distribution and manifest generation: deterministic across repeated runs.
 
-These are local correction tests only. They do not mark Stage 1 passed. The
-corrected inactive/DRAFT parser must be retried with
-`Output_redacted_fixture.txt` before Stage 1 can be resolved.
+These local checks support the live corrected Preview evidence recorded in
+`docs/qbench_runtime_probe_results.md`. Stage 1 is passed; they do not imply
+any Stage 2A or later-stage result.
 
 Run from this directory with Node.js and Python 3:
 
@@ -107,5 +110,7 @@ byte-identical output.
 
 ## Next action
 
-Continue only under the existing Stage 1 authorization. Select the controlled
-fixture for the corrected no-write Preview. Do not begin Stage 2A.
+Stage 2A has not started. It may begin only after the method owner supplies the
+exact phrase:
+
+`AUTHORIZE STAGE 2A — READ-ONLY BATCH-CONTEXT PREVIEW`

@@ -31,14 +31,31 @@
 - Stage result:
   `failed_safely_runtime_file_collection_compatibility`.
 
-The exact cause is not proven. A QBench `FileList` or other array-like
-`QB.files` collection is the leading compatibility hypothesis because the
-initial code required `Array.isArray(QB.files)`. The first attempt did not
-produce enough diagnostics to distinguish that hypothesis from another
-unexpected runtime exception. Stage 1 is incomplete and must not be recorded
-as passed.
+The initial attempt did not produce enough diagnostics to distinguish the
+file-collection hypothesis from another unexpected runtime exception. The
+corrected retry later observed `file collection kind = array_like` and passed,
+confirming the Array-only compatibility problem. The specific browser
+collection constructor was intentionally not logged.
 
-## Stage 1 — corrected retry preparation
+## Stage 1 — corrected retry result
+
+- Evidence reference: `stage_1_corrected_preview_sanitized_console_2026-07-15`.
+- File collection kind: `array_like`.
+- File count: 1.
+- Accepted extension: `.txt`.
+- Compound Results rows: 24.
+- Peak Table rows: 34.
+- Reportable channels: 23.
+- Dimethylacetamide audit rows: 1.
+- Web Crypto available: `true`.
+- `QB.success()` reached: yes; it immediately follows the final sanitized log
+  in the controlled execution path.
+- Controlled error or failed-step output on retry: none.
+- Worksheet service invoked: no.
+- Worksheet or File Parser Results destination modified: no.
+- Parser state after Preview: inactive; version `DRAFT`.
+- Trigger and assay after Preview: unset.
+- Stage result: `passed`.
 
 The corrected no-write draft accepts either a JavaScript Array or a finite,
 nonnegative-integer-length array-like collection. It requires exactly one
@@ -62,10 +79,10 @@ It does not log raw text, analyte values, sample information, paths, IDs,
 runtime objects, cookies, or credentials.
 
 Correction validation: 44 Prompt 4.6 JavaScript tests and 16 Prompt 4.6
-Python/static tests are expected after the final deterministic build. The
-live retry has not run yet. Stage 1 remains `incomplete_retry_pending`.
+Python/static tests passed. The generated distribution and manifest were
+byte-identical across repeated builds. Stage 1 is `passed`.
 
 ## Later stages
 
-Stages 2A through 7 are `not_run`. Stage 2A has not started. No live result is
-implied by local mocks or tests.
+Stages 2A through 7 are `not_run`. Stage 2A has not started and requires its
+own exact authorization phrase. No later-stage result is implied by Stage 1.

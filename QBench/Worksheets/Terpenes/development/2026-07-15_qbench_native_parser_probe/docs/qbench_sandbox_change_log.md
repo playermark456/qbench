@@ -3,7 +3,7 @@
 | Stage | Authorization | QBench objects changed | Result |
 |---|---|---|---|
 | 0 | Initial Prompt 4.6 submission | None | Repository preparation only |
-| 1 | `AUTHORIZE STAGE 1 — NO-WRITE QBENCH RUNTIME PREVIEW` | One controlled File Parser configuration exists; parser inactive, version `DRAFT`; corrected draft pending upload | Initial Preview failed safely with `UNEXPECTED_PARSE_ERROR`; one controlled file was selected; no worksheet service or destination write; retry pending |
+| 1 | `AUTHORIZE STAGE 1 — NO-WRITE QBENCH RUNTIME PREVIEW` | One controlled File Parser configuration exists; parser inactive, version `DRAFT` | Initial Preview failed safely with `UNEXPECTED_PARSE_ERROR`; corrected Preview observed `array_like`, completed 24/34/23/1 counts, reached `QB.success()`, and passed; no worksheet service or destination write |
 | 2A | Not received | None | Not run |
 | 2B | Not received | None | Not run |
 | 3 | Not received | None | Not run |
@@ -19,6 +19,7 @@ File Parser Results destination, automation, key/value-store value, or
 production object.
 
 The initial failure is recorded as
-`failed_safely_runtime_file_collection_compatibility`. The precise FileList
-cause remains a hypothesis until the corrected sanitized diagnostics run.
-No cleanup action is authorized in Stage 1.
+`failed_safely_runtime_file_collection_compatibility`. The corrected
+sanitized diagnostics confirmed an `array_like` runtime collection and the
+corrected Preview passed. The specific collection constructor was not logged.
+No cleanup action was authorized or performed in Stage 1.

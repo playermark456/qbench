@@ -29,14 +29,15 @@ entered the runtime, but returned `UNEXPECTED_PARSE_ERROR`. No worksheet
 service or destination write occurred, and the controlled parser remained
 inactive/DRAFT with no trigger or assay.
 
-The initial probe assumed `Array.isArray(QB.files)`. QBench may instead expose
-a browser `FileList` or another array-like collection, but that cause is not
-yet proven. The corrected retry treats `QB.files` as a narrow runtime boundary:
-it accepts Arrays and finite, nonnegative-integer-length array-like objects,
-requires exactly one entry, retrieves index `0` or `item(0)`, and emits only a
-sanitized collection kind plus stable controlled errors. The retry will
-determine whether collection compatibility caused the first failure without
-logging the runtime collection itself.
+The initial probe assumed `Array.isArray(QB.files)`. The corrected retry
+observed `file collection kind = array_like`, accepted the one controlled file,
+completed the controlled parse, reported the exact 24/34/23/1 counts, reported
+Web Crypto available, and reached `QB.success()`. This confirms the Array-only
+runtime compatibility problem. The specific browser collection constructor
+was intentionally not logged. The proven Stage 1 boundary now accepts Arrays
+and finite, nonnegative-integer-length array-like objects, requires exactly one
+entry, retrieves index `0` or `item(0)`, and emits only a sanitized collection
+kind plus stable controlled errors.
 
-Stage 1 remains incomplete. Stage 2A has not started, and Batch context remains
-unobserved.
+Stage 1 passed. Stage 2A has not started and remains separately authorized;
+Batch context remains unobserved.

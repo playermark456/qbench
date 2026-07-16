@@ -41,6 +41,10 @@ The controlled fixture copy is redacted and hash-locked. No customer or
 production information is included. No production parser candidate exists.
 
 The initial Stage 1 Preview failed safely before a successful parse result was
-reported. It invoked no worksheet service and modified no worksheet or parser
-result destination. The parser remained inactive/DRAFT. The FileList cause is
-not treated as proven until the corrected retry diagnostics run.
+reported. The corrected retry observed only the sanitized collection kind
+`array_like`, completed all controlled parse/count checks, reported Web Crypto
+available, and reached `QB.success()`. This confirms the Array-only runtime
+compatibility problem without logging or claiming a specific collection
+constructor. Neither attempt invoked a worksheet service or modified a
+worksheet or parser-result destination. The parser remained inactive/DRAFT
+with no trigger or assay.

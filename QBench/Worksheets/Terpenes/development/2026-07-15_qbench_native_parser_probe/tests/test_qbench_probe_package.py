@@ -41,7 +41,7 @@ class QBenchProbePackageTests(unittest.TestCase):
         self.assertTrue(summary["qbench_configuration_draft_modified"])
         self.assertTrue(summary["qbench_modified"])
         self.assertFalse(summary["qbench_runtime_data_modified"])
-        self.assertEqual(summary["stage_1_status"], "incomplete_retry_pending")
+        self.assertEqual(summary["stage_1_status"], "passed")
 
     def test_worksheet_generator_is_byte_identical(self) -> None:
         output = PACKAGE_DIR / "dist/qbench_runtime_probe_batch_ws_candidate.json"
@@ -89,10 +89,11 @@ class QBenchProbePackageTests(unittest.TestCase):
     def test_stage_7_distribution_is_absent(self) -> None:
         self.assertFalse((PACKAGE_DIR / "dist/terpenes_qbench_file_parser_sandbox_probe_v1.js").exists())
 
-    def test_manifest_marks_stage_1_incomplete_and_later_stages_not_run(self) -> None:
+    def test_manifest_marks_stage_1_passed_and_later_stages_not_run(self) -> None:
         manifest = json.loads((PACKAGE_DIR / "dist/qbench_probe_manifest.json").read_text(encoding="utf-8"))
         self.assertEqual(manifest["stage_statuses"]["stage_0_repository_preparation"], "passed")
-        self.assertEqual(manifest["stage_statuses"]["stage_1_no_write_runtime"], "incomplete_retry_pending")
+        self.assertEqual(manifest["stage_statuses"]["stage_1_no_write_runtime"], "passed")
+        self.assertEqual(manifest["qbench_sandbox_probe_status"], "stage_1_passed_stage_2a_not_authorized")
         self.assertTrue(all(
             status == "not_run"
             for stage, status in manifest["stage_statuses"].items()
@@ -107,15 +108,32 @@ class QBenchProbePackageTests(unittest.TestCase):
         self.assertFalse(manifest["scope_controls"]["production_modified"])
         self.assertFalse(manifest["scope_controls"]["prompt_5_started"])
 
-    def test_manifest_records_initial_stage_1_attempt_as_failed_safely(self) -> None:
+    def test_manifest_records_initial_failure_and_corrected_stage_1_pass(self) -> None:
         manifest = json.loads((PACKAGE_DIR / "dist/qbench_probe_manifest.json").read_text(encoding="utf-8"))
         attempt = manifest["stage_1_initial_attempt"]
         self.assertEqual(attempt["result"], "failed_safely_runtime_file_collection_compatibility")
         self.assertEqual(attempt["observed_controlled_error"], "UNEXPECTED_PARSE_ERROR")
         self.assertEqual(attempt["controlled_fixture_file_count"], 1)
-        self.assertEqual(attempt["cause_status"], "file_collection_compatibility_hypothesis_not_proven")
+        self.assertEqual(attempt["cause_status"], "array_like_collection_confirmed_specific_constructor_not_logged")
         self.assertFalse(attempt["runtime_data_modified"])
         self.assertFalse(attempt["worksheet_service_invoked"])
+        retry = manifest["stage_1_retry_result"]
+        self.assertEqual(retry["result"], "passed")
+        self.assertEqual(retry["file_collection_kind"], "array_like")
+        self.assertEqual([
+            retry["compound_result_row_count"],
+            retry["peak_table_row_count"],
+            retry["reportable_channel_count"],
+            retry["dimethylacetamide_audit_row_count"],
+        ], [24, 34, 23, 1])
+        self.assertTrue(retry["qb_success_reached"])
+        self.assertTrue(retry["web_crypto_available"])
+        self.assertFalse(retry["runtime_data_modified"])
+        self.assertFalse(retry["worksheet_service_invoked"])
+        self.assertFalse(retry["parser_active"])
+        self.assertEqual(retry["parser_version_status"], "DRAFT")
+        self.assertFalse(retry["trigger_set"])
+        self.assertFalse(retry["assay_set"])
 
     def test_stage_1_source_has_array_like_normalization_and_stable_codes(self) -> None:
         source = (PACKAGE_DIR / "src/qbench_runtime_no_write_probe.js").read_text(encoding="utf-8")

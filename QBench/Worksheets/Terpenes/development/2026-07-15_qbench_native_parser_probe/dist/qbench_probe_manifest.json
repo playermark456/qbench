@@ -58,19 +58,19 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_probe_security_review.md",
-      "sha256": "2255e5271babcf3dc1310aae5d50fc5c2fbd001b981152d95af148e22a50bf17"
+      "sha256": "be75483d683d6e4af835099c08f8bfdc072983362821475d2b4510f4d2e625c8"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_runtime_contract_updates.md",
-      "sha256": "1b3fdbde80e6a9d18dd52026d056ed021993342ba05b2fd5361d7074273b5de3"
+      "sha256": "90eb174c59cad3db5db1a5882632bdb7dc9650d8c00b7cce1af1500183bc72a0"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_runtime_probe_results.md",
-      "sha256": "ff8152af6e7ae1f40760b32d4944f96fc505cf1f65b062d407c4b105a78c7f21"
+      "sha256": "10023d49566682d9bcf6c9cafc030112a1b8fbb08799cd87ba46e0dab37e6fa8"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_sandbox_change_log.md",
-      "sha256": "f5cd2a7c92b2cc283d679f0f79700d08e90ba1f577b79c4a85daf1c698153f04"
+      "sha256": "c893a9236ca66eb20bda003e56004797f9ae9b194424d49a4d2cce2626ce9802"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/terpenes_fixture_probe_results.md",
@@ -78,7 +78,7 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/README.md",
-      "sha256": "c20fa14a0d769086fba4ccfce28620d3b8e53937e5841e8b6e4ebd817647c7d0"
+      "sha256": "5b25d824b33f854306ef503e912e2a4498dee6b1189e0c271985c0f75890b420"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/scripts/build_probe_worksheet_candidate.py",
@@ -86,11 +86,11 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/scripts/build_qbench_probe_distribution.py",
-      "sha256": "f3ee3496b5a1d12aaea7415670d1fd25c013e376e55f330507da57e0448f5596"
+      "sha256": "be0067df7b4461fc74c65c26c3c497f387a2b7c18dd56616333c310406e137a1"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/scripts/validate_qbench_probe_package.py",
-      "sha256": "d2ee4367197d1e25d28efc41594116236f6fcb704ff264b7b43acc661b4652c6"
+      "sha256": "e816925d80446a5570f6b369cf51b52b102c6634e88ec2d529154ca51c148f1c"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/src/qbench_batch_context_probe.js",
@@ -162,7 +162,7 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/tests/test_qbench_probe_package.py",
-      "sha256": "b09aed572ecd9b34f48ab9190d870ef0f200d30ccc1139e6b7e3e018ff5ad664"
+      "sha256": "ae16f96c58a53f5c697ad26a0da53faf602b8de00d4142e1adf84f165d2fed80"
     }
   ],
   "controlled_dependency_hashes": {
@@ -177,7 +177,7 @@
   "package": "2026-07-15_qbench_native_parser_probe",
   "prompt": "Prompt 4.6",
   "qbench_native_status": "blocked",
-  "qbench_sandbox_probe_status": "stage_1_retry_pending",
+  "qbench_sandbox_probe_status": "stage_1_passed_stage_2a_not_authorized",
   "schema_version": 1,
   "scope_controls": {
     "production_modified": false,
@@ -188,7 +188,7 @@
     "terpenes_result_outcome_artifact_introduced": false
   },
   "stage_1_initial_attempt": {
-    "cause_status": "file_collection_compatibility_hypothesis_not_proven",
+    "cause_status": "array_like_collection_confirmed_specific_constructor_not_logged",
     "controlled_fixture_file_count": 1,
     "observed_controlled_error": "UNEXPECTED_PARSE_ERROR",
     "parser_active": false,
@@ -198,9 +198,28 @@
     "transient_qbench_error_notification": true,
     "worksheet_service_invoked": false
   },
+  "stage_1_retry_result": {
+    "assay_set": false,
+    "compound_result_row_count": 24,
+    "controlled_fixture_file_count": 1,
+    "dimethylacetamide_audit_row_count": 1,
+    "evidence_reference": "stage_1_corrected_preview_sanitized_console_2026-07-15",
+    "file_collection_kind": "array_like",
+    "file_extension": ".txt",
+    "parser_active": false,
+    "parser_version_status": "DRAFT",
+    "peak_table_row_count": 34,
+    "qb_success_reached": true,
+    "reportable_channel_count": 23,
+    "result": "passed",
+    "runtime_data_modified": false,
+    "trigger_set": false,
+    "web_crypto_available": true,
+    "worksheet_service_invoked": false
+  },
   "stage_statuses": {
     "stage_0_repository_preparation": "passed",
-    "stage_1_no_write_runtime": "incomplete_retry_pending",
+    "stage_1_no_write_runtime": "passed",
     "stage_2_batch_context": "not_run",
     "stage_3_scalar_patch": "not_run",
     "stage_4_range_patch": "not_run",

@@ -206,18 +206,38 @@ def validate_manifest() -> int:
     manifest = read_json(MANIFEST_PATH)
     if manifest["stage_statuses"]["stage_0_repository_preparation"] != "passed":
         fail("Stage 0 manifest status must be passed.")
-    if manifest["stage_statuses"]["stage_1_no_write_runtime"] != "incomplete_retry_pending":
-        fail("Stage 1 must remain incomplete while the corrected retry is pending.")
+    if manifest["stage_statuses"]["stage_1_no_write_runtime"] != "passed":
+        fail("Stage 1 corrected no-write Preview must be recorded as passed.")
+    if manifest["qbench_sandbox_probe_status"] != "stage_1_passed_stage_2a_not_authorized":
+        fail("Stage 1 pass / Stage 2A authorization boundary is missing.")
     for stage, status in manifest["stage_statuses"].items():
         if stage not in {"stage_0_repository_preparation", "stage_1_no_write_runtime"} and status != "not_run":
             fail("Stages after Stage 1 must remain not_run.")
     attempt = manifest["stage_1_initial_attempt"]
     if attempt["result"] != "failed_safely_runtime_file_collection_compatibility":
         fail("Stage 1 initial failed-safe result is missing.")
-    if attempt["cause_status"] != "file_collection_compatibility_hypothesis_not_proven":
-        fail("The unproven FileList cause must remain labeled as a hypothesis.")
+    if attempt["cause_status"] != "array_like_collection_confirmed_specific_constructor_not_logged":
+        fail("The confirmed array-like contract must not claim a specific unlogged constructor.")
     if attempt["runtime_data_modified"] is not False or attempt["worksheet_service_invoked"] is not False:
         fail("Stage 1 must record no runtime data modification or worksheet service invocation.")
+    retry = manifest["stage_1_retry_result"]
+    if retry["result"] != "passed" or retry["file_collection_kind"] != "array_like":
+        fail("Corrected Stage 1 Preview result or array-like observation is missing.")
+    if [
+        retry["compound_result_row_count"],
+        retry["peak_table_row_count"],
+        retry["reportable_channel_count"],
+        retry["dimethylacetamide_audit_row_count"],
+    ] != [24, 34, 23, 1]:
+        fail("Corrected Stage 1 controlled counts do not match the runtime evidence.")
+    if retry["qb_success_reached"] is not True or retry["web_crypto_available"] is not True:
+        fail("Stage 1 QB.success or Web Crypto evidence is missing.")
+    if retry["parser_active"] is not False or retry["parser_version_status"] != "DRAFT":
+        fail("Stage 1 parser must remain inactive/DRAFT.")
+    if retry["trigger_set"] is not False or retry["assay_set"] is not False:
+        fail("Stage 1 parser must remain without a trigger or assay.")
+    if retry["runtime_data_modified"] is not False or retry["worksheet_service_invoked"] is not False:
+        fail("Stage 1 retry must record no runtime data modification or worksheet service invocation.")
     scope = manifest["scope_controls"]
     if scope["qbench_configuration_draft_modified"] is not True or scope["qbench_modified"] is not True:
         fail("The authorized inactive parser draft change must be recorded accurately.")
@@ -250,7 +270,7 @@ def validate_package() -> dict[str, Any]:
         "qbench_modified": True,
         "qbench_runtime_data_modified": False,
         "stage_1_authorized": True,
-        "stage_1_status": "incomplete_retry_pending",
+        "stage_1_status": "passed",
     }
 
 
