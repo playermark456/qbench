@@ -18,7 +18,10 @@ candidate, mocks, tests, deterministic distributions, and sanitized evidence.
 - `stage_6_failure_behavior = not_run`
 - `stage_7_terpenes_fixture_probe = not_run`
 - `qbench_sandbox_probe_status = stage_2b_completed_attachment_job_success_console_not_persisted_batch_context_unresolved`
-- `qbench_native_status = blocked`
+- `qbench_live_probe_status = closed_after_stage_2b`
+- `qbench_live_environment = read_only_reference_only`
+- `future_writable_environment = https://ait-sandbox.qbench.net/`
+- `qbench_native_status = closed_pending_prompt_4_6b`
 
 Stage 1 created the single controlled Sandbox-only parser configuration and an
 inactive/DRAFT version under explicit authorization. The first Preview used
@@ -56,7 +59,21 @@ QBench offered only irreversible version obsolescence rather than a
 non-destructive inactive state, so that action was canceled; the approved
 version remains marked active within the disabled parser. The controlled
 attachment remains as evidence. No worksheet service or worksheet/results
-destination write occurred, and Stage 3 was not started.
+destination write occurred, and the Stage 3 scalar patch was not run.
+
+On 2026-07-16, `https://ait.qbench.net/` was reclassified as the live QBench
+instance and frozen as read-only/reference-only for this work. Before the
+freeze, pre-patch preparation had created one inactive, unversioned, blank
+worksheet shell; no generated worksheet candidate was uploaded, no worksheet
+version was saved or attached, no Stage 3 Preview or worksheet service call
+ran, and no worksheet cell value was written. The shell and all earlier live
+evidence remain untouched for separate evidence review and cleanup.
+
+All future writable work moves to `https://ait-sandbox.qbench.net/`. Existing
+objects in that older Sandbox are not authoritative because they may not match
+live configuration. Repository-controlled worksheet candidates, parser code,
+mappings, and specifications remain the source of truth. The full transition
+record is in `docs/qbench_environment_transition_2026-07-16.md`.
 
 ## Package contents
 
@@ -136,8 +153,10 @@ byte-identical output.
 
 ## Next action
 
-Stage 2B is complete and Batch context remains unresolved. Stage 3 may begin
-only after the method owner makes the manual Sandbox Batch-ID decision and
-supplies the exact phrase:
+Prompt 4.6 live probing is closed after Stage 2B with
+`batch_context_status = unresolved_console_output_not_persisted`. Do not run
+Stage 3 or any later write stage against `https://ait.qbench.net/`.
 
-`AUTHORIZE STAGE 3 — DISPOSABLE SCALAR PATCH — BATCH: ZZZ_SANDBOX_ONLY_TERPENES_CONTEXT_PROBE_2026-07-16 — MANUAL SANDBOX BATCH ID: ALLOWED|NOT ALLOWED`
+The next task is Prompt 4.6B: Full QBench Sandbox implementation and
+validation at `https://ait-sandbox.qbench.net/`, under separate authorization.
+Do not begin Prompt 5.

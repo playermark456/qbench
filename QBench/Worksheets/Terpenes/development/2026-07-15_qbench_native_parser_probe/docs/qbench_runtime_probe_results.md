@@ -174,8 +174,32 @@ available status action would make the approved version obsolete and unusable.
 That action was canceled to preserve evidence. The stored exact-filename
 trigger is inert because the parser is inactive.
 
+## Environment transition — 2026-07-16
+
+- Live tenant: `https://ait.qbench.net/`.
+- Live policy: read-only/reference-only; no further QBench action permitted by
+  this task.
+- Future writable tenant: `https://ait-sandbox.qbench.net/`.
+- Sandbox authority: existing Sandbox objects are non-authoritative because
+  the Sandbox is older and may not match live configuration.
+- Implementation authority: GitHub-controlled worksheet candidates, parser
+  code, mappings, and specifications.
+- Prompt 4.6 live closure:
+  `batch_context_status = unresolved_console_output_not_persisted`.
+- Next task: Prompt 4.6B, Full QBench Sandbox implementation and validation.
+- Prompt 5: not started and not authorized.
+
+The Stage 3 scalar patch and all later write probes were not run against live.
+No generated worksheet candidate was imported, no worksheet version was saved
+or activated, no worksheet was attached to the disposable Batch, no Stage 3
+Preview was run, no worksheet service was invoked, and no cell value was
+written. Pre-patch preparation had created one inactive, unversioned, blank
+worksheet shell before the freeze. That inert shell and the earlier Stage 1
+through Stage 2B evidence remain unchanged for separate review and cleanup.
+No cleanup or deletion was attempted as part of this transition.
+
 ## Later stages
 
-Stages 3 through 7 are `not_run`. Stage 3 requires an explicit manual Sandbox
-Batch-ID decision in its exact authorization phrase. No later-stage result is
-implied by Stage 2B.
+Stages 3 through 7 are `not_run`. The historical live stage sequence is
+closed and must not resume against `https://ait.qbench.net/`. No later-stage
+result is implied by Stage 2B or by the blank preparation shell.

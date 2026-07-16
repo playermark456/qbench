@@ -11,6 +11,7 @@
 | 5 | Not received | None | Not run |
 | 6 | Not received | None | Not run |
 | 7 | Not received | None | Not run |
+| Environment freeze | 2026-07-16 live-environment policy change | One inactive, unversioned, blank worksheet shell had been created during pre-patch preparation; all live evidence retained unchanged | Live QBench frozen read-only/reference-only; no worksheet candidate import, saved version, Batch association, Preview, service call, cell write, cleanup, or deletion; Prompt 4.6 live probing closed after Stage 2B |
 
 Stage 1 changed only the explicitly authorized inactive/DRAFT parser
 configuration. It added no trigger or assay, activated nothing, imported no
@@ -46,5 +47,12 @@ the disabled parser. The stored trigger is inert while the parser is inactive.
 No worksheet was imported, no assay or automation was changed, no worksheet
 service was invoked, no worksheet or File Parser Results destination was
 modified, and production was neither accessed nor changed. Internal parser,
-Batch, attachment, and job identifiers are intentionally omitted. Stage 3 was
-not started.
+Batch, attachment, and job identifiers are intentionally omitted. The Stage 3
+scalar patch was not run.
+
+Before the 2026-07-16 freeze, one inactive, unversioned worksheet shell was
+created during pre-patch preparation. Its default blank configuration was not
+replaced or saved, and it was not attached to the Batch. The shell and all
+Stage 1 through Stage 2B evidence remain unchanged. Live QBench is now
+read-only/reference-only, and cleanup is deferred to a separate evidence-review
+task. Future writable work moves to `https://ait-sandbox.qbench.net/`.

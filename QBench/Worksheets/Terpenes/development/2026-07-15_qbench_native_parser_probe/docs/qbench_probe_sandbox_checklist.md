@@ -2,7 +2,7 @@
 
 This checklist is for a future separately authorized stage only.
 
-1. Confirm the browser URL is exactly `https://ait.qbench.net`.
+1. Confirm the browser URL is exactly `https://ait-sandbox.qbench.net/`.
 2. Confirm the exact authorization phrase and any required Batch name or
    manual-ID decision are present.
 3. Confirm the named Batch is disposable and Sandbox-only.
@@ -15,6 +15,12 @@ This checklist is for a future separately authorized stage only.
 9. Record every QBench object changed and stop after the single stage.
 10. Update the same Draft PR with sanitized evidence.
 11. Do not delete evidence until the method owner approves cleanup.
+
+Never use this checklist against `https://ait.qbench.net/`; that is the live
+tenant and is read-only/reference-only for this work. Treat all pre-existing
+objects in the older Sandbox as non-authoritative until checked against the
+GitHub-controlled worksheet candidates, parser code, mappings, and
+specifications.
 
 For the future disposable worksheet release: import the JSON, attach it only to
 the authorized disposable Batch, confirm the required named cells, verify

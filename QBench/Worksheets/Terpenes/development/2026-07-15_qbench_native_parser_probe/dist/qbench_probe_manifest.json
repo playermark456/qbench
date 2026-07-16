@@ -50,7 +50,11 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/prompt_4_6_stage_plan.md",
-      "sha256": "924e231c28ae9ceca5593416574308468d13a05f3b7e93f2d4c0a7f0dce81749"
+      "sha256": "5ea4a37bab5af7df1f7d5f78f330aa9bd8b4b5e3c8c5e71bf83dd6d7cd87caab"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_environment_transition_2026-07-16.md",
+      "sha256": "38e331bcd37c8700787de5ed7d04609ef88c577ea46f8d3885db37d83751858c"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_probe_rollback_and_cleanup.md",
@@ -58,7 +62,7 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_probe_sandbox_checklist.md",
-      "sha256": "63245f68af955fd8e9f9f977279010a9c409c2cc1020c5b75fcfab2b55f690c3"
+      "sha256": "5b6e16b9683cd56e41732cdec6086f54f2bb55df33d533e4f75575ab36226d2b"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_probe_security_review.md",
@@ -70,11 +74,11 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_runtime_probe_results.md",
-      "sha256": "a62ff4ab3e56dd5771bfff5fe3c67a35b5ff081a1e15183ca57f59c3aea1a34d"
+      "sha256": "011d4335999c4b0d1ed83c1996a16012d44d95d222eef9377fd09c4ae31aed25"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/qbench_sandbox_change_log.md",
-      "sha256": "249630d722d45535df9ea299b6d8741748dc6b83cebc17a5b9e442096fc23147"
+      "sha256": "5f7ebd5c6b8bffeff8a539b653aa4aa09fb514444e87bb074ce33316e7503ae3"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/docs/terpenes_fixture_probe_results.md",
@@ -82,7 +86,7 @@
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/README.md",
-      "sha256": "e288979ee5ed7027ad6d5166e52f430f67325430d1baf8e6a99cd568e7f56435"
+      "sha256": "10a4f9117eb74ed2e6a8ef59aab977c574d8158661fcbf085cd8ae3c965912f7"
     },
     {
       "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/scripts/build_probe_worksheet_candidate.py",

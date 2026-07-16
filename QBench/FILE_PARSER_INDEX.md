@@ -2,6 +2,13 @@
 
 No parser-specific export/download control was visible during read-only inspection. Code/no-code details below are page-visible captures only.
 
+As of 2026-07-16, `https://ait.qbench.net/` is the live tenant and is
+read-only/reference-only for this work. The disabled Prompt 4.6 probe and its
+exact-filename trigger remain inert. Future writable work moves to
+`https://ait-sandbox.qbench.net/`, but existing objects in that older Sandbox
+are not authoritative; GitHub-controlled parser code and mappings remain the
+source of truth.
+
 | Parser name | ID | Assay | Parser type | Active | Expected file type | Key fields / visible internals | Output destination / notes |
 |---|---:|---|---|---|---|---|---|
 | ZZZ_SANDBOX_ONLY_Terpenes_Attachment_Context_Probe_2026-07-16 | Intentionally omitted | None | Code | False | Exact `Output_redacted_fixture.txt` | Stage 2B fixed-allowlist presence/type probe; approved version remains marked active inside the disabled parser; exact Batch-attachment filename trigger remains inert. | One authorized Sandbox attachment-trigger job recorded `SUCCESS`, but persistent history exposed no console payload; no worksheet service or worksheet/results destination write. |
