@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "package": "2026-07-16_no_code_parser_fallback",
+  "prompt": "Prompt 4.6C",
+  "status": "sandbox_validation_complete",
+  "source_pipeline": [
+    "Output_redacted_fixture.txt",
+    "Prompt 4.5 local LabSolutions parser",
+    "Prompt 4.5 typed wide-row adapter",
+    "SBX_ONLY_TERPENES_WIDE_IMPORT_01.txt",
+    "QBench No-Code File Parser",
+    "Batch Worksheet Instrument Import row"
+  ],
+  "source_fixture": {
+    "path": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/tests/fixtures/Output_redacted_fixture.txt",
+    "sha256": "ed796c690b972ca08f1976b1d8f7355d3e5140e73ffa912c441d6185a093283b"
+  },
+  "prompt_45_dependencies": {
+    "parser_core": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/src/labsolutions_ascii_core.js",
+    "wide_adapter": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/src/wide_import_adapter.js",
+    "context": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_parser_wide_adapter/config/sandbox_context_fixture.json"
+  },
+  "fixtures": {
+    "SBX_ONLY_TERPENES_WIDE_IMPORT_01.txt": {
+      "sha256": "7abbcc188ff35ba09908cdfefd917da28d5d194e6f4031f77aad7c0d06b108d2",
+      "rows": 2,
+      "logical_columns": 57,
+      "logical_range": "A:BE"
+    },
+    "SBX_ONLY_TERPENES_WIDE_IMPORT_01_A_AE.txt": {
+      "sha256": "8c4b49f4b046724f225572b519be38080aaf737e751b32ab4018d6ac69a38f58",
+      "rows": 2,
+      "logical_columns": 31,
+      "logical_range": "A:AE"
+    },
+    "SBX_ONLY_TERPENES_WIDE_IMPORT_01_AH_BE.txt": {
+      "sha256": "8f2c7b9b6fbf82788f8469ff2d0da3a84b0a7f1433d2b04f117f9bb256fb7cb2",
+      "rows": 2,
+      "logical_columns": 24,
+      "logical_range": "AH:BE"
+    }
+  },
+  "typed_row": {
+    "source_row_hash": "cef4d2a0c117ae168d6431c3e918668870546c6d165e36fc5f971515249f4546",
+    "compound_result_row_count": 24,
+    "peak_table_row_count": 34,
+    "reportable_compound_row_count": 23,
+    "analyte_numeric_count": 23,
+    "dimethylacetamide_numeric_audit_only": true,
+    "pass_fail_field_present": false
+  },
+  "finder_mapping": [
+    {
+      "source_range": "A2:AE2",
+      "target_range": "Instrument Import!A2:AE2"
+    },
+    {
+      "source_range": "AH2:BE2",
+      "target_range": "Instrument Import!AH2:BE2"
+    }
+  ],
+  "formula_owned_columns": {
+    "AF": "blank source placeholder; excluded from finder mappings",
+    "AG": "blank source placeholder; excluded from finder mappings"
+  },
+  "failure_fixtures": {
+    "failure_fixtures/non_numeric_analyte/SBX_ONLY_TERPENES_WIDE_IMPORT_01.txt": {
+      "sha256": "4c4b663c24988a11962734a86b173f8ff9f7cd4f7f9b6a304e342a71931389bb",
+      "mutation": "AH2 is the literal text NOT_NUMERIC",
+      "expected_formula_result": "AF2 Rejected; AG2 Analytical values incomplete"
+    },
+    "failure_fixtures/missing_peak_count/SBX_ONLY_TERPENES_WIDE_IMPORT_01.txt": {
+      "sha256": "f560cb3d4e5eaee01d6e0dd200dfb1928539dac652f5a0b749699ac9b0c54dfd",
+      "mutation": "Y2 is blank",
+      "expected_formula_result": "AF2 Rejected; AG2 Peak Table row count required"
+    }
+  },
+  "sandbox_validation": {
+    "canonical_parser_job": "SUCCESS",
+    "canonical_formula_result": "AF2 Valid; AG2 Import row valid",
+    "duplicate_parser_job": "SUCCESS",
+    "duplicate_attachment_behavior": "single attachment record advanced to version 2; row 2 remained canonical and row 3 remained blank",
+    "non_numeric_parser_job": "SUCCESS",
+    "non_numeric_formula_result": "AF2 Rejected; AG2 Analytical values incomplete",
+    "missing_peak_count_parser_job": "SUCCESS",
+    "missing_peak_count_formula_result": "AF2 Rejected; AG2 Peak Table row count required",
+    "publish_writes": 0,
+    "test_worksheet_writes": 0,
+    "pass_fail_artifact_created": false,
+    "navigate_away_reload_verified": true
+  },
+  "sandbox_exports": {
+    "SBX_ONLY_TERPENES_2026_07_16_No_Code_Batch_Import__sanitized_export_spreadsheet.json": {
+      "sha256": "7565cd991bd4c7fe180f842f32deb85e88f05078af5e245d6aa123f2c3b9c98f",
+      "internal_sandbox_ids_removed": true
+    },
+    "sanitized_no_code_parser_configuration.json": {
+      "sha256": "037bee2a67192f9757a906f60e143d0eb610bf16bbcfe044c36f39c973126951",
+      "internal_sandbox_ids_removed": true
+    }
+  },
+  "sandbox_internal_object_ids_committed": false,
+  "local_normalization_required": true,
+  "raw_labsolutions_parsed_directly_in_qbench": false,
+  "production_ready": false,
+  "prompt5_started": false
+}

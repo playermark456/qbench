@@ -1,0 +1,43 @@
+{
+  "name": "SBX_ONLY_TERPENES_2026_07_16_No_Code_Wide_Import",
+  "parser_type": "Standard / No Code",
+  "active": true,
+  "file_format": "Delimited",
+  "delimiter": "Tab Separated",
+  "data_target": "Populate Batch Worksheet",
+  "trigger": "When file is added to Batch attachments",
+  "assay_assignment": null,
+  "filename_match": {
+    "operator": "Should Equal",
+    "value": "SBX_ONLY_TERPENES_WIDE_IMPORT_01.txt"
+  },
+  "patch_worksheet_data": false,
+  "finders": [
+    {
+      "name": "SBX_ONLY_TERPENES_2026_07_16_A_AE",
+      "type": "By Cell Range",
+      "source_sheet": null,
+      "source_range": "A2:AE2",
+      "target_sheet": "Instrument Import",
+      "import_mode": "Target Start Cell",
+      "target_start_cell": "A2",
+      "transpose": false,
+      "repeat": false
+    },
+    {
+      "name": "SBX_ONLY_TERPENES_2026_07_16_AH_BE",
+      "type": "By Cell Range",
+      "source_sheet": null,
+      "source_range": "AH2:BE2",
+      "target_sheet": "Instrument Import",
+      "import_mode": "Target Start Cell",
+      "target_start_cell": "AH2",
+      "transpose": false,
+      "repeat": false
+    }
+  ],
+  "excluded_formula_columns": ["AF", "AG"],
+  "uses_updateWorksheet": false,
+  "uses_patchWorksheet": false,
+  "sandbox_internal_object_ids_included": false
+}
