@@ -90,6 +90,11 @@ REQUIRED = {
     "json_import_rebuild/sanitized_object_inventory.json",
     "json_import_rebuild/sandbox_cleanup_plan.md",
     "json_import_rebuild/validate_candidate.py",
+    "json_import_rebuild/round_trip/.gitattributes",
+    "json_import_rebuild/round_trip/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE_v1_DRAFT_saved_reopened_export_spreadsheet.json",
+    "json_import_rebuild/round_trip/saved_draft_round_trip_evidence.json",
+    "json_import_rebuild/round_trip/semantic_comparison.md",
+    "json_import_rebuild/round_trip/validate_round_trip.py",
     "prompt_5b_manifest.json",
 }
 
@@ -586,7 +591,7 @@ def main() -> int:
             failures.append(f"version-creation control safety control is not false: {key}")
 
     json_import_classification = (
-        "unqualified_address_candidate_local_validation_passed_save_retry_pending"
+        "saved_definition_round_trip_passed_pending_runtime_instantiation"
     )
     json_candidate_path = (
         ROOT
@@ -609,6 +614,81 @@ def main() -> int:
             "generated JSON candidate validator failed: "
             + candidate_validation.stdout.replace("\n", " ").strip()
         )
+    round_trip_path = ROOT / (
+        "json_import_rebuild/round_trip/"
+        "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE_v1_DRAFT_"
+        "saved_reopened_export_spreadsheet.json"
+    )
+    expected_round_trip_hash = (
+        "3589f2ace8afb96db96d4da638e9effc86bda404e03f97b85fca0e43aa349912"
+    )
+    if digest(round_trip_path) != expected_round_trip_hash:
+        failures.append("saved/reopened round-trip export hash is incorrect")
+    round_trip_validation = subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "json_import_rebuild/round_trip/validate_round_trip.py"),
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if round_trip_validation.returncode != 0:
+        failures.append(
+            "saved/reopened round-trip validator failed: "
+            + round_trip_validation.stdout.replace("\n", " ").strip()
+        )
+    round_trip_evidence = json.loads(
+        (
+            ROOT
+            / "json_import_rebuild/round_trip/saved_draft_round_trip_evidence.json"
+        ).read_text(encoding="utf-8")
+    )
+    for key, expected in {
+        "sanitized": True,
+        "internal_sandbox_ids_omitted": True,
+        "worksheet": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
+        "version": "JSON Scalar 43 Field Base v1",
+        "version_state": "DRAFT",
+        "version_row_visibly_present": True,
+        "grid_before_refresh": "40x26",
+        "grid_after_refresh_and_list_reopen": "40x26",
+        "named_cells_before_refresh": 43,
+        "named_cells_after_refresh_and_list_reopen": 43,
+        "unqualified_named_cells_after_refresh_and_list_reopen": 43,
+        "qualified_named_cells_after_refresh_and_list_reopen": 0,
+        "blank_destinations_after_refresh_and_list_reopen": 43,
+        "writable_destinations_after_refresh_and_list_reopen": 43,
+        "formula_owned_destinations": 0,
+        "exportable_destinations": 43,
+        "a2_mapping_present": False,
+        "round_trip_export_sha256": expected_round_trip_hash,
+        "json_import_saved_definition_contract": "passed_43_of_43",
+        "json_import_round_trip": "passed",
+        "destination_contract_proven": "saved_definition_only_pending_runtime_instantiation",
+        "atomicity_classification": "api_patch_unresolved",
+        "analyte_patch_key_contract": "unresolved",
+    }.items():
+        if round_trip_evidence.get(key) != expected:
+            failures.append(f"round-trip evidence is incorrect: {key}")
+    for key in (
+        "candidate_promoted",
+        "approved",
+        "activated",
+        "assay_created",
+        "sample_created",
+        "test_created",
+        "analytical_results_entered",
+        "credentials_read_or_displayed",
+        "oauth_token_requested",
+        "qbench_rest_api_requested",
+        "patch_requested",
+        "live_qbench_accessed",
+        "pass_fail_artifact_introduced",
+    ):
+        if round_trip_evidence.get(key) is not False:
+            failures.append(f"round-trip safety control is not false: {key}")
     json_inventory = json.loads(
         (ROOT / "json_import_rebuild/sanitized_object_inventory.json").read_text(
             encoding="utf-8"
@@ -624,7 +704,7 @@ def main() -> int:
         "qualified_address_render_result": "passed_40x26_grid_and_43_named_cells",
         "qualified_address_save_as_new_version_attempted": True,
         "qualified_address_save_as_new_version_succeeded": False,
-        "qualified_address_save_error": "Invalid cell definition Data!A2 for field name terpenes_instrument_conc_01",
+        "qualified_address_save_error": "Invalid cell definition Data!D2 for field name terpenes_instrument_conc_01",
         "compatibility_conclusion": "one_tab_old_sandbox_json_named_cell_addresses_must_be_unqualified",
         "candidate_sha256": expected_json_candidate_hash,
         "candidate_local_validation": "passed",
@@ -647,16 +727,24 @@ def main() -> int:
         "rendered_worksheet_structure_unchanged": True,
         "config_style_reference_type": "absent",
         "config_style_candidate_type": "absent",
-        "corrected_upload_attempted": False,
-        "corrected_candidate_attached": False,
-        "corrected_import_submitted": False,
-        "corrected_draft_version_created": False,
-        "corrected_version_row_visibly_present": False,
-        "round_trip_export_created": False,
-        "semantic_round_trip_run": False,
-        "json_import_saved_definition_contract": "unproven",
-        "json_import_round_trip": "not_run",
-        "destination_contract_proven": False,
+        "corrected_upload_attempted": True,
+        "corrected_candidate_attached": True,
+        "corrected_import_submitted": True,
+        "corrected_draft_version_created": True,
+        "corrected_version_row_visibly_present": True,
+        "corrected_version": "JSON Scalar 43 Field Base v1",
+        "corrected_version_state": "DRAFT",
+        "grid_before_refresh": "40x26",
+        "grid_after_refresh_and_list_reopen": "40x26",
+        "named_cells_before_refresh": 43,
+        "named_cells_after_refresh_and_list_reopen": 43,
+        "round_trip_export_created": True,
+        "round_trip_sha256": expected_round_trip_hash,
+        "semantic_round_trip_run": True,
+        "semantic_round_trip_result": "passed_after_normalizing_only_qbench_regenerated_renderer_uuid",
+        "json_import_saved_definition_contract": "passed_43_of_43",
+        "json_import_round_trip": "passed",
+        "destination_contract_proven": "saved_definition_only_pending_runtime_instantiation",
         "atomicity_classification": "api_patch_unresolved",
         "analyte_patch_key_contract": "unresolved",
         "manual_sdf_preserved_in_working_native_export": True,
@@ -674,7 +762,7 @@ def main() -> int:
         {
             "type": "Spreadsheet Worksheet",
             "name": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
-            "state": "qualified-address candidate rendered 40x26 with 43 named cells, but Save As New Version was rejected; no corrected unqualified-address version",
+            "state": "JSON Scalar 43 Field Base v1 saved as Draft; 40x26 and 43 unqualified named cells retained after refresh and list reopen",
         }
     ]:
         failures.append("JSON import sanitized object inventory is incorrect")
@@ -705,7 +793,7 @@ def main() -> int:
     if manifest.get("sandbox", {}).get("token_requests_attempted") != 0:
         failures.append("manifest claims a token request")
     if manifest.get("status") != (
-        "unqualified_address_candidate_local_validation_passed_pre_token_stop"
+        "saved_definition_round_trip_passed_pending_runtime_instantiation_pre_token_stop"
     ):
         failures.append("manifest controlled-stop status is incorrect")
     if manifest.get("mapping", {}).get("saved_worksheet_definition_contract") != "passed_43_of_43":
@@ -826,7 +914,7 @@ def main() -> int:
         "qualified_address_candidate_sha256": "54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b",
         "qualified_address_render_result": "passed_40x26_grid_and_43_named_cells",
         "qualified_address_save_result": "rejected_sheet_qualified_cell_definition",
-        "qualified_address_save_error": "Invalid cell definition Data!A2 for field name terpenes_instrument_conc_01",
+        "qualified_address_save_error": "Invalid cell definition Data!D2 for field name terpenes_instrument_conc_01",
         "candidate_sha256": expected_json_candidate_hash,
         "candidate_local_validation": "passed",
         "candidate_envelope": "legacy_table_config_qb_config",
@@ -854,19 +942,27 @@ def main() -> int:
         "address_only_difference_count": 43,
         "rendered_worksheet_structure_unchanged": True,
         "worksheet": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
-        "worksheet_state": "qualified_render_passed_save_rejected_unqualified_retry_pending",
+        "worksheet_state": "json_scalar_43_field_base_v1_saved_draft_round_trip_passed",
         "config_style_reference_type": "absent",
         "config_style_candidate_type": "absent",
-        "corrected_upload_attempted": False,
-        "corrected_candidate_attached": False,
-        "corrected_import_submitted": False,
-        "corrected_draft_version_created": False,
-        "corrected_version_row_visibly_present": False,
-        "round_trip_export_created": False,
-        "semantic_round_trip_run": False,
-        "json_import_saved_definition_contract": "unproven",
-        "json_import_round_trip": "not_run",
-        "destination_contract_proven": False,
+        "corrected_upload_attempted": True,
+        "corrected_candidate_attached": True,
+        "corrected_import_submitted": True,
+        "corrected_draft_version_created": True,
+        "corrected_version": "JSON Scalar 43 Field Base v1",
+        "corrected_version_state": "DRAFT",
+        "corrected_version_row_visibly_present": True,
+        "grid_before_refresh": "40x26",
+        "grid_after_refresh_and_list_reopen": "40x26",
+        "imported_named_cells_before_refresh": 43,
+        "imported_named_cells_after_reopen": 43,
+        "round_trip_export_created": True,
+        "round_trip_sha256": expected_round_trip_hash,
+        "semantic_round_trip_run": True,
+        "semantic_round_trip_result": "passed_after_normalizing_only_qbench_regenerated_renderer_uuid",
+        "json_import_saved_definition_contract": "passed_43_of_43",
+        "json_import_round_trip": "passed",
+        "destination_contract_proven": "saved_definition_only_pending_runtime_instantiation",
         "atomicity_classification": "api_patch_unresolved",
         "analyte_patch_key_contract": "unresolved",
         "candidate_promoted": False,
@@ -931,7 +1027,7 @@ def main() -> int:
     print("- qualified-address Save As New Version rejected by old one-tab validator")
     print("- unqualified-address JSON candidate passed local 43/43 validation")
     print("- exactly 43 address strings changed; rendered structure unchanged")
-    print("- corrected save retry pending; saved/reopened contract remains unproven")
+    print("- saved Draft and raw round trip passed 43/43; runtime instantiation pending")
     print("- sanitized eight-object inventory contains no internal Sandbox IDs")
     print("- sanitized six-object native inventory contains no internal Sandbox IDs")
     print("- exact Sandbox-only executable allowlist")

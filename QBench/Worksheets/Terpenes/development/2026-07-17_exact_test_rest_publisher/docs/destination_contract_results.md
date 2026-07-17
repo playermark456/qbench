@@ -3,7 +3,7 @@
 Date: 2026-07-17
 
 Current controlled-stop classification:
-**`unqualified_address_candidate_local_validation_passed_save_retry_pending`**.
+**`saved_definition_round_trip_passed_pending_runtime_instantiation`**.
 
 Prior imported-definition runtime classification:
 **`normal_assay_test_instantiation_failed_blank_default`**.
@@ -35,9 +35,9 @@ navigating away and reopening it.
 | Prior generated JSON import | `failed_wrong_worksheet_collapsed_renderer` |
 | Qualified-address native-envelope render | `passed_40x26_grid_and_43_named_cells` |
 | Qualified-address Save As New Version | `rejected_sheet_qualified_cell_definition` |
-| Unqualified-address candidate | `local_validation_passed_save_retry_pending` |
-| JSON round-trip export | `not_run_import_gate` |
-| Publisher destination gate | `destination_contract_proven=false` |
+| Unqualified-address saved Draft | `passed_43_of_43` |
+| JSON round-trip export | `passed` |
+| Publisher destination gate | `saved_definition_only_pending_runtime_instantiation` |
 
 ## Isolated Sandbox objects
 
@@ -263,11 +263,12 @@ configuration remains unchanged.
 ## Generated JSON import rebuild
 
 The native-envelope candidate subsequently rendered the complete 40x26 grid
-and 43 named cells, but QBench rejected **Save As New Version** with an invalid
-sheet-qualified cell-definition error. This establishes a separate one-tab
-old-Sandbox compatibility rule: logical mapping addresses remain
-sheet-qualified, while `qb_config.named_cells` JSON cell strings must be
-unqualified.
+and 43 named cells, but QBench rejected **Save As New Version** with
+`Invalid cell definition Data!D2 for field name
+terpenes_instrument_conc_01`. It was never an A2 address. This establishes a
+separate one-tab old-Sandbox compatibility rule: logical mapping addresses
+remain sheet-qualified, while `qb_config.named_cells` JSON cell strings must
+be unqualified.
 
 The regenerated candidate is:
 `json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json`.
@@ -278,9 +279,31 @@ addresses, A2 mapping, missing, renamed, duplicated, formula-owned, Pass/Fail,
 Dimethylacetamide, or Peak Table destinations. SHA-256:
 `e5ef20a5cec574dc292ed679867e01313233c92ceda9ef863bf98dd8d4485b80`.
 
-No QBench environment was accessed for this regeneration. A corrected save
-retry, Draft row, raw round-trip export, and semantic round-trip result remain
-pending.
+The user imported the exact unqualified candidate into
+`SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE` and saved
+`JSON Scalar 43 Field Base v1` as Draft. The Versions tab visibly showed the
+Draft row. Before refresh and after a refresh plus list-based reopen, the
+Draft retained the exact 40x26 grid, all 28 anchors, and 43 unqualified named
+cells. All 43 destinations remained blank, writable, unique, non-formula, and
+exportable. The first analyte is `D2`, and no A2 mapping exists.
+
+The exact saved/reopened Draft was exported with QBench's **Export
+Spreadsheet** action. The unchanged raw file is under
+`json_import_rebuild/round_trip/` with SHA-256
+`3589f2ace8afb96db96d4da638e9effc86bda404e03f97b85fca0e43aa349912`.
+It is semantically identical to the candidate after normalizing only QBench's
+regenerated renderer UUID. Classifications:
+
+- `json_import_saved_definition_contract=passed_43_of_43`
+- `json_import_round_trip=passed`
+- `destination_contract_proven=saved_definition_only_pending_runtime_instantiation`
+- `atomicity_classification=api_patch_unresolved`
+- `analyte_patch_key_contract=unresolved`
+
+The Draft was not approved or activated. No Assay, Sample, Test, analytical
+result, token, REST request, PATCH, live-QBench access, or Pass/Fail artifact
+occurred. The operational mapping remains unpromoted pending runtime
+instantiation.
 
 ## Version-creation control reconciliation
 

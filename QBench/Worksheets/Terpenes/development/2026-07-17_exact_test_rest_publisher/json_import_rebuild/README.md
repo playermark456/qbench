@@ -3,16 +3,17 @@
 Date: 2026-07-17
 
 Classification:
-**`unqualified_address_candidate_local_validation_passed_save_retry_pending`**
+**`saved_definition_round_trip_passed_pending_runtime_instantiation`**
 
 Manual testing established two separate findings:
 
 1. the native-envelope candidate rendered successfully as a 40x26 worksheet
    with all 43 named cells; and
 2. **Save As New Version** rejected the qualified named-cell definitions with
-   `Invalid cell definition Data!A2 for field name terpenes_instrument_conc_01`.
+   `Invalid cell definition Data!D2 for field name terpenes_instrument_conc_01`.
 
-The intended first analyte is D2, not A2. The compatibility conclusion is that
+The error was never an A2 address. The intended first analyte is D2, and no A2
+destination exists. The compatibility conclusion is that
 this exact one-tab legacy worksheet requires unqualified JSON cell strings,
 consistent with the working manual `sdf -> A1` control and the active Terpenes
 Test Worksheet's unqualified named-cell addresses.
@@ -47,6 +48,26 @@ Corrected candidate:
 successfully rendered prior candidate and confirms every difference is a
 qualified-to-unqualified `cell` string conversion.
 
-No QBench environment was accessed in this correction prompt. The regenerated
-candidate was not uploaded or saved, so a successful Draft row and
-saved/reopened export remain pending. Publisher gates remain closed.
+The user imported the unqualified candidate into the isolated Sandbox
+Worksheet. Browser verification proved the exact title and breadcrumb, a
+visible `JSON Scalar 43 Field Base v1` Draft row, and the matching Draft in the
+Configuration view. Before refresh and after a refresh plus list-based reopen,
+the Draft retained the 40x26 grid, all 28 anchors, and 43/43 unqualified named
+cells. All destinations remained blank, writable, unique, non-formula, and
+exportable. The first analyte remained `D2`; no A2 mapping, `sdf`, Pass/Fail,
+Dimethylacetamide, or Peak Table destination existed.
+
+QBench's **Export Spreadsheet** action produced the unchanged raw file under
+`round_trip/` with SHA-256
+`3589f2ace8afb96db96d4da638e9effc86bda404e03f97b85fca0e43aa349912`.
+After normalizing only QBench's regenerated renderer UUID, it is semantically
+identical to the candidate. Therefore:
+
+- `json_import_saved_definition_contract=passed_43_of_43`
+- `json_import_round_trip=passed`
+- `destination_contract_proven=saved_definition_only_pending_runtime_instantiation`
+
+The Draft was not approved or activated. No Assay, Sample, Test, analytical
+result, OAuth token, REST request, PATCH, live-QBench access, or Pass/Fail
+artifact occurred. The operational mapping remains unpromoted pending runtime
+instantiation.

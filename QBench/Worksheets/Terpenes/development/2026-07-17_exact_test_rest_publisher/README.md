@@ -2,11 +2,11 @@
 
 Date: 2026-07-17
 
-Status: **QBench native named-cell persistence is operational. A fresh generated
-43-field JSON candidate passes local validation, but the in-app browser does not
-support file uploads. The exact inactive Sandbox worksheet shell exists with no
-version, and the candidate is ready for manual Sandbox upload before the first
-token request**.
+Status: **The isolated unqualified-address JSON candidate was saved as
+`JSON Scalar 43 Field Base v1` in Draft state. Its 40x26 grid and 43 named cells
+survived refresh and list-based reopen, and its raw Export Spreadsheet round
+trip passed semantic comparison. Runtime instantiation remains pending before
+the first token request**.
 
 This package implements a controlled, Sandbox-only publisher for reviewed
 Terpenes Batch rows. It routes only by exact QBench Test ID, builds the complete
@@ -71,11 +71,12 @@ remained unchanged after save and reopen. Therefore:
   all further Codex-controlled worksheet construction remain skipped;
 - the native-envelope candidate rendered successfully as a 40x26 grid with 43
   named cells, but **Save As New Version** rejected its sheet-qualified JSON
-  cell definitions;
-- the rejection named `Data!A2` for the first analyte even though its logical
-  mapping is `Data!D2`; compatibility evidence from `sdf -> A1` and the active
-  one-tab Terpenes export establishes that legacy JSON cells must be
-  unqualified;
+  cell definitions with `Invalid cell definition Data!D2 for field name
+  terpenes_instrument_conc_01`; the error was never an A2 address;
+- the logical first-analyte mapping is `Data!D2`, the old-Sandbox JSON cell is
+  `D2`, and no A2 destination exists; compatibility evidence from `sdf -> A1`
+  and the active one-tab Terpenes export establishes that legacy JSON cells
+  must be unqualified;
 - `json_import_rebuild/` now keeps the logical mapping sheet-qualified while
   serializing exactly 43 unqualified scalar cells such as `D2`;
 - comparison against the successfully rendered candidate proves exactly 43
@@ -83,8 +84,19 @@ remained unchanged after save and reopen. Therefore:
   changes;
 - the regenerated candidate passed local validation with SHA-256
   `e5ef20a5cec574dc292ed679867e01313233c92ceda9ef863bf98dd8d4485b80`;
-- `unqualified_address_candidate_local_validation_passed_save_retry_pending`
-  is the current controlled-stop classification;
+- the user imported the corrected candidate into the exact isolated Sandbox
+  Worksheet and saved `JSON Scalar 43 Field Base v1`; the Versions tab visibly
+  showed `DRAFT`;
+- browser verification before refresh and after list-based reopen proved the
+  exact title and breadcrumb, 40x26 grid, 28 anchors, and all 43 unqualified,
+  blank, writable, unique, non-formula, exportable destinations;
+- the raw saved/reopened Export Spreadsheet SHA-256 is
+  `3589f2ace8afb96db96d4da638e9effc86bda404e03f97b85fca0e43aa349912`;
+  semantic comparison passed after normalizing only QBench's regenerated
+  renderer UUID;
+- `json_import_saved_definition_contract=passed_43_of_43`,
+  `json_import_round_trip=passed`, and
+  `destination_contract_proven=saved_definition_only_pending_runtime_instantiation`;
 - the earlier destination-proof objects and the native Worksheet, two
   versions, Assay, Sample, and Test are inventoried in separate sanitized
   evidence without internal IDs;

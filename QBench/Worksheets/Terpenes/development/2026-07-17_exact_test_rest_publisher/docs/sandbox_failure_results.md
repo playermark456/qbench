@@ -28,15 +28,21 @@ despite loading 43 named-cell entries.
 
 The later native-envelope candidate rendered the full 40x26 grid and all 43
 named cells, but **Save As New Version** rejected a sheet-qualified named-cell
-definition. This is a save-compatibility failure, not a renderer failure.
+definition at `Data!D2`. This is a save-compatibility failure, not a renderer
+failure, and it was never an A2 address.
 
 The regenerated candidate uses exactly 43 unqualified runtime cell strings and
-passes local 43/43 validation. It was not uploaded in this repository-only
-correction, so no corrected Draft row, saved/reopened export, or round-trip
-result exists.
+passes local 43/43 validation. The user imported it into the isolated Sandbox
+Worksheet and saved `JSON Scalar 43 Field Base v1` as Draft. The visible Draft
+row, 40x26 grid, 28 anchors, and all 43 named cells survived refresh and
+list-based reopen. The raw Export Spreadsheet round trip passed after
+normalizing only QBench's regenerated renderer UUID.
 
 Current classification:
-**`unqualified_address_candidate_local_validation_passed_save_retry_pending`**.
+**`saved_definition_round_trip_passed_pending_runtime_instantiation`**.
+
+This resolves the saved-definition gate only. Runtime instantiation remains
+pending, so the operational publisher gate is still closed.
 
 ## Destination proof controlled stop
 

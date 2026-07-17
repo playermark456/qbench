@@ -1,20 +1,37 @@
 # Unqualified-address candidate round-trip result
 
-Classification: **not run - corrected save retry pending**
+Classification: **`saved_definition_round_trip_passed_pending_runtime_instantiation`**
 
 The qualified-address native-envelope candidate rendered correctly, but QBench
-rejected **Save As New Version** before a version could be established. The
-new unqualified-address candidate was regenerated and validated locally only.
+rejected **Save As New Version** with `Invalid cell definition Data!D2 for
+field name terpenes_instrument_conc_01`. The error was never an A2 address.
+The unqualified candidate was regenerated and validated locally, then the user
+imported it into the exact isolated Sandbox Worksheet.
 
-Consequently:
+The exact title and breadcrumb were verified. The Versions tab visibly showed
+`JSON Scalar 43 Field Base v1` with status `DRAFT`. Before refresh and after a
+refresh plus reopen from the Worksheets list:
 
-- no corrected Draft row is claimed;
-- Export Spreadsheet was not invoked for the corrected candidate;
-- no corrected saved/reopened raw export or SHA-256 exists;
-- semantic saved-export comparison was not run;
-- `json_import_saved_definition_contract=unproven`;
-- `json_import_round_trip=not_run`;
-- `destination_contract_proven=false`.
+- the grid was 40x26;
+- all 28 visible anchors remained;
+- all 43 named cells remained present, unique, unqualified, and exportable;
+- all 43 destinations remained blank, writable, and non-formula;
+- the first analyte remained `D2`, with no A2 mapping;
+- `sdf`, Pass/Fail, Dimethylacetamide, and Peak Table destinations were absent.
+
+QBench's **Export Spreadsheet** action produced the unchanged raw file:
+`round_trip/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE_v1_DRAFT_saved_reopened_export_spreadsheet.json`.
+SHA-256:
+`3589f2ace8afb96db96d4da638e9effc86bda404e03f97b85fca0e43aa349912`.
+
+The raw export differs from the candidate only because QBench regenerated the
+renderer UUID on save. After normalizing that UUID, the parsed JSON objects are
+identical. Therefore:
+
+- `json_import_saved_definition_contract=passed_43_of_43`;
+- `json_import_round_trip=passed`;
+- `destination_contract_proven=saved_definition_only_pending_runtime_instantiation`.
 
 Atomicity remains `api_patch_unresolved` and the analyte PATCH-key contract
-remains `unresolved`.
+remains `unresolved`. The Draft was not approved or activated, and no runtime
+Test was created.
