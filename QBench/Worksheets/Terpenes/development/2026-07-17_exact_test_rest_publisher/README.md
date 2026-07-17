@@ -2,8 +2,8 @@
 
 Date: 2026-07-17
 
-Status: **a completely unique one-cell native named-cell definition vanished
-after explicit UI commit, save, and reopen; worksheet construction is blocked
+Status: **a native version was visibly created as a Draft, but its explicitly
+added named-cell row was absent after reopen; worksheet construction is blocked
 for QBench support review before the first token request**.
 
 This package implements a controlled, Sandbox-only publisher for reviewed
@@ -53,9 +53,11 @@ remained unchanged after save and reopen. Therefore:
   keystrokes, Tab/blur events, a unique system name, and a blank writable B2;
   the row was visibly present before Create, but the reopened 6x5 Draft had
   zero named cells and no visible validation message;
-- `native_named_cell_save_environment_or_procedure_blocked` is the current
-  controlled-stop classification; Probes B/C and all further worksheet
-  construction were skipped;
+- the current version-creation control visibly produced a Draft row, then
+  reopened with zero named-cell rows;
+- `version_created_named_cell_missing` is the current controlled-stop
+  classification; Probes B/C and all further worksheet construction were
+  skipped;
 - the earlier destination-proof objects and the native Worksheet, two
   versions, Assay, Sample, and Test are inventoried in separate sanitized
   evidence without internal IDs;

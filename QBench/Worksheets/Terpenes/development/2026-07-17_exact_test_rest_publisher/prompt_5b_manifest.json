@@ -4,7 +4,7 @@
   "prompt": "Prompt 5B",
   "branch": "codex/terpenes-prompt-5b-rest-publisher",
   "application_version": "0.3.0",
-  "status": "native_named_cell_save_environment_or_procedure_blocked_pre_token_stop",
+  "status": "version_created_named_cell_missing_pre_token_stop",
   "prerequisite": {
     "pull_request": 12,
     "merged": true,
@@ -18,7 +18,7 @@
     "credential_storage_method": "ignored_local_secrets_file",
     "token_requests_attempted": 0,
     "api_requests_attempted": 0,
-    "read_only_results": "native_ui_definition_and_assay_created_test_passed; imported_prompt3_direct_and_normal_tests_remain_blank_default_5x5; exact_native_43_field_phase1_failed_4_of_7; native_scalar_phase1a_saved_reopened_failed_0_of_7; unique_named_cell_probe_a_failed_after_explicit_ui_commit",
+    "read_only_results": "native_ui_definition_and_assay_created_test_passed; imported_prompt3_direct_and_normal_tests_remain_blank_default_5x5; exact_native_43_field_phase1_failed_4_of_7; native_scalar_phase1a_saved_reopened_failed_0_of_7; current Versions-tab observation confirms Native Scalar 43 Field Base v1 is DRAFT; unique_named_cell_probe_a_failed_after_explicit_ui_commit; version_creation_control_created_visible_draft_then_reopened_with_zero_named_cells",
     "exact_test_membership": "not_run_in_sandbox",
     "scalar_patch": "not_run",
     "native_numeric_cell": "not_run",
@@ -46,7 +46,9 @@
       "SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE",
       "Native Scalar 43 Field Base v1",
       "SBX_ONLY_TERPENES_2026_07_17_NAMED_CELL_UNIQUE_CONTROL",
-      "Named Cell Unique Control v1"
+      "Named Cell Unique Control v1",
+      "SBX_ONLY_TERPENES_2026_07_17_VERSION_CREATION_CONTROL",
+      "Version Creation Control v1"
     ],
     "live_qbench_accessed": false,
     "customer_data_used": false,
@@ -70,7 +72,7 @@
     "saved_worksheet_definition_contract": "passed_43_of_43",
     "direct_existing_test_instantiation": "failed_blank_default_5x5",
     "normal_assay_test_instantiation": "normal_assay_test_instantiation_failed_blank_default",
-    "destination_contract_classification": "native_named_cell_save_environment_or_procedure_blocked",
+    "destination_contract_classification": "version_created_named_cell_missing",
     "saved_sandbox_destination_proven": false,
     "analyte_patch_key_contract": "unresolved"
   },
@@ -143,7 +145,7 @@
     "candidate_promoted": false
   },
   "named_cell_persistence_diagnostic": {
-    "classification": "native_named_cell_save_environment_or_procedure_blocked",
+    "classification": "version_created_named_cell_missing",
     "worksheet": "SBX_ONLY_TERPENES_2026_07_17_NAMED_CELL_UNIQUE_CONTROL",
     "version": "Named Cell Unique Control v1",
     "version_state": "Draft",
@@ -164,6 +166,25 @@
     "probe_b_nozero_run": false,
     "probe_c_run": false,
     "further_worksheet_construction_allowed": false
+  },
+  "version_creation_diagnostic": {
+    "classification": "version_created_named_cell_missing",
+    "worksheet": "SBX_ONLY_TERPENES_2026_07_17_VERSION_CREATION_CONTROL",
+    "version": "Version Creation Control v1",
+    "version_state": "Draft",
+    "version_row_visibly_present": true,
+    "grid_rows": 6,
+    "grid_columns": 5,
+    "a1": "Version creation control",
+    "b2": "",
+    "named_cell_rows_before_create": 1,
+    "named_cell_rows_after_reopen": 0,
+    "destination_contract_proven": false,
+    "oauth_token_requested": false,
+    "qbench_rest_api_requested": false,
+    "patch_requested": false,
+    "live_qbench_accessed": false,
+    "pass_fail_artifact_introduced": false
   },
   "local_validation": {
     "unit_tests": "46 passed",
@@ -208,7 +229,8 @@
     "no durable QBench-native committed source-row hash",
     "inherited Prompt 4 manifest/layout hash mismatch remains",
     "underscore scalar candidate remains unpromoted after native saved/reopened Phase 1A failed 0/7",
-    "unique one-cell native named-cell save is blocked pending QBench support review"
+    "current Versions-tab observation confirms the scalar Version 1 Draft row; its 0/7 finding is a named-cell persistence failure, not a missing-version assertion",
+    "new native version-creation control produced a visible Draft row but reopened with zero named-cell rows; named-cell persistence is blocked pending QBench support review"
   ],
   "generated_files": [
     {"path": ".env.example", "sha256": "3f24f323f53d61dcadb8015603f7daab49ac65a102320a2a89c6395ffdca9d53"},
@@ -217,18 +239,18 @@
     {"path": "config/publisher_config.json", "sha256": "07c9bc67d8304cc1ba8b511b21849efbea3734586593ad96fc9756a329b5c489"},
     {"path": "docs/api_contract.md", "sha256": "fc5815b9a401f8beb07ac5bdceb0829c6b7163b19ef20168730e0f282b76ba59"},
     {"path": "docs/atomicity_results.md", "sha256": "dc958cce84ef13e6d19da53acd8d39021437a89874d26b2d0b1e8b69f0e42ab0"},
-    {"path": "docs/destination_contract_results.md", "sha256": "1e7d52953fdcb76159e51f5da87eefc1a481a1312ca51024d8716d5655578bbc"},
+    {"path": "docs/destination_contract_results.md", "sha256": "469a2ac4b3fc6fe2f023a8ef445a610f040f0034c5f574bafc085ac8fd83e086"},
     {"path": "docs/field_mapping.md", "sha256": "04f87adb8e3f93f30b3865bdc4c4b2f0c5082896c24686ee168462c0f7f83318"},
     {"path": "docs/idempotency_contract.md", "sha256": "b1779de7340b3617ffd90e03dcaac16f509eb3c98ef9469e9d70b8491f0e8bd0"},
     {"path": "docs/live_promotion_gap_analysis.md", "sha256": "649ec184cab763bca8c91a6e91b316833afd10c8058b8e7311e83b07d7a08d4d"},
     {"path": "docs/publish_gate.md", "sha256": "472016a2144d43a8032cf189074af345143224d97b7e34f2aaa2fa583a2193cd"},
     {"path": "docs/rollback_contract.md", "sha256": "624c74c0a78ff059d0c5186e5ec7c37642956ede97546ad8242ed73b9812b91e"},
-    {"path": "docs/sandbox_failure_results.md", "sha256": "75d63193e680812e19b532aa2f81e1ac9cd1eb965bcca0f59f12b0920525435e"},
+    {"path": "docs/sandbox_failure_results.md", "sha256": "ae176285e7f9dc34f3bc31774051b7ba644e790deddda67e2c32b6bb89ceb1c9"},
     {"path": "docs/sandbox_success_results.md", "sha256": "b43c6bf0fb37800b060e7f171c37c4d86d70b54db3d6691f686bb2fcfd5fac77"},
     {"path": "docs/security_model.md", "sha256": "109d6564a1314976b09027a9a03e7a118e8dbf90b135ecdd098eeae449f2bbca"},
     {"path": "fixtures/README.md", "sha256": "018244dcca05900c2801592d4c80bdd2061631b4bb2444c895e11ebdc94a1aa5"},
     {"path": "fixtures/sanitized_audit_example.json", "sha256": "6ae60a9e8a489f3ee7805db709d362c350aff511ec3ed42397aba43cf431907c"},
-    {"path": "README.md", "sha256": "85e62e34756215019ccf773e65f4b5cf1eec013d3bd3784ae6170a8f1c0b98ce"},
+    {"path": "README.md", "sha256": "39e2dd45a7a20149531df876bec7b62ce2cbd9bef73bc7efc9429610fc5c4ed6"},
     {"path": "requirements.txt", "sha256": "5b5b2f659e39f8082ab713fff8a7ca6e0581fd75421c0730436a2591f26283d7"},
     {"path": "src/terpenes_publisher/__init__.py", "sha256": "0201491b11470864b087a9d13d6891817007402f04bcf13513681c214723f81b"},
     {"path": "sandbox_destination_proof/expected_destination_contract.csv", "sha256": "baf0f58dd1fbdcde213da7dacd5394b48e881786f94db0677958b818e87cea77"},
@@ -251,21 +273,25 @@
     {"path": "native_43_field_rebuild/sanitized_object_inventory.json", "sha256": "0de08c74d75dff55d7e37579b46408601014a49c6a83a7df693454f27438a898"},
     {"path": "native_43_field_rebuild/sandbox_cleanup_plan.md", "sha256": "7ca286d49e4e356db15b465e6aeb5322daf38c342ae58441e8a56502dff9de3d"},
     {"path": "native_43_field_rebuild/scalar_candidate_mapping.md", "sha256": "9c48b2205aef2595e481447516b7893d3edd284d535d107ce9e02a4e18b9d974"},
-    {"path": "native_43_field_rebuild/scalar_stage1_results.md", "sha256": "86bf1c7865c9ee70424b901c5a5ad041c3c4098c84a4d35c171df27d7bb53e41"},
+    {"path": "native_43_field_rebuild/scalar_stage1_results.md", "sha256": "78629793f36127827b1d6e63d2710f7a5098dec2b0ca3caacd665a1566e02aad"},
     {"path": "native_43_field_rebuild/scalar_stage2_definition_results.md", "sha256": "c6eb52a20da8b42337da161d45f34d10188c51a1009ea2371edb2b4c965d393c"},
     {"path": "native_43_field_rebuild/scalar_stage3_instantiation_results.md", "sha256": "c5257a816dbc8a7ce8a5b99edce46819eb11d4c357d57372f8d6eb12ee66477b"},
     {"path": "native_43_field_rebuild/scalar_raw_export_sha256.txt", "sha256": "81c7a2c28b190163ec1604cb164a3eb0123065083afd68df52f9cd373f399f07"},
     {"path": "native_43_field_rebuild/scalar_sanitized_object_inventory.json", "sha256": "a0212c1a02f238754f903a217c74104f9796a4dae38b3f0e9c0d2a1246f844f9"},
     {"path": "native_43_field_rebuild/scalar_sandbox_cleanup_plan.md", "sha256": "16aef980cc864acac5e33032dcb78d1552fd63096c994950e36e7eda2f6b89f2"},
-    {"path": "native_43_field_rebuild/named_cell_persistence_diagnostic/README.md", "sha256": "f40922c62af4f39e6ab201c5d16d0af3af38f9ea32f9ced1b8e42a0efb92abb3"},
+    {"path": "native_43_field_rebuild/named_cell_persistence_diagnostic/README.md", "sha256": "6f9b5b26decdb96de7fa0fc871ae13495f1ecef01cf4f0d0de4febe9a142b947"},
     {"path": "native_43_field_rebuild/named_cell_persistence_diagnostic/probe_a_unique_control.md", "sha256": "1879516c6a3530cd3c42b7e03866ea326a142af7e4e9bf7ac1cf9c4b958d5dfe"},
     {"path": "native_43_field_rebuild/named_cell_persistence_diagnostic/probe_b_analyte_name.md", "sha256": "466219c99bf2bfa078e26f672a8d86b7bfbe89158a2d16408f6e9aec2b7348e2"},
     {"path": "native_43_field_rebuild/named_cell_persistence_diagnostic/probe_c_duplicate_name.md", "sha256": "9b5359e93686a2b4ec810f9c1792fb8aac5508e8bd5e54cee7436c5ec1c3ff4a"},
     {"path": "native_43_field_rebuild/named_cell_persistence_diagnostic/sanitized_object_inventory.json", "sha256": "ede576bc89d2abfc057c35e319c41103b8fb81604766b52b96f2859292372575"},
     {"path": "native_43_field_rebuild/named_cell_persistence_diagnostic/sandbox_cleanup_plan.md", "sha256": "221a1c6dcd286d1b245b21c9d9374a4fa3075fd96746aca2ffd552283afa818f"},
+    {"path": "native_43_field_rebuild/version_creation_diagnostic/README.md", "sha256": "88a65346211b468d9dba860ccb866c7e142b7c4344b643a0c144ab8e0cceaf2c"},
+    {"path": "native_43_field_rebuild/version_creation_diagnostic/existing_no_version_finding.md", "sha256": "62e4c17f353d03c51f6e0713a480d3abe0441dbf29a240eea8d3435ddfc75247"},
+    {"path": "native_43_field_rebuild/version_creation_diagnostic/version_creation_control.md", "sha256": "7a75c75a9e24ad14928a6c418f24085fac1a1db36eee4e3ff9f69a83fcb5afb9"},
+    {"path": "native_43_field_rebuild/version_creation_diagnostic/sanitized_object_inventory.json", "sha256": "c53e5393b47e57b5fa4502fda0543fb68f9c3f219a172b9880199cc837ff8f38"},
     {"path": "src/terpenes_publisher/core.py", "sha256": "1bcd3602f7fd658278a0b3a42166df0650fda0b4ebf8507b3262e0484af9dd33"},
     {"path": "terpenes_publisher.py", "sha256": "79b026b4aefc533eadf6c2756fdde8a67e2ede673ee2a5650244d309cc91481d"},
     {"path": "tests/test_publisher.py", "sha256": "6efc0be482f84a55989f9b712f6c7c918facc79c018293dd76ce174387e8213e"},
-    {"path": "validate_prompt_5b_package.py", "sha256": "cc96fd251ab49a9a65cdca898e11260eca7bbfedad49132a919e463e8b18a1ba"}
+    {"path": "validate_prompt_5b_package.py", "sha256": "e97eaa2a1300b1322726d65f79fafb97a0afd479ead62dcec974ebb983fedbd8"}
   ]
 }

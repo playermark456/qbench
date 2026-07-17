@@ -6,6 +6,13 @@ save/reopen probe and the official OAuth endpoint contract is absent. The
 credential presence check passed without exposing any value. Atomicity proof
 is also absent.
 
+The current isolated version-creation control created a visibly present
+`DRAFT` row in QBench's Versions tab, then reopened with zero named-cell rows.
+Its classification is **`version_created_named_cell_missing`**. This corrects
+any prior inference that the current stop condition was the absence of a saved
+worksheet version: version creation is now visibly proven, while named-cell
+persistence is not.
+
 ## Destination proof controlled stop
 
 The earlier imported saved definition has a passing 43/43 structural export,

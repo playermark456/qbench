@@ -465,6 +465,54 @@ def main() -> int:
         if diagnostic_inventory.get(key) is not False:
             failures.append(f"named-cell diagnostic safety control is not false: {key}")
 
+    version_control_classification = "version_created_named_cell_missing"
+    version_control_inventory = json.loads(
+        (
+            ROOT
+            / "native_43_field_rebuild/version_creation_diagnostic/sanitized_object_inventory.json"
+        ).read_text(encoding="utf-8")
+    )
+    if version_control_inventory.get("classification") != version_control_classification:
+        failures.append("version-creation control classification is incorrect")
+    if version_control_inventory.get("sanitized") is not True or version_control_inventory.get(
+        "internal_sandbox_ids_omitted"
+    ) is not True:
+        failures.append("version-creation control inventory is not sanitized")
+    if len(version_control_inventory.get("objects", [])) != 2:
+        failures.append("version-creation control inventory does not contain two objects")
+    if any(
+        key == "id" or key.endswith("_id")
+        for item in version_control_inventory.get("objects", [])
+        for key in item
+    ):
+        failures.append("version-creation control inventory contains an internal Sandbox ID")
+    for key, expected in {
+        "version_row_visibly_present": True,
+        "grid_rows_after_reopen": 6,
+        "grid_columns_after_reopen": 5,
+        "a1_after_reopen": "Version creation control",
+        "b2_after_reopen": "",
+        "named_cell_rows_before_create": 1,
+        "named_cell_rows_after_reopen": 0,
+        "destination_contract_proven": False,
+    }.items():
+        if version_control_inventory.get(key) != expected:
+            failures.append(f"version-creation control evidence is incorrect: {key}")
+    for key in (
+        "assay_created",
+        "sample_created",
+        "test_created",
+        "analytical_results_entered",
+        "pass_fail_artifact_introduced",
+        "credentials_displayed",
+        "oauth_token_requested",
+        "qbench_rest_api_requested",
+        "patch_requested",
+        "live_qbench_accessed",
+    ):
+        if version_control_inventory.get(key) is not False:
+            failures.append(f"version-creation control safety control is not false: {key}")
+
     manifest = json.loads((ROOT / "prompt_5b_manifest.json").read_text(encoding="utf-8"))
     if manifest.get("atomicity_classification") != "api_patch_unresolved":
         failures.append("manifest atomicity classification is incorrect")
@@ -472,7 +520,7 @@ def main() -> int:
         failures.append("manifest claims a Sandbox API request")
     if manifest.get("sandbox", {}).get("token_requests_attempted") != 0:
         failures.append("manifest claims a token request")
-    if manifest.get("status") != "native_named_cell_save_environment_or_procedure_blocked_pre_token_stop":
+    if manifest.get("status") != "version_created_named_cell_missing_pre_token_stop":
         failures.append("manifest controlled-stop status is incorrect")
     if manifest.get("mapping", {}).get("saved_worksheet_definition_contract") != "passed_43_of_43":
         failures.append("manifest saved-definition classification is incorrect")
@@ -480,7 +528,7 @@ def main() -> int:
         failures.append("manifest direct existing-Test classification is incorrect")
     if manifest.get("mapping", {}).get("normal_assay_test_instantiation") != normal_classification:
         failures.append("manifest normal Assay Test classification is incorrect")
-    if manifest.get("mapping", {}).get("destination_contract_classification") != diagnostic_classification:
+    if manifest.get("mapping", {}).get("destination_contract_classification") != version_control_classification:
         failures.append("manifest current destination classification is incorrect")
     native_manifest = manifest.get("native_test_worksheet_probe", {})
     if native_manifest.get("classification") != native_classification:
@@ -518,7 +566,7 @@ def main() -> int:
     if scalar_manifest.get("export_spreadsheet_run") is not False:
         failures.append("manifest incorrectly claims a native scalar export action")
     diagnostic_manifest = manifest.get("named_cell_persistence_diagnostic", {})
-    if diagnostic_manifest.get("classification") != diagnostic_classification:
+    if diagnostic_manifest.get("classification") != version_control_classification:
         failures.append("manifest named-cell diagnostic classification is incorrect")
     if diagnostic_manifest.get("probe_a_classification") != "unique_named_cell_control_failed":
         failures.append("manifest named-cell Probe A classification is incorrect")
@@ -530,6 +578,22 @@ def main() -> int:
         "probe_b_run", "probe_b_nozero_run", "probe_c_run", "further_worksheet_construction_allowed"
     )):
         failures.append("manifest does not preserve the Probe A stop gate")
+    version_control_manifest = manifest.get("version_creation_diagnostic", {})
+    if version_control_manifest.get("classification") != version_control_classification:
+        failures.append("manifest version-creation diagnostic classification is incorrect")
+    for key, expected in {
+        "version_state": "Draft",
+        "version_row_visibly_present": True,
+        "grid_rows": 6,
+        "grid_columns": 5,
+        "a1": "Version creation control",
+        "b2": "",
+        "named_cell_rows_before_create": 1,
+        "named_cell_rows_after_reopen": 0,
+        "destination_contract_proven": False,
+    }.items():
+        if version_control_manifest.get(key) != expected:
+            failures.append(f"manifest version-creation diagnostic is incorrect: {key}")
     expected_sandbox_objects = [
         "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
         "SBX_ONLY_TERPENES_API_DESTINATION_PROOF_V2",
@@ -549,6 +613,8 @@ def main() -> int:
         "Native Scalar 43 Field Base v1",
         "SBX_ONLY_TERPENES_2026_07_17_NAMED_CELL_UNIQUE_CONTROL",
         "Named Cell Unique Control v1",
+        "SBX_ONLY_TERPENES_2026_07_17_VERSION_CREATION_CONTROL",
+        "Version Creation Control v1",
     ]
     if manifest.get("sandbox", {}).get("objects_created_or_changed") != expected_sandbox_objects:
         failures.append("manifest Sandbox mutations are not the exact authorized proof objects")
@@ -575,6 +641,7 @@ def main() -> int:
     print("- native scalar candidate validated at 43 mappings and 23 exact analytes")
     print("- native scalar saved/reopened Phase 1A stopped at 0/7; no promotion or runtime")
     print("- unique one-cell Probe A failed after explicit UI commit; Probes B/C not run")
+    print("- version-creation control visibly saved a Draft but reopened with zero named cells")
     print("- native named-cell worksheet construction blocked for QBench support review")
     print("- sanitized eight-object inventory contains no internal Sandbox IDs")
     print("- sanitized six-object native inventory contains no internal Sandbox IDs")

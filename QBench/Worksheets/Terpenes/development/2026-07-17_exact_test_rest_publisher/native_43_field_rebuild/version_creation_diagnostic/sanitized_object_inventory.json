@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "sanitized": true,
+  "internal_sandbox_ids_omitted": true,
+  "classification": "version_created_named_cell_missing",
+  "objects": [
+    {
+      "type": "Spreadsheet Worksheet",
+      "name": "SBX_ONLY_TERPENES_2026_07_17_VERSION_CREATION_CONTROL",
+      "state": "isolated task-created object"
+    },
+    {
+      "type": "Worksheet Version",
+      "name": "Version Creation Control v1",
+      "state": "Draft; visibly present in Versions tab; not pending; not approved; not active"
+    }
+  ],
+  "version_row_visibly_present": true,
+  "grid_rows_after_reopen": 6,
+  "grid_columns_after_reopen": 5,
+  "a1_after_reopen": "Version creation control",
+  "b2_after_reopen": "",
+  "named_cell_rows_before_create": 1,
+  "named_cell_rows_after_reopen": 0,
+  "destination_contract_proven": false,
+  "assay_created": false,
+  "sample_created": false,
+  "test_created": false,
+  "analytical_results_entered": false,
+  "pass_fail_artifact_introduced": false,
+  "credentials_displayed": false,
+  "oauth_token_requested": false,
+  "qbench_rest_api_requested": false,
+  "patch_requested": false,
+  "live_qbench_accessed": false
+}

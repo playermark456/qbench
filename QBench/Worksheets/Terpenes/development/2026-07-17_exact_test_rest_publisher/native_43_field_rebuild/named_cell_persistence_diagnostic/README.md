@@ -2,8 +2,11 @@
 
 Date: 2026-07-17
 
-Final classification:
-**`native_named_cell_save_environment_or_procedure_blocked`**.
+Historical Probe A classification:
+**`unique_named_cell_control_failed`**.
+
+Current controlled-stop classification:
+**`version_created_named_cell_missing`**.
 
 Probe A used a completely unique system name in a new isolated native
 Spreadsheet Worksheet. QBench's **Add Named Cell** control was used exactly
@@ -19,6 +22,10 @@ or error message appeared.
 Probe A therefore failed. The required stop gate prevented Probes B and C,
 the no-leading-zero fallback, any further candidate-name test, and any new
 seven- or 43-field worksheet construction.
+
+The later version-creation control independently produced a visibly present
+Draft row in the Versions tab and then reopened with zero named-cell rows.
+That result confirms the current failure is not a missing-version assertion.
 
 This diagnostic does not prove that underscore names, `_01`, reused scalar
 names, or the candidate mapping are unsupported. It proves only that the old

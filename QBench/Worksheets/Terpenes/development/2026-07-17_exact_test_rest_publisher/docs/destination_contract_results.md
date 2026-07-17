@@ -3,7 +3,7 @@
 Date: 2026-07-17
 
 Current controlled-stop classification:
-**`native_named_cell_save_environment_or_procedure_blocked`**.
+**`version_created_named_cell_missing`**.
 
 Prior imported-definition runtime classification:
 **`normal_assay_test_instantiation_failed_blank_default`**.
@@ -27,6 +27,7 @@ navigating away and reopening it.
 | Exact native 43-field rebuild Phase 1 | `native_minimal_destination_probe_failed` (4/7) |
 | Native underscore-scalar rebuild Phase 1A | `native_scalar_minimal_destination_probe_failed` (0/7 saved/reopened) |
 | Unique one-cell persistence diagnostic | `unique_named_cell_control_failed` |
+| Native version-creation control | `version_created_named_cell_missing` (visible Draft row; reopened with 0 named cells) |
 | Publisher destination gate | `destination_contract_proven=false` |
 
 ## Isolated Sandbox objects
@@ -241,3 +242,15 @@ The publisher remains blocked until a staged native-schema rebuild retains all
 authorized read-only API confirmation resolves the Test worksheet
 representation. The candidate mapping was not promoted and publisher
 configuration remains unchanged.
+
+## Version-creation control reconciliation
+
+The isolated native control
+`SBX_ONLY_TERPENES_2026_07_17_VERSION_CREATION_CONTROL` was created solely to
+separate version creation from named-cell persistence. Its Version 1 row,
+`Version Creation Control v1`, was visibly present in the QBench **Versions**
+tab with status `DRAFT`. The reopened saved draft retained a 6x5 grid, A1
+`Version creation control`, and blank B2, but contained zero named-cell rows.
+The saved Draft row is evidence that a version exists; it is not evidence that
+the named-cell contract saved. The destination, OAuth, REST, and PATCH gates
+remain closed.

@@ -2,6 +2,12 @@
 
 Classification: **`native_scalar_minimal_destination_probe_failed`**
 
+Version-state reconciliation: a subsequent direct observation of this
+worksheet's QBench **Versions** tab showed the visible row
+`1 - Native Scalar 43 Field Base v1` with status `DRAFT`. The 0/7 result is
+therefore retained as a named-cell persistence failure, not as evidence that a
+Draft version was never created.
+
 Worksheet:
 `SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE`
 
