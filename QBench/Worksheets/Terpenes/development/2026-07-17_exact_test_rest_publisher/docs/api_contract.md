@@ -6,6 +6,20 @@ The client accepts only the exact HTTPS Sandbox base URL
 `https://ait-sandbox.qbench.net`. Redirects are rejected and TLS certificate
 verification uses Python's default trusted certificate store.
 
+## OAuth client-credentials exchange
+
+The publisher loads the Client ID and Client Secret from `--secrets-file` and
+can exchange them with a form-encoded HTTPS POST containing
+`grant_type=client_credentials`. The response must be JSON with a nonblank
+`access_token`, `token_type` equal to `Bearer`, and numeric `expires_in` from 1
+through 3,600 seconds. The token is held only in memory. The exchange has a
+timeout, no redirects, and no retry.
+
+The official same-host QBench token path has not yet been proven from task
+evidence. `token_path` is therefore blank and
+`token_endpoint_contract_proven` is false. This blocks the first token request;
+the code does not guess or probe an endpoint.
+
 Allowed operations:
 
 ```text
@@ -68,5 +82,5 @@ verification plus controlled-stop/rollback logic.
 - redirects to any alternate host;
 - live QBench endpoints.
 
-The API response shape and analyte range PATCH representation still require a
-read-only Sandbox inspection before any PATCH.
+The token endpoint, API response shape, and analyte range PATCH representation
+still require controlled Sandbox evidence before any PATCH.

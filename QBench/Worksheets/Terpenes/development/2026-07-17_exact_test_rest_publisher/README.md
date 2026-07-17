@@ -2,8 +2,8 @@
 
 Date: 2026-07-17
 
-Status: **local implementation validated; Sandbox API execution stopped before
-the first request**.
+Status: **local client-credential and destination-proof gates validated;
+Sandbox API execution paused before the first token request**.
 
 This package implements a controlled, Sandbox-only publisher for reviewed
 Terpenes Batch rows. It routes only by exact QBench Test ID, builds the complete
@@ -14,18 +14,22 @@ COA, or METRC artifact.
 
 ## Current controlled stop
 
-No `QBENCH_SANDBOX_TOKEN` or `QBENCH_BASE_URL` was present during Prompt 5B.
-The actual saved Sandbox Test Worksheet has also not proven all 43 writable
-destinations, and the REST representation for the 23-cell analyte range is not
-yet proven. Therefore:
+An ignored local secrets file now has all three required nonblank keys, and
+the base URL passes the exact Sandbox allowlist. No value was printed, logged,
+or persisted by the publisher. The actual saved/reopened Sandbox Test
+Worksheet has not yet proven all 43 writable destinations. The repository
+candidate passes the structural check with 43 of 43 targets writable, but it
+has no saved/reopened Sandbox provenance. The active 2026-06-30 saved export
+contains none of the 43 current destinations. Therefore:
 
-- no QBench API GET or PATCH was attempted;
+- no OAuth token request, QBench API GET, or PATCH was attempted;
 - no Sandbox object was created or modified;
 - scalar persistence, rollback, and multi-field atomicity remain unclassified
   in QBench;
 - `config/publisher_config.json` intentionally blocks publishing with
-  `api_patch_unresolved`, empty expected-workflow identifiers, and
-  `destination_contract_proven: false`.
+  `destination_contract_proven: false`, no locked destination-proof artifact,
+  an unproven OAuth token endpoint, `api_patch_unresolved`, and empty
+  expected-workflow identifiers.
 
 Do not change those controls from repository evidence alone. They may be
 changed only after the disposable Sandbox probes in `docs/atomicity_results.md`
@@ -43,26 +47,38 @@ and the saved Export Spreadsheet checks in `docs/field_mapping.md` pass.
   rolled back when safe, and stops the Batch.
 - Audit files hash Test, Sample, Batch, and reviewer identifiers and never
   include credentials, headers, cookies, signed URLs, or raw API error bodies.
+- Client ID and Client Secret are loaded only from `--secrets-file`.
+- The OAuth client-credentials response is accepted only as a short-lived
+  Bearer token with a lifetime of at most one hour. It remains in memory and is
+  never written to disk.
+- Destination proof and token-endpoint proof must pass before credential
+  loading or token exchange for any API command.
 - Preflight failures create a sanitized no-plan audit before the CLI exits.
 - Local `audit/` and secret files are ignored by Git.
 
 ## Commands
 
-Run these commands from this directory after completing the Sandbox prerequisites:
+Local-only commands that never request a token:
 
 ```text
-python terpenes_publisher.py inspect --batch-id <synthetic-batch-id>
-python terpenes_publisher.py dry-run --batch-id <synthetic-batch-id>
-python terpenes_publisher.py publish --batch-id <synthetic-batch-id> --execute
+python terpenes_publisher.py --secrets-file <ignored-local-file> credentials-check
+python terpenes_publisher.py prove-destination --worksheet-export <export.json> --provenance <provenance.json> --output <proof.json>
 ```
 
-Credential loading order:
+The proof output is written only when all 43 targets pass and the export has
+valid saved/reopened synthetic-Sandbox provenance.
 
-1. `QBENCH_SANDBOX_TOKEN` environment variable;
-2. an ignored local secrets file passed with `--secrets-file`.
+Run these commands only after completing and locking both pre-token proofs:
 
-The checked-in `.env.example` contains variable names only. Never store a real
-token in this directory outside an ignored file.
+```text
+python terpenes_publisher.py --secrets-file <ignored-local-file> inspect --batch-id <synthetic-batch-id>
+python terpenes_publisher.py --secrets-file <ignored-local-file> dry-run --batch-id <synthetic-batch-id>
+python terpenes_publisher.py --secrets-file <ignored-local-file> publish --batch-id <synthetic-batch-id> --execute
+```
+
+The checked-in `.env.example` contains only `QBENCH_BASE_URL`,
+`QBENCH_CLIENT_ID`, and `QBENCH_CLIENT_SECRET` with blank values. Pass the
+exact local filename to `--secrets-file`; never commit that file.
 
 ## Local validation
 
@@ -71,7 +87,7 @@ python -m unittest discover -s tests -v
 python validate_prompt_5b_package.py
 ```
 
-Current result: 34 unit tests passed. The tests use only synthetic identifiers
+Current result: 44 unit tests passed. The tests use only synthetic identifiers
 and in-memory API behavior; they are not Sandbox success evidence.
 
 ## Release checklist for QBench Sandbox
@@ -82,14 +98,19 @@ and in-memory API behavior; they are not Sandbox success evidence.
    non-Pass/Fail destinations.
 4. Record exact synthetic assay, workflow, worksheet, Batch, Sample, and Test
    identifiers in a local ignored evidence file.
-5. Supply a Sandbox-only token at runtime.
-6. Run `inspect`, then review the sanitized audit.
-7. Run the scalar and rollback probe manually as documented.
-8. Run the multi-field invalid-field probe and classify atomicity.
-9. Keep direct publishing blocked unless the classification is
+5. Create the provenance JSON described in
+   `docs/destination_contract_results.md` and generate the locked proof.
+6. Confirm the documented same-host OAuth token path, then lock
+   `token_endpoint_contract_proven` and `token_path` in configuration.
+7. Supply Sandbox client credentials through the ignored secrets file.
+8. Pause for explicit authorization before the first token request.
+9. Run `inspect`, then review the sanitized audit.
+10. Run the scalar and rollback probe manually as documented.
+11. Run the multi-field invalid-field probe and classify atomicity.
+12. Keep direct publishing blocked unless the classification is
    `api_patch_atomic`; otherwise stop and design staging-and-commit.
-10. Run `dry-run` and review every old/new field value.
-11. Publish one fresh synthetic Test, verify, and repeat the dry-run to prove
+13. Run `dry-run` and review every old/new field value.
+14. Publish one fresh synthetic Test, verify, and repeat the dry-run to prove
     `NO CHANGE`.
-12. Publish a fresh three-Test synthetic Batch and stop on the first failure.
-13. Do not promote to live QBench from this package.
+15. Publish a fresh three-Test synthetic Batch and stop on the first failure.
+16. Do not promote to live QBench from this package.

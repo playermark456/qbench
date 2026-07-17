@@ -5,7 +5,7 @@ import csv
 import datetime as dt
 import hashlib
 import json
-import os
+import math
 import re
 import ssl
 import sys
@@ -16,11 +16,11 @@ from enum import Enum
 from pathlib import Path
 from typing import Any, Callable, Iterable, Mapping, Sequence
 from urllib.error import HTTPError, URLError
-from urllib.parse import quote, urlsplit
+from urllib.parse import quote, urlencode, urlsplit
 from urllib.request import HTTPRedirectHandler, HTTPSHandler, Request, build_opener
 
 
-APP_VERSION = "0.1.0"
+APP_VERSION = "0.2.0"
 ALLOWED_BASE_URL = "https://ait-sandbox.qbench.net"
 REPORTABLE_ANALYTE_COUNT = 23
 COMPOUND_RESULTS_COUNT = 24
@@ -137,24 +137,63 @@ def validate_base_url(value: str) -> str:
     return candidate
 
 
-def load_token(secrets_file: Path | None = None, environ: Mapping[str, str] | None = None) -> str:
-    env = os.environ if environ is None else environ
-    token = env.get("QBENCH_SANDBOX_TOKEN", "")
-    if token:
-        return token
-    if secrets_file is not None:
-        try:
-            for raw_line in secrets_file.read_text(encoding="utf-8").splitlines():
-                line = raw_line.strip()
-                if not line or line.startswith("#") or "=" not in line:
-                    continue
-                key, candidate = line.split("=", 1)
-                if key == "QBENCH_SANDBOX_TOKEN" and candidate:
-                    return candidate
-        except OSError as exc:
-            raise ConfigurationError("Local secrets file could not be read") from exc
-    raise ConfigurationError(
-        "Sandbox API credential is unavailable; set QBENCH_SANDBOX_TOKEN or use an ignored local secrets file"
+@dataclass(frozen=True)
+class ClientCredentials:
+    base_url: str
+    client_id: str = field(repr=False)
+    client_secret: str = field(repr=False)
+
+
+@dataclass(frozen=True)
+class AccessToken:
+    value: str = field(repr=False)
+    expires_at_epoch: float
+    token_type: str = "Bearer"
+
+
+def _read_key_value_file(secrets_file: Path) -> dict[str, str]:
+    try:
+        lines = secrets_file.read_text(encoding="utf-8").splitlines()
+    except OSError as exc:
+        raise ConfigurationError("Local secrets file could not be read") from exc
+    entries: dict[str, str] = {}
+    duplicates: set[str] = set()
+    for raw_line in lines:
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        if key in entries:
+            duplicates.add(key)
+        entries[key] = value
+    required = {"QBENCH_BASE_URL", "QBENCH_CLIENT_ID", "QBENCH_CLIENT_SECRET"}
+    duplicate_required = sorted(required & duplicates)
+    if duplicate_required:
+        raise ConfigurationError("Credential file contains duplicate required keys: " + ", ".join(duplicate_required))
+    return entries
+
+
+def credential_key_status(secrets_file: Path) -> dict[str, bool]:
+    entries = _read_key_value_file(secrets_file)
+    return {
+        key: key in entries and bool(entries[key].strip())
+        for key in ("QBENCH_BASE_URL", "QBENCH_CLIENT_ID", "QBENCH_CLIENT_SECRET")
+    }
+
+
+def load_client_credentials(secrets_file: Path | None) -> ClientCredentials:
+    if secrets_file is None:
+        raise ConfigurationError("--secrets-file is required for QBench client credentials")
+    entries = _read_key_value_file(secrets_file)
+    required = ("QBENCH_BASE_URL", "QBENCH_CLIENT_ID", "QBENCH_CLIENT_SECRET")
+    missing = [key for key in required if key not in entries or not entries[key].strip()]
+    if missing:
+        raise ConfigurationError("Credential file is missing nonblank required keys: " + ", ".join(missing))
+    return ClientCredentials(
+        validate_base_url(entries["QBENCH_BASE_URL"]),
+        entries["QBENCH_CLIENT_ID"],
+        entries["QBENCH_CLIENT_SECRET"],
     )
 
 
@@ -167,6 +206,89 @@ class NoRedirectHandler(HTTPRedirectHandler):
 class HttpResponse:
     status: int
     body: Any
+
+
+class QBenchTokenClient:
+    """OAuth client-credentials exchange with no retries and no token persistence."""
+
+    def __init__(
+        self,
+        credentials: ClientCredentials,
+        token_path: str,
+        *,
+        max_lifetime_seconds: int = 3600,
+        opener: Callable[[Request, float], HttpResponse] | None = None,
+        timeout_seconds: float = 20.0,
+        clock: Callable[[], float] = time.time,
+    ):
+        parsed_path = urlsplit(token_path)
+        if (
+            not token_path.startswith("/")
+            or token_path.startswith("//")
+            or parsed_path.scheme
+            or parsed_path.netloc
+            or parsed_path.query
+            or parsed_path.fragment
+            or parsed_path.path != token_path
+        ):
+            raise ConfigurationError("OAuth token path is not a safe same-host path")
+        self._credentials = credentials
+        self._token_path = token_path
+        self._max_lifetime_seconds = max_lifetime_seconds
+        self._opener = opener or self._urlopen
+        self._timeout_seconds = timeout_seconds
+        self._clock = clock
+
+    def _urlopen(self, request: Request, timeout: float) -> HttpResponse:
+        context = ssl.create_default_context()
+        opener = build_opener(NoRedirectHandler(), HTTPSHandler(context=context))
+        with opener.open(request, timeout=timeout) as response:
+            raw = response.read()
+            try:
+                body = json.loads(raw.decode("utf-8")) if raw else {}
+            except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+                raise SchemaError("OAuth token response is not valid UTF-8 JSON") from exc
+            return HttpResponse(status=response.status, body=body)
+
+    def exchange(self) -> AccessToken:
+        form = urlencode(
+            {
+                "grant_type": "client_credentials",
+                "client_id": self._credentials.client_id,
+                "client_secret": self._credentials.client_secret,
+            }
+        ).encode("utf-8")
+        request = Request(
+            self._credentials.base_url + self._token_path,
+            data=form,
+            headers={
+                "Accept": "application/json",
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            method="POST",
+        )
+        try:
+            response = self._opener(request, self._timeout_seconds)
+        except HTTPError as exc:
+            raise ApiError("OAuth token request", exc.code) from None
+        except (TimeoutError, URLError, OSError):
+            raise ApiError("OAuth token request") from None
+        if not 200 <= response.status < 300:
+            raise ApiError("OAuth token request", response.status)
+        if not isinstance(response.body, Mapping):
+            raise SchemaError("OAuth token response must be a JSON object")
+        value = response.body.get("access_token")
+        token_type = response.body.get("token_type")
+        expires_in = response.body.get("expires_in")
+        if not isinstance(value, str) or not value.strip():
+            raise SchemaError("OAuth token response is missing access_token")
+        if not isinstance(token_type, str) or token_type.lower() != "bearer":
+            raise SchemaError("OAuth token response token_type must be Bearer")
+        if isinstance(expires_in, bool) or not isinstance(expires_in, (int, float)):
+            raise SchemaError("OAuth token response expires_in must be numeric")
+        if not math.isfinite(float(expires_in)) or expires_in <= 0 or expires_in > self._max_lifetime_seconds:
+            raise SecurityError("OAuth token lifetime is outside the approved short-lived limit")
+        return AccessToken(value, self._clock() + float(expires_in))
 
 
 @dataclass(frozen=True)
@@ -456,6 +578,24 @@ class WorksheetDocument:
             raise SchemaError(f"Named cell does not cover the required row: {name}")
         return self.get_cell(f"{sheet}!{start_col}{worksheet_row}")
 
+    def cell_metadata(self, reference: str) -> Mapping[str, Any] | None:
+        sheet, start, end = parse_reference(reference)
+        if not sheet or start != end:
+            return None
+        config = self.payload.get("config")
+        worksheets = config.get("worksheets") if isinstance(config, Mapping) else None
+        if not isinstance(worksheets, list):
+            return None
+        for worksheet in worksheets:
+            if not isinstance(worksheet, Mapping) or worksheet.get("worksheetName") != sheet:
+                continue
+            cells = worksheet.get("cells")
+            if not isinstance(cells, Mapping):
+                return None
+            metadata = cells.get(start)
+            return metadata if isinstance(metadata, Mapping) else None
+        return None
+
     def formula_manifest(self) -> dict[str, str]:
         formulas: dict[str, str] = {}
         for sheet_name, rows in self.sheets.items():
@@ -564,6 +704,101 @@ class DestinationContract:
     @staticmethod
     def values(document: WorksheetDocument, fields: Sequence[FieldSpec]) -> dict[str, Any]:
         return {spec.destination_named_cell: document.get_cell(spec.destination_cell) for spec in fields}
+
+
+@dataclass(frozen=True)
+class DestinationProofResult:
+    status: str
+    worksheet_export_sha256: str
+    mapping_sha256: str
+    target_count: int
+    writable_target_count: int
+    structural_issues: tuple[str, ...]
+    provenance_issues: tuple[str, ...]
+
+    @property
+    def passed(self) -> bool:
+        return self.status == "saved_sandbox_destination_contract_proven"
+
+    def as_dict(self) -> dict[str, Any]:
+        return {
+            "schema_version": 1,
+            "status": self.status,
+            "sandbox_hostname": "ait-sandbox.qbench.net",
+            "worksheet_export_sha256": self.worksheet_export_sha256,
+            "mapping_sha256": self.mapping_sha256,
+            "target_count": self.target_count,
+            "writable_target_count": self.writable_target_count,
+            "all_targets_unique": self.target_count == 43,
+            "formula_owned_target_count": sum(
+                issue.startswith("formula_owned_destination:") for issue in self.structural_issues
+            ),
+            "pass_fail_target_count": sum("pass_fail" in issue for issue in self.structural_issues),
+            "structural_issues": list(self.structural_issues),
+            "provenance_issues": list(self.provenance_issues),
+        }
+
+
+def prove_destination_contract(
+    worksheet_export: Path,
+    mapping_path: Path,
+    provenance_path: Path | None = None,
+) -> DestinationProofResult:
+    try:
+        worksheet_bytes = worksheet_export.read_bytes()
+        worksheet_payload = json.loads(worksheet_bytes)
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ConfigurationError("Destination worksheet export could not be loaded") from exc
+    fields = load_mapping(mapping_path)
+    document = WorksheetDocument(worksheet_payload)
+    structural_issues = DestinationContract.issues(document, fields)
+    writable_count = 0
+    for spec in fields:
+        metadata = document.cell_metadata(spec.destination_cell)
+        if metadata is None:
+            structural_issues.append(f"writability_metadata_missing:{spec.destination_named_cell}")
+        elif metadata.get("readonly") is not False:
+            structural_issues.append(f"destination_not_writable:{spec.destination_named_cell}")
+        else:
+            writable_count += 1
+    provenance_issues: list[str] = []
+    worksheet_sha256 = hashlib.sha256(worksheet_bytes).hexdigest()
+    if provenance_path is None:
+        provenance_issues.append("saved_export_provenance_missing")
+    else:
+        try:
+            provenance = json.loads(provenance_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            raise ConfigurationError("Destination proof provenance could not be loaded") from exc
+        if not isinstance(provenance, Mapping):
+            raise ConfigurationError("Destination proof provenance must be a JSON object")
+        required_provenance = {
+            "sandbox_hostname": "ait-sandbox.qbench.net",
+            "export_action": "Export Spreadsheet",
+            "saved": True,
+            "reopened": True,
+            "synthetic_only": True,
+            "export_sha256": worksheet_sha256,
+        }
+        for key, expected in required_provenance.items():
+            if provenance.get(key) != expected:
+                provenance_issues.append(f"invalid_saved_export_provenance:{key}")
+        display_name = provenance.get("worksheet_display_name")
+        if not isinstance(display_name, str) or not display_name.startswith("SBX_ONLY_"):
+            provenance_issues.append("saved_export_not_explicitly_task_synthetic")
+    structural_issues = sorted(set(structural_issues))
+    provenance_issues = sorted(set(provenance_issues))
+    passed = not structural_issues and not provenance_issues and writable_count == 43
+    status = "saved_sandbox_destination_contract_proven" if passed else "destination_contract_not_proven"
+    return DestinationProofResult(
+        status,
+        worksheet_sha256,
+        hashlib.sha256(mapping_path.read_bytes()).hexdigest(),
+        len(fields),
+        writable_count,
+        tuple(structural_issues),
+        tuple(provenance_issues),
+    )
 
 
 @dataclass(frozen=True)
@@ -798,6 +1033,10 @@ class PublisherConfig:
     destination_contract_proven: bool
     atomicity_classification: str
     analyte_patch_key_contract: str
+    token_path: str = ""
+    token_endpoint_contract_proven: bool = False
+    destination_contract_proof_file: str = ""
+    destination_contract_proof_sha256: str = ""
 
     @classmethod
     def from_path(cls, path: Path) -> "PublisherConfig":
@@ -806,14 +1045,57 @@ class PublisherConfig:
         except (OSError, json.JSONDecodeError) as exc:
             raise ConfigurationError("Publisher configuration could not be loaded") from exc
         return cls(
-            str(payload.get("required_batch_display_name_prefix", "SBX_ONLY_")),
-            tuple(str(value) for value in payload.get("expected_assay_ids", [])),
-            tuple(str(value) for value in payload.get("expected_assay_names", [])),
-            tuple(str(value) for value in payload.get("expected_workflows", [])),
-            payload.get("destination_contract_proven") is True,
-            str(payload.get("atomicity_classification", "api_patch_unresolved")),
-            str(payload.get("analyte_patch_key_contract", "unresolved")),
+            required_batch_display_name_prefix=str(payload.get("required_batch_display_name_prefix", "SBX_ONLY_")),
+            expected_assay_ids=tuple(str(value) for value in payload.get("expected_assay_ids", [])),
+            expected_assay_names=tuple(str(value) for value in payload.get("expected_assay_names", [])),
+            expected_workflows=tuple(str(value) for value in payload.get("expected_workflows", [])),
+            destination_contract_proven=payload.get("destination_contract_proven") is True,
+            atomicity_classification=str(payload.get("atomicity_classification", "api_patch_unresolved")),
+            analyte_patch_key_contract=str(payload.get("analyte_patch_key_contract", "unresolved")),
+            token_path=str(payload.get("token_path", "")),
+            token_endpoint_contract_proven=payload.get("token_endpoint_contract_proven") is True,
+            destination_contract_proof_file=str(payload.get("destination_contract_proof_file", "")),
+            destination_contract_proof_sha256=str(payload.get("destination_contract_proof_sha256", "")),
         )
+
+    def pre_token_issues(self, package_root: Path) -> list[str]:
+        issues: list[str] = []
+        if not self.destination_contract_proven:
+            issues.append("saved_destination_contract_not_proven_before_token_request")
+        if not self.destination_contract_proof_file or not self.destination_contract_proof_sha256:
+            issues.append("destination_contract_proof_lock_missing")
+        else:
+            proof_path = package_root / self.destination_contract_proof_file
+            if not proof_path.is_file():
+                issues.append("destination_contract_proof_file_missing")
+            elif hashlib.sha256(proof_path.read_bytes()).hexdigest() != self.destination_contract_proof_sha256:
+                issues.append("destination_contract_proof_hash_mismatch")
+            else:
+                try:
+                    proof = json.loads(proof_path.read_text(encoding="utf-8"))
+                except json.JSONDecodeError:
+                    issues.append("destination_contract_proof_json_invalid")
+                else:
+                    current_mapping_hash = hashlib.sha256(
+                        (package_root / "config" / "field_mapping.csv").read_bytes()
+                    ).hexdigest()
+                    if proof.get("status") != "saved_sandbox_destination_contract_proven":
+                        issues.append("destination_contract_proof_status_not_proven")
+                    if proof.get("sandbox_hostname") != "ait-sandbox.qbench.net":
+                        issues.append("destination_contract_proof_wrong_sandbox")
+                    if proof.get("mapping_sha256") != current_mapping_hash:
+                        issues.append("destination_contract_proof_mapping_hash_mismatch")
+                    if proof.get("target_count") != 43 or proof.get("writable_target_count") != 43:
+                        issues.append("destination_contract_proof_not_complete_43_writable_targets")
+                    if proof.get("all_targets_unique") is not True:
+                        issues.append("destination_contract_proof_targets_not_unique")
+                    if proof.get("formula_owned_target_count") != 0 or proof.get("pass_fail_target_count") != 0:
+                        issues.append("destination_contract_proof_contains_prohibited_targets")
+                    if proof.get("structural_issues") != [] or proof.get("provenance_issues") != []:
+                        issues.append("destination_contract_proof_contains_issues")
+        if not self.token_endpoint_contract_proven or not self.token_path:
+            issues.append("oauth_token_endpoint_contract_not_proven")
+        return sorted(set(issues))
 
     def runtime_issues(self) -> list[str]:
         issues: list[str] = []
@@ -1249,13 +1531,17 @@ def _package_root() -> Path:
 def _build_parser() -> argparse.ArgumentParser:
     root = _package_root()
     parser = argparse.ArgumentParser(description="Sandbox-only exact-Test Terpenes publisher")
-    parser.add_argument("--base-url", default=os.environ.get("QBENCH_BASE_URL", ALLOWED_BASE_URL))
     parser.add_argument("--secrets-file", type=Path)
     parser.add_argument("--mapping", type=Path, default=root / "config" / "field_mapping.csv")
     parser.add_argument("--config", type=Path, default=root / "config" / "publisher_config.json")
     parser.add_argument("--audit-dir", type=Path, default=root / "audit")
     parser.add_argument("--state-file", type=Path, default=root / "audit" / "publisher_state.json")
     subparsers = parser.add_subparsers(dest="command", required=True)
+    subparsers.add_parser("credentials-check")
+    proof = subparsers.add_parser("prove-destination")
+    proof.add_argument("--worksheet-export", required=True, type=Path)
+    proof.add_argument("--provenance", type=Path)
+    proof.add_argument("--output", type=Path)
     for name in ("inspect", "dry-run", "publish"):
         sub = subparsers.add_parser(name)
         sub.add_argument("--batch-id", required=True)
@@ -1274,13 +1560,38 @@ def _print_plan(plan: PreparedPlan) -> None:
 
 def main(argv: Sequence[str] | None = None) -> int:
     args = _build_parser().parse_args(argv)
-    writer = AuditWriter(args.audit_dir)
+    writer = AuditWriter(args.audit_dir) if args.command in ("inspect", "dry-run", "publish") else None
     try:
-        base_url = validate_base_url(args.base_url)
-        token = load_token(args.secrets_file)
         fields = load_mapping(args.mapping)
+        if args.command == "credentials-check":
+            status = credential_key_status(args.secrets_file) if args.secrets_file is not None else {}
+            load_client_credentials(args.secrets_file)
+            for key in ("QBENCH_BASE_URL", "QBENCH_CLIENT_ID", "QBENCH_CLIENT_SECRET"):
+                print(f"{key}: present_and_nonblank={status.get(key) is True}")
+            print("base_url_allowlist: passed")
+            print("token_request: not_attempted")
+            return 0
+        if args.command == "prove-destination":
+            result = prove_destination_contract(args.worksheet_export, args.mapping, args.provenance)
+            print(f"status: {result.status}")
+            print(f"target_count: {result.target_count}")
+            print(f"writable_target_count: {result.writable_target_count}")
+            for issue in result.structural_issues + result.provenance_issues:
+                print(f"issue: {issue}")
+            if args.output is not None:
+                if not result.passed:
+                    raise ConfigurationError("Destination proof did not pass; proof artifact was not written")
+                args.output.parent.mkdir(parents=True, exist_ok=True)
+                args.output.write_text(json.dumps(result.as_dict(), indent=2, sort_keys=True) + "\n", encoding="utf-8")
+                print(f"proof_sha256: {hashlib.sha256(args.output.read_bytes()).hexdigest()}")
+            return 0 if result.passed else 2
         config = PublisherConfig.from_path(args.config)
-        client = QBenchClient(base_url, token)
+        pre_token_issues = config.pre_token_issues(_package_root())
+        if pre_token_issues:
+            raise ConfigurationError("Pre-token gate blocked: " + ", ".join(pre_token_issues))
+        credentials = load_client_credentials(args.secrets_file)
+        access_token = QBenchTokenClient(credentials, config.token_path).exchange()
+        client = QBenchClient(credentials.base_url, access_token.value)
         publisher = Publisher(client, fields, config, StateStore(args.state_file))
         plan = publisher.prepare(args.batch_id)
         _print_plan(plan)
@@ -1301,11 +1612,14 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(f"Sanitized audit manifest: {artifacts['manifest']}")
         return 0 if final_result == "publish_complete" else 3
     except PublisherError as exc:
-        artifacts = writer.write(
-            args.command,
-            None,
-            final_result=f"preflight_blocked:{type(exc).__name__}",
-        )
+        artifacts = None
+        if writer is not None:
+            artifacts = writer.write(
+                args.command,
+                None,
+                final_result=f"preflight_blocked:{type(exc).__name__}",
+            )
         print(f"ERROR: {sanitize_text(exc)}", file=sys.stderr)
-        print(f"Sanitized audit manifest: {artifacts['manifest']}", file=sys.stderr)
+        if artifacts is not None:
+            print(f"Sanitized audit manifest: {artifacts['manifest']}", file=sys.stderr)
         return 2

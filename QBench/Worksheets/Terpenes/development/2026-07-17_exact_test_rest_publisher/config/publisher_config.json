@@ -6,7 +6,11 @@
   "expected_assay_names": [],
   "expected_workflows": [],
   "destination_contract_proven": false,
+  "destination_contract_proof_file": "",
+  "destination_contract_proof_sha256": "",
   "atomicity_classification": "api_patch_unresolved",
   "analyte_patch_key_contract": "unresolved",
+  "token_path": "",
+  "token_endpoint_contract_proven": false,
   "status": "controlled_stop_until_sandbox_evidence_exists"
 }

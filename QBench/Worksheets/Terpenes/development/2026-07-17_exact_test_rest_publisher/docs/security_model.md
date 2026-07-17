@@ -2,18 +2,22 @@
 
 ## Credential boundary
 
-The application accepts a Sandbox-only token from
-`QBENCH_SANDBOX_TOKEN` or an ignored local secrets file. The sample environment
-file contains variable names only. Root `.gitignore` patterns were added before
-the runtime environment was checked for a credential.
+The application accepts QBench client credentials only from an ignored local
+file passed with `--secrets-file`. It requires nonblank `QBENCH_BASE_URL`,
+`QBENCH_CLIENT_ID`, and `QBENCH_CLIENT_SECRET`. The local credential check
+reports only key presence/nonblank status and the allowlist result. The sample
+environment file contains blank variable names only, and root `.gitignore`
+patterns cover `.env.local` and Windows-appended variants such as
+`.env.local.txt`.
+
+The OAuth exchange uses `grant_type=client_credentials`. The Client ID and
+Client Secret exist only in process memory after file loading. A successful
+response must contain a Bearer access token with a positive lifetime no longer
+than 3,600 seconds. The token remains in memory and is never persisted.
 
 The application never returns, prints, logs, screenshots, fixtures, or embeds
-the token. It does not accept a token as a command-line argument because
-command histories and process listings may expose it.
-
-Windows Credential Manager is an acceptable operator-managed alternative, but
-this implementation does not retrieve from it directly. An operator may load
-the token into the environment immediately before running the process.
+the credential values or access token. It does not accept them as command-line
+values because command histories and process listings may expose them.
 
 ## Host and transport controls
 
@@ -23,6 +27,8 @@ the token into the environment immediately before running the process.
 - no userinfo, path, query, or fragment in the base URL;
 - TLS verification enabled;
 - redirects disabled;
+- same-host relative OAuth token path only;
+- no OAuth retry;
 - limited GET-only retries;
 - no PATCH retry.
 
@@ -44,6 +50,11 @@ Publishing is blocked if any credential, host, schema, identity, membership,
 workflow, reviewer, source, destination, formula, atomicity, idempotency, or
 rollback prerequisite is unresolved. No configuration option bypasses the
 prohibition on Pass/Fail/result fields.
+
+Before any token request, the application requires both a SHA-256-locked,
+passing 43-field saved-Sandbox destination proof and an explicitly proven OAuth
+token endpoint contract. The current configuration has neither, so API
+commands stop before the secrets file is loaded or a token client is created.
 
 The default configuration also rejects any Batch whose display name does not
 begin with `SBX_ONLY_`, before worksheet content is processed. This task build

@@ -40,7 +40,16 @@ Test Worksheet and verify:
 7. Peak Table values are not mapped;
 8. no Test Worksheet Pass/Fail named cell exists.
 
-The repository candidate passes the structural base-name/cell comparison, but
-that candidate is not proof of the actual saved Sandbox worksheet. Prompt 5A's
-post-run Test Worksheet export lacked its intended destination named cell, so
-repository-only evidence cannot clear this gate.
+The 2026-07-17 local proof run established:
+
+- repository candidate: 43 targets found, 43 unique, 43 writable by exported
+  cell metadata, zero formula-owned destinations, and zero Pass/Fail mappings;
+- candidate result: not proven because saved/reopened Sandbox provenance is
+  missing;
+- active saved 2026-06-30 Test Worksheet export: zero of the 43 current
+  destinations, so it cannot clear the gate;
+- no proof artifact was generated and `destination_contract_proven` remains
+  false.
+
+See `destination_contract_results.md` for hashes, provenance requirements, and
+the exact controlled stop.

@@ -24,6 +24,7 @@ REQUIRED = {
     "docs/security_model.md",
     "docs/publish_gate.md",
     "docs/field_mapping.md",
+    "docs/destination_contract_results.md",
     "docs/atomicity_results.md",
     "docs/rollback_contract.md",
     "docs/idempotency_contract.md",
@@ -66,6 +67,10 @@ def main() -> int:
     config = json.loads((ROOT / "config/publisher_config.json").read_text(encoding="utf-8"))
     if config.get("destination_contract_proven") is not False:
         failures.append("destination contract must remain unproven")
+    if config.get("destination_contract_proof_file") or config.get("destination_contract_proof_sha256"):
+        failures.append("unearned destination proof lock is configured")
+    if config.get("token_endpoint_contract_proven") is not False or config.get("token_path"):
+        failures.append("unproven OAuth token endpoint is configured")
     if config.get("required_batch_display_name_prefix") != "SBX_ONLY_":
         failures.append("synthetic Batch display-name prefix is not enforced")
     if config.get("atomicity_classification") != "api_patch_unresolved":
@@ -78,6 +83,8 @@ def main() -> int:
         'ALLOWED_BASE_URL = "https://ait-sandbox.qbench.net"',
         "/qbench/api/v1/batch/",
         "/qbench/api/v1/test/",
+        '"grant_type": "client_credentials"',
+        "saved_destination_contract_not_proven_before_token_request",
         "api_patch_atomic",
         "PUBLISH REVIEWED TERPENES BATCH",
     ):
@@ -87,10 +94,10 @@ def main() -> int:
         failures.append("live QBench URL appears in executable code")
 
     env_lines = (ROOT / ".env.example").read_text(encoding="utf-8").splitlines()
-    if env_lines != ["QBENCH_BASE_URL=", "QBENCH_SANDBOX_TOKEN="]:
+    if env_lines != ["QBENCH_BASE_URL=", "QBENCH_CLIENT_ID=", "QBENCH_CLIENT_SECRET="]:
         failures.append("sample environment file must contain blank variable names only")
     gitignore = (REPO_ROOT / ".gitignore").read_text(encoding="utf-8")
-    for pattern in (".env", "*.secret", "*.secrets", "qbench_sandbox_token*"):
+    for pattern in (".env", ".env.*", "*.secret", "*.secrets", "qbench_sandbox_token*"):
         if pattern not in gitignore:
             failures.append(f"root .gitignore missing secret pattern: {pattern}")
 
@@ -99,6 +106,8 @@ def main() -> int:
         failures.append("manifest atomicity classification is incorrect")
     if manifest.get("sandbox", {}).get("api_requests_attempted") != 0:
         failures.append("manifest claims a Sandbox API request")
+    if manifest.get("sandbox", {}).get("token_requests_attempted") != 0:
+        failures.append("manifest claims a token request")
     if manifest.get("sandbox", {}).get("objects_created_or_changed") != []:
         failures.append("manifest claims Prompt 5B Sandbox mutations")
     for item in manifest.get("generated_files", []):
@@ -118,7 +127,7 @@ def main() -> int:
     print("- 43 ordered non-Pass/Fail destinations")
     print("- exact Sandbox-only executable allowlist")
     print("- atomicity remains api_patch_unresolved")
-    print("- zero Sandbox API requests and zero Prompt 5B object changes")
+    print("- zero token requests, zero Sandbox API requests, and zero Prompt 5B object changes")
     print(f"- {len(manifest['generated_files'])} generated-file hashes verified")
     return 0
 

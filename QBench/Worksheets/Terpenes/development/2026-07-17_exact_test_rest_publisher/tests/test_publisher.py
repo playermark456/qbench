@@ -18,6 +18,7 @@ sys.path.insert(0, str(PACKAGE_ROOT / "src"))
 
 from terpenes_publisher import (  # noqa: E402
     ALLOWED_BASE_URL,
+    ClientCredentials,
     Action,
     AmbiguousPatchOutcome,
     ApiError,
@@ -29,6 +30,7 @@ from terpenes_publisher import (  # noqa: E402
     Publisher,
     PublisherConfig,
     QBenchClient,
+    QBenchTokenClient,
     SchemaError,
     SecurityError,
     StateStore,
@@ -36,9 +38,11 @@ from terpenes_publisher import (  # noqa: E402
     VerificationError,
     WorksheetDocument,
     contains_forbidden_field,
+    credential_key_status,
+    load_client_credentials,
     load_mapping,
-    load_token,
     main,
+    prove_destination_contract,
     sanitize_text,
     validate_base_url,
 )
@@ -153,8 +157,12 @@ def make_test_worksheet() -> dict:
     named_cells = {"terpenes_instrument_conc": {"cell": "Data!D2:Z2"}}
     for spec in FIELDS[23:]:
         named_cells[spec.destination_named_cell] = {"cell": spec.destination_cell}
+    writable_cells = {
+        spec.destination_cell.split("!", 1)[1]: {"readonly": False, "type": "text"}
+        for spec in FIELDS
+    }
     payload = {
-        "config": {},
+        "config": {"worksheets": [{"worksheetName": "Data", "cells": writable_cells}]},
         "qb_config": {"named_cells": named_cells},
         "data": {"Data": grid(45, 26)},
     }
@@ -267,10 +275,93 @@ class SecurityAndClientTests(unittest.TestCase):
             with self.assertRaises(SecurityError):
                 validate_base_url(value)
 
-    def test_token_loading_never_requires_printing_token(self) -> None:
-        self.assertEqual(load_token(environ={"QBENCH_SANDBOX_TOKEN": "sandbox-secret"}), "sandbox-secret")
-        with self.assertRaises(ConfigurationError):
-            load_token(environ={})
+    def test_client_credentials_load_from_file_without_repr_disclosure(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            secrets_path = Path(temporary_directory) / ".env.local"
+            secrets_path.write_text(
+                "QBENCH_BASE_URL=https://ait-sandbox.qbench.net\n"
+                "QBENCH_CLIENT_ID=synthetic-client-id\n"
+                "QBENCH_CLIENT_SECRET=synthetic-client-secret\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(
+                credential_key_status(secrets_path),
+                {
+                    "QBENCH_BASE_URL": True,
+                    "QBENCH_CLIENT_ID": True,
+                    "QBENCH_CLIENT_SECRET": True,
+                },
+            )
+            credentials = load_client_credentials(secrets_path)
+            self.assertEqual(credentials.base_url, ALLOWED_BASE_URL)
+            self.assertNotIn("synthetic-client-id", repr(credentials))
+            self.assertNotIn("synthetic-client-secret", repr(credentials))
+
+    def test_missing_or_blank_client_credential_is_blocked(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            secrets_path = Path(temporary_directory) / ".env.local"
+            secrets_path.write_text(
+                "QBENCH_BASE_URL=https://ait-sandbox.qbench.net\n"
+                "QBENCH_CLIENT_ID=\n",
+                encoding="utf-8",
+            )
+            with self.assertRaises(ConfigurationError) as raised:
+                load_client_credentials(secrets_path)
+            self.assertIn("QBENCH_CLIENT_ID", str(raised.exception))
+            self.assertIn("QBENCH_CLIENT_SECRET", str(raised.exception))
+
+    def test_client_credentials_exchange_returns_short_lived_in_memory_token(self) -> None:
+        calls = []
+
+        def opener(request, timeout):
+            calls.append((request, timeout))
+            return HttpResponse(
+                200,
+                {
+                    "access_token": "synthetic-access-token",
+                    "token_type": "Bearer",
+                    "expires_in": 900,
+                },
+            )
+
+        credentials = ClientCredentials(ALLOWED_BASE_URL, "synthetic-client-id", "synthetic-client-secret")
+        token = QBenchTokenClient(
+            credentials,
+            "/qbench/api/v1/oauth/token",
+            opener=opener,
+            clock=lambda: 1000.0,
+        ).exchange()
+        self.assertEqual(len(calls), 1)
+        self.assertEqual(calls[0][0].get_method(), "POST")
+        self.assertEqual(token.value, "synthetic-access-token")
+        self.assertEqual(token.expires_at_epoch, 1900.0)
+        self.assertNotIn("synthetic-access-token", repr(token))
+        self.assertNotIn("synthetic-client-secret", repr(credentials))
+
+    def test_invalid_or_long_lived_oauth_token_is_rejected(self) -> None:
+        credentials = ClientCredentials(ALLOWED_BASE_URL, "synthetic-client-id", "synthetic-client-secret")
+        for expires_in in (7200, float("nan")):
+            with self.subTest(expires_in=expires_in):
+                client = QBenchTokenClient(
+                    credentials,
+                    "/qbench/api/v1/oauth/token",
+                    opener=lambda *_, lifetime=expires_in: HttpResponse(
+                        200,
+                        {
+                            "access_token": "synthetic-access-token",
+                            "token_type": "Bearer",
+                            "expires_in": lifetime,
+                        },
+                    ),
+                )
+                with self.assertRaises(SecurityError):
+                    client.exchange()
+
+    def test_unsafe_oauth_token_path_is_rejected(self) -> None:
+        credentials = ClientCredentials(ALLOWED_BASE_URL, "synthetic-client-id", "synthetic-client-secret")
+        for token_path in ("https://example.invalid/token", "//example.invalid/token", "token", "/token?redirect=1"):
+            with self.assertRaises(ConfigurationError):
+                QBenchTokenClient(credentials, token_path)
 
     def test_sanitizer_removes_token_authorization_and_urls(self) -> None:
         value = "Authorization: Bearer sandbox-secret https://ait-sandbox.qbench.net/path"
@@ -370,6 +461,113 @@ class SecurityAndClientTests(unittest.TestCase):
         )
         with self.assertRaises(SchemaError):
             client.get_batch("B1")
+
+
+class LocalPreTokenProofTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.temporary_directory = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temporary_directory.cleanup)
+        self.root = Path(self.temporary_directory.name)
+        self.worksheet_path = self.root / "saved-export.json"
+        self.worksheet_path.write_text(json.dumps(make_test_worksheet()), encoding="utf-8")
+
+    def write_valid_provenance(self) -> Path:
+        provenance_path = self.root / "saved-export.provenance.json"
+        provenance_path.write_text(
+            json.dumps(
+                {
+                    "sandbox_hostname": "ait-sandbox.qbench.net",
+                    "export_action": "Export Spreadsheet",
+                    "saved": True,
+                    "reopened": True,
+                    "synthetic_only": True,
+                    "export_sha256": hashlib.sha256(self.worksheet_path.read_bytes()).hexdigest(),
+                    "worksheet_display_name": "SBX_ONLY_DESTINATION_PROOF",
+                }
+            ),
+            encoding="utf-8",
+        )
+        return provenance_path
+
+    def test_structural_43_field_candidate_without_saved_provenance_does_not_pass(self) -> None:
+        result = prove_destination_contract(self.worksheet_path, MAPPING_PATH)
+        self.assertFalse(result.passed)
+        self.assertEqual(result.target_count, 43)
+        self.assertEqual(result.writable_target_count, 43)
+        self.assertEqual(result.structural_issues, ())
+        self.assertEqual(result.provenance_issues, ("saved_export_provenance_missing",))
+
+    def test_saved_reopened_synthetic_provenance_allows_43_field_proof(self) -> None:
+        result = prove_destination_contract(self.worksheet_path, MAPPING_PATH, self.write_valid_provenance())
+        self.assertTrue(result.passed)
+        self.assertEqual(result.status, "saved_sandbox_destination_contract_proven")
+        self.assertEqual(result.target_count, 43)
+        self.assertEqual(result.writable_target_count, 43)
+
+    def test_readonly_destination_blocks_43_field_proof(self) -> None:
+        worksheet = make_test_worksheet()
+        worksheet["config"]["worksheets"][0]["cells"]["B12"]["readonly"] = True
+        self.worksheet_path.write_text(json.dumps(worksheet), encoding="utf-8")
+        result = prove_destination_contract(self.worksheet_path, MAPPING_PATH, self.write_valid_provenance())
+        self.assertFalse(result.passed)
+        self.assertIn("destination_not_writable:sample_mass_g", result.structural_issues)
+        self.assertEqual(result.writable_target_count, 42)
+
+    def test_current_configuration_blocks_before_any_token_request(self) -> None:
+        config = PublisherConfig.from_path(PACKAGE_ROOT / "config" / "publisher_config.json")
+        issues = config.pre_token_issues(PACKAGE_ROOT)
+        self.assertIn("saved_destination_contract_not_proven_before_token_request", issues)
+        self.assertIn("destination_contract_proof_lock_missing", issues)
+        self.assertIn("oauth_token_endpoint_contract_not_proven", issues)
+
+    def test_pre_token_gate_validates_locked_proof_contents_and_mapping_hash(self) -> None:
+        package_root = self.root / "package"
+        (package_root / "config").mkdir(parents=True)
+        (package_root / "config" / "field_mapping.csv").write_bytes(MAPPING_PATH.read_bytes())
+        result = prove_destination_contract(self.worksheet_path, MAPPING_PATH, self.write_valid_provenance())
+        proof_path = package_root / "destination-proof.json"
+        proof_path.write_text(json.dumps(result.as_dict()), encoding="utf-8")
+        config = PublisherConfig(
+            "SBX_ONLY_",
+            ("SBX-ASSAY",),
+            ("SBX_ONLY_TERPENES",),
+            ("Synthetic workflow",),
+            True,
+            "api_patch_unresolved",
+            "unresolved",
+            token_path="/qbench/api/v1/oauth/token",
+            token_endpoint_contract_proven=True,
+            destination_contract_proof_file="destination-proof.json",
+            destination_contract_proof_sha256=hashlib.sha256(proof_path.read_bytes()).hexdigest(),
+        )
+        self.assertEqual(config.pre_token_issues(package_root), [])
+
+        tampered = result.as_dict()
+        tampered["mapping_sha256"] = "0" * 64
+        proof_path.write_text(json.dumps(tampered), encoding="utf-8")
+        config = replace(
+            config,
+            destination_contract_proof_sha256=hashlib.sha256(proof_path.read_bytes()).hexdigest(),
+        )
+        self.assertIn("destination_contract_proof_mapping_hash_mismatch", config.pre_token_issues(package_root))
+
+    def test_credentials_check_prints_status_only_and_does_not_request_token(self) -> None:
+        secrets_path = self.root / ".env.local"
+        secrets_path.write_text(
+            "QBENCH_BASE_URL=https://ait-sandbox.qbench.net\n"
+            "QBENCH_CLIENT_ID=synthetic-client-id\n"
+            "QBENCH_CLIENT_SECRET=synthetic-client-secret\n",
+            encoding="utf-8",
+        )
+        output = io.StringIO()
+        with redirect_stdout(output), redirect_stderr(io.StringIO()):
+            result = main(["--secrets-file", str(secrets_path), "credentials-check"])
+        rendered = output.getvalue()
+        self.assertEqual(result, 0)
+        self.assertIn("QBENCH_CLIENT_SECRET: present_and_nonblank=True", rendered)
+        self.assertIn("token_request: not_attempted", rendered)
+        self.assertNotIn("synthetic-client-id", rendered)
+        self.assertNotIn("synthetic-client-secret", rendered)
 
 
 class PlanningAndGateTests(PublisherFixture):

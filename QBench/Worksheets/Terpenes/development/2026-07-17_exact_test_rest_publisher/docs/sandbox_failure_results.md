@@ -1,8 +1,16 @@
 # Sandbox failure and controlled-stop results
 
-No Sandbox API request was made. The runtime attempt stopped before request
-because no Sandbox credential was available. Destination and atomicity proofs
-were also absent.
+No token or Sandbox API request was made. The current pre-token gate stops
+because the saved 43-field destination proof and official OAuth endpoint
+contract are absent. The credential presence check passed without exposing any
+value. Atomicity proof is also absent.
+
+## Destination proof controlled stop
+
+The repository candidate is structurally complete and reports 43 of 43 targets
+as writable, but lacks saved/reopened Sandbox provenance. The older active
+saved export contains none of the 43 current destinations. Neither result can
+produce a passing proof artifact.
 
 ## Required failure cases exercised locally
 

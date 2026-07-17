@@ -1,15 +1,16 @@
 # Sandbox success results
 
-No Prompt 5B Sandbox success run was attempted.
+No Prompt 5B network or Sandbox success run was attempted.
 
-Credential preflight found neither `QBENCH_SANDBOX_TOKEN` nor
-`QBENCH_BASE_URL`. The actual saved Test Worksheet destination and analyte
-PATCH representation were also unproven. These are mandatory pre-PATCH stop
-conditions.
+The ignored local secrets file has all three required nonblank client-
+credential keys, and its base URL passes the exact Sandbox allowlist. Only
+presence booleans were emitted. The saved/reopened Test Worksheet destination,
+OAuth token endpoint, and analyte PATCH representation remain unproven. These
+are mandatory pre-token or pre-PATCH stop conditions.
 
 ## Local synthetic evidence only
 
-The 34-test standard-library suite passed and proved locally:
+The 44-test standard-library suite passed and proved locally:
 
 - exact Sandbox URL rejection;
 - rejection of non-task-synthetic Batch display names;
@@ -23,6 +24,12 @@ The 34-test standard-library suite passed and proved locally:
 - sanitized no-plan audits for credential/preflight failures;
 - duplicate unchanged publish produces `NO CHANGE` and zero PATCH calls;
 - three-Test sequence stops before the third after the second fails.
+- credential values and in-memory access tokens are excluded from dataclass
+  representations and command output;
+- tokens longer than one hour and unsafe token paths are rejected;
+- the current configuration blocks before a token request;
+- a structurally valid 43-field candidate cannot pass without saved/reopened
+  synthetic-Sandbox provenance.
 
 These results must not be reported as QBench API behavior.
 
