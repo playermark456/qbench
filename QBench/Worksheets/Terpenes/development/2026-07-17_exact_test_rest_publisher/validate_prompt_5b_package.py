@@ -38,6 +38,12 @@ REQUIRED = {
     "sandbox_destination_proof/pre_import_baseline.md",
     "sandbox_destination_proof/sanitized_destination_contract_evidence.json",
     "sandbox_destination_proof/sanitized_object_inventory.json",
+    "native_test_worksheet_probe/README.md",
+    "native_test_worksheet_probe/native_probe_configuration.md",
+    "native_test_worksheet_probe/native_probe_results.md",
+    "native_test_worksheet_probe/sanitized_object_inventory.json",
+    "native_test_worksheet_probe/raw_export_sha256.txt",
+    "native_test_worksheet_probe/sandbox_cleanup_plan.md",
     "prompt_5b_manifest.json",
 }
 
@@ -109,6 +115,8 @@ def main() -> int:
         "*.secrets",
         "qbench_sandbox_token*",
         "*object_ids.local.json",
+        "native_test_worksheet_probe/*saved_reopened_export_spreadsheet.json",
+        "native_test_worksheet_probe/*instantiated_export_spreadsheet.*",
     ):
         if pattern not in gitignore:
             failures.append(f"root .gitignore missing secret pattern: {pattern}")
@@ -156,6 +164,67 @@ def main() -> int:
     if inventory.get("pass_fail_artifact_introduced") is not False:
         failures.append("object inventory claims a Pass/Fail artifact")
 
+    native_inventory = json.loads(
+        (ROOT / "native_test_worksheet_probe/sanitized_object_inventory.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    native_classification = "native_test_worksheet_instantiation_passed"
+    if native_inventory.get("classification") != native_classification:
+        failures.append("native probe inventory classification is incorrect")
+    if native_inventory.get("sanitized") is not True or native_inventory.get(
+        "internal_sandbox_ids_omitted"
+    ) is not True:
+        failures.append("native probe inventory is not sanitized")
+    native_objects = native_inventory.get("objects", [])
+    if len(native_objects) != 6:
+        failures.append("native probe inventory does not contain six authorized objects")
+    if any(key == "id" or key.endswith("_id") for item in native_objects for key in item):
+        failures.append("tracked native probe inventory contains an internal Sandbox ID")
+    for key in (
+        "worksheet_association_persisted",
+        "native_definition_instantiated",
+        "exact_manual_probe_persisted",
+        "blank_baseline_restored",
+    ):
+        if native_inventory.get(key) is not True:
+            failures.append(f"native probe inventory does not prove {key}")
+    for key in (
+        "analytical_results_entered",
+        "pass_fail_artifact_introduced",
+        "credentials_displayed",
+        "oauth_token_requested",
+        "qbench_rest_api_requested",
+        "patch_requested",
+        "live_qbench_accessed",
+    ):
+        if native_inventory.get(key) is not False:
+            failures.append(f"native probe safety control is not false: {key}")
+
+    native_results = (ROOT / "native_test_worksheet_probe/native_probe_results.md").read_text(
+        encoding="utf-8"
+    )
+    for required_text in (
+        native_classification,
+        "old_sandbox_test_worksheet_engine = operational_for_native_definitions",
+        "imported_prompt3_test_worksheet = compatibility_failure",
+        "sandbox_native_test_probe",
+        "a43cb9779e03d401e5b43d69df6169a1236b51e45dd805bd9aee7353109f8b24",
+        "a72835d464d17a858c5d9a3fc88b31eae69c512f517cb1083c85f0cd32d73e9e",
+    ):
+        if required_text not in native_results:
+            failures.append(f"native probe results missing: {required_text}")
+
+    raw_hashes = (ROOT / "native_test_worksheet_probe/raw_export_sha256.txt").read_text(
+        encoding="utf-8"
+    )
+    for expected_hash in (
+        "a43cb9779e03d401e5b43d69df6169a1236b51e45dd805bd9aee7353109f8b24",
+        "a72835d464d17a858c5d9a3fc88b31eae69c512f517cb1083c85f0cd32d73e9e",
+    ):
+        if expected_hash not in raw_hashes:
+            failures.append(f"native raw-export hash evidence missing: {expected_hash}")
+
     manifest = json.loads((ROOT / "prompt_5b_manifest.json").read_text(encoding="utf-8"))
     if manifest.get("atomicity_classification") != "api_patch_unresolved":
         failures.append("manifest atomicity classification is incorrect")
@@ -163,7 +232,7 @@ def main() -> int:
         failures.append("manifest claims a Sandbox API request")
     if manifest.get("sandbox", {}).get("token_requests_attempted") != 0:
         failures.append("manifest claims a token request")
-    if manifest.get("status") != "normal_assay_test_instantiation_failed_blank_default_pre_token_controlled_stop":
+    if manifest.get("status") != "native_test_worksheet_instantiation_passed_pre_token_controlled_stop":
         failures.append("manifest controlled-stop status is incorrect")
     if manifest.get("mapping", {}).get("saved_worksheet_definition_contract") != "passed_43_of_43":
         failures.append("manifest saved-definition classification is incorrect")
@@ -171,6 +240,15 @@ def main() -> int:
         failures.append("manifest direct existing-Test classification is incorrect")
     if manifest.get("mapping", {}).get("normal_assay_test_instantiation") != normal_classification:
         failures.append("manifest normal Assay Test classification is incorrect")
+    native_manifest = manifest.get("native_test_worksheet_probe", {})
+    if native_manifest.get("classification") != native_classification:
+        failures.append("manifest native probe classification is incorrect")
+    if native_manifest.get("old_sandbox_test_worksheet_engine") != "operational_for_native_definitions":
+        failures.append("manifest native worksheet engine conclusion is incorrect")
+    if native_manifest.get("imported_prompt3_test_worksheet") != "compatibility_failure":
+        failures.append("manifest Prompt 3 compatibility conclusion is incorrect")
+    if native_manifest.get("blank_baseline_restored") is not True:
+        failures.append("manifest does not record restored native blank baseline")
     expected_sandbox_objects = [
         "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
         "SBX_ONLY_TERPENES_API_DESTINATION_PROOF_V2",
@@ -178,6 +256,12 @@ def main() -> int:
         "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF_SAMPLE",
         "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_ASSAY",
         "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_ASSAY_SAMPLE",
+        "SBX_ONLY_TERPENES_2026_07_17_NATIVE_TEST_WS_PROBE",
+        "Native Test Worksheet Probe v1",
+        "Native Test Worksheet Probe v2",
+        "SBX_ONLY_TERPENES_2026_07_17_NATIVE_TEST_WS_ASSAY",
+        "SBX_ONLY_TERPENES_2026_07_17_NATIVE_TEST_WS_SAMPLE",
+        "fresh Test created only from SBX_ONLY_TERPENES_2026_07_17_NATIVE_TEST_WS_ASSAY",
     ]
     if manifest.get("sandbox", {}).get("objects_created_or_changed") != expected_sandbox_objects:
         failures.append("manifest Sandbox mutations are not the exact authorized proof objects")
@@ -198,7 +282,10 @@ def main() -> int:
     print("- 43 ordered non-Pass/Fail destinations")
     print("- saved Worksheet definition passed 43/43")
     print("- direct and normal Assay Test instantiations classified blank default 5x5")
+    print("- native UI-built Assay Test instantiation passed with exact persistence")
+    print("- old Sandbox engine operational; imported Prompt 3 compatibility failure")
     print("- sanitized eight-object inventory contains no internal Sandbox IDs")
+    print("- sanitized six-object native inventory contains no internal Sandbox IDs")
     print("- exact Sandbox-only executable allowlist")
     print("- atomicity remains api_patch_unresolved")
     print("- zero token/API requests and exact authorized Sandbox proof objects only")

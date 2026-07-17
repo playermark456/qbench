@@ -5,6 +5,9 @@ Date: 2026-07-17
 Current controlled-stop classification:
 **`normal_assay_test_instantiation_failed_blank_default`**.
 
+Native control classification:
+**`native_test_worksheet_instantiation_passed`**.
+
 The saved and reopened isolated Sandbox Worksheet definition passed its exact
 43-field structural proof. That result is preserved independently from two
 runtime-instantiation failures. The earlier direct Test retained a blank 5x5
@@ -17,6 +20,7 @@ navigating away and reopening it.
 | Saved/reopened Worksheet definition | `passed_43_of_43` |
 | Direct existing-Test instantiation | `failed_blank_default_5x5` |
 | Normal Assay-created Test instantiation | `normal_assay_test_instantiation_failed_blank_default` |
+| Native UI-built Assay-created Test | `native_test_worksheet_instantiation_passed` |
 | Publisher destination gate | `destination_contract_proven=false` |
 
 ## Isolated Sandbox objects
@@ -99,6 +103,48 @@ Because the reopened UI state already proved the normal instance did not
 retain the Worksheet definition, no runtime CSV export was needed and no
 attempt was made to treat CSV as named-cell-contract evidence.
 
+## Native old-Sandbox control
+
+A separate Spreadsheet Worksheet was constructed entirely in the old Sandbox
+UI without import, clone, or reuse:
+`SBX_ONLY_TERPENES_2026_07_17_NATIVE_TEST_WS_PROBE`. Its corrected Version 2
+is APPROVED and ACTIVE and has the exact six-row control contract documented
+in `native_test_worksheet_probe/native_probe_configuration.md`.
+
+The isolated Assay
+`SBX_ONLY_TERPENES_2026_07_17_NATIVE_TEST_WS_ASSAY` retained that Test
+Worksheet after the Assay was left and reopened. Assigning only that Assay to
+a fresh synthetic Sample created a fresh Test whose Worksheet tab retained the
+six-row native definition after reopen. The exact manual control values also
+persisted:
+
+- `native_probe_text = sandbox_native_test_probe`
+- `native_probe_number = 2.5` as a numeric value
+- `native_probe_isnumber = TRUE`
+- `native_probe_count = 1`
+- `native_probe_sentinel = UNCHANGED`
+
+The values were then cleared and the blank baseline was saved and reopened.
+The final Test has blank B2/B3, `FALSE`, `0`, and `UNCHANGED`; no analytical
+result or Pass/Fail artifact remains.
+
+The final raw definition export is
+`native_test_worksheet_probe_v2_approved_active_saved_reopened_export_spreadsheet.json`
+with SHA-256
+`a43cb9779e03d401e5b43d69df6169a1236b51e45dd805bd9aee7353109f8b24`.
+The exact-input instantiated CSV is
+`native_test_worksheet_probe_v2_exact_input_instantiated_export_spreadsheet.csv`
+with SHA-256
+`a72835d464d17a858c5d9a3fc88b31eae69c512f517cb1083c85f0cd32d73e9e`.
+
+This control proves:
+
+- `old_sandbox_test_worksheet_engine = operational_for_native_definitions`
+- `imported_prompt3_test_worksheet = compatibility_failure`
+
+It does not prove the imported 43-field runtime contract and does not unlock
+the publisher gate.
+
 ## Publisher gate
 
 - `destination_contract_proven=false`
@@ -109,8 +155,9 @@ attempt was made to treat CSV as named-cell-contract evidence.
 - No PATCH occurred.
 - Live QBench was not accessed.
 
-The saved Worksheet definition is therefore proven, but the publisher remains
-blocked until a normally instantiated Test retains that definition and a
-later explicitly authorized read-only API confirmation resolves the Test
-worksheet representation. This run cannot truthfully produce a passing
-destination-proof lock, so publisher configuration remains unchanged.
+The saved 43-field Worksheet definition is therefore proven, but the publisher
+remains blocked until a staged native-schema rebuild retains all 43 exact
+destinations on a fresh Assay-created Test and a later explicitly authorized
+read-only API confirmation resolves the Test worksheet representation. This
+run cannot truthfully produce a passing destination-proof lock, so publisher
+configuration remains unchanged.

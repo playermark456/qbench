@@ -1,0 +1,5 @@
+native_test_worksheet_probe_v2_approved_active_saved_reopened_export_spreadsheet.json  a43cb9779e03d401e5b43d69df6169a1236b51e45dd805bd9aee7353109f8b24  15203 bytes
+native_test_worksheet_probe_v2_exact_input_instantiated_export_spreadsheet.csv  a72835d464d17a858c5d9a3fc88b31eae69c512f517cb1083c85f0cd32d73e9e  115 bytes
+
+Raw files were downloaded through QBench UI export actions, preserved without
+editing, and ignored by Git. Tracked evidence contains no internal Sandbox IDs.

@@ -8,7 +8,9 @@ Blocking gaps:
 2. No token request or authenticated Sandbox request has been authorized yet.
 3. Read-only Batch/Test response shapes have not been observed in the Sandbox.
 4. Exact synthetic assay and workflow identifiers are not configured.
-5. The actual saved/reopened task Test Worksheet has not proven all 43 targets.
+5. The native old-Sandbox Spreadsheet Worksheet engine is operational, but the
+   imported Prompt 3 Test Worksheet is a compatibility failure and no
+   saved/reopened runtime Test has yet proven all 43 destinations.
 6. Indexed-versus-range analyte PATCH representation is unresolved.
 7. Scalar text/numeric persistence and rollback have not been run.
 8. Multi-field failure behavior is `api_patch_unresolved`.
@@ -22,6 +24,15 @@ Blocking gaps:
 15. The inherited Prompt 4 candidate-manifest layout hash mismatch remains.
 16. No live-specific credential, identifier, report, COA, METRC, rollback, or
     operational procedure has been designed or tested.
+
+The recommended compatibility route is staged rather than another full import:
+
+1. Start with the exact passing native old-Sandbox schema, the 43 writable
+   destination named cells, minimal layout, and no large formula set.
+2. Instantiate that definition through an Assay and prove all 43 destinations
+   on a fresh reopened Test.
+3. Add formulas and the remaining Prompt 3 layout incrementally, repeating the
+   runtime proof at each stage.
 
 Live QBench was not accessed. No customer data was used. No Pass/Fail artifact
 was created. No COA was generated and nothing was transmitted to METRC.

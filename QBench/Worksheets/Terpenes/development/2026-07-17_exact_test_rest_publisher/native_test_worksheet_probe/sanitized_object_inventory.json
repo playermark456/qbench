@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "sanitized": true,
+  "internal_sandbox_ids_omitted": true,
+  "classification": "native_test_worksheet_instantiation_passed",
+  "objects": [
+    {
+      "kind": "worksheet",
+      "name": "SBX_ONLY_TERPENES_2026_07_17_NATIVE_TEST_WS_PROBE",
+      "type": "Spreadsheet",
+      "state": "ACTIVE"
+    },
+    {
+      "kind": "worksheet_version",
+      "name": "Native Test Worksheet Probe v1",
+      "state": "APPROVED_SUPERSEDED"
+    },
+    {
+      "kind": "worksheet_version",
+      "name": "Native Test Worksheet Probe v2",
+      "state": "APPROVED_ACTIVE"
+    },
+    {
+      "kind": "assay",
+      "name": "SBX_ONLY_TERPENES_2026_07_17_NATIVE_TEST_WS_ASSAY",
+      "state": "ACTIVE"
+    },
+    {
+      "kind": "sample",
+      "name": "SBX_ONLY_TERPENES_2026_07_17_NATIVE_TEST_WS_SAMPLE",
+      "state": "RETAINED_FOR_EVIDENCE"
+    },
+    {
+      "kind": "test",
+      "name": "fresh Test created only from SBX_ONLY_TERPENES_2026_07_17_NATIVE_TEST_WS_ASSAY",
+      "state": "NOT_STARTED_BLANK_BASELINE"
+    }
+  ],
+  "worksheet_association_persisted": true,
+  "native_definition_instantiated": true,
+  "exact_manual_probe_persisted": true,
+  "blank_baseline_restored": true,
+  "analytical_results_entered": false,
+  "pass_fail_artifact_introduced": false,
+  "credentials_displayed": false,
+  "oauth_token_requested": false,
+  "qbench_rest_api_requested": false,
+  "patch_requested": false,
+  "live_qbench_accessed": false
+}

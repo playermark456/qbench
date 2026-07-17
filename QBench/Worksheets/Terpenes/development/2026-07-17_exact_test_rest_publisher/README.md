@@ -2,9 +2,9 @@
 
 Date: 2026-07-17
 
-Status: **saved Sandbox Worksheet definition passed 43/43; normal Assay Test
-instantiation failed with a blank 5x5 default; paused before the first token
-request**.
+Status: **native old-Sandbox Test Worksheet instantiation passed; the imported
+Prompt 3 43-field worksheet remains a compatibility failure; paused before the
+first token request**.
 
 This package implements a controlled, Sandbox-only publisher for reviewed
 Terpenes Batch rows. It routes only by exact QBench Test ID, builds the complete
@@ -21,16 +21,22 @@ logged, or persisted by the publisher. The isolated saved/reopened Sandbox
 Worksheet definition and raw **Export Spreadsheet** file prove all 43 exact
 destinations are present, unique, writable, and non-formula-owned.
 
-Runtime instantiation is a separate failure. The retained earlier direct Test
-and a second Test created normally from a newly saved, reopened, active Assay
-both displayed only QBench's blank 5-column by 5-row default worksheet after
-reopening. The new Assay's Test Worksheet association persisted and the
-associated Worksheet Version 2 was independently confirmed APPROVED and
-ACTIVE before the fresh Sample/Test was created. Therefore:
+Runtime instantiation is now isolated as an import/schema compatibility
+failure, not a general old-Sandbox engine failure. The retained earlier direct
+Test and a second Test created normally from the imported Prompt 3 candidate
+still display only QBench's blank 5-column by 5-row default. In contrast, the
+new UI-built native control in `native_test_worksheet_probe/` instantiated its
+exact six-row definition through a fresh Assay-created Test. The exact text and
+numeric values persisted, both formulas evaluated correctly, and the sentinel
+remained unchanged after save and reopen. Therefore:
 
 - no OAuth token request, QBench API GET, or PATCH was attempted;
-- the task-created Worksheet, version, two isolated Assays, and two isolated
-  Samples/Tests are inventoried in sanitized evidence without internal IDs;
+- `old_sandbox_test_worksheet_engine` is
+  `operational_for_native_definitions`;
+- `imported_prompt3_test_worksheet` is `compatibility_failure`;
+- the earlier destination-proof objects and the native Worksheet, two
+  versions, Assay, Sample, and Test are inventoried in separate sanitized
+  evidence without internal IDs;
 - scalar persistence, rollback, and multi-field atomicity remain unclassified
   in QBench;
 - `config/publisher_config.json` intentionally blocks publishing with
@@ -99,14 +105,15 @@ and in-memory API behavior; they are not Sandbox success evidence.
 
 ## Release checklist for QBench Sandbox
 
-1. Retain the passing saved/reopened Worksheet-definition proof and raw
-   **Export Spreadsheet** bytes.
-2. Resolve why a normally created Test receives QBench's blank 5x5 default
-   instead of the associated active Worksheet Version 2.
-3. Repeat the normal Assay-first instantiation with a fresh task-only Sample
-   and Test, then navigate away and reopen it.
-4. Prove the reopened Test retains all 43 exact, writable, non-formula,
-   non-Pass/Fail destinations.
+1. Retain the passing saved/reopened 43-field definition proof, the passing
+   native Test-instantiation control, and both raw **Export Spreadsheet**
+   hashes.
+2. Rebuild Stage 1 on the exact native old-Sandbox schema: 43 writable named
+   destinations, minimal layout, and no large formula set.
+3. Instantiate Stage 1 through an Assay with a fresh task-only Sample/Test,
+   then prove 43/43 destinations after navigating away and reopening.
+4. Add formulas and the complete Prompt 3 layout incrementally, repeating the
+   Assay-created Test proof after each stage.
 5. Record internal synthetic identifiers only in a local ignored evidence
    file, and update sanitized provenance without those identifiers.
 6. Confirm the documented same-host OAuth token path, then lock
