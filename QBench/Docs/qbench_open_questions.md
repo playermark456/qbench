@@ -172,5 +172,22 @@ remained untouched and no Pass/Fail artifact was created.
 Detailed sanitized evidence is in
 `QBench/Worksheets/Terpenes/development/2026-07-16_no_code_parser_fallback/`.
 The operational limitation remains: Prompt 4.5 local normalization must run
-before QBench upload. This is not production-ready, and Prompt 5 has not
-started.
+before QBench upload. This is not production-ready. At the Prompt 4.6C
+closeout, Prompt 5 had not yet started; the subsequent Prompt 5 result follows.
+
+## Prompt 5 exact-Test targeting blocker
+
+Prompt 5 began after PR #11 merged. An isolated inactive Sandbox automation was
+created with `Data Modified` / `Batch`. Its relevant action is
+`Set value on all Test Worksheets within the Batch`; it accepts worksheet field
+names and a `Copy Value` / `From Worksheet` source, but exposes no exact-Test-ID
+target selector, zero/one/multiple match guard, per-row source selection,
+complete-destination preflight, or proven atomic multi-field write.
+
+The automation therefore remains inactive with no saved conditions/actions,
+and no Prompt 5 Batch, Sample, Test, or worksheet was created. A supported
+platform/API operation is required to target exactly one Test, validate the
+complete transfer, persist row-specific publish status and last-published
+source-row hash, no-op on an unchanged hash, and require reauthorization on a
+changed hash. Evidence is in
+`QBench/Worksheets/Terpenes/development/2026-07-17_batch_to_test_automation/`.

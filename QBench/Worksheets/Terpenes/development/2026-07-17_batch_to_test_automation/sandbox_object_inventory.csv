@@ -1,0 +1,2 @@
+object_type,name,operation,final_status,trigger,data_type,assay_or_worksheet_assignment,saved_conditions,saved_actions,samples_or_tests,internal_id_committed
+Automation,SBX_ONLY_TERPENES_2026_07_16_Batch_To_Test_Publish,created,Inactive,Data Modified,Batch,None,None,None,None,false

@@ -37,3 +37,13 @@
 | 15 | Water Activity Protocol WS to Batch WS | Data Modified | Batch Object Protocol Step | No description visible in parsed detail fields. |
 | 5 | test wa | Data Modified | Batch | No description visible in parsed detail fields. |
 | 2 | Heavy Metals Batch WS to Test WS 2 | Data Modified | Batch | No description visible in parsed detail fields. |
+
+## Prompt 5 Sandbox attempt 2026-07-17
+
+`SBX_ONLY_TERPENES_2026_07_16_Batch_To_Test_Publish` was created in
+`ait-sandbox.qbench.net` with trigger `Data Modified`, data type `Batch`, and
+Active off. No conditions or actions were saved. The available action targets
+all Test Worksheets within a Batch and exposes no exact-Test-ID selector or
+exactly-one-match guard, so activation was blocked under the Prompt 5 stop
+conditions. Sanitized evidence is in
+`QBench/Worksheets/Terpenes/development/2026-07-17_batch_to_test_automation/`.

@@ -16,3 +16,12 @@
 
 - `QBench/Worksheets/Terpenes/terpenes__terpenes_batch_ws_id_43__worksheet_export_spreadsheet__active__2026-06-30.json`
 - `QBench/Worksheets/Terpenes/terpenes__terpenes_test_ws_id_42__worksheet_export_spreadsheet__active__2026-06-30.json`
+
+## Prompt 5 Batch-to-Test automation
+
+The 2026-07-17 Sandbox attempt is blocked before activation. The native Batch
+automation action can only copy to all Test Worksheets in the Batch and cannot
+enforce exact QBench Test ID matching, exactly-one cardinality, or atomic
+multi-field preflight. The isolated automation remains inactive with no saved
+conditions/actions. See
+`development/2026-07-17_batch_to_test_automation/README.md`.
