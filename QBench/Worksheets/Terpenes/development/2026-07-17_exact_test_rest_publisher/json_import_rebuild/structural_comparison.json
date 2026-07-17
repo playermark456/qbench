@@ -1,5 +1,5 @@
 {
-  "classification": "corrected_native_legacy_candidate_local_validation_pending_upload",
+  "classification": "qualified_address_native_envelope_rendered_save_rejected",
   "files": {
     "failed_candidate": {
       "filename": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE_failed_collapsed_grid.json",
@@ -55,8 +55,8 @@
       "tableWidth": "<absent>",
       "worksheet.style_type": "absent"
     },
-    "corrected_candidate": {
-      "filename": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json",
+    "rendered_qualified_candidate": {
+      "filename": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE_qualified_addresses.json",
       "sha256": "54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b",
       "top_level_keys": [
         "table_config",
@@ -126,7 +126,7 @@
   },
   "interpretation": {
     "logical_worksheet": "The old Sandbox legacy export serializes one unnamed table. It is the candidate's logical Data worksheet.",
-    "dual_data_representations": "The legacy reference has one table_config.cell_settings representation and no top-level data['Data']; the corrected candidate preserves that single representation.",
+    "dual_data_representations": "The legacy reference has one table_config.cell_settings representation and no top-level data['Data']; the rendered qualified candidate preserves that single representation.",
     "config_style": "The legacy reference has no config object, so absence - not null - is the exact matching type/state."
   }
 }

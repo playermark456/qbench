@@ -1,15 +1,17 @@
-# Corrected-candidate round-trip result
+# Unqualified-address candidate round-trip result
 
-Classification: **not run - corrected candidate not uploaded**
+Classification: **not run - corrected save retry pending**
 
-The prior wrong-worksheet, collapsed-renderer import is invalid and is not a
-round-trip result. The corrected native-envelope candidate was validated only
-in the repository. Consequently:
+The qualified-address native-envelope candidate rendered correctly, but QBench
+rejected **Save As New Version** before a version could be established. The
+new unqualified-address candidate was regenerated and validated locally only.
 
-- no corrected Draft row exists;
+Consequently:
+
+- no corrected Draft row is claimed;
 - Export Spreadsheet was not invoked for the corrected candidate;
-- no raw corrected round-trip JSON or SHA-256 is claimed;
-- semantic corrected-candidate-versus-export comparison was not run;
+- no corrected saved/reopened raw export or SHA-256 exists;
+- semantic saved-export comparison was not run;
 - `json_import_saved_definition_contract=unproven`;
 - `json_import_round_trip=not_run`;
 - `destination_contract_proven=false`.

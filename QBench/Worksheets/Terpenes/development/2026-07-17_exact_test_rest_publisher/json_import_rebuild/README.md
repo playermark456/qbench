@@ -1,57 +1,52 @@
-# Corrected native-envelope JSON import rebuild
+# Old-Sandbox one-tab JSON compatibility rebuild
 
 Date: 2026-07-17
 
-Classification: **`corrected_native_legacy_candidate_local_validation_passed_not_uploaded`**
+Classification:
+**`unqualified_address_candidate_local_validation_passed_save_retry_pending`**
 
-The prior import is invalid evidence. Manual review established that the failed
-candidate was loaded into
-`SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE`, not the intended
-`SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE`, and that QBench
-loaded its 43 named-cell definitions while rendering a collapsed/default blank
-cell instead of the intended 40x26 worksheet.
+Manual testing established two separate findings:
 
-The corrected candidate is derived only from the fresh working-native Export
-Spreadsheet file:
+1. the native-envelope candidate rendered successfully as a 40x26 worksheet
+   with all 43 named cells; and
+2. **Save As New Version** rejected the qualified named-cell definitions with
+   `Invalid cell definition Data!A2 for field name terpenes_instrument_conc_01`.
 
-`source/2026-07-17_SBX_ONLY_TERPENES_NATIVE_SCALAR_43_FIELD_BASE_working_native_export_spreadsheet.json`
+The intended first analyte is D2, not A2. The compatibility conclusion is that
+this exact one-tab legacy worksheet requires unqualified JSON cell strings,
+consistent with the working manual `sdf -> A1` control and the active Terpenes
+Test Worksheet's unqualified named-cell addresses.
 
-- Raw source SHA-256:
-  `d86e05122bc9a7fc4b6937e5582d9ff469f15c234e606fc0c5bbdd7d7c3659e5`
-- Source shape: legacy `table_config/qb_config`, one 40x26 native matrix,
-  one diagnostic named cell `sdf / A1`
+The logical mapping remains sheet-qualified in
+`config/field_mapping_scalar_candidate.csv`:
 
-Unlike the failed newer-envelope candidate, the working native export has no
-`config`, `config.style`, `config.worksheets`, worksheet UUID,
-`minDimensions`, or top-level `data["Data"]`. The corrected candidate preserves
-that exact legacy shape; absence replaces the failed file's incompatible
-`style: null` and `[1, 1]` minimum dimensions.
+- logical address: `Data!D2`
+- old-Sandbox JSON cell representation: `D2`
 
-The generator removes only the diagnostic named-cell definition, installs the
-exact 43-field mapping, blanks all 43 destinations, and adds 28 required
-visible anchors. It preserves every other native field and cell value. The
-one renderer UUID embedded in all 1,040 native cell metadata records is
-replaced consistently by one fresh UUID.
+The generator now strips only the `Data!` prefix when serializing the 43
+independent scalar definitions under `qb_config.named_cells`. It does not
+change the native envelope, grid, anchors, metadata, sizing, UUID, display
+names, export flags, or cell contents.
 
 Corrected candidate:
-
 `SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json`
 
 - SHA-256:
-  `54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b`
+  `e5ef20a5cec574dc292ed679867e01313233c92ceda9ef863bf98dd8d4485b80`
 - Grid: 40x26
 - Required anchors: 28
-- Total non-empty cells: 30 (28 required anchors plus two preserved native
-  structural labels)
-- Named cells: 43
-- Analytes: 23 at `Data!D2:Z2`
-- Destination result: 43/43 blank, writable, non-formula, unique, exportable
+- Total non-empty cells: 30
+- Named cells: 43 independent scalars
+- JSON address representation: 43/43 unqualified
+- Analytes: `D2:Z2` in order
+- Remaining destinations: individual cells in `B12:B18`, `B22:B23`, and
+  `B28:B38`
+- A2 mapping: absent
 
-No corrected upload, save, Draft creation, or round-trip export occurred in
-this prompt. The publisher gates remain closed:
+`address_format_comparison.md` proves exactly 43 differences from the
+successfully rendered prior candidate and confirms every difference is a
+qualified-to-unqualified `cell` string conversion.
 
-- `destination_contract_proven=false`
-- `atomicity_classification=api_patch_unresolved`
-- `analyte_patch_key_contract=unresolved`
-- no OAuth token, REST request, PATCH, live-QBench access, analytical result,
-  approval, activation, or Pass/Fail artifact
+No QBench environment was accessed in this correction prompt. The regenerated
+candidate was not uploaded or saved, so a successful Draft row and
+saved/reopened export remain pending. Publisher gates remain closed.

@@ -103,18 +103,21 @@ def build_candidate() -> dict[str, Any]:
 
     named_cells: dict[str, dict[str, Any]] = {}
     for row in mapping:
-        address = row["destination_cell"]
-        row_index, column_index = split_address(address)
+        logical_address = row["destination_cell"]
+        row_index, column_index = split_address(logical_address)
+        runtime_address = logical_address.split("!", 1)[1]
         cell = grid[row_index][column_index]
         cell["value"] = ""
         metadata = cell.get("meta_data")
         if not isinstance(metadata, dict):
-            raise ValueError(f"native metadata missing at {address}")
+            raise ValueError(f"native metadata missing at {logical_address}")
         lowered_keys = {str(key).lower() for key in metadata}
         if "formula" in lowered_keys or "readonly" in lowered_keys:
-            raise ValueError(f"native destination metadata is not writable at {address}")
+            raise ValueError(
+                f"native destination metadata is not writable at {logical_address}"
+            )
         named_cells[row["destination_named_cell"]] = {
-            "cell": address,
+            "cell": runtime_address,
             "display_name": row["source_header"],
             "export": True,
         }

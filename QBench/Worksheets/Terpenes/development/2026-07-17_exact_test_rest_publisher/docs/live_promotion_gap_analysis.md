@@ -32,20 +32,20 @@ Blocking gaps:
     but the separate Codex B2 save-control disappeared after refresh/reopen
     while `sdf` remained; browser-controlled worksheet entry is not
     authoritative.
-19. The prior newer-envelope candidate targeted the wrong worksheet and
-    rendered a collapsed/default blank cell. The corrected native-envelope
-    43-field candidate passes local validation but was not uploaded, so the
-    exact inactive Sandbox worksheet shell has no corrected Draft, imported
-    contract, or round-trip export.
+19. The native-envelope qualified-address candidate rendered 40x26 with all 43
+    named cells, but the old one-tab validator rejected Save As New Version.
+    The regenerated candidate uses 43 unqualified runtime cell strings and
+    passes local validation; corrected save, Draft, and round-trip proof remain
+    pending.
 
 The recommended compatibility route is the corrected native-envelope JSON:
 
 1. Retain the exact 43-row underscore-scalar candidate without changing the
    operational mapping.
-2. In a future explicitly authorized prompt, upload the corrected, locally
-   validated JSON candidate to the exact inactive task-created Sandbox
-   worksheet. Do not type 43 named cells and do not reuse the prior failed
-   newer-envelope file.
+2. In a future explicitly authorized prompt, upload the unqualified-address,
+   locally validated JSON candidate to the exact isolated task-created
+   worksheet. Do not type 43 named cells and do not reuse either prior
+   qualified-address candidate.
 3. Save and reopen the imported Draft, verify 43/43 named cells, and perform an
    Export Spreadsheet semantic round trip before approval or activation.
 4. Only after the saved-definition round trip passes should a separately

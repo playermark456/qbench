@@ -1,8 +1,8 @@
-# Structural comparison: failed, working native, corrected
+# Structural comparison: failed, working native, rendered qualified
 
-Classification: **`corrected_native_legacy_candidate_local_validation_pending_upload`**
+Classification: **`qualified_address_native_envelope_rendered_save_rejected`**
 
-| Property | Failed candidate | Working native export | Corrected candidate |
+| Property | Failed candidate | Working native export | Rendered qualified candidate |
 |---|---|---|---|
 | Envelope | newer config/qb_config/data | legacy table_config/qb_config | legacy table_config/qb_config |
 | Top-level keys | ["config", "qb_config", "data"] | ["table_config", "qb_config"] | ["table_config", "qb_config"] |
@@ -31,7 +31,7 @@ Classification: **`corrected_native_legacy_candidate_local_validation_pending_up
 - The import loaded 43 qb_config.named_cells entries but rendered only a collapsed/default blank cell.
 - The import was applied to the NATIVE_SCALAR worksheet instead of the JSON_SCALAR worksheet.
 
-## Complete working-native to corrected difference
+## Complete working-native to rendered-qualified difference
 
 - Named cells: removed the sole diagnostic `sdf / A1` entry and replaced it
   with exactly the 43 Data-qualified entries from
@@ -46,7 +46,9 @@ Classification: **`corrected_native_legacy_candidate_local_validation_pending_up
 
 The old Sandbox legacy export serializes one unnamed table and has no
 `config`, `config.style`, `config.worksheets`, worksheet UUID,
-`minDimensions`, or top-level `data["Data"]`. The corrected candidate
+`minDimensions`, or top-level `data["Data"]`. The rendered qualified candidate
 preserves that exact single-table representation. This is intentional: the
 failed candidate's invented newer envelope was the structural defect that
-loaded named-cell configuration while collapsing the rendered sheet.
+loaded named-cell configuration while collapsing the rendered sheet. Manual
+testing later confirmed that this native-envelope file rendered correctly but
+failed Save As New Version because its named-cell addresses were qualified.

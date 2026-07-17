@@ -35,15 +35,14 @@ These results must not be reported as QBench API behavior.
 
 ## Sandbox UI evidence that did pass
 
-The corrected native-envelope JSON candidate passed its complete local
-validator: one logical 40x26 Data worksheet, 28 required anchors, 43 exact
-named cells, 23 contiguous analyte names, blank/writable/non-formula
-destinations, a fresh renderer UUID, and no prohibited or sensitive content.
-This is local candidate success, not saved Sandbox definition success.
+The native-envelope qualified-address JSON candidate successfully rendered one
+logical 40x26 Data worksheet, 28 required anchors, and 43 exact named cells.
+This confirms the legacy envelope and rendered worksheet structure.
 
-The prior newer-envelope import is not a success: it targeted the native
-scalar worksheet and rendered a collapsed/default blank cell. The corrected
-candidate was not uploaded, and no corrected Draft version was created.
+It did not save: **Save As New Version** rejected the sheet-qualified JSON cell
+definitions. The regenerated candidate changes only those 43 strings to
+unqualified cells and passes local validation. No corrected Draft version was
+created in this prompt.
 
 The user's manual named-cell persistence control passed. In the exact Draft
 `1 - Native Scalar 43 Field Base v1 - DRAFT`, `sdf` at `A1` persisted after

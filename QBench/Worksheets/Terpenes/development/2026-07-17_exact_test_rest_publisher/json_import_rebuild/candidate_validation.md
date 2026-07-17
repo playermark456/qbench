@@ -1,30 +1,34 @@
-# Corrected JSON candidate validation
+# Unqualified-address JSON candidate validation
 
 Result: **passed**
 
 Candidate:
 `SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json`
 
-- working-native source bytes match SHA-256
-  `d86e05122bc9a7fc4b6937e5582d9ff469f15c234e606fc0c5bbdd7d7c3659e5`
-- exact legacy `table_config/qb_config` envelope preserved
-- one logical Data worksheet represented by the native single table
+- exactly one legacy logical Data worksheet
+- exact native legacy `table_config/qb_config` envelope preserved
 - visible grid exactly 40 rows by 26 columns
-- 28 required anchors present at A1, D1:Z1, A12, A22, A28, and A40
-- 30 total non-empty cells; the two additional values are unchanged native
-  structural labels
-- exactly 43 mapped named cells; diagnostic `sdf` absent
-- all 43 addresses resolve and are blank, writable, non-formula, unique, and
-  exportable
-- exactly 23 analytes at `Data!D2:Z2`; no bracketed name
-- no Pass/Fail, result-status, Dimethylacetamide, or Peak Table destination
-- all native cell metadata, sizing, and plugin settings unchanged after
-  normalizing the required fresh renderer UUID
-- no newer `config.style`, worksheet-data, or top-level Data representation
-  introduced; their absence exactly matches the working native export
-- no source UUID, credential, token, signed URL, or customer-data marker
+- 28 required anchors and 30 total non-empty cells preserved
+- exactly 43 independent scalar named cells; diagnostic `sdf` absent
+- every JSON `qb_config.named_cells.<name>.cell` value is unqualified
+- no JSON named-cell address contains `!`
+- exactly 23 analytes at unqualified `D2` through `Z2`, in order
+- `terpenes_instrument_conc_01=D2`, never `A2`
+- remaining 20 destinations exactly cover `B12:B18`, `B22:B23`, and
+  `B28:B38` as independent cells
+- required spot checks passed: `_12=O2`, `_23=Z2`, `sample_mass_g=B12`,
+  `batch_qc_disposition=B22`, `publish_ready=B23`, and
+  `source_file_hash=B30`
+- all 43 destinations resolve and remain blank, writable, non-formula,
+  unique, and exportable
+- no bracketed name, Pass/Fail, Dimethylacetamide, Peak Table destination,
+  credential, token, signed URL, or customer-data marker
+- comparison with the successfully rendered qualified-address candidate found
+  exactly 43 differences, all limited to the named-cell `cell` strings
+- grid, anchors, cell metadata, sizing, renderer UUID, and all other content
+  are unchanged
 
 Validator: `validate_candidate.py`
 
 Candidate SHA-256:
-`54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b`
+`e5ef20a5cec574dc292ed679867e01313233c92ceda9ef863bf98dd8d4485b80`

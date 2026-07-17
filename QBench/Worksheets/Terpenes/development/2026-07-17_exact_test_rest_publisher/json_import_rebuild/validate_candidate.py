@@ -19,8 +19,14 @@ SOURCE = (
     / "2026-07-17_SBX_ONLY_TERPENES_NATIVE_SCALAR_43_FIELD_BASE_working_native_export_spreadsheet.json"
 )
 CANDIDATE = HERE / "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json"
+PRIOR_QUALIFIED = (
+    HERE
+    / "prior_qualified_candidate"
+    / "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE_qualified_addresses.json"
+)
 MAPPING = ROOT / "config" / "field_mapping_scalar_candidate.csv"
 SOURCE_SHA256 = "d86e05122bc9a7fc4b6937e5582d9ff469f15c234e606fc0c5bbdd7d7c3659e5"
+PRIOR_QUALIFIED_SHA256 = "54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b"
 CANDIDATE_RENDERER_UUID = "051174c5-a7da-4b6d-afc5-0c2addc1a900"
 ROWS = 40
 COLS = 26
@@ -35,13 +41,13 @@ def fail(message: str) -> None:
 
 
 def address_parts(address: str) -> tuple[int, int, str]:
-    match = re.fullmatch(r"Data!([A-Z]+)([1-9][0-9]*)", address)
+    match = re.fullmatch(r"([A-Z]+)([1-9][0-9]*)", address)
     if not match:
         raise ValueError(address)
     column = 0
     for character in match.group(1):
         column = column * 26 + ord(character) - 64
-    return int(match.group(2)) - 1, column - 1, f"{match.group(1)}{match.group(2)}"
+    return int(match.group(2)) - 1, column - 1, address
 
 
 def is_formula_owned(cell: dict[str, Any]) -> bool:
@@ -92,10 +98,13 @@ failures: list[str] = []
 
 if hashlib.sha256(SOURCE.read_bytes()).hexdigest() != SOURCE_SHA256:
     fail("working native export bytes or SHA-256 changed")
+if hashlib.sha256(PRIOR_QUALIFIED.read_bytes()).hexdigest() != PRIOR_QUALIFIED_SHA256:
+    fail("prior successfully rendered qualified-address candidate changed")
 
 try:
     source = json.loads(SOURCE.read_text(encoding="utf-8-sig"))
     candidate = json.loads(CANDIDATE.read_text(encoding="utf-8"))
+    prior_qualified = json.loads(PRIOR_QUALIFIED.read_text(encoding="utf-8"))
 except (OSError, json.JSONDecodeError) as error:
     print(f"JSON candidate validation FAILED: {error}")
     raise SystemExit(1)
@@ -129,10 +138,12 @@ with MAPPING.open(newline="", encoding="utf-8") as handle:
     mapping = list(csv.DictReader(handle))
 if len(mapping) != 43:
     fail(f"expected 43 mapping rows, found {len(mapping)}")
+if any(not row["destination_cell"].startswith("Data!") for row in mapping):
+    fail("logical mapping does not refer exclusively to the Data worksheet")
 
 expected = {
     row["destination_named_cell"]: {
-        "cell": row["destination_cell"],
+        "cell": row["destination_cell"].split("!", 1)[1],
         "display_name": row["source_header"],
         "export": True,
     }
@@ -150,21 +161,47 @@ if any("[" in name or "]" in name for name in named):
 addresses = [entry.get("cell") for entry in named.values()]
 if len(addresses) != len(set(addresses)):
     fail("duplicate destination address present")
+if any(not isinstance(address, str) or "!" in address for address in addresses):
+    fail("one or more JSON named-cell addresses are sheet-qualified")
 
 expected_analyte_names = [f"terpenes_instrument_conc_{index:02d}" for index in range(1, 24)]
-expected_analyte_addresses = [f"Data!{chr(68 + index)}2" for index in range(23)]
+expected_analyte_addresses = [f"{chr(68 + index)}2" for index in range(23)]
 analyte_names = [name for name in named if name.startswith("terpenes_instrument_conc_")]
 if analyte_names != expected_analyte_names:
     fail("analyte names are not exactly _01 through _23")
 if [named[name]["cell"] for name in expected_analyte_names] != expected_analyte_addresses:
-    fail("analyte destinations are not exactly Data!D2:Z2")
+    fail("analyte JSON destinations are not exactly unqualified D2:Z2")
+if named.get("terpenes_instrument_conc_01", {}).get("cell") != "D2":
+    fail("first analyte is not exactly D2")
+if any(address == "A2" for address in addresses):
+    fail("prohibited A2 mapping is present")
+
+remaining_names = [row["destination_named_cell"] for row in mapping[23:]]
+expected_remaining_address_set = set(
+    [f"B{row}" for row in range(12, 19)]
+    + ["B22", "B23"]
+    + [f"B{row}" for row in range(28, 39)]
+)
+if {named[name]["cell"] for name in remaining_names} != expected_remaining_address_set:
+    fail("remaining 20 JSON destinations do not match the expected B-column rows")
+for name, expected_address in {
+    "terpenes_instrument_conc_01": "D2",
+    "terpenes_instrument_conc_12": "O2",
+    "terpenes_instrument_conc_23": "Z2",
+    "sample_mass_g": "B12",
+    "batch_qc_disposition": "B22",
+    "publish_ready": "B23",
+    "source_file_hash": "B30",
+}.items():
+    if named.get(name, {}).get("cell") != expected_address:
+        fail(f"required compatibility mapping differs: {name} != {expected_address}")
 
 destination_locals: set[str] = set()
 for name, entry in named.items():
     try:
         row_index, column_index, local = address_parts(str(entry.get("cell", "")))
     except ValueError:
-        fail(f"invalid Data-qualified address for {name}")
+        fail(f"invalid unqualified address for {name}")
         continue
     if row_index >= ROWS or column_index >= COLS:
         fail(f"out-of-range address for {name}")
@@ -190,7 +227,7 @@ anchors: dict[str, str] = {
 for index, row in enumerate(mapping[:23]):
     anchors[f"{chr(68 + index)}1"] = row["source_header"]
 for address, expected_value in anchors.items():
-    row_index, column_index, _ = address_parts(f"Data!{address}")
+    row_index, column_index, _ = address_parts(address)
     if grid[row_index][column_index].get("value") != expected_value:
         fail(f"required visible anchor missing or changed at {address}")
 if len(anchors) != 28:
@@ -210,12 +247,35 @@ source_uuid = next(iter(source_uuid_values), "")
 normalized_source = replace_uuid(copy.deepcopy(source), source_uuid, CANDIDATE_RENDERER_UUID)
 normalized_source["qb_config"]["named_cells"] = copy.deepcopy(named)
 for address in set(anchors) | destination_locals:
-    row_index, column_index, _ = address_parts(f"Data!{address}")
+    row_index, column_index, _ = address_parts(address)
     normalized_source["table_config"]["cell_settings"][row_index][column_index]["value"] = (
         grid[row_index][column_index].get("value")
     )
 if normalized_source != candidate:
     fail("candidate contains changes beyond named cells and required anchor/destination values")
+
+# The prior qualified-address candidate rendered correctly. Prove that this
+# regeneration changes only the 43 runtime address strings under named_cells.
+normalized_prior = copy.deepcopy(prior_qualified)
+prior_named = normalized_prior.get("qb_config", {}).get("named_cells", {})
+address_change_count = 0
+for name, entry in named.items():
+    old_entry = prior_named.get(name)
+    if not isinstance(old_entry, dict):
+        fail(f"prior qualified candidate is missing named cell: {name}")
+        continue
+    if old_entry.get("cell") != f"Data!{entry['cell']}":
+        fail(f"prior logical/runtime address pair is incorrect for {name}")
+    if {key: value for key, value in old_entry.items() if key != "cell"} != {
+        key: value for key, value in entry.items() if key != "cell"
+    }:
+        fail(f"non-address named-cell metadata changed for {name}")
+    normalized_prior["qb_config"]["named_cells"][name]["cell"] = entry["cell"]
+    address_change_count += 1
+if address_change_count != 43:
+    fail(f"expected 43 address-format changes, found {address_change_count}")
+if normalized_prior != candidate:
+    fail("rendered worksheet structure changed beyond the 43 address strings")
 
 contract_text = json.dumps(named, ensure_ascii=False, sort_keys=True).lower()
 for prohibited in (
@@ -256,10 +316,12 @@ nonempty_count = sum(
 )
 digest = hashlib.sha256(CANDIDATE.read_bytes()).hexdigest()
 print("JSON candidate validation PASSED")
-print("- one legacy logical Data worksheet; native envelope preserved")
+print("- exactly one legacy logical Data worksheet; native envelope preserved")
 print(f"- grid={ROWS}x{COLS}; anchors={len(anchors)}; nonempty_cells={nonempty_count}")
 print(f"- named_cells={len(named)}; analytes={len(analyte_names)}")
+print("- all 43 JSON named-cell addresses are unqualified; analytes=D2:Z2; no A2")
 print("- all destinations resolve, are blank, writable, unique, non-formula, and exportable")
+print("- rendered worksheet structure unchanged; exactly 43 cell strings changed")
 print("- config.style/config.worksheets/top-level data remain absent exactly as in native reference")
 print("- source renderer UUID replaced; no sdf, Pass/Fail, prohibited destination, credential, or customer-data marker")
 print(f"- sha256={digest}")

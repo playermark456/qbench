@@ -79,6 +79,11 @@ REQUIRED = {
     "json_import_rebuild/failed_candidate/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE_failed_collapsed_grid.json",
     "json_import_rebuild/source/.gitattributes",
     "json_import_rebuild/failed_candidate/.gitattributes",
+    "json_import_rebuild/compare_address_formats.py",
+    "json_import_rebuild/address_format_comparison.json",
+    "json_import_rebuild/address_format_comparison.md",
+    "json_import_rebuild/prior_qualified_candidate/.gitattributes",
+    "json_import_rebuild/prior_qualified_candidate/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE_qualified_addresses.json",
     "json_import_rebuild/generate_candidate.py",
     "json_import_rebuild/import_results.md",
     "json_import_rebuild/round_trip_results.md",
@@ -581,14 +586,14 @@ def main() -> int:
             failures.append(f"version-creation control safety control is not false: {key}")
 
     json_import_classification = (
-        "corrected_native_legacy_candidate_local_validation_passed_not_uploaded"
+        "unqualified_address_candidate_local_validation_passed_save_retry_pending"
     )
     json_candidate_path = (
         ROOT
         / "json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json"
     )
     expected_json_candidate_hash = (
-        "54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b"
+        "e5ef20a5cec574dc292ed679867e01313233c92ceda9ef863bf98dd8d4485b80"
     )
     if digest(json_candidate_path) != expected_json_candidate_hash:
         failures.append("generated JSON candidate hash is incorrect")
@@ -614,15 +619,23 @@ def main() -> int:
         "internal_sandbox_ids_omitted": True,
         "classification": json_import_classification,
         "working_native_export_sha256": "d86e05122bc9a7fc4b6937e5582d9ff469f15c234e606fc0c5bbdd7d7c3659e5",
-        "failed_candidate_sha256": "7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70",
-        "failed_candidate_target": "SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE",
-        "failed_candidate_named_cells_loaded": 43,
-        "failed_candidate_render_result": "collapsed_default_blank_cell",
-        "failed_candidate_success": False,
-        "failed_candidate_saved_version_proven": False,
+        "failed_newer_envelope_candidate_sha256": "7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70",
+        "qualified_address_candidate_sha256": "54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b",
+        "qualified_address_render_result": "passed_40x26_grid_and_43_named_cells",
+        "qualified_address_save_as_new_version_attempted": True,
+        "qualified_address_save_as_new_version_succeeded": False,
+        "qualified_address_save_error": "Invalid cell definition Data!A2 for field name terpenes_instrument_conc_01",
+        "compatibility_conclusion": "one_tab_old_sandbox_json_named_cell_addresses_must_be_unqualified",
         "candidate_sha256": expected_json_candidate_hash,
         "candidate_local_validation": "passed",
         "candidate_envelope": "legacy_table_config_qb_config",
+        "logical_address_example": "Data!D2",
+        "old_sandbox_json_cell_example": "D2",
+        "json_named_cell_representation": "unqualified_independent_scalar_cells",
+        "json_unqualified_named_cells": 43,
+        "json_qualified_named_cells": 0,
+        "a2_mapping_present": False,
+        "first_analyte_json_cell": "D2",
         "grid_rows": 40,
         "grid_columns": 26,
         "required_anchor_count": 28,
@@ -630,6 +643,8 @@ def main() -> int:
         "named_cells": 43,
         "analyte_named_cells": 23,
         "destination_validation": "passed_43_of_43",
+        "address_only_difference_count": 43,
+        "rendered_worksheet_structure_unchanged": True,
         "config_style_reference_type": "absent",
         "config_style_candidate_type": "absent",
         "corrected_upload_attempted": False,
@@ -654,12 +669,12 @@ def main() -> int:
         {
             "type": "Spreadsheet Worksheet",
             "name": "SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE",
-            "state": "working native Draft reference; prior failed candidate was loaded into its unsaved editor and rendered collapsed; saved persistence is not claimed",
+            "state": "working native Draft reference with sdf/A1",
         },
         {
             "type": "Spreadsheet Worksheet",
             "name": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
-            "state": "inactive isolated worksheet shell; no corrected candidate version",
+            "state": "qualified-address candidate rendered 40x26 with 43 named cells, but Save As New Version was rejected; no corrected unqualified-address version",
         }
     ]:
         failures.append("JSON import sanitized object inventory is incorrect")
@@ -690,7 +705,7 @@ def main() -> int:
     if manifest.get("sandbox", {}).get("token_requests_attempted") != 0:
         failures.append("manifest claims a token request")
     if manifest.get("status") != (
-        "corrected_native_legacy_candidate_local_validation_passed_pre_token_stop"
+        "unqualified_address_candidate_local_validation_passed_pre_token_stop"
     ):
         failures.append("manifest controlled-stop status is incorrect")
     if manifest.get("mapping", {}).get("saved_worksheet_definition_contract") != "passed_43_of_43":
@@ -808,13 +823,20 @@ def main() -> int:
         "implementation_path": "native_export_legacy_envelope_correction",
         "manual_named_cell_entry": False,
         "working_native_export_sha256": "d86e05122bc9a7fc4b6937e5582d9ff469f15c234e606fc0c5bbdd7d7c3659e5",
-        "failed_candidate_sha256": "7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70",
-        "failed_candidate_target": "SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE",
-        "failed_candidate_render_result": "collapsed_default_blank_cell",
-        "failed_candidate_success": False,
+        "qualified_address_candidate_sha256": "54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b",
+        "qualified_address_render_result": "passed_40x26_grid_and_43_named_cells",
+        "qualified_address_save_result": "rejected_sheet_qualified_cell_definition",
+        "qualified_address_save_error": "Invalid cell definition Data!A2 for field name terpenes_instrument_conc_01",
         "candidate_sha256": expected_json_candidate_hash,
         "candidate_local_validation": "passed",
         "candidate_envelope": "legacy_table_config_qb_config",
+        "logical_address_representation": "Data!D2",
+        "old_sandbox_json_cell_representation": "D2",
+        "json_named_cell_representation": "unqualified_independent_scalar_cells",
+        "json_unqualified_named_cells": 43,
+        "json_qualified_named_cells": 0,
+        "a2_mapping_present": False,
+        "first_analyte_json_cell": "D2",
         "worksheet_tabs": ["Data"],
         "grid_rows": 40,
         "grid_columns": 26,
@@ -823,13 +845,16 @@ def main() -> int:
         "named_cells": 43,
         "analyte_named_cells": 23,
         "analyte_naming": "terpenes_instrument_conc_01_through_23",
-        "analyte_cells": "Data!D2:Z2",
+        "analyte_logical_cells": "Data!D2:Z2",
+        "analyte_json_cells": "D2:Z2",
         "missing_destinations": 0,
         "renamed_destinations": 0,
         "duplicated_destinations": 0,
         "formula_owned_destinations": 0,
+        "address_only_difference_count": 43,
+        "rendered_worksheet_structure_unchanged": True,
         "worksheet": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
-        "worksheet_state": "inactive_shell_no_corrected_version",
+        "worksheet_state": "qualified_render_passed_save_rejected_unqualified_retry_pending",
         "config_style_reference_type": "absent",
         "config_style_candidate_type": "absent",
         "corrected_upload_attempted": False,
@@ -902,9 +927,11 @@ def main() -> int:
     print("- QBench native named-cell persistence operational")
     print("- historical Codex B2 save control failed while sdf remained")
     print("- failed newer-envelope import classified wrong-target and collapsed-renderer")
-    print("- corrected native-envelope JSON candidate passed local 43/43 validation")
-    print("- exact inactive JSON-import worksheet shell created with no version")
-    print("- corrected candidate not uploaded; saved/reopened contract remains unproven")
+    print("- qualified-address native envelope rendered 40x26 with 43 named cells")
+    print("- qualified-address Save As New Version rejected by old one-tab validator")
+    print("- unqualified-address JSON candidate passed local 43/43 validation")
+    print("- exactly 43 address strings changed; rendered structure unchanged")
+    print("- corrected save retry pending; saved/reopened contract remains unproven")
     print("- sanitized eight-object inventory contains no internal Sandbox IDs")
     print("- sanitized six-object native inventory contains no internal Sandbox IDs")
     print("- exact Sandbox-only executable allowlist")

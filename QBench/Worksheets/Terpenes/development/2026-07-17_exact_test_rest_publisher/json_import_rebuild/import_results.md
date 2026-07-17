@@ -1,26 +1,27 @@
-# JSON import correction result
+# JSON import compatibility result
 
 Classification:
-**`corrected_native_legacy_candidate_local_validation_passed_not_uploaded`**
+**`unqualified_address_candidate_local_validation_passed_save_retry_pending`**
 
-The prior import must not be treated as successful. Manual review proved:
+Manual testing of the prior native-envelope candidate proved that it rendered
+the expected 40x26 grid and loaded all 43 named cells. That render is valid
+structural evidence, but it is not saved-version evidence.
 
-1. the failed candidate was loaded into the native scalar worksheet instead
-   of the intended JSON scalar worksheet; and
-2. its 43 `qb_config.named_cells` entries loaded, but the renderer showed only
-   a collapsed/default blank cell rather than the expected 40x26 grid.
+QBench rejected **Save As New Version** with:
 
-No visible Draft row for a corrected JSON candidate was established and no
-saved/reopened export exists. Therefore the failed action proves neither a
-saved worksheet version nor a destination contract.
+`Invalid cell definition Data!A2 for field name terpenes_instrument_conc_01`
 
-This prompt performed repository-only correction. The corrected candidate was
-not uploaded, attached, imported, saved, approved, or activated. QBench was
-not accessed.
+The logical contract maps the first analyte to `Data!D2`; there is no intended
+A2 destination. The actionable compatibility finding is that the old
+single-tab save validator rejects sheet-qualified JSON cell definitions.
 
-- Corrected upload attempted: no
-- Corrected candidate attached: no
-- Corrected import submitted: no
+The regenerated candidate uses 43 unqualified runtime cells while preserving
+the successfully rendered worksheet structure. No QBench environment was
+accessed and no corrected upload or save was attempted in this prompt.
+
+- Corrected JSON cells unqualified: 43/43
+- First analyte: `D2`
+- A2 mapping: absent
 - Corrected Draft row visibly established: no
 - Corrected saved/reopened export: no
 - `destination_contract_proven=false`

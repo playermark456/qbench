@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Write the failed/native/corrected structural comparison evidence."""
+"""Write the failed/native/rendered-qualified structural comparison evidence."""
 from __future__ import annotations
 
 import hashlib
@@ -20,7 +20,11 @@ NATIVE = (
     / "source"
     / "2026-07-17_SBX_ONLY_TERPENES_NATIVE_SCALAR_43_FIELD_BASE_working_native_export_spreadsheet.json"
 )
-CORRECTED = HERE / "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json"
+RENDERED_QUALIFIED = (
+    HERE
+    / "prior_qualified_candidate"
+    / "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE_qualified_addresses.json"
+)
 JSON_REPORT = HERE / "structural_comparison.json"
 MD_REPORT = HERE / "structural_comparison.md"
 UUID_PATTERN = re.compile(
@@ -127,7 +131,7 @@ def summary(path: Path) -> dict[str, Any]:
 
 failed_document = json.loads(FAILED.read_text(encoding="utf-8"))
 native_document = json.loads(NATIVE.read_text(encoding="utf-8-sig"))
-corrected_document = json.loads(CORRECTED.read_text(encoding="utf-8"))
+corrected_document = json.loads(RENDERED_QUALIFIED.read_text(encoding="utf-8"))
 
 changed_cells: list[str] = []
 native_grid = native_document["table_config"]["cell_settings"]
@@ -138,11 +142,11 @@ for row_index, (native_row, corrected_row) in enumerate(zip(native_grid, correct
             changed_cells.append(address(row_index, column_index))
 
 report = {
-    "classification": "corrected_native_legacy_candidate_local_validation_pending_upload",
+    "classification": "qualified_address_native_envelope_rendered_save_rejected",
     "files": {
         "failed_candidate": summary(FAILED),
         "working_native_export": summary(NATIVE),
-        "corrected_candidate": summary(CORRECTED),
+        "rendered_qualified_candidate": summary(RENDERED_QUALIFIED),
     },
     "failed_candidate_defects": [
         "Used the newer config/qb_config/data envelope instead of the working legacy table_config/qb_config envelope.",
@@ -173,7 +177,7 @@ report = {
     },
     "interpretation": {
         "logical_worksheet": "The old Sandbox legacy export serializes one unnamed table. It is the candidate's logical Data worksheet.",
-        "dual_data_representations": "The legacy reference has one table_config.cell_settings representation and no top-level data['Data']; the corrected candidate preserves that single representation.",
+        "dual_data_representations": "The legacy reference has one table_config.cell_settings representation and no top-level data['Data']; the rendered qualified candidate preserves that single representation.",
         "config_style": "The legacy reference has no config object, so absence - not null - is the exact matching type/state.",
     },
 }
@@ -204,17 +208,17 @@ labels = [
 ]
 for label, key in labels:
     values = []
-    for role in ("failed_candidate", "working_native_export", "corrected_candidate"):
+    for role in ("failed_candidate", "working_native_export", "rendered_qualified_candidate"):
         value = f[role][key]
         values.append(json.dumps(value, ensure_ascii=False) if isinstance(value, (list, dict)) else str(value))
     rows.append(f"| {label} | {values[0]} | {values[1]} | {values[2]} |")
 
 changed_text = ", ".join(changed_cells)
-markdown = f"""# Structural comparison: failed, working native, corrected
+markdown = f"""# Structural comparison: failed, working native, rendered qualified
 
-Classification: **`corrected_native_legacy_candidate_local_validation_pending_upload`**
+Classification: **`qualified_address_native_envelope_rendered_save_rejected`**
 
-| Property | Failed candidate | Working native export | Corrected candidate |
+| Property | Failed candidate | Working native export | Rendered qualified candidate |
 |---|---|---|---|
 {chr(10).join(rows)}
 
@@ -222,7 +226,7 @@ Classification: **`corrected_native_legacy_candidate_local_validation_pending_up
 
 """ + "\n".join(f"- {item}" for item in report["failed_candidate_defects"]) + f"""
 
-## Complete working-native to corrected difference
+## Complete working-native to rendered-qualified difference
 
 - Named cells: removed the sole diagnostic `sdf / A1` entry and replaced it
   with exactly the 43 Data-qualified entries from
@@ -237,10 +241,12 @@ Classification: **`corrected_native_legacy_candidate_local_validation_pending_up
 
 The old Sandbox legacy export serializes one unnamed table and has no
 `config`, `config.style`, `config.worksheets`, worksheet UUID,
-`minDimensions`, or top-level `data[\"Data\"]`. The corrected candidate
+`minDimensions`, or top-level `data[\"Data\"]`. The rendered qualified candidate
 preserves that exact single-table representation. This is intentional: the
 failed candidate's invented newer envelope was the structural defect that
-loaded named-cell configuration while collapsing the rendered sheet.
+loaded named-cell configuration while collapsing the rendered sheet. Manual
+testing later confirmed that this native-envelope file rendered correctly but
+failed Save As New Version because its named-cell addresses were qualified.
 """
 MD_REPORT.write_text(markdown, encoding="utf-8", newline="\n")
 print(JSON_REPORT)

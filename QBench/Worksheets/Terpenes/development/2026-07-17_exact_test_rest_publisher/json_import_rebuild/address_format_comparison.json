@@ -1,0 +1,375 @@
+{
+  "classification": "qualified_to_unqualified_one_tab_compatibility_correction",
+  "previous_candidate": {
+    "filename": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE_qualified_addresses.json",
+    "sha256": "54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b"
+  },
+  "new_candidate": {
+    "filename": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json",
+    "sha256": "e5ef20a5cec574dc292ed679867e01313233c92ceda9ef863bf98dd8d4485b80"
+  },
+  "difference_count": 43,
+  "expected_difference_count": 43,
+  "all_differences_under_qb_config_named_cells_cell": true,
+  "rendered_worksheet_structure_unchanged": true,
+  "grid_dimensions": "40x26",
+  "required_anchor_count": 28,
+  "named_cell_count": 43,
+  "all_json_cells_unqualified": true,
+  "a2_mapping_present": false,
+  "specific_mappings": {
+    "terpenes_instrument_conc_01": "D2",
+    "terpenes_instrument_conc_12": "O2",
+    "terpenes_instrument_conc_23": "Z2",
+    "sample_mass_g": "B12",
+    "batch_qc_disposition": "B22",
+    "publish_ready": "B23",
+    "source_file_hash": "B30"
+  },
+  "changes": [
+    {
+      "name": "terpenes_instrument_conc_01",
+      "logical_address": "Data!D2",
+      "previous_json_cell": "Data!D2",
+      "old_sandbox_json_cell": "D2",
+      "expected_runtime_cell": "D2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_02",
+      "logical_address": "Data!E2",
+      "previous_json_cell": "Data!E2",
+      "old_sandbox_json_cell": "E2",
+      "expected_runtime_cell": "E2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_03",
+      "logical_address": "Data!F2",
+      "previous_json_cell": "Data!F2",
+      "old_sandbox_json_cell": "F2",
+      "expected_runtime_cell": "F2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_04",
+      "logical_address": "Data!G2",
+      "previous_json_cell": "Data!G2",
+      "old_sandbox_json_cell": "G2",
+      "expected_runtime_cell": "G2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_05",
+      "logical_address": "Data!H2",
+      "previous_json_cell": "Data!H2",
+      "old_sandbox_json_cell": "H2",
+      "expected_runtime_cell": "H2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_06",
+      "logical_address": "Data!I2",
+      "previous_json_cell": "Data!I2",
+      "old_sandbox_json_cell": "I2",
+      "expected_runtime_cell": "I2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_07",
+      "logical_address": "Data!J2",
+      "previous_json_cell": "Data!J2",
+      "old_sandbox_json_cell": "J2",
+      "expected_runtime_cell": "J2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_08",
+      "logical_address": "Data!K2",
+      "previous_json_cell": "Data!K2",
+      "old_sandbox_json_cell": "K2",
+      "expected_runtime_cell": "K2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_09",
+      "logical_address": "Data!L2",
+      "previous_json_cell": "Data!L2",
+      "old_sandbox_json_cell": "L2",
+      "expected_runtime_cell": "L2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_10",
+      "logical_address": "Data!M2",
+      "previous_json_cell": "Data!M2",
+      "old_sandbox_json_cell": "M2",
+      "expected_runtime_cell": "M2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_11",
+      "logical_address": "Data!N2",
+      "previous_json_cell": "Data!N2",
+      "old_sandbox_json_cell": "N2",
+      "expected_runtime_cell": "N2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_12",
+      "logical_address": "Data!O2",
+      "previous_json_cell": "Data!O2",
+      "old_sandbox_json_cell": "O2",
+      "expected_runtime_cell": "O2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_13",
+      "logical_address": "Data!P2",
+      "previous_json_cell": "Data!P2",
+      "old_sandbox_json_cell": "P2",
+      "expected_runtime_cell": "P2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_14",
+      "logical_address": "Data!Q2",
+      "previous_json_cell": "Data!Q2",
+      "old_sandbox_json_cell": "Q2",
+      "expected_runtime_cell": "Q2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_15",
+      "logical_address": "Data!R2",
+      "previous_json_cell": "Data!R2",
+      "old_sandbox_json_cell": "R2",
+      "expected_runtime_cell": "R2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_16",
+      "logical_address": "Data!S2",
+      "previous_json_cell": "Data!S2",
+      "old_sandbox_json_cell": "S2",
+      "expected_runtime_cell": "S2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_17",
+      "logical_address": "Data!T2",
+      "previous_json_cell": "Data!T2",
+      "old_sandbox_json_cell": "T2",
+      "expected_runtime_cell": "T2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_18",
+      "logical_address": "Data!U2",
+      "previous_json_cell": "Data!U2",
+      "old_sandbox_json_cell": "U2",
+      "expected_runtime_cell": "U2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_19",
+      "logical_address": "Data!V2",
+      "previous_json_cell": "Data!V2",
+      "old_sandbox_json_cell": "V2",
+      "expected_runtime_cell": "V2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_20",
+      "logical_address": "Data!W2",
+      "previous_json_cell": "Data!W2",
+      "old_sandbox_json_cell": "W2",
+      "expected_runtime_cell": "W2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_21",
+      "logical_address": "Data!X2",
+      "previous_json_cell": "Data!X2",
+      "old_sandbox_json_cell": "X2",
+      "expected_runtime_cell": "X2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_22",
+      "logical_address": "Data!Y2",
+      "previous_json_cell": "Data!Y2",
+      "old_sandbox_json_cell": "Y2",
+      "expected_runtime_cell": "Y2",
+      "exact_conversion": true
+    },
+    {
+      "name": "terpenes_instrument_conc_23",
+      "logical_address": "Data!Z2",
+      "previous_json_cell": "Data!Z2",
+      "old_sandbox_json_cell": "Z2",
+      "expected_runtime_cell": "Z2",
+      "exact_conversion": true
+    },
+    {
+      "name": "sample_mass_g",
+      "logical_address": "Data!B12",
+      "previous_json_cell": "Data!B12",
+      "old_sandbox_json_cell": "B12",
+      "expected_runtime_cell": "B12",
+      "exact_conversion": true
+    },
+    {
+      "name": "final_volume_ml",
+      "logical_address": "Data!B13",
+      "previous_json_cell": "Data!B13",
+      "old_sandbox_json_cell": "B13",
+      "expected_runtime_cell": "B13",
+      "exact_conversion": true
+    },
+    {
+      "name": "df",
+      "logical_address": "Data!B14",
+      "previous_json_cell": "Data!B14",
+      "old_sandbox_json_cell": "B14",
+      "expected_runtime_cell": "B14",
+      "exact_conversion": true
+    },
+    {
+      "name": "df_application_mode",
+      "logical_address": "Data!B15",
+      "previous_json_cell": "Data!B15",
+      "old_sandbox_json_cell": "B15",
+      "expected_runtime_cell": "B15",
+      "exact_conversion": true
+    },
+    {
+      "name": "labsolutions_conc_unit",
+      "logical_address": "Data!B16",
+      "previous_json_cell": "Data!B16",
+      "old_sandbox_json_cell": "B16",
+      "expected_runtime_cell": "B16",
+      "exact_conversion": true
+    },
+    {
+      "name": "labsolutions_conc_unit_confirmed",
+      "logical_address": "Data!B17",
+      "previous_json_cell": "Data!B17",
+      "old_sandbox_json_cell": "B17",
+      "expected_runtime_cell": "B17",
+      "exact_conversion": true
+    },
+    {
+      "name": "preparation_values_confirmed",
+      "logical_address": "Data!B18",
+      "previous_json_cell": "Data!B18",
+      "old_sandbox_json_cell": "B18",
+      "expected_runtime_cell": "B18",
+      "exact_conversion": true
+    },
+    {
+      "name": "source_batch_id",
+      "logical_address": "Data!B28",
+      "previous_json_cell": "Data!B28",
+      "old_sandbox_json_cell": "B28",
+      "expected_runtime_cell": "B28",
+      "exact_conversion": true
+    },
+    {
+      "name": "source_instrument_file",
+      "logical_address": "Data!B29",
+      "previous_json_cell": "Data!B29",
+      "old_sandbox_json_cell": "B29",
+      "expected_runtime_cell": "B29",
+      "exact_conversion": true
+    },
+    {
+      "name": "source_file_hash",
+      "logical_address": "Data!B30",
+      "previous_json_cell": "Data!B30",
+      "old_sandbox_json_cell": "B30",
+      "expected_runtime_cell": "B30",
+      "exact_conversion": true
+    },
+    {
+      "name": "source_data_file",
+      "logical_address": "Data!B31",
+      "previous_json_cell": "Data!B31",
+      "old_sandbox_json_cell": "B31",
+      "expected_runtime_cell": "B31",
+      "exact_conversion": true
+    },
+    {
+      "name": "source_method_file",
+      "logical_address": "Data!B32",
+      "previous_json_cell": "Data!B32",
+      "old_sandbox_json_cell": "B32",
+      "expected_runtime_cell": "B32",
+      "exact_conversion": true
+    },
+    {
+      "name": "source_sequence_file",
+      "logical_address": "Data!B33",
+      "previous_json_cell": "Data!B33",
+      "old_sandbox_json_cell": "B33",
+      "expected_runtime_cell": "B33",
+      "exact_conversion": true
+    },
+    {
+      "name": "parser_version",
+      "logical_address": "Data!B34",
+      "previous_json_cell": "Data!B34",
+      "old_sandbox_json_cell": "B34",
+      "expected_runtime_cell": "B34",
+      "exact_conversion": true
+    },
+    {
+      "name": "imported_at",
+      "logical_address": "Data!B35",
+      "previous_json_cell": "Data!B35",
+      "old_sandbox_json_cell": "B35",
+      "expected_runtime_cell": "B35",
+      "exact_conversion": true
+    },
+    {
+      "name": "instrument_name",
+      "logical_address": "Data!B36",
+      "previous_json_cell": "Data!B36",
+      "old_sandbox_json_cell": "B36",
+      "expected_runtime_cell": "B36",
+      "exact_conversion": true
+    },
+    {
+      "name": "detector_id",
+      "logical_address": "Data!B37",
+      "previous_json_cell": "Data!B37",
+      "old_sandbox_json_cell": "B37",
+      "expected_runtime_cell": "B37",
+      "exact_conversion": true
+    },
+    {
+      "name": "detector_name",
+      "logical_address": "Data!B38",
+      "previous_json_cell": "Data!B38",
+      "old_sandbox_json_cell": "B38",
+      "expected_runtime_cell": "B38",
+      "exact_conversion": true
+    },
+    {
+      "name": "batch_qc_disposition",
+      "logical_address": "Data!B22",
+      "previous_json_cell": "Data!B22",
+      "old_sandbox_json_cell": "B22",
+      "expected_runtime_cell": "B22",
+      "exact_conversion": true
+    },
+    {
+      "name": "publish_ready",
+      "logical_address": "Data!B23",
+      "previous_json_cell": "Data!B23",
+      "old_sandbox_json_cell": "B23",
+      "expected_runtime_cell": "B23",
+      "exact_conversion": true
+    }
+  ]
+}

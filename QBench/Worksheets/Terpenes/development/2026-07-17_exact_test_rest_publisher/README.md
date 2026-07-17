@@ -69,20 +69,22 @@ remained unchanged after save and reopen. Therefore:
 - `codex_named_cell_save_control_failed` is the current controlled-stop
   classification, `browser_control_authoritative=false`, and Probes B/C plus
   all further Codex-controlled worksheet construction remain skipped;
-- manual review invalidated the prior JSON import: it targeted the native
-  scalar worksheet and loaded 43 named-cell entries while rendering only a
-  collapsed/default blank cell;
-- `json_import_rebuild/` now preserves that failed file and the fresh 40x26
-  working-native Export Spreadsheet reference, then builds a corrected
-  candidate from the native legacy envelope only;
-- the corrected candidate has 28 required visible anchors, 30 total non-empty
-  cells, and exactly 43 blank, writable, non-formula destinations; it passed
-  local validation with SHA-256
-  `54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b`;
-- no corrected upload, Draft row, saved/reopened export, or round-trip proof
-  occurred in this prompt;
-- `corrected_native_legacy_candidate_local_validation_passed_not_uploaded` is
-  the current controlled-stop classification;
+- the native-envelope candidate rendered successfully as a 40x26 grid with 43
+  named cells, but **Save As New Version** rejected its sheet-qualified JSON
+  cell definitions;
+- the rejection named `Data!A2` for the first analyte even though its logical
+  mapping is `Data!D2`; compatibility evidence from `sdf -> A1` and the active
+  one-tab Terpenes export establishes that legacy JSON cells must be
+  unqualified;
+- `json_import_rebuild/` now keeps the logical mapping sheet-qualified while
+  serializing exactly 43 unqualified scalar cells such as `D2`;
+- comparison against the successfully rendered candidate proves exactly 43
+  address-string changes and no grid, anchor, metadata, UUID, or content
+  changes;
+- the regenerated candidate passed local validation with SHA-256
+  `e5ef20a5cec574dc292ed679867e01313233c92ceda9ef863bf98dd8d4485b80`;
+- `unqualified_address_candidate_local_validation_passed_save_retry_pending`
+  is the current controlled-stop classification;
 - the earlier destination-proof objects and the native Worksheet, two
   versions, Assay, Sample, and Test are inventoried in separate sanitized
   evidence without internal IDs;

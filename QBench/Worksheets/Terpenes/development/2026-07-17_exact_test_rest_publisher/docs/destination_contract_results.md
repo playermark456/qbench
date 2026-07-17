@@ -3,7 +3,7 @@
 Date: 2026-07-17
 
 Current controlled-stop classification:
-**`corrected_native_legacy_candidate_local_validation_passed_not_uploaded`**.
+**`unqualified_address_candidate_local_validation_passed_save_retry_pending`**.
 
 Prior imported-definition runtime classification:
 **`normal_assay_test_instantiation_failed_blank_default`**.
@@ -33,7 +33,9 @@ navigating away and reopening it.
 | Codex B2 save-procedure control | `codex_named_cell_save_control_failed` |
 | Generated JSON candidate local validation | `passed_43_of_43` |
 | Prior generated JSON import | `failed_wrong_worksheet_collapsed_renderer` |
-| Corrected native-envelope candidate | `local_validation_passed_not_uploaded` |
+| Qualified-address native-envelope render | `passed_40x26_grid_and_43_named_cells` |
+| Qualified-address Save As New Version | `rejected_sheet_qualified_cell_definition` |
+| Unqualified-address candidate | `local_validation_passed_save_retry_pending` |
 | JSON round-trip export | `not_run_import_gate` |
 | Publisher destination gate | `destination_contract_proven=false` |
 
@@ -260,23 +262,25 @@ configuration remains unchanged.
 
 ## Generated JSON import rebuild
 
-The prior generated JSON import is invalid: manual review proved that it was
-loaded into the native scalar worksheet and displayed a collapsed/default
-blank cell even though all 43 named-cell definitions loaded.
+The native-envelope candidate subsequently rendered the complete 40x26 grid
+and 43 named cells, but QBench rejected **Save As New Version** with an invalid
+sheet-qualified cell-definition error. This establishes a separate one-tab
+old-Sandbox compatibility rule: logical mapping addresses remain
+sheet-qualified, while `qb_config.named_cells` JSON cell strings must be
+unqualified.
 
-The corrected implementation path uses the fresh working-native legacy export
-as its sole structural base. The locally generated candidate is:
+The regenerated candidate is:
 `json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json`.
-It preserves the native legacy `table_config/qb_config` envelope, its exact
-40x26 matrix and metadata, adds 28 required anchors, and contains exactly 43
-sheet-qualified named cells. Local validation passed 43/43 with no missing,
-renamed, duplicated, formula-owned, Pass/Fail, Dimethylacetamide, or Peak Table
-destinations. SHA-256:
-`54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b`.
+It preserves the rendered native legacy envelope, 40x26 matrix, 28 anchors,
+metadata, sizing, and UUID. Exactly 43 `cell` strings change from forms such
+as `Data!D2` to `D2`. Local validation passed 43/43 with no qualified JSON
+addresses, A2 mapping, missing, renamed, duplicated, formula-owned, Pass/Fail,
+Dimethylacetamide, or Peak Table destinations. SHA-256:
+`e5ef20a5cec574dc292ed679867e01313233c92ceda9ef863bf98dd8d4485b80`.
 
-No QBench environment was accessed for the correction. The corrected
-candidate was not uploaded or saved, so no corrected Draft row, raw
-round-trip export, or semantic round-trip result is claimed.
+No QBench environment was accessed for this regeneration. A corrected save
+retry, Draft row, raw round-trip export, and semantic round-trip result remain
+pending.
 
 ## Version-creation control reconciliation
 

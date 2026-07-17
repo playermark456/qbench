@@ -29,18 +29,22 @@ The candidate was not promoted. The historical native scalar worksheet result
 is preserved, but the current implementation path is generated JSON import,
 not manual entry of 43 named cells.
 
-`json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json`
-materializes the exact candidate mapping as 43 `qb_config.named_cells` entries
-on the fresh working-native 40x26 legacy grid. It adds 28 required anchors and
-preserves all other native structure and metadata after substituting one fresh
-renderer UUID. Local JSON validation passed every name, address,
-blank/writable/non-formula, prohibited-field, and sensitive-data check.
-Candidate SHA-256:
-`54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b`.
+`config/field_mapping_scalar_candidate.csv` remains the logical,
+sheet-qualified contract. For this exact one-tab legacy JSON, the runtime
+representation under `qb_config.named_cells` is deliberately unqualified:
 
-The prior newer-envelope import is invalid because it targeted the wrong
-worksheet and rendered a collapsed/default blank cell. No corrected upload,
-Draft version, or round-trip export occurred. Therefore
+- logical address: `Data!D2`
+- old-Sandbox JSON cell representation: `D2`
+
+`json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json`
+materializes all 43 mappings as independent unqualified scalar cells while
+preserving the successfully rendered 40x26 structure. The address comparison
+proves exactly 43 string changes and no other differences. Candidate SHA-256:
+`e5ef20a5cec574dc292ed679867e01313233c92ceda9ef863bf98dd8d4485b80`.
+
+The qualified-address candidate rendered but failed Save As New Version. No
+corrected unqualified-address save, Draft version, or round-trip export
+occurred in this prompt. Therefore
 `config/field_mapping.csv`, publisher payload construction, and runtime
 classification remain unchanged.
 

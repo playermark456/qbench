@@ -26,12 +26,17 @@ JSON candidate is also invalid: manual review established that it was loaded
 into the native scalar worksheet and rendered a collapsed/default blank cell
 despite loading 43 named-cell entries.
 
-A corrected native-envelope candidate now passes local 43/43 validation. It
-was not uploaded in this repository-only correction, so no corrected Draft
-row, saved/reopened export, or round-trip result exists.
+The later native-envelope candidate rendered the full 40x26 grid and all 43
+named cells, but **Save As New Version** rejected a sheet-qualified named-cell
+definition. This is a save-compatibility failure, not a renderer failure.
+
+The regenerated candidate uses exactly 43 unqualified runtime cell strings and
+passes local 43/43 validation. It was not uploaded in this repository-only
+correction, so no corrected Draft row, saved/reopened export, or round-trip
+result exists.
 
 Current classification:
-**`corrected_native_legacy_candidate_local_validation_passed_not_uploaded`**.
+**`unqualified_address_candidate_local_validation_passed_save_retry_pending`**.
 
 ## Destination proof controlled stop
 
