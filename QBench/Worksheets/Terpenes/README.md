@@ -41,5 +41,5 @@ creates sanitized SHA-256 audit manifests.
 Prompt 5B stopped before the first Sandbox API request because no Sandbox API
 credential was present and the actual saved 43-field destination plus analyte
 PATCH representation remain unproven. QBench atomicity is classified
-`api_patch_unresolved`; no Sandbox object was created or changed. The 33 local
+`api_patch_unresolved`; no Sandbox object was created or changed. The 34 local
 synthetic tests passed, but they are not QBench runtime evidence.

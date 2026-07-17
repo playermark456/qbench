@@ -1274,6 +1274,7 @@ def _print_plan(plan: PreparedPlan) -> None:
 
 def main(argv: Sequence[str] | None = None) -> int:
     args = _build_parser().parse_args(argv)
+    writer = AuditWriter(args.audit_dir)
     try:
         base_url = validate_base_url(args.base_url)
         token = load_token(args.secrets_file)
@@ -1283,7 +1284,6 @@ def main(argv: Sequence[str] | None = None) -> int:
         publisher = Publisher(client, fields, config, StateStore(args.state_file))
         plan = publisher.prepare(args.batch_id)
         _print_plan(plan)
-        writer = AuditWriter(args.audit_dir)
         if args.command in ("inspect", "dry-run"):
             artifacts = writer.write(args.command, plan, final_result="read_only_complete")
             print(f"Sanitized audit manifest: {artifacts['manifest']}")
@@ -1301,5 +1301,11 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(f"Sanitized audit manifest: {artifacts['manifest']}")
         return 0 if final_result == "publish_complete" else 3
     except PublisherError as exc:
+        artifacts = writer.write(
+            args.command,
+            None,
+            final_result=f"preflight_blocked:{type(exc).__name__}",
+        )
         print(f"ERROR: {sanitize_text(exc)}", file=sys.stderr)
+        print(f"Sanitized audit manifest: {artifacts['manifest']}", file=sys.stderr)
         return 2

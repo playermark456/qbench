@@ -2,13 +2,16 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import io
 import json
 import sys
 import tempfile
 import unittest
+from contextlib import redirect_stderr, redirect_stdout
 from dataclasses import replace
 from pathlib import Path
 from urllib.error import URLError
+from unittest.mock import patch
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PACKAGE_ROOT / "src"))
@@ -35,6 +38,7 @@ from terpenes_publisher import (  # noqa: E402
     contains_forbidden_field,
     load_mapping,
     load_token,
+    main,
     sanitize_text,
     validate_base_url,
 )
@@ -571,6 +575,31 @@ class AuditTests(PublisherFixture):
         self.assertNotIn("https://", json_text)
         self.assertEqual(manifest["files"][Path(artifacts["json"]).name], hashlib.sha256(json_text.encode()).hexdigest())
         self.assertEqual(manifest["files"][Path(artifacts["report"]).name], hashlib.sha256(report_text.encode()).hexdigest())
+
+    def test_preflight_failure_creates_sanitized_audit(self) -> None:
+        directory = Path(self.temp.name) / "preflight-audit"
+        with (
+            patch.dict("os.environ", {}, clear=True),
+            redirect_stdout(io.StringIO()),
+            redirect_stderr(io.StringIO()),
+        ):
+            result = main(
+                [
+                    "--audit-dir",
+                    str(directory),
+                    "dry-run",
+                    "--batch-id",
+                    "SBX-NOT-READ",
+                ]
+            )
+        self.assertEqual(result, 2)
+        files = sorted(directory.glob("*"))
+        self.assertEqual(len(files), 3)
+        json_path = next(path for path in files if path.name.endswith("dry-run.json"))
+        payload = json.loads(json_path.read_text(encoding="utf-8"))
+        self.assertEqual(payload["final_result"], "preflight_blocked:ConfigurationError")
+        self.assertEqual(payload["rows"], [])
+        self.assertEqual(payload["credential"], "not_recorded")
 
 
 if __name__ == "__main__":

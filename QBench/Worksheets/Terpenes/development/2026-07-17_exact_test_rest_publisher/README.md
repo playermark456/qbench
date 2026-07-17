@@ -43,6 +43,7 @@ and the saved Export Spreadsheet checks in `docs/field_mapping.md` pass.
   rolled back when safe, and stops the Batch.
 - Audit files hash Test, Sample, Batch, and reviewer identifiers and never
   include credentials, headers, cookies, signed URLs, or raw API error bodies.
+- Preflight failures create a sanitized no-plan audit before the CLI exits.
 - Local `audit/` and secret files are ignored by Git.
 
 ## Commands
@@ -70,7 +71,7 @@ python -m unittest discover -s tests -v
 python validate_prompt_5b_package.py
 ```
 
-Current result: 33 unit tests passed. The tests use only synthetic identifiers
+Current result: 34 unit tests passed. The tests use only synthetic identifiers
 and in-memory API behavior; they are not Sandbox success evidence.
 
 ## Release checklist for QBench Sandbox

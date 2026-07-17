@@ -44,7 +44,7 @@
     "analyte_patch_key_contract": "unresolved"
   },
   "local_validation": {
-    "unit_tests": "33 passed",
+    "unit_tests": "34 passed",
     "exact_test_membership": "passed_synthetic",
     "single_test_publish": "passed_synthetic",
     "native_numeric_cells": "23 passed_synthetic",
@@ -92,16 +92,16 @@
     {"path": "docs/publish_gate.md", "sha256": "9ca8844aabc84f2a294e4be79b33a0ce4cdadb0207a8ea5fc38a140887bafed6"},
     {"path": "docs/rollback_contract.md", "sha256": "624c74c0a78ff059d0c5186e5ec7c37642956ede97546ad8242ed73b9812b91e"},
     {"path": "docs/sandbox_failure_results.md", "sha256": "b0861fb75a4a8f3ffe42b968c5eaf0ca10f4da7b0bad90a942c53e325c52284b"},
-    {"path": "docs/sandbox_success_results.md", "sha256": "7238e9fc6e711dcfb6a8b7c33b7a8e153877031aed83bf29811e3bc59b31cda8"},
+    {"path": "docs/sandbox_success_results.md", "sha256": "64164db4f6a5af043e44c2f70eb94bdff88936a15a453dd4d563fc1f3c0de9f0"},
     {"path": "docs/security_model.md", "sha256": "0613b43be589a4d21ceb070ba6aefda04251350f00f10b4ab0bdbf16c9589e67"},
     {"path": "fixtures/README.md", "sha256": "018244dcca05900c2801592d4c80bdd2061631b4bb2444c895e11ebdc94a1aa5"},
     {"path": "fixtures/sanitized_audit_example.json", "sha256": "6ae60a9e8a489f3ee7805db709d362c350aff511ec3ed42397aba43cf431907c"},
-    {"path": "README.md", "sha256": "85d1a6f112899998d5c91670d6a58a3e1720795d784df0c56f7d9a04d96c885f"},
+    {"path": "README.md", "sha256": "75750120bba07a412cea4e1eb28e103cf9c2226ed7836ec17d341d57a3f9a922"},
     {"path": "requirements.txt", "sha256": "5b5b2f659e39f8082ab713fff8a7ca6e0581fd75421c0730436a2591f26283d7"},
     {"path": "src/terpenes_publisher/__init__.py", "sha256": "2fce8bbb9a8305a9b49c89383956a3c4fb09399e971da94efc65c398818213a3"},
-    {"path": "src/terpenes_publisher/core.py", "sha256": "74de1492549f69db41d5e4dd91c9482c230fb9466690f9822c5172268111e0d7"},
+    {"path": "src/terpenes_publisher/core.py", "sha256": "1b31512329bc9d13d7f56000c06ff5e407c54c85c70965f388e9f76c29aecb61"},
     {"path": "terpenes_publisher.py", "sha256": "79b026b4aefc533eadf6c2756fdde8a67e2ede673ee2a5650244d309cc91481d"},
-    {"path": "tests/test_publisher.py", "sha256": "5e6495f52d45c1df7a66d03fb2fa7653e7602c73542fa2352b4b486ee06f9fe5"},
+    {"path": "tests/test_publisher.py", "sha256": "e9a6a313d7784c88d8cde8b6ae542bf7006369bdec132ff1bbd4ea79ebd10a36"},
     {"path": "validate_prompt_5b_package.py", "sha256": "201ee3ae4259889cbed881b26e543c9933879c8c2b7fd9aaaadfe6c8a4dcb72a"}
   ]
 }

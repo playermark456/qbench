@@ -9,7 +9,7 @@ conditions.
 
 ## Local synthetic evidence only
 
-The 33-test standard-library suite passed and proved locally:
+The 34-test standard-library suite passed and proved locally:
 
 - exact Sandbox URL rejection;
 - rejection of non-task-synthetic Batch display names;
@@ -20,6 +20,7 @@ The 33-test standard-library suite passed and proved locally:
 - 23 native numeric analyte values;
 - unchanged formulas and unrelated cells;
 - sanitized audit artifacts and SHA-256 manifests;
+- sanitized no-plan audits for credential/preflight failures;
 - duplicate unchanged publish produces `NO CHANGE` and zero PATCH calls;
 - three-Test sequence stops before the third after the second fails.
 
