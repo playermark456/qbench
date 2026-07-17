@@ -4,8 +4,9 @@ This package is not production-ready and live promotion has not begun.
 
 Blocking gaps:
 
-1. The official same-host OAuth token endpoint has not been proven or locked.
-2. No token request or authenticated Sandbox request has been authorized yet.
+1. The package's same-host OAuth token-path attempt returned HTTP 404; a valid
+   authoritative same-origin token endpoint has not been proven or locked.
+2. One token request was authorized and failed; no authenticated GET occurred.
 3. Read-only Batch/Test response shapes have not been observed in the Sandbox.
 4. Exact synthetic assay and workflow identifiers are not configured.
 5. The native old-Sandbox Spreadsheet Worksheet engine is operational, but the
@@ -44,15 +45,17 @@ JSON:
    round trip, the raw runtime CSV hash, and the restored 43/43 blank Test.
 3. Do not upload another candidate, create Version 2, or edit this proven
    definition in the current task.
-4. In a separately authorized phase, prove the same-host OAuth endpoint and
-   perform read-only API confirmation before any PATCH work.
+4. Obtain an authoritative repository reference for the exact same-host OAuth
+   endpoint, then separately authorize a new token request and read-only API
+   confirmation before any PATCH work. Do not probe alternate paths.
 5. Add formulas and the remaining Prompt 3 layout only in a separately
    authorized version, repeating the runtime proof at each stage.
 
 Live QBench was not accessed. No customer data was used. No Pass/Fail artifact
 was created. No COA was generated and nothing was transmitted to METRC.
 
-The immediate Sandbox gap is read-only API confirmation. The prior lock
+The immediate Sandbox gap is a valid documented OAuth endpoint followed by
+read-only API confirmation. The prior lock
 conclusion was a procedural error: approval did not require a review lock,
 administrator, different account, or QBench support. The exact Version 1 is
 Approved/Active and its runtime gate passed, but this adds no live-QBench

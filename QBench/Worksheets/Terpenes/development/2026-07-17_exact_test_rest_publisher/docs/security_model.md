@@ -51,10 +51,12 @@ workflow, reviewer, source, destination, formula, atomicity, idempotency, or
 rollback prerequisite is unresolved. No configuration option bypasses the
 prohibition on Pass/Fail/result fields.
 
-Before any token request, the application requires both a SHA-256-locked,
-passing 43-field saved-Sandbox destination proof and an explicitly proven OAuth
-token endpoint contract. The current configuration has neither, so API
-commands stop before the secrets file is loaded or a token client is created.
+The operational publisher still requires both a SHA-256-locked destination
+proof and a proven OAuth endpoint contract. Its configuration remains blocked.
+The separately authorized read-only confirmation runner enforced the proven
+runtime baseline and exact origin, then attempted the package's token-path
+contract once. HTTP 404 caused a controlled stop before GET. It did not alter
+publisher configuration or probe another token path.
 
 The default configuration also rejects any Batch whose display name does not
 begin with `SBX_ONLY_`, before worksheet content is processed. This task build

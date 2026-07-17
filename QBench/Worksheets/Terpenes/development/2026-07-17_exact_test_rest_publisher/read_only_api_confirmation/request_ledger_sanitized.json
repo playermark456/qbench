@@ -1,0 +1,18 @@
+{
+  "allowed_origin": "https://ait-sandbox.qbench.net",
+  "authorization_headers_recorded": false,
+  "credentials_or_tokens_recorded": false,
+  "internal_object_ids_recorded": false,
+  "requests": [
+    {
+      "allowed_origin": true,
+      "content_type": "application/json",
+      "endpoint_template": "/qbench/api/v1/oauth/token",
+      "http_status": 404,
+      "method": "POST",
+      "redirect_escaped_allowed_origin": false,
+      "sequence": 1
+    }
+  ],
+  "schema_version": 1
+}

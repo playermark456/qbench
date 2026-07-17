@@ -27,6 +27,8 @@ QBench/Worksheets/Terpenes/development/*/native_43_field_rebuild/*object_ids.loc
 
 # Raw Sandbox JSON-scalar runtime export (preserved locally; sanitized evidence is tracked)
 QBench/Worksheets/Terpenes/development/*/json_import_rebuild/runtime_instantiation/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_RUNTIME_TEST_WORKSHEET_export_data.csv
+QBench/Worksheets/Terpenes/development/*/read_only_api_confirmation/raw/
+QBench/Worksheets/Terpenes/development/*/read_only_api_confirmation/*.local.json
 
 # Python caches and local virtual environments
 __pycache__/

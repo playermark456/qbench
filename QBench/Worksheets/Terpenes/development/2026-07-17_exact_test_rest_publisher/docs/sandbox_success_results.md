@@ -90,3 +90,14 @@ The five representative values persisted exactly, B22/B23 remained blank,
 and only those five values were cleared. A final save, leave, and reopen proved
 all 43 destinations blank again. This establishes
 `destination_contract_proven=runtime_instantiation_passed_pending_read_only_api_confirmation`.
+
+## Read-only API preflight success
+
+The corrected ignored credential file passed exact byte-for-byte origin and
+three-key nonblank checks without displaying values. The guarded runner loaded
+the exact Test identifier only from ignored runtime evidence, confirmed the
+43/43 blank baseline locally, disabled proxies and redirects, retained TLS
+verification, and rejected prohibited methods before dispatch.
+
+The subsequent OAuth result is recorded under failures because the single
+token POST returned HTTP 404. No GET was sent.

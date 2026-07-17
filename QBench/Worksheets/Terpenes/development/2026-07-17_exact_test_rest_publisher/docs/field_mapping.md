@@ -12,13 +12,14 @@
 All mapping rows currently have status
 `unverified_saved_sandbox_destination`.
 
-## Current JSON scalar approval gate
+## Current JSON scalar and API gate
 
-The saved JSON scalar definition still passes its 43/43 structural checks, but
-exact Version 1 is now `PENDING` after approval was blocked by an active review
-lock assigned to another user. No runtime instance exists, so the scalar
-candidate remains unpromoted and the REST analyte PATCH-key contract remains
-`unresolved`.
+Exact `JSON Scalar 43 Field Base v1` is Approved/Active. Its normal isolated
+Assay-created Test passed the 40x26 runtime gate, representative persistence,
+and restored 43/43 blank baseline. The candidate remains operationally
+unpromoted because the separately authorized token request returned HTTP 404
+before authenticated GET. The REST analyte PATCH-key contract therefore
+remains `unresolved`.
 
 ## Unpromoted scalar candidate
 
@@ -50,11 +51,11 @@ preserving the successfully rendered 40x26 structure. The address comparison
 proves exactly 43 string changes and no other differences. Candidate SHA-256:
 `e5ef20a5cec574dc292ed679867e01313233c92ceda9ef863bf98dd8d4485b80`.
 
-The qualified-address candidate rendered but failed Save As New Version. No
-corrected unqualified-address save, Draft version, or round-trip export
-occurred in this prompt. Therefore
-`config/field_mapping.csv`, publisher payload construction, and runtime
-classification remain unchanged.
+The qualified-address candidate rendered but failed Save As New Version. The
+corrected unqualified-address Version 1 subsequently passed saved/reopened
+round trip and normal runtime instantiation. This proves the worksheet layer,
+not the API field-key or PATCH contract. Therefore `config/field_mapping.csv`
+and publisher payload construction remain unchanged.
 
 ## Important REST ambiguity
 

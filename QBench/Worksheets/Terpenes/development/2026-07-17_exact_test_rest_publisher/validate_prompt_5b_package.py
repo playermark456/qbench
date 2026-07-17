@@ -106,6 +106,20 @@ REQUIRED = {
     "json_import_rebuild/runtime_instantiation/sanitized_object_inventory.json",
     "json_import_rebuild/runtime_instantiation/sandbox_cleanup_plan.md",
     "json_import_rebuild/runtime_instantiation/validate_runtime_instantiation.py",
+    "read_only_api_confirmation/README.md",
+    "read_only_api_confirmation/preflight_plan.md",
+    "read_only_api_confirmation/oauth_result_sanitized.md",
+    "read_only_api_confirmation/object_identity_results.md",
+    "read_only_api_confirmation/worksheet_get_results.md",
+    "read_only_api_confirmation/worksheet_contract_results.md",
+    "read_only_api_confirmation/field_key_comparison.csv",
+    "read_only_api_confirmation/request_ledger_sanitized.json",
+    "read_only_api_confirmation/raw_response_sha256.txt",
+    "read_only_api_confirmation/sanitized_object_inventory.json",
+    "read_only_api_confirmation/next_patch_phase_gate.md",
+    "read_only_api_confirmation/run_summary_sanitized.json",
+    "read_only_api_confirmation/run_read_only_confirmation.py",
+    "read_only_api_confirmation/validate_read_only_api_confirmation.py",
     "prompt_5b_manifest.json",
 }
 
@@ -786,14 +800,37 @@ def main() -> int:
             + runtime_validation.stdout.replace("\n", " ").strip()
         )
 
+    read_only_validation = subprocess.run(
+        [
+            sys.executable,
+            str(
+                ROOT
+                / "read_only_api_confirmation/validate_read_only_api_confirmation.py"
+            ),
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if read_only_validation.returncode != 0:
+        failures.append(
+            "read-only API evidence validator failed: "
+            + read_only_validation.stdout.replace("\n", " ").strip()
+        )
+
     manifest = json.loads((ROOT / "prompt_5b_manifest.json").read_text(encoding="utf-8"))
     if manifest.get("atomicity_classification") != "api_patch_unresolved":
         failures.append("manifest atomicity classification is incorrect")
-    if manifest.get("sandbox", {}).get("api_requests_attempted") != 0:
-        failures.append("manifest claims a Sandbox API request")
-    if manifest.get("sandbox", {}).get("token_requests_attempted") != 0:
-        failures.append("manifest claims a token request")
-    if manifest.get("status") != "runtime_instantiation_passed_pre_token_stop":
+    if manifest.get("sandbox", {}).get("api_requests_attempted") != 1:
+        failures.append("manifest Sandbox API-request count is incorrect")
+    if manifest.get("sandbox", {}).get("token_requests_attempted") != 1:
+        failures.append("manifest token-request count is incorrect")
+    if manifest.get("sandbox", {}).get("hostname_runtime_api_verified") is not True:
+        failures.append("manifest exact Sandbox runtime origin was not verified")
+    if manifest.get("sandbox", {}).get("exact_test_membership") != "not_run_oauth_failed":
+        failures.append("manifest exact-Test API membership state is incorrect")
+    if manifest.get("status") != "read_only_api_oauth_404_controlled_stop":
         failures.append("manifest controlled-stop status is incorrect")
     if manifest.get("mapping", {}).get("saved_worksheet_definition_contract") != "passed_43_of_43":
         failures.append("manifest saved-definition classification is incorrect")
@@ -1018,6 +1055,47 @@ def main() -> int:
     ):
         if runtime_manifest.get(key) is not False:
             failures.append(f"manifest runtime safety control is not false: {key}")
+
+    read_only_manifest = manifest.get("read_only_api_confirmation", {})
+    for key, expected in {
+        "classification": "oauth_token_endpoint_404_controlled_stop",
+        "origin_preflight": "passed_exact_sandbox_origin",
+        "allowed_origin": "https://ait-sandbox.qbench.net",
+        "credential_loading": "passed_without_display",
+        "token_endpoint_template": "/qbench/api/v1/oauth/token",
+        "token_post_requests": 1,
+        "token_http_status": 404,
+        "token_response_content_type": "application/json",
+        "oauth_result": "failed_documented_path_not_found",
+        "token_returned": False,
+        "get_requests": 0,
+        "read_only_api_identity": "not_run_oauth_failed",
+        "read_only_api_worksheet_contract": "not_run_oauth_failed",
+        "destination_contract_proven": json_import_classification,
+        "analyte_patch_key_contract": "unresolved",
+        "atomicity_classification": "api_patch_unresolved",
+        "patch_requests": 0,
+        "put_requests": 0,
+        "delete_requests": 0,
+        "non_token_post_requests": 0,
+        "objects_changed": 0,
+        "analytical_results_changed": False,
+        "live_qbench_accessed": False,
+        "publish_or_qc_review_performed": False,
+        "pass_fail_artifact_introduced": False,
+        "credentials_assertion_authorization_or_token_committed_or_displayed": False,
+    }.items():
+        if read_only_manifest.get(key) != expected:
+            failures.append(f"manifest read-only API evidence is incorrect: {key}")
+    if read_only_manifest.get("field_key_classification_counts") != {
+        "observed_exact": 0,
+        "missing": 0,
+        "renamed": 0,
+        "duplicated": 0,
+        "present_but_unreadable": 0,
+        "not_exposed_by_get_contract": 43,
+    }:
+        failures.append("manifest read-only field-key counts are incorrect")
     expected_sandbox_objects = [
         "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
         "SBX_ONLY_TERPENES_API_DESTINATION_PROOF_V2",
@@ -1087,7 +1165,8 @@ def main() -> int:
     print("- sanitized six-object native inventory contains no internal Sandbox IDs")
     print("- exact Sandbox-only executable allowlist")
     print("- atomicity remains api_patch_unresolved")
-    print("- zero token/API requests and exact authorized Sandbox objects only")
+    print("- one exact-origin token POST returned HTTP 404; zero GET requests")
+    print("- zero PATCH, PUT, DELETE, non-token POST, object changes, or result changes")
     print(f"- {len(manifest['generated_files'])} generated-file hashes verified")
     return 0
 

@@ -44,6 +44,10 @@ navigating away and reopening it.
 | JSON Version 1 approval/activation gate | `passed_43_of_43` |
 | JSON normal Assay-created runtime Test | `passed_43_of_43` |
 | Representative value persistence | `passed` |
+| Exact-origin OAuth preflight | `passed_exact_sandbox_origin` |
+| OAuth token path attempt | `oauth_token_endpoint_404_controlled_stop` |
+| Read-only API identity | `not_run_oauth_failed` |
+| Read-only API Worksheet contract | `not_run_oauth_failed` |
 
 ## JSON Version 1 approval and runtime gate
 
@@ -272,21 +276,19 @@ unsupported. Sanitized support evidence is in
 
 ## Publisher gate
 
-- `destination_contract_proven=false`
+- `destination_contract_proven=runtime_instantiation_passed_pending_read_only_api_confirmation`
 - `atomicity_classification=api_patch_unresolved`
 - `analyte_patch_key_contract=unresolved`
-- No OAuth token request occurred.
-- No QBench REST API request occurred.
+- One authorized OAuth token POST returned HTTP 404.
+- No authenticated QBench GET occurred.
 - No PATCH occurred.
 - Live QBench was not accessed.
 
-The earlier imported 43-field Worksheet definition remains structurally
-proven, but the native scalar saved/reopened contract failed before runtime.
-The publisher remains blocked until a staged native-schema rebuild retains all
-43 exact destinations on a fresh Assay-created Test and a later explicitly
-authorized read-only API confirmation resolves the Test worksheet
-representation. The candidate mapping was not promoted and publisher
-configuration remains unchanged.
+The JSON scalar Worksheet and fresh normal Assay-created Test pass 43/43 at the
+saved and runtime layers. The publisher remains blocked until a valid
+authoritative token endpoint enables a later, explicitly authorized read-only
+API confirmation of the Test Worksheet representation. The candidate mapping
+was not promoted and publisher configuration remains unchanged.
 
 ## Generated JSON import rebuild
 
@@ -331,9 +333,11 @@ regenerated renderer UUID. Classifications:
 - `analyte_patch_key_contract=unresolved`
 
 The exact Version 1 is Approved/Active and the isolated Assay/Test runtime gate
-passed. No credential was read and no token, REST request, PATCH, live-QBench
-access, Publish, QC Review, or Pass/Fail artifact occurred. The operational
-mapping remains unpromoted pending read-only API confirmation.
+passed. The separately authorized read-only phase loaded credentials without
+display and made one token POST to the exact Sandbox origin. HTTP 404 stopped
+the phase before GET. No token was returned; no PATCH, live-QBench access,
+Publish, QC Review, or Pass/Fail artifact occurred. The operational mapping
+remains unpromoted pending read-only API confirmation.
 
 ## Version-creation control reconciliation
 

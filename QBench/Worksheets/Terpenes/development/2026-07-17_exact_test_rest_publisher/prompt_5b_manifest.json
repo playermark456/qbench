@@ -4,7 +4,7 @@
   "prompt": "Prompt 5B",
   "branch": "codex/terpenes-prompt-5b-rest-publisher",
   "application_version": "0.3.0",
-  "status": "runtime_instantiation_passed_pre_token_stop",
+  "status": "read_only_api_oauth_404_controlled_stop",
   "prerequisite": {
     "pull_request": 12,
     "merged": true,
@@ -12,14 +12,14 @@
   },
   "sandbox": {
     "hostname_allowlisted": "ait-sandbox.qbench.net",
-    "hostname_runtime_api_verified": false,
+    "hostname_runtime_api_verified": true,
     "credential_present": true,
     "credential_required_keys_present_nonblank": true,
     "credential_storage_method": "ignored_local_secrets_file",
-    "token_requests_attempted": 0,
-    "api_requests_attempted": 0,
-    "read_only_results": "native_ui definition and Assay-created Test passed; imported Prompt 3 direct and normal Tests remain blank default 5x5; JSON scalar Version 1 passed saved 43_of_43, raw round trip, Approved/Active verification, normal Assay-created Test runtime, 43-column export, representative persistence, and restored 43_of_43 blank baseline; paused before token",
-    "exact_test_membership": "not_run_in_sandbox",
+    "token_requests_attempted": 1,
+    "api_requests_attempted": 1,
+    "read_only_results": "exact origin and local runtime preflights passed; one same-origin OAuth token POST returned HTTP 404; no access token and zero GET requests; read-only identity and worksheet contract not run",
+    "exact_test_membership": "not_run_oauth_failed",
     "scalar_patch": "not_run",
     "native_numeric_cell": "not_run",
     "rollback": "not_run",
@@ -346,10 +346,46 @@
     "publish_or_qc_review_performed": false,
     "pass_fail_artifact_introduced": false
   },
+  "read_only_api_confirmation": {
+    "classification": "oauth_token_endpoint_404_controlled_stop",
+    "origin_preflight": "passed_exact_sandbox_origin",
+    "allowed_origin": "https://ait-sandbox.qbench.net",
+    "credential_loading": "passed_without_display",
+    "token_endpoint_template": "/qbench/api/v1/oauth/token",
+    "token_post_requests": 1,
+    "token_http_status": 404,
+    "token_response_content_type": "application/json",
+    "oauth_result": "failed_documented_path_not_found",
+    "token_returned": false,
+    "get_requests": 0,
+    "read_only_api_identity": "not_run_oauth_failed",
+    "read_only_api_worksheet_contract": "not_run_oauth_failed",
+    "field_key_classification_counts": {
+      "observed_exact": 0,
+      "missing": 0,
+      "renamed": 0,
+      "duplicated": 0,
+      "present_but_unreadable": 0,
+      "not_exposed_by_get_contract": 43
+    },
+    "destination_contract_proven": "runtime_instantiation_passed_pending_read_only_api_confirmation",
+    "analyte_patch_key_contract": "unresolved",
+    "atomicity_classification": "api_patch_unresolved",
+    "patch_requests": 0,
+    "put_requests": 0,
+    "delete_requests": 0,
+    "non_token_post_requests": 0,
+    "objects_changed": 0,
+    "analytical_results_changed": false,
+    "live_qbench_accessed": false,
+    "publish_or_qc_review_performed": false,
+    "pass_fail_artifact_introduced": false,
+    "credentials_assertion_authorization_or_token_committed_or_displayed": false
+  },
   "local_validation": {
     "unit_tests": "46 passed",
     "credential_presence_check": "three required keys present and nonblank; values not emitted",
-    "oauth_exchange": "passed_synthetic; short-lived in-memory Bearer token; no network request",
+    "oauth_exchange": "synthetic implementation tests passed; one real same-origin token-path attempt returned HTTP 404 and stopped before GET",
     "pre_token_gate": "passed_synthetic; blocks before token request",
     "destination_contract_candidate": "unqualified-address candidate passed local 43_of_43 validation, saved raw round trip, Approved/Active verification, normal Assay-created runtime, representative persistence, and restored 43_of_43 blank baseline",
     "runtime_instantiation_evidence": "passed_43_of_43; sanitized 43-column runtime export; raw SHA-256 recorded",
@@ -376,8 +412,8 @@
     "reject any Pass/Fail-like named cell"
   ],
   "remaining_live_promotion_gaps": [
-    "official same-host OAuth token endpoint not proven or locked",
-    "first token request not yet authorized",
+    "package token-path attempt returned HTTP 404; valid authoritative same-host OAuth endpoint not proven or locked",
+    "one token request was authorized and failed; no authenticated GET occurred",
     "read-only QBench response schemas not observed",
     "expected synthetic assay and workflow identifiers not configured",
     "native old-Sandbox worksheet engine passed, but the imported Prompt 3 direct and normal Assay-created Test Worksheets remain blank default 5x5",
@@ -393,7 +429,7 @@
     "current Versions-tab observation confirms the scalar Version 1 Draft row; its historical 0/7 finding is preserved but does not establish an environment failure",
     "user manually proved native named-cell persistence using sdf at A1; historical Codex browser-entry failures are not QBench persistence failures",
     "native-envelope qualified-address candidate rendered 40x26 with 43 named cells, but Save As New Version rejected Data!D2 sheet-qualified cell definition; unqualified-address candidate passed local 43_of_43 validation; JSON Scalar 43 Field Base v1 saved and raw round-trip passed",
-    "exact JSON Scalar 43 Field Base v1 and normal Assay-created runtime passed 43_of_43; read-only API confirmation remains pending"
+    "exact JSON Scalar 43 Field Base v1 and normal Assay-created runtime passed 43_of_43; read-only API confirmation stopped at OAuth HTTP 404 before GET"
   ],
   "generated_files": [
     {
@@ -414,7 +450,7 @@
     },
     {
       "path": "docs/api_contract.md",
-      "sha256": "83178e643a2b61ae266ae9a248bdd12408760923bd75233a7bc4816333aec099"
+      "sha256": "291a2a56585e8427b1eaf7128700e2af9da85e2fef2779e9c792d177c9f998d0"
     },
     {
       "path": "docs/atomicity_results.md",
@@ -422,11 +458,11 @@
     },
     {
       "path": "docs/destination_contract_results.md",
-      "sha256": "2018486359b84a22e78b2f1f3fe889ff9da290e203e66d05e661331cae7065b3"
+      "sha256": "7811909a92219dda41e04c0d5c4fc8adffe3970c2104eef29b4d3afdada37d4b"
     },
     {
       "path": "docs/field_mapping.md",
-      "sha256": "bb8a3e49f591df363b3ff436078970e23bc28d91358a0aaa024381aa7fc9e266"
+      "sha256": "6b7993bcd1ed1d2af7e6ba347ef29a79e10c47a73a55761417543cb59cb949ae"
     },
     {
       "path": "docs/idempotency_contract.md",
@@ -434,11 +470,11 @@
     },
     {
       "path": "docs/live_promotion_gap_analysis.md",
-      "sha256": "db1fb7fd9c5b6a85cf981877cb4d016b61c7b7b2aa251e3be44c9442d09e93f5"
+      "sha256": "636b1b60192a0a83291b906b3ac3c007c294137fba4fb5a0d0033364b54bf82b"
     },
     {
       "path": "docs/publish_gate.md",
-      "sha256": "26edf94de9af08367367b606c0e6a2777d21d858f59799915224bb8185da39f7"
+      "sha256": "4d6b3b004c7d58af5542a5375f69b6224e7acbe60c60c8eb8e5fc2cc6140c937"
     },
     {
       "path": "docs/rollback_contract.md",
@@ -446,15 +482,15 @@
     },
     {
       "path": "docs/sandbox_failure_results.md",
-      "sha256": "13900c0050b9e6f85ca367ae5e1a1f7828384ae7bd2bf94cc49ccdc31977cef8"
+      "sha256": "d4b3b0c0f3223c7a3fc0387d9c8832bedbff02dcfbabacb3f65ce248dcd1949f"
     },
     {
       "path": "docs/sandbox_success_results.md",
-      "sha256": "5fe4b35a80cef5a4a2a1cb9e97c53e09e5511b28730404bfab7274f4af1dc379"
+      "sha256": "485d236cfffdd5c66e4e5324f83ac7712ab86aeec5054e5d75df4c22212c3df8"
     },
     {
       "path": "docs/security_model.md",
-      "sha256": "109d6564a1314976b09027a9a03e7a118e8dbf90b135ecdd098eeae449f2bbca"
+      "sha256": "7fa76948a84e8265a6bd31c45ff56d5520e69355e33fabe29e36b1829b06a6dc"
     },
     {
       "path": "fixtures/README.md",
@@ -466,7 +502,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "29e650f17ded49d59bccc75894ea54dec633cdeb230f1cade5edcc9b34c1f54c"
+      "sha256": "0b86d1f0b3343fc997bdfb934283f3088b4ca206a207ecce95e97e03dee5b359"
     },
     {
       "path": "requirements.txt",
@@ -694,7 +730,7 @@
     },
     {
       "path": "validate_prompt_5b_package.py",
-      "sha256": "f6c90c2973da52e17172e341aced648f8e1de9e1384a5dcbe721c3a7c2c04953"
+      "sha256": "96cfccc71a2c71eab87d8aecf3d7be99b3a0300afbce6259ce182770631fb168"
     },
     {
       "path": "json_import_rebuild/compare_structures.py",
@@ -787,6 +823,62 @@
     {
       "path": "json_import_rebuild/runtime_instantiation/validate_runtime_instantiation.py",
       "sha256": "6e156c357be9ce7b30168bd86a48c296dad31b0fce9fdabe06f87952f6933de9"
+    },
+    {
+      "path": "read_only_api_confirmation/README.md",
+      "sha256": "1209323fd6cc759b51a6b8763e30f603ad5266733991a5874f253828329a7d14"
+    },
+    {
+      "path": "read_only_api_confirmation/preflight_plan.md",
+      "sha256": "8595332aa3c3236aa84b934ce23fe3a1a59514ed225f0e275e5bf75d99be6619"
+    },
+    {
+      "path": "read_only_api_confirmation/oauth_result_sanitized.md",
+      "sha256": "c5649267a480431ba8f33705f5bec9e247a910d0d9bd4b583082b27034277838"
+    },
+    {
+      "path": "read_only_api_confirmation/object_identity_results.md",
+      "sha256": "9782798703aa00e6c99e7e151fd6da5d4e15e62525b0c628a5b242637cf7c207"
+    },
+    {
+      "path": "read_only_api_confirmation/worksheet_get_results.md",
+      "sha256": "a098b013c6c15c68f43e4350682d1d0dd535a2b83b263982a70ed3ad1412dcbf"
+    },
+    {
+      "path": "read_only_api_confirmation/worksheet_contract_results.md",
+      "sha256": "4052e7b7db3e65d27b58ed6de12ed033c504ba36cae2ceda0e219fb24799deda"
+    },
+    {
+      "path": "read_only_api_confirmation/field_key_comparison.csv",
+      "sha256": "c88d3b0b62bf22cb202414da9bb64fb8c8674727982b36abc0919fcf595ab275"
+    },
+    {
+      "path": "read_only_api_confirmation/request_ledger_sanitized.json",
+      "sha256": "2236177decc25fa477c3626853f91fd885dac4111a7ea49bb6e2e2d99a640f33"
+    },
+    {
+      "path": "read_only_api_confirmation/raw_response_sha256.txt",
+      "sha256": "71e18b393d1923368cf58bd47611ebc3e9416c65063f8e0fb9a09f1acb8ee165"
+    },
+    {
+      "path": "read_only_api_confirmation/sanitized_object_inventory.json",
+      "sha256": "b0edaf7c05c6e36ff3bde7b0c6362e651eb305da5af3c3823d3c6192dd41d87b"
+    },
+    {
+      "path": "read_only_api_confirmation/next_patch_phase_gate.md",
+      "sha256": "28deb33e8b5b84771966c9f84c19453d0e90897130ef638c8ca8cb7668c1d460"
+    },
+    {
+      "path": "read_only_api_confirmation/run_summary_sanitized.json",
+      "sha256": "d5ffd37471ed6c754df51c3a0c47a6bbb20df85bd2b837982cf46e78c092af25"
+    },
+    {
+      "path": "read_only_api_confirmation/run_read_only_confirmation.py",
+      "sha256": "205eb4f45c6aaa9400e33761e1dafa2e66cf8e2ae7db2a237555ed93caedc0d5"
+    },
+    {
+      "path": "read_only_api_confirmation/validate_read_only_api_confirmation.py",
+      "sha256": "6287f3f6c2f5854991b0421e9d2f95de97016eac6e172256085d61645c9a540a"
     }
   ]
 }

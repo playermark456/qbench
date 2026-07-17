@@ -152,5 +152,20 @@ was required.
 
 The user manually approved the exact Version 1. Codex then verified it as the
 single Approved/Active version, confirmed no Version 2, and completed the
-normal Assay/Test runtime proof at 43/43. No token, REST request, PATCH, live
-access, Publish, QC Review, or Pass/Fail artifact occurred.
+normal Assay/Test runtime proof at 43/43. At that earlier runtime stage, no
+token, REST request, PATCH, live access, Publish, QC Review, or Pass/Fail
+artifact occurred.
+
+## OAuth token-path controlled stop
+
+The separately authorized read-only API phase passed the exact Sandbox-origin
+and local runtime preflights. One non-retried POST to
+`/qbench/api/v1/oauth/token` returned HTTP 404 with JSON content. No access
+token was returned, written, logged, or displayed. Per the stop gate, zero GET,
+PATCH, PUT, DELETE, or non-token POST requests followed.
+
+Classification: `oauth_token_endpoint_404_controlled_stop`.
+
+The attempted path remains unproven. No alternative token path was guessed or
+probed, API identity and Worksheet key exposure were not claimed, and the
+destination/PATCH/atomicity classifications remain unchanged.

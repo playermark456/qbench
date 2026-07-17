@@ -15,16 +15,19 @@ can exchange them with a form-encoded HTTPS POST containing
 through 3,600 seconds. The token is held only in memory. The exchange has a
 timeout, no redirects, and no retry.
 
-The official same-host QBench token path has not yet been proven from task
-evidence. `token_path` is therefore blank and
-`token_endpoint_contract_proven` is false. This blocks the first token request;
-the code does not guess or probe an endpoint.
+The separately authorized read-only phase attempted the same-host token path
+represented by the package's OAuth tests, `/qbench/api/v1/oauth/token`, once.
+The Sandbox returned HTTP 404 with JSON content. No token was returned and no
+GET followed. This path is not proven; `token_path` remains blank and
+`token_endpoint_contract_proven` remains false in operational configuration.
+The code does not guess or probe alternative paths.
 
 Allowed operations:
 
 ```text
 GET /qbench/api/v1/batch/{batch_id}
 GET /qbench/api/v1/test/{test_id}
+GET /qbench/api/v1/test/{test_id}/worksheet
 PATCH /qbench/api/v1/test/{test_id}/worksheet
 ```
 
@@ -82,8 +85,8 @@ verification plus controlled-stop/rollback logic.
 - redirects to any alternate host;
 - live QBench endpoints.
 
-The token endpoint, API response shape, and analyte range PATCH representation
-still require controlled Sandbox evidence before any PATCH.
+The valid token endpoint, authenticated API response shape, and analyte PATCH
+representation still require controlled Sandbox evidence before any PATCH.
 
 ## Native scalar candidate status
 
@@ -92,10 +95,12 @@ names, including analytes `terpenes_instrument_conc_01` through `_23`. This is
 a local mapping candidate only. Its representative native Worksheet reopened
 with zero of seven named-cell definitions, so publisher code was not changed
 to construct scalar PATCH keys and `analyte_patch_key_contract` remains
-`unresolved`. No token or API request was made to infer the contract.
+`unresolved`. The single token-path attempt returned HTTP 404 before GET, so no
+API field-key conclusion was inferred.
 
 The prerequisite JSON scalar runtime phase passed: exact Version 1 is
 Approved/Active, the isolated Assay association persisted, and a fresh normal
 Assay-created Test retained all 43 destinations and returned to a 43/43 blank
-baseline. This UI/runtime result does not authorize token exchange, read-only
-REST access, or PATCH. No credential file was read during this phase.
+baseline. It authorized only the separately gated read-only phase. That phase
+passed exact-origin credential loading, made one token POST, received HTTP 404,
+and stopped before GET. It did not authorize PATCH.

@@ -5,7 +5,9 @@ Date: 2026-07-17
 Status: **The isolated unqualified-address JSON candidate passed its saved
 43/43, raw round-trip, Approved/Active, normal Assay/Test instantiation,
 runtime export, representative-value persistence, and restored 43/43 blank
-baseline gates. Work remains paused before the first token request**.
+baseline gates. The separately authorized read-only API phase made one OAuth
+token POST to the package's same-origin token-path contract; the Sandbox
+returned HTTP 404, so no GET or write request occurred**.
 
 This package implements a controlled, Sandbox-only publisher for reviewed
 Terpenes Batch rows. It routes only by exact QBench Test ID, builds the complete
@@ -31,6 +33,19 @@ cleared. A final save, leave, and reopen proved all 43 destinations blank.
 Therefore
 `destination_contract_proven=runtime_instantiation_passed_pending_read_only_api_confirmation`.
 
+The read-only API origin preflight subsequently passed byte-for-byte for
+`https://ait-sandbox.qbench.net`. One non-retried token POST to
+`/qbench/api/v1/oauth/token` returned HTTP 404 with JSON content. No access
+token was returned, persisted, or displayed, and no authenticated GET was
+sent. The token path remains unproven; alternative paths were not guessed or
+probed. Current API classification:
+
+- `oauth_token_endpoint_404_controlled_stop`
+- `read_only_api_identity=not_run_oauth_failed`
+- `read_only_api_worksheet_contract=not_run_oauth_failed`
+- `analyte_patch_key_contract=unresolved`
+- `atomicity_classification=api_patch_unresolved`
+
 An ignored local secrets file has all three required nonblank keys, and the
 base URL passes the exact Sandbox allowlist. No credential value was printed,
 logged, or persisted by the publisher. The earlier imported saved/reopened
@@ -47,7 +62,8 @@ exact six-row definition through a fresh Assay-created Test. The exact text and
 numeric values persisted, both formulas evaluated correctly, and the sentinel
 remained unchanged after save and reopen. Therefore:
 
-- no OAuth token request, QBench API GET, or PATCH was attempted;
+- exactly one authorized OAuth token POST returned HTTP 404; no GET, PATCH,
+  PUT, DELETE, or non-token POST was attempted;
 - `old_sandbox_test_worksheet_engine` is
   `operational_for_native_definitions`;
 - `imported_prompt3_test_worksheet` is `compatibility_failure`;
@@ -128,7 +144,7 @@ and the saved Export Spreadsheet checks in `docs/field_mapping.md` pass.
 
 ## Safety defaults
 
-- The only accepted base URL is `https://ait-sandbox.qbench.net/`.
+- The only accepted base URL is `https://ait-sandbox.qbench.net`.
 - The default command is read-only; `publish` also requires `--execute`.
 - Publishing requires the exact phrase
   `PUBLISH REVIEWED TERPENES BATCH <display-name>`.
