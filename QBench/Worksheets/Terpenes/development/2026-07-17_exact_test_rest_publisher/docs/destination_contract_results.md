@@ -3,7 +3,7 @@
 Date: 2026-07-17
 
 Current controlled-stop classification:
-**`saved_definition_round_trip_passed_pending_runtime_instantiation`**.
+**`approval_activation_blocked_active_lock_assignee_mismatch`**.
 
 Prior imported-definition runtime classification:
 **`normal_assay_test_instantiation_failed_blank_default`**.
@@ -38,6 +38,24 @@ navigating away and reopening it.
 | Unqualified-address saved Draft | `passed_43_of_43` |
 | JSON round-trip export | `passed` |
 | Publisher destination gate | `saved_definition_only_pending_runtime_instantiation` |
+| JSON Version 1 approval/activation gate | `approval_activation_blocked_active_lock_assignee_mismatch` |
+
+## JSON Version 1 approval gate
+
+The exact `JSON Scalar 43 Field Base v1` retained the already-proven 40x26,
+28-anchor, 43/43 unqualified destination contract before status change. It
+moved from `DRAFT` to `PENDING`, and the exact Version 1 row remained
+`PENDING` after leaving the worksheet and reopening it from the Worksheets
+list. QBench then rejected the supported Approve action with `This worksheet
+cannot be modified because it is currently locked.` The Locks tab showed one
+active review lock assigned to a different user than the current session and
+no available unlock control.
+
+The version is not Approved or Active. Per the stop gate, no Assay, Sample,
+Test, runtime export, or representative value was created. This does not
+invalidate the saved-definition proof and is not a runtime-contract failure.
+`destination_contract_proven` remains
+`saved_definition_only_pending_runtime_instantiation`.
 
 ## Isolated Sandbox objects
 

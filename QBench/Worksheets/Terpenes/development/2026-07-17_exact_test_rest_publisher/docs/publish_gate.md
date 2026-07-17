@@ -64,3 +64,10 @@ native Draft retained zero of seven representative named-cell definitions.
 It was not approved or activated, no Export Spreadsheet was run, and no
 runtime Test was created. `destination_contract_proven` remains false and the
 operational mapping was not changed.
+
+## Current JSON scalar stop
+
+`approval_activation_blocked_active_lock_assignee_mismatch` is an additional
+hard stop. Exact `JSON Scalar 43 Field Base v1` is `PENDING`, not Approved or
+Active, and no isolated Assay or runtime Test exists for this candidate.
+Publishing remains blocked before credential loading or token exchange.

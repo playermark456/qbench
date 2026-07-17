@@ -95,6 +95,16 @@ REQUIRED = {
     "json_import_rebuild/round_trip/saved_draft_round_trip_evidence.json",
     "json_import_rebuild/round_trip/semantic_comparison.md",
     "json_import_rebuild/round_trip/validate_round_trip.py",
+    "json_import_rebuild/runtime_instantiation/README.md",
+    "json_import_rebuild/runtime_instantiation/approval_activation_results.md",
+    "json_import_rebuild/runtime_instantiation/assay_assignment_results.md",
+    "json_import_rebuild/runtime_instantiation/test_instantiation_results.md",
+    "json_import_rebuild/runtime_instantiation/runtime_export_results.md",
+    "json_import_rebuild/runtime_instantiation/representative_value_persistence.md",
+    "json_import_rebuild/runtime_instantiation/runtime_export_sha256.txt",
+    "json_import_rebuild/runtime_instantiation/sanitized_object_inventory.json",
+    "json_import_rebuild/runtime_instantiation/sandbox_cleanup_plan.md",
+    "json_import_rebuild/runtime_instantiation/validate_runtime_instantiation.py",
     "prompt_5b_manifest.json",
 }
 
@@ -593,6 +603,7 @@ def main() -> int:
     json_import_classification = (
         "saved_definition_round_trip_passed_pending_runtime_instantiation"
     )
+    approval_classification = "approval_activation_blocked_active_lock_assignee_mismatch"
     json_candidate_path = (
         ROOT
         / "json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json"
@@ -697,7 +708,7 @@ def main() -> int:
     for key, expected in {
         "sanitized": True,
         "internal_sandbox_ids_omitted": True,
-        "classification": json_import_classification,
+        "classification": approval_classification,
         "working_native_export_sha256": "d86e05122bc9a7fc4b6937e5582d9ff469f15c234e606fc0c5bbdd7d7c3659e5",
         "failed_newer_envelope_candidate_sha256": "7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70",
         "qualified_address_candidate_sha256": "54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b",
@@ -733,7 +744,7 @@ def main() -> int:
         "corrected_draft_version_created": True,
         "corrected_version_row_visibly_present": True,
         "corrected_version": "JSON Scalar 43 Field Base v1",
-        "corrected_version_state": "DRAFT",
+        "corrected_version_state": "PENDING",
         "grid_before_refresh": "40x26",
         "grid_after_refresh_and_list_reopen": "40x26",
         "named_cells_before_refresh": 43,
@@ -747,6 +758,13 @@ def main() -> int:
         "destination_contract_proven": "saved_definition_only_pending_runtime_instantiation",
         "atomicity_classification": "api_patch_unresolved",
         "analyte_patch_key_contract": "unresolved",
+        "approval_activation_classification": approval_classification,
+        "approval_error": "This worksheet cannot be modified because it is currently locked.",
+        "active_review_lock": True,
+        "review_lock_assignee_matches_current_session": False,
+        "unlock_control_available": False,
+        "status_progression": ["DRAFT", "PENDING"],
+        "approval_attempted": True,
         "manual_sdf_preserved_in_working_native_export": True,
         "qbench_accessed_in_correction_prompt": False,
     }.items():
@@ -762,7 +780,7 @@ def main() -> int:
         {
             "type": "Spreadsheet Worksheet",
             "name": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
-            "state": "JSON Scalar 43 Field Base v1 saved as Draft; 40x26 and 43 unqualified named cells retained after refresh and list reopen",
+            "state": "JSON Scalar 43 Field Base v1 is PENDING with an active review lock; approval blocked; 40x26 and 43 unqualified named cells were verified before status change",
         }
     ]:
         failures.append("JSON import sanitized object inventory is incorrect")
@@ -785,6 +803,25 @@ def main() -> int:
         if json_inventory.get(key) is not False:
             failures.append(f"JSON import safety control is not false: {key}")
 
+    runtime_validation = subprocess.run(
+        [
+            sys.executable,
+            str(
+                ROOT
+                / "json_import_rebuild/runtime_instantiation/validate_runtime_instantiation.py"
+            ),
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if runtime_validation.returncode != 0:
+        failures.append(
+            "runtime-instantiation evidence validator failed: "
+            + runtime_validation.stdout.replace("\n", " ").strip()
+        )
+
     manifest = json.loads((ROOT / "prompt_5b_manifest.json").read_text(encoding="utf-8"))
     if manifest.get("atomicity_classification") != "api_patch_unresolved":
         failures.append("manifest atomicity classification is incorrect")
@@ -793,7 +830,7 @@ def main() -> int:
     if manifest.get("sandbox", {}).get("token_requests_attempted") != 0:
         failures.append("manifest claims a token request")
     if manifest.get("status") != (
-        "saved_definition_round_trip_passed_pending_runtime_instantiation_pre_token_stop"
+        "approval_activation_blocked_active_lock_assignee_mismatch_pre_token_stop"
     ):
         failures.append("manifest controlled-stop status is incorrect")
     if manifest.get("mapping", {}).get("saved_worksheet_definition_contract") != "passed_43_of_43":
@@ -807,6 +844,8 @@ def main() -> int:
         != json_import_classification
     ):
         failures.append("manifest current destination classification is incorrect")
+    if manifest.get("mapping", {}).get("runtime_gate_classification") != approval_classification:
+        failures.append("manifest runtime gate classification is incorrect")
     native_manifest = manifest.get("native_test_worksheet_probe", {})
     if native_manifest.get("classification") != native_classification:
         failures.append("manifest native probe classification is incorrect")
@@ -942,7 +981,7 @@ def main() -> int:
         "address_only_difference_count": 43,
         "rendered_worksheet_structure_unchanged": True,
         "worksheet": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
-        "worksheet_state": "json_scalar_43_field_base_v1_saved_draft_round_trip_passed",
+        "worksheet_state": "json_scalar_43_field_base_v1_pending_approval_blocked_active_lock",
         "config_style_reference_type": "absent",
         "config_style_candidate_type": "absent",
         "corrected_upload_attempted": True,
@@ -950,7 +989,7 @@ def main() -> int:
         "corrected_import_submitted": True,
         "corrected_draft_version_created": True,
         "corrected_version": "JSON Scalar 43 Field Base v1",
-        "corrected_version_state": "DRAFT",
+        "corrected_version_state": "PENDING",
         "corrected_version_row_visibly_present": True,
         "grid_before_refresh": "40x26",
         "grid_after_refresh_and_list_reopen": "40x26",
@@ -965,12 +1004,48 @@ def main() -> int:
         "destination_contract_proven": "saved_definition_only_pending_runtime_instantiation",
         "atomicity_classification": "api_patch_unresolved",
         "analyte_patch_key_contract": "unresolved",
+        "approval_activation_classification": approval_classification,
+        "status_progression": ["DRAFT", "PENDING"],
+        "approval_attempted": True,
+        "approval_error": "This worksheet cannot be modified because it is currently locked.",
+        "active_review_lock": True,
+        "review_lock_assignee_matches_current_session": False,
+        "unlock_control_available": False,
         "candidate_promoted": False,
         "approved": False,
         "activated": False,
     }.items():
         if json_manifest.get(key) != expected:
             failures.append(f"manifest JSON import evidence is incorrect: {key}")
+    runtime_manifest = manifest.get("runtime_instantiation", {})
+    for key, expected in {
+        "classification": approval_classification,
+        "worksheet": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
+        "version": "JSON Scalar 43 Field Base v1",
+        "initial_status": "DRAFT",
+        "final_status": "PENDING",
+        "approved_active_definition": "blocked_active_lock_assignee_mismatch",
+        "assay_assignment": "not_run_phase_1_approval_gate",
+        "sample_creation": "not_run_phase_1_approval_gate",
+        "test_creation": "not_run_phase_1_approval_gate",
+        "runtime_test_worksheet_contract": "not_run_phase_1_approval_gate",
+        "runtime_representative_value_persistence": "not_run_phase_1_approval_gate",
+        "runtime_export_sha256": "not_available_phase_1_approval_gate",
+    }.items():
+        if runtime_manifest.get(key) != expected:
+            failures.append(f"manifest runtime-instantiation evidence is incorrect: {key}")
+    for key in (
+        "version_2_created",
+        "credentials_read_or_displayed",
+        "oauth_token_requested",
+        "qbench_rest_api_requested",
+        "patch_requested",
+        "live_qbench_accessed",
+        "publish_or_qc_review_performed",
+        "pass_fail_artifact_introduced",
+    ):
+        if runtime_manifest.get(key) is not False:
+            failures.append(f"manifest runtime safety control is not false: {key}")
     expected_sandbox_objects = [
         "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
         "SBX_ONLY_TERPENES_API_DESTINATION_PROOF_V2",
@@ -993,6 +1068,7 @@ def main() -> int:
         "SBX_ONLY_TERPENES_2026_07_17_VERSION_CREATION_CONTROL",
         "Version Creation Control v1",
         "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
+        "JSON Scalar 43 Field Base v1",
     ]
     if manifest.get("sandbox", {}).get("objects_created_or_changed") != expected_sandbox_objects:
         failures.append("manifest Sandbox mutations are not the exact authorized proof objects")
@@ -1027,7 +1103,10 @@ def main() -> int:
     print("- qualified-address Save As New Version rejected by old one-tab validator")
     print("- unqualified-address JSON candidate passed local 43/43 validation")
     print("- exactly 43 address strings changed; rendered structure unchanged")
-    print("- saved Draft and raw round trip passed 43/43; runtime instantiation pending")
+    print("- saved definition and raw round trip passed 43/43")
+    print("- exact Version 1 moved DRAFT to PENDING")
+    print("- approval/activation blocked by active lock assignee mismatch")
+    print("- no Assay, Sample, Test, runtime export, or representative values")
     print("- sanitized eight-object inventory contains no internal Sandbox IDs")
     print("- sanitized six-object native inventory contains no internal Sandbox IDs")
     print("- exact Sandbox-only executable allowlist")

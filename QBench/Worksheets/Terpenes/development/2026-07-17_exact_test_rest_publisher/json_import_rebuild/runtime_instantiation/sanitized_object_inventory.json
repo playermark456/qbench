@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "sanitized": true,
+  "internal_sandbox_ids_omitted": true,
+  "classification": "approval_activation_blocked_active_lock_assignee_mismatch",
+  "objects": [
+    {
+      "type": "Spreadsheet Worksheet",
+      "name": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
+      "status": "PENDING",
+      "purpose": "isolated 43-field saved-definition and runtime-instantiation candidate"
+    },
+    {
+      "type": "Worksheet Version",
+      "name": "JSON Scalar 43 Field Base v1",
+      "status": "PENDING; active review lock; approval blocked",
+      "purpose": "exact Version 1; no Version 2 created"
+    }
+  ],
+  "approved": false,
+  "activated": false,
+  "version_2_created": false,
+  "assay_created": false,
+  "sample_created": false,
+  "test_created": false,
+  "runtime_export_created": false,
+  "representative_values_entered": false,
+  "credentials_read_or_displayed": false,
+  "oauth_token_requested": false,
+  "qbench_rest_api_requested": false,
+  "patch_requested": false,
+  "live_qbench_accessed": false,
+  "publish_or_qc_review_performed": false,
+  "pass_fail_artifact_introduced": false
+}

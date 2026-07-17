@@ -55,3 +55,10 @@ The recommended compatibility route is the corrected native-envelope JSON:
 
 Live QBench was not accessed. No customer data was used. No Pass/Fail artifact
 was created. No COA was generated and nothing was transmitted to METRC.
+
+The immediate Sandbox gap is resolution of the active review lock on exact
+`JSON Scalar 43 Field Base v1`. A Sandbox administrator or the assigned
+reviewer must use QBench's normal review workflow so the same Version 1 can be
+approved and activated. Do not create Version 2. Only then may the isolated
+Assay and runtime-instantiation gates resume. This blocked workflow adds no
+live-QBench authorization.

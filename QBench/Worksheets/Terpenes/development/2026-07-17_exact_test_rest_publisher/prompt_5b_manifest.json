@@ -4,7 +4,7 @@
   "prompt": "Prompt 5B",
   "branch": "codex/terpenes-prompt-5b-rest-publisher",
   "application_version": "0.3.0",
-  "status": "saved_definition_round_trip_passed_pending_runtime_instantiation_pre_token_stop",
+  "status": "approval_activation_blocked_active_lock_assignee_mismatch_pre_token_stop",
   "prerequisite": {
     "pull_request": 12,
     "merged": true,
@@ -18,7 +18,7 @@
     "credential_storage_method": "ignored_local_secrets_file",
     "token_requests_attempted": 0,
     "api_requests_attempted": 0,
-    "read_only_results": "native_ui_definition_and_assay_created_test_passed; imported_prompt3_direct_and_normal tests remain blank default 5x5; working native sdf_A1 control passed; native-envelope qualified-address candidate rendered 40x26 with 43 named cells; Save As New Version rejected Data!D2 sheet-qualified cell definition; regenerated unqualified-address candidate passed local 43_of_43 validation; JSON Scalar 43 Field Base v1 saved as Draft; 40x26 grid and 43 unqualified named cells retained after refresh and list reopen; raw round-trip export semantic comparison passed; runtime instantiation pending",
+    "read_only_results": "native_ui definition and Assay-created Test passed; imported Prompt 3 direct and normal Tests remain blank default 5x5; JSON scalar Version 1 passed saved 43_of_43 and raw round trip; exact Version 1 moved DRAFT to PENDING; approval was rejected because an active review lock was assigned to a different user than the current session; no Assay or runtime Test was created",
     "exact_test_membership": "not_run_in_sandbox",
     "scalar_patch": "not_run",
     "native_numeric_cell": "not_run",
@@ -49,7 +49,8 @@
       "Named Cell Unique Control v1",
       "SBX_ONLY_TERPENES_2026_07_17_VERSION_CREATION_CONTROL",
       "Version Creation Control v1",
-      "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE"
+      "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
+      "JSON Scalar 43 Field Base v1"
     ],
     "live_qbench_accessed": false,
     "customer_data_used": false,
@@ -76,6 +77,7 @@
     "destination_contract_classification": "saved_definition_round_trip_passed_pending_runtime_instantiation",
     "saved_sandbox_destination_proven": false,
     "destination_contract_proven": "saved_definition_only_pending_runtime_instantiation",
+    "runtime_gate_classification": "approval_activation_blocked_active_lock_assignee_mismatch",
     "analyte_patch_key_contract": "unresolved"
   },
   "native_test_worksheet_probe": {
@@ -263,7 +265,7 @@
     "address_only_difference_count": 43,
     "rendered_worksheet_structure_unchanged": true,
     "worksheet": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
-    "worksheet_state": "json_scalar_43_field_base_v1_saved_draft_round_trip_passed",
+    "worksheet_state": "json_scalar_43_field_base_v1_pending_approval_blocked_active_lock",
     "config_style_reference_type": "absent",
     "config_style_candidate_type": "absent",
     "corrected_upload_attempted": true,
@@ -271,7 +273,7 @@
     "corrected_import_submitted": true,
     "corrected_draft_version_created": true,
     "corrected_version": "JSON Scalar 43 Field Base v1",
-    "corrected_version_state": "DRAFT",
+    "corrected_version_state": "PENDING",
     "corrected_version_row_visibly_present": true,
     "grid_before_refresh": "40x26",
     "grid_after_refresh_and_list_reopen": "40x26",
@@ -287,6 +289,16 @@
     "destination_contract_proven": "saved_definition_only_pending_runtime_instantiation",
     "atomicity_classification": "api_patch_unresolved",
     "analyte_patch_key_contract": "unresolved",
+    "approval_activation_classification": "approval_activation_blocked_active_lock_assignee_mismatch",
+    "status_progression": [
+      "DRAFT",
+      "PENDING"
+    ],
+    "approval_attempted": true,
+    "approval_error": "This worksheet cannot be modified because it is currently locked.",
+    "active_review_lock": true,
+    "review_lock_assignee_matches_current_session": false,
+    "unlock_control_available": false,
     "candidate_promoted": false,
     "approved": false,
     "activated": false,
@@ -297,12 +309,35 @@
     "live_qbench_accessed": false,
     "pass_fail_artifact_introduced": false
   },
+  "runtime_instantiation": {
+    "classification": "approval_activation_blocked_active_lock_assignee_mismatch",
+    "worksheet": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
+    "version": "JSON Scalar 43 Field Base v1",
+    "initial_status": "DRAFT",
+    "final_status": "PENDING",
+    "approved_active_definition": "blocked_active_lock_assignee_mismatch",
+    "assay_assignment": "not_run_phase_1_approval_gate",
+    "sample_creation": "not_run_phase_1_approval_gate",
+    "test_creation": "not_run_phase_1_approval_gate",
+    "runtime_test_worksheet_contract": "not_run_phase_1_approval_gate",
+    "runtime_representative_value_persistence": "not_run_phase_1_approval_gate",
+    "runtime_export_sha256": "not_available_phase_1_approval_gate",
+    "version_2_created": false,
+    "credentials_read_or_displayed": false,
+    "oauth_token_requested": false,
+    "qbench_rest_api_requested": false,
+    "patch_requested": false,
+    "live_qbench_accessed": false,
+    "publish_or_qc_review_performed": false,
+    "pass_fail_artifact_introduced": false
+  },
   "local_validation": {
     "unit_tests": "46 passed",
     "credential_presence_check": "three required keys present and nonblank; values not emitted",
     "oauth_exchange": "passed_synthetic; short-lived in-memory Bearer token; no network request",
     "pre_token_gate": "passed_synthetic; blocks before token request",
-    "destination_contract_candidate": "native-envelope qualified-address candidate rendered the 40x26 grid and 43 named cells, but Save As New Version rejected Data!D2; regenerated candidate changes exactly 43 runtime strings from Data-qualified to unqualified while preserving rendered structure and passes local 43_of_43 validation; JSON Scalar 43 Field Base v1 is a visible Draft; 40x26 and 43 unqualified named cells retained before and after refresh/list reopen; raw Export Spreadsheet round trip passed semantic comparison after normalizing only QBench's renderer UUID; runtime instantiation pending",
+    "destination_contract_candidate": "unqualified-address candidate passed local 43_of_43 validation and saved raw round trip; JSON Scalar 43 Field Base v1 moved DRAFT to PENDING; approval blocked by an active review lock assigned to a different user; runtime instantiation not run",
+    "runtime_instantiation_evidence": "blocked-gate validator added; not a runtime contract result",
     "exact_test_membership": "passed_synthetic",
     "single_test_publish": "passed_synthetic",
     "native_numeric_cells": "23 passed_synthetic",
@@ -342,7 +377,8 @@
     "underscore scalar candidate remains unpromoted after native saved/reopened Phase 1A failed 0/7",
     "current Versions-tab observation confirms the scalar Version 1 Draft row; its historical 0/7 finding is preserved but does not establish an environment failure",
     "user manually proved native named-cell persistence using sdf at A1; historical Codex browser-entry failures are not QBench persistence failures",
-    "native-envelope qualified-address candidate rendered 40x26 with 43 named cells, but Save As New Version rejected Data!D2 sheet-qualified cell definition; unqualified-address candidate passed local 43_of_43 validation; JSON Scalar 43 Field Base v1 saved as Draft; saved/reopened raw round-trip passed; runtime instantiation remains pending"
+    "native-envelope qualified-address candidate rendered 40x26 with 43 named cells, but Save As New Version rejected Data!D2 sheet-qualified cell definition; unqualified-address candidate passed local 43_of_43 validation; JSON Scalar 43 Field Base v1 saved and raw round-trip passed",
+    "exact JSON Scalar 43 Field Base v1 is PENDING; approval and activation are blocked by an active review lock assigned to a different user than the current session; no Assay or runtime Test exists"
   ],
   "generated_files": [
     {
@@ -363,7 +399,7 @@
     },
     {
       "path": "docs/api_contract.md",
-      "sha256": "fc5815b9a401f8beb07ac5bdceb0829c6b7163b19ef20168730e0f282b76ba59"
+      "sha256": "809a37011681490813a25643ef253faf05303946abeddbf32dea9cd159b59000"
     },
     {
       "path": "docs/atomicity_results.md",
@@ -371,11 +407,11 @@
     },
     {
       "path": "docs/destination_contract_results.md",
-      "sha256": "80680f261e64358a61ee0303bfce51e83d7cd573ea926408b3c01d71a05317ca"
+      "sha256": "f3a34ed688a2f71c682916537fbbf03704b64abac3369c90eebac7e7aa98b679"
     },
     {
       "path": "docs/field_mapping.md",
-      "sha256": "ef7af6b95f8bde981c9d8e03445c7a81b172b4b225585ba10b90c2c65c735e60"
+      "sha256": "bb8a3e49f591df363b3ff436078970e23bc28d91358a0aaa024381aa7fc9e266"
     },
     {
       "path": "docs/idempotency_contract.md",
@@ -383,11 +419,11 @@
     },
     {
       "path": "docs/live_promotion_gap_analysis.md",
-      "sha256": "21ccfdbd8902c9cd4853eb2210a6eeccd952296495ea798ae8f69b1669039023"
+      "sha256": "ca44483a25d101d9206ecd872b48b14f64bdef2a7ae37ad421410e27b96c51f6"
     },
     {
       "path": "docs/publish_gate.md",
-      "sha256": "472016a2144d43a8032cf189074af345143224d97b7e34f2aaa2fa583a2193cd"
+      "sha256": "4126338a82f60d10f6e6f33072b2f77f1bd7d4fa72f170f4a01b80caa5b79144"
     },
     {
       "path": "docs/rollback_contract.md",
@@ -395,11 +431,11 @@
     },
     {
       "path": "docs/sandbox_failure_results.md",
-      "sha256": "3f7cbcf9eedaef1c1f194b285161430792c7741fbc2299dc48cbc974824356de"
+      "sha256": "baa62e1a24626c823458600d08fad582592dbb38925cb7c4ff220dfc128867ce"
     },
     {
       "path": "docs/sandbox_success_results.md",
-      "sha256": "367ad4a75af525a91dea441503998b10a077d31a5e830559343c136af85f3f48"
+      "sha256": "7c414da3030eb5a54501def259a8ad7cafeb6a06dd049b478362d75c78923f8a"
     },
     {
       "path": "docs/security_model.md",
@@ -415,7 +451,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "4f4a44c42ccf5edf287403e343229908ea03d4d434b1799614f9b75cc06e333e"
+      "sha256": "874b70863024c87819f0fe4efbe3b2c97490dc60ad7da554f0b52bd8d80b0e5e"
     },
     {
       "path": "requirements.txt",
@@ -447,7 +483,7 @@
     },
     {
       "path": "json_import_rebuild/README.md",
-      "sha256": "06df86f6b1a5953b2757bacd3c6000a4329baccc9dc36c7433bc308d99c2a272"
+      "sha256": "6755ae2942eb984297ae831089b0ad0859340cb36904f1dc441310b5243d10a4"
     },
     {
       "path": "json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json",
@@ -495,7 +531,7 @@
     },
     {
       "path": "json_import_rebuild/sanitized_object_inventory.json",
-      "sha256": "224478703a51b3d9b36073ee0186f791748e9e757bbf6b9e8517dcd5c524c91b"
+      "sha256": "df543be8d377a3a3f159c60e2329fe9a4fdd968f2308017e9e7efe6cbb8edb5d"
     },
     {
       "path": "json_import_rebuild/sandbox_cleanup_plan.md",
@@ -643,7 +679,7 @@
     },
     {
       "path": "validate_prompt_5b_package.py",
-      "sha256": "ab6f651965e46057992e9ab0b2f18688081b8eb45f4915ae8d259ff9c2a43eef"
+      "sha256": "f382cdd1a726777bba91d3d08d73760bb101051709200646133eef84840cc48f"
     },
     {
       "path": "json_import_rebuild/compare_structures.py",
@@ -692,6 +728,46 @@
     {
       "path": "json_import_rebuild/prior_qualified_candidate/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE_qualified_addresses.json",
       "sha256": "54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b"
+    },
+    {
+      "path": "json_import_rebuild/runtime_instantiation/README.md",
+      "sha256": "2de9310b6f96a87c167853298c3446c0e987a8639e288022a190f2862c0168e5"
+    },
+    {
+      "path": "json_import_rebuild/runtime_instantiation/approval_activation_results.md",
+      "sha256": "1ff1c762fde377c035cca663a2eb3f7e3651589cd7410b14f9e4a0c77dd511c5"
+    },
+    {
+      "path": "json_import_rebuild/runtime_instantiation/assay_assignment_results.md",
+      "sha256": "650ff3bb8bb5ed94c559e7efe67f06d3db9f69aa045518f0dcdefa571057f22e"
+    },
+    {
+      "path": "json_import_rebuild/runtime_instantiation/test_instantiation_results.md",
+      "sha256": "a5c1a0436d3d0c0f712f4bfdda452650ca5f7f6a597dac52f20478d791268638"
+    },
+    {
+      "path": "json_import_rebuild/runtime_instantiation/runtime_export_results.md",
+      "sha256": "aea32c5f21ed93bb6cd91ca232aeab738072237a36c5cb5d244e30b709d4bb8c"
+    },
+    {
+      "path": "json_import_rebuild/runtime_instantiation/representative_value_persistence.md",
+      "sha256": "8d80717837149f86fb93d79b53c595789a23f77670b8a0c2bb9e9909500fe591"
+    },
+    {
+      "path": "json_import_rebuild/runtime_instantiation/runtime_export_sha256.txt",
+      "sha256": "23e4d31024f8c99a8c5cee8f8029ea74ed40134ac42f5393295a882c7062e368"
+    },
+    {
+      "path": "json_import_rebuild/runtime_instantiation/sanitized_object_inventory.json",
+      "sha256": "5cb19fffa47bbafc3c58e47cb58927031e1aeec9c7a56127c5768fc40b595541"
+    },
+    {
+      "path": "json_import_rebuild/runtime_instantiation/sandbox_cleanup_plan.md",
+      "sha256": "100c62e2f4f7e059c7a4b0b70ec80752d32d369487bd2dcd005bbbc4c8c2365c"
+    },
+    {
+      "path": "json_import_rebuild/runtime_instantiation/validate_runtime_instantiation.py",
+      "sha256": "dd49a579f1c8854c7ea8a4ef64c6342aff4e843dfce67f3ad429d22654c95ada"
     }
   ]
 }

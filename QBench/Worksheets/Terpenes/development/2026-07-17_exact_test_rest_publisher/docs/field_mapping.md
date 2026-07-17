@@ -12,6 +12,14 @@
 All mapping rows currently have status
 `unverified_saved_sandbox_destination`.
 
+## Current JSON scalar approval gate
+
+The saved JSON scalar definition still passes its 43/43 structural checks, but
+exact Version 1 is now `PENDING` after approval was blocked by an active review
+lock assigned to another user. No runtime instance exists, so the scalar
+candidate remains unpromoted and the REST analyte PATCH-key contract remains
+`unresolved`.
+
 ## Unpromoted scalar candidate
 
 `config/field_mapping_scalar_candidate.csv` preserves all 43 ordered source

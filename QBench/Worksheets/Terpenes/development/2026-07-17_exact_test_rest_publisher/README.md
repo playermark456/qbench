@@ -2,11 +2,12 @@
 
 Date: 2026-07-17
 
-Status: **The isolated unqualified-address JSON candidate was saved as
-`JSON Scalar 43 Field Base v1` in Draft state. Its 40x26 grid and 43 named cells
-survived refresh and list-based reopen, and its raw Export Spreadsheet round
-trip passed semantic comparison. Runtime instantiation remains pending before
-the first token request**.
+Status: **The isolated unqualified-address JSON candidate passed its saved
+43/43 and raw round-trip gates. Exact Version 1 moved from `DRAFT` to
+`PENDING`, but QBench rejected approval because its active review lock is
+assigned to a different user than the current Sandbox session. Approval,
+activation, Assay creation, and runtime instantiation stopped before the first
+token request**.
 
 This package implements a controlled, Sandbox-only publisher for reviewed
 Terpenes Batch rows. It routes only by exact QBench Test ID, builds the complete
@@ -16,6 +17,17 @@ It never writes a Test result, Pass/Fail field, full worksheet replacement,
 COA, or METRC artifact.
 
 ## Current controlled stop
+
+The current Phase 1 classification is
+`approval_activation_blocked_active_lock_assignee_mismatch`. The exact
+`JSON Scalar 43 Field Base v1` row visibly persisted as `PENDING` after a full
+Worksheets-list reopen. The supported Approve action returned `This worksheet
+cannot be modified because it is currently locked.` The exact worksheet's
+Locks tab showed an active review lock assigned to a different user than the
+signed-in session and exposed no unlock control. No Assay, Sample, Test, or
+runtime export was created. The saved-definition classification remains
+`passed_43_of_43`, while
+`destination_contract_proven=saved_definition_only_pending_runtime_instantiation`.
 
 An ignored local secrets file has all three required nonblank keys, and the
 base URL passes the exact Sandbox allowlist. No credential value was printed,

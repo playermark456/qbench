@@ -2,7 +2,7 @@
   "schema_version": 3,
   "sanitized": true,
   "internal_sandbox_ids_omitted": true,
-  "classification": "saved_definition_round_trip_passed_pending_runtime_instantiation",
+  "classification": "approval_activation_blocked_active_lock_assignee_mismatch",
   "objects": [
     {
       "type": "Spreadsheet Worksheet",
@@ -12,7 +12,7 @@
     {
       "type": "Spreadsheet Worksheet",
       "name": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
-      "state": "JSON Scalar 43 Field Base v1 saved as Draft; 40x26 and 43 unqualified named cells retained after refresh and list reopen"
+      "state": "JSON Scalar 43 Field Base v1 is PENDING with an active review lock; approval blocked; 40x26 and 43 unqualified named cells were verified before status change"
     }
   ],
   "working_native_export_filename": "source/2026-07-17_SBX_ONLY_TERPENES_NATIVE_SCALAR_43_FIELD_BASE_working_native_export_spreadsheet.json",
@@ -53,7 +53,7 @@
   "corrected_draft_version_created": true,
   "corrected_version_row_visibly_present": true,
   "corrected_version": "JSON Scalar 43 Field Base v1",
-  "corrected_version_state": "DRAFT",
+  "corrected_version_state": "PENDING",
   "grid_before_refresh": "40x26",
   "grid_after_refresh_and_list_reopen": "40x26",
   "named_cells_before_refresh": 43,
@@ -66,11 +66,21 @@
   "json_import_saved_definition_contract": "passed_43_of_43",
   "json_import_round_trip": "passed",
   "destination_contract_proven": "saved_definition_only_pending_runtime_instantiation",
+  "approval_activation_classification": "approval_activation_blocked_active_lock_assignee_mismatch",
+  "approval_error": "This worksheet cannot be modified because it is currently locked.",
+  "active_review_lock": true,
+  "review_lock_assignee_matches_current_session": false,
+  "unlock_control_available": false,
+  "status_progression": [
+    "DRAFT",
+    "PENDING"
+  ],
   "atomicity_classification": "api_patch_unresolved",
   "analyte_patch_key_contract": "unresolved",
   "manual_sdf_preserved_in_working_native_export": true,
   "qbench_accessed_in_correction_prompt": false,
   "qbench_sandbox_accessed_for_saved_draft_proof": true,
+  "approval_attempted": true,
   "approved": false,
   "activated": false,
   "assay_created": false,

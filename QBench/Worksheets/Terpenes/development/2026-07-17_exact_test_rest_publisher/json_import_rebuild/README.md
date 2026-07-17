@@ -67,7 +67,12 @@ identical to the candidate. Therefore:
 - `json_import_round_trip=passed`
 - `destination_contract_proven=saved_definition_only_pending_runtime_instantiation`
 
-The Draft was not approved or activated. No Assay, Sample, Test, analytical
-result, OAuth token, REST request, PATCH, live-QBench access, or Pass/Fail
-artifact occurred. The operational mapping remains unpromoted pending runtime
-instantiation.
+In the separately authorized approval phase, the exact Version 1 moved from
+`DRAFT` to `PENDING`, and that state persisted after list-based reopen. QBench
+then rejected the supported Approve action because an active review lock was
+assigned to a different user than the current Sandbox session. The session
+exposed no unlock control. Version 1 therefore remains `PENDING`, not Approved
+or Active. No Assay, Sample, Test, analytical result, OAuth token, REST
+request, PATCH, live-QBench access, or Pass/Fail artifact occurred. The
+operational mapping remains unpromoted pending runtime instantiation. See
+`runtime_instantiation/` for the sanitized blocked-gate evidence.

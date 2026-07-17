@@ -135,3 +135,15 @@ Additional local checks reject Pass/Fail/result fields, formula-like input,
 alternate hosts, missing runtime approvals, and unrelated-cell mutation.
 
 Sandbox classification for every PATCH-dependent case remains **not run**.
+
+## JSON scalar Version 1 approval blocked
+
+Classification: `approval_activation_blocked_active_lock_assignee_mismatch`.
+
+The supported Approve action on the exact `PENDING` Version 1 returned `This
+worksheet cannot be modified because it is currently locked.` The exact
+worksheet showed an active review lock assigned to a different user than the
+current signed-in Sandbox session, with no unlock action available. Version 1
+was not approved or activated. The explicit stop gate prevented Assay, Sample,
+Test, export, or representative-value creation. No runtime failure was
+classified because runtime instantiation was not attempted.

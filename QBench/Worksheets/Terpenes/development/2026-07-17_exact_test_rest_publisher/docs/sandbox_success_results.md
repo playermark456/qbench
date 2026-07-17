@@ -70,3 +70,11 @@ object was created.
 The earlier unique one-cell persistence diagnostic remains a historical failed
 browser procedure, not evidence of a QBench environment failure. The current
 Codex B2 save-control also failed after refresh/reopen while `sdf` remained.
+
+## JSON scalar approval phase retained successes
+
+Before the approval attempt, exact Version 1 retained its passing 40x26 grid,
+28 anchors, and 43/43 unqualified named-cell contract. The move from `DRAFT`
+to `PENDING` persisted after a full Worksheets-list reopen. These are saved
+definition and workflow-persistence successes only; approval, activation, and
+runtime instantiation did not pass.
