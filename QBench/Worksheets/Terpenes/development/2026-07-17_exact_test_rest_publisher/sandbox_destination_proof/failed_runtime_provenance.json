@@ -1,12 +1,14 @@
 {
+  "schema_version": 2,
   "sandbox_hostname": "ait-sandbox.qbench.net",
-  "export_action": "Export Spreadsheet",
-  "saved": true,
-  "reopened": true,
   "synthetic_only": true,
-  "export_sha256": "2dfa8e9b94a6806be81b5b4ab58395e3fbefe3ebd0a56a4e7e53e6803d968bef",
   "worksheet_display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
-  "instantiated_test_reopened": true,
-  "instantiated_test_contract_proven": false,
-  "classification": "saved_destination_contract_failed"
+  "saved_worksheet_definition_contract": "passed_43_of_43",
+  "definition_export_action": "Export Spreadsheet",
+  "definition_export_sha256": "2dfa8e9b94a6806be81b5b4ab58395e3fbefe3ebd0a56a4e7e53e6803d968bef",
+  "direct_existing_test_instantiation": "failed_blank_default_5x5",
+  "normal_assay_test_instantiation": "normal_assay_test_instantiation_failed_blank_default",
+  "normal_assay_test_navigated_away_and_reopened": true,
+  "destination_contract_proven": false,
+  "classification": "normal_assay_test_instantiation_failed_blank_default"
 }

@@ -2,27 +2,40 @@
 
 Date: 2026-07-17
 
-Final classification: **`saved_destination_contract_failed`**.
+Current controlled-stop classification:
+**`normal_assay_test_instantiation_failed_blank_default`**.
 
-The saved and reopened isolated Sandbox worksheet definition passed its exact
-43-field structural proof. The fresh, reopened synthetic Test did not retain
-that definition: QBench instantiated a blank 5-column by 5-row worksheet, and
-the supported **Export Spreadsheet to CSV** action returned only those five
-blank rows. The publisher therefore remains paused before the first token
-request with `destination_contract_proven: false`.
+The saved and reopened isolated Sandbox Worksheet definition passed its exact
+43-field structural proof. That result is preserved independently from two
+runtime-instantiation failures. The earlier direct Test retained a blank 5x5
+default worksheet, and a second, brand-new Test created normally from a
+preconfigured isolated Assay also retained the blank 5x5 default after
+navigating away and reopening it.
+
+| Evidence layer | Classification |
+|---|---|
+| Saved/reopened Worksheet definition | `passed_43_of_43` |
+| Direct existing-Test instantiation | `failed_blank_default_5x5` |
+| Normal Assay-created Test instantiation | `normal_assay_test_instantiation_failed_blank_default` |
+| Publisher destination gate | `destination_contract_proven=false` |
 
 ## Isolated Sandbox objects
 
 - Worksheet: `SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF`
 - Saved version: `2 - SBX_ONLY_TERPENES_API_DESTINATION_PROOF_V2 - APPROVED (ACTIVE)`
-- Synthetic assay: `SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF_TEST`
-- Synthetic sample: `SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF_SAMPLE`
-- Synthetic Test state: `NOT STARTED`, reopened after creation and explicitly
-  updated to the current active worksheet version
+- Retained direct-path Assay: `SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF_TEST`
+- Retained direct-path Sample: `SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF_SAMPLE`
+- Normal-path Assay: `SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_ASSAY`
+- Normal-path Sample: `SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_ASSAY_SAMPLE`
+
+Internal Sandbox identifiers are omitted from tracked evidence. The new
+normal-path Test identifier is recorded only in an ignored local evidence
+file. The complete sanitized inventory is in
+`sandbox_destination_proof/sanitized_object_inventory.json`.
 
 No analytical results were entered and no Pass/Fail artifact was created.
 
-## Definition proof
+## Saved Worksheet definition proof
 
 | Evidence | Result |
 |---|---|
@@ -37,23 +50,54 @@ No analytical results were entered and no Pass/Fail artifact was created.
 | Dimethylacetamide reportable destination | No |
 | Peak Table reportable destination | No |
 
-The raw exports are preserved byte-for-byte in the ignored local proof folder.
-Tracked evidence is sanitized and contains no Sandbox object identifiers.
+The raw definition export is preserved byte-for-byte in the ignored local
+proof folder. The tracked copy is sanitized and contains no internal Sandbox
+object identifiers.
 
-## Instantiated Test proof
+## Normal Assay association proof
 
-| Evidence | Result |
-|---|---|
-| Reopened Test Worksheet tab | Present |
-| QBench-supported worksheet export | `2026-07-17_SBX_ONLY_TERPENES_test_294_instantiated_export_spreadsheet.csv` |
-| Export SHA-256 | `6470821a32c974f33b2421746c305a52dad7cc3fa2c043e0aa234b9f4ec6d12e` |
-| Export shape | Five rows, five empty columns |
-| Retained named-cell contract | No; none of the 43 destinations is present in the instantiated export |
+Before the new Sample was created, the isolated normal-path Assay was saved
+with these settings:
 
-Because the runtime instance is blank, all 43 expected destinations are
-missing from the instantiated proof even though the saved definition itself
-is correct. This is a hard failure under Prompt 5B, not a passing definition-
-only proof.
+- Active: yes.
+- Show in Customer Portal: no.
+- Test Worksheet: `SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF`.
+- Batch Worksheet: none.
+- Associated Worksheet active version: Version 2,
+  `SBX_ONLY_TERPENES_API_DESTINATION_PROOF_V2`, APPROVED and ACTIVE.
+
+The Assay page was left and reopened from the Assays list. The Test Worksheet
+association persisted, and the Worksheet Versions view independently
+confirmed Version 2 was the approved active version before Sample creation.
+
+## Runtime Test evidence
+
+### Direct existing-Test path
+
+The earlier direct-path Test remains unchanged. After reopening, its Worksheet
+tab contained only a blank 5-column by 5-row grid. QBench's supported
+**Export Spreadsheet to CSV** action produced
+`2026-07-17_SBX_ONLY_TERPENES_test_294_instantiated_export_spreadsheet.csv`
+with SHA-256
+`6470821a32c974f33b2421746c305a52dad7cc3fa2c043e0aa234b9f4ec6d12e`.
+The export had five blank rows and none of the 43 destination cells.
+
+### Normal Assay-created Test path
+
+A fresh synthetic Sample was created after the Assay association was saved.
+Assigning only the new isolated Assay created a brand-new Test through the
+normal workflow. The Test:
+
+- identified the expected isolated Assay;
+- remained `NOT STARTED`;
+- received no analytical results or Pass/Fail values;
+- showed only the blank 5-column by 5-row default worksheet initially;
+- was left for the Tests list, reopened from that list, and again showed only
+  the blank 5x5 default worksheet.
+
+Because the reopened UI state already proved the normal instance did not
+retain the Worksheet definition, no runtime CSV export was needed and no
+attempt was made to treat CSV as named-cell-contract evidence.
 
 ## Publisher gate
 
@@ -65,24 +109,8 @@ only proof.
 - No PATCH occurred.
 - Live QBench was not accessed.
 
-The local proof command now accepts QBench's raw **Export Spreadsheet**
-envelope, but a passing provenance file must also assert that a reopened
-synthetic Test retained the contract:
-
-```json
-{
-  "sandbox_hostname": "ait-sandbox.qbench.net",
-  "export_action": "Export Spreadsheet",
-  "saved": true,
-  "reopened": true,
-  "synthetic_only": true,
-  "export_sha256": "<sha256-of-exact-export-file>",
-  "worksheet_display_name": "SBX_ONLY_<task-worksheet-name>",
-  "instantiated_test_reopened": true,
-  "instantiated_test_contract_proven": true,
-  "classification": "saved_destination_contract_passed"
-}
-```
-
-This run cannot produce that provenance truthfully, so no passing destination
-proof lock was written and publisher configuration remains unchanged.
+The saved Worksheet definition is therefore proven, but the publisher remains
+blocked until a normally instantiated Test retains that definition and a
+later explicitly authorized read-only API confirmation resolves the Test
+worksheet representation. This run cannot truthfully produce a passing
+destination-proof lock, so publisher configuration remains unchanged.

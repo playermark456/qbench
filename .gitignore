@@ -13,6 +13,7 @@ QBench/Worksheets/Terpenes/development/*/audit/
 # Raw Sandbox worksheet proof exports (preserved locally; sanitized evidence is tracked)
 QBench/Worksheets/Terpenes/development/*/sandbox_destination_proof/*saved_reopened_export_spreadsheet.json
 QBench/Worksheets/Terpenes/development/*/sandbox_destination_proof/*instantiated_export_spreadsheet.csv
+QBench/Worksheets/Terpenes/development/*/sandbox_destination_proof/*object_ids.local.json
 
 # Python caches and local virtual environments
 __pycache__/

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "sandbox_hostname": "ait-sandbox.qbench.net",
   "worksheet_display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
   "saved_version": {
@@ -9,6 +9,7 @@
     "saved": true,
     "reopened": true
   },
+  "saved_worksheet_definition_contract": "passed_43_of_43",
   "definition_export": {
     "action": "Export Spreadsheet",
     "filename": "2026-07-17_SBX_ONLY_TERPENES_API_DESTINATION_PROOF_v2_approved_active_saved_reopened_export_spreadsheet.json",
@@ -28,13 +29,13 @@
     "dimethylacetamide_is_reportable_destination": false,
     "peak_table_is_reportable_destination": false
   },
-  "instantiated_test": {
+  "direct_existing_test_instantiation": {
     "assay_display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF_TEST",
     "sample_display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF_SAMPLE",
     "status": "NOT_STARTED",
+    "retained_unchanged": true,
     "reopened": true,
     "worksheet_tab_present": true,
-    "updated_to_current_active_version": true,
     "supported_export_action": "Export Spreadsheet to CSV",
     "export_filename": "2026-07-17_SBX_ONLY_TERPENES_test_294_instantiated_export_spreadsheet.csv",
     "export_sha256": "6470821a32c974f33b2421746c305a52dad7cc3fa2c043e0aa234b9f4ec6d12e",
@@ -43,12 +44,31 @@
     "export_column_count": 5,
     "all_cells_blank": true,
     "named_cell_contract_retained": false,
-    "missing_target_count": 43,
-    "renamed_targets": [],
-    "duplicated_targets": [],
-    "formula_owned_targets": []
+    "classification": "failed_blank_default_5x5"
   },
-  "classification": "saved_destination_contract_failed",
+  "normal_assay_test_instantiation": {
+    "assay_display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_ASSAY",
+    "assay_active": true,
+    "assay_customer_portal_visible": false,
+    "assay_test_worksheet_display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
+    "assay_batch_worksheet_configured": false,
+    "assay_association_saved_and_reopened": true,
+    "associated_version_title": "SBX_ONLY_TERPENES_API_DESTINATION_PROOF_V2",
+    "associated_version_status": "APPROVED_ACTIVE",
+    "sample_display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_ASSAY_SAMPLE",
+    "test_created_by_normal_assay_assignment": true,
+    "test_status": "NOT_STARTED",
+    "expected_assay_identified": true,
+    "navigated_away_and_reopened": true,
+    "worksheet_tab_present": true,
+    "worksheet_shape": "blank_default_5x5",
+    "named_cell_contract_retained": false,
+    "analytical_results_entered": false,
+    "pass_fail_values_entered": false,
+    "runtime_export_attempted": false,
+    "classification": "normal_assay_test_instantiation_failed_blank_default"
+  },
+  "classification": "normal_assay_test_instantiation_failed_blank_default",
   "destination_contract_proven": false,
   "atomicity_classification": "api_patch_unresolved",
   "analyte_patch_key_contract": "unresolved",

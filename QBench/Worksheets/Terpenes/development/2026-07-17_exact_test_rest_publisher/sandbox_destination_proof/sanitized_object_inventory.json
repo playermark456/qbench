@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "sandbox_hostname": "ait-sandbox.qbench.net",
+  "sanitized": true,
+  "internal_sandbox_ids_omitted": true,
+  "objects": [
+    {
+      "object_type": "worksheet",
+      "display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
+      "state": "ACTIVE",
+      "task_created": true
+    },
+    {
+      "object_type": "worksheet_version",
+      "display_name": "SBX_ONLY_TERPENES_API_DESTINATION_PROOF_V2",
+      "state": "APPROVED_ACTIVE",
+      "task_created": true
+    },
+    {
+      "object_type": "assay",
+      "display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF_TEST",
+      "role": "direct_existing_test_path",
+      "task_created": true,
+      "retained_unchanged": true
+    },
+    {
+      "object_type": "sample",
+      "display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF_SAMPLE",
+      "role": "direct_existing_test_path",
+      "task_created": true,
+      "retained_unchanged": true
+    },
+    {
+      "object_type": "test",
+      "display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF_TEST",
+      "role": "direct_existing_test_instantiation",
+      "state": "NOT_STARTED",
+      "worksheet_state": "blank_default_5x5",
+      "task_created": true,
+      "retained_unchanged": true
+    },
+    {
+      "object_type": "assay",
+      "display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_ASSAY",
+      "role": "normal_assay_test_instantiation",
+      "state": "ACTIVE",
+      "test_worksheet_association_persisted": true,
+      "batch_worksheet_configured": false,
+      "task_created": true
+    },
+    {
+      "object_type": "sample",
+      "display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_ASSAY_SAMPLE",
+      "role": "normal_assay_test_instantiation",
+      "task_created": true
+    },
+    {
+      "object_type": "test",
+      "display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_ASSAY",
+      "role": "normal_assay_test_instantiation",
+      "state": "NOT_STARTED",
+      "worksheet_state": "blank_default_5x5",
+      "navigated_away_and_reopened": true,
+      "task_created": true
+    }
+  ],
+  "analytical_results_entered": false,
+  "pass_fail_artifact_introduced": false
+}

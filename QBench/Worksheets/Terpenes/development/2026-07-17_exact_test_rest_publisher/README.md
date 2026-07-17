@@ -2,8 +2,9 @@
 
 Date: 2026-07-17
 
-Status: **local client-credential and destination-proof gates validated;
-Sandbox API execution paused before the first token request**.
+Status: **saved Sandbox Worksheet definition passed 43/43; normal Assay Test
+instantiation failed with a blank 5x5 default; paused before the first token
+request**.
 
 This package implements a controlled, Sandbox-only publisher for reviewed
 Terpenes Batch rows. It routes only by exact QBench Test ID, builds the complete
@@ -14,16 +15,22 @@ COA, or METRC artifact.
 
 ## Current controlled stop
 
-An ignored local secrets file now has all three required nonblank keys, and
-the base URL passes the exact Sandbox allowlist. No value was printed, logged,
-or persisted by the publisher. The actual saved/reopened Sandbox Test
-Worksheet has not yet proven all 43 writable destinations. The repository
-candidate passes the structural check with 43 of 43 targets writable, but it
-has no saved/reopened Sandbox provenance. The active 2026-06-30 saved export
-contains none of the 43 current destinations. Therefore:
+An ignored local secrets file has all three required nonblank keys, and the
+base URL passes the exact Sandbox allowlist. No credential value was printed,
+logged, or persisted by the publisher. The isolated saved/reopened Sandbox
+Worksheet definition and raw **Export Spreadsheet** file prove all 43 exact
+destinations are present, unique, writable, and non-formula-owned.
+
+Runtime instantiation is a separate failure. The retained earlier direct Test
+and a second Test created normally from a newly saved, reopened, active Assay
+both displayed only QBench's blank 5-column by 5-row default worksheet after
+reopening. The new Assay's Test Worksheet association persisted and the
+associated Worksheet Version 2 was independently confirmed APPROVED and
+ACTIVE before the fresh Sample/Test was created. Therefore:
 
 - no OAuth token request, QBench API GET, or PATCH was attempted;
-- no Sandbox object was created or modified;
+- the task-created Worksheet, version, two isolated Assays, and two isolated
+  Samples/Tests are inventoried in sanitized evidence without internal IDs;
 - scalar persistence, rollback, and multi-field atomicity remain unclassified
   in QBench;
 - `config/publisher_config.json` intentionally blocks publishing with
@@ -87,19 +94,21 @@ python -m unittest discover -s tests -v
 python validate_prompt_5b_package.py
 ```
 
-Current result: 44 unit tests passed. The tests use only synthetic identifiers
+Current result: 46 unit tests passed. The tests use only synthetic identifiers
 and in-memory API behavior; they are not Sandbox success evidence.
 
 ## Release checklist for QBench Sandbox
 
-1. Create a fresh task-only Terpenes Test Worksheet and Test.
-2. Save, reopen, and Export Spreadsheet.
-3. Prove all 43 mapping targets are present, unique, writable, non-formula,
+1. Retain the passing saved/reopened Worksheet-definition proof and raw
+   **Export Spreadsheet** bytes.
+2. Resolve why a normally created Test receives QBench's blank 5x5 default
+   instead of the associated active Worksheet Version 2.
+3. Repeat the normal Assay-first instantiation with a fresh task-only Sample
+   and Test, then navigate away and reopen it.
+4. Prove the reopened Test retains all 43 exact, writable, non-formula,
    non-Pass/Fail destinations.
-4. Record exact synthetic assay, workflow, worksheet, Batch, Sample, and Test
-   identifiers in a local ignored evidence file.
-5. Create the provenance JSON described in
-   `docs/destination_contract_results.md` and generate the locked proof.
+5. Record internal synthetic identifiers only in a local ignored evidence
+   file, and update sanitized provenance without those identifiers.
 6. Confirm the documented same-host OAuth token path, then lock
    `token_endpoint_contract_proven` and `token_path` in configuration.
 7. Supply Sandbox client credentials through the ignored secrets file.
