@@ -1,0 +1,12 @@
+object_type,name_or_sanitized_identifier,operation,final_status,assignment_or_notes
+Batch Worksheet,SBX_ONLY_TERPENES_2026_07_17_VLOOKUP_ROUTE_BATCH_WS,created,Active,"Version 1 approved and active; raw Export Spreadsheet retained"
+Test Worksheet,SBX_ONLY_TERPENES_2026_07_17_VLOOKUP_ROUTE_TEST_WS,created,Active,"Version 1 approved and active; post-run export revealed missing named_cells"
+Assay,SBX_ONLY_TERPENES_2026_07_17_VLOOKUP_ROUTE_ASSAY,created,Active,"Isolated probe assay assigned only to the probe Test Worksheet"
+Sample,SBX_ONLY_TERPENES_2026_07_17_VLOOKUP_ROUTE_SAMPLE_01,created,Sandbox-only,"Synthetic; no customer data"
+Sample,SBX_ONLY_TERPENES_2026_07_17_VLOOKUP_ROUTE_SAMPLE_02,created,Sandbox-only,"Synthetic; no customer data"
+Sample,SBX_ONLY_TERPENES_2026_07_17_VLOOKUP_ROUTE_SAMPLE_03,created,Sandbox-only,"Synthetic; no customer data"
+Test,Synthetic QBench Test ID 290,created,Sandbox-only,"In probe Batch; expected value 101"
+Test,Synthetic QBench Test ID 291,created,Sandbox-only,"In probe Batch; expected value 202"
+Test,Synthetic QBench Test ID 292,created,Sandbox-only,"In probe Batch; expected value 303"
+Batch,SBX_ONLY_TERPENES_2026_07_17_VLOOKUP_ROUTE_BATCH,created,Sandbox-only,"Contains only synthetic Test IDs 290/291/292"
+Automation,SBX_ONLY_TERPENES_2026_07_17_VLOOKUP_AUTOMATION,created,Inactive,"One condition and one action retained; triggered once; final Active off"

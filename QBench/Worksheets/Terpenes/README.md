@@ -16,3 +16,15 @@
 
 - `QBench/Worksheets/Terpenes/terpenes__terpenes_batch_ws_id_43__worksheet_export_spreadsheet__active__2026-06-30.json`
 - `QBench/Worksheets/Terpenes/terpenes__terpenes_test_ws_id_42__worksheet_export_spreadsheet__active__2026-06-30.json`
+
+## Prompt 5 Batch-to-Test automation
+
+The original 2026-07-17 43-field design stopped before activation because the
+UI inspection did not prove exact routing, cardinality guards, or atomic
+multi-field preflight. QBench's official guide later supplied a per-Test
+`VLOOKUP({{test.id}}, ...)` source pattern. Prompt 5A exercised that pattern
+once with an isolated one-field probe, but the post-run Test Worksheet export
+showed the destination named cell had not persisted. The result is therefore
+`per_test_vlookup_error`, not proof of broadcast or unsupported routing. The
+probe automation is inactive; zero Test values were written. See
+`development/2026-07-17_batch_to_test_automation/README.md`.

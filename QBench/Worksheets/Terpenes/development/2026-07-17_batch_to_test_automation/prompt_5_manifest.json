@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "package": "2026-07-17_batch_to_test_automation",
+  "prompt": "Prompt 5",
+  "status": "blocked_stop_condition_before_activation",
+  "branch": "codex/terpenes-prompt-5-batch-to-test-automation",
+  "prerequisite": {
+    "pull_request": 11,
+    "merged": true,
+    "merge_commit": "969dea9703df16a99cbe74e575ee5bf001fe6064"
+  },
+  "environment": {
+    "sandbox_hostname_verified": "ait-sandbox.qbench.net",
+    "live_qbench_accessed": false
+  },
+  "source_artifacts": [
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_test_worksheet_candidate/dist/terpenes__test_ws_id_42__candidate_v1__2026-07-14.json",
+      "sha256": "90686b980882b221008f281be33984dc5232e2f3d2632300db3f4a27b529640a"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-14_batch_worksheet_candidate/dist/terpenes__batch_ws_id_43__candidate_v1__2026-07-14.json",
+      "sha256": "f779d0175a7aec09eb5f57a778fde91cccf07bb7078a9573132547ee158da151"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-16_no_code_parser_fallback/SBX_ONLY_TERPENES_WIDE_IMPORT_01.txt",
+      "sha256": "7abbcc188ff35ba09908cdfefd917da28d5d194e6f4031f77aad7c0d06b108d2"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-16_no_code_parser_fallback/SBX_ONLY_TERPENES_2026_07_16_No_Code_Batch_Import__sanitized_export_spreadsheet.json",
+      "sha256": "7565cd991bd4c7fe180f842f32deb85e88f05078af5e245d6aa123f2c3b9c98f"
+    },
+    {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-16_no_code_parser_fallback/sanitized_no_code_parser_configuration.json",
+      "sha256": "037bee2a67192f9757a906f60e143d0eb610bf16bbcfe044c36f39c973126951"
+    }
+  ],
+  "matching_key": "exact QBench Test ID",
+  "mapping": {
+    "intended_rows": 43,
+    "test_worksheet_writable_fields_only": true,
+    "configured_in_sandbox": false
+  },
+  "sandbox_objects_created": [
+    {
+      "object_type": "Automation",
+      "name": "SBX_ONLY_TERPENES_2026_07_16_Batch_To_Test_Publish",
+      "active": false,
+      "saved_conditions": 0,
+      "saved_actions": 0
+    }
+  ],
+  "sandbox_objects_created_counts": {
+    "automations": 1,
+    "assays": 0,
+    "batches": 0,
+    "samples": 0,
+    "tests": 0,
+    "batch_worksheets": 0,
+    "test_worksheets": 0,
+    "reports": 0
+  },
+  "prompt_5a_follow_up": {
+    "status": "completed_single_trigger_probe",
+    "classification": "per_test_vlookup_error",
+    "official_source_pattern": "=VLOOKUP({{test.id}}, <range>, <index>)",
+    "saved_probe_expression": "=VLOOKUP({{test.id}}, A2:B4, 2)",
+    "trigger_count": 1,
+    "task_created_automation_history_entries": 1,
+    "automation_history_status": "Success",
+    "final_automation_active": false,
+    "test_worksheet_writes": 0,
+    "setup_error": "The post-run Test Worksheet export contained no named_cells configuration, so the route_probe destination was absent.",
+    "secondary_guard_probes": "not_run_routing_did_not_pass",
+    "evidence_directory": "vlookup_route_probe",
+    "sandbox_objects_created_counts": {
+      "automations": 1,
+      "assays": 1,
+      "batches": 1,
+      "samples": 3,
+      "tests": 3,
+      "batch_worksheets": 1,
+      "test_worksheets": 1,
+      "reports": 0
+    }
+  },
+  "validation": {
+    "automation_activation": "not_attempted",
+    "success_test": "not_run_stop_condition",
+    "failure_tests": "not_run_stop_condition",
+    "duplicate_test": "not_run_stop_condition",
+    "changed_hash_test": "not_run_stop_condition",
+    "partial_write_test": "not_risked",
+    "test_worksheet_writes": 0,
+    "pass_fail_artifact_created": false,
+    "customer_data_used": false,
+    "local_checks": {
+      "prompt_5_package": "passed",
+      "prompt_3_validator": "passed",
+      "prompt_3_unit_tests": "50 passed",
+      "prompt_4_validator": "inherited failure: tracked layout hash differs from tracked manifest",
+      "prompt_4_unit_tests": "37 passed; 1 failure and 1 error caused by the same inherited hash mismatch",
+      "prompt_4_5_validator": "passed",
+      "prompt_4_5_python_tests": "13 passed",
+      "prompt_4_5_javascript_tests": "143 passed",
+      "prompt_4_6c_validator": "passed"
+    }
+  },
+  "stop_conditions": [
+    "matching cannot guarantee exactly one Test",
+    "full destination validation cannot be proven before writing",
+    "atomic multi-field Test Worksheet write is not proven"
+  ],
+  "generated_files": [
+    "README.md",
+    "automation_configuration.md",
+    "automation_mapping.csv",
+    "batch_publish_gate.md",
+    "test_matching_contract.md",
+    "idempotency_contract.md",
+    "sandbox_object_inventory.csv",
+    "sandbox_success_results.md",
+    "sandbox_failure_results.md",
+    "sandbox_duplicate_results.md",
+    "sandbox_change_log.md",
+    "sandbox_cleanup_plan.md",
+    "live_promotion_gap_analysis.md",
+    "sanitized_automation_configuration.json",
+    "validate_prompt_5_package.py",
+    "prompt_5_manifest.json",
+    "vlookup_route_probe/"
+  ],
+  "sandbox_internal_object_ids_included": true,
+  "sandbox_internal_object_id_scope": "synthetic_test_ids_only_as_required_by_prompt_5a",
+  "production_ready": false
+}

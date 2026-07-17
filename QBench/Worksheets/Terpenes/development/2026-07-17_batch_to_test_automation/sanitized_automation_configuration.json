@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "environment": "https://ait-sandbox.qbench.net/",
+  "name": "SBX_ONLY_TERPENES_2026_07_16_Batch_To_Test_Publish",
+  "description": "Prompt 5 isolated Sandbox-only reviewed Terpenes Batch Publish to matching Test Worksheet by exact QBench Test ID. Inactive until full validation.",
+  "trigger_type": "DATA_MODIFIED",
+  "trigger_data_type": "BATCH",
+  "active": false,
+  "conditions": [],
+  "actions": [],
+  "assay_assignment": null,
+  "worksheet_assignment": null,
+  "capability_observation": {
+    "worksheet_condition_supports_field_name": true,
+    "relevant_action_label": "Set value on all Test Worksheets within the Batch",
+    "copy_mode": "Copy Value",
+    "copy_source": "From Worksheet",
+    "exact_test_id_target_selector": false,
+    "match_cardinality_guard": false,
+    "full_destination_preflight": false,
+    "atomic_multi_field_write_proven": false,
+    "row_specific_publish_status_write": false
+  },
+  "status": "inactive_blocked_before_conditions_actions_or_activation",
+  "sandbox_internal_object_ids_included": false
+}

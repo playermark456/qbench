@@ -1,0 +1,4 @@
+display_label,system_name,cell,ownership,intended_in_version,observed_in_post_run_export,observation
+route_probe,route_probe,B1,writable,true,false,"Destination binding missing from qb_config; cell remained blank"
+qbench_test_id_display,qbench_test_id_display,B2,read_only_display,true,false,"Cell content persisted and rendered each exact synthetic Test ID, but named-cell binding was missing"
+route_probe_sentinel,route_probe_sentinel,B3,formula_owned_read_only,true,false,"Formula and UNCHANGED result persisted, but named-cell binding was missing"
