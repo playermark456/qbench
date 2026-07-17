@@ -3,6 +3,10 @@
   "sanitized": true,
   "internal_sandbox_ids_omitted": true,
   "classification": "approval_activation_blocked_active_lock_assignee_mismatch",
+  "manual_lock_resolution_reported": true,
+  "manual_lock_resolution_visible_in_current_session": false,
+  "approval_attempt_count": 2,
+  "final_list_reopen_confirmed_single_version_1_pending": true,
   "objects": [
     {
       "type": "Spreadsheet Worksheet",

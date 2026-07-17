@@ -147,3 +147,9 @@ current signed-in Sandbox session, with no unlock action available. Version 1
 was not approved or activated. The explicit stop gate prevented Assay, Sample,
 Test, export, or representative-value creation. No runtime failure was
 classified because runtime instantiation was not attempted.
+
+The later resume attempt after a reported manual lock resolution produced the
+same result. Fresh list-based navigation showed the exact single Version 1
+still `PENDING`; the active lock still belonged to a different account than
+the current session, and the retried Approve action returned the same lock
+error. The final list reopen again showed no Version 2 and no status change.

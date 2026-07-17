@@ -30,3 +30,14 @@ Current controlled state:
 
 No credential file was read. No token, REST API request, PATCH, live-QBench
 access, Publish, QC Review, or Pass/Fail artifact occurred.
+
+## Resume verification
+
+The user subsequently reported that the review-assignee lock had been
+resolved. A fresh browser state and exact Worksheets-list reopen did not show
+that resolution in the current signed-in Sandbox session: Version 1 remained
+the only version, remained `PENDING`, and the active lock remained assigned to
+a different account. The already-authorized Approve action was retried once
+and returned the same exact lock error. A final list-based reopen again showed
+only Version 1 in `PENDING` state. No Assay or downstream runtime object was
+created.

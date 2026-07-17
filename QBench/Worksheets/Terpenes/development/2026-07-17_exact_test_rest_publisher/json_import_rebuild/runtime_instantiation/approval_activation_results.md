@@ -38,3 +38,25 @@ Final status: `PENDING`.
   `approval_activation_blocked_active_lock_assignee_mismatch`
 
 The stop gate was honored before Assay creation.
+
+## Resume attempt after reported manual resolution
+
+The user reported that the review-assignee lock had been manually resolved.
+The resumed verification used a fresh browser state and reopened the exact
+worksheet from the Worksheets list. Sanitized result:
+
+- exact title and breadcrumb: passed;
+- exact Version 1: present;
+- Version 2: absent;
+- current status: `PENDING`;
+- visible active lock: still assigned to a different account than the current
+  signed-in session;
+- supported Approve control: available;
+- approval confirmation: submitted once;
+- result: `This worksheet cannot be modified because it is currently locked.`
+
+A final Worksheets-list reopen again showed the same single Version 1 in
+`PENDING` state. The reported resolution was therefore not visible or
+effective in the current session. The classification remains
+`approval_activation_blocked_active_lock_assignee_mismatch`, and the stop gate
+again prevented Assay creation.

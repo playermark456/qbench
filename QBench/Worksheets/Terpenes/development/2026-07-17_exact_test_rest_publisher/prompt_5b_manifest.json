@@ -18,7 +18,7 @@
     "credential_storage_method": "ignored_local_secrets_file",
     "token_requests_attempted": 0,
     "api_requests_attempted": 0,
-    "read_only_results": "native_ui definition and Assay-created Test passed; imported Prompt 3 direct and normal Tests remain blank default 5x5; JSON scalar Version 1 passed saved 43_of_43 and raw round trip; exact Version 1 moved DRAFT to PENDING; approval was rejected because an active review lock was assigned to a different user than the current session; no Assay or runtime Test was created",
+    "read_only_results": "native_ui definition and Assay-created Test passed; imported Prompt 3 direct and normal Tests remain blank default 5x5; JSON scalar Version 1 passed saved 43_of_43 and raw round trip; exact Version 1 moved DRAFT to PENDING; a reported manual lock resolution was not visible in the current session; the second approval attempt returned the same active-lock error; no Assay or runtime Test was created",
     "exact_test_membership": "not_run_in_sandbox",
     "scalar_patch": "not_run",
     "native_numeric_cell": "not_run",
@@ -299,6 +299,10 @@
     "active_review_lock": true,
     "review_lock_assignee_matches_current_session": false,
     "unlock_control_available": false,
+    "manual_lock_resolution_reported": true,
+    "manual_lock_resolution_visible_in_current_session": false,
+    "approval_attempt_count": 2,
+    "final_list_reopen_confirmed_single_version_1_pending": true,
     "candidate_promoted": false,
     "approved": false,
     "activated": false,
@@ -322,6 +326,10 @@
     "runtime_test_worksheet_contract": "not_run_phase_1_approval_gate",
     "runtime_representative_value_persistence": "not_run_phase_1_approval_gate",
     "runtime_export_sha256": "not_available_phase_1_approval_gate",
+    "manual_lock_resolution_reported": true,
+    "manual_lock_resolution_visible_in_current_session": false,
+    "approval_attempt_count": 2,
+    "final_list_reopen_confirmed_single_version_1_pending": true,
     "version_2_created": false,
     "credentials_read_or_displayed": false,
     "oauth_token_requested": false,
@@ -431,7 +439,7 @@
     },
     {
       "path": "docs/sandbox_failure_results.md",
-      "sha256": "baa62e1a24626c823458600d08fad582592dbb38925cb7c4ff220dfc128867ce"
+      "sha256": "e39c44fd9a852a324ee1031588cbc10c4a767138d12dcc934a9e53c898e71c3e"
     },
     {
       "path": "docs/sandbox_success_results.md",
@@ -531,7 +539,7 @@
     },
     {
       "path": "json_import_rebuild/sanitized_object_inventory.json",
-      "sha256": "df543be8d377a3a3f159c60e2329fe9a4fdd968f2308017e9e7efe6cbb8edb5d"
+      "sha256": "a8fc05dd8f7c8c0405235f137a5cbec9a844bdf57e765b7cca77b94b3e5ca9ee"
     },
     {
       "path": "json_import_rebuild/sandbox_cleanup_plan.md",
@@ -679,7 +687,7 @@
     },
     {
       "path": "validate_prompt_5b_package.py",
-      "sha256": "f382cdd1a726777bba91d3d08d73760bb101051709200646133eef84840cc48f"
+      "sha256": "d9379b2e0dd7d2ee7e4a84957d74a8d6585fe3b77930580b7c9a1079737c3505"
     },
     {
       "path": "json_import_rebuild/compare_structures.py",
@@ -731,11 +739,11 @@
     },
     {
       "path": "json_import_rebuild/runtime_instantiation/README.md",
-      "sha256": "2de9310b6f96a87c167853298c3446c0e987a8639e288022a190f2862c0168e5"
+      "sha256": "c458e23a695e31bd47fa23867b410556357cfd65f8174d7fdbc2d2cae5465525"
     },
     {
       "path": "json_import_rebuild/runtime_instantiation/approval_activation_results.md",
-      "sha256": "1ff1c762fde377c035cca663a2eb3f7e3651589cd7410b14f9e4a0c77dd511c5"
+      "sha256": "1b77d62a9fbebd3b1ebb6a4d30784f41765e85ab4ca3880707f57da5b12bb1aa"
     },
     {
       "path": "json_import_rebuild/runtime_instantiation/assay_assignment_results.md",
@@ -759,7 +767,7 @@
     },
     {
       "path": "json_import_rebuild/runtime_instantiation/sanitized_object_inventory.json",
-      "sha256": "5cb19fffa47bbafc3c58e47cb58927031e1aeec9c7a56127c5768fc40b595541"
+      "sha256": "d15132f7a8ca22d7b37cba508e0e1cbdc5cb33f04a04cac400ddc389a034e1a3"
     },
     {
       "path": "json_import_rebuild/runtime_instantiation/sandbox_cleanup_plan.md",
@@ -767,7 +775,7 @@
     },
     {
       "path": "json_import_rebuild/runtime_instantiation/validate_runtime_instantiation.py",
-      "sha256": "dd49a579f1c8854c7ea8a4ef64c6342aff4e843dfce67f3ad429d22654c95ada"
+      "sha256": "04125df977515708c4aac02da8014a58aba9b5fb86671210c50e99df46bfb13d"
     }
   ]
 }

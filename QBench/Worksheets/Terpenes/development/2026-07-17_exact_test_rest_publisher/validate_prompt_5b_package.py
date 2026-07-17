@@ -765,6 +765,10 @@ def main() -> int:
         "unlock_control_available": False,
         "status_progression": ["DRAFT", "PENDING"],
         "approval_attempted": True,
+        "manual_lock_resolution_reported": True,
+        "manual_lock_resolution_visible_in_current_session": False,
+        "approval_attempt_count": 2,
+        "final_list_reopen_confirmed_single_version_1_pending": True,
         "manual_sdf_preserved_in_working_native_export": True,
         "qbench_accessed_in_correction_prompt": False,
     }.items():
@@ -1011,6 +1015,10 @@ def main() -> int:
         "active_review_lock": True,
         "review_lock_assignee_matches_current_session": False,
         "unlock_control_available": False,
+        "manual_lock_resolution_reported": True,
+        "manual_lock_resolution_visible_in_current_session": False,
+        "approval_attempt_count": 2,
+        "final_list_reopen_confirmed_single_version_1_pending": True,
         "candidate_promoted": False,
         "approved": False,
         "activated": False,
@@ -1031,6 +1039,10 @@ def main() -> int:
         "runtime_test_worksheet_contract": "not_run_phase_1_approval_gate",
         "runtime_representative_value_persistence": "not_run_phase_1_approval_gate",
         "runtime_export_sha256": "not_available_phase_1_approval_gate",
+        "manual_lock_resolution_reported": True,
+        "manual_lock_resolution_visible_in_current_session": False,
+        "approval_attempt_count": 2,
+        "final_list_reopen_confirmed_single_version_1_pending": True,
     }.items():
         if runtime_manifest.get(key) != expected:
             failures.append(f"manifest runtime-instantiation evidence is incorrect: {key}")
