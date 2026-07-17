@@ -31,15 +31,18 @@ not manual entry of 43 named cells.
 
 `json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json`
 materializes the exact candidate mapping as 43 `qb_config.named_cells` entries
-on a blank 40x26 `Data` grid. Local JSON validation passed all name, address,
-blank/writable/non-formula, UUID freshness, prohibited-field, and sensitive-data
-checks. Candidate SHA-256:
-`7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70`.
+on the fresh working-native 40x26 legacy grid. It adds 28 required anchors and
+preserves all other native structure and metadata after substituting one fresh
+renderer UUID. Local JSON validation passed every name, address,
+blank/writable/non-formula, prohibited-field, and sensitive-data check.
+Candidate SHA-256:
+`54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b`.
 
-The exact inactive Sandbox worksheet shell was created, but the in-app browser
-does not support file uploads. No JSON was attached, no Draft version exists,
-and no round-trip export was run. Therefore `config/field_mapping.csv`,
-publisher payload construction, and runtime classification remain unchanged.
+The prior newer-envelope import is invalid because it targeted the wrong
+worksheet and rendered a collapsed/default blank cell. No corrected upload,
+Draft version, or round-trip export occurred. Therefore
+`config/field_mapping.csv`, publisher payload construction, and runtime
+classification remain unchanged.
 
 ## Important REST ambiguity
 

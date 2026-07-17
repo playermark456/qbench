@@ -69,19 +69,20 @@ remained unchanged after save and reopen. Therefore:
 - `codex_named_cell_save_control_failed` is the current controlled-stop
   classification, `browser_control_authoritative=false`, and Probes B/C plus
   all further Codex-controlled worksheet construction remain skipped;
-- `json_import_rebuild/` now contains a generated single-tab 40x26 JSON
-  candidate with exactly 43 blank, writable, non-formula, exportable
-  destinations and fresh schema UUIDs;
-- the generated candidate passed every local pre-upload check with SHA-256
-  `7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70`;
-- the exact inactive worksheet shell
-  `SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE` was created and
-  its title and breadcrumb were verified, but the browser reported that file
-  uploads are unsupported; no JSON was attached, no Draft exists, and no
-  round-trip export was attempted;
-- `json_import_upload_blocked_browser_file_upload_unsupported` is the current
-  controlled-stop classification; generated JSON import is the recommended
-  implementation path, not manual entry of 43 named cells;
+- manual review invalidated the prior JSON import: it targeted the native
+  scalar worksheet and loaded 43 named-cell entries while rendering only a
+  collapsed/default blank cell;
+- `json_import_rebuild/` now preserves that failed file and the fresh 40x26
+  working-native Export Spreadsheet reference, then builds a corrected
+  candidate from the native legacy envelope only;
+- the corrected candidate has 28 required visible anchors, 30 total non-empty
+  cells, and exactly 43 blank, writable, non-formula destinations; it passed
+  local validation with SHA-256
+  `54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b`;
+- no corrected upload, Draft row, saved/reopened export, or round-trip proof
+  occurred in this prompt;
+- `corrected_native_legacy_candidate_local_validation_passed_not_uploaded` is
+  the current controlled-stop classification;
 - the earlier destination-proof objects and the native Worksheet, two
   versions, Assay, Sample, and Test are inventoried in separate sanitized
   evidence without internal IDs;

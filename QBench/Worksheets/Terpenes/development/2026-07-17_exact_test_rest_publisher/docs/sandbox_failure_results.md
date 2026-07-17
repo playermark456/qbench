@@ -21,15 +21,17 @@ refresh and list-based reopen while `sdf` remained. Classification:
 worksheet editing stopped. The historical manual-entry recommendation is
 superseded by generated JSON import.
 
-That manual-entry recommendation is now superseded. The required implementation
-path is generated JSON import. The generated 43-field candidate passed local
-validation, but the in-app browser explicitly does not support file uploads.
-The exact inactive task-created worksheet shell exists with zero Versions-tab
-rows. No JSON was attached or submitted, and no round-trip export was run.
+That manual-entry recommendation is now superseded. The prior newer-envelope
+JSON candidate is also invalid: manual review established that it was loaded
+into the native scalar worksheet and rendered a collapsed/default blank cell
+despite loading 43 named-cell entries.
+
+A corrected native-envelope candidate now passes local 43/43 validation. It
+was not uploaded in this repository-only correction, so no corrected Draft
+row, saved/reopened export, or round-trip result exists.
 
 Current classification:
-**`json_import_upload_blocked_browser_file_upload_unsupported`**.
-The completed local candidate is ready for manual Sandbox upload.
+**`corrected_native_legacy_candidate_local_validation_passed_not_uploaded`**.
 
 ## Destination proof controlled stop
 

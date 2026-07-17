@@ -1,43 +1,57 @@
-# Generated JSON import rebuild
+# Corrected native-envelope JSON import rebuild
 
 Date: 2026-07-17
 
-Classification: **`json_import_upload_blocked_browser_file_upload_unsupported`**
+Classification: **`corrected_native_legacy_candidate_local_validation_passed_not_uploaded`**
 
-This directory contains the generated, locally validated candidate for the
-isolated Sandbox Spreadsheet Worksheet:
+The prior import is invalid evidence. Manual review established that the failed
+candidate was loaded into
+`SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE`, not the intended
+`SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE`, and that QBench
+loaded its 43 named-cell definitions while rendering a collapsed/default blank
+cell instead of the intended 40x26 worksheet.
 
-`SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE`
+The corrected candidate is derived only from the fresh working-native Export
+Spreadsheet file:
 
-The implementation path is generated JSON import, not manual entry of 43 named
-cells. The candidate uses one `Data` worksheet, a 40x26 blank grid, fresh UUIDs,
-and exactly 43 sheet-qualified named cells derived from the unpromoted
-`config/field_mapping_scalar_candidate.csv`.
+`source/2026-07-17_SBX_ONLY_TERPENES_NATIVE_SCALAR_43_FIELD_BASE_working_native_export_spreadsheet.json`
 
-Known-good read-only schema references:
+- Raw source SHA-256:
+  `d86e05122bc9a7fc4b6937e5582d9ff469f15c234e606fc0c5bbdd7d7c3659e5`
+- Source shape: legacy `table_config/qb_config`, one 40x26 native matrix,
+  one diagnostic named cell `sdf / A1`
 
-- `2026-07-16_full_sandbox_implementation/round_trip/2026-07-16_ait-sandbox_ws_id_62_version_1_draft_export_spreadsheet.json`
-  - SHA-256: `2f3b2b17beae2c3361b2cfcccfde121aeb4ed32757127806864d2c2b2da63d19`
-  - old-Sandbox round trip with 15 named cells
-- `QBench/Rescans/2026-07-04/Worksheets/Terpenes/terpenes__id_42__worksheet_export_spreadsheet__active__2026-07-04.json`
-  - SHA-256: `1ff46aadc31c32b8b176f3eb0091c8ae26d905271fcbc4f1a118a3776f7820e9`
-  - Terpenes Test Worksheet and `qb_config.named_cells` reference
+Unlike the failed newer-envelope candidate, the working native export has no
+`config`, `config.style`, `config.worksheets`, worksheet UUID,
+`minDimensions`, or top-level `data["Data"]`. The corrected candidate preserves
+that exact legacy shape; absence replaces the failed file's incompatible
+`style: null` and `[1, 1]` minimum dimensions.
 
-Local validation passed before any Sandbox upload action. The exact inactive
-worksheet shell was then created and its title and breadcrumb were verified.
-The in-app browser explicitly reported that file uploads are unsupported, so
-the JSON was not attached or submitted. No Draft version exists and no
-round-trip export was run. The completed candidate is ready for manual Sandbox
-upload.
+The generator removes only the diagnostic named-cell definition, installs the
+exact 43-field mapping, blanks all 43 destinations, and adds 28 required
+visible anchors. It preserves every other native field and cell value. The
+one renderer UUID embedded in all 1,040 native cell metadata records is
+replaced consistently by one fresh UUID.
 
-The existing native scalar diagnostic worksheet and its user-created `sdf`
-control were not modified or deleted.
+Corrected candidate:
 
-Controls remain:
+`SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json`
+
+- SHA-256:
+  `54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b`
+- Grid: 40x26
+- Required anchors: 28
+- Total non-empty cells: 30 (28 required anchors plus two preserved native
+  structural labels)
+- Named cells: 43
+- Analytes: 23 at `Data!D2:Z2`
+- Destination result: 43/43 blank, writable, non-formula, unique, exportable
+
+No corrected upload, save, Draft creation, or round-trip export occurred in
+this prompt. The publisher gates remain closed:
 
 - `destination_contract_proven=false`
 - `atomicity_classification=api_patch_unresolved`
 - `analyte_patch_key_contract=unresolved`
-- scalar candidate mapping unpromoted
-- no OAuth token, REST API request, PATCH, live-QBench access, approval,
-  activation, analytical result, or Pass/Fail artifact
+- no OAuth token, REST request, PATCH, live-QBench access, analytical result,
+  approval, activation, or Pass/Fail artifact

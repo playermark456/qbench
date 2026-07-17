@@ -4,7 +4,7 @@
   "prompt": "Prompt 5B",
   "branch": "codex/terpenes-prompt-5b-rest-publisher",
   "application_version": "0.3.0",
-  "status": "json_import_upload_blocked_browser_file_upload_unsupported_pre_token_stop",
+  "status": "corrected_native_legacy_candidate_local_validation_passed_pre_token_stop",
   "prerequisite": {
     "pull_request": 12,
     "merged": true,
@@ -18,7 +18,7 @@
     "credential_storage_method": "ignored_local_secrets_file",
     "token_requests_attempted": 0,
     "api_requests_attempted": 0,
-    "read_only_results": "native_ui_definition_and_assay_created_test_passed; imported_prompt3_direct_and_normal_tests_remain_blank_default_5x5; exact_native_43_field_phase1_failed_4_of_7; historical_native_scalar_phase1a_saved_reopened_failed_0_of_7; user manual sdf_A1 persistence control passed; qbench native named-cell persistence operational; generated JSON candidate passed local 43_of_43 validation; exact inactive JSON-import worksheet shell created; browser file upload unsupported; no Draft or round-trip export",
+    "read_only_results": "native_ui_definition_and_assay_created_test_passed; imported_prompt3_direct_and_normal_tests_remain_blank_default_5x5; exact_native_43_field_phase1_failed_4_of_7; historical_native_scalar_phase1a_saved_reopened_failed_0_of_7; user manual sdf_A1 persistence control passed; qbench native named-cell persistence operational; failed newer-envelope candidate was loaded into wrong native worksheet and rendered collapsed; corrected native-envelope candidate passed local 43_of_43 validation; corrected candidate not uploaded; no corrected Draft or round-trip export",
     "exact_test_membership": "not_run_in_sandbox",
     "scalar_patch": "not_run",
     "native_numeric_cell": "not_run",
@@ -73,7 +73,7 @@
     "saved_worksheet_definition_contract": "passed_43_of_43",
     "direct_existing_test_instantiation": "failed_blank_default_5x5",
     "normal_assay_test_instantiation": "normal_assay_test_instantiation_failed_blank_default",
-    "destination_contract_classification": "json_import_upload_blocked_browser_file_upload_unsupported",
+    "destination_contract_classification": "corrected_native_legacy_candidate_local_validation_passed_not_uploaded",
     "saved_sandbox_destination_proven": false,
     "analyte_patch_key_contract": "unresolved"
   },
@@ -216,15 +216,28 @@
     "pass_fail_artifact_introduced": false
   },
   "json_import_rebuild": {
-    "classification": "json_import_upload_blocked_browser_file_upload_unsupported",
-    "implementation_path": "generated_json_import",
+    "classification": "corrected_native_legacy_candidate_local_validation_passed_not_uploaded",
+    "implementation_path": "native_export_legacy_envelope_correction",
     "manual_named_cell_entry": false,
+    "working_native_export_filename": "json_import_rebuild/source/2026-07-17_SBX_ONLY_TERPENES_NATIVE_SCALAR_43_FIELD_BASE_working_native_export_spreadsheet.json",
+    "working_native_export_sha256": "d86e05122bc9a7fc4b6937e5582d9ff469f15c234e606fc0c5bbdd7d7c3659e5",
+    "failed_candidate_filename": "json_import_rebuild/failed_candidate/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE_failed_collapsed_grid.json",
+    "failed_candidate_sha256": "7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70",
+    "failed_candidate_target": "SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE",
+    "failed_candidate_named_cells_loaded": 43,
+    "failed_candidate_render_result": "collapsed_default_blank_cell",
+    "failed_candidate_success": false,
     "candidate_filename": "json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json",
-    "candidate_sha256": "7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70",
+    "candidate_sha256": "54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b",
     "candidate_local_validation": "passed",
-    "worksheet_tabs": ["Data"],
+    "candidate_envelope": "legacy_table_config_qb_config",
+    "worksheet_tabs": [
+      "Data"
+    ],
     "grid_rows": 40,
     "grid_columns": 26,
+    "required_anchor_count": 28,
+    "non_empty_cell_count": 30,
     "named_cells": 43,
     "analyte_named_cells": 23,
     "analyte_naming": "terpenes_instrument_conc_01_through_23",
@@ -234,15 +247,14 @@
     "duplicated_destinations": 0,
     "formula_owned_destinations": 0,
     "worksheet": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
-    "worksheet_state": "inactive_shell_no_version",
-    "worksheet_title_verified": true,
-    "worksheet_breadcrumb_verified": true,
-    "browser_control_navigation_stale": false,
-    "browser_file_upload_supported": false,
-    "upload_attempted": false,
-    "candidate_attached": false,
-    "import_submitted": false,
-    "draft_version_created": false,
+    "worksheet_state": "inactive_shell_no_corrected_version",
+    "config_style_reference_type": "absent",
+    "config_style_candidate_type": "absent",
+    "corrected_upload_attempted": false,
+    "corrected_candidate_attached": false,
+    "corrected_import_submitted": false,
+    "corrected_draft_version_created": false,
+    "corrected_version_row_visibly_present": false,
     "imported_named_cells_before_refresh": null,
     "imported_named_cells_after_reopen": null,
     "round_trip_export_created": false,
@@ -268,7 +280,7 @@
     "credential_presence_check": "three required keys present and nonblank; values not emitted",
     "oauth_exchange": "passed_synthetic; short-lived in-memory Bearer token; no network request",
     "pre_token_gate": "passed_synthetic; blocks before token request",
-    "destination_contract_candidate": "generated JSON import is the recommended path; candidate passed local 43_of_43 validation with fresh UUIDs; exact inactive Sandbox worksheet shell exists; in-app browser file uploads are unsupported, so no Draft, imported named-cell count, or round-trip export exists; candidate remains unpromoted",
+    "destination_contract_candidate": "prior newer-envelope import is invalid because it targeted the native worksheet and rendered collapsed; corrected candidate uses only the fresh 40x26 working-native legacy export, replaces the renderer UUID, and passed local 43_of_43 validation; corrected candidate was not uploaded, so no corrected Draft, saved export, or round-trip proof exists; candidate remains unpromoted",
     "exact_test_membership": "passed_synthetic",
     "single_test_publish": "passed_synthetic",
     "native_numeric_cells": "23 passed_synthetic",
@@ -308,78 +320,316 @@
     "underscore scalar candidate remains unpromoted after native saved/reopened Phase 1A failed 0/7",
     "current Versions-tab observation confirms the scalar Version 1 Draft row; its historical 0/7 finding is preserved but does not establish an environment failure",
     "user manually proved native named-cell persistence using sdf at A1; historical Codex browser-entry failures are not QBench persistence failures",
-    "generated JSON candidate passed local 43_of_43 validation; manual upload is required because the in-app browser cannot upload local files; no Draft or round-trip export exists"
+    "prior newer-envelope candidate failed on the wrong worksheet with a collapsed renderer; corrected native-envelope candidate passed local 43_of_43 validation; no corrected upload, Draft, or round-trip export exists"
   ],
   "generated_files": [
-    {"path": ".env.example", "sha256": "3f24f323f53d61dcadb8015603f7daab49ac65a102320a2a89c6395ffdca9d53"},
-    {"path": "config/field_mapping.csv", "sha256": "180665ba85142638de0df6a2db64be856aa3b24be274f37b7082468e4d68d331"},
-    {"path": "config/field_mapping_scalar_candidate.csv", "sha256": "48b92345599059001787a62928c8db073bc912f514171b7b583063b940a45618"},
-    {"path": "config/publisher_config.json", "sha256": "07c9bc67d8304cc1ba8b511b21849efbea3734586593ad96fc9756a329b5c489"},
-    {"path": "docs/api_contract.md", "sha256": "fc5815b9a401f8beb07ac5bdceb0829c6b7163b19ef20168730e0f282b76ba59"},
-    {"path": "docs/atomicity_results.md", "sha256": "dc958cce84ef13e6d19da53acd8d39021437a89874d26b2d0b1e8b69f0e42ab0"},
-    {"path": "docs/destination_contract_results.md", "sha256": "2047eae3e5b68d2ffc164240dd17b5bbd019bf7277de8a8f3263aff048e262a3"},
-    {"path": "docs/field_mapping.md", "sha256": "3d3b6bfe0b4ed88ffdda907b89957aa4ed26b980ccfb69ad9cabd393eae6b136"},
-    {"path": "docs/idempotency_contract.md", "sha256": "b1779de7340b3617ffd90e03dcaac16f509eb3c98ef9469e9d70b8491f0e8bd0"},
-    {"path": "docs/live_promotion_gap_analysis.md", "sha256": "713b7250e51b00eb0d06db5fe7d6096b83ce920e47577c9e77c52ef15d5b3696"},
-    {"path": "docs/publish_gate.md", "sha256": "472016a2144d43a8032cf189074af345143224d97b7e34f2aaa2fa583a2193cd"},
-    {"path": "docs/rollback_contract.md", "sha256": "624c74c0a78ff059d0c5186e5ec7c37642956ede97546ad8242ed73b9812b91e"},
-    {"path": "docs/sandbox_failure_results.md", "sha256": "1f8939de3dd454a4c0e7be555489de8096f0b010a1764efad9ae4aad1dcebde1"},
-    {"path": "docs/sandbox_success_results.md", "sha256": "e443055eebdff9c7fcd7878c810ff005c6c979e0cd3a61759a830ecca7b745b4"},
-    {"path": "docs/security_model.md", "sha256": "109d6564a1314976b09027a9a03e7a118e8dbf90b135ecdd098eeae449f2bbca"},
-    {"path": "fixtures/README.md", "sha256": "018244dcca05900c2801592d4c80bdd2061631b4bb2444c895e11ebdc94a1aa5"},
-    {"path": "fixtures/sanitized_audit_example.json", "sha256": "6ae60a9e8a489f3ee7805db709d362c350aff511ec3ed42397aba43cf431907c"},
-    {"path": "README.md", "sha256": "359221f3546470043ba7764b75e26b752c38ded3fa5523959aeff5d4a17a415a"},
-    {"path": "requirements.txt", "sha256": "5b5b2f659e39f8082ab713fff8a7ca6e0581fd75421c0730436a2591f26283d7"},
-    {"path": "src/terpenes_publisher/__init__.py", "sha256": "0201491b11470864b087a9d13d6891817007402f04bcf13513681c214723f81b"},
-    {"path": "sandbox_destination_proof/expected_destination_contract.csv", "sha256": "baf0f58dd1fbdcde213da7dacd5394b48e881786f94db0677958b818e87cea77"},
-    {"path": "sandbox_destination_proof/failed_runtime_provenance.json", "sha256": "6d1a90dcd308856e823d56fe8ba457328b6192ca8eb4dd0e219f634612e6850e"},
-    {"path": "sandbox_destination_proof/pre_import_baseline.md", "sha256": "8531ede34229af4250626bc42abbecf43d568439f09a36fa1bdb35768b0a2444"},
-    {"path": "sandbox_destination_proof/sanitized_destination_contract_evidence.json", "sha256": "04f1f030d152dbbe7baaaccf0a8402584997a521a9304beccae9479ea7003798"},
-    {"path": "sandbox_destination_proof/sanitized_object_inventory.json", "sha256": "0139c9b2b8f17788bc3ce4474acf7f606905b4ad4c3ba7b53957d0db924607af"},
-    {"path": "json_import_rebuild/README.md", "sha256": "da9d3cbe58da3256bce499841f95d0d29b7726ac2fb0911646c803f93a058c9d"},
-    {"path": "json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json", "sha256": "7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70"},
-    {"path": "json_import_rebuild/candidate_validation.md", "sha256": "68b8d573901d8f70487e2043dadbeb18b8f514895aed27520fd007c3257ecaa9"},
-    {"path": "json_import_rebuild/candidate_sha256.txt", "sha256": "614fa92849c2a09e43ea6bfdca3baa16943f6e52218aa9d6b1a6ae4f09cc7276"},
-    {"path": "json_import_rebuild/generate_candidate.py", "sha256": "7e2f6e8f9e0975f75f61a9ef458c1d4e63f731ba71e1a2914aa3ff2bc1e5b1cf"},
-    {"path": "json_import_rebuild/import_results.md", "sha256": "7094a4c3a91b48b72d51056e1d6b1ddd7757db56fa06df9d850bc18c7f8a9cd9"},
-    {"path": "json_import_rebuild/round_trip_results.md", "sha256": "a00842c9f94baed82c962923ab1ea9ef661b2cf812cae46bffadf8701d22e476"},
-    {"path": "json_import_rebuild/sanitized_object_inventory.json", "sha256": "f6668fa1c74c185c65a598f4c9feb67dbc913dd4e47a77961443a60a37a52876"},
-    {"path": "json_import_rebuild/sandbox_cleanup_plan.md", "sha256": "5eef13cd2ccbb1e405a0ec6f8ca1c8fb65d505f096fc63cf0185317b659ebaa2"},
-    {"path": "json_import_rebuild/validate_candidate.py", "sha256": "618331e53405dad2f250ef2064ab4b693cae2c0a8924db7be6f623fd45f9d00d"},
-    {"path": "native_test_worksheet_probe/README.md", "sha256": "284a21bec0fe8f833b4b82246c883a4c900fac430ebab014c9f8f840f932562e"},
-    {"path": "native_test_worksheet_probe/native_probe_configuration.md", "sha256": "b3b6771db1c63b528cc2fc41aeeceb6d6baac1edc28dfa4d68d9318310874f2e"},
-    {"path": "native_test_worksheet_probe/native_probe_results.md", "sha256": "15f3aced21fab1ed3f177f313ce24be77dd137444663721420a84bbcd24f41d5"},
-    {"path": "native_test_worksheet_probe/sanitized_object_inventory.json", "sha256": "cabd549cd83ffd14707f2b8bbb9441ccc99c37085b6ec17155977d8eb220edca"},
-    {"path": "native_test_worksheet_probe/raw_export_sha256.txt", "sha256": "49277ac839eb7dcd01c09bd9d6683422b71a62fc09a130aa85bc5165f97404ca"},
-    {"path": "native_test_worksheet_probe/sandbox_cleanup_plan.md", "sha256": "1f534e71f72dfaa62d2a08d4b09062daaa5fcf4b4c6383177d3db3c0cba9cf91"},
-    {"path": "native_43_field_rebuild/README.md", "sha256": "c2f9d929e1d6e5ef22c12d6b3c702f1da63aba9f5489b83f72b0b789b720a4b3"},
-    {"path": "native_43_field_rebuild/stage1_results.md", "sha256": "027a77f678dd8744006d11e7b09d154cc629472b22c5d0fa73edb0a1d4a520d9"},
-    {"path": "native_43_field_rebuild/stage2_definition_results.md", "sha256": "87bdebfa231c0d220d59ce04752978f928d50deceffe08737dee026cd9066124"},
-    {"path": "native_43_field_rebuild/stage3_instantiation_results.md", "sha256": "59d4872780c81f67cfb68abbae1884eba9a92ea1cb6b4ec3b77d060ecb6ab7e3"},
-    {"path": "native_43_field_rebuild/expected_contract.csv", "sha256": "180665ba85142638de0df6a2db64be856aa3b24be274f37b7082468e4d68d331"},
-    {"path": "native_43_field_rebuild/raw_definition_sha256.txt", "sha256": "a79af9503a8e0f74d6ca6e20385bc98d6342d7b3da4d0a38edcf4398962a80aa"},
-    {"path": "native_43_field_rebuild/sanitized_object_inventory.json", "sha256": "0de08c74d75dff55d7e37579b46408601014a49c6a83a7df693454f27438a898"},
-    {"path": "native_43_field_rebuild/sandbox_cleanup_plan.md", "sha256": "7ca286d49e4e356db15b465e6aeb5322daf38c342ae58441e8a56502dff9de3d"},
-    {"path": "native_43_field_rebuild/scalar_candidate_mapping.md", "sha256": "9c48b2205aef2595e481447516b7893d3edd284d535d107ce9e02a4e18b9d974"},
-    {"path": "native_43_field_rebuild/scalar_stage1_results.md", "sha256": "1d78bc3e1737f9e8e0a6898f67b8f8f2aa40418622fe2045d522049de4cc562d"},
-    {"path": "native_43_field_rebuild/scalar_stage2_definition_results.md", "sha256": "c6eb52a20da8b42337da161d45f34d10188c51a1009ea2371edb2b4c965d393c"},
-    {"path": "native_43_field_rebuild/scalar_stage3_instantiation_results.md", "sha256": "c5257a816dbc8a7ce8a5b99edce46819eb11d4c357d57372f8d6eb12ee66477b"},
-    {"path": "native_43_field_rebuild/scalar_raw_export_sha256.txt", "sha256": "81c7a2c28b190163ec1604cb164a3eb0123065083afd68df52f9cd373f399f07"},
-    {"path": "native_43_field_rebuild/scalar_sanitized_object_inventory.json", "sha256": "a0212c1a02f238754f903a217c74104f9796a4dae38b3f0e9c0d2a1246f844f9"},
-    {"path": "native_43_field_rebuild/scalar_sandbox_cleanup_plan.md", "sha256": "16aef980cc864acac5e33032dcb78d1552fd63096c994950e36e7eda2f6b89f2"},
-    {"path": "native_43_field_rebuild/named_cell_persistence_diagnostic/README.md", "sha256": "fb4e26655d88937562616086ac3378749f49572483fbbe2b6a2f9ed2f47451c9"},
-    {"path": "native_43_field_rebuild/named_cell_persistence_diagnostic/probe_a_unique_control.md", "sha256": "1879516c6a3530cd3c42b7e03866ea326a142af7e4e9bf7ac1cf9c4b958d5dfe"},
-    {"path": "native_43_field_rebuild/named_cell_persistence_diagnostic/probe_b_analyte_name.md", "sha256": "466219c99bf2bfa078e26f672a8d86b7bfbe89158a2d16408f6e9aec2b7348e2"},
-    {"path": "native_43_field_rebuild/named_cell_persistence_diagnostic/probe_c_duplicate_name.md", "sha256": "9b5359e93686a2b4ec810f9c1792fb8aac5508e8bd5e54cee7436c5ec1c3ff4a"},
-    {"path": "native_43_field_rebuild/named_cell_persistence_diagnostic/sanitized_object_inventory.json", "sha256": "21cb0733c5069df1275d54a0f99e0b1daa135eab9d33fec9df8bebbaca327b51"},
-    {"path": "native_43_field_rebuild/named_cell_persistence_diagnostic/sandbox_cleanup_plan.md", "sha256": "221a1c6dcd286d1b245b21c9d9374a4fa3075fd96746aca2ffd552283afa818f"},
-    {"path": "native_43_field_rebuild/version_creation_diagnostic/README.md", "sha256": "8cd603b7bfc60194089de2ec878087c119d70921cac6f26f192afa5a0cd19313"},
-    {"path": "native_43_field_rebuild/version_creation_diagnostic/existing_no_version_finding.md", "sha256": "62e4c17f353d03c51f6e0713a480d3abe0441dbf29a240eea8d3435ddfc75247"},
-    {"path": "native_43_field_rebuild/version_creation_diagnostic/version_creation_control.md", "sha256": "b89d442a6009c49d9ca9453c0dacb56b504f24cbcf647650bf6e8921241c0c86"},
-    {"path": "native_43_field_rebuild/version_creation_diagnostic/sanitized_object_inventory.json", "sha256": "44b2324f62f2b0b0e1ddb54c66f4972795b59088645ffe393799bfc728d1594b"},
-    {"path": "src/terpenes_publisher/core.py", "sha256": "1bcd3602f7fd658278a0b3a42166df0650fda0b4ebf8507b3262e0484af9dd33"},
-    {"path": "terpenes_publisher.py", "sha256": "79b026b4aefc533eadf6c2756fdde8a67e2ede673ee2a5650244d309cc91481d"},
-    {"path": "tests/test_publisher.py", "sha256": "6efc0be482f84a55989f9b712f6c7c918facc79c018293dd76ce174387e8213e"},
-    {"path": "validate_prompt_5b_package.py", "sha256": "41746f67f777ff38aba4ae6585fe96f8f82805a245c0d958ce9f4351a6815205"}
+    {
+      "path": ".env.example",
+      "sha256": "3f24f323f53d61dcadb8015603f7daab49ac65a102320a2a89c6395ffdca9d53"
+    },
+    {
+      "path": "config/field_mapping.csv",
+      "sha256": "180665ba85142638de0df6a2db64be856aa3b24be274f37b7082468e4d68d331"
+    },
+    {
+      "path": "config/field_mapping_scalar_candidate.csv",
+      "sha256": "48b92345599059001787a62928c8db073bc912f514171b7b583063b940a45618"
+    },
+    {
+      "path": "config/publisher_config.json",
+      "sha256": "07c9bc67d8304cc1ba8b511b21849efbea3734586593ad96fc9756a329b5c489"
+    },
+    {
+      "path": "docs/api_contract.md",
+      "sha256": "fc5815b9a401f8beb07ac5bdceb0829c6b7163b19ef20168730e0f282b76ba59"
+    },
+    {
+      "path": "docs/atomicity_results.md",
+      "sha256": "dc958cce84ef13e6d19da53acd8d39021437a89874d26b2d0b1e8b69f0e42ab0"
+    },
+    {
+      "path": "docs/destination_contract_results.md",
+      "sha256": "a0ed03e037078fdda6dd8207d0acf399e01dc8945cc30b2022a7af3bf7af0220"
+    },
+    {
+      "path": "docs/field_mapping.md",
+      "sha256": "4ad20c67537f955e7b2d7856564da0a7f8dd1733d0c7cc92427c67d05b5980a5"
+    },
+    {
+      "path": "docs/idempotency_contract.md",
+      "sha256": "b1779de7340b3617ffd90e03dcaac16f509eb3c98ef9469e9d70b8491f0e8bd0"
+    },
+    {
+      "path": "docs/live_promotion_gap_analysis.md",
+      "sha256": "8dd40b4bdc781d7d8e8558729e45143f1eacc94421e9ff0dbee050dbcdd213a6"
+    },
+    {
+      "path": "docs/publish_gate.md",
+      "sha256": "472016a2144d43a8032cf189074af345143224d97b7e34f2aaa2fa583a2193cd"
+    },
+    {
+      "path": "docs/rollback_contract.md",
+      "sha256": "624c74c0a78ff059d0c5186e5ec7c37642956ede97546ad8242ed73b9812b91e"
+    },
+    {
+      "path": "docs/sandbox_failure_results.md",
+      "sha256": "896c5c2510c24eeb105f578235ccd29e98d5577c8fddd585943228eebf19342a"
+    },
+    {
+      "path": "docs/sandbox_success_results.md",
+      "sha256": "103b62782b5f06a4e2a0a6e6e75aa82186a29da8964f7f18869cd2b3561e6d68"
+    },
+    {
+      "path": "docs/security_model.md",
+      "sha256": "109d6564a1314976b09027a9a03e7a118e8dbf90b135ecdd098eeae449f2bbca"
+    },
+    {
+      "path": "fixtures/README.md",
+      "sha256": "018244dcca05900c2801592d4c80bdd2061631b4bb2444c895e11ebdc94a1aa5"
+    },
+    {
+      "path": "fixtures/sanitized_audit_example.json",
+      "sha256": "6ae60a9e8a489f3ee7805db709d362c350aff511ec3ed42397aba43cf431907c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "2d68fefd5618e1939ce8914e55a9132b4f0fbc8bc25aaa3d3fc5c87f55101871"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "5b5b2f659e39f8082ab713fff8a7ca6e0581fd75421c0730436a2591f26283d7"
+    },
+    {
+      "path": "src/terpenes_publisher/__init__.py",
+      "sha256": "0201491b11470864b087a9d13d6891817007402f04bcf13513681c214723f81b"
+    },
+    {
+      "path": "sandbox_destination_proof/expected_destination_contract.csv",
+      "sha256": "baf0f58dd1fbdcde213da7dacd5394b48e881786f94db0677958b818e87cea77"
+    },
+    {
+      "path": "sandbox_destination_proof/failed_runtime_provenance.json",
+      "sha256": "6d1a90dcd308856e823d56fe8ba457328b6192ca8eb4dd0e219f634612e6850e"
+    },
+    {
+      "path": "sandbox_destination_proof/pre_import_baseline.md",
+      "sha256": "8531ede34229af4250626bc42abbecf43d568439f09a36fa1bdb35768b0a2444"
+    },
+    {
+      "path": "sandbox_destination_proof/sanitized_destination_contract_evidence.json",
+      "sha256": "04f1f030d152dbbe7baaaccf0a8402584997a521a9304beccae9479ea7003798"
+    },
+    {
+      "path": "sandbox_destination_proof/sanitized_object_inventory.json",
+      "sha256": "0139c9b2b8f17788bc3ce4474acf7f606905b4ad4c3ba7b53957d0db924607af"
+    },
+    {
+      "path": "json_import_rebuild/README.md",
+      "sha256": "a5eb3132091da14c304e796dc1f96b1e9ab65b2d1fc81fcbcde766d013b351d3"
+    },
+    {
+      "path": "json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json",
+      "sha256": "54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b"
+    },
+    {
+      "path": "json_import_rebuild/candidate_validation.md",
+      "sha256": "72526257b7567309594ddc2920cc40395e7bd0daac0b876ccce730b774d98ab2"
+    },
+    {
+      "path": "json_import_rebuild/candidate_sha256.txt",
+      "sha256": "b3f07e19e35c8e350afcf6f0e5790692b000a2b0c240a2082db45b0290025514"
+    },
+    {
+      "path": "json_import_rebuild/generate_candidate.py",
+      "sha256": "8ba57aec5583b3662aa348b25e748f54a020109f200cee79bb34dc01bf1f9138"
+    },
+    {
+      "path": "json_import_rebuild/import_results.md",
+      "sha256": "6458e76edba4045fe49c6f327b9a374fc4597fda17704d1e606ddb306ddbcee5"
+    },
+    {
+      "path": "json_import_rebuild/round_trip_results.md",
+      "sha256": "0b917bca4620ffafe89fda11111eb44fcbd7847c108b5fbd40b58d996a19c6b7"
+    },
+    {
+      "path": "json_import_rebuild/sanitized_object_inventory.json",
+      "sha256": "0f7b7b21c4eab0d53faaa5012ec7e9cf4438bda7a1d24c2b105689add77c5eac"
+    },
+    {
+      "path": "json_import_rebuild/sandbox_cleanup_plan.md",
+      "sha256": "786e54bea63ee7468943b2a0687c606bf8c4ac0de93fa503906cfbaa00e55a7e"
+    },
+    {
+      "path": "json_import_rebuild/validate_candidate.py",
+      "sha256": "531a7d27dd658189024134e2e0ff269db76c41efe0a24ed6b0ad7aa78a96cec5"
+    },
+    {
+      "path": "native_test_worksheet_probe/README.md",
+      "sha256": "284a21bec0fe8f833b4b82246c883a4c900fac430ebab014c9f8f840f932562e"
+    },
+    {
+      "path": "native_test_worksheet_probe/native_probe_configuration.md",
+      "sha256": "b3b6771db1c63b528cc2fc41aeeceb6d6baac1edc28dfa4d68d9318310874f2e"
+    },
+    {
+      "path": "native_test_worksheet_probe/native_probe_results.md",
+      "sha256": "15f3aced21fab1ed3f177f313ce24be77dd137444663721420a84bbcd24f41d5"
+    },
+    {
+      "path": "native_test_worksheet_probe/sanitized_object_inventory.json",
+      "sha256": "cabd549cd83ffd14707f2b8bbb9441ccc99c37085b6ec17155977d8eb220edca"
+    },
+    {
+      "path": "native_test_worksheet_probe/raw_export_sha256.txt",
+      "sha256": "49277ac839eb7dcd01c09bd9d6683422b71a62fc09a130aa85bc5165f97404ca"
+    },
+    {
+      "path": "native_test_worksheet_probe/sandbox_cleanup_plan.md",
+      "sha256": "1f534e71f72dfaa62d2a08d4b09062daaa5fcf4b4c6383177d3db3c0cba9cf91"
+    },
+    {
+      "path": "native_43_field_rebuild/README.md",
+      "sha256": "c2f9d929e1d6e5ef22c12d6b3c702f1da63aba9f5489b83f72b0b789b720a4b3"
+    },
+    {
+      "path": "native_43_field_rebuild/stage1_results.md",
+      "sha256": "027a77f678dd8744006d11e7b09d154cc629472b22c5d0fa73edb0a1d4a520d9"
+    },
+    {
+      "path": "native_43_field_rebuild/stage2_definition_results.md",
+      "sha256": "87bdebfa231c0d220d59ce04752978f928d50deceffe08737dee026cd9066124"
+    },
+    {
+      "path": "native_43_field_rebuild/stage3_instantiation_results.md",
+      "sha256": "59d4872780c81f67cfb68abbae1884eba9a92ea1cb6b4ec3b77d060ecb6ab7e3"
+    },
+    {
+      "path": "native_43_field_rebuild/expected_contract.csv",
+      "sha256": "180665ba85142638de0df6a2db64be856aa3b24be274f37b7082468e4d68d331"
+    },
+    {
+      "path": "native_43_field_rebuild/raw_definition_sha256.txt",
+      "sha256": "a79af9503a8e0f74d6ca6e20385bc98d6342d7b3da4d0a38edcf4398962a80aa"
+    },
+    {
+      "path": "native_43_field_rebuild/sanitized_object_inventory.json",
+      "sha256": "0de08c74d75dff55d7e37579b46408601014a49c6a83a7df693454f27438a898"
+    },
+    {
+      "path": "native_43_field_rebuild/sandbox_cleanup_plan.md",
+      "sha256": "7ca286d49e4e356db15b465e6aeb5322daf38c342ae58441e8a56502dff9de3d"
+    },
+    {
+      "path": "native_43_field_rebuild/scalar_candidate_mapping.md",
+      "sha256": "9c48b2205aef2595e481447516b7893d3edd284d535d107ce9e02a4e18b9d974"
+    },
+    {
+      "path": "native_43_field_rebuild/scalar_stage1_results.md",
+      "sha256": "1d78bc3e1737f9e8e0a6898f67b8f8f2aa40418622fe2045d522049de4cc562d"
+    },
+    {
+      "path": "native_43_field_rebuild/scalar_stage2_definition_results.md",
+      "sha256": "c6eb52a20da8b42337da161d45f34d10188c51a1009ea2371edb2b4c965d393c"
+    },
+    {
+      "path": "native_43_field_rebuild/scalar_stage3_instantiation_results.md",
+      "sha256": "c5257a816dbc8a7ce8a5b99edce46819eb11d4c357d57372f8d6eb12ee66477b"
+    },
+    {
+      "path": "native_43_field_rebuild/scalar_raw_export_sha256.txt",
+      "sha256": "81c7a2c28b190163ec1604cb164a3eb0123065083afd68df52f9cd373f399f07"
+    },
+    {
+      "path": "native_43_field_rebuild/scalar_sanitized_object_inventory.json",
+      "sha256": "a0212c1a02f238754f903a217c74104f9796a4dae38b3f0e9c0d2a1246f844f9"
+    },
+    {
+      "path": "native_43_field_rebuild/scalar_sandbox_cleanup_plan.md",
+      "sha256": "16aef980cc864acac5e33032dcb78d1552fd63096c994950e36e7eda2f6b89f2"
+    },
+    {
+      "path": "native_43_field_rebuild/named_cell_persistence_diagnostic/README.md",
+      "sha256": "fb4e26655d88937562616086ac3378749f49572483fbbe2b6a2f9ed2f47451c9"
+    },
+    {
+      "path": "native_43_field_rebuild/named_cell_persistence_diagnostic/probe_a_unique_control.md",
+      "sha256": "1879516c6a3530cd3c42b7e03866ea326a142af7e4e9bf7ac1cf9c4b958d5dfe"
+    },
+    {
+      "path": "native_43_field_rebuild/named_cell_persistence_diagnostic/probe_b_analyte_name.md",
+      "sha256": "466219c99bf2bfa078e26f672a8d86b7bfbe89158a2d16408f6e9aec2b7348e2"
+    },
+    {
+      "path": "native_43_field_rebuild/named_cell_persistence_diagnostic/probe_c_duplicate_name.md",
+      "sha256": "9b5359e93686a2b4ec810f9c1792fb8aac5508e8bd5e54cee7436c5ec1c3ff4a"
+    },
+    {
+      "path": "native_43_field_rebuild/named_cell_persistence_diagnostic/sanitized_object_inventory.json",
+      "sha256": "21cb0733c5069df1275d54a0f99e0b1daa135eab9d33fec9df8bebbaca327b51"
+    },
+    {
+      "path": "native_43_field_rebuild/named_cell_persistence_diagnostic/sandbox_cleanup_plan.md",
+      "sha256": "221a1c6dcd286d1b245b21c9d9374a4fa3075fd96746aca2ffd552283afa818f"
+    },
+    {
+      "path": "native_43_field_rebuild/version_creation_diagnostic/README.md",
+      "sha256": "8cd603b7bfc60194089de2ec878087c119d70921cac6f26f192afa5a0cd19313"
+    },
+    {
+      "path": "native_43_field_rebuild/version_creation_diagnostic/existing_no_version_finding.md",
+      "sha256": "62e4c17f353d03c51f6e0713a480d3abe0441dbf29a240eea8d3435ddfc75247"
+    },
+    {
+      "path": "native_43_field_rebuild/version_creation_diagnostic/version_creation_control.md",
+      "sha256": "b89d442a6009c49d9ca9453c0dacb56b504f24cbcf647650bf6e8921241c0c86"
+    },
+    {
+      "path": "native_43_field_rebuild/version_creation_diagnostic/sanitized_object_inventory.json",
+      "sha256": "44b2324f62f2b0b0e1ddb54c66f4972795b59088645ffe393799bfc728d1594b"
+    },
+    {
+      "path": "src/terpenes_publisher/core.py",
+      "sha256": "1bcd3602f7fd658278a0b3a42166df0650fda0b4ebf8507b3262e0484af9dd33"
+    },
+    {
+      "path": "terpenes_publisher.py",
+      "sha256": "79b026b4aefc533eadf6c2756fdde8a67e2ede673ee2a5650244d309cc91481d"
+    },
+    {
+      "path": "tests/test_publisher.py",
+      "sha256": "6efc0be482f84a55989f9b712f6c7c918facc79c018293dd76ce174387e8213e"
+    },
+    {
+      "path": "validate_prompt_5b_package.py",
+      "sha256": "be110b35ea506076aeca19499940ba03691c93236ac54f65326cff5aea7e91b8"
+    },
+    {
+      "path": "json_import_rebuild/compare_structures.py",
+      "sha256": "ad7e1972d5fa6e211e89a22cbc83ac7a380a37e2c604eb98832fe06f5fc03224"
+    },
+    {
+      "path": "json_import_rebuild/structural_comparison.json",
+      "sha256": "84423b9fd4223acb8bcb260609795e7dc0ed8b307196bcaa506b027feb426350"
+    },
+    {
+      "path": "json_import_rebuild/structural_comparison.md",
+      "sha256": "4d980e5094a4ed9d16ce346c3476afede5c457986ca17eca1a7ba5499d3eb857"
+    },
+    {
+      "path": "json_import_rebuild/source/2026-07-17_SBX_ONLY_TERPENES_NATIVE_SCALAR_43_FIELD_BASE_working_native_export_spreadsheet.json",
+      "sha256": "d86e05122bc9a7fc4b6937e5582d9ff469f15c234e606fc0c5bbdd7d7c3659e5"
+    },
+    {
+      "path": "json_import_rebuild/failed_candidate/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE_failed_collapsed_grid.json",
+      "sha256": "7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70"
+    },
+    {
+      "path": "json_import_rebuild/source/.gitattributes",
+      "sha256": "75214165f4a5f89f8ada3b08f71f2638f8ff090d3d034aa1d169f22f88cc2c06"
+    },
+    {
+      "path": "json_import_rebuild/failed_candidate/.gitattributes",
+      "sha256": "75214165f4a5f89f8ada3b08f71f2638f8ff090d3d034aa1d169f22f88cc2c06"
+    }
   ]
 }

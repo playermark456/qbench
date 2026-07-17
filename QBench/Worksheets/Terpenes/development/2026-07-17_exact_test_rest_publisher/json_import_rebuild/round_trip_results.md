@@ -1,16 +1,17 @@
-# Round-trip result
+# Corrected-candidate round-trip result
 
-Classification: **not run — import gate not satisfied**
+Classification: **not run - corrected candidate not uploaded**
 
-No Draft version was created because the in-app browser does not support local
-file uploads. Consequently:
+The prior wrong-worksheet, collapsed-renderer import is invalid and is not a
+round-trip result. The corrected native-envelope candidate was validated only
+in the repository. Consequently:
 
-- Export Spreadsheet was not invoked;
-- no raw round-trip JSON exists;
-- no round-trip filename or SHA-256 is claimed;
-- semantic candidate-versus-export comparison was not run;
-- `json_import_saved_definition_contract` remains unproven;
-- `json_import_round_trip` remains not run;
+- no corrected Draft row exists;
+- Export Spreadsheet was not invoked for the corrected candidate;
+- no raw corrected round-trip JSON or SHA-256 is claimed;
+- semantic corrected-candidate-versus-export comparison was not run;
+- `json_import_saved_definition_contract=unproven`;
+- `json_import_round_trip=not_run`;
 - `destination_contract_proven=false`.
 
 Atomicity remains `api_patch_unresolved` and the analyte PATCH-key contract

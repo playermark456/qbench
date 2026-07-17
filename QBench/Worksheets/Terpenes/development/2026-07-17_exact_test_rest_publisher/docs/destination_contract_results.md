@@ -3,7 +3,7 @@
 Date: 2026-07-17
 
 Current controlled-stop classification:
-**`json_import_upload_blocked_browser_file_upload_unsupported`**.
+**`corrected_native_legacy_candidate_local_validation_passed_not_uploaded`**.
 
 Prior imported-definition runtime classification:
 **`normal_assay_test_instantiation_failed_blank_default`**.
@@ -32,7 +32,8 @@ navigating away and reopening it.
 | QBench native named-cell persistence | `operational` |
 | Codex B2 save-procedure control | `codex_named_cell_save_control_failed` |
 | Generated JSON candidate local validation | `passed_43_of_43` |
-| Generated JSON Sandbox import | `blocked_browser_file_upload_unsupported` |
+| Prior generated JSON import | `failed_wrong_worksheet_collapsed_renderer` |
+| Corrected native-envelope candidate | `local_validation_passed_not_uploaded` |
 | JSON round-trip export | `not_run_import_gate` |
 | Publisher destination gate | `destination_contract_proven=false` |
 
@@ -259,22 +260,23 @@ configuration remains unchanged.
 
 ## Generated JSON import rebuild
 
-The new implementation path is generated JSON import, not manual entry of 43
-named cells. The locally generated candidate is:
-`json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json`.
-It contains one 40x26 `Data` worksheet and exactly 43 sheet-qualified named
-cells derived from the unpromoted scalar mapping. Local validation passed
-43/43 with no missing, renamed, duplicated, formula-owned, Pass/Fail,
-Dimethylacetamide, or Peak Table destinations. SHA-256:
-`7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70`.
+The prior generated JSON import is invalid: manual review proved that it was
+loaded into the native scalar worksheet and displayed a collapsed/default
+blank cell even though all 43 named-cell definitions loaded.
 
-The exact inactive Sandbox worksheet shell
-`SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE` was created and its
-title and breadcrumb matched. The in-app browser explicitly does not support
-local file uploads, so the candidate was not attached or submitted. The
-Versions tab contains no rows. No imported named-cell count, raw round-trip
-export, or semantic round-trip result is claimed. The candidate is ready for
-manual Sandbox upload.
+The corrected implementation path uses the fresh working-native legacy export
+as its sole structural base. The locally generated candidate is:
+`json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json`.
+It preserves the native legacy `table_config/qb_config` envelope, its exact
+40x26 matrix and metadata, adds 28 required anchors, and contains exactly 43
+sheet-qualified named cells. Local validation passed 43/43 with no missing,
+renamed, duplicated, formula-owned, Pass/Fail, Dimethylacetamide, or Peak Table
+destinations. SHA-256:
+`54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b`.
+
+No QBench environment was accessed for the correction. The corrected
+candidate was not uploaded or saved, so no corrected Draft row, raw
+round-trip export, or semantic round-trip result is claimed.
 
 ## Version-creation control reconciliation
 

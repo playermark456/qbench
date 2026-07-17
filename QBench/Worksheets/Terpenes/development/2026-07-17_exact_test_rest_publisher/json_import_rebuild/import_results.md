@@ -1,31 +1,26 @@
-# Sandbox JSON import result
+# JSON import correction result
 
 Classification:
-**`json_import_upload_blocked_browser_file_upload_unsupported`**
+**`corrected_native_legacy_candidate_local_validation_passed_not_uploaded`**
 
-The exact new Sandbox worksheet shell was created:
+The prior import must not be treated as successful. Manual review proved:
 
-- Worksheet:
-  `SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE`
-- Type: Spreadsheet
-- Worksheet active state: inactive
-- Page title: exact match
-- Breadcrumb: exact match
-- Existing diagnostic worksheet modified: no
-- Existing `sdf` control modified or deleted: no
+1. the failed candidate was loaded into the native scalar worksheet instead
+   of the intended JSON scalar worksheet; and
+2. its 43 `qb_config.named_cells` entries loaded, but the renderer showed only
+   a collapsed/default blank cell rather than the expected 40x26 grid.
 
-The **Import Spreadsheet Template** dialog was opened on the exact new
-worksheet. The in-app browser explicitly reported that file uploads are not
-supported. The candidate JSON was therefore not attached and the dialog was
-not submitted.
+No visible Draft row for a corrected JSON candidate was established and no
+saved/reopened export exists. Therefore the failed action proves neither a
+saved worksheet version nor a destination contract.
 
-- Upload attempted: no
-- Candidate attached: no
-- Import submitted: no
-- Draft version created: no
-- Versions-tab rows after the blocked upload: zero
-- Imported named-cell count before refresh: not available
-- Imported named-cell count after refresh/list reopen: not available
+This prompt performed repository-only correction. The corrected candidate was
+not uploaded, attached, imported, saved, approved, or activated. QBench was
+not accessed.
 
-The completed local JSON remains ready for manual Sandbox upload. No navigation
-staleness occurred; worksheet title and breadcrumb stayed authoritative.
+- Corrected upload attempted: no
+- Corrected candidate attached: no
+- Corrected import submitted: no
+- Corrected Draft row visibly established: no
+- Corrected saved/reopened export: no
+- `destination_contract_proven=false`

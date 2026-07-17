@@ -1,0 +1,132 @@
+{
+  "classification": "corrected_native_legacy_candidate_local_validation_pending_upload",
+  "files": {
+    "failed_candidate": {
+      "filename": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE_failed_collapsed_grid.json",
+      "sha256": "7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70",
+      "top_level_keys": [
+        "config",
+        "qb_config",
+        "data"
+      ],
+      "envelope": "newer config/qb_config/data",
+      "config.style_type": "null",
+      "config.style_value": null,
+      "minDimensions": [
+        1,
+        1
+      ],
+      "rows": 40,
+      "columns": 26,
+      "non_empty_cell_count": 0,
+      "worksheet_data_dimensions": "40x26",
+      "worksheet_data_storage": "config.worksheets[0].data",
+      "top_level_Data_dimensions": "40x26",
+      "named_cell_count": 43,
+      "namespace": "fba1ba1a-6b6b-4101-be22-b4ef4935f65c",
+      "worksheetId": "148d340f-a118-495e-ac94-e9df7ab115a2",
+      "worksheetName": "Data",
+      "tableHeight": 350,
+      "tableWidth": 1588,
+      "worksheet.style_type": "object"
+    },
+    "working_native_export": {
+      "filename": "2026-07-17_SBX_ONLY_TERPENES_NATIVE_SCALAR_43_FIELD_BASE_working_native_export_spreadsheet.json",
+      "sha256": "d86e05122bc9a7fc4b6937e5582d9ff469f15c234e606fc0c5bbdd7d7c3659e5",
+      "top_level_keys": [
+        "table_config",
+        "qb_config"
+      ],
+      "envelope": "legacy table_config/qb_config",
+      "config.style_type": "absent",
+      "config.style_value": "<absent>",
+      "minDimensions": "<absent>",
+      "rows": 40,
+      "columns": 26,
+      "non_empty_cell_count": 8,
+      "worksheet_data_dimensions": "40x26",
+      "worksheet_data_storage": "table_config.cell_settings",
+      "top_level_Data_dimensions": "absent",
+      "named_cell_count": 1,
+      "namespace": "<absent>",
+      "worksheetId": "<absent>",
+      "worksheetName": "<legacy single logical Data worksheet>",
+      "tableHeight": "<absent>",
+      "tableWidth": "<absent>",
+      "worksheet.style_type": "absent"
+    },
+    "corrected_candidate": {
+      "filename": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json",
+      "sha256": "54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b",
+      "top_level_keys": [
+        "table_config",
+        "qb_config"
+      ],
+      "envelope": "legacy table_config/qb_config",
+      "config.style_type": "absent",
+      "config.style_value": "<absent>",
+      "minDimensions": "<absent>",
+      "rows": 40,
+      "columns": 26,
+      "non_empty_cell_count": 30,
+      "worksheet_data_dimensions": "40x26",
+      "worksheet_data_storage": "table_config.cell_settings",
+      "top_level_Data_dimensions": "absent",
+      "named_cell_count": 43,
+      "namespace": "<absent>",
+      "worksheetId": "<absent>",
+      "worksheetName": "<legacy single logical Data worksheet>",
+      "tableHeight": "<absent>",
+      "tableWidth": "<absent>",
+      "worksheet.style_type": "absent"
+    }
+  },
+  "failed_candidate_defects": [
+    "Used the newer config/qb_config/data envelope instead of the working legacy table_config/qb_config envelope.",
+    "config.style was null while the working native export has no config object or config.style field.",
+    "minDimensions was [1, 1] despite serialized 40x26 arrays.",
+    "The import loaded 43 qb_config.named_cells entries but rendered only a collapsed/default blank cell.",
+    "The import was applied to the NATIVE_SCALAR worksheet instead of the JSON_SCALAR worksheet."
+  ],
+  "native_to_corrected_complete_difference": {
+    "changed_cell_value_addresses": [
+      "A1",
+      "E1",
+      "F1",
+      "G1",
+      "H1",
+      "I1",
+      "J1",
+      "K1",
+      "L1",
+      "M1",
+      "N1",
+      "P1",
+      "Q1",
+      "R1",
+      "S1",
+      "T1",
+      "U1",
+      "V1",
+      "W1",
+      "X1",
+      "Y1",
+      "A12",
+      "A22",
+      "A28",
+      "A40"
+    ],
+    "changed_cell_value_count": 25,
+    "named_cells": "removed sdf/A1 and replaced the mapping with exactly 43 Data-qualified destinations",
+    "all_other_table_config_fields_identical": true,
+    "cell_metadata_identical_after_renderer_uuid_normalization": true,
+    "default_settings_identical": true,
+    "plugin_settings_identical": true,
+    "source_specific_UUIDs_preserved": false
+  },
+  "interpretation": {
+    "logical_worksheet": "The old Sandbox legacy export serializes one unnamed table. It is the candidate's logical Data worksheet.",
+    "dual_data_representations": "The legacy reference has one table_config.cell_settings representation and no top-level data['Data']; the corrected candidate preserves that single representation.",
+    "config_style": "The legacy reference has no config object, so absence - not null - is the exact matching type/state."
+  }
+}

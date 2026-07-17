@@ -1,86 +1,132 @@
+#!/usr/bin/env python3
+"""Validate the corrected legacy JSON scalar candidate."""
 from __future__ import annotations
 
+import copy
 import csv
 import hashlib
 import json
 import re
-import sys
-import uuid
 from pathlib import Path
+from typing import Any
 
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
+SOURCE = (
+    HERE
+    / "source"
+    / "2026-07-17_SBX_ONLY_TERPENES_NATIVE_SCALAR_43_FIELD_BASE_working_native_export_spreadsheet.json"
+)
 CANDIDATE = HERE / "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json"
 MAPPING = ROOT / "config" / "field_mapping_scalar_candidate.csv"
-REFERENCE_PATHS = [
-    ROOT.parents[0]
-    / "2026-07-16_full_sandbox_implementation"
-    / "round_trip"
-    / "2026-07-16_ait-sandbox_ws_id_62_version_1_draft_export_spreadsheet.json",
-    ROOT.parents[3]
-    / "Rescans"
-    / "2026-07-04"
-    / "Worksheets"
-    / "Terpenes"
-    / "terpenes__id_42__worksheet_export_spreadsheet__active__2026-07-04.json",
-]
-
-
-def column_index(name: str) -> int:
-    value = 0
-    for character in name:
-        value = value * 26 + ord(character) - 64
-    return value - 1
+SOURCE_SHA256 = "d86e05122bc9a7fc4b6937e5582d9ff469f15c234e606fc0c5bbdd7d7c3659e5"
+CANDIDATE_RENDERER_UUID = "051174c5-a7da-4b6d-afc5-0c2addc1a900"
+ROWS = 40
+COLS = 26
+UUID_PATTERN = re.compile(
+    r"\b[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b",
+    re.IGNORECASE,
+)
 
 
 def fail(message: str) -> None:
     failures.append(message)
 
 
+def address_parts(address: str) -> tuple[int, int, str]:
+    match = re.fullmatch(r"Data!([A-Z]+)([1-9][0-9]*)", address)
+    if not match:
+        raise ValueError(address)
+    column = 0
+    for character in match.group(1):
+        column = column * 26 + ord(character) - 64
+    return int(match.group(2)) - 1, column - 1, f"{match.group(1)}{match.group(2)}"
+
+
+def is_formula_owned(cell: dict[str, Any]) -> bool:
+    value = cell.get("value")
+    if isinstance(value, str) and value.startswith("="):
+        return True
+
+    def walk(item: Any) -> bool:
+        if isinstance(item, dict):
+            for key, nested in item.items():
+                if str(key).lower() in {"formula", "formulas"}:
+                    return True
+                if walk(nested):
+                    return True
+        elif isinstance(item, list):
+            return any(walk(nested) for nested in item)
+        return False
+
+    return walk(cell.get("meta_data", {}))
+
+
+def is_read_only(cell: dict[str, Any]) -> bool:
+    def walk(item: Any) -> bool:
+        if isinstance(item, dict):
+            for key, nested in item.items():
+                if str(key).lower() == "readonly" and nested not in (False, None, "false", 0):
+                    return True
+                if walk(nested):
+                    return True
+        elif isinstance(item, list):
+            return any(walk(nested) for nested in item)
+        return False
+
+    return walk(cell.get("meta_data", {}))
+
+
+def replace_uuid(item: Any, old: str, new: str) -> Any:
+    if isinstance(item, dict):
+        return {key: replace_uuid(value, old, new) for key, value in item.items()}
+    if isinstance(item, list):
+        return [replace_uuid(value, old, new) for value in item]
+    if isinstance(item, str):
+        return item.replace(old, new)
+    return item
+
+
 failures: list[str] = []
 
+if hashlib.sha256(SOURCE.read_bytes()).hexdigest() != SOURCE_SHA256:
+    fail("working native export bytes or SHA-256 changed")
+
 try:
+    source = json.loads(SOURCE.read_text(encoding="utf-8-sig"))
     candidate = json.loads(CANDIDATE.read_text(encoding="utf-8"))
 except (OSError, json.JSONDecodeError) as error:
-    print(f"candidate validation FAILED: {error}")
+    print(f"JSON candidate validation FAILED: {error}")
     raise SystemExit(1)
+
+if set(source) != {"table_config", "qb_config"}:
+    fail("working native export is not the legacy table_config/qb_config envelope")
+if set(candidate) != {"table_config", "qb_config"}:
+    fail("corrected candidate does not preserve the legacy native envelope")
+if "config" in source or "config" in candidate:
+    fail("a newer config object was introduced into the legacy native envelope")
+if "data" in source or "data" in candidate:
+    fail("a duplicate top-level Data representation was introduced")
+
+source_table = source.get("table_config", {})
+table = candidate.get("table_config", {})
+source_grid = source_table.get("cell_settings", [])
+grid = table.get("cell_settings", [])
+if len(grid) != ROWS or any(len(row) != COLS for row in grid):
+    fail("legacy logical Data worksheet is not exactly 40x26")
+defaults = table.get("default_settings", {})
+if len(defaults.get("rowHeights", [])) != ROWS:
+    fail("native row settings are not exactly 40 rows")
+if len(defaults.get("colWidths", [])) != COLS:
+    fail("native column settings are not exactly 26 columns")
+if table.get("default_settings") != source_table.get("default_settings"):
+    fail("native default row/column settings changed")
+if table.get("plugin_settings") != source_table.get("plugin_settings"):
+    fail("native plugin settings changed")
 
 with MAPPING.open(newline="", encoding="utf-8") as handle:
     mapping = list(csv.DictReader(handle))
-
-for key in ("config", "qb_config", "data"):
-    if key not in candidate:
-        fail(f"missing top-level {key}")
-
-config = candidate.get("config", {})
-qb_config = candidate.get("qb_config", {})
-top_data = candidate.get("data", {})
-worksheets = config.get("worksheets", [])
-if len(worksheets) != 1:
-    fail(f"expected one worksheet, found {len(worksheets)}")
-worksheet = worksheets[0] if worksheets else {}
-if worksheet.get("worksheetName") != "Data":
-    fail("worksheet name is not Data")
-if set(top_data) != {"Data"}:
-    fail("top-level data does not contain exactly Data")
-
-rows = worksheet.get("rows", [])
-columns = worksheet.get("columns", [])
-grid = worksheet.get("data", [])
-evaluated_grid = top_data.get("Data", [])
-if len(rows) < 40 or len(grid) < 40 or len(evaluated_grid) < 40:
-    fail("Data grid has fewer than 40 rows")
-if len(columns) < 26:
-    fail("Data grid has fewer than 26 columns")
-if any(len(row) < 26 for row in grid[:40]):
-    fail("worksheet Data rows have fewer than 26 columns")
-if any(len(row) < 26 for row in evaluated_grid[:40]):
-    fail("top-level Data rows have fewer than 26 columns")
-
-named_cells = qb_config.get("named_cells", {})
-if len(named_cells) != 43:
-    fail(f"expected 43 named cells, found {len(named_cells)}")
 if len(mapping) != 43:
     fail(f"expected 43 mapping rows, found {len(mapping)}")
 
@@ -92,60 +138,86 @@ expected = {
     }
     for row in mapping
 }
-if named_cells != expected:
-    missing = sorted(set(expected) - set(named_cells))
-    extra = sorted(set(named_cells) - set(expected))
-    fail(f"named-cell contract differs from mapping; missing={missing}; extra={extra}")
-
-names = list(named_cells)
-addresses = [entry.get("cell") for entry in named_cells.values()]
-if len(names) != len(set(names)):
-    fail("duplicate system names")
-if len(addresses) != len(set(addresses)):
-    fail("duplicate named-cell addresses")
-if any("[" in name or "]" in name for name in names):
+named = candidate.get("qb_config", {}).get("named_cells", {})
+if named != expected:
+    fail("named-cell contract is not exactly the validated 43-field mapping")
+if len(named) != 43:
+    fail(f"expected 43 named cells, found {len(named)}")
+if "sdf" in named:
+    fail("diagnostic named cell sdf remains")
+if any("[" in name or "]" in name for name in named):
     fail("bracketed destination name present")
-if "sdf" in names:
-    fail("manual diagnostic name sdf is present")
+addresses = [entry.get("cell") for entry in named.values()]
+if len(addresses) != len(set(addresses)):
+    fail("duplicate destination address present")
 
-analyte_names = [name for name in names if name.startswith("terpenes_instrument_conc_")]
-expected_analytes = [f"terpenes_instrument_conc_{index:02d}" for index in range(1, 24)]
-if analyte_names != expected_analytes:
-    fail("analyte names are not the exact contiguous _01 through _23 sequence")
-expected_analyte_cells = [
-    f"Data!{chr(ord('D') + index)}2" for index in range(23)
-]
-if [named_cells[name]["cell"] for name in expected_analytes] != expected_analyte_cells:
-    fail("analyte cells are not exactly Data!D2:Z2")
+expected_analyte_names = [f"terpenes_instrument_conc_{index:02d}" for index in range(1, 24)]
+expected_analyte_addresses = [f"Data!{chr(68 + index)}2" for index in range(23)]
+analyte_names = [name for name in named if name.startswith("terpenes_instrument_conc_")]
+if analyte_names != expected_analyte_names:
+    fail("analyte names are not exactly _01 through _23")
+if [named[name]["cell"] for name in expected_analyte_names] != expected_analyte_addresses:
+    fail("analyte destinations are not exactly Data!D2:Z2")
 
-cells = worksheet.get("cells", {})
-address_pattern = re.compile(r"^Data!([A-Z]+)([1-9][0-9]*)$")
-for name, entry in named_cells.items():
-    match = address_pattern.fullmatch(str(entry.get("cell", "")))
-    if not match:
-        fail(f"invalid sheet-qualified address for {name}")
+destination_locals: set[str] = set()
+for name, entry in named.items():
+    try:
+        row_index, column_index, local = address_parts(str(entry.get("cell", "")))
+    except ValueError:
+        fail(f"invalid Data-qualified address for {name}")
         continue
-    column = column_index(match.group(1))
-    row = int(match.group(2)) - 1
-    if row >= len(grid) or column >= len(columns):
-        fail(f"out-of-grid address for {name}")
+    if row_index >= ROWS or column_index >= COLS:
+        fail(f"out-of-range address for {name}")
         continue
-    address = entry["cell"].split("!", 1)[1]
-    value = grid[row][column]
-    evaluated = evaluated_grid[row][column]
-    cell_config = cells.get(address, {})
-    if value not in ("", None) or evaluated not in ("", None):
+    destination_locals.add(local)
+    cell = grid[row_index][column_index]
+    if cell.get("value") not in ("", None):
         fail(f"destination is not blank: {name}")
-    if isinstance(value, str) and value.startswith("="):
+    if is_formula_owned(cell):
         fail(f"destination is formula-owned: {name}")
-    if "formula" in cell_config:
-        fail(f"destination cell config contains formula: {name}")
-    if cell_config.get("readonly") is not False:
-        fail(f"destination is not writable: {name}")
+    if is_read_only(cell):
+        fail(f"destination is read-only: {name}")
     if entry.get("export") is not True:
-        fail(f"destination export flag is not true: {name}")
+        fail(f"destination is not exportable: {name}")
 
-normalized_contract = json.dumps(named_cells, sort_keys=True).lower()
+anchors: dict[str, str] = {
+    "A1": "Terpenes JSON scalar 43-field base",
+    "A12": "Preparation and calculation inputs",
+    "A22": "Controlled disposition",
+    "A28": "Source and audit metadata",
+    "A40": "End of worksheet",
+}
+for index, row in enumerate(mapping[:23]):
+    anchors[f"{chr(68 + index)}1"] = row["source_header"]
+for address, expected_value in anchors.items():
+    row_index, column_index, _ = address_parts(f"Data!{address}")
+    if grid[row_index][column_index].get("value") != expected_value:
+        fail(f"required visible anchor missing or changed at {address}")
+if len(anchors) != 28:
+    fail("required anchor count is not 28")
+
+# Normalize only the explicitly allowed value and named-cell changes. Any
+# remaining difference means native structure, metadata, sizing, or content drifted.
+source_uuid_values = set(UUID_PATTERN.findall(json.dumps(source)))
+candidate_uuid_values = set(UUID_PATTERN.findall(json.dumps(candidate)))
+if len(source_uuid_values) != 1:
+    fail(f"expected one native renderer UUID, found {len(source_uuid_values)}")
+if candidate_uuid_values != {CANDIDATE_RENDERER_UUID}:
+    fail("corrected candidate does not contain exactly the fresh renderer UUID")
+if source_uuid_values & candidate_uuid_values:
+    fail("corrected candidate reused the source renderer UUID")
+source_uuid = next(iter(source_uuid_values), "")
+normalized_source = replace_uuid(copy.deepcopy(source), source_uuid, CANDIDATE_RENDERER_UUID)
+normalized_source["qb_config"]["named_cells"] = copy.deepcopy(named)
+for address in set(anchors) | destination_locals:
+    row_index, column_index, _ = address_parts(f"Data!{address}")
+    normalized_source["table_config"]["cell_settings"][row_index][column_index]["value"] = (
+        grid[row_index][column_index].get("value")
+    )
+if normalized_source != candidate:
+    fail("candidate contains changes beyond named cells and required anchor/destination values")
+
+contract_text = json.dumps(named, ensure_ascii=False, sort_keys=True).lower()
 for prohibited in (
     "pass_fail",
     "pass/fail",
@@ -155,41 +227,10 @@ for prohibited in (
     "peak table",
     "peak_table",
 ):
-    if prohibited in normalized_contract:
+    if prohibited in contract_text:
         fail(f"prohibited reportable field present: {prohibited}")
 
-if worksheet.get("mergeCells") not in ({}, None):
-    fail("merged cells are present")
-if config.get("plugins", {}).get("conditionalFormatting", {}).get("rules") != []:
-    fail("conditional formatting is present")
-if worksheet.get("freezeRows") or worksheet.get("freezeColumns"):
-    fail("hidden/frozen rows or columns are present")
-
-candidate_namespace = config.get("namespace")
-candidate_worksheet_id = worksheet.get("worksheetId")
-try:
-    uuid.UUID(str(candidate_namespace))
-    uuid.UUID(str(candidate_worksheet_id))
-except ValueError:
-    fail("candidate namespace or worksheetId is not a UUID")
-if candidate_namespace == candidate_worksheet_id:
-    fail("namespace and worksheetId are reused")
-
-reference_namespaces: set[str] = set()
-reference_worksheet_ids: set[str] = set()
-for path in REFERENCE_PATHS:
-    reference = json.loads(path.read_text(encoding="utf-8"))
-    reference_namespaces.add(str(reference.get("config", {}).get("namespace")))
-    reference_worksheet_ids.update(
-        str(item.get("worksheetId"))
-        for item in reference.get("config", {}).get("worksheets", [])
-    )
-if candidate_namespace in reference_namespaces:
-    fail("candidate reused a source namespace")
-if candidate_worksheet_id in reference_worksheet_ids:
-    fail("candidate reused a source worksheet UUID")
-
-serialized = json.dumps(candidate, sort_keys=True).lower()
+serialized = json.dumps(candidate, ensure_ascii=False, sort_keys=True).lower()
 for prohibited in (
     "qbench_client_id",
     "qbench_client_secret",
@@ -200,7 +241,9 @@ for prohibited in (
     "customer_data",
 ):
     if prohibited in serialized:
-        fail(f"credential, token, signed URL, or customer data marker present: {prohibited}")
+        fail(f"credential, token, signed URL, or customer-data marker present: {prohibited}")
+if source_uuid and source_uuid.lower() in serialized:
+    fail("source-specific renderer UUID remains in corrected legacy candidate")
 
 if failures:
     print("JSON candidate validation FAILED")
@@ -208,11 +251,15 @@ if failures:
         print(f"- {failure}")
     raise SystemExit(1)
 
+nonempty_count = sum(
+    cell.get("value") not in ("", None) for row in grid for cell in row
+)
 digest = hashlib.sha256(CANDIDATE.read_bytes()).hexdigest()
 print("JSON candidate validation PASSED")
-print("- one Data worksheet")
-print(f"- rows={len(rows)} columns={len(columns)}")
-print(f"- named_cells={len(named_cells)} analytes={len(analyte_names)}")
-print("- all destinations blank, writable, unique, non-formula, exportable")
-print("- no prohibited fields, reused source identifiers, or sensitive data")
+print("- one legacy logical Data worksheet; native envelope preserved")
+print(f"- grid={ROWS}x{COLS}; anchors={len(anchors)}; nonempty_cells={nonempty_count}")
+print(f"- named_cells={len(named)}; analytes={len(analyte_names)}")
+print("- all destinations resolve, are blank, writable, unique, non-formula, and exportable")
+print("- config.style/config.worksheets/top-level data remain absent exactly as in native reference")
+print("- source renderer UUID replaced; no sdf, Pass/Fail, prohibited destination, credential, or customer-data marker")
 print(f"- sha256={digest}")
