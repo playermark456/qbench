@@ -6,6 +6,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import runpy
 from pathlib import Path
 
 
@@ -56,7 +57,10 @@ def main() -> None:
     assert manifest["status"] == "blocked_stop_condition_before_activation"
     assert manifest["environment"]["sandbox_hostname_verified"] == "ait-sandbox.qbench.net"
     assert manifest["environment"]["live_qbench_accessed"] is False
-    assert manifest["sandbox_internal_object_ids_included"] is False
+    assert manifest["sandbox_internal_object_ids_included"] is True
+    assert manifest["sandbox_internal_object_id_scope"] == (
+        "synthetic_test_ids_only_as_required_by_prompt_5a"
+    )
     assert manifest["validation"]["test_worksheet_writes"] == 0
     assert manifest["validation"]["pass_fail_artifact_created"] is False
 
@@ -102,10 +106,22 @@ def main() -> None:
         source_path = REPO / source["path"]
         assert sha256(source_path) == source["sha256"], f"hash mismatch: {source['path']}"
 
+    follow_up = manifest["prompt_5a_follow_up"]
+    assert follow_up["classification"] == "per_test_vlookup_error"
+    assert follow_up["trigger_count"] == 1
+    assert follow_up["task_created_automation_history_entries"] == 1
+    assert follow_up["final_automation_active"] is False
+    assert follow_up["test_worksheet_writes"] == 0
+    assert follow_up["secondary_guard_probes"] == "not_run_routing_did_not_pass"
+    runpy.run_path(
+        str(HERE / "vlookup_route_probe" / "validate_prompt_5a_probe.py"),
+        run_name="__main__",
+    )
+
     print(
         "Prompt 5 package validation passed: "
-        "16 required files, 43 intended mappings, source hashes verified, "
-        "automation inactive with zero saved conditions/actions, zero Test writes."
+        "16 core files plus Prompt 5A evidence, 43 intended mappings, source "
+        "hashes verified, both automation final states inactive, zero Test writes."
     )
 
 

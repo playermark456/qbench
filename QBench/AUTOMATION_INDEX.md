@@ -47,3 +47,20 @@ all Test Worksheets within a Batch and exposes no exact-Test-ID selector or
 exactly-one-match guard, so activation was blocked under the Prompt 5 stop
 conditions. Sanitized evidence is in
 `QBench/Worksheets/Terpenes/development/2026-07-17_batch_to_test_automation/`.
+
+## Prompt 5A VLOOKUP routing probe 2026-07-17
+
+QBench's official Batch Spreadsheet Worksheets & Automations guide documents
+that the all-Test action supplies `test` and can use a Batch source formula of
+the form `VLOOKUP({{test.id}}, ...)`. An isolated old-Sandbox probe used
+`=VLOOKUP({{test.id}}, A2:B4, 2)` for three synthetic Tests with distinct
+values. The Batch was saved exactly once and one task-created automation job
+reported `Success`, but all destination values stayed blank.
+
+The exact post-run Test Worksheet export contained the expected cell contents
+but no saved `named_cells` configuration, so `route_probe` was not a valid
+destination. Classification: `per_test_vlookup_error`. The automation was
+deactivated immediately. Zero-match, duplicate-match, and COUNTIF/IF probes
+were not run. This corrects the original broad broadcast conclusion without
+claiming that old-Sandbox per-Test routing passed. Evidence is in the
+`vlookup_route_probe/` subdirectory of the Prompt 5 package.

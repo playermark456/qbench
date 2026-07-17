@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "environment": "ait-sandbox.qbench.net",
+  "requested_name": "SBX_ONLY_TERPENES_2026_07_17_VLOOKUP_ROUTE_AUTOMATION",
+  "requested_name_length": 53,
+  "saved_name": "SBX_ONLY_TERPENES_2026_07_17_VLOOKUP_AUTOMATION",
+  "saved_name_length": 47,
+  "name_deviation_reason": "Old Sandbox rejected the requested name with: A field's value is too long.",
+  "description_contains_requested_name": true,
+  "trigger": {
+    "event": "Data Modified",
+    "data_type": "Batch"
+  },
+  "conditions": [
+    {
+      "field_type": "Data Type",
+      "field_name": "Worksheet",
+      "before": "Anything",
+      "after_operator": "Equal To",
+      "after_value": "SBX_ONLY_TERPENES_2026_07_17_VLOOKUP_ROUTE_BATCH_WS"
+    }
+  ],
+  "actions": [
+    {
+      "action": "Set value on all Test Worksheets within the Batch",
+      "destination_test_worksheet_field": "route_probe",
+      "to": "Copy Value",
+      "copy": "From Worksheet",
+      "source_expression": "=VLOOKUP({{test.id}}, A2:B4, 2)"
+    }
+  ],
+  "activation": {
+    "activated_at_utc": "2026-07-17T02:36:54.746Z",
+    "triggered_once_at_utc": "2026-07-17T02:37:05.765Z",
+    "deactivation_started_at_utc": "2026-07-17T02:37:17.695Z",
+    "final_active": false,
+    "task_created_history_entries": 1,
+    "task_created_job_status": "Success"
+  }
+}

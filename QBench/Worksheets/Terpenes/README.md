@@ -19,9 +19,12 @@
 
 ## Prompt 5 Batch-to-Test automation
 
-The 2026-07-17 Sandbox attempt is blocked before activation. The native Batch
-automation action can only copy to all Test Worksheets in the Batch and cannot
-enforce exact QBench Test ID matching, exactly-one cardinality, or atomic
-multi-field preflight. The isolated automation remains inactive with no saved
-conditions/actions. See
+The original 2026-07-17 43-field design stopped before activation because the
+UI inspection did not prove exact routing, cardinality guards, or atomic
+multi-field preflight. QBench's official guide later supplied a per-Test
+`VLOOKUP({{test.id}}, ...)` source pattern. Prompt 5A exercised that pattern
+once with an isolated one-field probe, but the post-run Test Worksheet export
+showed the destination named cell had not persisted. The result is therefore
+`per_test_vlookup_error`, not proof of broadcast or unsupported routing. The
+probe automation is inactive; zero Test values were written. See
 `development/2026-07-17_batch_to_test_automation/README.md`.

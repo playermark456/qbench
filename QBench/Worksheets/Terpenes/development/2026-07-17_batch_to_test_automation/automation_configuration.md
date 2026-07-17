@@ -1,5 +1,13 @@
 # Sanitized Sandbox automation configuration
 
+This file retains the original Prompt 5 UI-only stop evidence. Prompt 5A later
+confirmed that the official QBench guide documents a per-Test source expression
+using `VLOOKUP({{test.id}}, ...)`. The one-field old-Sandbox follow-up is in
+`vlookup_route_probe/` and is classified `per_test_vlookup_error` because the
+destination named cell did not persist. The statements below describe the
+original editor inspection, not a current conclusion that per-Test source
+routing is unavailable.
+
 ## Saved configuration
 
 | Property | Value |
@@ -46,7 +54,7 @@ The action did not expose any of the following:
 
 ## Activation decision
 
-Activation was blocked. The only supported Test Worksheet action broadcasts to
-all Test Worksheets within the Batch, so it cannot satisfy the deterministic
-one-row-to-one-Test contract. No condition or action was saved after this was
-observed.
+Activation was blocked on the original UI-only evidence. No condition or action
+was saved after this was observed. The later official formula pattern corrects
+the broad broadcast interpretation, but the original stop remains valid for
+the unguarded, non-atomic 43-field design.

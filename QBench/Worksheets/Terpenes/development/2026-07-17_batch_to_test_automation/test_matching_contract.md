@@ -40,7 +40,9 @@ The match operation must never select the first result.
 
 ## Sandbox result
 
-The native Batch automation action targets `all Test Worksheets within the
-Batch`. It offers no Test-ID selector and no match-cardinality result. It cannot
-implement this contract, so the automation remained inactive and no matching
-test was executed.
+The original UI-only inspection found no visible Test-ID selector or
+match-cardinality result, so the 43-field automation remained inactive. QBench
+documentation later established that a source formula can reference
+`{{test.id}}`; however, the Prompt 5A old-Sandbox probe was invalidated by a
+missing saved destination named cell. Per-Test formula routing therefore
+remains unresolved, and no exactly-one-match implementation has been proven.

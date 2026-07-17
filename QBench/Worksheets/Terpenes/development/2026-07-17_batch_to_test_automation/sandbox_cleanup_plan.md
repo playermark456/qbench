@@ -18,4 +18,6 @@ run in its current state.
    different design without updating the repository contract.
 
 No Batch, Sample, Test, assay, worksheet, parser, report, or attachment was
-created for Prompt 5, so there are no other Prompt 5 objects to remove.
+created during the original Prompt 5 stop. Prompt 5A later created a separate
+isolated routing-probe object set; its cleanup scope and order are recorded in
+`vlookup_route_probe/sandbox_cleanup_plan.md`.

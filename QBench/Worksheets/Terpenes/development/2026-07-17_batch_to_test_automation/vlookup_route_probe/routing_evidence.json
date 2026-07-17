@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "prompt": "Prompt 5A",
+  "classification": "per_test_vlookup_error",
+  "classification_reason": "The saved Test Worksheet export contained no named_cells configuration, so the configured route_probe destination was absent and the no-write job cannot establish per-Test VLOOKUP behavior.",
+  "environment": {
+    "hostname_verified_before_mutations": "ait-sandbox.qbench.net",
+    "live_qbench_accessed": false,
+    "customer_data_used": false
+  },
+  "batch_table": {
+    "range": "A2:B4",
+    "lookup_key": "exact synthetic QBench Test ID",
+    "rows": [
+      {"synthetic_qbench_test_id": 290, "probe_value": 101},
+      {"synthetic_qbench_test_id": 291, "probe_value": 202},
+      {"synthetic_qbench_test_id": 292, "probe_value": 303}
+    ]
+  },
+  "source_expression": "=VLOOKUP({{test.id}}, A2:B4, 2)",
+  "execution": {
+    "trigger_count": 1,
+    "task_created_automation_history_entries": 1,
+    "automation_history_status": "Success",
+    "automation_history_display_time_local": "2026-07-16 21:37 America/Chicago",
+    "final_automation_active": false
+  },
+  "test_observations_after_reopen": [
+    {
+      "synthetic_qbench_test_id": 290,
+      "expected_route_probe": 101,
+      "observed_route_probe": null,
+      "route_probe_native_numeric": false,
+      "observed_qbench_test_id_display": 290,
+      "observed_route_probe_sentinel": "UNCHANGED",
+      "other_worksheet_field_changed": false
+    },
+    {
+      "synthetic_qbench_test_id": 291,
+      "expected_route_probe": 202,
+      "observed_route_probe": null,
+      "route_probe_native_numeric": false,
+      "observed_qbench_test_id_display": 291,
+      "observed_route_probe_sentinel": "UNCHANGED",
+      "other_worksheet_field_changed": false
+    },
+    {
+      "synthetic_qbench_test_id": 292,
+      "expected_route_probe": 303,
+      "observed_route_probe": null,
+      "route_probe_native_numeric": false,
+      "observed_qbench_test_id_display": 292,
+      "observed_route_probe_sentinel": "UNCHANGED",
+      "other_worksheet_field_changed": false
+    }
+  ],
+  "post_run_export_observation": {
+    "intended_named_cells": [
+      "route_probe",
+      "qbench_test_id_display",
+      "route_probe_sentinel"
+    ],
+    "saved_export_named_cells": [],
+    "route_probe_destination_valid_for_this_run": false
+  },
+  "secondary_guard_probes": {
+    "zero_match": "not_run_routing_did_not_pass",
+    "duplicate_lookup_id": "not_run_routing_did_not_pass",
+    "countif_if_support": "not_run_routing_did_not_pass"
+  },
+  "scope_controls": {
+    "configured_terpenes_mapping_fields": 0,
+    "pass_fail_created": false,
+    "reports_created": 0,
+    "production_changed": false
+  },
+  "raw_exports": [
+    {
+      "path": "source/SBX_ONLY_TERPENES_2026_07_17_VLOOKUP_ROUTE_BATCH_WS__raw_export_spreadsheet.json",
+      "sha256": "a848e48826b9784af3e7ae1d59891858df18c2a2ab8dc3c06c803f9f95d2b227"
+    },
+    {
+      "path": "source/SBX_ONLY_TERPENES_2026_07_17_VLOOKUP_ROUTE_TEST_WS__raw_export_spreadsheet.json",
+      "sha256": "e835148ad1f7d474502265a59193b5a5b5de2edde7aa8d52d8ba0be8216a1499"
+    }
+  ]
+}

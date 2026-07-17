@@ -60,6 +60,30 @@
     "test_worksheets": 0,
     "reports": 0
   },
+  "prompt_5a_follow_up": {
+    "status": "completed_single_trigger_probe",
+    "classification": "per_test_vlookup_error",
+    "official_source_pattern": "=VLOOKUP({{test.id}}, <range>, <index>)",
+    "saved_probe_expression": "=VLOOKUP({{test.id}}, A2:B4, 2)",
+    "trigger_count": 1,
+    "task_created_automation_history_entries": 1,
+    "automation_history_status": "Success",
+    "final_automation_active": false,
+    "test_worksheet_writes": 0,
+    "setup_error": "The post-run Test Worksheet export contained no named_cells configuration, so the route_probe destination was absent.",
+    "secondary_guard_probes": "not_run_routing_did_not_pass",
+    "evidence_directory": "vlookup_route_probe",
+    "sandbox_objects_created_counts": {
+      "automations": 1,
+      "assays": 1,
+      "batches": 1,
+      "samples": 3,
+      "tests": 3,
+      "batch_worksheets": 1,
+      "test_worksheets": 1,
+      "reports": 0
+    }
+  },
   "validation": {
     "automation_activation": "not_attempted",
     "success_test": "not_run_stop_condition",
@@ -103,8 +127,10 @@
     "live_promotion_gap_analysis.md",
     "sanitized_automation_configuration.json",
     "validate_prompt_5_package.py",
-    "prompt_5_manifest.json"
+    "prompt_5_manifest.json",
+    "vlookup_route_probe/"
   ],
-  "sandbox_internal_object_ids_included": false,
+  "sandbox_internal_object_ids_included": true,
+  "sandbox_internal_object_id_scope": "synthetic_test_ids_only_as_required_by_prompt_5a",
   "production_ready": false
 }

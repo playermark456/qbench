@@ -1,11 +1,18 @@
 # Sandbox controlled-success results
 
+Prompt 5A qualification: QBench documentation later supplied the per-Test
+`VLOOKUP({{test.id}}, ...)` source pattern. Its isolated follow-up did not yield
+a valid routing result because the destination named cell was absent from the
+saved worksheet version. This file remains the historical record of the
+original Prompt 5 no-activation decision.
+
 Result: **not run; safely blocked before activation**.
 
 The required success run needs one reviewed Batch row to resolve to exactly one
 Test and needs the complete destination contract validated before any write.
-The native action can only address all Test Worksheets within a Batch, so the
-success run would not be controlled.
+At the time of this original stop, the UI-only inspection had not revealed a
+per-Test source expression or a cardinality guard, so the success run was not
+considered controlled.
 
 ## Observed safe result
 

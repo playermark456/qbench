@@ -1,8 +1,15 @@
 # Sandbox failure-test results
 
-The automation was stopped before activation because it cannot select exactly
-one Test. The eleven requested runtime cases were not executed; executing them
-through a broadcast action would itself violate the test contract.
+Prompt 5A qualification: the official `VLOOKUP({{test.id}}, ...)` pattern means
+the original UI-only inspection did not settle per-Test source routing. The
+separate one-field probe is classified `per_test_vlookup_error` because its
+destination named cell did not persist. The eleven full-publisher failure cases
+below remain unexecuted.
+
+The automation was stopped before activation because the original UI-only
+inspection did not prove selection of exactly one Test. The eleven requested
+runtime cases were not executed; running a 43-field design without proven
+cardinality and atomicity would itself violate the test contract.
 
 | Case | Required safe result | Prompt 5 result |
 |---:|---|---|
