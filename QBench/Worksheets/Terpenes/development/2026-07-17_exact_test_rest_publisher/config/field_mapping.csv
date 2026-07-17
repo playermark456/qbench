@@ -1,0 +1,44 @@
+sequence,source_publish_column,source_publish_cell,source_header,source_named_range,destination_named_cell,destination_cell,transfer_type,required,type_or_constraint,status
+1,D,Publish!D{row},alpha-Pinene,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[1],Data!D2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+2,E,Publish!E{row},Camphene,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[2],Data!E2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+3,F,Publish!F{row},beta-Myrcene,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[3],Data!F2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+4,G,Publish!G{row},beta-Pinene,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[4],Data!G2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+5,H,Publish!H{row},Delta-3-carene,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[5],Data!H2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+6,I,Publish!I{row},alpha-Terpinene,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[6],Data!I2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+7,J,Publish!J{row},cis-Ocimene,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[7],Data!J2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+8,K,Publish!K{row},d-Limonene,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[8],Data!K2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+9,L,Publish!L{row},p-Cymene,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[9],Data!L2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+10,M,Publish!M{row},trans-Ocimene,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[10],Data!M2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+11,N,Publish!N{row},Eucalyptol,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[11],Data!N2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+12,O,Publish!O{row},gamma-Terpinene,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[12],Data!O2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+13,P,Publish!P{row},Terpinolene,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[13],Data!P2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+14,Q,Publish!Q{row},Linalool,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[14],Data!Q2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+15,R,Publish!R{row},Isopulegol,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[15],Data!R2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+16,S,Publish!S{row},Geraniol,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[16],Data!S2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+17,T,Publish!T{row},beta-Caryophyllene,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[17],Data!T2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+18,U,Publish!U{row},alpha-Humulene,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[18],Data!U2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+19,V,Publish!V{row},cis-Nerolidol,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[19],Data!V2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+20,W,Publish!W{row},trans-Nerolidol,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[20],Data!W2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+21,X,Publish!X{row},Guaiol,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[21],Data!X2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+22,Y,Publish!Y{row},Caryophyllene Oxide,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[22],Data!Y2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+23,Z,Publish!Z{row},alpha-Bisabolol,terpenes_batch_publish_instrument_conc,terpenes_instrument_conc[23],Data!Z2,numeric_scalar,true,native numeric,unverified_saved_sandbox_destination
+24,AA,Publish!AA{row},Sample Mass,terpenes_batch_publish_sample_mass_g,sample_mass_g,Data!B12,scalar,true,positive native numeric,unverified_saved_sandbox_destination
+25,AB,Publish!AB{row},Final Volume,terpenes_batch_publish_final_volume_ml,final_volume_ml,Data!B13,scalar,true,positive native numeric,unverified_saved_sandbox_destination
+26,AC,Publish!AC{row},DF,terpenes_batch_publish_df,df,Data!B14,scalar,conditional,positive native numeric when apply_in_qbench,unverified_saved_sandbox_destination
+27,AD,Publish!AD{row},DF Application Mode,terpenes_batch_publish_df_application_mode,df_application_mode,Data!B15,scalar,true,already_applied_by_labsolutions or apply_in_qbench,unverified_saved_sandbox_destination
+28,AE,Publish!AE{row},LabSolutions Conc. Unit,terpenes_batch_publish_conc_unit,labsolutions_conc_unit,Data!B16,scalar,true,exact ug/mL,unverified_saved_sandbox_destination
+29,AF,Publish!AF{row},Unit Confirmed,terpenes_batch_publish_unit_confirmed,labsolutions_conc_unit_confirmed,Data!B17,scalar,true,exact TRUE,unverified_saved_sandbox_destination
+30,AG,Publish!AG{row},Preparation Values Confirmed,terpenes_batch_publish_preparation_confirmed,preparation_values_confirmed,Data!B18,scalar,true,exact TRUE,unverified_saved_sandbox_destination
+31,AH,Publish!AH{row},Source Batch ID,terpenes_batch_publish_source_batch_ids,source_batch_id,Data!B28,scalar,true,nonblank,unverified_saved_sandbox_destination
+32,AI,Publish!AI{row},Source Instrument File,terpenes_batch_publish_source_files,source_instrument_file,Data!B29,scalar,true,nonblank,unverified_saved_sandbox_destination
+33,AJ,Publish!AJ{row},Source File Hash,terpenes_batch_publish_source_hashes,source_file_hash,Data!B30,scalar,true,nonblank,unverified_saved_sandbox_destination
+34,AK,Publish!AK{row},Source Data File,terpenes_batch_publish_table,source_data_file,Data!B31,scalar,true,nonblank,unverified_saved_sandbox_destination
+35,AL,Publish!AL{row},Source Method File,terpenes_batch_publish_table,source_method_file,Data!B32,scalar,true,nonblank,unverified_saved_sandbox_destination
+36,AM,Publish!AM{row},Source Sequence File,terpenes_batch_publish_table,source_sequence_file,Data!B33,scalar,true,nonblank,unverified_saved_sandbox_destination
+37,AN,Publish!AN{row},Parser Version,terpenes_batch_publish_table,parser_version,Data!B34,scalar,true,nonblank,unverified_saved_sandbox_destination
+38,AO,Publish!AO{row},Imported At,terpenes_batch_publish_table,imported_at,Data!B35,scalar,true,nonblank,unverified_saved_sandbox_destination
+39,AP,Publish!AP{row},Instrument Name,terpenes_batch_publish_table,instrument_name,Data!B36,scalar,true,nonblank,unverified_saved_sandbox_destination
+40,AQ,Publish!AQ{row},Detector ID,terpenes_batch_publish_table,detector_id,Data!B37,scalar,true,nonblank,unverified_saved_sandbox_destination
+41,AR,Publish!AR{row},Detector Name,terpenes_batch_publish_table,detector_name,Data!B38,scalar,true,nonblank,unverified_saved_sandbox_destination
+42,AY,Publish!AY{row},Batch QC Disposition,terpenes_batch_publish_batch_disposition,batch_qc_disposition,Data!B22,scalar,true,exact Accepted,unverified_saved_sandbox_destination
+43,BC,Publish!BC{row},Publish Ready,terpenes_batch_publish_ready,publish_ready,Data!B23,scalar,true,exact TRUE after explicit authorization,unverified_saved_sandbox_destination

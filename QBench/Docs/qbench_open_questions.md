@@ -8,6 +8,20 @@
 - Automation condition rows were not fully exposed in the compact read-only extraction; worksheet-field actions were visible and indexed.
 - Moisture Analysis, Stability, and general Microbial Analysis did not show configured assay-level worksheet templates during inspection.
 
+## Prompt 5B exact-Test REST publisher
+
+The local Sandbox-only publisher and synthetic test suite are implemented at
+`QBench/Worksheets/Terpenes/development/2026-07-17_exact_test_rest_publisher/`.
+No Sandbox API request was attempted because no runtime token was available.
+
+Open prerequisites are: observe the documented Batch/Test response schemas;
+configure the exact synthetic assay/workflow identifiers; prove every one of
+the 43 destinations from the actual saved Test Worksheet Export Spreadsheet;
+determine whether the 23-analyte range uses indexed keys or one range value;
+run scalar persistence plus exact rollback; and classify the valid-plus-invalid
+multi-field probe. Until those pass, atomicity remains
+`api_patch_unresolved` and direct publishing is blocked.
+
 ## Prompt 4.6 targeted QBench support request
 
 Current-tenant read-only inspection resolved the base runtime and library

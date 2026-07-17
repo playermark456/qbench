@@ -1,0 +1,27 @@
+{
+  "api_outcomes": [],
+  "application_version": "0.1.0",
+  "authorization_header": "not_recorded",
+  "batch_display_name": "SBX_ONLY_TERPENES_BATCH",
+  "batch_id": "batch_sha256:0f8ceae9fc7f78b0",
+  "credential": "not_recorded",
+  "final_result": "synthetic_example_only",
+  "mode": "dry-run",
+  "rows": [
+    {
+      "fields_planned_count": 43,
+      "reviewer_identifier": "reviewer_sha256:13b69aa225067286",
+      "sample_id": "sample_sha256:c45292e7ca692a1c",
+      "source_hash": "8f6f263147a264a2d4d86f3e219fb3db799151ba531afc62c41163e34b6af151",
+      "test_id": "test_sha256:ca968f154ea1e6c9",
+      "validation_outcomes": [
+        "saved_destination_contract_not_proven",
+        "direct_publish_not_allowed:api_patch_unresolved"
+      ],
+      "validation_state": "BLOCKED"
+    }
+  ],
+  "sandbox_hostname": "ait-sandbox.qbench.net",
+  "schema_version": 1,
+  "timestamp": "2026-07-17T00:00:00Z"
+}

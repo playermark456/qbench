@@ -1,0 +1,18 @@
+# Local QBench credentials and environment overrides
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+secrets.local.*
+qbench_sandbox_token*
+
+# Local publisher audit output (may contain Sandbox object identifiers)
+QBench/Worksheets/Terpenes/development/*/audit/
+
+# Python caches and local virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "allowed_base_url": "https://ait-sandbox.qbench.net",
+  "required_batch_display_name_prefix": "SBX_ONLY_",
+  "expected_assay_ids": [],
+  "expected_assay_names": [],
+  "expected_workflows": [],
+  "destination_contract_proven": false,
+  "atomicity_classification": "api_patch_unresolved",
+  "analyte_patch_key_contract": "unresolved",
+  "status": "controlled_stop_until_sandbox_evidence_exists"
+}

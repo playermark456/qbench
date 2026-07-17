@@ -28,3 +28,18 @@ showed the destination named cell had not persisted. The result is therefore
 `per_test_vlookup_error`, not proof of broadcast or unsupported routing. The
 probe automation is inactive; zero Test values were written. See
 `development/2026-07-17_batch_to_test_automation/README.md`.
+
+## Prompt 5B exact-Test REST publisher
+
+The controlled local implementation is in
+`development/2026-07-17_exact_test_rest_publisher/`. It accepts only the
+Sandbox hostname, routes by exact Test ID, validates the complete 43-field
+contract before any write, requires `--execute` plus a typed Batch phrase,
+never retries PATCH, verifies persisted values/formulas/unrelated cells, and
+creates sanitized SHA-256 audit manifests.
+
+Prompt 5B stopped before the first Sandbox API request because no Sandbox API
+credential was present and the actual saved 43-field destination plus analyte
+PATCH representation remain unproven. QBench atomicity is classified
+`api_patch_unresolved`; no Sandbox object was created or changed. The 33 local
+synthetic tests passed, but they are not QBench runtime evidence.
