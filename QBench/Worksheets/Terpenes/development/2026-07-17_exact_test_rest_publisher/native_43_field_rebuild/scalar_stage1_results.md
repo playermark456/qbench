@@ -2,6 +2,15 @@
 
 Classification: **`native_scalar_minimal_destination_probe_failed`**
 
+Evidence correction: the historical 0/7 observation remains, but it no longer
+supports an environment-blocker conclusion. The user manually created `sdf`
+at `A1` in this exact Draft and proved it persisted after **Save Draft** and
+refresh. Codex reopened the exact Draft and confirmed `sdf`, blank Display
+Name, and Exportable enabled. The subsequent Codex B2 save-control row was
+visibly complete before **Save Draft** but absent after refresh/reopen while
+`sdf` remained. QBench native named-cell persistence is `operational`;
+Codex browser-controlled worksheet editing is not authoritative and is stopped.
+
 Version-state reconciliation: a subsequent direct observation of this
 worksheet's QBench **Versions** tab showed the visible row
 `1 - Native Scalar 43 Field Base v1` with status `DRAFT`. The 0/7 result is

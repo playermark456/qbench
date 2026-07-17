@@ -6,7 +6,7 @@ Historical Probe A classification:
 **`unique_named_cell_control_failed`**.
 
 Current controlled-stop classification:
-**`version_created_named_cell_missing`**.
+**`codex_named_cell_save_control_failed`**.
 
 Probe A used a completely unique system name in a new isolated native
 Spreadsheet Worksheet. QBench's **Add Named Cell** control was used exactly
@@ -27,10 +27,20 @@ The later version-creation control independently produced a visibly present
 Draft row in the Versions tab and then reopened with zero named-cell rows.
 That result confirms the current failure is not a missing-version assertion.
 
-This diagnostic does not prove that underscore names, `_01`, reused scalar
-names, or the candidate mapping are unsupported. It proves only that the old
-Sandbox could not be trusted to persist a newly created single native
-named-cell definition through the explicitly exercised procedure in this run.
+These historical results do not prove that underscore names, `_01`, reused
+scalar names, or the candidate mapping are unsupported. The user's later
+manual control supersedes the earlier environment conclusion: `sdf` at `A1`
+persisted in the exact native scalar Draft after **Save Draft** and refresh.
+Codex visibly confirmed it after reopening the exact worksheet and version;
+its Display Name was blank and Exportable was enabled.
+
+Codex then entered exactly one additional row,
+`terpenes_codex_save_control_20260717` at `B2`, Display Name
+`Codex save control`, Exportable enabled. The complete row was visible before
+**Save Draft**, but it was absent after refresh and list-based reopen while
+`sdf` remained. This is a Codex browser-control/input/save failure, not a QBench
+environment failure. No support request is required. Manual worksheet entry
+with Codex providing the exact field list is recommended.
 
 Controls remain:
 
@@ -38,5 +48,9 @@ Controls remain:
 - `atomicity_classification=api_patch_unresolved`
 - `analyte_patch_key_contract=unresolved`
 - `config/field_mapping_scalar_candidate.csv` remains unpromoted
+- `manual_named_cell_persistence_control=passed`
+- `qbench_native_named_cell_persistence=operational`
+- `codex_browser_named_cell_save_control=failed`
+- `browser_control_authoritative=false`
 - no token, REST API request, PATCH, live-QBench access, Assay, Sample, Test,
   analytical result, or Pass/Fail artifact occurred

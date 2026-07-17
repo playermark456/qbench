@@ -408,7 +408,7 @@ def main() -> int:
         if required_text not in scalar_raw_hashes:
             failures.append(f"native scalar raw-export stop evidence missing: {required_text}")
 
-    diagnostic_classification = "native_named_cell_save_environment_or_procedure_blocked"
+    diagnostic_classification = "codex_named_cell_save_control_failed"
     diagnostic_inventory = json.loads(
         (
             ROOT
@@ -417,6 +417,14 @@ def main() -> int:
     )
     if diagnostic_inventory.get("classification") != diagnostic_classification:
         failures.append("named-cell persistence diagnostic classification is incorrect")
+    for key, expected in {
+        "manual_named_cell_persistence_control": "passed",
+        "qbench_native_named_cell_persistence": "operational",
+        "codex_browser_named_cell_save_control": "failed",
+        "browser_control_authoritative": False,
+    }.items():
+        if diagnostic_inventory.get(key) != expected:
+            failures.append(f"named-cell persistence correction is incorrect: {key}")
     if diagnostic_inventory.get("sanitized") is not True or diagnostic_inventory.get(
         "internal_sandbox_ids_omitted"
     ) is not True:
@@ -445,6 +453,37 @@ def main() -> int:
     for key, expected in expected_probe_a.items():
         if probe_a.get(key) != expected:
             failures.append(f"named-cell Probe A evidence is incorrect: {key}")
+    manual_control = diagnostic_inventory.get("manual_control", {})
+    for key, expected in {
+        "worksheet": "SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE",
+        "version": "1 - Native Scalar 43 Field Base v1 - DRAFT",
+        "version_row_visibly_present": True,
+        "system_name": "sdf",
+        "cell": "A1",
+        "display_name": "",
+        "exportable": True,
+        "save_draft_used": True,
+        "persisted_after_refresh": True,
+        "visible_to_codex_after_exact_reopen": True,
+    }.items():
+        if manual_control.get(key) != expected:
+            failures.append(f"manual named-cell control evidence is incorrect: {key}")
+    codex_control = diagnostic_inventory.get("codex_save_control", {})
+    for key, expected in {
+        "system_name": "terpenes_codex_save_control_20260717",
+        "cell": "B2",
+        "display_name": "Codex save control",
+        "exportable": True,
+        "row_visibly_complete_before_save": True,
+        "save_draft_used": True,
+        "save_as_new_version_used": False,
+        "persisted_after_refresh_and_exact_reopen": False,
+        "manual_control_remained_after_reopen": True,
+        "deleted_after_success": False,
+        "cleanup_not_applicable_because_control_absent": True,
+    }.items():
+        if codex_control.get(key) != expected:
+            failures.append(f"Codex save-control evidence is incorrect: {key}")
     for key in ("probe_b_run", "probe_b_nozero_run", "probe_c_run"):
         if diagnostic_inventory.get(key) is not False:
             failures.append(f"named-cell diagnostic incorrectly claims probe ran: {key}")
@@ -465,7 +504,7 @@ def main() -> int:
         if diagnostic_inventory.get(key) is not False:
             failures.append(f"named-cell diagnostic safety control is not false: {key}")
 
-    version_control_classification = "version_created_named_cell_missing"
+    version_control_classification = "codex_named_cell_save_control_failed"
     version_control_inventory = json.loads(
         (
             ROOT
@@ -474,6 +513,15 @@ def main() -> int:
     )
     if version_control_inventory.get("classification") != version_control_classification:
         failures.append("version-creation control classification is incorrect")
+    for key, expected in {
+        "historical_classification": "version_created_named_cell_missing",
+        "manual_named_cell_persistence_control": "passed",
+        "qbench_native_named_cell_persistence": "operational",
+        "codex_browser_named_cell_save_control": "failed",
+        "browser_control_authoritative": False,
+    }.items():
+        if version_control_inventory.get(key) != expected:
+            failures.append(f"version-creation correction is incorrect: {key}")
     if version_control_inventory.get("sanitized") is not True or version_control_inventory.get(
         "internal_sandbox_ids_omitted"
     ) is not True:
@@ -520,7 +568,7 @@ def main() -> int:
         failures.append("manifest claims a Sandbox API request")
     if manifest.get("sandbox", {}).get("token_requests_attempted") != 0:
         failures.append("manifest claims a token request")
-    if manifest.get("status") != "version_created_named_cell_missing_pre_token_stop":
+    if manifest.get("status") != "codex_named_cell_save_control_failed_pre_token_stop":
         failures.append("manifest controlled-stop status is incorrect")
     if manifest.get("mapping", {}).get("saved_worksheet_definition_contract") != "passed_43_of_43":
         failures.append("manifest saved-definition classification is incorrect")
@@ -568,6 +616,31 @@ def main() -> int:
     diagnostic_manifest = manifest.get("named_cell_persistence_diagnostic", {})
     if diagnostic_manifest.get("classification") != version_control_classification:
         failures.append("manifest named-cell diagnostic classification is incorrect")
+    for key, expected in {
+        "manual_named_cell_persistence_control": "passed",
+        "qbench_native_named_cell_persistence": "operational",
+        "codex_browser_named_cell_save_control": "failed",
+        "browser_control_authoritative": False,
+        "manual_control_system_name": "sdf",
+        "manual_control_cell": "A1",
+        "manual_control_version_row_visibly_present": True,
+        "manual_control_display_name": "",
+        "manual_control_exportable": True,
+        "manual_control_visible_after_exact_reopen": True,
+        "codex_control_system_name": "terpenes_codex_save_control_20260717",
+        "codex_control_cell": "B2",
+        "codex_control_display_name": "Codex save control",
+        "codex_control_exportable": True,
+        "codex_control_row_complete_before_save": True,
+        "save_draft_used": True,
+        "save_as_new_version_used": False,
+        "both_rows_survived_refresh_and_reopen": False,
+        "manual_control_remains": True,
+        "codex_control_deleted_after_success": False,
+        "cleanup_not_applicable_because_control_absent": True,
+    }.items():
+        if diagnostic_manifest.get(key) != expected:
+            failures.append(f"manifest named-cell correction is incorrect: {key}")
     if diagnostic_manifest.get("probe_a_classification") != "unique_named_cell_control_failed":
         failures.append("manifest named-cell Probe A classification is incorrect")
     if diagnostic_manifest.get("row_visibly_committed_before_save") is not True:
@@ -581,6 +654,15 @@ def main() -> int:
     version_control_manifest = manifest.get("version_creation_diagnostic", {})
     if version_control_manifest.get("classification") != version_control_classification:
         failures.append("manifest version-creation diagnostic classification is incorrect")
+    for key, expected in {
+        "historical_classification": "version_created_named_cell_missing",
+        "manual_named_cell_persistence_control": "passed",
+        "qbench_native_named_cell_persistence": "operational",
+        "codex_browser_named_cell_save_control": "failed",
+        "browser_control_authoritative": False,
+    }.items():
+        if version_control_manifest.get(key) != expected:
+            failures.append(f"manifest version-creation correction is incorrect: {key}")
     for key, expected in {
         "version_state": "Draft",
         "version_row_visibly_present": True,
@@ -640,9 +722,11 @@ def main() -> int:
     print("- exact native 43-field rebuild stopped at Phase 1 with 4/7 persisted")
     print("- native scalar candidate validated at 43 mappings and 23 exact analytes")
     print("- native scalar saved/reopened Phase 1A stopped at 0/7; no promotion or runtime")
-    print("- unique one-cell Probe A failed after explicit UI commit; Probes B/C not run")
-    print("- version-creation control visibly saved a Draft but reopened with zero named cells")
-    print("- native named-cell worksheet construction blocked for QBench support review")
+    print("- historical unique one-cell Probe A failed; Probes B/C not run")
+    print("- user manual sdf/A1 persistence control passed")
+    print("- QBench native named-cell persistence operational")
+    print("- Codex B2 save control failed while sdf remained; manual entry recommended")
+    print("- browser-controlled worksheet editing stopped as non-authoritative")
     print("- sanitized eight-object inventory contains no internal Sandbox IDs")
     print("- sanitized six-object native inventory contains no internal Sandbox IDs")
     print("- exact Sandbox-only executable allowlist")

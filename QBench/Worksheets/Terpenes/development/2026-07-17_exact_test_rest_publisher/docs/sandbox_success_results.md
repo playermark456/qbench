@@ -35,6 +35,12 @@ These results must not be reported as QBench API behavior.
 
 ## Sandbox UI evidence that did pass
 
+The user's manual named-cell persistence control passed. In the exact Draft
+`1 - Native Scalar 43 Field Base v1 - DRAFT`, `sdf` at `A1` persisted after
+**Save Draft** and refresh. Codex later reopened the exact worksheet/version
+and confirmed the row, blank Display Name, and Exportable enabled. Therefore
+`qbench_native_named_cell_persistence=operational`.
+
 The separate native six-row Test Worksheet control passed exact saved/reopened
 definition and fresh Assay-created Test instantiation. This proves the legacy
 engine is operational for native definitions. It does not clear the publisher
@@ -52,6 +58,6 @@ native scalar Worksheet reopened with zero of seven representative named-cell
 definitions, so its Draft remained unapproved and inactive and no runtime
 object was created.
 
-The subsequent unique one-cell persistence diagnostic is also not Sandbox
-success. Its 6x5 grid and label persisted, but the explicitly added unique
-named-cell row did not survive save/reopen.
+The earlier unique one-cell persistence diagnostic remains a historical failed
+browser procedure, not evidence of a QBench environment failure. The current
+Codex B2 save-control also failed after refresh/reopen while `sdf` remained.

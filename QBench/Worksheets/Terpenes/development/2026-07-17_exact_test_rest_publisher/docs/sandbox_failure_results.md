@@ -6,12 +6,19 @@ save/reopen probe and the official OAuth endpoint contract is absent. The
 credential presence check passed without exposing any value. Atomicity proof
 is also absent.
 
-The current isolated version-creation control created a visibly present
+The historical isolated version-creation control created a visibly present
 `DRAFT` row in QBench's Versions tab, then reopened with zero named-cell rows.
-Its classification is **`version_created_named_cell_missing`**. This corrects
+Its classification was **`version_created_named_cell_missing`**. This corrects
 any prior inference that the current stop condition was the absence of a saved
-worksheet version: version creation is now visibly proven, while named-cell
-persistence is not.
+worksheet version. Its earlier environment-blocker conclusion is superseded by
+the user's persisted `sdf` / A1 control.
+
+Current control result: QBench native named-cell persistence is operational.
+The Codex B2 row was complete before **Save Draft** but disappeared after
+refresh and list-based reopen while `sdf` remained. Classification:
+**`codex_named_cell_save_control_failed`** with
+`browser_control_authoritative=false`. Further Codex-controlled QBench
+worksheet editing stopped; manual field entry is recommended.
 
 ## Destination proof controlled stop
 
@@ -67,12 +74,13 @@ rows. No visible validation or error message appeared.
 - Probe B `_01`: not run
 - Probe B `_1`: not run
 - Probe C: not run
-- Current classification:
-  **`native_named_cell_save_environment_or_procedure_blocked`**
+- Historical classification: `unique_named_cell_control_failed`
+- Current correction: `qbench_native_named_cell_persistence=operational`
+- Current Codex control: `codex_named_cell_save_control_failed`
 
-The stop gate prohibits further worksheet construction pending QBench support
-review. No claim about underscore, zero-padded, prefix, length, or duplicate
-system-name compatibility is made.
+The stop gate prohibits further Codex browser-controlled worksheet
+construction. No support request is required. No claim about underscore,
+zero-padded, prefix, length, or duplicate system-name compatibility is made.
 
 ## Required failure cases exercised locally
 

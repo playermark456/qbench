@@ -2,9 +2,10 @@
 
 Date: 2026-07-17
 
-Status: **a native version was visibly created as a Draft, but its explicitly
-added named-cell row was absent after reopen; worksheet construction is blocked
-for QBench support review before the first token request**.
+Status: **QBench native named-cell persistence is operational, as proven by the
+user-created `sdf` / `A1` control. The separate Codex browser save control did
+not survive refresh/reopen, so browser-controlled worksheet entry is stopped
+and manual entry is recommended before the first token request**.
 
 This package implements a controlled, Sandbox-only publisher for reviewed
 Terpenes Batch rows. It routes only by exact QBench Test ID, builds the complete
@@ -55,9 +56,18 @@ remained unchanged after save and reopen. Therefore:
   zero named cells and no visible validation message;
 - the current version-creation control visibly produced a Draft row, then
   reopened with zero named-cell rows;
-- `version_created_named_cell_missing` is the current controlled-stop
-  classification; Probes B/C and all further worksheet construction were
-  skipped;
+- the user subsequently created `sdf` at `A1` in the exact native scalar Draft,
+  clicked **Save Draft**, refreshed, and confirmed it persisted; Codex also
+  independently reopened that exact Draft and saw `sdf`, a blank Display Name,
+  and Exportable enabled;
+- QBench native named-cell persistence is therefore `operational`; the earlier
+  environment-blocker and support-review conclusions are superseded;
+- the Codex row `terpenes_codex_save_control_20260717` at `B2` was visibly
+  complete before **Save Draft** but disappeared after refresh and list-based
+  reopen while `sdf` remained;
+- `codex_named_cell_save_control_failed` is the current controlled-stop
+  classification, `browser_control_authoritative=false`, and Probes B/C plus
+  all further Codex-controlled worksheet construction remain skipped;
 - the earlier destination-proof objects and the native Worksheet, two
   versions, Assay, Sample, and Test are inventoried in separate sanitized
   evidence without internal IDs;
@@ -134,9 +144,9 @@ and in-memory API behavior; they are not Sandbox success evidence.
    hashes.
 2. Retain `config/field_mapping_scalar_candidate.csv` as an unpromoted
    candidate; do not replace the operational bracketed mapping.
-3. Provide the sanitized one-cell persistence diagnostic to QBench support and
-   resolve why an explicitly added, blurred, unique named-cell row disappeared
-   after Create/reopen. Do not run more candidate-name or worksheet probes.
+3. Use manual worksheet entry with Codex providing the exact field list. Do not
+   run more browser-controlled candidate-name or worksheet probes until that
+   manual procedure has been saved, refreshed, and independently verified.
 4. Only after Phase 1 passes, create Version 2 and prove the exact 43/43 saved
    definition and fresh runtime instantiation.
 5. Add formulas and the complete Prompt 3 layout incrementally, repeating the

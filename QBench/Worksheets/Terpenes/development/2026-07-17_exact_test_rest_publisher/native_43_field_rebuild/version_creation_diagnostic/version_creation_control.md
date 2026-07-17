@@ -18,4 +18,11 @@ with status `DRAFT`.
 On reopen of that saved draft, the 6x5 grid, A1, and blank B2 remained, while
 the Named Cells section had zero rows. The control classification is
 `version_created_named_cell_missing`; no further destination construction is
-permitted.
+permitted by that historical run.
+
+The environment-blocker conclusion from this control is superseded by the
+user's persisted `sdf` / A1 control in the exact native scalar Draft. The
+current control is `codex_named_cell_save_control_failed`: the Codex B2 row was
+complete before **Save Draft** and absent after refresh/reopen while `sdf`
+remained. QBench persistence is operational, but browser-controlled worksheet
+entry is not authoritative.

@@ -3,7 +3,7 @@
 Date: 2026-07-17
 
 Current controlled-stop classification:
-**`version_created_named_cell_missing`**.
+**`codex_named_cell_save_control_failed`**.
 
 Prior imported-definition runtime classification:
 **`normal_assay_test_instantiation_failed_blank_default`**.
@@ -28,6 +28,9 @@ navigating away and reopening it.
 | Native underscore-scalar rebuild Phase 1A | `native_scalar_minimal_destination_probe_failed` (0/7 saved/reopened) |
 | Unique one-cell persistence diagnostic | `unique_named_cell_control_failed` |
 | Native version-creation control | `version_created_named_cell_missing` (visible Draft row; reopened with 0 named cells) |
+| Manual `sdf` / A1 persistence control | `manual_named_cell_persistence_control_passed` |
+| QBench native named-cell persistence | `operational` |
+| Codex B2 save-procedure control | `codex_named_cell_save_control_failed` |
 | Publisher destination gate | `destination_contract_proven=false` |
 
 ## Isolated Sandbox objects
@@ -218,7 +221,15 @@ completion, full navigation to the Worksheets list, and reopen, the 6x5 grid
 and A1 label persisted but the named-cell list contained zero rows. No visible
 validation or error message appeared.
 
-Classification: **`native_named_cell_save_environment_or_procedure_blocked`**.
+Historical classification: **`unique_named_cell_control_failed`**. The earlier
+environment-blocker/support conclusion is superseded. The user manually proved
+native persistence with `sdf` at `A1`; Codex independently reopened the exact
+native scalar Draft and saw that row with blank Display Name and Exportable
+enabled. The separate Codex B2 row was visibly complete before **Save Draft**
+but absent after refresh/reopen while `sdf` remained. Current classification:
+**`codex_named_cell_save_control_failed`** and
+`browser_control_authoritative=false`. Manual entry is recommended; no QBench
+support request is required.
 The required stop gate prevented analyte-name Probe B, no-leading-zero Probe B,
 duplicate-name Probe C, and any further seven- or 43-field construction. This
 result does not establish that `_01`, underscores, or reused names are

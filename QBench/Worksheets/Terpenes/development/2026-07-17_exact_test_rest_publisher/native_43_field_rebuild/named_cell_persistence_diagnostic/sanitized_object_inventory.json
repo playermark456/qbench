@@ -2,7 +2,12 @@
   "schema_version": 1,
   "sanitized": true,
   "internal_sandbox_ids_omitted": true,
-  "classification": "native_named_cell_save_environment_or_procedure_blocked",
+  "classification": "codex_named_cell_save_control_failed",
+  "historical_probe_a_classification": "unique_named_cell_control_failed",
+  "manual_named_cell_persistence_control": "passed",
+  "qbench_native_named_cell_persistence": "operational",
+  "codex_browser_named_cell_save_control": "failed",
+  "browser_control_authoritative": false,
   "objects": [
     {
       "type": "Spreadsheet Worksheet",
@@ -29,6 +34,31 @@
     "label_persisted_after_reopen": true,
     "named_cell_persisted_after_reopen": false,
     "visible_validation_message": null
+  },
+  "manual_control": {
+    "worksheet": "SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE",
+    "version": "1 - Native Scalar 43 Field Base v1 - DRAFT",
+    "version_row_visibly_present": true,
+    "system_name": "sdf",
+    "cell": "A1",
+    "display_name": "",
+    "exportable": true,
+    "save_draft_used": true,
+    "persisted_after_refresh": true,
+    "visible_to_codex_after_exact_reopen": true
+  },
+  "codex_save_control": {
+    "system_name": "terpenes_codex_save_control_20260717",
+    "cell": "B2",
+    "display_name": "Codex save control",
+    "exportable": true,
+    "row_visibly_complete_before_save": true,
+    "save_draft_used": true,
+    "save_as_new_version_used": false,
+    "persisted_after_refresh_and_exact_reopen": false,
+    "manual_control_remained_after_reopen": true,
+    "deleted_after_success": false,
+    "cleanup_not_applicable_because_control_absent": true
   },
   "probe_b_run": false,
   "probe_b_nozero_run": false,
