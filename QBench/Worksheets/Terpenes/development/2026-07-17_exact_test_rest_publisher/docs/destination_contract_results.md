@@ -3,6 +3,9 @@
 Date: 2026-07-17
 
 Current controlled-stop classification:
+**`native_minimal_destination_probe_failed`**.
+
+Prior imported-definition runtime classification:
 **`normal_assay_test_instantiation_failed_blank_default`**.
 
 Native control classification:
@@ -21,6 +24,7 @@ navigating away and reopening it.
 | Direct existing-Test instantiation | `failed_blank_default_5x5` |
 | Normal Assay-created Test instantiation | `normal_assay_test_instantiation_failed_blank_default` |
 | Native UI-built Assay-created Test | `native_test_worksheet_instantiation_passed` |
+| Exact native 43-field rebuild Phase 1 | `native_minimal_destination_probe_failed` (4/7) |
 | Publisher destination gate | `destination_contract_proven=false` |
 
 ## Isolated Sandbox objects
@@ -144,6 +148,31 @@ This control proves:
 
 It does not prove the imported 43-field runtime contract and does not unlock
 the publisher gate.
+
+## Exact native 43-field rebuild controlled stop
+
+The next isolated Worksheet,
+`SBX_ONLY_TERPENES_2026_07_17_NATIVE_43_FIELD_BASE`, was built as a minimal
+40x26 native grid. Its Version 1, `Native 43 Field Base v1`, remains Draft.
+After save, navigation away, and reopen:
+
+- `sample_mass_g` at `Data!B12` persisted;
+- `batch_qc_disposition` at `Data!B22` persisted;
+- `publish_ready` at `Data!B23` persisted;
+- `source_file_hash` at `Data!B30` persisted;
+- `terpenes_instrument_conc[1]`, `[12]`, and `[23]` did not save;
+- otherwise-identical underscore diagnostic names did save and reopen, then
+  were removed before the final saved state.
+
+The exact Phase 1 result is therefore 4/7. The failure is in the native
+worksheet definition/save path for bracketed named-cell keys. It does not
+resolve the REST analyte PATCH representation, which remains `unresolved`.
+
+Per the stop gate, Version 1 was not approved or activated, Version 2 was not
+created, and no Assay, Sample, Test, or runtime values were created for this
+rebuild. The reopened Export Spreadsheet action was invoked but produced no
+downloadable file, so no Phase 1 or Version 2 raw-export SHA is claimed.
+Sanitized evidence is in `native_43_field_rebuild/`.
 
 ## Publisher gate
 

@@ -18,8 +18,15 @@ The merged Test Worksheet has one range named cell,
 `terpenes_instrument_conc` at `Data!D2:Z2`. Prompt 5 expressed the 23 targets
 as `terpenes_instrument_conc[1]` through `[23]` for automation design. The REST
 contract supplied for Prompt 5B describes named-cell keys, but no Sandbox probe
-has established whether QBench accepts those indexed keys or requires one
+has established whether QBench REST accepts those indexed keys or requires one
 range value such as a 1x23 array.
+
+The 2026-07-17 native Phase 1 worksheet probe established a narrower editor
+fact: the old-Sandbox native Worksheet save path retained the four scalar
+controls but rejected the three representative bracketed named-cell keys.
+Otherwise-identical underscore controls persisted and were removed after the
+diagnostic. This proves the required indexed names cannot currently be built
+through that native save path; it does not establish the REST PATCH-key shape.
 
 The publisher supports either representation only after
 `analyte_patch_key_contract` is set from empirical Sandbox evidence. Its default
@@ -52,4 +59,6 @@ The 2026-07-17 local proof run established:
   false.
 
 See `destination_contract_results.md` for hashes, provenance requirements, and
-the exact controlled stop.
+the exact controlled stop. See `native_43_field_rebuild/` for the failed 4/7
+native Phase 1 evidence. All 43 mapping-row statuses remain
+`unverified_saved_sandbox_destination`.

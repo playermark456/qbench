@@ -1,0 +1,5 @@
+version_2_raw_export=NOT_CREATED
+version_2_sha256=NOT_AVAILABLE
+phase_1_export_download=NOT_PRODUCED_BY_QBENCH_EXPORT_SPREADSHEET_ACTION
+phase_1_sha256=NOT_AVAILABLE
+reason=native_minimal_destination_probe_failed_before_version_2

@@ -44,6 +44,14 @@ REQUIRED = {
     "native_test_worksheet_probe/sanitized_object_inventory.json",
     "native_test_worksheet_probe/raw_export_sha256.txt",
     "native_test_worksheet_probe/sandbox_cleanup_plan.md",
+    "native_43_field_rebuild/README.md",
+    "native_43_field_rebuild/stage1_results.md",
+    "native_43_field_rebuild/stage2_definition_results.md",
+    "native_43_field_rebuild/stage3_instantiation_results.md",
+    "native_43_field_rebuild/expected_contract.csv",
+    "native_43_field_rebuild/raw_definition_sha256.txt",
+    "native_43_field_rebuild/sanitized_object_inventory.json",
+    "native_43_field_rebuild/sandbox_cleanup_plan.md",
     "prompt_5b_manifest.json",
 }
 
@@ -74,6 +82,12 @@ def main() -> int:
         failures.append("mapping incorrectly contains Dimethylacetamide")
     if any(row["status"] != "unverified_saved_sandbox_destination" for row in mapping):
         failures.append("mapping claims unearned Sandbox destination verification")
+    with (ROOT / "native_43_field_rebuild/expected_contract.csv").open(
+        "r", encoding="utf-8", newline=""
+    ) as handle:
+        rebuild_expected = list(csv.DictReader(handle))
+    if rebuild_expected != mapping:
+        failures.append("native rebuild expected contract is not an exact 43-row mapping copy")
 
     config = json.loads((ROOT / "config/publisher_config.json").read_text(encoding="utf-8"))
     if config.get("destination_contract_proven") is not False:
@@ -117,6 +131,9 @@ def main() -> int:
         "*object_ids.local.json",
         "native_test_worksheet_probe/*saved_reopened_export_spreadsheet.json",
         "native_test_worksheet_probe/*instantiated_export_spreadsheet.*",
+        "native_43_field_rebuild/*saved_reopened_export_spreadsheet.json",
+        "native_43_field_rebuild/*instantiated_export_spreadsheet.*",
+        "native_43_field_rebuild/*object_ids.local.json",
     ):
         if pattern not in gitignore:
             failures.append(f"root .gitignore missing secret pattern: {pattern}")
@@ -225,6 +242,65 @@ def main() -> int:
         if expected_hash not in raw_hashes:
             failures.append(f"native raw-export hash evidence missing: {expected_hash}")
 
+    rebuild_classification = "native_minimal_destination_probe_failed"
+    rebuild_inventory = json.loads(
+        (ROOT / "native_43_field_rebuild/sanitized_object_inventory.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    if rebuild_inventory.get("classification") != rebuild_classification:
+        failures.append("native 43-field rebuild classification is incorrect")
+    if rebuild_inventory.get("sanitized") is not True or rebuild_inventory.get(
+        "internal_sandbox_ids_omitted"
+    ) is not True:
+        failures.append("native 43-field rebuild inventory is not sanitized")
+    rebuild_objects = rebuild_inventory.get("objects", [])
+    if len(rebuild_objects) != 2:
+        failures.append("native 43-field rebuild inventory does not contain two objects")
+    if any(key == "id" or key.endswith("_id") for item in rebuild_objects for key in item):
+        failures.append("tracked native 43-field rebuild inventory contains an internal Sandbox ID")
+    rebuild_phase1 = rebuild_inventory.get("phase_1", {})
+    expected_phase1 = {
+        "expected_destinations": 7,
+        "persisted_destinations": 4,
+        "missing_destinations": 3,
+        "indexed_bracket_names_persisted": False,
+        "scalar_names_persisted": True,
+        "diagnostic_underscore_names_removed": True,
+        "export_download_file_created": False,
+    }
+    for key, expected in expected_phase1.items():
+        if rebuild_phase1.get(key) != expected:
+            failures.append(f"native 43-field Phase 1 evidence is incorrect: {key}")
+    if rebuild_inventory.get("phase_2_skipped") is not True or rebuild_inventory.get(
+        "phase_3_skipped"
+    ) is not True:
+        failures.append("native 43-field rebuild did not preserve the Phase 1 stop gate")
+    for key in (
+        "assay_created",
+        "sample_created",
+        "test_created",
+        "analytical_results_entered",
+        "pass_fail_artifact_introduced",
+        "credentials_displayed",
+        "oauth_token_requested",
+        "qbench_rest_api_requested",
+        "patch_requested",
+        "live_qbench_accessed",
+    ):
+        if rebuild_inventory.get(key) is not False:
+            failures.append(f"native 43-field rebuild safety control is not false: {key}")
+    rebuild_raw_hashes = (ROOT / "native_43_field_rebuild/raw_definition_sha256.txt").read_text(
+        encoding="utf-8"
+    )
+    for required_text in (
+        "version_2_raw_export=NOT_CREATED",
+        "phase_1_export_download=NOT_PRODUCED_BY_QBENCH_EXPORT_SPREADSHEET_ACTION",
+        "reason=native_minimal_destination_probe_failed_before_version_2",
+    ):
+        if required_text not in rebuild_raw_hashes:
+            failures.append(f"native 43-field raw-export stop evidence missing: {required_text}")
+
     manifest = json.loads((ROOT / "prompt_5b_manifest.json").read_text(encoding="utf-8"))
     if manifest.get("atomicity_classification") != "api_patch_unresolved":
         failures.append("manifest atomicity classification is incorrect")
@@ -232,7 +308,7 @@ def main() -> int:
         failures.append("manifest claims a Sandbox API request")
     if manifest.get("sandbox", {}).get("token_requests_attempted") != 0:
         failures.append("manifest claims a token request")
-    if manifest.get("status") != "native_test_worksheet_instantiation_passed_pre_token_controlled_stop":
+    if manifest.get("status") != "native_minimal_destination_probe_failed_pre_token_controlled_stop":
         failures.append("manifest controlled-stop status is incorrect")
     if manifest.get("mapping", {}).get("saved_worksheet_definition_contract") != "passed_43_of_43":
         failures.append("manifest saved-definition classification is incorrect")
@@ -240,6 +316,8 @@ def main() -> int:
         failures.append("manifest direct existing-Test classification is incorrect")
     if manifest.get("mapping", {}).get("normal_assay_test_instantiation") != normal_classification:
         failures.append("manifest normal Assay Test classification is incorrect")
+    if manifest.get("mapping", {}).get("destination_contract_classification") != rebuild_classification:
+        failures.append("manifest current destination classification is incorrect")
     native_manifest = manifest.get("native_test_worksheet_probe", {})
     if native_manifest.get("classification") != native_classification:
         failures.append("manifest native probe classification is incorrect")
@@ -249,6 +327,19 @@ def main() -> int:
         failures.append("manifest Prompt 3 compatibility conclusion is incorrect")
     if native_manifest.get("blank_baseline_restored") is not True:
         failures.append("manifest does not record restored native blank baseline")
+    rebuild_manifest = manifest.get("native_43_field_rebuild", {})
+    if rebuild_manifest.get("classification") != rebuild_classification:
+        failures.append("manifest native 43-field rebuild classification is incorrect")
+    if rebuild_manifest.get("phase_1_expected_destinations") != 7 or rebuild_manifest.get(
+        "phase_1_persisted_destinations"
+    ) != 4 or rebuild_manifest.get("phase_1_missing_destinations") != 3:
+        failures.append("manifest native 43-field Phase 1 counts are incorrect")
+    if rebuild_manifest.get("indexed_bracket_names_persisted") is not False:
+        failures.append("manifest incorrectly claims bracketed names persisted")
+    if rebuild_manifest.get("version_2_created") is not False:
+        failures.append("manifest incorrectly claims Version 2 exists")
+    if rebuild_manifest.get("export_spreadsheet_download_produced") is not False:
+        failures.append("manifest incorrectly claims a rebuild export download")
     expected_sandbox_objects = [
         "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
         "SBX_ONLY_TERPENES_API_DESTINATION_PROOF_V2",
@@ -262,6 +353,8 @@ def main() -> int:
         "SBX_ONLY_TERPENES_2026_07_17_NATIVE_TEST_WS_ASSAY",
         "SBX_ONLY_TERPENES_2026_07_17_NATIVE_TEST_WS_SAMPLE",
         "fresh Test created only from SBX_ONLY_TERPENES_2026_07_17_NATIVE_TEST_WS_ASSAY",
+        "SBX_ONLY_TERPENES_2026_07_17_NATIVE_43_FIELD_BASE",
+        "Native 43 Field Base v1",
     ]
     if manifest.get("sandbox", {}).get("objects_created_or_changed") != expected_sandbox_objects:
         failures.append("manifest Sandbox mutations are not the exact authorized proof objects")
@@ -284,11 +377,13 @@ def main() -> int:
     print("- direct and normal Assay Test instantiations classified blank default 5x5")
     print("- native UI-built Assay Test instantiation passed with exact persistence")
     print("- old Sandbox engine operational; imported Prompt 3 compatibility failure")
+    print("- exact native 43-field rebuild stopped at Phase 1 with 4/7 persisted")
+    print("- bracketed indexed native names rejected; Version 2 and runtime not created")
     print("- sanitized eight-object inventory contains no internal Sandbox IDs")
     print("- sanitized six-object native inventory contains no internal Sandbox IDs")
     print("- exact Sandbox-only executable allowlist")
     print("- atomicity remains api_patch_unresolved")
-    print("- zero token/API requests and exact authorized Sandbox proof objects only")
+    print("- zero token/API requests and exact authorized Sandbox objects only")
     print(f"- {len(manifest['generated_files'])} generated-file hashes verified")
     return 0
 

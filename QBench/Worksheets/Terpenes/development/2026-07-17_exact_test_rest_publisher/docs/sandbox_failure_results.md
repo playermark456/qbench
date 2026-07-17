@@ -1,16 +1,29 @@
 # Sandbox failure and controlled-stop results
 
 No token or Sandbox API request was made. The current pre-token gate stops
-because the saved 43-field destination proof and official OAuth endpoint
-contract are absent. The credential presence check passed without exposing any
-value. Atomicity proof is also absent.
+because the exact native 43-field contract failed its representative Phase 1
+save/reopen probe and the official OAuth endpoint contract is absent. The
+credential presence check passed without exposing any value. Atomicity proof
+is also absent.
 
 ## Destination proof controlled stop
 
-The repository candidate is structurally complete and reports 43 of 43 targets
-as writable, but lacks saved/reopened Sandbox provenance. The older active
-saved export contains none of the 43 current destinations. Neither result can
-produce a passing proof artifact.
+The earlier imported saved definition has a passing 43/43 structural export,
+but its direct and normal Assay-created Tests instantiate as QBench's blank 5x5
+default. A UI-built native six-row control proved the old-Sandbox engine works
+for native definitions.
+
+The exact native rebuild then stopped at 4/7 representative destinations:
+
+- four scalar names saved and reopened exactly;
+- all three representative indexed names with brackets were rejected;
+- underscore diagnostic controls persisted and were removed;
+- Version 1 remains Draft;
+- Version 2, Assay, Sample, Test, and runtime probes were not created;
+- Export Spreadsheet was invoked on the reopened Draft but produced no local
+  download, so no raw-export hash is claimed.
+
+Classification: **`native_minimal_destination_probe_failed`**.
 
 ## Required failure cases exercised locally
 

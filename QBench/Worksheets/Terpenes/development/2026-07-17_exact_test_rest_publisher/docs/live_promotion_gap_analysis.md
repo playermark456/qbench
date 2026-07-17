@@ -9,9 +9,10 @@ Blocking gaps:
 3. Read-only Batch/Test response shapes have not been observed in the Sandbox.
 4. Exact synthetic assay and workflow identifiers are not configured.
 5. The native old-Sandbox Spreadsheet Worksheet engine is operational, but the
-   imported Prompt 3 Test Worksheet is a compatibility failure and no
-   saved/reopened runtime Test has yet proven all 43 destinations.
-6. Indexed-versus-range analyte PATCH representation is unresolved.
+   imported Prompt 3 Test Worksheet is a compatibility failure and the exact
+   native rebuild failed Phase 1 at 4/7 representative destinations.
+6. The native Worksheet save path rejected bracketed indexed named-cell keys;
+   indexed-versus-range REST analyte PATCH representation is still unresolved.
 7. Scalar text/numeric persistence and rollback have not been run.
 8. Multi-field failure behavior is `api_patch_unresolved`.
 9. Direct publishing is blocked unless atomicity is empirically
@@ -27,11 +28,12 @@ Blocking gaps:
 
 The recommended compatibility route is staged rather than another full import:
 
-1. Start with the exact passing native old-Sandbox schema, the 43 writable
-   destination named cells, minimal layout, and no large formula set.
-2. Instantiate that definition through an Assay and prove all 43 destinations
-   on a fresh reopened Test.
-3. Add formulas and the remaining Prompt 3 layout incrementally, repeating the
+1. Resolve an exact, supportable native representation for the required
+   bracketed analyte destination names; do not substitute underscore controls.
+2. Repeat the seven-field Phase 1 save/reopen probe and require 7/7.
+3. Only then build the complete 43-field Version 2, instantiate it through an
+   Assay, and prove all destinations on a fresh reopened Test.
+4. Add formulas and the remaining Prompt 3 layout incrementally, repeating the
    runtime proof at each stage.
 
 Live QBench was not accessed. No customer data was used. No Pass/Fail artifact

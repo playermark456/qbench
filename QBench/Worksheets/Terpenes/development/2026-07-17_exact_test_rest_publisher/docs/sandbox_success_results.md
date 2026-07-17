@@ -4,13 +4,13 @@ No Prompt 5B network or Sandbox success run was attempted.
 
 The ignored local secrets file has all three required nonblank client-
 credential keys, and its base URL passes the exact Sandbox allowlist. Only
-presence booleans were emitted. The saved/reopened Test Worksheet destination,
-OAuth token endpoint, and analyte PATCH representation remain unproven. These
-are mandatory pre-token or pre-PATCH stop conditions.
+presence booleans were emitted. The exact native 43-field destination, OAuth
+token endpoint, and analyte PATCH representation remain unproven. These are
+mandatory pre-token or pre-PATCH stop conditions.
 
 ## Local synthetic evidence only
 
-The 44-test standard-library suite passed and proved locally:
+The 46-test standard-library suite passed and proved locally:
 
 - exact Sandbox URL rejection;
 - rejection of non-task-synthetic Batch display names;
@@ -33,4 +33,15 @@ The 44-test standard-library suite passed and proved locally:
 
 These results must not be reported as QBench API behavior.
 
-Prompt 5B Sandbox objects created or changed: **none**.
+## Sandbox UI evidence that did pass
+
+The separate native six-row Test Worksheet control passed exact saved/reopened
+definition and fresh Assay-created Test instantiation. This proves the legacy
+engine is operational for native definitions. It does not clear the publisher
+gate.
+
+The exact native 43-field rebuild created only the isolated Worksheet
+`SBX_ONLY_TERPENES_2026_07_17_NATIVE_43_FIELD_BASE` and Draft Version 1
+`Native 43 Field Base v1`. Its four scalar representative named cells persisted
+exactly. The overall Phase 1 still failed at 4/7 because all three bracketed
+representative names were rejected; no Phase 1 runtime object was created.

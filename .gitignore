@@ -20,6 +20,11 @@ QBench/Worksheets/Terpenes/development/*/native_test_worksheet_probe/*saved_reop
 QBench/Worksheets/Terpenes/development/*/native_test_worksheet_probe/*instantiated_export_spreadsheet.*
 QBench/Worksheets/Terpenes/development/*/native_test_worksheet_probe/*object_ids.local.json
 
+# Raw Sandbox native 43-field rebuild exports (preserved locally; sanitized evidence is tracked)
+QBench/Worksheets/Terpenes/development/*/native_43_field_rebuild/*saved_reopened_export_spreadsheet.json
+QBench/Worksheets/Terpenes/development/*/native_43_field_rebuild/*instantiated_export_spreadsheet.*
+QBench/Worksheets/Terpenes/development/*/native_43_field_rebuild/*object_ids.local.json
+
 # Python caches and local virtual environments
 __pycache__/
 *.py[cod]

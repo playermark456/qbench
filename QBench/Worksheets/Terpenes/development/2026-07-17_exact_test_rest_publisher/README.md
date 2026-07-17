@@ -2,9 +2,9 @@
 
 Date: 2026-07-17
 
-Status: **native old-Sandbox Test Worksheet instantiation passed; the imported
-Prompt 3 43-field worksheet remains a compatibility failure; paused before the
-first token request**.
+Status: **native old-Sandbox Test Worksheet control passed, but the exact
+native 43-field rebuild failed its Phase 1 bracketed-name gate; paused before
+the first token request**.
 
 This package implements a controlled, Sandbox-only publisher for reviewed
 Terpenes Batch rows. It routes only by exact QBench Test ID, builds the complete
@@ -17,9 +17,10 @@ COA, or METRC artifact.
 
 An ignored local secrets file has all three required nonblank keys, and the
 base URL passes the exact Sandbox allowlist. No credential value was printed,
-logged, or persisted by the publisher. The isolated saved/reopened Sandbox
-Worksheet definition and raw **Export Spreadsheet** file prove all 43 exact
-destinations are present, unique, writable, and non-formula-owned.
+logged, or persisted by the publisher. The earlier imported saved/reopened
+Sandbox Worksheet definition and raw **Export Spreadsheet** file prove its 43
+destinations are structurally present, unique, writable, and non-formula-owned.
+That evidence does not prove the exact native runtime contract.
 
 Runtime instantiation is now isolated as an import/schema compatibility
 failure, not a general old-Sandbox engine failure. The retained earlier direct
@@ -34,6 +35,11 @@ remained unchanged after save and reopen. Therefore:
 - `old_sandbox_test_worksheet_engine` is
   `operational_for_native_definitions`;
 - `imported_prompt3_test_worksheet` is `compatibility_failure`;
+- the exact native rebuild in `native_43_field_rebuild/` stopped at 4/7
+  representative destinations because all three bracketed indexed names were
+  rejected by the old-Sandbox native save path;
+- `native_minimal_destination_probe_failed` is the current controlled-stop
+  classification; Version 1 remains Draft and Version 2 was not created;
 - the earlier destination-proof objects and the native Worksheet, two
   versions, Assay, Sample, and Test are inventoried in separate sanitized
   evidence without internal IDs;
@@ -108,25 +114,28 @@ and in-memory API behavior; they are not Sandbox success evidence.
 1. Retain the passing saved/reopened 43-field definition proof, the passing
    native Test-instantiation control, and both raw **Export Spreadsheet**
    hashes.
-2. Rebuild Stage 1 on the exact native old-Sandbox schema: 43 writable named
-   destinations, minimal layout, and no large formula set.
-3. Instantiate Stage 1 through an Assay with a fresh task-only Sample/Test,
-   then prove 43/43 destinations after navigating away and reopening.
-4. Add formulas and the complete Prompt 3 layout incrementally, repeating the
+2. Resolve how the native old-Sandbox definition can represent the required
+   indexed keys `terpenes_instrument_conc[1]` through `[23]`; underscore
+   diagnostic controls are not contract-compatible substitutes.
+3. Repeat the seven-field native Phase 1 probe and require 7/7 after save and
+   reopen before approving, activating, or creating an Assay/Sample/Test.
+4. Only after Phase 1 passes, create Version 2 and prove the exact 43/43 saved
+   definition and fresh runtime instantiation.
+5. Add formulas and the complete Prompt 3 layout incrementally, repeating the
    Assay-created Test proof after each stage.
-5. Record internal synthetic identifiers only in a local ignored evidence
+6. Record internal synthetic identifiers only in a local ignored evidence
    file, and update sanitized provenance without those identifiers.
-6. Confirm the documented same-host OAuth token path, then lock
+7. Confirm the documented same-host OAuth token path, then lock
    `token_endpoint_contract_proven` and `token_path` in configuration.
-7. Supply Sandbox client credentials through the ignored secrets file.
-8. Pause for explicit authorization before the first token request.
-9. Run `inspect`, then review the sanitized audit.
-10. Run the scalar and rollback probe manually as documented.
-11. Run the multi-field invalid-field probe and classify atomicity.
-12. Keep direct publishing blocked unless the classification is
+8. Supply Sandbox client credentials through the ignored secrets file.
+9. Pause for explicit authorization before the first token request.
+10. Run `inspect`, then review the sanitized audit.
+11. Run the scalar and rollback probe manually as documented.
+12. Run the multi-field invalid-field probe and classify atomicity.
+13. Keep direct publishing blocked unless the classification is
    `api_patch_atomic`; otherwise stop and design staging-and-commit.
-13. Run `dry-run` and review every old/new field value.
-14. Publish one fresh synthetic Test, verify, and repeat the dry-run to prove
+14. Run `dry-run` and review every old/new field value.
+15. Publish one fresh synthetic Test, verify, and repeat the dry-run to prove
     `NO CHANGE`.
-15. Publish a fresh three-Test synthetic Batch and stop on the first failure.
-16. Do not promote to live QBench from this package.
+16. Publish a fresh three-Test synthetic Batch and stop on the first failure.
+17. Do not promote to live QBench from this package.
