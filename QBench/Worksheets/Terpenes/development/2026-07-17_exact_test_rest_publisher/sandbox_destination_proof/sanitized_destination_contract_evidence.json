@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "sandbox_hostname": "ait-sandbox.qbench.net",
+  "worksheet_display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
+  "saved_version": {
+    "number": 2,
+    "title": "SBX_ONLY_TERPENES_API_DESTINATION_PROOF_V2",
+    "status": "APPROVED_ACTIVE",
+    "saved": true,
+    "reopened": true
+  },
+  "definition_export": {
+    "action": "Export Spreadsheet",
+    "filename": "2026-07-17_SBX_ONLY_TERPENES_API_DESTINATION_PROOF_v2_approved_active_saved_reopened_export_spreadsheet.json",
+    "sha256": "2dfa8e9b94a6806be81b5b4ab58395e3fbefe3ebd0a56a4e7e53e6803d968bef",
+    "raw_bytes": 240934,
+    "logical_destination_count": 43,
+    "writable_destination_count": 43,
+    "missing_targets": [],
+    "renamed_targets": [],
+    "duplicated_targets": [],
+    "formula_owned_targets": [],
+    "named_cell_system_count": 91,
+    "duplicate_named_cell_reference_count": 0,
+    "formula_count": 265,
+    "formula_manifest_sha256": "f149f36e2892eda5c72dddc9cf281e749df5c5313fceb58b140dae639581e910",
+    "pass_fail_destination_count": 0,
+    "dimethylacetamide_is_reportable_destination": false,
+    "peak_table_is_reportable_destination": false
+  },
+  "instantiated_test": {
+    "assay_display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF_TEST",
+    "sample_display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF_SAMPLE",
+    "status": "NOT_STARTED",
+    "reopened": true,
+    "worksheet_tab_present": true,
+    "updated_to_current_active_version": true,
+    "supported_export_action": "Export Spreadsheet to CSV",
+    "export_filename": "2026-07-17_SBX_ONLY_TERPENES_test_294_instantiated_export_spreadsheet.csv",
+    "export_sha256": "6470821a32c974f33b2421746c305a52dad7cc3fa2c043e0aa234b9f4ec6d12e",
+    "export_bytes": 38,
+    "export_row_count": 5,
+    "export_column_count": 5,
+    "all_cells_blank": true,
+    "named_cell_contract_retained": false,
+    "missing_target_count": 43,
+    "renamed_targets": [],
+    "duplicated_targets": [],
+    "formula_owned_targets": []
+  },
+  "classification": "saved_destination_contract_failed",
+  "destination_contract_proven": false,
+  "atomicity_classification": "api_patch_unresolved",
+  "analyte_patch_key_contract": "unresolved",
+  "security": {
+    "credentials_displayed": false,
+    "oauth_token_requested": false,
+    "qbench_rest_api_requested": false,
+    "patch_requested": false,
+    "live_qbench_accessed": false,
+    "pass_fail_artifact_introduced": false
+  }
+}

@@ -10,6 +10,10 @@ qbench_sandbox_token*
 # Local publisher audit output (may contain Sandbox object identifiers)
 QBench/Worksheets/Terpenes/development/*/audit/
 
+# Raw Sandbox worksheet proof exports (preserved locally; sanitized evidence is tracked)
+QBench/Worksheets/Terpenes/development/*/sandbox_destination_proof/*saved_reopened_export_spreadsheet.json
+QBench/Worksheets/Terpenes/development/*/sandbox_destination_proof/*instantiated_export_spreadsheet.csv
+
 # Python caches and local virtual environments
 __pycache__/
 *.py[cod]

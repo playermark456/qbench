@@ -750,7 +750,16 @@ def prove_destination_contract(
     except (OSError, json.JSONDecodeError) as exc:
         raise ConfigurationError("Destination worksheet export could not be loaded") from exc
     fields = load_mapping(mapping_path)
-    document = WorksheetDocument(worksheet_payload)
+    document_payload = worksheet_payload
+    if (
+        isinstance(worksheet_payload, Mapping)
+        and "table_config" in worksheet_payload
+        and isinstance(worksheet_payload.get("qb_config"), Mapping)
+    ):
+        exported_qb_config = worksheet_payload["qb_config"]
+        if all(key in exported_qb_config for key in ("config", "qb_config", "data")):
+            document_payload = exported_qb_config
+    document = WorksheetDocument(document_payload)
     structural_issues = DestinationContract.issues(document, fields)
     writable_count = 0
     for spec in fields:
@@ -779,6 +788,9 @@ def prove_destination_contract(
             "reopened": True,
             "synthetic_only": True,
             "export_sha256": worksheet_sha256,
+            "instantiated_test_reopened": True,
+            "instantiated_test_contract_proven": True,
+            "classification": "saved_destination_contract_passed",
         }
         for key, expected in required_provenance.items():
             if provenance.get(key) != expected:

@@ -108,8 +108,14 @@ def main() -> int:
         failures.append("manifest claims a Sandbox API request")
     if manifest.get("sandbox", {}).get("token_requests_attempted") != 0:
         failures.append("manifest claims a token request")
-    if manifest.get("sandbox", {}).get("objects_created_or_changed") != []:
-        failures.append("manifest claims Prompt 5B Sandbox mutations")
+    expected_sandbox_objects = [
+        "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
+        "SBX_ONLY_TERPENES_API_DESTINATION_PROOF_V2",
+        "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF_TEST",
+        "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF_SAMPLE",
+    ]
+    if manifest.get("sandbox", {}).get("objects_created_or_changed") != expected_sandbox_objects:
+        failures.append("manifest Sandbox mutations are not the exact authorized proof objects")
     for item in manifest.get("generated_files", []):
         relative = item.get("path")
         path = ROOT / str(relative)
@@ -127,7 +133,7 @@ def main() -> int:
     print("- 43 ordered non-Pass/Fail destinations")
     print("- exact Sandbox-only executable allowlist")
     print("- atomicity remains api_patch_unresolved")
-    print("- zero token requests, zero Sandbox API requests, and zero Prompt 5B object changes")
+    print("- zero token/API requests and exact authorized Sandbox proof objects only")
     print(f"- {len(manifest['generated_files'])} generated-file hashes verified")
     return 0
 

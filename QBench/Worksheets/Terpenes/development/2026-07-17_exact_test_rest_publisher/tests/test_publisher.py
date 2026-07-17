@@ -483,6 +483,9 @@ class LocalPreTokenProofTests(unittest.TestCase):
                     "synthetic_only": True,
                     "export_sha256": hashlib.sha256(self.worksheet_path.read_bytes()).hexdigest(),
                     "worksheet_display_name": "SBX_ONLY_DESTINATION_PROOF",
+                    "instantiated_test_reopened": True,
+                    "instantiated_test_contract_proven": True,
+                    "classification": "saved_destination_contract_passed",
                 }
             ),
             encoding="utf-8",
@@ -503,6 +506,31 @@ class LocalPreTokenProofTests(unittest.TestCase):
         self.assertEqual(result.status, "saved_sandbox_destination_contract_proven")
         self.assertEqual(result.target_count, 43)
         self.assertEqual(result.writable_target_count, 43)
+
+    def test_qbench_export_spreadsheet_envelope_is_unwrapped(self) -> None:
+        worksheet = make_test_worksheet()
+        self.worksheet_path.write_text(
+            json.dumps({"table_config": {}, "qb_config": worksheet}),
+            encoding="utf-8",
+        )
+        result = prove_destination_contract(self.worksheet_path, MAPPING_PATH, self.write_valid_provenance())
+        self.assertTrue(result.passed)
+        self.assertEqual(result.target_count, 43)
+        self.assertEqual(result.writable_target_count, 43)
+
+    def test_instantiated_test_contract_is_required_for_proof(self) -> None:
+        provenance_path = self.write_valid_provenance()
+        provenance = json.loads(provenance_path.read_text(encoding="utf-8"))
+        provenance["instantiated_test_contract_proven"] = False
+        provenance["classification"] = "saved_destination_contract_failed"
+        provenance_path.write_text(json.dumps(provenance), encoding="utf-8")
+        result = prove_destination_contract(self.worksheet_path, MAPPING_PATH, provenance_path)
+        self.assertFalse(result.passed)
+        self.assertIn(
+            "invalid_saved_export_provenance:instantiated_test_contract_proven",
+            result.provenance_issues,
+        )
+        self.assertIn("invalid_saved_export_provenance:classification", result.provenance_issues)
 
     def test_readonly_destination_blocks_43_field_proof(self) -> None:
         worksheet = make_test_worksheet()

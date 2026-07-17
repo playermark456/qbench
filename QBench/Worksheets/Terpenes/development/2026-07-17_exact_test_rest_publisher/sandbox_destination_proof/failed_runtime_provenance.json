@@ -1,0 +1,12 @@
+{
+  "sandbox_hostname": "ait-sandbox.qbench.net",
+  "export_action": "Export Spreadsheet",
+  "saved": true,
+  "reopened": true,
+  "synthetic_only": true,
+  "export_sha256": "2dfa8e9b94a6806be81b5b4ab58395e3fbefe3ebd0a56a4e7e53e6803d968bef",
+  "worksheet_display_name": "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
+  "instantiated_test_reopened": true,
+  "instantiated_test_contract_proven": false,
+  "classification": "saved_destination_contract_failed"
+}
