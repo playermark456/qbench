@@ -1,0 +1,3 @@
+finder_name,source_file,source_range,target_sheet,target_start_cell,target_range,transpose,repeat,formula_columns_touched
+SBX_ONLY_TERPENES_2026_07_16_A_AE,SBX_ONLY_TERPENES_WIDE_IMPORT_01.txt,A2:AE2,Instrument Import,A2,A2:AE2,false,false,none
+SBX_ONLY_TERPENES_2026_07_16_AH_BE,SBX_ONLY_TERPENES_WIDE_IMPORT_01.txt,AH2:BE2,Instrument Import,AH2,AH2:BE2,false,false,none

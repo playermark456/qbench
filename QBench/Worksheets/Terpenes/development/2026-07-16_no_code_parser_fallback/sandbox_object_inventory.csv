@@ -1,0 +1,6 @@
+object_type,name,status,scope,assay_assignment,samples_or_tests,internal_id_committed
+Dynamic Spreadsheet Worksheet,SBX_ONLY_TERPENES_2026_07_16_No_Code_Batch_Import,Approved active version 1,Isolated Sandbox-only,None,None,false
+No-Code File Parser,SBX_ONLY_TERPENES_2026_07_16_No_Code_Wide_Import,Active exact-filename Batch attachment parser,Isolated Sandbox-only,None,None,false
+Synthetic Batch,SBX_ONLY_TERPENES_2026_07_16_NO_CODE_IMPORT_01,Canonical import completed and reloaded,Isolated Sandbox-only,None,None,false
+Synthetic Batch,SBX_ONLY_TERPENES_2026_07_16_NO_CODE_BAD_NUMERIC_01,Malformed nonnumeric import completed and rejection persisted,Isolated Sandbox-only,None,None,false
+Synthetic Batch,SBX_ONLY_TERPENES_2026_07_16_NO_CODE_MISSING_PEAK_01,Malformed missing-count import completed and rejection persisted,Isolated Sandbox-only,None,None,false

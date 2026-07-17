@@ -147,3 +147,30 @@ than the Spreadsheet Worksheet named-cell layer, but that remains an unproven
 compatibility hypothesis. The blocked attachment upload did not distinguish
 Preview-only behavior from service incompatibility. Sanitized evidence is in
 `QBench/Worksheets/Terpenes/development/2026-07-16_full_sandbox_implementation/docs/sandbox_scalar_patch_result.md`.
+
+## Prompt 4.6C No-Code attachment-run result
+
+An isolated Standard/No-Code parser accepted two non-overlapping cell-range
+finders in one configuration: A2:AE2 to `Instrument Import!A2` and AH2:BE2 to
+`Instrument Import!AH2`. AF and AG are excluded, `Patch Worksheet Data` is
+disabled, no assay is assigned, and the exact Batch attachment filename is
+`SBX_ONLY_TERPENES_WIDE_IMPORT_01.txt`.
+
+The canonical attachment populated both finder ranges, preserved the AF2/AG2
+formulas, and evaluated to `Valid` / `Import row valid` after navigate-away and
+reload. The 23 analytes, counts `24` / `34` / `23`, and Dimethylacetamide audit
+value `100` used native numeric cells. The source-row hash persisted and no
+spreadsheet error appeared.
+
+The duplicate advanced the single attachment record to version 2, triggered a
+second successful parser job, retained the canonical row 2, and did not append
+row 3. The nonnumeric-analyte and missing-peak-count fixtures each triggered a
+successful parser job and persisted the expected worksheet-owned rejection
+message after reopen. All four jobs reported `SUCCESS`; Publish and Tests
+remained untouched and no Pass/Fail artifact was created.
+
+Detailed sanitized evidence is in
+`QBench/Worksheets/Terpenes/development/2026-07-16_no_code_parser_fallback/`.
+The operational limitation remains: Prompt 4.5 local normalization must run
+before QBench upload. This is not production-ready, and Prompt 5 has not
+started.
