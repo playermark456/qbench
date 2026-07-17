@@ -39,8 +39,8 @@ Codex then entered exactly one additional row,
 `Codex save control`, Exportable enabled. The complete row was visible before
 **Save Draft**, but it was absent after refresh and list-based reopen while
 `sdf` remained. This is a Codex browser-control/input/save failure, not a QBench
-environment failure. No support request is required. Manual worksheet entry
-with Codex providing the exact field list is recommended.
+environment failure. No support request is required. The current implementation
+path is generated JSON import; manually typing 43 named cells is prohibited.
 
 Controls remain:
 

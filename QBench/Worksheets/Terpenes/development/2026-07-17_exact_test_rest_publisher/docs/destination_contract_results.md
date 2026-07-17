@@ -3,7 +3,7 @@
 Date: 2026-07-17
 
 Current controlled-stop classification:
-**`codex_named_cell_save_control_failed`**.
+**`json_import_upload_blocked_browser_file_upload_unsupported`**.
 
 Prior imported-definition runtime classification:
 **`normal_assay_test_instantiation_failed_blank_default`**.
@@ -31,6 +31,9 @@ navigating away and reopening it.
 | Manual `sdf` / A1 persistence control | `manual_named_cell_persistence_control_passed` |
 | QBench native named-cell persistence | `operational` |
 | Codex B2 save-procedure control | `codex_named_cell_save_control_failed` |
+| Generated JSON candidate local validation | `passed_43_of_43` |
+| Generated JSON Sandbox import | `blocked_browser_file_upload_unsupported` |
+| JSON round-trip export | `not_run_import_gate` |
 | Publisher destination gate | `destination_contract_proven=false` |
 
 ## Isolated Sandbox objects
@@ -253,6 +256,25 @@ The publisher remains blocked until a staged native-schema rebuild retains all
 authorized read-only API confirmation resolves the Test worksheet
 representation. The candidate mapping was not promoted and publisher
 configuration remains unchanged.
+
+## Generated JSON import rebuild
+
+The new implementation path is generated JSON import, not manual entry of 43
+named cells. The locally generated candidate is:
+`json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json`.
+It contains one 40x26 `Data` worksheet and exactly 43 sheet-qualified named
+cells derived from the unpromoted scalar mapping. Local validation passed
+43/43 with no missing, renamed, duplicated, formula-owned, Pass/Fail,
+Dimethylacetamide, or Peak Table destinations. SHA-256:
+`7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70`.
+
+The exact inactive Sandbox worksheet shell
+`SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE` was created and its
+title and breadcrumb matched. The in-app browser explicitly does not support
+local file uploads, so the candidate was not attached or submitted. The
+Versions tab contains no rows. No imported named-cell count, raw round-trip
+export, or semantic round-trip result is claimed. The candidate is ready for
+manual Sandbox upload.
 
 ## Version-creation control reconciliation
 

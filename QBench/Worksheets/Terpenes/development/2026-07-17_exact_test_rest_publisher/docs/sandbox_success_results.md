@@ -35,6 +35,16 @@ These results must not be reported as QBench API behavior.
 
 ## Sandbox UI evidence that did pass
 
+The generated JSON candidate passed its complete local pre-upload validator:
+one 40x26 `Data` worksheet, 43 exact named cells, 23 contiguous analyte names,
+blank/writable/non-formula destinations, fresh UUIDs, and no prohibited or
+sensitive content. This is local candidate success, not saved Sandbox
+definition success.
+
+The exact new inactive Sandbox worksheet shell
+`SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE` was created with
+matching visible title and breadcrumb. No Draft version was created.
+
 The user's manual named-cell persistence control passed. In the exact Draft
 `1 - Native Scalar 43 Field Base v1 - DRAFT`, `sdf` at `A1` persisted after
 **Save Draft** and refresh. Codex later reopened the exact worksheet/version

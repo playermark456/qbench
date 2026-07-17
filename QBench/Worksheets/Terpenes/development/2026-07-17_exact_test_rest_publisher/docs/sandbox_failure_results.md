@@ -18,7 +18,18 @@ The Codex B2 row was complete before **Save Draft** but disappeared after
 refresh and list-based reopen while `sdf` remained. Classification:
 **`codex_named_cell_save_control_failed`** with
 `browser_control_authoritative=false`. Further Codex-controlled QBench
-worksheet editing stopped; manual field entry is recommended.
+worksheet editing stopped. The historical manual-entry recommendation is
+superseded by generated JSON import.
+
+That manual-entry recommendation is now superseded. The required implementation
+path is generated JSON import. The generated 43-field candidate passed local
+validation, but the in-app browser explicitly does not support file uploads.
+The exact inactive task-created worksheet shell exists with zero Versions-tab
+rows. No JSON was attached or submitted, and no round-trip export was run.
+
+Current classification:
+**`json_import_upload_blocked_browser_file_upload_unsupported`**.
+The completed local candidate is ready for manual Sandbox upload.
 
 ## Destination proof controlled stop
 

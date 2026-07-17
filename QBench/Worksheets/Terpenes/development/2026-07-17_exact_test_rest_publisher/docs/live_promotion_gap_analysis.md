@@ -32,17 +32,21 @@ Blocking gaps:
     but the separate Codex B2 save-control disappeared after refresh/reopen
     while `sdf` remained; browser-controlled worksheet entry is not
     authoritative.
+19. The generated 43-field JSON candidate passes local validation, but the
+    in-app browser cannot upload local files. The exact inactive Sandbox
+    worksheet shell has no Draft, imported contract, or round-trip export.
 
-The recommended compatibility route is staged rather than another full import:
+The recommended compatibility route is a generated JSON import:
 
 1. Retain the exact 43-row underscore-scalar candidate without changing the
    operational mapping.
-2. Use manual worksheet entry with Codex providing the exact field list. Do
-   not run further browser-controlled worksheet-name probes.
-3. Only after a manually entered and newly authorized 7/7 Phase 1A should a
-   complete 43-field Version 2 be built and instantiated through an
-   Assay, and prove all destinations on a fresh reopened Test.
-4. Add formulas and the remaining Prompt 3 layout incrementally, repeating the
+2. Manually upload the completed, locally validated JSON candidate to the exact
+   inactive task-created Sandbox worksheet. Do not type 43 named cells.
+3. Save and reopen the imported Draft, verify 43/43 named cells, and perform an
+   Export Spreadsheet semantic round trip before approval or activation.
+4. Only after the saved-definition round trip passes should a separately
+   authorized runtime Test prove all 43 destinations.
+5. Add formulas and the remaining Prompt 3 layout incrementally, repeating the
    runtime proof at each stage.
 
 Live QBench was not accessed. No customer data was used. No Pass/Fail artifact

@@ -4,6 +4,8 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import subprocess
+import sys
 from pathlib import Path
 
 
@@ -66,6 +68,16 @@ REQUIRED = {
     "native_43_field_rebuild/named_cell_persistence_diagnostic/probe_c_duplicate_name.md",
     "native_43_field_rebuild/named_cell_persistence_diagnostic/sanitized_object_inventory.json",
     "native_43_field_rebuild/named_cell_persistence_diagnostic/sandbox_cleanup_plan.md",
+    "json_import_rebuild/README.md",
+    "json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json",
+    "json_import_rebuild/candidate_validation.md",
+    "json_import_rebuild/candidate_sha256.txt",
+    "json_import_rebuild/generate_candidate.py",
+    "json_import_rebuild/import_results.md",
+    "json_import_rebuild/round_trip_results.md",
+    "json_import_rebuild/sanitized_object_inventory.json",
+    "json_import_rebuild/sandbox_cleanup_plan.md",
+    "json_import_rebuild/validate_candidate.py",
     "prompt_5b_manifest.json",
 }
 
@@ -561,6 +573,88 @@ def main() -> int:
         if version_control_inventory.get(key) is not False:
             failures.append(f"version-creation control safety control is not false: {key}")
 
+    json_import_classification = "json_import_upload_blocked_browser_file_upload_unsupported"
+    json_candidate_path = (
+        ROOT
+        / "json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json"
+    )
+    expected_json_candidate_hash = (
+        "7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70"
+    )
+    if digest(json_candidate_path) != expected_json_candidate_hash:
+        failures.append("generated JSON candidate hash is incorrect")
+    candidate_validation = subprocess.run(
+        [sys.executable, str(ROOT / "json_import_rebuild/validate_candidate.py")],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if candidate_validation.returncode != 0:
+        failures.append(
+            "generated JSON candidate validator failed: "
+            + candidate_validation.stdout.replace("\n", " ").strip()
+        )
+    json_inventory = json.loads(
+        (ROOT / "json_import_rebuild/sanitized_object_inventory.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    for key, expected in {
+        "sanitized": True,
+        "internal_sandbox_ids_omitted": True,
+        "classification": json_import_classification,
+        "candidate_sha256": expected_json_candidate_hash,
+        "candidate_local_validation": "passed",
+        "worksheet_title_verified": True,
+        "worksheet_breadcrumb_verified": True,
+        "browser_control_navigation_stale": False,
+        "browser_file_upload_supported": False,
+        "upload_attempted": False,
+        "candidate_attached": False,
+        "import_submitted": False,
+        "draft_version_created": False,
+        "versions_tab_rows": 0,
+        "round_trip_export_created": False,
+        "semantic_round_trip_run": False,
+        "json_import_saved_definition_contract": "unproven",
+        "json_import_round_trip": "not_run",
+        "destination_contract_proven": False,
+        "atomicity_classification": "api_patch_unresolved",
+        "analyte_patch_key_contract": "unresolved",
+        "existing_diagnostic_worksheet_modified": False,
+        "manual_sdf_modified_or_deleted": False,
+    }.items():
+        if json_inventory.get(key) != expected:
+            failures.append(f"JSON import evidence is incorrect: {key}")
+    json_objects = json_inventory.get("objects", [])
+    if json_objects != [
+        {
+            "type": "Spreadsheet Worksheet",
+            "name": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
+            "state": "inactive isolated worksheet shell; no version",
+        }
+    ]:
+        failures.append("JSON import sanitized object inventory is incorrect")
+    if any(key == "id" or key.endswith("_id") for item in json_objects for key in item):
+        failures.append("JSON import inventory contains an internal Sandbox ID")
+    for key in (
+        "approved",
+        "activated",
+        "assay_created",
+        "sample_created",
+        "test_created",
+        "analytical_results_entered",
+        "pass_fail_artifact_introduced",
+        "credentials_read_or_displayed",
+        "oauth_token_requested",
+        "qbench_rest_api_requested",
+        "patch_requested",
+        "live_qbench_accessed",
+    ):
+        if json_inventory.get(key) is not False:
+            failures.append(f"JSON import safety control is not false: {key}")
+
     manifest = json.loads((ROOT / "prompt_5b_manifest.json").read_text(encoding="utf-8"))
     if manifest.get("atomicity_classification") != "api_patch_unresolved":
         failures.append("manifest atomicity classification is incorrect")
@@ -568,7 +662,9 @@ def main() -> int:
         failures.append("manifest claims a Sandbox API request")
     if manifest.get("sandbox", {}).get("token_requests_attempted") != 0:
         failures.append("manifest claims a token request")
-    if manifest.get("status") != "codex_named_cell_save_control_failed_pre_token_stop":
+    if manifest.get("status") != (
+        "json_import_upload_blocked_browser_file_upload_unsupported_pre_token_stop"
+    ):
         failures.append("manifest controlled-stop status is incorrect")
     if manifest.get("mapping", {}).get("saved_worksheet_definition_contract") != "passed_43_of_43":
         failures.append("manifest saved-definition classification is incorrect")
@@ -576,7 +672,10 @@ def main() -> int:
         failures.append("manifest direct existing-Test classification is incorrect")
     if manifest.get("mapping", {}).get("normal_assay_test_instantiation") != normal_classification:
         failures.append("manifest normal Assay Test classification is incorrect")
-    if manifest.get("mapping", {}).get("destination_contract_classification") != version_control_classification:
+    if (
+        manifest.get("mapping", {}).get("destination_contract_classification")
+        != json_import_classification
+    ):
         failures.append("manifest current destination classification is incorrect")
     native_manifest = manifest.get("native_test_worksheet_probe", {})
     if native_manifest.get("classification") != native_classification:
@@ -676,6 +775,47 @@ def main() -> int:
     }.items():
         if version_control_manifest.get(key) != expected:
             failures.append(f"manifest version-creation diagnostic is incorrect: {key}")
+    json_manifest = manifest.get("json_import_rebuild", {})
+    for key, expected in {
+        "classification": json_import_classification,
+        "implementation_path": "generated_json_import",
+        "manual_named_cell_entry": False,
+        "candidate_sha256": expected_json_candidate_hash,
+        "candidate_local_validation": "passed",
+        "worksheet_tabs": ["Data"],
+        "grid_rows": 40,
+        "grid_columns": 26,
+        "named_cells": 43,
+        "analyte_named_cells": 23,
+        "analyte_naming": "terpenes_instrument_conc_01_through_23",
+        "analyte_cells": "Data!D2:Z2",
+        "missing_destinations": 0,
+        "renamed_destinations": 0,
+        "duplicated_destinations": 0,
+        "formula_owned_destinations": 0,
+        "worksheet": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
+        "worksheet_state": "inactive_shell_no_version",
+        "worksheet_title_verified": True,
+        "worksheet_breadcrumb_verified": True,
+        "browser_control_navigation_stale": False,
+        "browser_file_upload_supported": False,
+        "upload_attempted": False,
+        "candidate_attached": False,
+        "import_submitted": False,
+        "draft_version_created": False,
+        "round_trip_export_created": False,
+        "semantic_round_trip_run": False,
+        "json_import_saved_definition_contract": "unproven",
+        "json_import_round_trip": "not_run",
+        "destination_contract_proven": False,
+        "atomicity_classification": "api_patch_unresolved",
+        "analyte_patch_key_contract": "unresolved",
+        "candidate_promoted": False,
+        "approved": False,
+        "activated": False,
+    }.items():
+        if json_manifest.get(key) != expected:
+            failures.append(f"manifest JSON import evidence is incorrect: {key}")
     expected_sandbox_objects = [
         "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
         "SBX_ONLY_TERPENES_API_DESTINATION_PROOF_V2",
@@ -697,6 +837,7 @@ def main() -> int:
         "Named Cell Unique Control v1",
         "SBX_ONLY_TERPENES_2026_07_17_VERSION_CREATION_CONTROL",
         "Version Creation Control v1",
+        "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
     ]
     if manifest.get("sandbox", {}).get("objects_created_or_changed") != expected_sandbox_objects:
         failures.append("manifest Sandbox mutations are not the exact authorized proof objects")
@@ -725,8 +866,10 @@ def main() -> int:
     print("- historical unique one-cell Probe A failed; Probes B/C not run")
     print("- user manual sdf/A1 persistence control passed")
     print("- QBench native named-cell persistence operational")
-    print("- Codex B2 save control failed while sdf remained; manual entry recommended")
-    print("- browser-controlled worksheet editing stopped as non-authoritative")
+    print("- historical Codex B2 save control failed while sdf remained")
+    print("- generated JSON candidate passed local 43/43 validation")
+    print("- exact inactive JSON-import worksheet shell created with no version")
+    print("- browser file upload unsupported; candidate ready for manual upload")
     print("- sanitized eight-object inventory contains no internal Sandbox IDs")
     print("- sanitized six-object native inventory contains no internal Sandbox IDs")
     print("- exact Sandbox-only executable allowlist")

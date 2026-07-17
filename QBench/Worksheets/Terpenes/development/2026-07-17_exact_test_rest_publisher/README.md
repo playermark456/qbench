@@ -2,10 +2,11 @@
 
 Date: 2026-07-17
 
-Status: **QBench native named-cell persistence is operational, as proven by the
-user-created `sdf` / `A1` control. The separate Codex browser save control did
-not survive refresh/reopen, so browser-controlled worksheet entry is stopped
-and manual entry is recommended before the first token request**.
+Status: **QBench native named-cell persistence is operational. A fresh generated
+43-field JSON candidate passes local validation, but the in-app browser does not
+support file uploads. The exact inactive Sandbox worksheet shell exists with no
+version, and the candidate is ready for manual Sandbox upload before the first
+token request**.
 
 This package implements a controlled, Sandbox-only publisher for reviewed
 Terpenes Batch rows. It routes only by exact QBench Test ID, builds the complete
@@ -68,6 +69,19 @@ remained unchanged after save and reopen. Therefore:
 - `codex_named_cell_save_control_failed` is the current controlled-stop
   classification, `browser_control_authoritative=false`, and Probes B/C plus
   all further Codex-controlled worksheet construction remain skipped;
+- `json_import_rebuild/` now contains a generated single-tab 40x26 JSON
+  candidate with exactly 43 blank, writable, non-formula, exportable
+  destinations and fresh schema UUIDs;
+- the generated candidate passed every local pre-upload check with SHA-256
+  `7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70`;
+- the exact inactive worksheet shell
+  `SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE` was created and
+  its title and breadcrumb were verified, but the browser reported that file
+  uploads are unsupported; no JSON was attached, no Draft exists, and no
+  round-trip export was attempted;
+- `json_import_upload_blocked_browser_file_upload_unsupported` is the current
+  controlled-stop classification; generated JSON import is the recommended
+  implementation path, not manual entry of 43 named cells;
 - the earlier destination-proof objects and the native Worksheet, two
   versions, Assay, Sample, and Test are inventoried in separate sanitized
   evidence without internal IDs;
@@ -144,26 +158,29 @@ and in-memory API behavior; they are not Sandbox success evidence.
    hashes.
 2. Retain `config/field_mapping_scalar_candidate.csv` as an unpromoted
    candidate; do not replace the operational bracketed mapping.
-3. Use manual worksheet entry with Codex providing the exact field list. Do not
-   run more browser-controlled candidate-name or worksheet probes until that
-   manual procedure has been saved, refreshed, and independently verified.
-4. Only after Phase 1 passes, create Version 2 and prove the exact 43/43 saved
+3. Manually upload the completed generated JSON candidate to the exact inactive
+   task-created Sandbox worksheet. Do not manually type 43 named cells.
+4. After the imported Draft saves and reopens with 43/43 named cells, use
+   **Export Spreadsheet** and perform the documented semantic round trip.
+5. Only after the saved-definition round trip passes, create the authorized
+   runtime proof and verify the exact 43/43 contract on a fresh Test.
+6. Only after Phase 1 passes, create Version 2 and prove the exact 43/43 saved
    definition and fresh runtime instantiation.
-5. Add formulas and the complete Prompt 3 layout incrementally, repeating the
+7. Add formulas and the complete Prompt 3 layout incrementally, repeating the
    Assay-created Test proof after each stage.
-6. Record internal synthetic identifiers only in a local ignored evidence
+8. Record internal synthetic identifiers only in a local ignored evidence
    file, and update sanitized provenance without those identifiers.
-7. Confirm the documented same-host OAuth token path, then lock
+9. Confirm the documented same-host OAuth token path, then lock
    `token_endpoint_contract_proven` and `token_path` in configuration.
-8. Supply Sandbox client credentials through the ignored secrets file.
-9. Pause for explicit authorization before the first token request.
-10. Run `inspect`, then review the sanitized audit.
-11. Run the scalar and rollback probe manually as documented.
-12. Run the multi-field invalid-field probe and classify atomicity.
-13. Keep direct publishing blocked unless the classification is
+10. Supply Sandbox client credentials through the ignored secrets file.
+11. Pause for explicit authorization before the first token request.
+12. Run `inspect`, then review the sanitized audit.
+13. Run the scalar and rollback probe manually as documented.
+14. Run the multi-field invalid-field probe and classify atomicity.
+15. Keep direct publishing blocked unless the classification is
    `api_patch_atomic`; otherwise stop and design staging-and-commit.
-14. Run `dry-run` and review every old/new field value.
-15. Publish one fresh synthetic Test, verify, and repeat the dry-run to prove
+16. Run `dry-run` and review every old/new field value.
+17. Publish one fresh synthetic Test, verify, and repeat the dry-run to prove
     `NO CHANGE`.
-16. Publish a fresh three-Test synthetic Batch and stop on the first failure.
-17. Do not promote to live QBench from this package.
+18. Publish a fresh three-Test synthetic Batch and stop on the first failure.
+19. Do not promote to live QBench from this package.

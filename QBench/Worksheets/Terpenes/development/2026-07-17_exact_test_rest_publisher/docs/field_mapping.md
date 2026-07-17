@@ -25,10 +25,21 @@ The candidate validator proves exactly 43 rows, exactly 23 analytes numbered
 01 through 23, unique names and addresses, exact `Data!D2:Z2` analyte cells,
 and no brackets, Pass/Fail, Dimethylacetamide, or Peak Table destination.
 
-The candidate was not promoted. The new native scalar worksheet reopened with
-zero of seven representative named-cell definitions, so
-`config/field_mapping.csv`, publisher payload construction, and runtime
-classification remain unchanged.
+The candidate was not promoted. The historical native scalar worksheet result
+is preserved, but the current implementation path is generated JSON import,
+not manual entry of 43 named cells.
+
+`json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json`
+materializes the exact candidate mapping as 43 `qb_config.named_cells` entries
+on a blank 40x26 `Data` grid. Local JSON validation passed all name, address,
+blank/writable/non-formula, UUID freshness, prohibited-field, and sensitive-data
+checks. Candidate SHA-256:
+`7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70`.
+
+The exact inactive Sandbox worksheet shell was created, but the in-app browser
+does not support file uploads. No JSON was attached, no Draft version exists,
+and no round-trip export was run. Therefore `config/field_mapping.csv`,
+publisher payload construction, and runtime classification remain unchanged.
 
 ## Important REST ambiguity
 
