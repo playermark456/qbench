@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "sanitized": true,
+  "internal_sandbox_ids_omitted": true,
+  "classification": "native_named_cell_save_environment_or_procedure_blocked",
+  "objects": [
+    {
+      "type": "Spreadsheet Worksheet",
+      "name": "SBX_ONLY_TERPENES_2026_07_17_NAMED_CELL_UNIQUE_CONTROL",
+      "state": "isolated task-created object"
+    },
+    {
+      "type": "Worksheet Version",
+      "name": "Named Cell Unique Control v1",
+      "state": "Draft; not pending; not approved; not active"
+    }
+  ],
+  "probe_a": {
+    "classification": "unique_named_cell_control_failed",
+    "grid_rows": 6,
+    "grid_columns": 5,
+    "system_name": "terpenes_named_cell_unique_control_20260717",
+    "cell": "B2",
+    "display_name": "Unique persistence control",
+    "exportable": true,
+    "named_cell_add_control_used": true,
+    "row_visibly_committed_before_save": true,
+    "grid_persisted_after_reopen": true,
+    "label_persisted_after_reopen": true,
+    "named_cell_persisted_after_reopen": false,
+    "visible_validation_message": null
+  },
+  "probe_b_run": false,
+  "probe_b_nozero_run": false,
+  "probe_c_run": false,
+  "further_worksheet_construction_allowed": false,
+  "assay_created": false,
+  "sample_created": false,
+  "test_created": false,
+  "analytical_results_entered": false,
+  "pass_fail_artifact_introduced": false,
+  "credentials_read_or_displayed": false,
+  "oauth_token_requested": false,
+  "qbench_rest_api_requested": false,
+  "patch_requested": false,
+  "live_qbench_accessed": false
+}

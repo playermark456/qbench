@@ -60,6 +60,12 @@ REQUIRED = {
     "native_43_field_rebuild/scalar_raw_export_sha256.txt",
     "native_43_field_rebuild/scalar_sanitized_object_inventory.json",
     "native_43_field_rebuild/scalar_sandbox_cleanup_plan.md",
+    "native_43_field_rebuild/named_cell_persistence_diagnostic/README.md",
+    "native_43_field_rebuild/named_cell_persistence_diagnostic/probe_a_unique_control.md",
+    "native_43_field_rebuild/named_cell_persistence_diagnostic/probe_b_analyte_name.md",
+    "native_43_field_rebuild/named_cell_persistence_diagnostic/probe_c_duplicate_name.md",
+    "native_43_field_rebuild/named_cell_persistence_diagnostic/sanitized_object_inventory.json",
+    "native_43_field_rebuild/named_cell_persistence_diagnostic/sandbox_cleanup_plan.md",
     "prompt_5b_manifest.json",
 }
 
@@ -402,6 +408,63 @@ def main() -> int:
         if required_text not in scalar_raw_hashes:
             failures.append(f"native scalar raw-export stop evidence missing: {required_text}")
 
+    diagnostic_classification = "native_named_cell_save_environment_or_procedure_blocked"
+    diagnostic_inventory = json.loads(
+        (
+            ROOT
+            / "native_43_field_rebuild/named_cell_persistence_diagnostic/sanitized_object_inventory.json"
+        ).read_text(encoding="utf-8")
+    )
+    if diagnostic_inventory.get("classification") != diagnostic_classification:
+        failures.append("named-cell persistence diagnostic classification is incorrect")
+    if diagnostic_inventory.get("sanitized") is not True or diagnostic_inventory.get(
+        "internal_sandbox_ids_omitted"
+    ) is not True:
+        failures.append("named-cell persistence diagnostic inventory is not sanitized")
+    diagnostic_objects = diagnostic_inventory.get("objects", [])
+    if len(diagnostic_objects) != 2:
+        failures.append("named-cell persistence diagnostic inventory does not contain two objects")
+    if any(key == "id" or key.endswith("_id") for item in diagnostic_objects for key in item):
+        failures.append("tracked named-cell diagnostic inventory contains an internal Sandbox ID")
+    probe_a = diagnostic_inventory.get("probe_a", {})
+    expected_probe_a = {
+        "classification": "unique_named_cell_control_failed",
+        "grid_rows": 6,
+        "grid_columns": 5,
+        "system_name": "terpenes_named_cell_unique_control_20260717",
+        "cell": "B2",
+        "display_name": "Unique persistence control",
+        "exportable": True,
+        "named_cell_add_control_used": True,
+        "row_visibly_committed_before_save": True,
+        "grid_persisted_after_reopen": True,
+        "label_persisted_after_reopen": True,
+        "named_cell_persisted_after_reopen": False,
+        "visible_validation_message": None,
+    }
+    for key, expected in expected_probe_a.items():
+        if probe_a.get(key) != expected:
+            failures.append(f"named-cell Probe A evidence is incorrect: {key}")
+    for key in ("probe_b_run", "probe_b_nozero_run", "probe_c_run"):
+        if diagnostic_inventory.get(key) is not False:
+            failures.append(f"named-cell diagnostic incorrectly claims probe ran: {key}")
+    if diagnostic_inventory.get("further_worksheet_construction_allowed") is not False:
+        failures.append("named-cell diagnostic incorrectly permits further worksheet construction")
+    for key in (
+        "assay_created",
+        "sample_created",
+        "test_created",
+        "analytical_results_entered",
+        "pass_fail_artifact_introduced",
+        "credentials_read_or_displayed",
+        "oauth_token_requested",
+        "qbench_rest_api_requested",
+        "patch_requested",
+        "live_qbench_accessed",
+    ):
+        if diagnostic_inventory.get(key) is not False:
+            failures.append(f"named-cell diagnostic safety control is not false: {key}")
+
     manifest = json.loads((ROOT / "prompt_5b_manifest.json").read_text(encoding="utf-8"))
     if manifest.get("atomicity_classification") != "api_patch_unresolved":
         failures.append("manifest atomicity classification is incorrect")
@@ -409,7 +472,7 @@ def main() -> int:
         failures.append("manifest claims a Sandbox API request")
     if manifest.get("sandbox", {}).get("token_requests_attempted") != 0:
         failures.append("manifest claims a token request")
-    if manifest.get("status") != "native_scalar_minimal_destination_probe_failed_pre_token_controlled_stop":
+    if manifest.get("status") != "native_named_cell_save_environment_or_procedure_blocked_pre_token_stop":
         failures.append("manifest controlled-stop status is incorrect")
     if manifest.get("mapping", {}).get("saved_worksheet_definition_contract") != "passed_43_of_43":
         failures.append("manifest saved-definition classification is incorrect")
@@ -417,7 +480,7 @@ def main() -> int:
         failures.append("manifest direct existing-Test classification is incorrect")
     if manifest.get("mapping", {}).get("normal_assay_test_instantiation") != normal_classification:
         failures.append("manifest normal Assay Test classification is incorrect")
-    if manifest.get("mapping", {}).get("destination_contract_classification") != scalar_classification:
+    if manifest.get("mapping", {}).get("destination_contract_classification") != diagnostic_classification:
         failures.append("manifest current destination classification is incorrect")
     native_manifest = manifest.get("native_test_worksheet_probe", {})
     if native_manifest.get("classification") != native_classification:
@@ -454,6 +517,19 @@ def main() -> int:
         failures.append("manifest incorrectly claims native scalar Version 2 exists")
     if scalar_manifest.get("export_spreadsheet_run") is not False:
         failures.append("manifest incorrectly claims a native scalar export action")
+    diagnostic_manifest = manifest.get("named_cell_persistence_diagnostic", {})
+    if diagnostic_manifest.get("classification") != diagnostic_classification:
+        failures.append("manifest named-cell diagnostic classification is incorrect")
+    if diagnostic_manifest.get("probe_a_classification") != "unique_named_cell_control_failed":
+        failures.append("manifest named-cell Probe A classification is incorrect")
+    if diagnostic_manifest.get("row_visibly_committed_before_save") is not True:
+        failures.append("manifest does not record the visibly committed Probe A row")
+    if diagnostic_manifest.get("named_cell_persisted_after_reopen") is not False:
+        failures.append("manifest incorrectly claims the Probe A named cell persisted")
+    if any(diagnostic_manifest.get(key) is not False for key in (
+        "probe_b_run", "probe_b_nozero_run", "probe_c_run", "further_worksheet_construction_allowed"
+    )):
+        failures.append("manifest does not preserve the Probe A stop gate")
     expected_sandbox_objects = [
         "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
         "SBX_ONLY_TERPENES_API_DESTINATION_PROOF_V2",
@@ -471,6 +547,8 @@ def main() -> int:
         "Native 43 Field Base v1",
         "SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE",
         "Native Scalar 43 Field Base v1",
+        "SBX_ONLY_TERPENES_2026_07_17_NAMED_CELL_UNIQUE_CONTROL",
+        "Named Cell Unique Control v1",
     ]
     if manifest.get("sandbox", {}).get("objects_created_or_changed") != expected_sandbox_objects:
         failures.append("manifest Sandbox mutations are not the exact authorized proof objects")
@@ -496,6 +574,8 @@ def main() -> int:
     print("- exact native 43-field rebuild stopped at Phase 1 with 4/7 persisted")
     print("- native scalar candidate validated at 43 mappings and 23 exact analytes")
     print("- native scalar saved/reopened Phase 1A stopped at 0/7; no promotion or runtime")
+    print("- unique one-cell Probe A failed after explicit UI commit; Probes B/C not run")
+    print("- native named-cell worksheet construction blocked for QBench support review")
     print("- sanitized eight-object inventory contains no internal Sandbox IDs")
     print("- sanitized six-object native inventory contains no internal Sandbox IDs")
     print("- exact Sandbox-only executable allowlist")

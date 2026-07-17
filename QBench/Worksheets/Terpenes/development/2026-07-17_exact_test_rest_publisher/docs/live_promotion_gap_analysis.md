@@ -28,14 +28,19 @@ Blocking gaps:
 17. The locally valid underscore-scalar candidate remains unpromoted because
     its new native Worksheet reopened with zero of seven representative named
     cells; no approved/active export or fresh runtime Test exists.
+18. A completely unique one-cell control also vanished after explicit Add
+    Named Cell, keystroke, blur, save, and reopen steps; native worksheet
+    construction is blocked pending QBench support review.
 
 The recommended compatibility route is staged rather than another full import:
 
 1. Retain the exact 43-row underscore-scalar candidate without changing the
    operational mapping.
-2. Resolve why the new native scalar Draft reopened with no named cells, then
-   repeat the seven-field Phase 1A save/reopen probe and require 7/7.
-3. Only then build the complete 43-field Version 2, instantiate it through an
+2. Provide the sanitized unique one-cell persistence diagnostic to QBench
+   support and resolve the native named-cell save behavior. Do not run further
+   worksheet-name probes until that blocker is resolved.
+3. Only after support resolution and a newly authorized 7/7 Phase 1A should a
+   complete 43-field Version 2 be built and instantiated through an
    Assay, and prove all destinations on a fresh reopened Test.
 4. Add formulas and the remaining Prompt 3 layout incrementally, repeating the
    runtime proof at each stage.

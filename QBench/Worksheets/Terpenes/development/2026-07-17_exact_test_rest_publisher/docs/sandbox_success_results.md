@@ -51,3 +51,7 @@ The later local underscore-scalar candidate also passed its repository-only
 native scalar Worksheet reopened with zero of seven representative named-cell
 definitions, so its Draft remained unapproved and inactive and no runtime
 object was created.
+
+The subsequent unique one-cell persistence diagnostic is also not Sandbox
+success. Its 6x5 grid and label persisted, but the explicitly added unique
+named-cell row did not survive save/reopen.

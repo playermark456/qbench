@@ -2,10 +2,9 @@
 
 Date: 2026-07-17
 
-Status: **the 43-row underscore scalar candidate is locally valid, but the new
-native scalar worksheet failed its saved/reopened Phase 1A gate at 0/7;
-paused before approval, activation, runtime instantiation, or the first token
-request**.
+Status: **a completely unique one-cell native named-cell definition vanished
+after explicit UI commit, save, and reopen; worksheet construction is blocked
+for QBench support review before the first token request**.
 
 This package implements a controlled, Sandbox-only publisher for reviewed
 Terpenes Batch rows. It routes only by exact QBench Test ID, builds the complete
@@ -48,8 +47,15 @@ remained unchanged after save and reopen. Therefore:
   seven representative named-cell definitions after save, navigation away,
   and reopen from the QBench Worksheet list;
 - `native_scalar_minimal_destination_probe_failed` is the current
-  controlled-stop classification; its Version 1 remains Draft, was not
+  classification for the preserved 0/7 scalar attempt; its Version 1 remains Draft, was not
   approved or activated, and Version 2 was not created;
+- the isolated one-cell persistence diagnostic used **Add Named Cell**, real
+  keystrokes, Tab/blur events, a unique system name, and a blank writable B2;
+  the row was visibly present before Create, but the reopened 6x5 Draft had
+  zero named cells and no visible validation message;
+- `native_named_cell_save_environment_or_procedure_blocked` is the current
+  controlled-stop classification; Probes B/C and all further worksheet
+  construction were skipped;
 - the earlier destination-proof objects and the native Worksheet, two
   versions, Assay, Sample, and Test are inventoried in separate sanitized
   evidence without internal IDs;
@@ -126,9 +132,9 @@ and in-memory API behavior; they are not Sandbox success evidence.
    hashes.
 2. Retain `config/field_mapping_scalar_candidate.csv` as an unpromoted
    candidate; do not replace the operational bracketed mapping.
-3. Resolve why the old-Sandbox save path reopened the underscore scalar probe
-   with zero named cells, then repeat Phase 1A and require 7/7 before
-   approving, activating, exporting, or creating an Assay/Sample/Test.
+3. Provide the sanitized one-cell persistence diagnostic to QBench support and
+   resolve why an explicitly added, blurred, unique named-cell row disappeared
+   after Create/reopen. Do not run more candidate-name or worksheet probes.
 4. Only after Phase 1 passes, create Version 2 and prove the exact 43/43 saved
    definition and fresh runtime instantiation.
 5. Add formulas and the complete Prompt 3 layout incrementally, repeating the

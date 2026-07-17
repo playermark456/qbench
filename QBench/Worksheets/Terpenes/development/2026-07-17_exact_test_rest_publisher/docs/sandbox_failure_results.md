@@ -42,6 +42,31 @@ were not run. The candidate mapping was not promoted.
 Current classification:
 **`native_scalar_minimal_destination_probe_failed`**.
 
+## Unique one-cell persistence diagnostic
+
+Probe A created only
+`SBX_ONLY_TERPENES_2026_07_17_NAMED_CELL_UNIQUE_CONTROL` and Draft
+`Named Cell Unique Control v1`. It used a 6x5 native grid, a visible A1 label,
+blank writable B2, the unique system name
+`terpenes_named_cell_unique_control_20260717`, and QBench's **Add Named Cell**
+control exactly once.
+
+The row was entered with real keystrokes, blurred with Tab, and visibly present
+before Create. After save completion, navigation to the Worksheets list, and
+reopen, the grid and label persisted but the named-cell list contained zero
+rows. No visible validation or error message appeared.
+
+- Probe A: `unique_named_cell_control_failed`
+- Probe B `_01`: not run
+- Probe B `_1`: not run
+- Probe C: not run
+- Current classification:
+  **`native_named_cell_save_environment_or_procedure_blocked`**
+
+The stop gate prohibits further worksheet construction pending QBench support
+review. No claim about underscore, zero-padded, prefix, length, or duplicate
+system-name compatibility is made.
+
 ## Required failure cases exercised locally
 
 | Case | Local result |

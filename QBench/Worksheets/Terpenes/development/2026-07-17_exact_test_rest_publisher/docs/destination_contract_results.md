@@ -3,7 +3,7 @@
 Date: 2026-07-17
 
 Current controlled-stop classification:
-**`native_scalar_minimal_destination_probe_failed`**.
+**`native_named_cell_save_environment_or_procedure_blocked`**.
 
 Prior imported-definition runtime classification:
 **`normal_assay_test_instantiation_failed_blank_default`**.
@@ -26,6 +26,7 @@ navigating away and reopening it.
 | Native UI-built Assay-created Test | `native_test_worksheet_instantiation_passed` |
 | Exact native 43-field rebuild Phase 1 | `native_minimal_destination_probe_failed` (4/7) |
 | Native underscore-scalar rebuild Phase 1A | `native_scalar_minimal_destination_probe_failed` (0/7 saved/reopened) |
+| Unique one-cell persistence diagnostic | `unique_named_cell_control_failed` |
 | Publisher destination gate | `destination_contract_proven=false` |
 
 ## Isolated Sandbox objects
@@ -196,6 +197,32 @@ Approved, or Active. Because Export Spreadsheet was permitted only after
 approval and activation, it was not run and no raw export or SHA-256 exists.
 No Assay, Sample, Test, runtime value, Version 2, or Phase 3 object was created.
 See the `scalar_*` evidence files in `native_43_field_rebuild/`.
+
+## Unique one-cell persistence diagnostic
+
+The follow-up diagnostic used a completely unique system name in a new
+isolated 6x5 native Spreadsheet Worksheet:
+
+- Worksheet: `SBX_ONLY_TERPENES_2026_07_17_NAMED_CELL_UNIQUE_CONTROL`
+- Draft: `Named Cell Unique Control v1`
+- System Name: `terpenes_named_cell_unique_control_20260717`
+- Cell: `B2`
+- Display Name: `Unique persistence control`
+- Exportable: enabled
+
+QBench's **Add Named Cell** control was used exactly once. All fields were
+entered with real keystrokes, each was blurred with Tab, focus moved outside
+the row, and the complete row was visibly present before Create. After save
+completion, full navigation to the Worksheets list, and reopen, the 6x5 grid
+and A1 label persisted but the named-cell list contained zero rows. No visible
+validation or error message appeared.
+
+Classification: **`native_named_cell_save_environment_or_procedure_blocked`**.
+The required stop gate prevented analyte-name Probe B, no-leading-zero Probe B,
+duplicate-name Probe C, and any further seven- or 43-field construction. This
+result does not establish that `_01`, underscores, or reused names are
+unsupported. Sanitized support evidence is in
+`native_43_field_rebuild/named_cell_persistence_diagnostic/`.
 
 ## Publisher gate
 
