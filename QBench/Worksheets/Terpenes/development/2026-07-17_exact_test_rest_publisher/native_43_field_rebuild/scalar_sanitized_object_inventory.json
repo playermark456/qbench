@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "sanitized": true,
+  "internal_sandbox_ids_omitted": true,
+  "classification": "native_scalar_minimal_destination_probe_failed",
+  "objects": [
+    {
+      "type": "Spreadsheet Worksheet",
+      "name": "SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE",
+      "state": "isolated task-created object"
+    },
+    {
+      "type": "Worksheet Version",
+      "name": "Native Scalar 43 Field Base v1",
+      "state": "Draft; not pending; not approved; not active"
+    }
+  ],
+  "phase_1a": {
+    "grid_rows": 40,
+    "grid_columns": 26,
+    "expected_destinations": 7,
+    "persisted_destinations": 0,
+    "missing_destinations": 7,
+    "renamed_destinations": 0,
+    "duplicated_destinations": 0,
+    "formula_owned_destinations": 0,
+    "export_spreadsheet_run": false,
+    "export_download_file_created": false
+  },
+  "phase_1b_skipped": true,
+  "phase_2_skipped": true,
+  "phase_3_skipped": true,
+  "assay_created": false,
+  "sample_created": false,
+  "test_created": false,
+  "analytical_results_entered": false,
+  "pass_fail_artifact_introduced": false,
+  "credentials_displayed": false,
+  "oauth_token_requested": false,
+  "qbench_rest_api_requested": false,
+  "patch_requested": false,
+  "live_qbench_accessed": false
+}

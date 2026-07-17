@@ -3,7 +3,7 @@
 Date: 2026-07-17
 
 Current controlled-stop classification:
-**`native_minimal_destination_probe_failed`**.
+**`native_scalar_minimal_destination_probe_failed`**.
 
 Prior imported-definition runtime classification:
 **`normal_assay_test_instantiation_failed_blank_default`**.
@@ -25,6 +25,7 @@ navigating away and reopening it.
 | Normal Assay-created Test instantiation | `normal_assay_test_instantiation_failed_blank_default` |
 | Native UI-built Assay-created Test | `native_test_worksheet_instantiation_passed` |
 | Exact native 43-field rebuild Phase 1 | `native_minimal_destination_probe_failed` (4/7) |
+| Native underscore-scalar rebuild Phase 1A | `native_scalar_minimal_destination_probe_failed` (0/7 saved/reopened) |
 | Publisher destination gate | `destination_contract_proven=false` |
 
 ## Isolated Sandbox objects
@@ -174,6 +175,28 @@ rebuild. The reopened Export Spreadsheet action was invoked but produced no
 downloadable file, so no Phase 1 or Version 2 raw-export SHA is claimed.
 Sanitized evidence is in `native_43_field_rebuild/`.
 
+## Native underscore-scalar rebuild controlled stop
+
+The revised 43-row candidate mapping uses exact analyte destination names
+`terpenes_instrument_conc_01` through `_23` at `Data!D2:Z2`. Local validation
+passes all candidate invariants, but the candidate remains unpromoted.
+
+The separate isolated Worksheet
+`SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE` was constructed
+through the old Sandbox editor as an exact 40x26 grid. Before save its native
+UI displayed all seven representative names and addresses, and all seven
+target cells were blank, writable, unique, scalar, and non-formula. Draft
+Version 1 `Native Scalar 43 Field Base v1` was created. After navigation to
+the Worksheets list and reopen from that list, the grid and blank targets
+persisted but the named-cell list contained zero entries.
+
+The saved/reopened result is 0/7: seven missing, zero renamed, zero duplicated,
+and zero formula-owned. Version 1 remains Draft and was not moved to Pending,
+Approved, or Active. Because Export Spreadsheet was permitted only after
+approval and activation, it was not run and no raw export or SHA-256 exists.
+No Assay, Sample, Test, runtime value, Version 2, or Phase 3 object was created.
+See the `scalar_*` evidence files in `native_43_field_rebuild/`.
+
 ## Publisher gate
 
 - `destination_contract_proven=false`
@@ -184,9 +207,10 @@ Sanitized evidence is in `native_43_field_rebuild/`.
 - No PATCH occurred.
 - Live QBench was not accessed.
 
-The saved 43-field Worksheet definition is therefore proven, but the publisher
-remains blocked until a staged native-schema rebuild retains all 43 exact
-destinations on a fresh Assay-created Test and a later explicitly authorized
-read-only API confirmation resolves the Test worksheet representation. This
-run cannot truthfully produce a passing destination-proof lock, so publisher
+The earlier imported 43-field Worksheet definition remains structurally
+proven, but the native scalar saved/reopened contract failed before runtime.
+The publisher remains blocked until a staged native-schema rebuild retains all
+43 exact destinations on a fresh Assay-created Test and a later explicitly
+authorized read-only API confirmation resolves the Test worksheet
+representation. The candidate mapping was not promoted and publisher
 configuration remains unchanged.

@@ -1,0 +1,6 @@
+phase_1_export_spreadsheet=NOT_RUN
+phase_1_export_reason=VERSION_1_NOT_APPROVED_OR_ACTIVE_AFTER_SAVED_REOPENED_0_OF_7_FAILURE
+phase_1_raw_export=NOT_CREATED
+phase_1_sha256=NOT_AVAILABLE
+version_2_raw_export=NOT_CREATED
+version_2_sha256=NOT_AVAILABLE

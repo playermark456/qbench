@@ -20,6 +20,7 @@ REQUIRED = {
     "tests/test_publisher.py",
     "config/publisher_config.json",
     "config/field_mapping.csv",
+    "config/field_mapping_scalar_candidate.csv",
     "docs/api_contract.md",
     "docs/security_model.md",
     "docs/publish_gate.md",
@@ -52,6 +53,13 @@ REQUIRED = {
     "native_43_field_rebuild/raw_definition_sha256.txt",
     "native_43_field_rebuild/sanitized_object_inventory.json",
     "native_43_field_rebuild/sandbox_cleanup_plan.md",
+    "native_43_field_rebuild/scalar_candidate_mapping.md",
+    "native_43_field_rebuild/scalar_stage1_results.md",
+    "native_43_field_rebuild/scalar_stage2_definition_results.md",
+    "native_43_field_rebuild/scalar_stage3_instantiation_results.md",
+    "native_43_field_rebuild/scalar_raw_export_sha256.txt",
+    "native_43_field_rebuild/scalar_sanitized_object_inventory.json",
+    "native_43_field_rebuild/scalar_sandbox_cleanup_plan.md",
     "prompt_5b_manifest.json",
 }
 
@@ -88,6 +96,41 @@ def main() -> int:
         rebuild_expected = list(csv.DictReader(handle))
     if rebuild_expected != mapping:
         failures.append("native rebuild expected contract is not an exact 43-row mapping copy")
+
+    with (ROOT / "config/field_mapping_scalar_candidate.csv").open(
+        "r", encoding="utf-8", newline=""
+    ) as handle:
+        scalar_candidate = list(csv.DictReader(handle))
+    if len(scalar_candidate) != 43:
+        failures.append("scalar candidate does not contain exactly 43 rows")
+    candidate_names = [row["destination_named_cell"] for row in scalar_candidate]
+    candidate_cells = [row["destination_cell"] for row in scalar_candidate]
+    expected_analyte_names = [f"terpenes_instrument_conc_{index:02d}" for index in range(1, 24)]
+    expected_analyte_cells = [f"Data!{chr(ord('D') + index)}2" for index in range(23)]
+    if candidate_names[:23] != expected_analyte_names:
+        failures.append("scalar candidate analyte names are not exactly numbered 01..23")
+    if sum(name.startswith("terpenes_instrument_conc_") for name in candidate_names) != 23:
+        failures.append("scalar candidate does not contain exactly 23 analytes")
+    if candidate_cells[:23] != expected_analyte_cells:
+        failures.append("scalar candidate analyte cells are not exactly Data!D2:Z2")
+    if len(set(candidate_names)) != 43:
+        failures.append("scalar candidate destination names are not unique")
+    if len(set(candidate_cells)) != 43:
+        failures.append("scalar candidate destination addresses are not unique")
+    if any("[" in name or "]" in name for name in candidate_names):
+        failures.append("scalar candidate contains a bracketed destination name")
+    if any("pass_fail" in name.lower() or "pass-fail" in name.lower() for name in candidate_names):
+        failures.append("scalar candidate contains Pass/Fail")
+    if any("dimethylacetamide" in name.lower() for name in candidate_names):
+        failures.append("scalar candidate incorrectly contains Dimethylacetamide")
+    if any("peak_table" in name.lower() or "peak table" in name.lower() for name in candidate_names):
+        failures.append("scalar candidate incorrectly contains Peak Table reportable data")
+    for index, (current, candidate) in enumerate(zip(mapping, scalar_candidate, strict=True)):
+        expected = dict(current)
+        if index < 23:
+            expected["destination_named_cell"] = expected_analyte_names[index]
+        if candidate != expected:
+            failures.append(f"scalar candidate changed a non-name mapping field at sequence {index + 1}")
 
     config = json.loads((ROOT / "config/publisher_config.json").read_text(encoding="utf-8"))
     if config.get("destination_contract_proven") is not False:
@@ -301,6 +344,64 @@ def main() -> int:
         if required_text not in rebuild_raw_hashes:
             failures.append(f"native 43-field raw-export stop evidence missing: {required_text}")
 
+    scalar_classification = "native_scalar_minimal_destination_probe_failed"
+    scalar_inventory = json.loads(
+        (ROOT / "native_43_field_rebuild/scalar_sanitized_object_inventory.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    if scalar_inventory.get("classification") != scalar_classification:
+        failures.append("native scalar rebuild classification is incorrect")
+    if scalar_inventory.get("sanitized") is not True or scalar_inventory.get(
+        "internal_sandbox_ids_omitted"
+    ) is not True:
+        failures.append("native scalar rebuild inventory is not sanitized")
+    scalar_objects = scalar_inventory.get("objects", [])
+    if len(scalar_objects) != 2:
+        failures.append("native scalar rebuild inventory does not contain two objects")
+    if any(key == "id" or key.endswith("_id") for item in scalar_objects for key in item):
+        failures.append("tracked native scalar rebuild inventory contains an internal Sandbox ID")
+    scalar_phase1 = scalar_inventory.get("phase_1a", {})
+    for key, expected in {
+        "expected_destinations": 7,
+        "persisted_destinations": 0,
+        "missing_destinations": 7,
+        "renamed_destinations": 0,
+        "duplicated_destinations": 0,
+        "formula_owned_destinations": 0,
+        "export_spreadsheet_run": False,
+        "export_download_file_created": False,
+    }.items():
+        if scalar_phase1.get(key) != expected:
+            failures.append(f"native scalar Phase 1A evidence is incorrect: {key}")
+    for key in ("phase_1b_skipped", "phase_2_skipped", "phase_3_skipped"):
+        if scalar_inventory.get(key) is not True:
+            failures.append(f"native scalar rebuild did not preserve stop gate: {key}")
+    for key in (
+        "assay_created",
+        "sample_created",
+        "test_created",
+        "analytical_results_entered",
+        "pass_fail_artifact_introduced",
+        "credentials_displayed",
+        "oauth_token_requested",
+        "qbench_rest_api_requested",
+        "patch_requested",
+        "live_qbench_accessed",
+    ):
+        if scalar_inventory.get(key) is not False:
+            failures.append(f"native scalar rebuild safety control is not false: {key}")
+    scalar_raw_hashes = (ROOT / "native_43_field_rebuild/scalar_raw_export_sha256.txt").read_text(
+        encoding="utf-8"
+    )
+    for required_text in (
+        "phase_1_export_spreadsheet=NOT_RUN",
+        "phase_1_sha256=NOT_AVAILABLE",
+        "version_2_raw_export=NOT_CREATED",
+    ):
+        if required_text not in scalar_raw_hashes:
+            failures.append(f"native scalar raw-export stop evidence missing: {required_text}")
+
     manifest = json.loads((ROOT / "prompt_5b_manifest.json").read_text(encoding="utf-8"))
     if manifest.get("atomicity_classification") != "api_patch_unresolved":
         failures.append("manifest atomicity classification is incorrect")
@@ -308,7 +409,7 @@ def main() -> int:
         failures.append("manifest claims a Sandbox API request")
     if manifest.get("sandbox", {}).get("token_requests_attempted") != 0:
         failures.append("manifest claims a token request")
-    if manifest.get("status") != "native_minimal_destination_probe_failed_pre_token_controlled_stop":
+    if manifest.get("status") != "native_scalar_minimal_destination_probe_failed_pre_token_controlled_stop":
         failures.append("manifest controlled-stop status is incorrect")
     if manifest.get("mapping", {}).get("saved_worksheet_definition_contract") != "passed_43_of_43":
         failures.append("manifest saved-definition classification is incorrect")
@@ -316,7 +417,7 @@ def main() -> int:
         failures.append("manifest direct existing-Test classification is incorrect")
     if manifest.get("mapping", {}).get("normal_assay_test_instantiation") != normal_classification:
         failures.append("manifest normal Assay Test classification is incorrect")
-    if manifest.get("mapping", {}).get("destination_contract_classification") != rebuild_classification:
+    if manifest.get("mapping", {}).get("destination_contract_classification") != scalar_classification:
         failures.append("manifest current destination classification is incorrect")
     native_manifest = manifest.get("native_test_worksheet_probe", {})
     if native_manifest.get("classification") != native_classification:
@@ -340,6 +441,19 @@ def main() -> int:
         failures.append("manifest incorrectly claims Version 2 exists")
     if rebuild_manifest.get("export_spreadsheet_download_produced") is not False:
         failures.append("manifest incorrectly claims a rebuild export download")
+    scalar_manifest = manifest.get("native_scalar_43_field_rebuild", {})
+    if scalar_manifest.get("classification") != scalar_classification:
+        failures.append("manifest native scalar rebuild classification is incorrect")
+    if scalar_manifest.get("phase_1_expected_destinations") != 7 or scalar_manifest.get(
+        "phase_1_persisted_destinations"
+    ) != 0 or scalar_manifest.get("phase_1_missing_destinations") != 7:
+        failures.append("manifest native scalar Phase 1A counts are incorrect")
+    if scalar_manifest.get("version_1_state") != "Draft":
+        failures.append("manifest native scalar Version 1 state is incorrect")
+    if scalar_manifest.get("version_2_created") is not False:
+        failures.append("manifest incorrectly claims native scalar Version 2 exists")
+    if scalar_manifest.get("export_spreadsheet_run") is not False:
+        failures.append("manifest incorrectly claims a native scalar export action")
     expected_sandbox_objects = [
         "SBX_ONLY_TERPENES_2026_07_17_API_DESTINATION_PROOF",
         "SBX_ONLY_TERPENES_API_DESTINATION_PROOF_V2",
@@ -355,6 +469,8 @@ def main() -> int:
         "fresh Test created only from SBX_ONLY_TERPENES_2026_07_17_NATIVE_TEST_WS_ASSAY",
         "SBX_ONLY_TERPENES_2026_07_17_NATIVE_43_FIELD_BASE",
         "Native 43 Field Base v1",
+        "SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE",
+        "Native Scalar 43 Field Base v1",
     ]
     if manifest.get("sandbox", {}).get("objects_created_or_changed") != expected_sandbox_objects:
         failures.append("manifest Sandbox mutations are not the exact authorized proof objects")
@@ -378,7 +494,8 @@ def main() -> int:
     print("- native UI-built Assay Test instantiation passed with exact persistence")
     print("- old Sandbox engine operational; imported Prompt 3 compatibility failure")
     print("- exact native 43-field rebuild stopped at Phase 1 with 4/7 persisted")
-    print("- bracketed indexed native names rejected; Version 2 and runtime not created")
+    print("- native scalar candidate validated at 43 mappings and 23 exact analytes")
+    print("- native scalar saved/reopened Phase 1A stopped at 0/7; no promotion or runtime")
     print("- sanitized eight-object inventory contains no internal Sandbox IDs")
     print("- sanitized six-object native inventory contains no internal Sandbox IDs")
     print("- exact Sandbox-only executable allowlist")

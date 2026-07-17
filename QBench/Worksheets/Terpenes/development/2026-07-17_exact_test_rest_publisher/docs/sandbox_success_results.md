@@ -45,3 +45,9 @@ The exact native 43-field rebuild created only the isolated Worksheet
 `Native 43 Field Base v1`. Its four scalar representative named cells persisted
 exactly. The overall Phase 1 still failed at 4/7 because all three bracketed
 representative names were rejected; no Phase 1 runtime object was created.
+
+The later local underscore-scalar candidate also passed its repository-only
+43-row validation. That is not Sandbox destination success: the corresponding
+native scalar Worksheet reopened with zero of seven representative named-cell
+definitions, so its Draft remained unapproved and inactive and no runtime
+object was created.

@@ -57,3 +57,10 @@ Pass/Fail-like named cell in the Test Worksheet blocks the entire plan.
 
 Global runtime evidence must also prove the saved destination contract,
 analyte PATCH representation, and `api_patch_atomic` before direct publish.
+
+The 2026-07-17 underscore-scalar Phase 1A attempt does not clear this gate.
+Although its local 43-row candidate mapping validates, the saved/reopened
+native Draft retained zero of seven representative named-cell definitions.
+It was not approved or activated, no Export Spreadsheet was run, and no
+runtime Test was created. `destination_contract_proven` remains false and the
+operational mapping was not changed.

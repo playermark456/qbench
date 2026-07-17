@@ -84,3 +84,12 @@ verification plus controlled-stop/rollback logic.
 
 The token endpoint, API response shape, and analyte range PATCH representation
 still require controlled Sandbox evidence before any PATCH.
+
+## Native scalar candidate status
+
+The unpromoted candidate mapping contains 43 independent scalar destination
+names, including analytes `terpenes_instrument_conc_01` through `_23`. This is
+a local mapping candidate only. Its representative native Worksheet reopened
+with zero of seven named-cell definitions, so publisher code was not changed
+to construct scalar PATCH keys and `analyte_patch_key_contract` remains
+`unresolved`. No token or API request was made to infer the contract.

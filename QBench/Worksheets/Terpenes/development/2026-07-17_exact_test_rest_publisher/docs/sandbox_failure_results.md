@@ -25,6 +25,23 @@ The exact native rebuild then stopped at 4/7 representative destinations:
 
 Classification: **`native_minimal_destination_probe_failed`**.
 
+## Native underscore-scalar controlled stop
+
+The revised candidate uses exact analyte names
+`terpenes_instrument_conc_01` through `_23` and passes its local 43-row
+validator. A separate native 40x26 Worksheet and Draft Version 1 were created
+through the old Sandbox editor. The pre-save UI showed all seven representative
+definitions, but after navigation away and reopen from the Worksheet list the
+named-cell list contained zero entries.
+
+Saved/reopened result: 0/7, with seven missing, zero renamed, zero duplicated,
+and zero formula-owned. Version 1 remained Draft; approval, activation, Export
+Spreadsheet, Phase 1B runtime instantiation, Version 2, Phase 2, and Phase 3
+were not run. The candidate mapping was not promoted.
+
+Current classification:
+**`native_scalar_minimal_destination_probe_failed`**.
+
 ## Required failure cases exercised locally
 
 | Case | Local result |

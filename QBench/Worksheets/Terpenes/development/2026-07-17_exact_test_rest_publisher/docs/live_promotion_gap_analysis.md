@@ -25,12 +25,16 @@ Blocking gaps:
 15. The inherited Prompt 4 candidate-manifest layout hash mismatch remains.
 16. No live-specific credential, identifier, report, COA, METRC, rollback, or
     operational procedure has been designed or tested.
+17. The locally valid underscore-scalar candidate remains unpromoted because
+    its new native Worksheet reopened with zero of seven representative named
+    cells; no approved/active export or fresh runtime Test exists.
 
 The recommended compatibility route is staged rather than another full import:
 
-1. Resolve an exact, supportable native representation for the required
-   bracketed analyte destination names; do not substitute underscore controls.
-2. Repeat the seven-field Phase 1 save/reopen probe and require 7/7.
+1. Retain the exact 43-row underscore-scalar candidate without changing the
+   operational mapping.
+2. Resolve why the new native scalar Draft reopened with no named cells, then
+   repeat the seven-field Phase 1A save/reopen probe and require 7/7.
 3. Only then build the complete 43-field Version 2, instantiate it through an
    Assay, and prove all destinations on a fresh reopened Test.
 4. Add formulas and the remaining Prompt 3 layout incrementally, repeating the

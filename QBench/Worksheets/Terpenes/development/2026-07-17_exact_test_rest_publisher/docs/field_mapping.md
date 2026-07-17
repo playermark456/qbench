@@ -12,6 +12,24 @@
 All mapping rows currently have status
 `unverified_saved_sandbox_destination`.
 
+## Unpromoted scalar candidate
+
+`config/field_mapping_scalar_candidate.csv` preserves all 43 ordered source
+mappings, destination addresses, transfer types, constraints, and statuses.
+It changes only the 23 analyte destination system names to exact independent
+scalar names `terpenes_instrument_conc_01` through `_23` at `Data!D2:Z2`.
+The remaining 20 rows are byte-for-field equivalent to the operational
+mapping.
+
+The candidate validator proves exactly 43 rows, exactly 23 analytes numbered
+01 through 23, unique names and addresses, exact `Data!D2:Z2` analyte cells,
+and no brackets, Pass/Fail, Dimethylacetamide, or Peak Table destination.
+
+The candidate was not promoted. The new native scalar worksheet reopened with
+zero of seven representative named-cell definitions, so
+`config/field_mapping.csv`, publisher payload construction, and runtime
+classification remain unchanged.
+
 ## Important REST ambiguity
 
 The merged Test Worksheet has one range named cell,

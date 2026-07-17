@@ -2,9 +2,10 @@
 
 Date: 2026-07-17
 
-Status: **native old-Sandbox Test Worksheet control passed, but the exact
-native 43-field rebuild failed its Phase 1 bracketed-name gate; paused before
-the first token request**.
+Status: **the 43-row underscore scalar candidate is locally valid, but the new
+native scalar worksheet failed its saved/reopened Phase 1A gate at 0/7;
+paused before approval, activation, runtime instantiation, or the first token
+request**.
 
 This package implements a controlled, Sandbox-only publisher for reviewed
 Terpenes Batch rows. It routes only by exact QBench Test ID, builds the complete
@@ -39,7 +40,16 @@ remained unchanged after save and reopen. Therefore:
   representative destinations because all three bracketed indexed names were
   rejected by the old-Sandbox native save path;
 - `native_minimal_destination_probe_failed` is the current controlled-stop
-  classification; Version 1 remains Draft and Version 2 was not created;
+  classification for the preserved bracket-name attempt;
+- `config/field_mapping_scalar_candidate.csv` contains the exact 23 underscore
+  analyte names `terpenes_instrument_conc_01` through `_23` plus the unchanged
+  20 scalar destinations, and passes the local 43-row candidate validator;
+- the separate native scalar worksheet retained its 40x26 grid but zero of
+  seven representative named-cell definitions after save, navigation away,
+  and reopen from the QBench Worksheet list;
+- `native_scalar_minimal_destination_probe_failed` is the current
+  controlled-stop classification; its Version 1 remains Draft, was not
+  approved or activated, and Version 2 was not created;
 - the earlier destination-proof objects and the native Worksheet, two
   versions, Assay, Sample, and Test are inventoried in separate sanitized
   evidence without internal IDs;
@@ -114,11 +124,11 @@ and in-memory API behavior; they are not Sandbox success evidence.
 1. Retain the passing saved/reopened 43-field definition proof, the passing
    native Test-instantiation control, and both raw **Export Spreadsheet**
    hashes.
-2. Resolve how the native old-Sandbox definition can represent the required
-   indexed keys `terpenes_instrument_conc[1]` through `[23]`; underscore
-   diagnostic controls are not contract-compatible substitutes.
-3. Repeat the seven-field native Phase 1 probe and require 7/7 after save and
-   reopen before approving, activating, or creating an Assay/Sample/Test.
+2. Retain `config/field_mapping_scalar_candidate.csv` as an unpromoted
+   candidate; do not replace the operational bracketed mapping.
+3. Resolve why the old-Sandbox save path reopened the underscore scalar probe
+   with zero named cells, then repeat Phase 1A and require 7/7 before
+   approving, activating, exporting, or creating an Assay/Sample/Test.
 4. Only after Phase 1 passes, create Version 2 and prove the exact 43/43 saved
    definition and fresh runtime instantiation.
 5. Add formulas and the complete Prompt 3 layout incrementally, repeating the
