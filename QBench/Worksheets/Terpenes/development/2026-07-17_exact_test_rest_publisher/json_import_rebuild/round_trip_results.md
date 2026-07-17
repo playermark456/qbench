@@ -1,6 +1,6 @@
 # Unqualified-address candidate round-trip result
 
-Classification: **`saved_definition_round_trip_passed_pending_runtime_instantiation`**
+Classification: **`runtime_instantiation_passed_pending_read_only_api_confirmation`**
 
 The qualified-address native-envelope candidate rendered correctly, but QBench
 rejected **Save As New Version** with `Invalid cell definition Data!D2 for
@@ -30,8 +30,9 @@ identical. Therefore:
 
 - `json_import_saved_definition_contract=passed_43_of_43`;
 - `json_import_round_trip=passed`;
-- `destination_contract_proven=saved_definition_only_pending_runtime_instantiation`.
+- `destination_contract_proven=runtime_instantiation_passed_pending_read_only_api_confirmation`.
 
 Atomicity remains `api_patch_unresolved` and the analyte PATCH-key contract
-remains `unresolved`. The Draft was not approved or activated, and no runtime
-Test was created.
+remains `unresolved`. The exact Version 1 is now Approved/Active, and the fresh
+normal Assay-created runtime Test passed 43/43 before returning to a 43/43
+blank baseline.

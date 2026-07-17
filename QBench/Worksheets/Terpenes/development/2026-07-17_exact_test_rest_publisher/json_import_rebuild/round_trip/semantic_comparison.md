@@ -37,9 +37,10 @@ Classifications:
 
 - `json_import_saved_definition_contract=passed_43_of_43`
 - `json_import_round_trip=passed`
-- `destination_contract_proven=saved_definition_only_pending_runtime_instantiation`
+- `destination_contract_proven=runtime_instantiation_passed_pending_read_only_api_confirmation`
 - `atomicity_classification=api_patch_unresolved`
 - `analyte_patch_key_contract=unresolved`
 
-The operational publisher mapping remains unpromoted until a separately
-authorized runtime instantiation proves the same contract.
+The separately authorized runtime instantiation passed the same contract at
+43/43 and restored a 43/43 blank baseline. The operational publisher mapping
+remains unpromoted pending read-only API confirmation.

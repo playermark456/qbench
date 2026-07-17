@@ -67,7 +67,9 @@ operational mapping was not changed.
 
 ## Current JSON scalar stop
 
-`approval_activation_blocked_active_lock_assignee_mismatch` is an additional
-hard stop. Exact `JSON Scalar 43 Field Base v1` is `PENDING`, not Approved or
-Active, and no isolated Assay or runtime Test exists for this candidate.
-Publishing remains blocked before credential loading or token exchange.
+The Approved/Active and normal Assay-created runtime gates pass 43/43. The
+prior lock conclusion is classified as
+`approval_attempt_procedural_error_unnecessary_lock_handling`; direct approval
+does not require a worksheet review lock. Publishing remains blocked before
+credential loading or token exchange because read-only API confirmation,
+analyte PATCH-key behavior, and atomicity remain unresolved.

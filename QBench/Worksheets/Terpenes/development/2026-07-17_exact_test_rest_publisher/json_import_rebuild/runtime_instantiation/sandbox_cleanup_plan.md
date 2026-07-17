@@ -1,12 +1,11 @@
 # Sandbox cleanup plan
 
-No cleanup action is authorized or performed in this phase.
+Keep the isolated worksheet, Version 1, Assay, Sample, and Test unchanged until
+Draft PR #13 review accepts the runtime evidence. No additional version,
+approval action, lock, value entry, export, Publish, QC Review, or Pass/Fail
+artifact is needed.
 
-The exact Version 1 remains `PENDING` with an active review lock. A Sandbox
-administrator or the assigned reviewer must resolve that lock through QBench's
-normal review workflow before approval can be retried. Do not delete, unlock,
-reject, approve, activate, or otherwise change the worksheet from repository
-evidence alone.
-
-No Assay, Sample, Test, runtime export, temporary analytical value, Publish,
-QC Review, or Pass/Fail artifact was created by this phase.
+If cleanup is later authorized, remove only the task-created Assay, Sample,
+Test, and worksheet in the Sandbox using the normal UI. The restored Test
+Worksheet baseline is already 43/43 blank. Never perform cleanup in live
+QBench.

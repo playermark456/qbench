@@ -1,7 +1,7 @@
 # JSON import compatibility result
 
 Classification:
-**`saved_definition_round_trip_passed_pending_runtime_instantiation`**
+**`runtime_instantiation_passed_pending_read_only_api_confirmation`**
 
 Manual testing of the prior native-envelope candidate proved that it rendered
 the expected 40x26 grid and loaded all 43 named cells. That render is valid
@@ -34,7 +34,10 @@ proved the expected identity and persistence.
   renderer UUID
 - `json_import_saved_definition_contract=passed_43_of_43`
 - `json_import_round_trip=passed`
-- `destination_contract_proven=saved_definition_only_pending_runtime_instantiation`
+- `destination_contract_proven=runtime_instantiation_passed_pending_read_only_api_confirmation`
 
-The Draft was not approved or activated, no runtime Test was created, and the
-operational mapping remains unpromoted.
+The exact Version 1 was manually approved and independently verified as
+Approved/Active. The isolated Assay and fresh normal Test passed the runtime
+contract 43/43, representative values persisted, and the final 43/43 blank
+baseline was restored. The operational mapping remains unpromoted pending
+read-only API confirmation.

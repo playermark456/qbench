@@ -2,42 +2,34 @@
 
 Date: 2026-07-17
 
-Classification: **`approval_activation_blocked_active_lock_assignee_mismatch`**.
+The prior lock-based stop is superseded by
+`approval_attempt_procedural_error_unnecessary_lock_handling`. A worksheet
+review lock is not an approval prerequisite in this Sandbox. The user manually
+approved `JSON Scalar 43 Field Base v1`; Codex then verified the exact single
+Version 1 as Approved/Active, with no Version 2, and completed the normal
+Assay-created runtime proof.
 
-The saved-definition and raw round-trip gates remain passed at 43/43. The
-exact worksheet `SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE` and
-exact version `JSON Scalar 43 Field Base v1` were reopened and verified before
-the approval workflow began. Version 1 moved from `DRAFT` to `PENDING`, and
-that state persisted after leaving the worksheet and reopening it from the
-Worksheets list.
+Final classifications:
 
-The supported Approve action then failed with the exact non-secret QBench
-message: `This worksheet cannot be modified because it is currently locked.`
-The Locks tab showed one active review lock assigned to a different user than
-the currently signed-in Sandbox session, and the session exposed no unlock
-control. The approval was not completed and the worksheet was not activated.
-
-Per the Phase 1 stop gate, no Assay, Sample, Test, runtime export, or temporary
-worksheet value was created. Runtime-instantiation classifications therefore
-remain `not_run_phase_1_approval_gate`; they are not runtime failures.
-
-Current controlled state:
-
-- `approved_active_definition=blocked_active_lock_assignee_mismatch`
-- `destination_contract_proven=saved_definition_only_pending_runtime_instantiation`
+- `approved_active_definition=passed_43_of_43`
+- `normal_assay_test_instantiation=passed`
+- `runtime_test_worksheet_contract=passed_43_of_43`
+- `runtime_representative_value_persistence=passed`
+- `destination_contract_proven=runtime_instantiation_passed_pending_read_only_api_confirmation`
 - `atomicity_classification=api_patch_unresolved`
 - `analyte_patch_key_contract=unresolved`
 
-No credential file was read. No token, REST API request, PATCH, live-QBench
-access, Publish, QC Review, or Pass/Fail artifact occurred.
+The full 40x26 Data grid persisted before and after Test-list reopen; no
+blank/default grid appeared. The raw runtime export is preserved locally with
+SHA-256
+`f7c702dd3ecac694c32b3aa686cca6cd4928198b7bda45f4d8e030e65d681bfe`.
+The tracked sanitized export contains exactly the 43 destination columns and
+one all-blank runtime row.
 
-## Resume verification
+Five representative values persisted after save and reopen. B22 and B23
+remained blank. Only those five values were cleared, and a final save,
+leave, and reopen proved all 43 destinations blank again.
 
-The user subsequently reported that the review-assignee lock had been
-resolved. A fresh browser state and exact Worksheets-list reopen did not show
-that resolution in the current signed-in Sandbox session: Version 1 remained
-the only version, remained `PENDING`, and the active lock remained assigned to
-a different account. The already-authorized Approve action was retried once
-and returned the same exact lock error. A final list-based reopen again showed
-only Version 1 in `PENDING` state. No Assay or downstream runtime object was
-created.
+No credential file was read. No OAuth token, REST API request, PATCH, live
+QBench access, Publish, QC Review, or Pass/Fail artifact occurred. The
+operational mapping remains unpromoted pending read-only API confirmation.

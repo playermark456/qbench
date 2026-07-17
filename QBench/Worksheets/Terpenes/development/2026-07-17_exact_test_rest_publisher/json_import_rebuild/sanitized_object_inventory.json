@@ -1,8 +1,8 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "sanitized": true,
   "internal_sandbox_ids_omitted": true,
-  "classification": "approval_activation_blocked_active_lock_assignee_mismatch",
+  "classification": "runtime_instantiation_passed_pending_read_only_api_confirmation",
   "objects": [
     {
       "type": "Spreadsheet Worksheet",
@@ -12,7 +12,27 @@
     {
       "type": "Spreadsheet Worksheet",
       "name": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
-      "state": "JSON Scalar 43 Field Base v1 is PENDING with an active review lock; approval blocked; 40x26 and 43 unqualified named cells were verified before status change"
+      "state": "active isolated worksheet; 40x26 and 43 unqualified named cells"
+    },
+    {
+      "type": "Worksheet Version",
+      "name": "JSON Scalar 43 Field Base v1",
+      "state": "APPROVED and ACTIVE; no Version 2"
+    },
+    {
+      "type": "Assay",
+      "name": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_ASSAY",
+      "state": "active isolated Assay with only the JSON scalar worksheet"
+    },
+    {
+      "type": "Sample",
+      "name": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_RUNTIME_SAMPLE",
+      "state": "fresh synthetic runtime Sample"
+    },
+    {
+      "type": "Test",
+      "name": "fresh Test created only from SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_ASSAY",
+      "state": "runtime contract passed; 43/43 blank baseline restored"
     }
   ],
   "working_native_export_filename": "source/2026-07-17_SBX_ONLY_TERPENES_NATIVE_SCALAR_43_FIELD_BASE_working_native_export_spreadsheet.json",
@@ -53,7 +73,7 @@
   "corrected_draft_version_created": true,
   "corrected_version_row_visibly_present": true,
   "corrected_version": "JSON Scalar 43 Field Base v1",
-  "corrected_version_state": "PENDING",
+  "corrected_version_state": "APPROVED and ACTIVE",
   "grid_before_refresh": "40x26",
   "grid_after_refresh_and_list_reopen": "40x26",
   "named_cells_before_refresh": 43,
@@ -65,36 +85,33 @@
   "semantic_round_trip_result": "passed_after_normalizing_only_qbench_regenerated_renderer_uuid",
   "json_import_saved_definition_contract": "passed_43_of_43",
   "json_import_round_trip": "passed",
-  "destination_contract_proven": "saved_definition_only_pending_runtime_instantiation",
-  "approval_activation_classification": "approval_activation_blocked_active_lock_assignee_mismatch",
-  "approval_error": "This worksheet cannot be modified because it is currently locked.",
-  "active_review_lock": true,
-  "review_lock_assignee_matches_current_session": false,
-  "unlock_control_available": false,
-  "status_progression": [
-    "DRAFT",
-    "PENDING"
-  ],
+  "approval_activation_classification": "passed_43_of_43",
+  "approval_procedure_correction": "approval_attempt_procedural_error_unnecessary_lock_handling",
+  "historical_approval_error": "This worksheet cannot be modified because it is currently locked.",
+  "direct_approval_without_lock_required": true,
+  "approved": true,
+  "activated": true,
+  "version_2_created": false,
+  "assay_created": true,
+  "assay_association_persisted": true,
+  "sample_created": true,
+  "test_created": true,
+  "runtime_grid_before_reopen": "40x26",
+  "runtime_grid_after_reopen": "40x26",
+  "runtime_export_sha256": "f7c702dd3ecac694c32b3aa686cca6cd4928198b7bda45f4d8e030e65d681bfe",
+  "runtime_test_worksheet_contract": "passed_43_of_43",
+  "runtime_representative_value_persistence": "passed",
+  "representative_values_cleared": true,
+  "final_blank_destinations": 43,
+  "destination_contract_proven": "runtime_instantiation_passed_pending_read_only_api_confirmation",
   "atomicity_classification": "api_patch_unresolved",
   "analyte_patch_key_contract": "unresolved",
   "manual_sdf_preserved_in_working_native_export": true,
-  "qbench_accessed_in_correction_prompt": false,
-  "qbench_sandbox_accessed_for_saved_draft_proof": true,
-  "approval_attempted": true,
-  "manual_lock_resolution_reported": true,
-  "manual_lock_resolution_visible_in_current_session": false,
-  "approval_attempt_count": 2,
-  "final_list_reopen_confirmed_single_version_1_pending": true,
-  "approved": false,
-  "activated": false,
-  "assay_created": false,
-  "sample_created": false,
-  "test_created": false,
-  "analytical_results_entered": false,
   "pass_fail_artifact_introduced": false,
   "credentials_read_or_displayed": false,
   "oauth_token_requested": false,
   "qbench_rest_api_requested": false,
   "patch_requested": false,
-  "live_qbench_accessed": false
+  "live_qbench_accessed": false,
+  "publish_or_qc_review_performed": false
 }

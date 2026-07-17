@@ -94,8 +94,8 @@ with zero of seven named-cell definitions, so publisher code was not changed
 to construct scalar PATCH keys and `analyte_patch_key_contract` remains
 `unresolved`. No token or API request was made to infer the contract.
 
-The prerequisite JSON scalar runtime phase is currently blocked before Assay
-creation: exact Version 1 is `PENDING`, but approval was rejected because of
-an active review lock assigned to a different user. This UI workflow result
-does not authorize token exchange, read-only REST access, or PATCH. No
-credential file was read during this phase.
+The prerequisite JSON scalar runtime phase passed: exact Version 1 is
+Approved/Active, the isolated Assay association persisted, and a fresh normal
+Assay-created Test retained all 43 destinations and returned to a 43/43 blank
+baseline. This UI/runtime result does not authorize token exchange, read-only
+REST access, or PATCH. No credential file was read during this phase.

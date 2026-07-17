@@ -3,7 +3,7 @@
 Date: 2026-07-17
 
 Classification:
-**`saved_definition_round_trip_passed_pending_runtime_instantiation`**
+**`runtime_instantiation_passed_pending_read_only_api_confirmation`**
 
 Manual testing established two separate findings:
 
@@ -65,14 +65,18 @@ identical to the candidate. Therefore:
 
 - `json_import_saved_definition_contract=passed_43_of_43`
 - `json_import_round_trip=passed`
-- `destination_contract_proven=saved_definition_only_pending_runtime_instantiation`
+- `destination_contract_proven=runtime_instantiation_passed_pending_read_only_api_confirmation`
 
-In the separately authorized approval phase, the exact Version 1 moved from
-`DRAFT` to `PENDING`, and that state persisted after list-based reopen. QBench
-then rejected the supported Approve action because an active review lock was
-assigned to a different user than the current Sandbox session. The session
-exposed no unlock control. Version 1 therefore remains `PENDING`, not Approved
-or Active. No Assay, Sample, Test, analytical result, OAuth token, REST
-request, PATCH, live-QBench access, or Pass/Fail artifact occurred. The
-operational mapping remains unpromoted pending runtime instantiation. See
-`runtime_instantiation/` for the sanitized blocked-gate evidence.
+The prior lock-based stop is now classified as
+`approval_attempt_procedural_error_unnecessary_lock_handling`. The user
+manually approved Version 1; Codex verified that the exact single Version 1 is
+Approved/Active and created no Version 2. The isolated Assay association and a
+fresh normal Assay-created Test retained the full 40x26 definition through
+list-based reopen. The runtime export passed 43/43, representative values
+persisted, B22/B23 stayed blank, and the five probes were cleared back to a
+43/43 blank baseline.
+
+No credential was read and no OAuth token, REST request, PATCH, live-QBench
+access, Publish, QC Review, or Pass/Fail artifact occurred. The operational
+mapping remains unpromoted pending read-only API confirmation. See
+`runtime_instantiation/` for the sanitized runtime evidence.

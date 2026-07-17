@@ -71,10 +71,22 @@ The earlier unique one-cell persistence diagnostic remains a historical failed
 browser procedure, not evidence of a QBench environment failure. The current
 Codex B2 save-control also failed after refresh/reopen while `sdf` remained.
 
-## JSON scalar approval phase retained successes
+## JSON scalar Approved/Active runtime success
 
-Before the approval attempt, exact Version 1 retained its passing 40x26 grid,
-28 anchors, and 43/43 unqualified named-cell contract. The move from `DRAFT`
-to `PENDING` persisted after a full Worksheets-list reopen. These are saved
-definition and workflow-persistence successes only; approval, activation, and
-runtime instantiation did not pass.
+The user manually approved exact `JSON Scalar 43 Field Base v1`. Codex
+verified the exact title and breadcrumb, the single Version 1 as Approved and
+Active, and the absence of Version 2. The reopened definition retained its
+40x26 grid, 28 anchors, and 43/43 unqualified, blank, writable, unique,
+non-formula, exportable destinations.
+
+The isolated Assay association persisted after list-based reopen. A fresh
+Sample assigned only that Assay created one normal Test whose full 40x26 Data
+grid persisted before and after Test-list reopen; no blank/default grid
+appeared. The raw Test Worksheet CSV SHA-256 is
+`f7c702dd3ecac694c32b3aa686cca6cd4928198b7bda45f4d8e030e65d681bfe`,
+and its exact 43 destination columns were all blank.
+
+The five representative values persisted exactly, B22/B23 remained blank,
+and only those five values were cleared. A final save, leave, and reopen proved
+all 43 destinations blank again. This establishes
+`destination_contract_proven=runtime_instantiation_passed_pending_read_only_api_confirmation`.

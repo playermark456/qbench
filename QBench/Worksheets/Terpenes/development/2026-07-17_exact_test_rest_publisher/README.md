@@ -3,11 +3,9 @@
 Date: 2026-07-17
 
 Status: **The isolated unqualified-address JSON candidate passed its saved
-43/43 and raw round-trip gates. Exact Version 1 moved from `DRAFT` to
-`PENDING`, but QBench rejected approval because its active review lock is
-assigned to a different user than the current Sandbox session. Approval,
-activation, Assay creation, and runtime instantiation stopped before the first
-token request**.
+43/43, raw round-trip, Approved/Active, normal Assay/Test instantiation,
+runtime export, representative-value persistence, and restored 43/43 blank
+baseline gates. Work remains paused before the first token request**.
 
 This package implements a controlled, Sandbox-only publisher for reviewed
 Terpenes Batch rows. It routes only by exact QBench Test ID, builds the complete
@@ -18,16 +16,20 @@ COA, or METRC artifact.
 
 ## Current controlled stop
 
-The current Phase 1 classification is
-`approval_activation_blocked_active_lock_assignee_mismatch`. The exact
-`JSON Scalar 43 Field Base v1` row visibly persisted as `PENDING` after a full
-Worksheets-list reopen. The supported Approve action returned `This worksheet
-cannot be modified because it is currently locked.` The exact worksheet's
-Locks tab showed an active review lock assigned to a different user than the
-signed-in session and exposed no unlock control. No Assay, Sample, Test, or
-runtime export was created. The saved-definition classification remains
-`passed_43_of_43`, while
-`destination_contract_proven=saved_definition_only_pending_runtime_instantiation`.
+The prior lock conclusion is superseded by
+`approval_attempt_procedural_error_unnecessary_lock_handling`. A worksheet
+review lock is not required for approval in this Sandbox, and no administrator,
+different account, or QBench support was required. The user manually approved
+the exact `JSON Scalar 43 Field Base v1`; Codex verified the same single
+Version 1 as Approved/Active and confirmed no Version 2 exists.
+
+The isolated Assay association persisted, a fresh normal Assay-created Test
+retained the full 40x26 grid before and after list-based reopen, and the
+runtime export exposed all 43 exact destination columns. Five representative
+values persisted, B22/B23 stayed blank, and only those five values were
+cleared. A final save, leave, and reopen proved all 43 destinations blank.
+Therefore
+`destination_contract_proven=runtime_instantiation_passed_pending_read_only_api_confirmation`.
 
 An ignored local secrets file has all three required nonblank keys, and the
 base URL passes the exact Sandbox allowlist. No credential value was printed,
@@ -97,8 +99,8 @@ remained unchanged after save and reopen. Therefore:
 - the regenerated candidate passed local validation with SHA-256
   `e5ef20a5cec574dc292ed679867e01313233c92ceda9ef863bf98dd8d4485b80`;
 - the user imported the corrected candidate into the exact isolated Sandbox
-  Worksheet and saved `JSON Scalar 43 Field Base v1`; the Versions tab visibly
-  showed `DRAFT`;
+  Worksheet, saved `JSON Scalar 43 Field Base v1`, and manually approved it;
+  Codex verified the exact single Version 1 as Approved/Active;
 - browser verification before refresh and after list-based reopen proved the
   exact title and breadcrumb, 40x26 grid, 28 anchors, and all 43 unqualified,
   blank, writable, unique, non-formula, exportable destinations;
@@ -107,8 +109,9 @@ remained unchanged after save and reopen. Therefore:
   semantic comparison passed after normalizing only QBench's regenerated
   renderer UUID;
 - `json_import_saved_definition_contract=passed_43_of_43`,
-  `json_import_round_trip=passed`, and
-  `destination_contract_proven=saved_definition_only_pending_runtime_instantiation`;
+  `json_import_round_trip=passed`,
+  `runtime_test_worksheet_contract=passed_43_of_43`, and
+  `destination_contract_proven=runtime_instantiation_passed_pending_read_only_api_confirmation`;
 - the earlier destination-proof objects and the native Worksheet, two
   versions, Assay, Sample, and Test are inventoried in separate sanitized
   evidence without internal IDs;
@@ -185,29 +188,26 @@ and in-memory API behavior; they are not Sandbox success evidence.
    hashes.
 2. Retain `config/field_mapping_scalar_candidate.csv` as an unpromoted
    candidate; do not replace the operational bracketed mapping.
-3. Manually upload the completed generated JSON candidate to the exact inactive
-   task-created Sandbox worksheet. Do not manually type 43 named cells.
-4. After the imported Draft saves and reopens with 43/43 named cells, use
-   **Export Spreadsheet** and perform the documented semantic round trip.
-5. Only after the saved-definition round trip passes, create the authorized
-   runtime proof and verify the exact 43/43 contract on a fresh Test.
-6. Only after Phase 1 passes, create Version 2 and prove the exact 43/43 saved
-   definition and fresh runtime instantiation.
-7. Add formulas and the complete Prompt 3 layout incrementally, repeating the
-   Assay-created Test proof after each stage.
+3. Retain the exact Approved/Active Version 1, saved round trip, runtime CSV
+   hash, and final 43/43 blank Test baseline. Do not upload another candidate,
+   create Version 2, or edit the proven definition.
+4. Retain the direct-approval correction: future Sandbox worksheet approvals
+   must use the normal Approve action without creating or depending on a lock.
+5. Add formulas or the complete Prompt 3 layout only in a separately
+   authorized version and repeat the Assay-created Test proof after each stage.
 8. Record internal synthetic identifiers only in a local ignored evidence
    file, and update sanitized provenance without those identifiers.
-9. Confirm the documented same-host OAuth token path, then lock
+7. Confirm the documented same-host OAuth token path, then lock
    `token_endpoint_contract_proven` and `token_path` in configuration.
-10. Supply Sandbox client credentials through the ignored secrets file.
-11. Pause for explicit authorization before the first token request.
-12. Run `inspect`, then review the sanitized audit.
-13. Run the scalar and rollback probe manually as documented.
-14. Run the multi-field invalid-field probe and classify atomicity.
-15. Keep direct publishing blocked unless the classification is
+8. Supply Sandbox client credentials through the ignored secrets file.
+9. Pause for explicit authorization before the first token request.
+10. Run `inspect`, then review the sanitized audit.
+11. Run the scalar and rollback probe manually as documented.
+12. Run the multi-field invalid-field probe and classify atomicity.
+13. Keep direct publishing blocked unless the classification is
    `api_patch_atomic`; otherwise stop and design staging-and-commit.
-16. Run `dry-run` and review every old/new field value.
-17. Publish one fresh synthetic Test, verify, and repeat the dry-run to prove
+14. Run `dry-run` and review every old/new field value.
+15. Publish one fresh synthetic Test, verify, and repeat the dry-run to prove
     `NO CHANGE`.
-18. Publish a fresh three-Test synthetic Batch and stop on the first failure.
-19. Do not promote to live QBench from this package.
+16. Publish a fresh three-Test synthetic Batch and stop on the first failure.
+17. Do not promote to live QBench from this package.

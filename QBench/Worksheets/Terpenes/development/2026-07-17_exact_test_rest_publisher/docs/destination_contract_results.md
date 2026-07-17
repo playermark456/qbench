@@ -2,8 +2,11 @@
 
 Date: 2026-07-17
 
-Current controlled-stop classification:
-**`approval_activation_blocked_active_lock_assignee_mismatch`**.
+Current destination classification:
+**`runtime_instantiation_passed_pending_read_only_api_confirmation`**.
+
+Historical approval-procedure correction:
+**`approval_attempt_procedural_error_unnecessary_lock_handling`**.
 
 Prior imported-definition runtime classification:
 **`normal_assay_test_instantiation_failed_blank_default`**.
@@ -37,25 +40,32 @@ navigating away and reopening it.
 | Qualified-address Save As New Version | `rejected_sheet_qualified_cell_definition` |
 | Unqualified-address saved Draft | `passed_43_of_43` |
 | JSON round-trip export | `passed` |
-| Publisher destination gate | `saved_definition_only_pending_runtime_instantiation` |
-| JSON Version 1 approval/activation gate | `approval_activation_blocked_active_lock_assignee_mismatch` |
+| Publisher destination gate | `runtime_instantiation_passed_pending_read_only_api_confirmation` |
+| JSON Version 1 approval/activation gate | `passed_43_of_43` |
+| JSON normal Assay-created runtime Test | `passed_43_of_43` |
+| Representative value persistence | `passed` |
 
-## JSON Version 1 approval gate
+## JSON Version 1 approval and runtime gate
 
-The exact `JSON Scalar 43 Field Base v1` retained the already-proven 40x26,
-28-anchor, 43/43 unqualified destination contract before status change. It
-moved from `DRAFT` to `PENDING`, and the exact Version 1 row remained
-`PENDING` after leaving the worksheet and reopening it from the Worksheets
-list. QBench then rejected the supported Approve action with `This worksheet
-cannot be modified because it is currently locked.` The Locks tab showed one
-active review lock assigned to a different user than the current session and
-no available unlock control.
+The user manually approved exact `JSON Scalar 43 Field Base v1`. Codex
+verified the same single Version 1 as Approved/Active, confirmed no Version 2,
+and reopened the definition at 40x26 with 28 anchors and 43/43 unqualified,
+blank, writable, unique, non-formula, exportable destinations.
 
-The version is not Approved or Active. Per the stop gate, no Assay, Sample,
-Test, runtime export, or representative value was created. This does not
-invalidate the saved-definition proof and is not a runtime-contract failure.
-`destination_contract_proven` remains
-`saved_definition_only_pending_runtime_instantiation`.
+The prior lock-based conclusion is superseded by
+`approval_attempt_procedural_error_unnecessary_lock_handling`. The historical
+message, `This worksheet cannot be modified because it is currently locked.`,
+is retained as a procedural/browser error, not a QBench permission limitation.
+No review lock, administrator, different account, or QBench support was
+required.
+
+The isolated Assay association persisted after list-based reopen. A fresh
+normal Assay-created Test retained the full 40x26 grid before and after
+Test-list reopen. The raw runtime CSV has SHA-256
+`f7c702dd3ecac694c32b3aa686cca6cd4928198b7bda45f4d8e030e65d681bfe`
+and exposed all 43 exact destination columns blank. Five representative values
+persisted exactly, B22/B23 stayed blank, and only those five were cleared. A
+final save, leave, and reopen proved all 43 destinations blank again.
 
 ## Isolated Sandbox objects
 
@@ -298,10 +308,10 @@ Dimethylacetamide, or Peak Table destinations. SHA-256:
 `e5ef20a5cec574dc292ed679867e01313233c92ceda9ef863bf98dd8d4485b80`.
 
 The user imported the exact unqualified candidate into
-`SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE` and saved
-`JSON Scalar 43 Field Base v1` as Draft. The Versions tab visibly showed the
-Draft row. Before refresh and after a refresh plus list-based reopen, the
-Draft retained the exact 40x26 grid, all 28 anchors, and 43 unqualified named
+`SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE`, saved
+`JSON Scalar 43 Field Base v1`, and manually approved it. Before refresh and
+after list-based reopen, the definition retained the exact 40x26 grid, all 28
+anchors, and 43 unqualified named
 cells. All 43 destinations remained blank, writable, unique, non-formula, and
 exportable. The first analyte is `D2`, and no A2 mapping exists.
 
@@ -314,14 +324,16 @@ regenerated renderer UUID. Classifications:
 
 - `json_import_saved_definition_contract=passed_43_of_43`
 - `json_import_round_trip=passed`
-- `destination_contract_proven=saved_definition_only_pending_runtime_instantiation`
+- `runtime_test_worksheet_contract=passed_43_of_43`
+- `runtime_representative_value_persistence=passed`
+- `destination_contract_proven=runtime_instantiation_passed_pending_read_only_api_confirmation`
 - `atomicity_classification=api_patch_unresolved`
 - `analyte_patch_key_contract=unresolved`
 
-The Draft was not approved or activated. No Assay, Sample, Test, analytical
-result, token, REST request, PATCH, live-QBench access, or Pass/Fail artifact
-occurred. The operational mapping remains unpromoted pending runtime
-instantiation.
+The exact Version 1 is Approved/Active and the isolated Assay/Test runtime gate
+passed. No credential was read and no token, REST request, PATCH, live-QBench
+access, Publish, QC Review, or Pass/Fail artifact occurred. The operational
+mapping remains unpromoted pending read-only API confirmation.
 
 ## Version-creation control reconciliation
 

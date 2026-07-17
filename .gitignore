@@ -25,6 +25,9 @@ QBench/Worksheets/Terpenes/development/*/native_43_field_rebuild/*saved_reopened
 QBench/Worksheets/Terpenes/development/*/native_43_field_rebuild/*instantiated_export_spreadsheet.*
 QBench/Worksheets/Terpenes/development/*/native_43_field_rebuild/*object_ids.local.json
 
+# Raw Sandbox JSON-scalar runtime export (preserved locally; sanitized evidence is tracked)
+QBench/Worksheets/Terpenes/development/*/json_import_rebuild/runtime_instantiation/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_RUNTIME_TEST_WORKSHEET_export_data.csv
+
 # Python caches and local virtual environments
 __pycache__/
 *.py[cod]

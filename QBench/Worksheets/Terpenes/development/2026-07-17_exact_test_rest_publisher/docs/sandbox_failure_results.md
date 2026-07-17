@@ -38,11 +38,13 @@ row, 40x26 grid, 28 anchors, and all 43 named cells survived refresh and
 list-based reopen. The raw Export Spreadsheet round trip passed after
 normalizing only QBench's regenerated renderer UUID.
 
-Current classification:
+Historical classification:
 **`saved_definition_round_trip_passed_pending_runtime_instantiation`**.
 
-This resolves the saved-definition gate only. Runtime instantiation remains
-pending, so the operational publisher gate is still closed.
+That controlled stop is resolved. The Approved/Active and normal
+Assay-created runtime gates now pass 43/43. The operational publisher gate
+remains closed only because read-only API confirmation, PATCH-key behavior,
+and atomicity are unresolved.
 
 ## Destination proof controlled stop
 
@@ -136,20 +138,19 @@ alternate hosts, missing runtime approvals, and unrelated-cell mutation.
 
 Sandbox classification for every PATCH-dependent case remains **not run**.
 
-## JSON scalar Version 1 approval blocked
+## Historical approval procedure correction
 
-Classification: `approval_activation_blocked_active_lock_assignee_mismatch`.
+Superseding classification:
+`approval_attempt_procedural_error_unnecessary_lock_handling`.
 
-The supported Approve action on the exact `PENDING` Version 1 returned `This
-worksheet cannot be modified because it is currently locked.` The exact
-worksheet showed an active review lock assigned to a different user than the
-current signed-in Sandbox session, with no unlock action available. Version 1
-was not approved or activated. The explicit stop gate prevented Assay, Sample,
-Test, export, or representative-value creation. No runtime failure was
-classified because runtime instantiation was not attempted.
+The historical non-secret error, `This worksheet cannot be modified because
+it is currently locked.`, resulted from Codex's unnecessary lock handling and
+must not be treated as a QBench permission limitation. Approval in this
+Sandbox does not require creating, assigning, requesting, or depending on a
+worksheet review lock. No administrator, different account, or QBench support
+was required.
 
-The later resume attempt after a reported manual lock resolution produced the
-same result. Fresh list-based navigation showed the exact single Version 1
-still `PENDING`; the active lock still belonged to a different account than
-the current session, and the retried Approve action returned the same lock
-error. The final list reopen again showed no Version 2 and no status change.
+The user manually approved the exact Version 1. Codex then verified it as the
+single Approved/Active version, confirmed no Version 2, and completed the
+normal Assay/Test runtime proof at 43/43. No token, REST request, PATCH, live
+access, Publish, QC Review, or Pass/Fail artifact occurred.

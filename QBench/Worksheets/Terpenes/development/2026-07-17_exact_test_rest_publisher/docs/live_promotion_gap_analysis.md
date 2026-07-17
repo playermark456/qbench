@@ -25,40 +25,35 @@ Blocking gaps:
 15. The inherited Prompt 4 candidate-manifest layout hash mismatch remains.
 16. No live-specific credential, identifier, report, COA, METRC, rollback, or
     operational procedure has been designed or tested.
-17. The locally valid underscore-scalar candidate remains unpromoted because
-    its new native Worksheet reopened with zero of seven representative named
-    cells; no approved/active export or fresh runtime Test exists.
+17. The proven JSON-scalar Version 1 remains an isolated Sandbox definition;
+    its successful Approved/Active runtime proof is not live authorization.
 18. The user proved native named-cell persistence manually with `sdf` at `A1`,
     but the separate Codex B2 save-control disappeared after refresh/reopen
     while `sdf` remained; browser-controlled worksheet entry is not
     authoritative.
-19. The native-envelope qualified-address candidate rendered 40x26 with all 43
-    named cells, but the old one-tab validator rejected Save As New Version.
-    The regenerated candidate uses 43 unqualified runtime cell strings and
-    passes local validation; corrected save, Draft, and round-trip proof remain
-    pending.
+19. The regenerated unqualified candidate has passed saved round trip and
+    normal Assay-created runtime instantiation, but read-only API shapes and
+    PATCH-key representation remain unresolved.
 
-The recommended compatibility route is the corrected native-envelope JSON:
+The compatibility route is now proven through the corrected native-envelope
+JSON:
 
 1. Retain the exact 43-row underscore-scalar candidate without changing the
    operational mapping.
-2. In a future explicitly authorized prompt, upload the unqualified-address,
-   locally validated JSON candidate to the exact isolated task-created
-   worksheet. Do not type 43 named cells and do not reuse either prior
-   qualified-address candidate.
-3. Save and reopen the imported Draft, verify 43/43 named cells, and perform an
-   Export Spreadsheet semantic round trip before approval or activation.
-4. Only after the saved-definition round trip passes should a separately
-   authorized runtime Test prove all 43 destinations.
-5. Add formulas and the remaining Prompt 3 layout incrementally, repeating the
-   runtime proof at each stage.
+2. Retain the exact single Approved/Active Version 1, the raw saved-definition
+   round trip, the raw runtime CSV hash, and the restored 43/43 blank Test.
+3. Do not upload another candidate, create Version 2, or edit this proven
+   definition in the current task.
+4. In a separately authorized phase, prove the same-host OAuth endpoint and
+   perform read-only API confirmation before any PATCH work.
+5. Add formulas and the remaining Prompt 3 layout only in a separately
+   authorized version, repeating the runtime proof at each stage.
 
 Live QBench was not accessed. No customer data was used. No Pass/Fail artifact
 was created. No COA was generated and nothing was transmitted to METRC.
 
-The immediate Sandbox gap is resolution of the active review lock on exact
-`JSON Scalar 43 Field Base v1`. A Sandbox administrator or the assigned
-reviewer must use QBench's normal review workflow so the same Version 1 can be
-approved and activated. Do not create Version 2. Only then may the isolated
-Assay and runtime-instantiation gates resume. This blocked workflow adds no
-live-QBench authorization.
+The immediate Sandbox gap is read-only API confirmation. The prior lock
+conclusion was a procedural error: approval did not require a review lock,
+administrator, different account, or QBench support. The exact Version 1 is
+Approved/Active and its runtime gate passed, but this adds no live-QBench
+authorization.

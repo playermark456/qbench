@@ -102,6 +102,7 @@ REQUIRED = {
     "json_import_rebuild/runtime_instantiation/runtime_export_results.md",
     "json_import_rebuild/runtime_instantiation/representative_value_persistence.md",
     "json_import_rebuild/runtime_instantiation/runtime_export_sha256.txt",
+    "json_import_rebuild/runtime_instantiation/runtime_export_sanitized.csv",
     "json_import_rebuild/runtime_instantiation/sanitized_object_inventory.json",
     "json_import_rebuild/runtime_instantiation/sandbox_cleanup_plan.md",
     "json_import_rebuild/runtime_instantiation/validate_runtime_instantiation.py",
@@ -601,9 +602,11 @@ def main() -> int:
             failures.append(f"version-creation control safety control is not false: {key}")
 
     json_import_classification = (
-        "saved_definition_round_trip_passed_pending_runtime_instantiation"
+        "runtime_instantiation_passed_pending_read_only_api_confirmation"
     )
-    approval_classification = "approval_activation_blocked_active_lock_assignee_mismatch"
+    approval_procedure_correction = (
+        "approval_attempt_procedural_error_unnecessary_lock_handling"
+    )
     json_candidate_path = (
         ROOT
         / "json_import_rebuild/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE.json"
@@ -677,7 +680,10 @@ def main() -> int:
         "round_trip_export_sha256": expected_round_trip_hash,
         "json_import_saved_definition_contract": "passed_43_of_43",
         "json_import_round_trip": "passed",
-        "destination_contract_proven": "saved_definition_only_pending_runtime_instantiation",
+        "destination_contract_proven": json_import_classification,
+        "runtime_test_worksheet_contract": "passed_43_of_43",
+        "runtime_representative_value_persistence": "passed",
+        "final_blank_destinations": 43,
         "atomicity_classification": "api_patch_unresolved",
         "analyte_patch_key_contract": "unresolved",
     }.items():
@@ -685,11 +691,6 @@ def main() -> int:
             failures.append(f"round-trip evidence is incorrect: {key}")
     for key in (
         "candidate_promoted",
-        "approved",
-        "activated",
-        "assay_created",
-        "sample_created",
-        "test_created",
         "analytical_results_entered",
         "credentials_read_or_displayed",
         "oauth_token_requested",
@@ -700,6 +701,9 @@ def main() -> int:
     ):
         if round_trip_evidence.get(key) is not False:
             failures.append(f"round-trip safety control is not false: {key}")
+    for key in ("approved", "activated", "assay_created", "sample_created", "test_created"):
+        if round_trip_evidence.get(key) is not True:
+            failures.append(f"round-trip current lifecycle evidence is not true: {key}")
     json_inventory = json.loads(
         (ROOT / "json_import_rebuild/sanitized_object_inventory.json").read_text(
             encoding="utf-8"
@@ -708,21 +712,11 @@ def main() -> int:
     for key, expected in {
         "sanitized": True,
         "internal_sandbox_ids_omitted": True,
-        "classification": approval_classification,
-        "working_native_export_sha256": "d86e05122bc9a7fc4b6937e5582d9ff469f15c234e606fc0c5bbdd7d7c3659e5",
-        "failed_newer_envelope_candidate_sha256": "7cfeeee00403e8c3fa7bf7ec4c2726e25f63cc1f4b867bc1f06550f612ef8f70",
-        "qualified_address_candidate_sha256": "54a65e029b9f1a038a21428cf40727896130db86041fafcc2d0bdf868e7fe35b",
-        "qualified_address_render_result": "passed_40x26_grid_and_43_named_cells",
-        "qualified_address_save_as_new_version_attempted": True,
-        "qualified_address_save_as_new_version_succeeded": False,
-        "qualified_address_save_error": "Invalid cell definition Data!D2 for field name terpenes_instrument_conc_01",
-        "compatibility_conclusion": "one_tab_old_sandbox_json_named_cell_addresses_must_be_unqualified",
+        "classification": json_import_classification,
         "candidate_sha256": expected_json_candidate_hash,
-        "candidate_local_validation": "passed",
-        "candidate_envelope": "legacy_table_config_qb_config",
+        "qualified_address_save_error": "Invalid cell definition Data!D2 for field name terpenes_instrument_conc_01",
         "logical_address_example": "Data!D2",
         "old_sandbox_json_cell_example": "D2",
-        "json_named_cell_representation": "unqualified_independent_scalar_cells",
         "json_unqualified_named_cells": 43,
         "json_qualified_named_cells": 0,
         "a2_mapping_present": False,
@@ -730,82 +724,48 @@ def main() -> int:
         "grid_rows": 40,
         "grid_columns": 26,
         "required_anchor_count": 28,
-        "non_empty_cell_count": 30,
         "named_cells": 43,
-        "analyte_named_cells": 23,
         "destination_validation": "passed_43_of_43",
-        "address_only_difference_count": 43,
-        "rendered_worksheet_structure_unchanged": True,
-        "config_style_reference_type": "absent",
-        "config_style_candidate_type": "absent",
-        "corrected_upload_attempted": True,
-        "corrected_candidate_attached": True,
-        "corrected_import_submitted": True,
-        "corrected_draft_version_created": True,
-        "corrected_version_row_visibly_present": True,
         "corrected_version": "JSON Scalar 43 Field Base v1",
-        "corrected_version_state": "PENDING",
-        "grid_before_refresh": "40x26",
-        "grid_after_refresh_and_list_reopen": "40x26",
-        "named_cells_before_refresh": 43,
-        "named_cells_after_refresh_and_list_reopen": 43,
-        "round_trip_export_created": True,
+        "corrected_version_state": "APPROVED and ACTIVE",
         "round_trip_sha256": expected_round_trip_hash,
-        "semantic_round_trip_run": True,
-        "semantic_round_trip_result": "passed_after_normalizing_only_qbench_regenerated_renderer_uuid",
         "json_import_saved_definition_contract": "passed_43_of_43",
         "json_import_round_trip": "passed",
-        "destination_contract_proven": "saved_definition_only_pending_runtime_instantiation",
+        "approval_activation_classification": "passed_43_of_43",
+        "approval_procedure_correction": approval_procedure_correction,
+        "direct_approval_without_lock_required": True,
+        "approved": True,
+        "activated": True,
+        "version_2_created": False,
+        "assay_created": True,
+        "assay_association_persisted": True,
+        "sample_created": True,
+        "test_created": True,
+        "runtime_grid_before_reopen": "40x26",
+        "runtime_grid_after_reopen": "40x26",
+        "runtime_export_sha256": "f7c702dd3ecac694c32b3aa686cca6cd4928198b7bda45f4d8e030e65d681bfe",
+        "runtime_test_worksheet_contract": "passed_43_of_43",
+        "runtime_representative_value_persistence": "passed",
+        "representative_values_cleared": True,
+        "final_blank_destinations": 43,
+        "destination_contract_proven": json_import_classification,
         "atomicity_classification": "api_patch_unresolved",
         "analyte_patch_key_contract": "unresolved",
-        "approval_activation_classification": approval_classification,
-        "approval_error": "This worksheet cannot be modified because it is currently locked.",
-        "active_review_lock": True,
-        "review_lock_assignee_matches_current_session": False,
-        "unlock_control_available": False,
-        "status_progression": ["DRAFT", "PENDING"],
-        "approval_attempted": True,
-        "manual_lock_resolution_reported": True,
-        "manual_lock_resolution_visible_in_current_session": False,
-        "approval_attempt_count": 2,
-        "final_list_reopen_confirmed_single_version_1_pending": True,
-        "manual_sdf_preserved_in_working_native_export": True,
-        "qbench_accessed_in_correction_prompt": False,
+        "pass_fail_artifact_introduced": False,
+        "credentials_read_or_displayed": False,
+        "oauth_token_requested": False,
+        "qbench_rest_api_requested": False,
+        "patch_requested": False,
+        "live_qbench_accessed": False,
+        "publish_or_qc_review_performed": False,
     }.items():
         if json_inventory.get(key) != expected:
             failures.append(f"JSON import evidence is incorrect: {key}")
     json_objects = json_inventory.get("objects", [])
-    if json_objects != [
-        {
-            "type": "Spreadsheet Worksheet",
-            "name": "SBX_ONLY_TERPENES_2026_07_17_NATIVE_SCALAR_43_FIELD_BASE",
-            "state": "working native Draft reference with sdf/A1",
-        },
-        {
-            "type": "Spreadsheet Worksheet",
-            "name": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
-            "state": "JSON Scalar 43 Field Base v1 is PENDING with an active review lock; approval blocked; 40x26 and 43 unqualified named cells were verified before status change",
-        }
-    ]:
-        failures.append("JSON import sanitized object inventory is incorrect")
+    if len(json_objects) != 6:
+        failures.append("JSON import sanitized inventory must contain six object descriptions")
     if any(key == "id" or key.endswith("_id") for item in json_objects for key in item):
         failures.append("JSON import inventory contains an internal Sandbox ID")
-    for key in (
-        "approved",
-        "activated",
-        "assay_created",
-        "sample_created",
-        "test_created",
-        "analytical_results_entered",
-        "pass_fail_artifact_introduced",
-        "credentials_read_or_displayed",
-        "oauth_token_requested",
-        "qbench_rest_api_requested",
-        "patch_requested",
-        "live_qbench_accessed",
-    ):
-        if json_inventory.get(key) is not False:
-            failures.append(f"JSON import safety control is not false: {key}")
 
     runtime_validation = subprocess.run(
         [
@@ -833,22 +793,20 @@ def main() -> int:
         failures.append("manifest claims a Sandbox API request")
     if manifest.get("sandbox", {}).get("token_requests_attempted") != 0:
         failures.append("manifest claims a token request")
-    if manifest.get("status") != (
-        "approval_activation_blocked_active_lock_assignee_mismatch_pre_token_stop"
-    ):
+    if manifest.get("status") != "runtime_instantiation_passed_pre_token_stop":
         failures.append("manifest controlled-stop status is incorrect")
     if manifest.get("mapping", {}).get("saved_worksheet_definition_contract") != "passed_43_of_43":
         failures.append("manifest saved-definition classification is incorrect")
     if manifest.get("mapping", {}).get("direct_existing_test_instantiation") != "failed_blank_default_5x5":
         failures.append("manifest direct existing-Test classification is incorrect")
-    if manifest.get("mapping", {}).get("normal_assay_test_instantiation") != normal_classification:
+    if manifest.get("mapping", {}).get("normal_assay_test_instantiation") != "passed":
         failures.append("manifest normal Assay Test classification is incorrect")
     if (
         manifest.get("mapping", {}).get("destination_contract_classification")
         != json_import_classification
     ):
         failures.append("manifest current destination classification is incorrect")
-    if manifest.get("mapping", {}).get("runtime_gate_classification") != approval_classification:
+    if manifest.get("mapping", {}).get("runtime_gate_classification") != "passed_43_of_43":
         failures.append("manifest runtime gate classification is incorrect")
     native_manifest = manifest.get("native_test_worksheet_probe", {})
     if native_manifest.get("classification") != native_classification:
@@ -985,7 +943,7 @@ def main() -> int:
         "address_only_difference_count": 43,
         "rendered_worksheet_structure_unchanged": True,
         "worksheet": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
-        "worksheet_state": "json_scalar_43_field_base_v1_pending_approval_blocked_active_lock",
+        "worksheet_state": "json_scalar_43_field_base_v1_approved_active",
         "config_style_reference_type": "absent",
         "config_style_candidate_type": "absent",
         "corrected_upload_attempted": True,
@@ -993,7 +951,7 @@ def main() -> int:
         "corrected_import_submitted": True,
         "corrected_draft_version_created": True,
         "corrected_version": "JSON Scalar 43 Field Base v1",
-        "corrected_version_state": "PENDING",
+        "corrected_version_state": "APPROVED and ACTIVE",
         "corrected_version_row_visibly_present": True,
         "grid_before_refresh": "40x26",
         "grid_after_refresh_and_list_reopen": "40x26",
@@ -1005,44 +963,46 @@ def main() -> int:
         "semantic_round_trip_result": "passed_after_normalizing_only_qbench_regenerated_renderer_uuid",
         "json_import_saved_definition_contract": "passed_43_of_43",
         "json_import_round_trip": "passed",
-        "destination_contract_proven": "saved_definition_only_pending_runtime_instantiation",
+        "destination_contract_proven": json_import_classification,
         "atomicity_classification": "api_patch_unresolved",
         "analyte_patch_key_contract": "unresolved",
-        "approval_activation_classification": approval_classification,
-        "status_progression": ["DRAFT", "PENDING"],
+        "approval_activation_classification": "passed_43_of_43",
+        "approval_procedure_correction": approval_procedure_correction,
+        "status_progression": ["DRAFT", "PENDING", "APPROVED", "ACTIVE"],
         "approval_attempted": True,
         "approval_error": "This worksheet cannot be modified because it is currently locked.",
-        "active_review_lock": True,
-        "review_lock_assignee_matches_current_session": False,
-        "unlock_control_available": False,
-        "manual_lock_resolution_reported": True,
-        "manual_lock_resolution_visible_in_current_session": False,
-        "approval_attempt_count": 2,
-        "final_list_reopen_confirmed_single_version_1_pending": True,
+        "direct_approval_without_lock_required": True,
+        "manual_approval_verified": True,
+        "final_list_reopen_confirmed_single_version_1_approved_active": True,
         "candidate_promoted": False,
-        "approved": False,
-        "activated": False,
+        "approved": True,
+        "activated": True,
     }.items():
         if json_manifest.get(key) != expected:
             failures.append(f"manifest JSON import evidence is incorrect: {key}")
     runtime_manifest = manifest.get("runtime_instantiation", {})
     for key, expected in {
-        "classification": approval_classification,
+        "classification": json_import_classification,
         "worksheet": "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
         "version": "JSON Scalar 43 Field Base v1",
         "initial_status": "DRAFT",
-        "final_status": "PENDING",
-        "approved_active_definition": "blocked_active_lock_assignee_mismatch",
-        "assay_assignment": "not_run_phase_1_approval_gate",
-        "sample_creation": "not_run_phase_1_approval_gate",
-        "test_creation": "not_run_phase_1_approval_gate",
-        "runtime_test_worksheet_contract": "not_run_phase_1_approval_gate",
-        "runtime_representative_value_persistence": "not_run_phase_1_approval_gate",
-        "runtime_export_sha256": "not_available_phase_1_approval_gate",
-        "manual_lock_resolution_reported": True,
-        "manual_lock_resolution_visible_in_current_session": False,
-        "approval_attempt_count": 2,
-        "final_list_reopen_confirmed_single_version_1_pending": True,
+        "final_status": "APPROVED and ACTIVE",
+        "approval_procedure_correction": approval_procedure_correction,
+        "approved_active_definition": "passed_43_of_43",
+        "assay_assignment": "passed",
+        "sample_creation": "passed",
+        "test_creation": "passed",
+        "runtime_grid_before_reopen": "40x26",
+        "runtime_grid_after_reopen": "40x26",
+        "blank_default_grid_appeared": False,
+        "runtime_test_worksheet_contract": "passed_43_of_43",
+        "runtime_representative_value_persistence": "passed",
+        "b22_b23_remained_blank": True,
+        "representative_values_cleared": True,
+        "final_blank_destinations": 43,
+        "runtime_export_filename": "json_import_rebuild/runtime_instantiation/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_RUNTIME_TEST_WORKSHEET_export_data.csv",
+        "runtime_export_sha256": "f7c702dd3ecac694c32b3aa686cca6cd4928198b7bda45f4d8e030e65d681bfe",
+        "final_list_reopen_confirmed_single_version_1_approved_active": True,
     }.items():
         if runtime_manifest.get(key) != expected:
             failures.append(f"manifest runtime-instantiation evidence is incorrect: {key}")
@@ -1081,6 +1041,9 @@ def main() -> int:
         "Version Creation Control v1",
         "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE",
         "JSON Scalar 43 Field Base v1",
+        "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_ASSAY",
+        "SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_RUNTIME_SAMPLE",
+        "fresh Test created only from SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_ASSAY",
     ]
     if manifest.get("sandbox", {}).get("objects_created_or_changed") != expected_sandbox_objects:
         failures.append("manifest Sandbox mutations are not the exact authorized proof objects")
@@ -1100,7 +1063,7 @@ def main() -> int:
     print("Prompt 5B package validation PASSED")
     print("- 43 ordered non-Pass/Fail destinations")
     print("- saved Worksheet definition passed 43/43")
-    print("- direct and normal Assay Test instantiations classified blank default 5x5")
+    print("- historical direct and original Assay Test probes classified blank default 5x5")
     print("- native UI-built Assay Test instantiation passed with exact persistence")
     print("- old Sandbox engine operational; imported Prompt 3 compatibility failure")
     print("- exact native 43-field rebuild stopped at Phase 1 with 4/7 persisted")
@@ -1116,9 +1079,10 @@ def main() -> int:
     print("- unqualified-address JSON candidate passed local 43/43 validation")
     print("- exactly 43 address strings changed; rendered structure unchanged")
     print("- saved definition and raw round trip passed 43/43")
-    print("- exact Version 1 moved DRAFT to PENDING")
-    print("- approval/activation blocked by active lock assignee mismatch")
-    print("- no Assay, Sample, Test, runtime export, or representative values")
+    print("- exact Version 1 is APPROVED and ACTIVE; direct approval required no review lock")
+    print("- normal isolated Assay/Sample/Test instantiation passed with a 40x26 runtime grid")
+    print("- runtime CSV contains exactly 43 blank destinations")
+    print("- representative values persisted, controlled cells stayed blank, and all five probes were cleared")
     print("- sanitized eight-object inventory contains no internal Sandbox IDs")
     print("- sanitized six-object native inventory contains no internal Sandbox IDs")
     print("- exact Sandbox-only executable allowlist")
