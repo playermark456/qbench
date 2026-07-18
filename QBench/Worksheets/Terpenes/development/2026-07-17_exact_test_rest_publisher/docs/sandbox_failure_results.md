@@ -156,16 +156,19 @@ normal Assay/Test runtime proof at 43/43. At that earlier runtime stage, no
 token, REST request, PATCH, live access, Publish, QC Review, or Pass/Fail
 artifact occurred.
 
-## OAuth token-path controlled stop
+## OAuth controlled stops
 
 The separately authorized read-only API phase passed the exact Sandbox-origin
-and local runtime preflights. One non-retried POST to
-`/qbench/api/v1/oauth/token` returned HTTP 404 with JSON content. No access
-token was returned, written, logged, or displayed. Per the stop gate, zero GET,
-PATCH, PUT, DELETE, or non-token POST requests followed.
+and local runtime preflights. The historical non-retried POST to
+`/qbench/api/v1/oauth/token` returned HTTP 404 JSON. Authoritative inspection of
+the exact existing Sandbox client then proved the v2 multipart JWT-bearer route.
+The single permitted retry to `/qbench/api/v2/auth/token` returned HTTP 400
+JSON. No access token was returned or written by the runner. Per the stop gate,
+zero GET, PATCH, PUT, DELETE, or non-token POST requests followed.
 
-Classification: `oauth_token_endpoint_404_controlled_stop`.
+Current classification: `oauth_authoritative_endpoint_http_400_controlled_stop`.
 
-The attempted path remains unproven. No alternative token path was guessed or
-probed, API identity and Worksheet key exposure were not claimed, and the
-destination/PATCH/atomicity classifications remain unchanged.
+The endpoint is proven, but successful assertion/request acceptance is not.
+No alternate payload was guessed or probed, API identity and Worksheet key
+exposure were not claimed, and the destination/PATCH/atomicity classifications
+remain unchanged.

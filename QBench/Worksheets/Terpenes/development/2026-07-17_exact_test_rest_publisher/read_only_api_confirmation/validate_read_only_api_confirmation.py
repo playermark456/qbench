@@ -14,6 +14,9 @@ EVIDENCE = Path(__file__).resolve().parent
 REQUIRED = {
     "README.md",
     "preflight_plan.md",
+    "oauth_endpoint_discovery.md",
+    "oauth_endpoint_sources.csv",
+    "oauth_404_root_cause.md",
     "oauth_result_sanitized.md",
     "object_identity_results.md",
     "worksheet_get_results.md",
@@ -68,26 +71,40 @@ def main() -> int:
     requests = ledger.get("requests", [])
     if ledger.get("allowed_origin") != "https://ait-sandbox.qbench.net":
         failures.append("ledger allowed origin is not exact")
-    if len(requests) != 1:
-        failures.append("controlled-stop ledger must contain exactly one request")
-    else:
-        request = requests[0]
-        expected_request = {
+    expected_requests = [
+        {
             "sequence": 1,
+            "phase": "historical_incorrect_endpoint",
             "method": "POST",
             "endpoint_template": "/qbench/api/v1/oauth/token",
             "http_status": 404,
             "content_type": "application/json",
             "allowed_origin": True,
             "redirect_escaped_allowed_origin": False,
-        }
-        if request != expected_request:
-            failures.append("sanitized token-request ledger entry is incorrect")
+        },
+        {
+            "sequence": 2,
+            "phase": "authoritative_retry_and_read_only_confirmation",
+            "method": "POST",
+            "endpoint_template": "/qbench/api/v2/auth/token",
+            "http_status": 400,
+            "content_type": "application/json",
+            "allowed_origin": True,
+            "redirect_escaped_allowed_origin": False,
+        },
+    ]
+    if requests != expected_requests:
+        failures.append("sanitized historical and authoritative token-request ledger is incorrect")
+    if ledger.get("schema_version") != 2 or ledger.get("method_counts") != {"POST": 2}:
+        failures.append("ledger schema or method counts are incorrect")
     if any(request.get("method") in {"GET", "PATCH", "PUT", "DELETE"} for request in requests):
         failures.append("ledger contains a prohibited or post-OAuth request")
     if any(
         request.get("method") == "POST"
-        and request.get("endpoint_template") != "/qbench/api/v1/oauth/token"
+        and request.get("endpoint_template") not in {
+            "/qbench/api/v1/oauth/token",
+            "/qbench/api/v2/auth/token",
+        }
         for request in requests
     ):
         failures.append("ledger contains a non-token POST")
@@ -104,12 +121,12 @@ def main() -> int:
     )
     if summary.get("origin_preflight") != "passed_exact_sandbox_origin":
         failures.append("summary origin preflight is incorrect")
-    if summary.get("result") != "controlled_stop" or summary.get("stop_reason") != "http_status_404":
+    if summary.get("result") != "controlled_stop" or summary.get("stop_reason") != "http_status_400":
         failures.append("summary OAuth controlled stop is incorrect")
     oauth = summary.get("oauth", {})
     for key, expected_value in {
         "result": "failed",
-        "http_status": 404,
+        "http_status": 400,
         "content_type": "application/json",
         "token_type": "not_available",
         "approximate_expiration_seconds": "not_available",
@@ -117,10 +134,18 @@ def main() -> int:
         "credentials_or_token_exposed": False,
         "token_persisted": False,
         "token_request_attempts": 1,
-        "client_assertion_persisted_or_displayed": False,
+        "client_assertion_persisted_or_displayed_by_runner": False,
     }.items():
         if oauth.get(key) != expected_value:
             failures.append(f"summary OAuth field is incorrect: {key}")
+    if oauth.get("request_contract") != {
+        "method": "POST",
+        "endpoint_template": "/qbench/api/v2/auth/token",
+        "content_type": "multipart/form-data",
+        "fields": ["assertion", "grant_type"],
+        "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+    }:
+        failures.append("summary OAuth request contract is incorrect")
     if summary.get("identity", {}).get("classification") != "not_run":
         failures.append("identity must not be claimed after OAuth failure")
     if summary.get("worksheet_get", {}).get("result") != "not_run":
@@ -130,8 +155,10 @@ def main() -> int:
         (EVIDENCE / "sanitized_object_inventory.json").read_text(encoding="utf-8")
     )
     for key, expected_value in {
-        "classification": "oauth_token_endpoint_404_controlled_stop",
-        "token_post_requests": 1,
+        "classification": "oauth_authoritative_endpoint_http_400_controlled_stop",
+        "token_post_requests": 2,
+        "historical_token_post_requests": 1,
+        "authoritative_retry_token_post_requests": 1,
         "get_requests": 0,
         "patch_requests": 0,
         "put_requests": 0,
@@ -175,7 +202,10 @@ def main() -> int:
     runner = (EVIDENCE / "run_read_only_confirmation.py").read_text(encoding="utf-8")
     for required_text in (
         'ALLOWED_ORIGIN = "https://ait-sandbox.qbench.net"',
-        'TOKEN_PATH = "/qbench/api/v1/oauth/token"',
+        'HISTORICAL_TOKEN_PATH = "/qbench/api/v1/oauth/token"',
+        'TOKEN_PATH = "/qbench/api/v2/auth/token"',
+        '"grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer"',
+        'multipart/form-data; boundary=',
         'ProxyHandler({})',
         'ssl.create_default_context()',
         'class RejectRedirects(HTTPRedirectHandler)',
@@ -193,7 +223,8 @@ def main() -> int:
         return 1
     print("Read-only API evidence validation PASSED")
     print("- exact Sandbox origin preflight passed")
-    print("- one token POST returned sanitized HTTP 404; zero GET requests")
+    print("- historical token POST preserved as HTTP 404")
+    print("- one authoritative-route retry returned sanitized HTTP 400; zero GET requests")
     print("- 43 expected keys recorded as not exposed because GET was not reached")
     print("- zero PATCH, PUT, DELETE, non-token POST, object changes, or result changes")
     print("- no credential, token, Authorization header, or internal ID in tracked evidence")

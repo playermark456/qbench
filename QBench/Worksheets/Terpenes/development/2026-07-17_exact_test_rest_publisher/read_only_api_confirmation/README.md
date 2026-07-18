@@ -1,15 +1,20 @@
 # Read-only API confirmation
 
-Classification: `oauth_token_endpoint_404_controlled_stop`
+Classification: `oauth_authoritative_endpoint_http_400_controlled_stop`
 
 The exact-origin and local package preflights passed. The ignored runtime CSV
 identified the previously proven isolated Test in memory, retained its exact
 Assay association, and confirmed the 43/43 blank baseline.
 
-One form-encoded OAuth client-credentials POST was sent to the same-origin
-token-path contract represented by the Prompt 5B package. The Sandbox returned
-HTTP 404 with JSON content. No access token was returned, stored, printed, or
-committed. Per the one-POST and OAuth stop gates, no retry and no GET occurred.
+The historical form-encoded request to `/qbench/api/v1/oauth/token` remains
+recorded as HTTP 404. Read-only inspection of the exact existing Sandbox API
+client and its QBench-hosted Swagger UI then proved the authoritative
+`POST /qbench/api/v2/auth/token` multipart JWT-bearer contract.
+
+After all local authentication and worksheet validators passed, exactly one
+authorized retry was sent to that authoritative route. The Sandbox returned
+HTTP 400 with JSON content. No access token was returned or stored by the
+runner. Per the OAuth stop gate, no GET followed and no second retry occurred.
 
 Therefore:
 
@@ -19,9 +24,11 @@ Therefore:
 - `analyte_patch_key_contract=unresolved`
 - `atomicity_classification=api_patch_unresolved`
 
-The attempted token path remains unproven. A future phase requires a separately
-documented, exact same-origin token path before any new OAuth request. It must
-not probe alternative paths.
+The endpoint is proven; the successful assertion/request acceptance contract is
+not. A future separately authorized phase must resolve the HTTP 400 from an
+authoritative QBench source or QBench support before another token request. It
+must not probe alternate payloads.
 
-No QBench object, worksheet, or analytical result changed. No PATCH, PUT,
-DELETE, GET, non-token POST, Publish, QC Review, or Pass/Fail action occurred.
+No QBench object, worksheet, or analytical result changed. Across both
+historical and current evidence there were two token POSTs, zero GETs, and zero
+PATCH, PUT, DELETE, non-token POST, Publish, QC Review, or Pass/Fail actions.

@@ -3,7 +3,10 @@
 - Origin preflight: `passed_exact_sandbox_origin`
 - Exact allowed origin: `https://ait-sandbox.qbench.net`
 - Allowed methods: one `POST` to the token endpoint, followed only by `GET`
-- Token endpoint template: `/qbench/api/v1/oauth/token`
+- Historical failed token template: `/qbench/api/v1/oauth/token`
+- Authoritative token endpoint template: `/qbench/api/v2/auth/token`
+- Token request format: `multipart/form-data` with `assertion` and
+  `grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer`
 - Test endpoint template: `/qbench/api/v1/test/{test_id}`
 - Test Worksheet endpoint template: `/qbench/api/v1/test/{test_id}/worksheet`
 - Expected Worksheet: `SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_43_FIELD_BASE`

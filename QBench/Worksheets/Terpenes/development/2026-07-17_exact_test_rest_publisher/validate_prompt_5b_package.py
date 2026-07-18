@@ -108,6 +108,9 @@ REQUIRED = {
     "json_import_rebuild/runtime_instantiation/validate_runtime_instantiation.py",
     "read_only_api_confirmation/README.md",
     "read_only_api_confirmation/preflight_plan.md",
+    "read_only_api_confirmation/oauth_endpoint_discovery.md",
+    "read_only_api_confirmation/oauth_endpoint_sources.csv",
+    "read_only_api_confirmation/oauth_404_root_cause.md",
     "read_only_api_confirmation/oauth_result_sanitized.md",
     "read_only_api_confirmation/object_identity_results.md",
     "read_only_api_confirmation/worksheet_get_results.md",
@@ -197,8 +200,10 @@ def main() -> int:
         failures.append("destination contract must remain unproven")
     if config.get("destination_contract_proof_file") or config.get("destination_contract_proof_sha256"):
         failures.append("unearned destination proof lock is configured")
-    if config.get("token_endpoint_contract_proven") is not False or config.get("token_path"):
-        failures.append("unproven OAuth token endpoint is configured")
+    if config.get("token_endpoint_contract_proven") is not True:
+        failures.append("authoritative OAuth token endpoint is not marked proven")
+    if config.get("token_path") != "/qbench/api/v2/auth/token":
+        failures.append("authoritative OAuth token path is not exact")
     if config.get("required_batch_display_name_prefix") != "SBX_ONLY_":
         failures.append("synthetic Batch display-name prefix is not enforced")
     if config.get("atomicity_classification") != "api_patch_unresolved":
@@ -211,7 +216,9 @@ def main() -> int:
         'ALLOWED_BASE_URL = "https://ait-sandbox.qbench.net"',
         "/qbench/api/v1/batch/",
         "/qbench/api/v1/test/",
-        '"grant_type": "client_credentials"',
+        'AUTHORITATIVE_TOKEN_PATH = "/qbench/api/v2/auth/token"',
+        'JWT_BEARER_GRANT_TYPE = "urn:ietf:params:oauth:grant-type:jwt-bearer"',
+        '"Content-Type": f"multipart/form-data; boundary={boundary}"',
         "saved_destination_contract_not_proven_before_token_request",
         "api_patch_atomic",
         "PUBLISH REVIEWED TERPENES BATCH",
@@ -830,7 +837,7 @@ def main() -> int:
         failures.append("manifest exact Sandbox runtime origin was not verified")
     if manifest.get("sandbox", {}).get("exact_test_membership") != "not_run_oauth_failed":
         failures.append("manifest exact-Test API membership state is incorrect")
-    if manifest.get("status") != "read_only_api_oauth_404_controlled_stop":
+    if manifest.get("status") != "read_only_api_authoritative_oauth_400_controlled_stop":
         failures.append("manifest controlled-stop status is incorrect")
     if manifest.get("mapping", {}).get("saved_worksheet_definition_contract") != "passed_43_of_43":
         failures.append("manifest saved-definition classification is incorrect")
@@ -1058,15 +1065,17 @@ def main() -> int:
 
     read_only_manifest = manifest.get("read_only_api_confirmation", {})
     for key, expected in {
-        "classification": "oauth_token_endpoint_404_controlled_stop",
+        "classification": "oauth_authoritative_endpoint_http_400_controlled_stop",
         "origin_preflight": "passed_exact_sandbox_origin",
         "allowed_origin": "https://ait-sandbox.qbench.net",
         "credential_loading": "passed_without_display",
-        "token_endpoint_template": "/qbench/api/v1/oauth/token",
-        "token_post_requests": 1,
-        "token_http_status": 404,
+        "historical_token_endpoint_template": "/qbench/api/v1/oauth/token",
+        "authoritative_token_endpoint_template": "/qbench/api/v2/auth/token",
+        "token_post_requests": 2,
+        "historical_token_http_status": 404,
+        "authoritative_retry_http_status": 400,
         "token_response_content_type": "application/json",
-        "oauth_result": "failed_documented_path_not_found",
+        "oauth_result": "failed_authoritative_endpoint_http_400",
         "token_returned": False,
         "get_requests": 0,
         "read_only_api_identity": "not_run_oauth_failed",
@@ -1083,7 +1092,9 @@ def main() -> int:
         "live_qbench_accessed": False,
         "publish_or_qc_review_performed": False,
         "pass_fail_artifact_introduced": False,
-        "credentials_assertion_authorization_or_token_committed_or_displayed": False,
+        "credentials_token_or_authorization_committed_or_displayed": False,
+        "assertion_committed_or_displayed_by_runner": False,
+        "swagger_assertion_transient_tool_output_control_failed": True,
     }.items():
         if read_only_manifest.get(key) != expected:
             failures.append(f"manifest read-only API evidence is incorrect: {key}")
@@ -1165,7 +1176,8 @@ def main() -> int:
     print("- sanitized six-object native inventory contains no internal Sandbox IDs")
     print("- exact Sandbox-only executable allowlist")
     print("- atomicity remains api_patch_unresolved")
-    print("- one exact-origin token POST returned HTTP 404; zero GET requests")
+    print("- historical wrong-path token POST preserved as HTTP 404")
+    print("- one authoritative-route token retry returned HTTP 400; zero GET requests")
     print("- zero PATCH, PUT, DELETE, non-token POST, object changes, or result changes")
     print(f"- {len(manifest['generated_files'])} generated-file hashes verified")
     return 0

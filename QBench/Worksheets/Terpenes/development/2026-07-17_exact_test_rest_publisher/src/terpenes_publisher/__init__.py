@@ -2,6 +2,7 @@
 
 from .core import (
     ALLOWED_BASE_URL,
+    AUTHORITATIVE_TOKEN_PATH,
     APP_VERSION,
     Action,
     AmbiguousPatchOutcome,
@@ -17,6 +18,8 @@ from .core import (
     FieldSpec,
     GateResult,
     HttpResponse,
+    JWT_ASSERTION_LIFETIME_SECONDS,
+    JWT_BEARER_GRANT_TYPE,
     PlanRow,
     PreparedPlan,
     Publisher,

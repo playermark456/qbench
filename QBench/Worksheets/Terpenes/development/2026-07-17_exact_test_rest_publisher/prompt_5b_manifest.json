@@ -4,7 +4,7 @@
   "prompt": "Prompt 5B",
   "branch": "codex/terpenes-prompt-5b-rest-publisher",
   "application_version": "0.3.0",
-  "status": "read_only_api_oauth_404_controlled_stop",
+  "status": "read_only_api_authoritative_oauth_400_controlled_stop",
   "prerequisite": {
     "pull_request": 12,
     "merged": true,
@@ -347,15 +347,17 @@
     "pass_fail_artifact_introduced": false
   },
   "read_only_api_confirmation": {
-    "classification": "oauth_token_endpoint_404_controlled_stop",
+    "classification": "oauth_authoritative_endpoint_http_400_controlled_stop",
     "origin_preflight": "passed_exact_sandbox_origin",
     "allowed_origin": "https://ait-sandbox.qbench.net",
     "credential_loading": "passed_without_display",
-    "token_endpoint_template": "/qbench/api/v1/oauth/token",
-    "token_post_requests": 1,
-    "token_http_status": 404,
+    "historical_token_endpoint_template": "/qbench/api/v1/oauth/token",
+    "authoritative_token_endpoint_template": "/qbench/api/v2/auth/token",
+    "token_post_requests": 2,
+    "historical_token_http_status": 404,
+    "authoritative_retry_http_status": 400,
     "token_response_content_type": "application/json",
-    "oauth_result": "failed_documented_path_not_found",
+    "oauth_result": "failed_authoritative_endpoint_http_400",
     "token_returned": false,
     "get_requests": 0,
     "read_only_api_identity": "not_run_oauth_failed",
@@ -380,12 +382,14 @@
     "live_qbench_accessed": false,
     "publish_or_qc_review_performed": false,
     "pass_fail_artifact_introduced": false,
-    "credentials_assertion_authorization_or_token_committed_or_displayed": false
+    "credentials_token_or_authorization_committed_or_displayed": false,
+    "assertion_committed_or_displayed_by_runner": false,
+    "swagger_assertion_transient_tool_output_control_failed": true
   },
   "local_validation": {
     "unit_tests": "46 passed",
     "credential_presence_check": "three required keys present and nonblank; values not emitted",
-    "oauth_exchange": "synthetic implementation tests passed; one real same-origin token-path attempt returned HTTP 404 and stopped before GET",
+    "oauth_exchange": "synthetic JWT-bearer tests passed; historical wrong-path HTTP 404 preserved; one authoritative-route retry returned HTTP 400 and stopped before GET",
     "pre_token_gate": "passed_synthetic; blocks before token request",
     "destination_contract_candidate": "unqualified-address candidate passed local 43_of_43 validation, saved raw round trip, Approved/Active verification, normal Assay-created runtime, representative persistence, and restored 43_of_43 blank baseline",
     "runtime_instantiation_evidence": "passed_43_of_43; sanitized 43-column runtime export; raw SHA-256 recorded",
@@ -412,8 +416,8 @@
     "reject any Pass/Fail-like named cell"
   ],
   "remaining_live_promotion_gaps": [
-    "package token-path attempt returned HTTP 404; valid authoritative same-host OAuth endpoint not proven or locked",
-    "one token request was authorized and failed; no authenticated GET occurred",
+    "authoritative same-host OAuth endpoint is proven and locked; the single permitted JWT-bearer retry returned HTTP 400",
+    "historical wrong-path request and one authoritative retry both failed; no authenticated GET occurred",
     "read-only QBench response schemas not observed",
     "expected synthetic assay and workflow identifiers not configured",
     "native old-Sandbox worksheet engine passed, but the imported Prompt 3 direct and normal Assay-created Test Worksheets remain blank default 5x5",
@@ -429,7 +433,7 @@
     "current Versions-tab observation confirms the scalar Version 1 Draft row; its historical 0/7 finding is preserved but does not establish an environment failure",
     "user manually proved native named-cell persistence using sdf at A1; historical Codex browser-entry failures are not QBench persistence failures",
     "native-envelope qualified-address candidate rendered 40x26 with 43 named cells, but Save As New Version rejected Data!D2 sheet-qualified cell definition; unqualified-address candidate passed local 43_of_43 validation; JSON Scalar 43 Field Base v1 saved and raw round-trip passed",
-    "exact JSON Scalar 43 Field Base v1 and normal Assay-created runtime passed 43_of_43; read-only API confirmation stopped at OAuth HTTP 404 before GET"
+    "exact JSON Scalar 43 Field Base v1 and normal Assay-created runtime passed 43_of_43; read-only API confirmation stopped at authoritative OAuth HTTP 400 before GET"
   ],
   "generated_files": [
     {
@@ -446,11 +450,11 @@
     },
     {
       "path": "config/publisher_config.json",
-      "sha256": "07c9bc67d8304cc1ba8b511b21849efbea3734586593ad96fc9756a329b5c489"
+      "sha256": "0f38f0bf7883b80443deceb4e665104f1b07951b1b83999abbe79f90601cd815"
     },
     {
       "path": "docs/api_contract.md",
-      "sha256": "291a2a56585e8427b1eaf7128700e2af9da85e2fef2779e9c792d177c9f998d0"
+      "sha256": "4b10d04a05e65ad5a6a527012d90463255064e185680a07fec20a5cd93c983da"
     },
     {
       "path": "docs/atomicity_results.md",
@@ -470,7 +474,7 @@
     },
     {
       "path": "docs/live_promotion_gap_analysis.md",
-      "sha256": "636b1b60192a0a83291b906b3ac3c007c294137fba4fb5a0d0033364b54bf82b"
+      "sha256": "56c8c95e700dc0b950b45e226d6c9254c32432a372ead953439d9e4bf1d69b57"
     },
     {
       "path": "docs/publish_gate.md",
@@ -482,7 +486,7 @@
     },
     {
       "path": "docs/sandbox_failure_results.md",
-      "sha256": "d4b3b0c0f3223c7a3fc0387d9c8832bedbff02dcfbabacb3f65ce248dcd1949f"
+      "sha256": "2193872cc494fe74c833f8abcb4116d8595251d425d0b71a83ec9a723a4a9192"
     },
     {
       "path": "docs/sandbox_success_results.md",
@@ -490,7 +494,7 @@
     },
     {
       "path": "docs/security_model.md",
-      "sha256": "7fa76948a84e8265a6bd31c45ff56d5520e69355e33fabe29e36b1829b06a6dc"
+      "sha256": "16b8af220f6978481317906653be13e19e465a961c4d6fabcf5fddb1f410ac3f"
     },
     {
       "path": "fixtures/README.md",
@@ -502,7 +506,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "0b86d1f0b3343fc997bdfb934283f3088b4ca206a207ecce95e97e03dee5b359"
+      "sha256": "f5cd307ea83d5f06dd9edd2b30189b47c23f728599d0bed955e482cd6d90b6e1"
     },
     {
       "path": "requirements.txt",
@@ -510,7 +514,7 @@
     },
     {
       "path": "src/terpenes_publisher/__init__.py",
-      "sha256": "0201491b11470864b087a9d13d6891817007402f04bcf13513681c214723f81b"
+      "sha256": "9c26caba45e326a5941c7df66c4432642e2957a9703f5d59546c4b465d0bbcc5"
     },
     {
       "path": "sandbox_destination_proof/expected_destination_contract.csv",
@@ -718,7 +722,7 @@
     },
     {
       "path": "src/terpenes_publisher/core.py",
-      "sha256": "1bcd3602f7fd658278a0b3a42166df0650fda0b4ebf8507b3262e0484af9dd33"
+      "sha256": "8683cd115d6b938107d616401ab45c0eaa788db131ee754dee4eb6a075c83318"
     },
     {
       "path": "terpenes_publisher.py",
@@ -726,11 +730,11 @@
     },
     {
       "path": "tests/test_publisher.py",
-      "sha256": "6efc0be482f84a55989f9b712f6c7c918facc79c018293dd76ce174387e8213e"
+      "sha256": "aebd1b2dff8f673cc48dac5f0d45644d0a6801ebcea0ec7526f879415ae78c67"
     },
     {
       "path": "validate_prompt_5b_package.py",
-      "sha256": "96cfccc71a2c71eab87d8aecf3d7be99b3a0300afbce6259ce182770631fb168"
+      "sha256": "a98684d6bfdb96fa0c4649f1644b08d91517284ce5690b0cf3b136d4a3c5a9c9"
     },
     {
       "path": "json_import_rebuild/compare_structures.py",
@@ -826,19 +830,31 @@
     },
     {
       "path": "read_only_api_confirmation/README.md",
-      "sha256": "1209323fd6cc759b51a6b8763e30f603ad5266733991a5874f253828329a7d14"
+      "sha256": "a17441c365f9fc90da5e53edde2c8524931b9f845ad74bdaa94a72646802d5b9"
     },
     {
       "path": "read_only_api_confirmation/preflight_plan.md",
-      "sha256": "8595332aa3c3236aa84b934ce23fe3a1a59514ed225f0e275e5bf75d99be6619"
+      "sha256": "4dd51cf56fa39bf3c06dc380dd5dac9b7a8bcb1579f4e4558b2032b2f01bbe53"
+    },
+    {
+      "path": "read_only_api_confirmation/oauth_endpoint_discovery.md",
+      "sha256": "360c1afa94d0cac085648ce0d5342b1dafb1ede173ab7aa90c3d53167afe28e1"
+    },
+    {
+      "path": "read_only_api_confirmation/oauth_endpoint_sources.csv",
+      "sha256": "fdc18f64cb213b1a206e7ae1a9bb2a92c682011aee2f9e8bdaead050fce08ec3"
+    },
+    {
+      "path": "read_only_api_confirmation/oauth_404_root_cause.md",
+      "sha256": "f62cbbff923219762dbca5e1a65e97f975628b705242006f597e558efabb782e"
     },
     {
       "path": "read_only_api_confirmation/oauth_result_sanitized.md",
-      "sha256": "c5649267a480431ba8f33705f5bec9e247a910d0d9bd4b583082b27034277838"
+      "sha256": "155f624bbc4408d2d47c4d5a325bd4fc0090ebe6133980c2a4648c5f7954ec41"
     },
     {
       "path": "read_only_api_confirmation/object_identity_results.md",
-      "sha256": "9782798703aa00e6c99e7e151fd6da5d4e15e62525b0c628a5b242637cf7c207"
+      "sha256": "a66ea5ee36f85c4e21019dfa1127ee1850d6ff37f8c29a26a452988346fad537"
     },
     {
       "path": "read_only_api_confirmation/worksheet_get_results.md",
@@ -854,7 +870,7 @@
     },
     {
       "path": "read_only_api_confirmation/request_ledger_sanitized.json",
-      "sha256": "2236177decc25fa477c3626853f91fd885dac4111a7ea49bb6e2e2d99a640f33"
+      "sha256": "4fff1f0268abb6d1c187b4fcdc59a12891418e3f7fcaf9cbc1c211b06f19d990"
     },
     {
       "path": "read_only_api_confirmation/raw_response_sha256.txt",
@@ -862,23 +878,23 @@
     },
     {
       "path": "read_only_api_confirmation/sanitized_object_inventory.json",
-      "sha256": "b0edaf7c05c6e36ff3bde7b0c6362e651eb305da5af3c3823d3c6192dd41d87b"
+      "sha256": "e2aee51e5c6d8f7a4ea580a2ba50d7526db96a413ed4ba3e029a31b2d038446d"
     },
     {
       "path": "read_only_api_confirmation/next_patch_phase_gate.md",
-      "sha256": "28deb33e8b5b84771966c9f84c19453d0e90897130ef638c8ca8cb7668c1d460"
+      "sha256": "0ad95cab2083b6be97d9af447b5c5bca4d5066ed54c5b77f54b6242b0bdd4249"
     },
     {
       "path": "read_only_api_confirmation/run_summary_sanitized.json",
-      "sha256": "d5ffd37471ed6c754df51c3a0c47a6bbb20df85bd2b837982cf46e78c092af25"
+      "sha256": "c57230471a6ede6c170b31b4e03a49bca19596b583a3855f866f755020e03592"
     },
     {
       "path": "read_only_api_confirmation/run_read_only_confirmation.py",
-      "sha256": "205eb4f45c6aaa9400e33761e1dafa2e66cf8e2ae7db2a237555ed93caedc0d5"
+      "sha256": "d0d946c4b98ce3f92539472df684f3b8f0b6c02df5762ce7e7e2b607581a6302"
     },
     {
       "path": "read_only_api_confirmation/validate_read_only_api_confirmation.py",
-      "sha256": "6287f3f6c2f5854991b0421e9d2f95de97016eac6e172256085d61645c9a540a"
+      "sha256": "72b04db7f100a80cea2dba1cb8c0fcb001733c2075fb9ed7bb3ebe7282ae8100"
     }
   ]
 }

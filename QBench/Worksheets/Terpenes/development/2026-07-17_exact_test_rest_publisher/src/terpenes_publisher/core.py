@@ -1,12 +1,15 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import csv
 import datetime as dt
 import hashlib
+import hmac
 import json
 import math
 import re
+import secrets
 import ssl
 import sys
 import time
@@ -16,12 +19,15 @@ from enum import Enum
 from pathlib import Path
 from typing import Any, Callable, Iterable, Mapping, Sequence
 from urllib.error import HTTPError, URLError
-from urllib.parse import quote, urlencode, urlsplit
+from urllib.parse import quote, urlsplit
 from urllib.request import HTTPRedirectHandler, HTTPSHandler, Request, build_opener
 
 
 APP_VERSION = "0.2.0"
 ALLOWED_BASE_URL = "https://ait-sandbox.qbench.net"
+AUTHORITATIVE_TOKEN_PATH = "/qbench/api/v2/auth/token"
+JWT_BEARER_GRANT_TYPE = "urn:ietf:params:oauth:grant-type:jwt-bearer"
+JWT_ASSERTION_LIFETIME_SECONDS = 600
 REPORTABLE_ANALYTE_COUNT = 23
 COMPOUND_RESULTS_COUNT = 24
 PEAK_TABLE_COUNT = 34
@@ -208,8 +214,31 @@ class HttpResponse:
     body: Any
 
 
+def _base64url(value: bytes) -> str:
+    return base64.urlsafe_b64encode(value).rstrip(b"=").decode("ascii")
+
+
+def _jwt_json(value: Mapping[str, Any]) -> str:
+    return _base64url(json.dumps(value, separators=(",", ":"), sort_keys=True).encode("utf-8"))
+
+
+def _multipart_form(fields: Sequence[tuple[str, str]], boundary: str) -> bytes:
+    chunks: list[bytes] = []
+    for name, value in fields:
+        chunks.extend(
+            (
+                f"--{boundary}\r\n".encode("ascii"),
+                f'Content-Disposition: form-data; name="{name}"\r\n\r\n'.encode("ascii"),
+                value.encode("utf-8"),
+                b"\r\n",
+            )
+        )
+    chunks.append(f"--{boundary}--\r\n".encode("ascii"))
+    return b"".join(chunks)
+
+
 class QBenchTokenClient:
-    """OAuth client-credentials exchange with no retries and no token persistence."""
+    """QBench JWT-bearer exchange with no retries and no token persistence."""
 
     def __init__(
         self,
@@ -232,6 +261,8 @@ class QBenchTokenClient:
             or parsed_path.path != token_path
         ):
             raise ConfigurationError("OAuth token path is not a safe same-host path")
+        if token_path != AUTHORITATIVE_TOKEN_PATH:
+            raise ConfigurationError("OAuth token path does not match the authoritative QBench contract")
         self._credentials = credentials
         self._token_path = token_path
         self._max_lifetime_seconds = max_lifetime_seconds
@@ -251,19 +282,38 @@ class QBenchTokenClient:
             return HttpResponse(status=response.status, body=body)
 
     def exchange(self) -> AccessToken:
-        form = urlencode(
+        issued_at = self._clock()
+        header = _jwt_json({"alg": "HS256", "typ": "JWT"})
+        claims = _jwt_json(
             {
-                "grant_type": "client_credentials",
-                "client_id": self._credentials.client_id,
-                "client_secret": self._credentials.client_secret,
+                "exp": issued_at + JWT_ASSERTION_LIFETIME_SECONDS,
+                "iat": issued_at,
+                "sub": self._credentials.client_id,
             }
-        ).encode("utf-8")
+        )
+        signing_input = f"{header}.{claims}".encode("ascii")
+        signature = _base64url(
+            hmac.new(
+                self._credentials.client_secret.encode("utf-8"),
+                signing_input,
+                hashlib.sha256,
+            ).digest()
+        )
+        assertion = f"{header}.{claims}.{signature}"
+        boundary = "----QBenchPrompt5B" + secrets.token_hex(16)
+        form = _multipart_form(
+            (
+                ("assertion", assertion),
+                ("grant_type", JWT_BEARER_GRANT_TYPE),
+            ),
+            boundary,
+        )
         request = Request(
             self._credentials.base_url + self._token_path,
             data=form,
             headers={
                 "Accept": "application/json",
-                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Type": f"multipart/form-data; boundary={boundary}",
             },
             method="POST",
         )
@@ -288,7 +338,7 @@ class QBenchTokenClient:
             raise SchemaError("OAuth token response expires_in must be numeric")
         if not math.isfinite(float(expires_in)) or expires_in <= 0 or expires_in > self._max_lifetime_seconds:
             raise SecurityError("OAuth token lifetime is outside the approved short-lived limit")
-        return AccessToken(value, self._clock() + float(expires_in))
+        return AccessToken(value, issued_at + float(expires_in))
 
 
 @dataclass(frozen=True)

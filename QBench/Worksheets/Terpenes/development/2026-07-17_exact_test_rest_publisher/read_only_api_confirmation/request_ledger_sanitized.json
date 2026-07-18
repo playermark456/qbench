@@ -3,6 +3,9 @@
   "authorization_headers_recorded": false,
   "credentials_or_tokens_recorded": false,
   "internal_object_ids_recorded": false,
+  "method_counts": {
+    "POST": 2
+  },
   "requests": [
     {
       "allowed_origin": true,
@@ -10,9 +13,20 @@
       "endpoint_template": "/qbench/api/v1/oauth/token",
       "http_status": 404,
       "method": "POST",
+      "phase": "historical_incorrect_endpoint",
       "redirect_escaped_allowed_origin": false,
       "sequence": 1
+    },
+    {
+      "allowed_origin": true,
+      "content_type": "application/json",
+      "endpoint_template": "/qbench/api/v2/auth/token",
+      "http_status": 400,
+      "method": "POST",
+      "phase": "authoritative_retry_and_read_only_confirmation",
+      "redirect_escaped_allowed_origin": false,
+      "sequence": 2
     }
   ],
-  "schema_version": 1
+  "schema_version": 2
 }

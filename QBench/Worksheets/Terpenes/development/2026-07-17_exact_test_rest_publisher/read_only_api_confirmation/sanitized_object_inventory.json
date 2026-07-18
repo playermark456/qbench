@@ -1,8 +1,10 @@
 {
-  "schema_version": 1,
-  "classification": "oauth_token_endpoint_404_controlled_stop",
+  "schema_version": 2,
+  "classification": "oauth_authoritative_endpoint_http_400_controlled_stop",
   "origin_preflight": "passed_exact_sandbox_origin",
-  "token_post_requests": 1,
+  "token_post_requests": 2,
+  "historical_token_post_requests": 1,
+  "authoritative_retry_token_post_requests": 1,
   "get_requests": 0,
   "patch_requests": 0,
   "put_requests": 0,

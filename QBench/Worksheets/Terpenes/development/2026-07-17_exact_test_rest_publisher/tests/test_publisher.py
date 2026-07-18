@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import base64
 import copy
 import hashlib
+import hmac
 import io
 import json
 import sys
@@ -18,6 +20,7 @@ sys.path.insert(0, str(PACKAGE_ROOT / "src"))
 
 from terpenes_publisher import (  # noqa: E402
     ALLOWED_BASE_URL,
+    AUTHORITATIVE_TOKEN_PATH,
     ClientCredentials,
     Action,
     AmbiguousPatchOutcome,
@@ -27,6 +30,8 @@ from terpenes_publisher import (  # noqa: E402
     ConfigurationError,
     DestinationContract,
     HttpResponse,
+    JWT_ASSERTION_LIFETIME_SECONDS,
+    JWT_BEARER_GRANT_TYPE,
     Publisher,
     PublisherConfig,
     QBenchClient,
@@ -327,12 +332,49 @@ class SecurityAndClientTests(unittest.TestCase):
         credentials = ClientCredentials(ALLOWED_BASE_URL, "synthetic-client-id", "synthetic-client-secret")
         token = QBenchTokenClient(
             credentials,
-            "/qbench/api/v1/oauth/token",
+            AUTHORITATIVE_TOKEN_PATH,
             opener=opener,
             clock=lambda: 1000.0,
         ).exchange()
         self.assertEqual(len(calls), 1)
-        self.assertEqual(calls[0][0].get_method(), "POST")
+        request = calls[0][0]
+        self.assertEqual(request.get_method(), "POST")
+        self.assertEqual(request.full_url, ALLOWED_BASE_URL + AUTHORITATIVE_TOKEN_PATH)
+        content_type = request.get_header("Content-type")
+        self.assertTrue(content_type.startswith("multipart/form-data; boundary="))
+        boundary = content_type.split("boundary=", 1)[1]
+        body = request.data.decode("utf-8")
+        self.assertNotIn("client_id", body)
+        self.assertNotIn("client_secret", body)
+        self.assertNotIn("synthetic-client-secret", body)
+        assertion_marker = 'name="assertion"\r\n\r\n'
+        assertion = body.split(assertion_marker, 1)[1].split(f"\r\n--{boundary}", 1)[0]
+        grant_marker = 'name="grant_type"\r\n\r\n'
+        grant_type = body.split(grant_marker, 1)[1].split(f"\r\n--{boundary}", 1)[0]
+        self.assertEqual(grant_type, JWT_BEARER_GRANT_TYPE)
+        encoded_header, encoded_claims, encoded_signature = assertion.split(".")
+
+        def decode_part(value: str) -> dict:
+            padded = value + "=" * (-len(value) % 4)
+            return json.loads(base64.urlsafe_b64decode(padded))
+
+        self.assertEqual(decode_part(encoded_header), {"alg": "HS256", "typ": "JWT"})
+        self.assertEqual(
+            decode_part(encoded_claims),
+            {
+                "exp": 1000.0 + JWT_ASSERTION_LIFETIME_SECONDS,
+                "iat": 1000.0,
+                "sub": "synthetic-client-id",
+            },
+        )
+        expected_signature = base64.urlsafe_b64encode(
+            hmac.new(
+                b"synthetic-client-secret",
+                f"{encoded_header}.{encoded_claims}".encode("ascii"),
+                hashlib.sha256,
+            ).digest()
+        ).rstrip(b"=").decode("ascii")
+        self.assertEqual(encoded_signature, expected_signature)
         self.assertEqual(token.value, "synthetic-access-token")
         self.assertEqual(token.expires_at_epoch, 1900.0)
         self.assertNotIn("synthetic-access-token", repr(token))
@@ -344,7 +386,7 @@ class SecurityAndClientTests(unittest.TestCase):
             with self.subTest(expires_in=expires_in):
                 client = QBenchTokenClient(
                     credentials,
-                    "/qbench/api/v1/oauth/token",
+                    AUTHORITATIVE_TOKEN_PATH,
                     opener=lambda *_, lifetime=expires_in: HttpResponse(
                         200,
                         {
@@ -359,7 +401,13 @@ class SecurityAndClientTests(unittest.TestCase):
 
     def test_unsafe_oauth_token_path_is_rejected(self) -> None:
         credentials = ClientCredentials(ALLOWED_BASE_URL, "synthetic-client-id", "synthetic-client-secret")
-        for token_path in ("https://example.invalid/token", "//example.invalid/token", "token", "/token?redirect=1"):
+        for token_path in (
+            "https://example.invalid/token",
+            "//example.invalid/token",
+            "token",
+            "/token?redirect=1",
+            "/qbench/api/v1/oauth/token",
+        ):
             with self.assertRaises(ConfigurationError):
                 QBenchTokenClient(credentials, token_path)
 
@@ -546,7 +594,9 @@ class LocalPreTokenProofTests(unittest.TestCase):
         issues = config.pre_token_issues(PACKAGE_ROOT)
         self.assertIn("saved_destination_contract_not_proven_before_token_request", issues)
         self.assertIn("destination_contract_proof_lock_missing", issues)
-        self.assertIn("oauth_token_endpoint_contract_not_proven", issues)
+        self.assertNotIn("oauth_token_endpoint_contract_not_proven", issues)
+        self.assertEqual(config.token_path, AUTHORITATIVE_TOKEN_PATH)
+        self.assertTrue(config.token_endpoint_contract_proven)
 
     def test_pre_token_gate_validates_locked_proof_contents_and_mapping_hash(self) -> None:
         package_root = self.root / "package"
@@ -563,7 +613,7 @@ class LocalPreTokenProofTests(unittest.TestCase):
             True,
             "api_patch_unresolved",
             "unresolved",
-            token_path="/qbench/api/v1/oauth/token",
+            token_path=AUTHORITATIVE_TOKEN_PATH,
             token_endpoint_contract_proven=True,
             destination_contract_proof_file="destination-proof.json",
             destination_contract_proof_sha256=hashlib.sha256(proof_path.read_bytes()).hexdigest(),

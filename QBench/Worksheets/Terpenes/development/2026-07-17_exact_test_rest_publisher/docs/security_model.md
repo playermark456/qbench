@@ -10,8 +10,10 @@ environment file contains blank variable names only, and root `.gitignore`
 patterns cover `.env.local` and Windows-appended variants such as
 `.env.local.txt`.
 
-The OAuth exchange uses `grant_type=client_credentials`. The Client ID and
-Client Secret exist only in process memory after file loading. A successful
+The OAuth exchange uses a short-lived HS256 JWT assertion and
+`grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer` in a multipart form.
+The Client ID, Client Secret, and assertion exist only in process memory after
+file loading. A successful
 response must contain a Bearer access token with a positive lifetime no longer
 than 3,600 seconds. The token remains in memory and is never persisted.
 
@@ -51,12 +53,12 @@ workflow, reviewer, source, destination, formula, atomicity, idempotency, or
 rollback prerequisite is unresolved. No configuration option bypasses the
 prohibition on Pass/Fail/result fields.
 
-The operational publisher still requires both a SHA-256-locked destination
-proof and a proven OAuth endpoint contract. Its configuration remains blocked.
-The separately authorized read-only confirmation runner enforced the proven
-runtime baseline and exact origin, then attempted the package's token-path
-contract once. HTTP 404 caused a controlled stop before GET. It did not alter
-publisher configuration or probe another token path.
+The operational publisher still requires a SHA-256-locked destination proof
+and the remaining PATCH prerequisites. The OAuth endpoint contract is now
+proven and locked to `/qbench/api/v2/auth/token`; the earlier v1 OAuth-path 404
+remains historical evidence. The read-only runner refuses alternative token
+paths, preserves the historical request, allows only one authoritative retry,
+and stops before GET if that retry fails.
 
 The default configuration also rejects any Batch whose display name does not
 begin with `SBX_ONLY_`, before worksheet content is processed. This task build

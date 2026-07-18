@@ -28,7 +28,8 @@ RUNTIME_EXPORT = (
 MAPPING_PATH = ROOT / "config/field_mapping_scalar_candidate.csv"
 
 ALLOWED_ORIGIN = "https://ait-sandbox.qbench.net"
-TOKEN_PATH = "/qbench/api/v1/oauth/token"
+HISTORICAL_TOKEN_PATH = "/qbench/api/v1/oauth/token"
+TOKEN_PATH = "/qbench/api/v2/auth/token"
 TEST_PATH_TEMPLATE = "/qbench/api/v1/test/{test_id}"
 WORKSHEET_PATH_TEMPLATE = "/qbench/api/v1/test/{test_id}/worksheet"
 
@@ -239,6 +240,9 @@ class GuardedTransport:
     def token_opener(self, request: Request, timeout: float) -> HttpResponse:
         parsed = urlsplit(request.full_url)
         path = parsed.path
+        content_type_header = request.get_header("Content-type") or ""
+        if not content_type_header.startswith("multipart/form-data; boundary="):
+            raise ControlledStop("oauth_content_type_contract_violation")
         status, content_type, raw = self.dispatch(
             request.get_method(),
             path,
@@ -246,7 +250,7 @@ class GuardedTransport:
             data=request.data,
             headers={
                 "Accept": "application/json",
-                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Type": content_type_header,
             },
             timeout=timeout,
         )
@@ -412,13 +416,45 @@ def write_field_comparison(rows: list[dict[str, str]]) -> None:
         writer.writerows(rows)
 
 
-def save_ledger(transport: GuardedTransport) -> None:
+def load_historical_requests() -> list[dict[str, Any]]:
+    path = EVIDENCE_ROOT / "request_ledger_sanitized.json"
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ControlledStop("historical_oauth_404_ledger_missing_or_invalid") from exc
+    requests = payload.get("requests")
+    if not isinstance(requests, list) or len(requests) != 1:
+        raise ControlledStop("oauth_retry_already_consumed_or_history_not_exact")
+    request = requests[0]
+    expected = {
+        "sequence": 1,
+        "method": "POST",
+        "endpoint_template": HISTORICAL_TOKEN_PATH,
+        "http_status": 404,
+        "content_type": "application/json",
+        "allowed_origin": True,
+        "redirect_escaped_allowed_origin": False,
+    }
+    if request != expected:
+        raise ControlledStop("historical_oauth_404_ledger_not_exact")
+    return [{**request, "phase": "historical_incorrect_endpoint"}]
+
+
+def save_ledger(transport: GuardedTransport, historical_requests: list[dict[str, Any]]) -> None:
+    current = [
+        {**request, "phase": "authoritative_retry_and_read_only_confirmation"}
+        for request in transport.ledger
+    ]
+    requests = historical_requests + current
+    for sequence, request in enumerate(requests, start=1):
+        request["sequence"] = sequence
     write_json(
         EVIDENCE_ROOT / "request_ledger_sanitized.json",
         {
-            "schema_version": 1,
+            "schema_version": 2,
             "allowed_origin": ALLOWED_ORIGIN,
-            "requests": transport.ledger,
+            "requests": requests,
+            "method_counts": dict(Counter(request["method"] for request in requests)),
             "authorization_headers_recorded": False,
             "credentials_or_tokens_recorded": False,
             "internal_object_ids_recorded": False,
@@ -428,6 +464,7 @@ def save_ledger(transport: GuardedTransport) -> None:
 
 def main() -> int:
     transport = GuardedTransport()
+    historical_requests: list[dict[str, Any]] = []
     summary: dict[str, Any] = {
         "schema_version": 1,
         "origin_preflight": "not_run",
@@ -448,6 +485,7 @@ def main() -> int:
         },
     }
     try:
+        historical_requests = load_historical_requests()
         credentials = load_credentials()
         local = load_local_identity()
         expected_keys = load_expected_keys()
@@ -469,7 +507,14 @@ def main() -> int:
             "credentials_or_token_exposed": False,
             "token_persisted": False,
             "token_request_attempts": 1,
-            "client_assertion_persisted_or_displayed": False,
+            "client_assertion_persisted_or_displayed_by_runner": False,
+            "request_contract": {
+                "method": "POST",
+                "endpoint_template": TOKEN_PATH,
+                "content_type": "multipart/form-data",
+                "fields": ["assertion", "grant_type"],
+                "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+            },
         }
 
         test_path = TEST_PATH_TEMPLATE.format(test_id=local.test_id)
@@ -573,7 +618,14 @@ def main() -> int:
                 "credentials_or_token_exposed": False,
                 "token_persisted": False,
                 "token_request_attempts": 1,
-                "client_assertion_persisted_or_displayed": False,
+                "client_assertion_persisted_or_displayed_by_runner": False,
+                "request_contract": {
+                    "method": "POST",
+                    "endpoint_template": TOKEN_PATH,
+                    "content_type": "multipart/form-data",
+                    "fields": ["assertion", "grant_type"],
+                    "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+                },
             }
         summary["result"] = "controlled_stop"
         summary["stop_reason"] = str(exc)
@@ -581,7 +633,8 @@ def main() -> int:
         summary["result"] = "controlled_stop"
         summary["stop_reason"] = "sanitized_unexpected_error"
     finally:
-        save_ledger(transport)
+        if transport.ledger:
+            save_ledger(transport, historical_requests)
         write_json(EVIDENCE_ROOT / "run_summary_sanitized.json", summary)
 
     result = summary.get("result")

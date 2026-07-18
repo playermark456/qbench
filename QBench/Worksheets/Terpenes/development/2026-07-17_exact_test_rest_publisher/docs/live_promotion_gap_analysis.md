@@ -4,9 +4,10 @@ This package is not production-ready and live promotion has not begun.
 
 Blocking gaps:
 
-1. The package's same-host OAuth token-path attempt returned HTTP 404; a valid
-   authoritative same-origin token endpoint has not been proven or locked.
-2. One token request was authorized and failed; no authenticated GET occurred.
+1. The authoritative same-origin v2 token endpoint is proven and locked, but
+   the single permitted JWT-bearer retry returned HTTP 400.
+2. The historical wrong-path request and one authoritative retry both failed;
+   no authenticated GET occurred.
 3. Read-only Batch/Test response shapes have not been observed in the Sandbox.
 4. Exact synthetic assay and workflow identifiers are not configured.
 5. The native old-Sandbox Spreadsheet Worksheet engine is operational, but the
@@ -45,9 +46,10 @@ JSON:
    round trip, the raw runtime CSV hash, and the restored 43/43 blank Test.
 3. Do not upload another candidate, create Version 2, or edit this proven
    definition in the current task.
-4. Obtain an authoritative repository reference for the exact same-host OAuth
-   endpoint, then separately authorize a new token request and read-only API
-   confirmation before any PATCH work. Do not probe alternate paths.
+4. Resolve the authoritative-route HTTP 400 from an authoritative QBench source
+   or QBench support, then separately authorize a new token request and
+   read-only API confirmation before any PATCH work. Do not probe alternate
+   payloads.
 5. Add formulas and the remaining Prompt 3 layout only in a separately
    authorized version, repeating the runtime proof at each stage.
 

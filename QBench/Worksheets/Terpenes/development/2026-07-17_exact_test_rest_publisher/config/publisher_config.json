@@ -10,7 +10,7 @@
   "destination_contract_proof_sha256": "",
   "atomicity_classification": "api_patch_unresolved",
   "analyte_patch_key_contract": "unresolved",
-  "token_path": "",
-  "token_endpoint_contract_proven": false,
+  "token_path": "/qbench/api/v2/auth/token",
+  "token_endpoint_contract_proven": true,
   "status": "controlled_stop_until_sandbox_evidence_exists"
 }

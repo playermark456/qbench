@@ -1,0 +1,5 @@
+source_priority,source,source_type,sandbox_applicability,api_version,currency,result
+1,local repository search,repository Postman/OpenAPI/OAuth search,No authoritative local artifact found,none,current working tree,no local token endpoint source
+2,Terpenes Sandbox REST Publisher API Client configuration,Sandbox API Client page,Exact existing Sandbox client,v1 access with v2 Docs link,current,read-only client type and Docs link confirmed
+3,QBench API 2.0 OAS3 AUTHENTICATION section,Sandbox-hosted Swagger UI,Exact client Docs link on exact Sandbox origin,v2,current,POST /qbench/api/v2/auth/token multipart JWT-bearer contract
+4,/qbench/api/v2/docs/openapi.json,Sandbox UI-exposed OpenAPI link,Exact Sandbox Swagger source,v2,current,link exposed directly by Swagger UI; no credential environment downloaded

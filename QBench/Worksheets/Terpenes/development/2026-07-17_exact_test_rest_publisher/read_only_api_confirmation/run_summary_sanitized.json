@@ -4,11 +4,21 @@
   },
   "oauth": {
     "approximate_expiration_seconds": "not_available",
-    "client_assertion_persisted_or_displayed": false,
+    "client_assertion_persisted_or_displayed_by_runner": false,
     "content_type": "application/json",
     "credentials_or_token_exposed": false,
-    "http_status": 404,
+    "http_status": 400,
     "origin": "https://ait-sandbox.qbench.net",
+    "request_contract": {
+      "content_type": "multipart/form-data",
+      "endpoint_template": "/qbench/api/v2/auth/token",
+      "fields": [
+        "assertion",
+        "grant_type"
+      ],
+      "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+      "method": "POST"
+    },
     "result": "failed",
     "token_persisted": false,
     "token_request_attempts": 1,
@@ -28,7 +38,7 @@
     "qbench_objects_changed": false
   },
   "schema_version": 1,
-  "stop_reason": "http_status_404",
+  "stop_reason": "http_status_400",
   "worksheet_contract": {
     "classification": "not_run"
   },

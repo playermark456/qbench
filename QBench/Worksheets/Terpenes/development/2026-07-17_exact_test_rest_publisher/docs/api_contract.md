@@ -6,21 +6,23 @@ The client accepts only the exact HTTPS Sandbox base URL
 `https://ait-sandbox.qbench.net`. Redirects are rejected and TLS certificate
 verification uses Python's default trusted certificate store.
 
-## OAuth client-credentials exchange
+## OAuth JWT-bearer exchange
 
 The publisher loads the Client ID and Client Secret from `--secrets-file` and
-can exchange them with a form-encoded HTTPS POST containing
-`grant_type=client_credentials`. The response must be JSON with a nonblank
+uses them only in memory to create a short-lived HS256 JWT assertion. The exact
+existing Sandbox API client's QBench-hosted `QBench API 2.0 OAS3` documentation
+proves `POST /qbench/api/v2/auth/token` with `multipart/form-data`, fields
+`assertion` and `grant_type`, and grant type
+`urn:ietf:params:oauth:grant-type:jwt-bearer`. The response must be JSON with a nonblank
 `access_token`, `token_type` equal to `Bearer`, and numeric `expires_in` from 1
 through 3,600 seconds. The token is held only in memory. The exchange has a
 timeout, no redirects, and no retry.
 
-The separately authorized read-only phase attempted the same-host token path
-represented by the package's OAuth tests, `/qbench/api/v1/oauth/token`, once.
-The Sandbox returned HTTP 404 with JSON content. No token was returned and no
-GET followed. This path is not proven; `token_path` remains blank and
-`token_endpoint_contract_proven` remains false in operational configuration.
-The code does not guess or probe alternative paths.
+The earlier `/qbench/api/v1/oauth/token` request remains recorded as a
+historical HTTP 404. Authoritative discovery proves that its path and request
+body were incorrect; it does not prove invalid credentials. Operational
+configuration now locks the authoritative relative token path while retaining
+the single exact Sandbox origin.
 
 Allowed operations:
 
@@ -85,8 +87,8 @@ verification plus controlled-stop/rollback logic.
 - redirects to any alternate host;
 - live QBench endpoints.
 
-The valid token endpoint, authenticated API response shape, and analyte PATCH
-representation still require controlled Sandbox evidence before any PATCH.
+The authenticated API response shape and analyte PATCH representation still
+require controlled Sandbox evidence before any PATCH.
 
 ## Native scalar candidate status
 
@@ -95,8 +97,9 @@ names, including analytes `terpenes_instrument_conc_01` through `_23`. This is
 a local mapping candidate only. Its representative native Worksheet reopened
 with zero of seven named-cell definitions, so publisher code was not changed
 to construct scalar PATCH keys and `analyte_patch_key_contract` remains
-`unresolved`. The single token-path attempt returned HTTP 404 before GET, so no
-API field-key conclusion was inferred.
+`unresolved`. The historical wrong-path attempt returned HTTP 404 and the
+single authoritative-route retry returned HTTP 400 before GET, so no API
+field-key conclusion was inferred.
 
 The prerequisite JSON scalar runtime phase passed: exact Version 1 is
 Approved/Active, the isolated Assay association persisted, and a fresh normal

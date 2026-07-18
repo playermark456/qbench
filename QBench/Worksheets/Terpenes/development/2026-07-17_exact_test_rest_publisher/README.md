@@ -5,9 +5,9 @@ Date: 2026-07-17
 Status: **The isolated unqualified-address JSON candidate passed its saved
 43/43, raw round-trip, Approved/Active, normal Assay/Test instantiation,
 runtime export, representative-value persistence, and restored 43/43 blank
-baseline gates. The separately authorized read-only API phase made one OAuth
-token POST to the package's same-origin token-path contract; the Sandbox
-returned HTTP 404, so no GET or write request occurred**.
+baseline gates. The exact Sandbox API client's Swagger UI proved the v2
+JWT-bearer token contract. The single authorized retry reached that route but
+returned HTTP 400, so no GET or write request occurred**.
 
 This package implements a controlled, Sandbox-only publisher for reviewed
 Terpenes Batch rows. It routes only by exact QBench Test ID, builds the complete
@@ -34,13 +34,15 @@ Therefore
 `destination_contract_proven=runtime_instantiation_passed_pending_read_only_api_confirmation`.
 
 The read-only API origin preflight subsequently passed byte-for-byte for
-`https://ait-sandbox.qbench.net`. One non-retried token POST to
-`/qbench/api/v1/oauth/token` returned HTTP 404 with JSON content. No access
-token was returned, persisted, or displayed, and no authenticated GET was
-sent. The token path remains unproven; alternative paths were not guessed or
-probed. Current API classification:
+`https://ait-sandbox.qbench.net`. The historical request to
+`/qbench/api/v1/oauth/token` remains preserved as HTTP 404. Read-only inspection
+of the exact existing API client proved `POST /qbench/api/v2/auth/token` with a
+multipart JWT-bearer request. The single authorized retry reached that route
+and returned HTTP 400 JSON. No access token was returned or persisted by the
+runner, and no authenticated GET was sent. No alternate payload was tried.
+Current API classification:
 
-- `oauth_token_endpoint_404_controlled_stop`
+- `oauth_authoritative_endpoint_http_400_controlled_stop`
 - `read_only_api_identity=not_run_oauth_failed`
 - `read_only_api_worksheet_contract=not_run_oauth_failed`
 - `analyte_patch_key_contract=unresolved`
@@ -62,8 +64,9 @@ exact six-row definition through a fresh Assay-created Test. The exact text and
 numeric values persisted, both formulas evaluated correctly, and the sentinel
 remained unchanged after save and reopen. Therefore:
 
-- exactly one authorized OAuth token POST returned HTTP 404; no GET, PATCH,
-  PUT, DELETE, or non-token POST was attempted;
+- the historical wrong-path POST returned HTTP 404 and the single
+  authoritative-route retry returned HTTP 400; no GET, PATCH, PUT, DELETE, or
+  non-token POST was attempted;
 - `old_sandbox_test_worksheet_engine` is
   `operational_for_native_definitions`;
 - `imported_prompt3_test_worksheet` is `compatibility_failure`;
@@ -135,7 +138,7 @@ remained unchanged after save and reopen. Therefore:
   in QBench;
 - `config/publisher_config.json` intentionally blocks publishing with
   `destination_contract_proven: false`, no locked destination-proof artifact,
-  an unproven OAuth token endpoint, `api_patch_unresolved`, and empty
+  a proven v2 OAuth token endpoint, `api_patch_unresolved`, and empty
   expected-workflow identifiers.
 
 Do not change those controls from repository evidence alone. They may be
@@ -155,7 +158,7 @@ and the saved Export Spreadsheet checks in `docs/field_mapping.md` pass.
 - Audit files hash Test, Sample, Batch, and reviewer identifiers and never
   include credentials, headers, cookies, signed URLs, or raw API error bodies.
 - Client ID and Client Secret are loaded only from `--secrets-file`.
-- The OAuth client-credentials response is accepted only as a short-lived
+- The OAuth JWT-bearer response is accepted only as a short-lived
   Bearer token with a lifetime of at most one hour. It remains in memory and is
   never written to disk.
 - Destination proof and token-endpoint proof must pass before credential
@@ -213,8 +216,8 @@ and in-memory API behavior; they are not Sandbox success evidence.
    authorized version and repeat the Assay-created Test proof after each stage.
 8. Record internal synthetic identifiers only in a local ignored evidence
    file, and update sanitized provenance without those identifiers.
-7. Confirm the documented same-host OAuth token path, then lock
-   `token_endpoint_contract_proven` and `token_path` in configuration.
+7. Retain the proven v2 token endpoint lock; resolve the authoritative-route
+   HTTP 400 from a QBench source before separately authorizing another request.
 8. Supply Sandbox client credentials through the ignored secrets file.
 9. Pause for explicit authorization before the first token request.
 10. Run `inspect`, then review the sanitized audit.
