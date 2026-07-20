@@ -86,7 +86,7 @@ No blank result row is designed for an untested template analyte. `Nerolidol` is
 | mg/g conversion | resolved | `ug/g / 1000`. |
 | Percent conversion | resolved | `ug/g / 10000`. |
 | Reportable mapping | resolved | Exactly 21 reportable measurands from 23 internal channels. |
-| Ocimene and Nerolidol rollup | resolved except component preprocessing | Each pair sums once from approved numeric component values. |
+| Ocimene and Nerolidol rollup | resolved | Missing, blank, no-peak, zero, and negative components contribute zero; positive components retain full precision and each pair sums once. |
 | LOQ source | resolved | Matrix-specific QBench Key/Value Store; reportable combined analyte keys. |
 | Below-LOQ report qualifier | resolved | Controlling SOP: report `<LOQ`. |
 | MU source | resolved | Matrix-specific QBench Key/Value Store `MU%`; component MUs for combined analytes. |
@@ -97,16 +97,16 @@ No blank result row is designed for an untested template analyte. `Nerolidol` is
 | COA units | resolved | Display both mg/g and percent. |
 | Audit-only data | resolved | Dimethylacetamide and Peak Table excluded from reportable results. |
 | Terpenes Pass/Fail | resolved | Prohibited; assay is quantitative-only. |
-| Missing/negative/below-threshold combined component handling | unresolved | No controlled numeric preprocessing rule was found in the controlling SOP, Form, or Protocol. |
+| Missing/negative/below-threshold combined component handling | resolved | Explicit user-approved laboratory reporting rule: nonpositive/absent components contribute zero; every positive numeric component contributes at full precision without component LOQ filtering. |
 
-## Controlling SOP text result
+## Controlling SOP text result and final user decision
 
 Read-only structural inspection found the controlling SOP's reporting rule: a sample analyte below LOQ is reported as `<LOQ`; a sample analyte at or above LOQ is quantified when QC requirements are met. No statement was found that defines the numeric contribution of a missing, negative, or below-threshold Ocimene/Nerolidol component channel.
 
-Visual DOCX rendering could not be completed because LibreOffice is unavailable in the local runtime. The relevant text was therefore checked structurally through the DOCX OOXML; no document was modified or re-exported.
+Visual DOCX rendering could not be completed because LibreOffice is unavailable in the local runtime. The relevant text was therefore checked structurally through the DOCX OOXML; no document was modified or re-exported. The missing numeric preprocessing behavior was subsequently resolved by the user's explicit approved laboratory reporting rule.
 
 ## Classification
 
-`calculation_contract = blocked_missing_authoritative_requirement`
+`calculation_contract = passed_authoritative_method_documentation_and_user_approved_reporting_rules`
 
-Only `TERPENES_COMPONENT_PREPROCESSING_RULE_UNRESOLVED` remains. See [calculation_contract.md](calculation_contract.md) for the exact approval needed before worksheet-formula or candidate-JSON generation.
+The former component-preprocessing marker is retired. See [calculation_contract.md](calculation_contract.md) and [calculation_test_vectors.csv](calculation_test_vectors.csv) for the approved rule and passing boundary cases.

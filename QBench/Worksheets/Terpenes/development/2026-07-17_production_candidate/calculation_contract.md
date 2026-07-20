@@ -1,51 +1,56 @@
-# Terpenes calculation contract - one authoritative rule remains unresolved
+# Terpenes calculation contract - passed
 
 ## Controlling classification
 
-`calculation_contract = blocked_missing_authoritative_requirement`
+`calculation_contract = passed_authoritative_method_documentation_and_user_approved_reporting_rules`
 
-The user-approved method and reporting decision resolves the controlling method set, final LabSolutions sample-result unit, dilution ownership, output conversions, reportable measurands, Key/Value Store dimensions, measurement-uncertainty method, Total Terpenes rule, display rounding, matrix-specific Metrc routing, and quantitative-only reporting model.
-
-The contract does not pass yet because the controlling SOP does not state what numeric value enters a combined Ocimene or Nerolidol result when an individual component channel is missing, negative, or below its applicable channel threshold. The implementation must not silently replace such a channel with zero, retain it, omit it, or block the combined result without an approved rule.
+The controlling method set and explicit user-approved laboratory reporting rules resolve every calculation-critical requirement for local production-candidate design. The final prior blocker, component-channel preprocessing for combined Ocimene and Nerolidol, was resolved by explicit user decision on 2026-07-20.
 
 ## Authoritative decisions
 
-- Controlling method: Terpene Analysis SOP v1.2, by explicit user approval.
-- Current supporting records: Terpenes Analysis Form v1.0, Terpenes Analysis Protocol v1.0, and the collected Validation Report, by explicit user approval.
-- Quantitation source for actual samples: `Compound Results(Ch1) > Conc.`.
+- Controlling method: Terpene Analysis SOP v1.2.
+- Current supporting records: Terpenes Analysis Form v1.0, Terpenes Analysis Protocol v1.0, and the collected Validation Report.
+- Actual-sample quantitation source: `Compound Results(Ch1) > Conc.`.
 - Final sample concentration unit: micrograms per gram (`ug/g`).
-- LabSolutions has already applied the dilution factor. QBench must not apply dilution again.
+- LabSolutions has already applied dilution. QBench must never apply dilution again.
 - Internal calculations retain full precision.
 - `result_mg_g = result_ug_g / 1000`.
 - `result_percent = result_ug_g / 10000`.
-- Final analytical results and MU are displayed to three decimal places only at the report/display layer.
-- Terpenes is quantitative-only. No Pass/Fail named cell, formula, report field, tile, Metrc field, or automation value is permitted.
+- Final analytical results and MU display to three decimal places only at the report/display layer.
+- Terpenes is quantitative-only. No Pass/Fail artifact is permitted.
 
-## Reportable contract
+## Component preprocessing
 
-The 23 internal chromatographic channels produce exactly 21 reportable measurands. Ocimene 1 and Ocimene 2 remain internal and produce one combined Ocimene result. Nerolidol 1 and Nerolidol 2 remain internal and produce one combined Nerolidol result. Dimethylacetamide and Peak Table data are audit-only.
+Apply independently to `Ocimene 1`, `Ocimene 2`, `Nerolidol 1`, and `Nerolidol 2` while preserving the imported raw value unchanged:
 
-The exact channel-to-report and Metrc mapping is in [metrc_terpenes_analyte_mapping.csv](metrc_terpenes_analyte_mapping.csv).
+```text
+component_used_ug_g =
+  IF(component_raw_ug_g is missing or blank or has no integrated peak, 0,
+    IF(component_raw_ug_g <= 0, 0, component_raw_ug_g))
+```
 
-## Combined results
+- Missing, blank, no integrated peak, zero, and negative values contribute `0`.
+- A positive numeric component contributes its full-precision value.
+- No component-channel reporting LOQ is retrieved or applied.
+- A positive component is retained even if it would be below a hypothetical component-channel LOQ.
 
-After the unresolved component preprocessing rule has produced two authorized numeric component values:
+## Reportable mapping and combined results
+
+The 23 internal chromatographic channels produce exactly 21 reportable measurands. Dimethylacetamide and Peak Table data remain audit-only. The exact mapping is in [metrc_terpenes_analyte_mapping.csv](metrc_terpenes_analyte_mapping.csv).
 
 ```text
 Ocimene_ug_g = Ocimene_1_used_ug_g + Ocimene_2_used_ug_g
 Nerolidol_ug_g = Nerolidol_1_used_ug_g + Nerolidol_2_used_ug_g
-```
 
-The `_used_ug_g` suffix is deliberate. It means the unrounded numeric component after the approved missing/negative/below-threshold rule. It must not be implemented as an undocumented normalization.
-
-```text
 combined_mg_g = combined_ug_g / 1000
 combined_percent = combined_ug_g / 10000
 ```
 
+Never sum displayed rounded values.
+
 ## Key/Value Store contract
 
-Terpenes thresholds and MU values must be environment configuration, not hardcoded worksheet constants. The established QBench implementation pattern is represented semantically as:
+Operational thresholds and MU values are environment configuration, not hardcoded worksheet constants:
 
 ```text
 GET_KVSTORE_VALUE(
@@ -58,25 +63,20 @@ GET_KVSTORE_VALUE(
 )
 ```
 
-Required key dimensions:
+- LOQ uses the 21 reportable analyte keys. Combined keys are `Ocimene` and `Nerolidol`; component LOQs are not retrieved or summed.
+- Direct MU uses each directly reported analyte key.
+- Combined MU uses `Ocimene 1`, `Ocimene 2`, `Nerolidol 1`, and `Nerolidol 2` only for positive contributing components.
+- `value_selector` is `LOQ` or `MU%`.
+- The store identifier and matrix key remain sanitized Sandbox configuration bindings; no internal QBench ID is committed.
 
-- `assay_key`: Terpenes assay key configured in Sandbox.
-- `analyte_key`: the reportable measurand for LOQ; the direct analyte or component-channel name for MU.
-- `matrix_or_product_type_key`: the QBench matrix/product type used by the validated Terpenes store.
-- `result_unit_key`: the configured result unit when the store contract distinguishes units.
-- `value_selector`: `LOQ` or `MU%`.
+## Qualifier and Total Terpenes behavior
 
-The store identifier is a Sandbox-bound configuration value and must not be committed as an internal QBench ID. Store entries and exact key strings must be created and proven in Sandbox before runtime use.
+Compare each unrounded reportable result, including combined Ocimene/Nerolidol, only after calculation against its matrix-specific reportable-analyte LOQ:
 
-For LOQ, use reportable combined keys `Ocimene` and `Nerolidol`; never sum component-channel LOQs. For MU, use `Ocimene 1`, `Ocimene 2`, `Nerolidol 1`, and `Nerolidol 2` component keys.
-
-## Qualifier and total behavior
-
-The controlling SOP states that a result below LOQ is reported as `<LOQ`; it quantifies a sample result at or above LOQ. The worksheet must compare the unrounded reportable result against its matrix-specific Key/Value Store LOQ.
-
-- Below LOQ: show `<LOQ`; suppress negative or other numeric potency display; exclude from Total Terpenes.
-- Equal to LOQ: numeric report display is permitted by the SOP, but the user-approved Total Terpenes rule is strictly above LOQ, so equality is excluded from the total.
-- Above LOQ: show numeric mg/g and percent; include the unrounded `ug/g` value in Total Terpenes.
+- `result_ug_g < LOQ_ug_g`: display `<LOQ`; exclude from Total Terpenes.
+- `result_ug_g = LOQ_ug_g`: display numerically; exclude from Total Terpenes because inclusion is strictly above LOQ.
+- `result_ug_g > LOQ_ug_g`: display numerically; include the unrounded `ug/g` value in Total Terpenes.
+- Never display a negative potency value.
 
 ```text
 Total_Terpenes_ug_g =
@@ -86,11 +86,13 @@ Total_Terpenes_mg_g = Total_Terpenes_ug_g / 1000
 Total_Terpenes_percent = Total_Terpenes_ug_g / 10000
 ```
 
-Ocimene and Nerolidol each contribute once as combined measurands. Total Terpenes excludes their four component channels, Dimethylacetamide, Peak Table values, untested Metrc analytes, non-sample sequence records, blanks, zero/negative report values, and below-LOQ values. No Total Terpenes MU is calculated.
+Ocimene and Nerolidol each contribute once. Do not calculate Total Terpenes MU.
 
-## Measurement uncertainty
+## Combined measurement uncertainty
 
-For each of the 19 directly reported analytes, retrieve matrix-specific relative MU percent using the direct reportable analyte key. For Ocimene and Nerolidol, retrieve the two component-channel MU percentages and propagate independent relative uncertainties from the same unrounded component values used in the combined result:
+Only positive used components participate. A zero used component contributes zero concentration and zero absolute uncertainty and does not require an MU lookup.
+
+When both components are positive:
 
 ```text
 combined_mu_percent =
@@ -102,27 +104,8 @@ combined_mu_percent =
   / (component_1_used_ug_g + component_2_used_ug_g)
 ```
 
-Return blank if either required input or MU is blank, or if the denominator is less than or equal to zero. Display a calculated MU to three decimal places without rounding its intermediates.
+When only one component is positive, combined MU percent equals that component's MU percent. When both are zero, combined MU is blank. If a positive contributing component lacks its required MU, flag MU as unresolved and do not fabricate a value.
 
-## Remaining authoritative requirement
+## Phase 3 authorization boundary
 
-Only this rule remains unresolved:
-
-`TERPENES_COMPONENT_PREPROCESSING_RULE_UNRESOLVED`
-
-For each of `Ocimene 1`, `Ocimene 2`, `Nerolidol 1`, and `Nerolidol 2`, specify what numeric value (if any) becomes `component_used_ug_g` when the source channel is:
-
-1. missing/no peak;
-2. negative; or
-3. below its applicable channel threshold.
-
-The rule must also identify whether a component-channel threshold exists, where it comes from, and whether a missing component blocks the combined measurand. The current SOP supplies the reportable-analyte `<LOQ` qualifier but not this component preprocessing rule.
-
-## Resume gate
-
-Until that single rule is approved:
-
-- the synthetic vectors may validate only direct-result behavior and combined calculations whose already-preprocessed numeric components are supplied;
-- no formula may encode a component normalization assumption;
-- no production-candidate worksheet JSON may be generated; and
-- the classification remains `blocked_missing_authoritative_requirement`.
+Local Test and Batch production-candidate JSON generation is authorized after the calculation vectors pass. This authorization does not permit QBench access, import, activation, approval, API use, automatic publication, automatic QC Review, or PR merge. Sandbox saved-definition and runtime validation remain a separate next phase.

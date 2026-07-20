@@ -28,8 +28,8 @@ These are software-engine observations only. No equation, constant, dilution fac
 
 The future implementation may reuse the guard shape `source absent -> blank`, the separation `input -> calculated review -> report`, and the established `GET_KVSTORE_VALUE` mechanics.
 
-The user-approved Terpenes decision now establishes the final unit, dilution ownership, conversions, reportable mapping, LOQ/MU source dimensions, independent combined-MU equation, Total Terpenes rule, and display rounding. It may not populate a calculation body until this single documentation marker is resolved:
+The user-approved Terpenes decision establishes the final unit, dilution ownership, conversions, reportable mapping, component preprocessing, LOQ/MU source dimensions, independent combined-MU equation, Total Terpenes rule, and display rounding. The Phase 3 candidate now implements guarded Terpenes formulas locally from that contract.
 
-- `TERPENES_COMPONENT_PREPROCESSING_RULE_UNRESOLVED`
+Missing, blank, no-peak, zero, and negative component values are converted to zero only in separate formula-owned `used_ug_g` cells; the raw input remains unchanged. Positive values retain full precision. No component LOQ formula exists. Positive contributors require MU; zero contributors do not.
 
-No Terpenes worksheet formula was created during this review.
+`calculation_contract = passed_authoritative_method_documentation_and_user_approved_reporting_rules`

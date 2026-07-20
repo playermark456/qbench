@@ -2,178 +2,104 @@
 
 ## Scope and current gate
 
-This is a local design specification for future isolated Sandbox candidates. It does not authorize QBench creation, import, activation, API use, automatic QC Review, or automatic publication. Terpenes is quantitative-only; no Pass/Fail artifact is permitted.
+This specification describes the two local Phase 3 production candidates. It does not authorize QBench access, import, approval, activation, API use, automatic QC Review, or automatic publication. Terpenes remains quantitative-only and has no Pass/Fail artifact.
 
-Most scientific decisions are resolved. Candidate JSON and formula generation remain blocked only by `TERPENES_COMPONENT_PREPROCESSING_RULE_UNRESOLVED`: the approved numeric treatment of missing, negative, and below-threshold Ocimene/Nerolidol component channels.
+`calculation_contract = passed_authoritative_method_documentation_and_user_approved_reporting_rules`
 
-`calculation_contract = blocked_missing_authoritative_requirement`
+The final component-channel preprocessing rule was supplied and approved explicitly by the user. Local candidate generation is complete; saved-definition and runtime validation in an isolated Sandbox are separate future gates.
 
-## Test worksheet architecture
+## Approved component preprocessing
 
-Required tab order:
+Apply the following independently to Ocimene 1, Ocimene 2, Nerolidol 1, and Nerolidol 2:
 
-1. `Report`
-2. `Data`
-3. `Specifications`
-4. `Audit`
-5. `METRC`
+- missing, blank, no integrated peak, zero, or negative raw result -> `used_ug_g = 0`;
+- positive numeric raw result -> retain the full-precision positive value as `used_ug_g`;
+- preserve the raw result separately for audit; and
+- do not request or apply a component-channel LOQ.
 
-### Data tab
+Ocimene and Nerolidol each sum their two `used_ug_g` values at full precision. Only the combined reportable result is compared with its matrix-specific reportable-analyte LOQ. Display `<LOQ` when combined `ug/g < LOQ`; display a numeric result at or above LOQ. Include a reportable measurand in Total Terpenes only when its unrounded result is strictly above LOQ.
 
-The Test candidate must preserve the proven 43 independent scalar publisher destinations:
+Only positive components participate in combined MU. One positive component uses that component's MU; two positive components use independent relative propagation; two zero components return blank. A zero component does not require an MU lookup. A positive contributor without MU makes the combined MU unresolved; no value is fabricated.
+
+## Test worksheet candidate
+
+- Target: `SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_TEST_WS`
+- Version: `Terpenes Production Test Worksheet v1`
+- File: `production_candidates/SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_TEST_WS__v1.json`
+
+Required tab order and populated grid dimensions:
+
+| Tab | Rows x columns | Purpose |
+| --- | ---: | --- |
+| Report | 23 x 5 | Compact COA result range. |
+| Data | 40 x 26 | Exact 43 writable inputs plus visible audit/ownership context. |
+| Specifications | 23 x 21 | Formula-owned calculation, LOQ, MU, qualifier, total, and display layer. |
+
+### Exact writable destination contract
 
 | Surface | Exact address contract | Ownership |
 | --- | --- | --- |
-| 23 LabSolutions concentrations | `Data!D2:Z2` | Writable/importable final actual-sample `ug/g` values in the proven channel order. |
-| Seven preparation/compatibility inputs | `Data!B12:B18` | Writable compatibility fields; retained for review and traceability, but must not cause QBench to reapply dilution. |
-| Controlled disposition | `Data!B22:B23` | Staff-controlled `batch_qc_disposition` and `publish_ready`; parser and transfer do not populate them. |
-| Eleven source/audit fields | `Data!B28:B38` | Writable source traceability; excluded from reportable calculations. |
+| 23 LabSolutions concentrations | `Data!D2:Z2` | Writable final actual-sample `ug/g` channels. |
+| Seven preparation/compatibility inputs | `Data!B12:B18` | Writable audit/compatibility inputs; never reapplied to the analytical result. |
+| Controlled disposition | `Data!B22:B23` | Staff-controlled; no automatic publication or QC disposition. |
+| Eleven source/audit fields | `Data!B28:B38` | Writable traceability fields, excluded from reportable calculations. |
 
-The 23 input values are the final `Compound Results(Ch1) > Conc.` actual-sample results in `ug/g`. LabSolutions already applies dilution. Existing dilution and preparation fields remain for destination compatibility and audit only; formulas must not multiply or divide the analytical result by them.
+These 43 cells remain blank, unique, writable, exportable, and non-formula. All calculated cells are outside the destination contract, visibly distinct, protected, and formula-owned. Dimethylacetamide and Peak Table data remain audit-only.
 
-All calculated cells must be outside the 43 writable destinations and formula-owned. Use distinct styles for writable inputs, formula-owned calculations, controlled staff fields, and audit-only data.
+### Calculation and Key/Value binding
 
-### Specifications tab
+The Test worksheet retains all 23 internal channels and produces exactly 21 reportable measurands. Nineteen map directly; Ocimene and Nerolidol each combine two channels under the approved preprocessing rule. LabSolutions values are already final `ug/g`, including dilution. QBench does not reapply dilution.
 
-Use one row for each of the 21 reportable measurands plus one Total Terpenes row. Required calculation/review columns:
+Matrix-specific reportable LOQ and MU values use documented `GET_KVSTORE_VALUE` placeholders. The tracked candidate contains `SANDBOX_CONFIGURATION_REQUIRED` instead of internal store identifiers. Combined analytes use the reportable `Ocimene` or `Nerolidol` LOQ, while their positive component channels use component MU keys only. Component LOQ lookup is prohibited.
 
-- reportable analyte;
-- source channel or combination group;
-- unrounded internal `ug/g`;
-- unrounded `mg/g`;
-- unrounded percent;
-- matrix/product type;
-- Key/Value Store LOQ and result unit;
-- qualifier;
-- Key/Value Store MU percent;
-- display `mg/g`, percent, and MU percent;
-- Metrc profile field;
-- staff note/review context.
-
-For the 19 direct measurands, source one internal channel. For Ocimene, source `Ocimene 1 + Ocimene 2`. For Nerolidol, source `Nerolidol 1 + Nerolidol 2`. The four component channels remain visible for traceability but are not separate COA or Metrc results.
-
-The unresolved component preprocessing rule must be an explicit formula input/guard, never an implicit `MAX(0, value)`, blank-to-zero coercion, or error suppression.
-
-### Key/Value Store binding
-
-The Specifications formulas must follow this semantic lookup contract:
+Internal calculations retain full precision:
 
 ```text
-GET_KVSTORE_VALUE(
-  terpenes_store_binding,
-  assay_key,
-  analyte_key,
-  matrix_or_product_type_key,
-  result_unit_key,
-  "LOQ" or "MU%"
-)
-```
-
-The internal store binding and exact deployed key strings are Sandbox configuration and must not be committed as QBench IDs. Before candidate approval, Sandbox validation must prove one unique nonblank lookup for every required tuple and reject missing/duplicate tuples.
-
-- Direct LOQ key: direct reportable analyte.
-- Combined LOQ key: `Ocimene` or `Nerolidol`, never the sum of component LOQs.
-- Direct MU key: direct analyte.
-- Combined MU keys: the two component-channel names by matrix.
-
-### Calculation ownership
-
-```text
-direct_mg_g = direct_ug_g / 1000
-direct_percent = direct_ug_g / 10000
+mg/g = ug/g / 1000
+percent = ug/g / 10000
 
 combined_ug_g = component_1_used_ug_g + component_2_used_ug_g
-combined_mg_g = combined_ug_g / 1000
-combined_percent = combined_ug_g / 10000
 
 combined_mu_percent =
   100 * SQRT(
-    (component_1_used_ug_g * component_1_mu_percent / 100)^2
-    +
+    (component_1_used_ug_g * component_1_mu_percent / 100)^2 +
     (component_2_used_ug_g * component_2_mu_percent / 100)^2
-  ) / (component_1_used_ug_g + component_2_used_ug_g)
+  ) / combined_ug_g
 ```
 
-Combined MU returns blank when a required input/MU is blank or the denominator is nonpositive. The calculation uses unrounded components. No Total Terpenes MU is created.
+The combined-MU formula is guarded for zero components and missing MU values. Display-only values and MU are rounded to the thousandth. Total Terpenes sums the 21 unrounded reportable results for which `result_ug_g > LOQ_ug_g`; combined analytes are counted once and Total Terpenes has no MU.
 
-For each reportable measurand, compare the unrounded result to the Key/Value Store LOQ. Below LOQ displays `<LOQ` and no negative potency value. Equality may display numerically, but the Total Terpenes inclusion test is strictly `result_ug_g > LOQ_ug_g`.
-
-```text
-Total_Terpenes_ug_g =
-  SUM(the 21 unrounded reportable results strictly above their matrix LOQs)
-
-Total_Terpenes_mg_g = Total_Terpenes_ug_g / 1000
-Total_Terpenes_percent = Total_Terpenes_ug_g / 10000
-```
-
-### Report tab
-
-The compact COA table has exactly five columns:
-
-1. Analyte
-2. Result (mg/g)
-3. Result (%)
-4. LOQ
-5. MU (%)
-
-It contains the 21 tested/reportable measurands plus Total Terpenes. The bounded named range is:
+### Report contract
 
 `report_results = Report!A1:E23`
 
-The range includes one header row and 22 result rows. Report cells reference Specifications calculations, not raw import cells. Final numeric result and MU cells use three-decimal display formats; internal cells retain full precision.
+The five exact headers are `Analyte`, `Result (mg/g)`, `Result (%)`, `LOQ`, and `MU (%)`. The range contains one header, 21 reportable analytes, and Total Terpenes. It excludes all four component-channel labels, raw `ug/g`, preparation inputs, Peak Table, Dimethylacetamide, parser/audit fields, and Pass/Fail content.
 
-Below-LOQ analytes remain in the fixed 21-row report table and show `<LOQ` according to the controlling SOP. Sandbox COA preview must verify how the report renderer handles the qualifier across the result columns.
+## Batch worksheet candidate
 
-Exclude raw `ug/g`, four component channels, preparation/dilution fields, Peak Table, Dimethylacetamide, QC calculations, parser metadata, audit hashes, and all Pass/Fail content.
+- Target: `SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_BATCH_WS`
+- Version: `Terpenes Production Batch Worksheet v1`
+- File: `production_candidates/SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_BATCH_WS__v1.json`
 
-### METRC tab
+Required tab order and populated grid dimensions:
 
-Use [metrc_terpenes_analyte_mapping.csv](metrc_terpenes_analyte_mapping.csv) as the field-name contract. Route exactly one matrix-appropriate unit field per reportable measurand unless a future validated upload contract explicitly requires otherwise:
+| Tab | Rows x columns | Purpose |
+| --- | ---: | --- |
+| Run Setup | 25 x 3 | Staff sequence and readiness surface. |
+| Instrument Import | 201 x 57 | No-code parser landing surface. |
+| Batch Review | 45 x 24 | Review of final `ug/g`, record type, audit evidence, and disposition context. |
+| Test Transfer | 87 x 56 | Manual, reviewable Test-transfer surface. |
 
-- Raw Plant Material -> percentage field.
-- Concentrate/Extract -> percentage field.
-- Infused Product -> mg/g field.
+The no-code parser contract is unchanged:
 
-Do not populate unused template analytes, `Cis-Nerolidol`, generic `Cymene`, `Other Terpenes`, or both unit fields for the same result. Ocimene and Nerolidol each map once as combined results. COA display remains dual-unit regardless of the single-unit Metrc route.
+- source `A2:AE2` -> `Instrument Import!A2`;
+- source `AH2:BE2` -> `Instrument Import!AH2`;
+- columns AF and AG are worksheet-owned formulas for every data row and are never parser write targets.
 
-### Audit tab
+The Batch worksheet preserves 23 numeric terpene channels, Dimethylacetamide, Peak Table audit data, and sequence-record classification. Null, Blank, Standard, CCV, LOQ, and QC records are excluded from Test transfer. Batch Review and Test Transfer remain separate. Any ready/status fields are advisory formula output only; no automatic QBench publication or QC Review action exists.
 
-Present source filename/hash, parser state, import and transfer state, original 23-channel values, Dimethylacetamide, and Peak Table context. Audit data must remain reviewable/exportable but cannot enter `report_results`, Metrc values, or Total Terpenes.
+## Local validation gate
 
-## Batch worksheet architecture
+The dedicated validator proves JSON syntax, tab order, dimensions, synchronized worksheet data, fresh UUIDs, the exact 43 destination contract, 23 channels, 21 reportables, component preprocessing, combined MU, reportable LOQ behavior, strict-above Total Terpenes, display rounding, report range dimensions, AF/AG ownership, and absence of Pass/Fail, credentials, signed URLs, customer data, and internal production QBench IDs.
 
-Required tab order:
-
-1. `Run Setup`
-2. `Raw Import`
-3. `Normalized Import`
-4. `Batch Review`
-5. `Test Transfer`
-6. `Audit`
-
-| Tab | Purpose | Required boundary |
-| --- | --- | --- |
-| Run Setup | Staff sequence surface for standards, blank, system suitability, QC, and sample records. | No customer-result Pass/Fail. |
-| Raw Import | Byte/order-preserving parser landing surface. | Parser-owned; no scientific calculation. |
-| Normalized Import | Existing 57-column no-code surface. | Parser writes only `A:AE` and `AH:BE`; `AF/AG` remain worksheet-owned formulas. |
-| Batch Review | Review 23 final `ug/g` channels, record type, import status, QC/audit notes, Dimethylacetamide, and Peak Table context. | No automatic QC Review or result publication. |
-| Test Transfer | Deterministic one-row-per-Test manual transfer in exact 43-field-compatible order. | Do not transfer staff-controlled `B22:B23`; no automatic Publish. |
-| Audit | Source hashes, duplicate checks, parser state, and transfer history. | Excluded from scientific report values. |
-
-The parser preserves all 23 internal channels and audit-only evidence. Scientific combination, LOQ, MU, unit conversion, Total Terpenes, report, and Metrc formulas belong to the Test worksheet after the remaining component rule is approved.
-
-## Local validation requirements
-
-Before any future candidate JSON is generated:
-
-1. approve and document the component preprocessing rule;
-2. extend [calculation_test_vectors.csv](calculation_test_vectors.csv) with missing, negative, and below-threshold component boundary cases;
-3. validate 23 unique internal channels and exactly 21 unique reportable measurands;
-4. validate all workbook-derived Metrc field labels and ignored fields;
-5. validate every Key/Value tuple and blank/error guard;
-6. validate conversions, combined results, independent MU propagation, strict-above Total Terpenes, and display rounding;
-7. prove the exact 43 writable destinations remain blank/non-formula and every calculated output is formula-owned;
-8. prove no Pass/Fail string, named cell, formula, report field, or automation value exists; and
-9. run existing no-code parser and AF/AG formula-ownership tests.
-
-Sandbox creation, saved-version round trip, instantiated runtime proof, COA preview, and Metrc export verification are separate later gates. No live/production QBench action is authorized.
+The next controlled phase is isolated Sandbox import, saved/reopened round trip, instantiated runtime proof, Key/Value binding validation, COA preview, and transfer verification. No production action is authorized.

@@ -49,12 +49,12 @@ The sequence, standards, blank, system-suitability rows, sample-row surface, and
 - The user-approved method decision establishes that the 23 actual-sample values are final `ug/g` and already include dilution. Preparation/dilution fields remain compatibility and audit inputs; they must not be reapplied to the analytical result.
 - The Minnesota OCM Metrc workbook SHA-256 is `2238a38be106d64f123de83005f6e4d22ebc7335691e03bc067b081bca7ce8c2`. Its two sheets provide percentage fields for Raw Plant Material and Concentrate/Extract and mg/g fields for Infused Products. The raw workbook remains outside the repository; only the sanitized field mapping is tracked.
 
-## Calculation-contract status
+## Calculation-contract and candidate status
 
 The user approved Terpene Analysis SOP v1.2 as controlling, the version-1.0 Form and Protocol as current, the collected Validation Report as current, and actual-sample LabSolutions `Compound Results(Ch1) > Conc.` as final `ug/g` with dilution already applied. The conversions, 21-measurand mapping, Key/Value LOQ/MU dimensions, independent combined-MU method, strict-above Total Terpenes rule, three-decimal display rounding, dual-unit COA, matrix-specific Metrc route, and quantitative-only model are now documented.
 
-One authoritative rule remains absent: what numeric component value enters combined Ocimene or Nerolidol when an individual component channel is missing, negative, or below its applicable channel threshold. The SOP supplies the reportable-analyte `<LOQ` qualifier, but not that component preprocessing rule.
+The user explicitly approved the final component preprocessing rule: missing, blank, no-peak, zero, and negative component results contribute zero; positive numeric results contribute at full precision; and no component-channel LOQ is applied. Only the combined reportable Ocimene or Nerolidol result is compared with its matrix-specific reportable LOQ.
 
-`calculation_contract = blocked_missing_authoritative_requirement`
+`calculation_contract = passed_authoritative_method_documentation_and_user_approved_reporting_rules`
 
-Production-candidate JSON and formula generation remain blocked only by `TERPENES_COMPONENT_PREPROCESSING_RULE_UNRESOLVED`; see [calculation_contract.md](calculation_contract.md).
+The local Test and Batch candidates were generated under `production_candidates/` and passed the dedicated Phase 3 validator. They have not been imported into QBench. Isolated Sandbox saved-definition and runtime validation remain the next controlled phase.

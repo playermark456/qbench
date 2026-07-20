@@ -28,9 +28,11 @@
   "live_api_request_occurred": false,
   "terpenes_operational_workflow_searched_after_scope_correction": false,
   "terpenes_formula_created": false,
-  "production_candidate_json_created": false,
+  "production_candidate_json_created_during_live_inspection": false,
+  "local_phase3_candidate_json_created_after_live_inspection": true,
   "customer_data_retained": false,
   "internal_numeric_qbench_ids_retained": false,
   "signed_urls_retained": false,
-  "calculation_contract": "blocked_missing_authoritative_requirement"
+  "calculation_contract": "passed_authoritative_method_documentation_and_user_approved_reporting_rules",
+  "phase3_qbench_access_occurred": false
 }
