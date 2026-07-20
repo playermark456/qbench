@@ -1,50 +1,148 @@
 # Terpenes production worksheet design specification
 
-## Scope and safety boundary
+## Scope and current gate
 
-This is a documentation-only architecture proposal for two future Sandbox candidates. It does not authorize candidate JSON generation. The June 30 source exports and technical proof worksheets remain unchanged references. The design is quantitative-only: no Terpenes Pass/Fail named cell, formula, report field, tile, or automation value is permitted.
+This is a local design specification for future isolated Sandbox candidates. It does not authorize QBench creation, import, activation, API use, automatic QC Review, or automatic publication. Terpenes is quantitative-only; no Pass/Fail artifact is permitted.
 
-Formula implementation is intentionally deferred until the authoritative calculation contract is supplied and confirmed.
+Most scientific decisions are resolved. Candidate JSON and formula generation remain blocked only by `TERPENES_COMPONENT_PREPROCESSING_RULE_UNRESOLVED`: the approved numeric treatment of missing, negative, and below-threshold Ocimene/Nerolidol component channels.
 
-## Test worksheet
+`calculation_contract = blocked_missing_authoritative_requirement`
 
-Recommended tab order:
+## Test worksheet architecture
+
+Required tab order:
 
 1. `Report`
 2. `Data`
 3. `Specifications`
 4. `Audit`
+5. `METRC`
 
-An optional `METRC` tab is deferred until the authoritative METRC reporting policy is resolved. It must not be inferred from another assay.
+### Data tab
 
-### Data tab sections
+The Test candidate must preserve the proven 43 independent scalar publisher destinations:
 
-| Section | Content | Ownership |
+| Surface | Exact address contract | Ownership |
 | --- | --- | --- |
-| Sample identity | Test/sample identity expressions and staff review context. | QBench/Test context; not a publisher destination. |
-| Raw instrument values | The exact 23 scalar concentration inputs at D2:Z2 in the proven channel order. | Editable/importable destinations only; no formula. |
-| Sample preparation and calculation inputs | B12:B18: sample mass, final volume, dilution fields, instrument-unit confirmation, and preparation confirmation. | Exact scalar contract; no formula. |
-| Controlled disposition | B22:B23: batch QC disposition and publish readiness. | Controlled values only; neither parser nor transfer may populate them. |
-| Source and audit metadata | B28:B38: source file and instrumentation traceability. | Exact scalar contract; no calculation/report result. |
-| Calculated-result review | Per-channel mg/g, percent, LOQ/qualifier, and staff-review cells outside the 43 inputs. | Formula-owned only after calculation approval. |
+| 23 LabSolutions concentrations | `Data!D2:Z2` | Writable/importable final actual-sample `ug/g` values in the proven channel order. |
+| Seven preparation/compatibility inputs | `Data!B12:B18` | Writable compatibility fields; retained for review and traceability, but must not cause QBench to reapply dilution. |
+| Controlled disposition | `Data!B22:B23` | Staff-controlled `batch_qc_disposition` and `publish_ready`; parser and transfer do not populate them. |
+| Eleven source/audit fields | `Data!B28:B38` | Writable source traceability; excluded from reportable calculations. |
 
-The `Audit` tab should present source filename/hash, parser state, import status, transfer state, and non-reportable diagnostic context without exposing those values on the COA. Staff-editable inputs, formula-owned cells, and audit-only cells must have distinct styles and read-only behavior.
+The 23 input values are the final `Compound Results(Ch1) > Conc.` actual-sample results in `ug/g`. LabSolutions already applies dilution. Existing dilution and preparation fields remain for destination compatibility and audit only; formulas must not multiply or divide the analytical result by them.
 
-Input cells, formula cells, and audit-only cells will use clearly different shading, borders, wrapped headers, number formats, widths, and row heights. No calculated value may be written directly into a 43-input destination.
+All calculated cells must be outside the 43 writable destinations and formula-owned. Use distinct styles for writable inputs, formula-owned calculations, controlled staff fields, and audit-only data.
 
 ### Specifications tab
 
-The review table will have one row per reportable channel and include display analyte, instrument concentration, mg/g, percent, LOQ, measurement uncertainty when authorized, qualifier, METRC display name/profile context, and staff note. It is for quantitative review, not compliance classification.
+Use one row for each of the 21 reportable measurands plus one Total Terpenes row. Required calculation/review columns:
+
+- reportable analyte;
+- source channel or combination group;
+- unrounded internal `ug/g`;
+- unrounded `mg/g`;
+- unrounded percent;
+- matrix/product type;
+- Key/Value Store LOQ and result unit;
+- qualifier;
+- Key/Value Store MU percent;
+- display `mg/g`, percent, and MU percent;
+- Metrc profile field;
+- staff note/review context.
+
+For the 19 direct measurands, source one internal channel. For Ocimene, source `Ocimene 1 + Ocimene 2`. For Nerolidol, source `Nerolidol 1 + Nerolidol 2`. The four component channels remain visible for traceability but are not separate COA or Metrc results.
+
+The unresolved component preprocessing rule must be an explicit formula input/guard, never an implicit `MAX(0, value)`, blank-to-zero coercion, or error suppression.
+
+### Key/Value Store binding
+
+The Specifications formulas must follow this semantic lookup contract:
+
+```text
+GET_KVSTORE_VALUE(
+  terpenes_store_binding,
+  assay_key,
+  analyte_key,
+  matrix_or_product_type_key,
+  result_unit_key,
+  "LOQ" or "MU%"
+)
+```
+
+The internal store binding and exact deployed key strings are Sandbox configuration and must not be committed as QBench IDs. Before candidate approval, Sandbox validation must prove one unique nonblank lookup for every required tuple and reject missing/duplicate tuples.
+
+- Direct LOQ key: direct reportable analyte.
+- Combined LOQ key: `Ocimene` or `Nerolidol`, never the sum of component LOQs.
+- Direct MU key: direct analyte.
+- Combined MU keys: the two component-channel names by matrix.
+
+### Calculation ownership
+
+```text
+direct_mg_g = direct_ug_g / 1000
+direct_percent = direct_ug_g / 10000
+
+combined_ug_g = component_1_used_ug_g + component_2_used_ug_g
+combined_mg_g = combined_ug_g / 1000
+combined_percent = combined_ug_g / 10000
+
+combined_mu_percent =
+  100 * SQRT(
+    (component_1_used_ug_g * component_1_mu_percent / 100)^2
+    +
+    (component_2_used_ug_g * component_2_mu_percent / 100)^2
+  ) / (component_1_used_ug_g + component_2_used_ug_g)
+```
+
+Combined MU returns blank when a required input/MU is blank or the denominator is nonpositive. The calculation uses unrounded components. No Total Terpenes MU is created.
+
+For each reportable measurand, compare the unrounded result to the Key/Value Store LOQ. Below LOQ displays `<LOQ` and no negative potency value. Equality may display numerically, but the Total Terpenes inclusion test is strictly `result_ug_g > LOQ_ug_g`.
+
+```text
+Total_Terpenes_ug_g =
+  SUM(the 21 unrounded reportable results strictly above their matrix LOQs)
+
+Total_Terpenes_mg_g = Total_Terpenes_ug_g / 1000
+Total_Terpenes_percent = Total_Terpenes_ug_g / 10000
+```
 
 ### Report tab
 
-The Report tab will be a compact formula-driven COA table. It will show only approved reportable analytes, result units, and authorized qualifier/LOQ information. It must exclude raw concentrations, preparation details, audit data, Dimethylacetamide, Peak Table data, internal system names, and Pass/Fail.
+The compact COA table has exactly five columns:
 
-`report_results` will be defined only after the approved COA measurand policy determines the exact complete table. It will include its header row and intended reportable rows only, with no empty trailing space. Its documentation-only shape is `Report!A1:F{approved_row_count_plus_header}`; no exact row count may be chosen while `TERPENES_REPORT_MEASURANDS_UNRESOLVED` remains open.
+1. Analyte
+2. Result (mg/g)
+3. Result (%)
+4. LOQ
+5. MU (%)
 
-## Batch worksheet
+It contains the 21 tested/reportable measurands plus Total Terpenes. The bounded named range is:
 
-Recommended tab order:
+`report_results = Report!A1:E23`
+
+The range includes one header row and 22 result rows. Report cells reference Specifications calculations, not raw import cells. Final numeric result and MU cells use three-decimal display formats; internal cells retain full precision.
+
+Below-LOQ analytes remain in the fixed 21-row report table and show `<LOQ` according to the controlling SOP. Sandbox COA preview must verify how the report renderer handles the qualifier across the result columns.
+
+Exclude raw `ug/g`, four component channels, preparation/dilution fields, Peak Table, Dimethylacetamide, QC calculations, parser metadata, audit hashes, and all Pass/Fail content.
+
+### METRC tab
+
+Use [metrc_terpenes_analyte_mapping.csv](metrc_terpenes_analyte_mapping.csv) as the field-name contract. Route exactly one matrix-appropriate unit field per reportable measurand unless a future validated upload contract explicitly requires otherwise:
+
+- Raw Plant Material -> percentage field.
+- Concentrate/Extract -> percentage field.
+- Infused Product -> mg/g field.
+
+Do not populate unused template analytes, `Cis-Nerolidol`, generic `Cymene`, `Other Terpenes`, or both unit fields for the same result. Ocimene and Nerolidol each map once as combined results. COA display remains dual-unit regardless of the single-unit Metrc route.
+
+### Audit tab
+
+Present source filename/hash, parser state, import and transfer state, original 23-channel values, Dimethylacetamide, and Peak Table context. Audit data must remain reviewable/exportable but cannot enter `report_results`, Metrc values, or Total Terpenes.
+
+## Batch worksheet architecture
+
+Required tab order:
 
 1. `Run Setup`
 2. `Raw Import`
@@ -55,56 +153,27 @@ Recommended tab order:
 
 | Tab | Purpose | Required boundary |
 | --- | --- | --- |
-| Run Setup | Polished sequence surface for standards, blank, system suitability, QC rows, and sample rows. | No customer-result Pass/Fail. |
-| Raw Import | Byte/order-preserving parser landing surface with no scientific interpretation. | Parser-owned cells only; no report or Test destinations. |
-| Normalized Import | The normalized 57-column no-code input surface, including source metadata and audit data. | Parser writes only A:AE and AH:BE; AF/AG are formula-owned. |
-| Batch Review | Readable row-level view of sequence, identifiers, channels, import/duplicate status, QC/audit notes, and shortened source reference. | Dimethylacetamide and Peak Table data remain audit-only; no automatic QC Review. |
-| Test Transfer | Deterministic one-row-per-Test manual copy/paste surface in the exact Test input order, with six staff instructions. | Never transfer B22/B23 or values that require manual preparation authority. No automatic Publish. |
-| Audit | Source hashes, duplicate checks, parser state, and transfer history. | Audit-only; excluded from report and scientific calculations. |
+| Run Setup | Staff sequence surface for standards, blank, system suitability, QC, and sample records. | No customer-result Pass/Fail. |
+| Raw Import | Byte/order-preserving parser landing surface. | Parser-owned; no scientific calculation. |
+| Normalized Import | Existing 57-column no-code surface. | Parser writes only `A:AE` and `AH:BE`; `AF/AG` remain worksheet-owned formulas. |
+| Batch Review | Review 23 final `ug/g` channels, record type, import status, QC/audit notes, Dimethylacetamide, and Peak Table context. | No automatic QC Review or result publication. |
+| Test Transfer | Deterministic one-row-per-Test manual transfer in exact 43-field-compatible order. | Do not transfer staff-controlled `B22:B23`; no automatic Publish. |
+| Audit | Source hashes, duplicate checks, parser state, and transfer history. | Excluded from scientific report values. |
 
-Live reference worksheets show that Batch-to-Test activity is commonly separated into a `Data Modified` Batch automation, but the exact automation body and scientific mapping were not adopted. The Terpenes proposal retains a manual, reviewable transfer gate until an authorized transfer contract exists.
+The parser preserves all 23 internal channels and audit-only evidence. Scientific combination, LOQ, MU, unit conversion, Total Terpenes, report, and Metrc formulas belong to the Test worksheet after the remaining component rule is approved.
 
-## Data classifications
+## Local validation requirements
 
-| Classification | Candidate representation |
-| --- | --- |
-| Raw instrument values | 23 `Compound Results(Ch1) > Conc.` values only. Peak Table, area, height, and retention time are not quantitation sources. |
-| Sample preparation inputs | Exact Test scalar fields; authority and units pending the calculation contract. |
-| Calculated mg/g and percent | Formula-owned cells outside the destination contract; not implemented until authoritative confirmation. |
-| LOQ and MU | Review/report fields only after their scientific source and handling are confirmed. |
-| Audit-only data | Source metadata, Dimethylacetamide, and Peak Table context; excluded from Report and METRC-facing results. |
-| Staff-review fields | Quantitative review notes, controlled batch disposition, and manual transfer checks; never sample Pass/Fail. |
-| Batch-to-Test transfer fields | Deterministic scalar block matching the 23 instrument channels plus only Batch-authoritative scalar inputs. |
-| COA-facing values | Compact formula-driven approved measurand table inside `report_results`. |
-| METRC-facing values | Profile-specific quantitative values, with required Ocimene/Nerolidol handling, after approved profile and qualifier rules are confirmed. |
+Before any future candidate JSON is generated:
 
-## Open design gates
+1. approve and document the component preprocessing rule;
+2. extend [calculation_test_vectors.csv](calculation_test_vectors.csv) with missing, negative, and below-threshold component boundary cases;
+3. validate 23 unique internal channels and exactly 21 unique reportable measurands;
+4. validate all workbook-derived Metrc field labels and ignored fields;
+5. validate every Key/Value tuple and blank/error guard;
+6. validate conversions, combined results, independent MU propagation, strict-above Total Terpenes, and display rounding;
+7. prove the exact 43 writable destinations remain blank/non-formula and every calculated output is formula-owned;
+8. prove no Pass/Fail string, named cell, formula, report field, or automation value exists; and
+9. run existing no-code parser and AF/AG formula-ownership tests.
 
-The candidate cannot be generated, imported, or approved until the calculation contract establishes instrument concentration units, authoritative preparation inputs, dilution-factor behavior, rounding/significant figures, below-LOQ treatment, permitted qualifiers, and the approved COA measurand policy.
-
-Documentation markers retained for that gate:
-
-- `TERPENES_CONC_UNIT_UNRESOLVED`
-- `TERPENES_MG_G_FORMULA_UNRESOLVED`
-- `TERPENES_PERCENT_FORMULA_UNRESOLVED`
-- `TERPENES_LOQ_POLICY_UNRESOLVED`
-- `TERPENES_ROUNDING_POLICY_UNRESOLVED`
-- `TERPENES_MU_POLICY_UNRESOLVED`
-- `TERPENES_REPORT_MEASURANDS_UNRESOLVED`
-- `TERPENES_OCIMENE_POLICY_UNRESOLVED`
-- `TERPENES_NEROLIDOL_POLICY_UNRESOLVED`
-
-These are documentation-only markers and must not be placed in QBench.
-
-## Future Sandbox validation sequence
-
-1. Resolve and approve the authoritative calculation contract.
-2. Generate fresh-UUID Test and Batch candidates from preserved old-renderer envelopes.
-3. Validate JSON structure, styles, dual data representations, formula ownership, and named-cell uniqueness locally.
-4. Import only into isolated Sandbox definitions.
-5. Save through the normal version workflow and prove the visible Draft row.
-6. Reopen from the Worksheets list and export the saved definition with **Export Spreadsheet**.
-7. Compare formula text, styles, dimensions, named cells, report range, and UUID regeneration semantically.
-8. Instantiate one synthetic Test and Batch without customer data.
-9. Verify parser landing, review, manual transfer, calculation, blank/error behavior, and COA preview against approved test vectors.
-10. Promote only after independent scientific review and Sandbox evidence pass.
+Sandbox creation, saved-version round trip, instantiated runtime proof, COA preview, and Metrc export verification are separate later gates. No live/production QBench action is authorized.

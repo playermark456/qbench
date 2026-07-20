@@ -24,7 +24,9 @@ The active Certificate of Analysis template definition shell was inspected read-
 ## Terpenes proposal
 
 - Use a dedicated `Report` tab.
-- Define `report_results` only after `TERPENES_REPORT_MEASURANDS_UNRESOLVED` is resolved.
-- Include the header row and exactly the approved reportable rows.
+- Define `report_results` as `Report!A1:E23`.
+- Include the header row, exactly 21 approved reportable measurands, and Total Terpenes.
+- Use columns Analyte, Result (mg/g), Result (%), LOQ, and MU (%).
+- Display below-LOQ reportable analytes as `<LOQ` according to the controlling SOP; verify the fixed-row qualifier rendering in Sandbox COA preview.
 - Exclude raw concentrations, preparation inputs, source/audit fields, Peak Table data, Dimethylacetamide, internal identifiers, and Pass/Fail.
 - Keep the range narrow enough for a single COA table and verify blank-range and page-width behavior in Sandbox.

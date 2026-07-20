@@ -46,11 +46,15 @@ The sequence, standards, blank, system-suitability rows, sample-row surface, and
 - The proven scalar mapping defines exactly 43 independent Test inputs: 23 instrument concentrations at `Data!D2:Z2`, seven preparation fields at `Data!B12:B18`, two controlled fields at `Data!B22:B23`, and eleven audit/source fields at `Data!B28:B38`.
 - The no-code fallback proves two non-overlapping Batch import routes: `A2:AE2` to `Instrument Import!A2` and `AH2:BE2` to `Instrument Import!AH2`. Columns AF and AG are worksheet-owned formulas and must never be parser-write targets.
 - The runtime-instantiation evidence proves the 43 scalar destinations persisted in an instantiated Test; it does not establish an approved scientific calculation contract for a staff-facing production worksheet.
+- The user-approved method decision establishes that the 23 actual-sample values are final `ug/g` and already include dilution. Preparation/dilution fields remain compatibility and audit inputs; they must not be reapplied to the analytical result.
+- The Minnesota OCM Metrc workbook SHA-256 is `2238a38be106d64f123de83005f6e4d22ebc7335691e03bc067b081bca7ce8c2`. Its two sheets provide percentage fields for Raw Plant Material and Concentrate/Extract and mg/g fields for Infused Products. The raw workbook remains outside the repository; only the sanitized field mapping is tracked.
 
 ## Calculation-contract status
 
-Candidate Terpenes SOP, Analysis Form, and Analysis Protocol files are preserved locally in the ignored `authoritative_method/` directory, but current approved revision status is not established and controlled LabSolutions unit evidence is absent. Live QBench is used only as a non-Terpenes implementation reference library; it is not expected to contain an operational Terpenes workflow and cannot resolve the scientific contract.
+The user approved Terpene Analysis SOP v1.2 as controlling, the version-1.0 Form and Protocol as current, the collected Validation Report as current, and actual-sample LabSolutions `Compound Results(Ch1) > Conc.` as final `ug/g` with dilution already applied. The conversions, 21-measurand mapping, Key/Value LOQ/MU dimensions, independent combined-MU method, strict-above Total Terpenes rule, three-decimal display rounding, dual-unit COA, matrix-specific Metrc route, and quantitative-only model are now documented.
+
+One authoritative rule remains absent: what numeric component value enters combined Ocimene or Nerolidol when an individual component channel is missing, negative, or below its applicable channel threshold. The SOP supplies the reportable-analyte `<LOQ` qualifier, but not that component preprocessing rule.
 
 `calculation_contract = blocked_missing_authoritative_requirement`
 
-Formula implementation and production-candidate JSON generation remain blocked; see [calculation_contract.md](calculation_contract.md).
+Production-candidate JSON and formula generation remain blocked only by `TERPENES_COMPONENT_PREPROCESSING_RULE_UNRESOLVED`; see [calculation_contract.md](calculation_contract.md).

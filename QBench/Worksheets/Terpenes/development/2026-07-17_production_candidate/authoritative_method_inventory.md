@@ -1,70 +1,112 @@
-# Authoritative Terpenes method-document intake inventory
+# Authoritative Terpenes method and reporting inventory
 
-Inventory date: 2026-07-17
+Inventory date: 2026-07-20
 
-## Intake result
+## Current authority decision
 
-The `authoritative_method/` directory was created. It has a narrow local ignore rule that excludes controlled source documents while retaining the `.gitignore` file; sanitized inventory and manifest files outside that directory remain trackable.
+The user explicitly approved the following method set for the production-worksheet design contract:
 
-The intake is **stopped**. Multiple distinct SOP candidates exist, one filename claims version 1.2 while its visible document control block says version 1.1, and the discovered validation report contains real validation sample/product and internal-system information. The report was not retained in the target directory.
-
-No calculation-contract interpretation, formulas, worksheet JSON, QBench access, API activity, staging, commit, push, or PR action was performed.
-
-## Bounded source locations checked
-
-| Location | Result |
-| --- | --- |
-| `Downloads/Terpenes Method Documents` | Not present. |
-| `Downloads/Terpene Documents` | Three Terpenes method candidates found. |
-| `Downloads/Terpene Documents.zip` | Present; extracted unchanged to a temporary local directory and inspected. Three files found. |
-| Downloads root, filename filter only | Terpenes SOP candidates and one Analysis Form found. Unrelated matching files were not copied. |
-| Repository `QBench/Worksheets/Terpenes` subtree | Implementation materials and worksheet artifacts found; none were treated as controlled scientific method documents or copied. |
-
-## Copied controlled-document candidates
-
-| Target filename | SHA-256 | Source label | Visible classification |
-| --- | --- | --- | --- |
-| `Terpene Analysis SOP v 1.1__source_downloads.docx` | `b096f9b9668295fcb46756e2963f5b103cae581224ca52ce53776e513a9c9cb0` | Downloads root | Terpene Potency by GC-FID SOP; visible version 1.1; approval field visible; revision date not established. |
-| `Terpene Analysis SOP v 1.2.docx` | `b096f9b9668295fcb46756e2963f5b103cae581224ca52ce53776e513a9c9cb0` | Downloads root | Same bytes as the Downloads-root version-1.1 filename, but the visible control block says version 1.1. Revision-label conflict. |
-| `Terpene Analysis SOP v 1.1__source_terpene_documents.docx` | `f2ff45d6f3b13eba2c0610fe4cffeb713faf3ef14b0f7f722c1f590f4b398df5` | Downloads/Terpene Documents | Terpene Potency by GC-FID SOP; visible version 1.1; approval field visible; distinct bytes. |
-| `Terpene Analysis SOP v 1.1__source_terpene_documents_zip.docx` | `de53223bc129c42cdeb3bf38dede659facbd65bbf0fb4956a211ee57589b2390` | Terpene Documents.zip | Terpene Potency by GC-FID SOP; visible version 1.1; approval field visible; distinct bytes. |
-| `Terpenes Analysis Form.docx` | `4aa5f6ed453bb5cbfb933b2eb8bb7f28f6252cb97ecf4a0667e64482661b2302` | Downloads root | Terpenes Potency by GC-FID Form; visible version 1.0; approval field visible; revision date not established. |
-| `Terpenes Analysis Protocol.docx` | `a2d34b090823cf5706c091fbdf00b33dd2b6414bcd889f28557d0a05d854278f` | Downloads/Terpene Documents | Validation Protocol for Terpene Potency by GC-FID; visible version 1.0; document text says approval/effective status must precede execution. |
-
-## Duplicate and collision handling
-
-- The protocol and validation-report bytes in the archive exactly match their Downloads/Terpene Documents copies; only the Downloads/Terpene Documents protocol was retained.
-- Three different byte streams use the `Terpene Analysis SOP v 1.1.docx` filename. They were preserved with collision-safe source suffixes.
-- The Downloads-root filenames `Terpene Analysis SOP v 1.1.docx` and `Terpene Analysis SOP v 1.2.docx` have identical bytes, despite the latter filename's version claim. Both filenames were preserved because the mismatch itself is evidence.
-
-## Excluded candidate
-
-`Validation Report for Terpenes.docx` was found in both the archive and Downloads/Terpene Documents with identical bytes. Visible review showed real validation sample/product and internal-system information. It was not retained in `authoritative_method/`; the locally created copy was immediately removed after hash verification. No source file or archive was changed.
-
-## Required-document coverage
-
-| Category | Status | Intake finding |
+| Controlled source | Current status | Design authority established |
 | --- | --- | --- |
-| A. Current Terpenes SOP | conflicting_candidates | Multiple distinct version-1.1 SOP files; a version-1.2 filename has version-1.1 visible content. |
-| B. Current Terpenes Analysis Form | present_but_revision_uncertain | Version-1.0 form candidate is present; currentness cannot be established. |
-| C. Current Analysis or Validation Protocol | present_but_revision_uncertain | Version-1.0 protocol candidate is present; execution approval/effective status is not established. |
-| D. Current Validation Report | present_but_revision_uncertain | A report candidate exists but was excluded from local method review because it contains real validation sample/product and internal-system data. |
-| E. LabSolutions Compound Results source evidence | absent | No standalone LabSolutions method, calibration, or compound-table record was found. |
-| F. Exact Conc. unit | absent | No standalone controlled instrument-unit evidence was found. |
-| G. Matrix-specific mass/extraction rules | present_candidate | Candidate SOP/form/protocol sources exist, pending controlled-revision resolution. |
-| H. Solvent-added versus final-volume convention | present_candidate | Candidate SOP/form/protocol sources exist, pending controlled-revision resolution. |
-| I. Dilution-factor definition and application | present_candidate | Candidate SOP/form/protocol sources exist, pending controlled-revision resolution. |
-| J. mg/g and percent equations | present_candidate | Candidate SOP/form/protocol sources exist, pending controlled-revision resolution. |
-| K. LOQ and below-LOQ behavior | present_candidate | Protocol candidate visibly references LOQ; the applicable reporting policy remains unconfirmed. |
-| L. Rounding and significant figures | absent | No clearly controlled source was identified during intake. |
-| M. Measurement uncertainty | absent | No dedicated controlled MU source was found. |
-| N. Approved COA measurands and units | absent | No approved COA specification was found. |
-| O. Ocimene and Nerolidol treatment | absent | No approved reporting convention source was found. |
-| P. METRC mapping and units | absent | No approved controlled METRC mapping source was found. |
-| Q. Peak Table audit-only treatment | absent | No controlled source identified during intake. |
-| R. Dimethylacetamide audit-only treatment | absent | No controlled source identified during intake. |
-| S. No Terpenes compliance Pass/Fail | absent | No controlled source identified during intake. |
+| Terpene Analysis SOP v1.2 | Controlling | Yes, by explicit user approval. |
+| Terpenes Analysis Form v1.0 | Current | Yes, by explicit user approval. |
+| Terpenes Analysis Protocol v1.0 | Current | Yes, by explicit user approval. |
+| Collected Validation Report | Current | Yes, by explicit user approval; raw report remains excluded because it contains real validation and internal-system information. |
+| LabSolutions actual-sample `Compound Results(Ch1) > Conc.` | Final `ug/g`; dilution already applied | Yes, by explicit user approval and bounded raw-evidence inspection. |
+| Minnesota OCM Metrc Terpenes workbook | Current reporting-field reference | Yes for field names and matrix/unit routing; it is not scientific calculation authority. |
 
-## Resume gate
+The earlier intake found filename/control-block inconsistencies among preserved SOP candidates. Those facts remain documented in [authoritative_method_file_manifest.csv](authoritative_method_file_manifest.csv), but the user's explicit current-method decision resolves which revision controls this design. Controlled DOCX files remain ignored and uncommitted.
 
-The calculation-contract resume prompt cannot proceed. Required resolution is: identify the current approved SOP and Form, resolve the conflicting SOP copies and version label, supply controlled LabSolutions unit evidence, and provide a safely reviewable validation/COA/METRC source set without customer or internal-system data.
+## Source integrity and retention
+
+| Source | SHA-256 | Retention |
+| --- | --- | --- |
+| `MN OCM Metrc Terpenes.xlsx` | `2238a38be106d64f123de83005f6e4d22ebc7335691e03bc067b081bca7ce8c2` | Raw workbook remains outside the repository and uncommitted. |
+| `ASCIIData.txt` | `89d3fa8db21e28d7525ea6261ec6a3932aa226982e6f039a3b35822a54b93974` | Raw LabSolutions evidence remains outside the repository and uncommitted. |
+
+The LabSolutions file was inspected only to confirm that it is block-oriented and contains repeated `Compound Results(Ch1)` sections. No raw sample row, customer information, or instrument value was copied into tracked evidence. The final-unit and dilution decisions come from the user's approved method decision, not from an inferred raw value.
+
+## Minnesota OCM Metrc workbook inspection
+
+The raw workbook contains exactly two worksheets:
+
+| Worksheet | Used range | Reporting route |
+| --- | --- | --- |
+| `AdditionaL-terpenes (%)` | `A1:F33` | Percentage fields for Raw Plant Material and Concentrate/Extract. |
+| `Additional-Terpenes (mg_g)` | `A1:F33` | mg/g fields for Infused Products. |
+
+The tracked derivative [metrc_terpenes_analyte_mapping.csv](metrc_terpenes_analyte_mapping.csv) contains only field labels and approved mapping logic. It contains no workbook identifiers, placeholder identifiers, customer data, or raw analytical values.
+
+### Exact reportable measurands
+
+1. Alpha-Bisabolol
+2. Alpha-Humulene
+3. Alpha-Pinene
+4. Alpha-Terpinene
+5. Beta-Caryophyllene
+6. Beta-Myrcene
+7. Beta-Pinene
+8. Camphene
+9. Caryophyllene Oxide
+10. Delta-3 Carene
+11. Eucalyptol
+12. Gamma-Terpinene
+13. Geraniol
+14. Guaiol
+15. Isopulegol
+16. Limonene
+17. Linalool
+18. Nerolidol
+19. Ocimene
+20. P-Isopropyltoluene (P-Cymene)
+21. Terpinolene
+
+### Present in the state template but intentionally ignored
+
+- Alpha-Myrcene
+- Alpha-Phellandrene
+- Beta-Bisabolene
+- Cis-Nerolidol
+- Cymene
+- Farnesene
+- Fenchol
+- Other Terpenes
+- Phytol
+- Terpineol
+- Valencene
+
+No blank result row is designed for an untested template analyte. `Nerolidol` is used instead of `Cis-Nerolidol`, and `P-Isopropyltoluene (P-Cymene)` is used instead of generic `Cymene`.
+
+## Resolved requirement coverage
+
+| Requirement | Status | Authority/decision |
+| --- | --- | --- |
+| Final actual-sample `Conc.` unit | resolved | Final `ug/g`, user-approved. |
+| Dilution behavior | resolved | LabSolutions already applies dilution; QBench must not reapply it. |
+| mg/g conversion | resolved | `ug/g / 1000`. |
+| Percent conversion | resolved | `ug/g / 10000`. |
+| Reportable mapping | resolved | Exactly 21 reportable measurands from 23 internal channels. |
+| Ocimene and Nerolidol rollup | resolved except component preprocessing | Each pair sums once from approved numeric component values. |
+| LOQ source | resolved | Matrix-specific QBench Key/Value Store; reportable combined analyte keys. |
+| Below-LOQ report qualifier | resolved | Controlling SOP: report `<LOQ`. |
+| MU source | resolved | Matrix-specific QBench Key/Value Store `MU%`; component MUs for combined analytes. |
+| Combined MU method | resolved | Independent relative-uncertainty propagation with blank/denominator guards. |
+| Total Terpenes | resolved | Sum 21 unrounded reportable values strictly above their matrix LOQs; combined analytes once. |
+| Rounding | resolved | Full precision internally; three decimals only at display. |
+| Metrc routing | resolved | Percent for Raw Plant Material and Concentrate/Extract; mg/g for Infused Product. |
+| COA units | resolved | Display both mg/g and percent. |
+| Audit-only data | resolved | Dimethylacetamide and Peak Table excluded from reportable results. |
+| Terpenes Pass/Fail | resolved | Prohibited; assay is quantitative-only. |
+| Missing/negative/below-threshold combined component handling | unresolved | No controlled numeric preprocessing rule was found in the controlling SOP, Form, or Protocol. |
+
+## Controlling SOP text result
+
+Read-only structural inspection found the controlling SOP's reporting rule: a sample analyte below LOQ is reported as `<LOQ`; a sample analyte at or above LOQ is quantified when QC requirements are met. No statement was found that defines the numeric contribution of a missing, negative, or below-threshold Ocimene/Nerolidol component channel.
+
+Visual DOCX rendering could not be completed because LibreOffice is unavailable in the local runtime. The relevant text was therefore checked structurally through the DOCX OOXML; no document was modified or re-exported.
+
+## Classification
+
+`calculation_contract = blocked_missing_authoritative_requirement`
+
+Only `TERPENES_COMPONENT_PREPROCESSING_RULE_UNRESOLVED` remains. See [calculation_contract.md](calculation_contract.md) for the exact approval needed before worksheet-formula or candidate-JSON generation.

@@ -1,6 +1,6 @@
 # Live non-Terpenes formula-engine patterns
 
-These are software-engine observations only. No equation, constant, dilution factor, LOQ, rounding rule, analyte rollup, unit, MU rule, or Pass/Fail rule is transferable to Terpenes.
+These are software-engine observations only. No equation, constant, dilution factor, LOQ, rounding rule, analyte rollup, unit, MU rule, or Pass/Fail rule was copied from another assay into the Terpenes scientific contract.
 
 ## Supported reusable mechanics
 
@@ -11,6 +11,7 @@ These are software-engine observations only. No equation, constant, dilution fac
 - Qualifier/display separation can use `SEARCH` or `FIND` without changing the underlying quantitative field.
 - Formula-heavy technical sections can be read-only and, where appropriate, hidden by column visibility metadata.
 - Report-facing formulas generally reference calculation/review tabs rather than repeating raw-input logic.
+- Safe non-Terpenes exports confirmed Key/Value value-selector literals including `LOQ`, `MU`, and `MU%`. No internal store identifier is retained in Terpenes tracked evidence.
 
 ## Structural counts from safe exports
 
@@ -25,13 +26,10 @@ These are software-engine observations only. No equation, constant, dilution fac
 
 ## Terpenes boundary
 
-The future implementation may reuse the guard shape `source absent → blank` and the separation `input → calculated review → report`. It may not populate a calculation body until these documentation markers are resolved:
+The future implementation may reuse the guard shape `source absent -> blank`, the separation `input -> calculated review -> report`, and the established `GET_KVSTORE_VALUE` mechanics.
 
-- `TERPENES_CONC_UNIT_UNRESOLVED`
-- `TERPENES_MG_G_FORMULA_UNRESOLVED`
-- `TERPENES_PERCENT_FORMULA_UNRESOLVED`
-- `TERPENES_LOQ_POLICY_UNRESOLVED`
-- `TERPENES_ROUNDING_POLICY_UNRESOLVED`
-- `TERPENES_MU_POLICY_UNRESOLVED`
+The user-approved Terpenes decision now establishes the final unit, dilution ownership, conversions, reportable mapping, LOQ/MU source dimensions, independent combined-MU equation, Total Terpenes rule, and display rounding. It may not populate a calculation body until this single documentation marker is resolved:
 
-No Terpenes formula was created during this review.
+- `TERPENES_COMPONENT_PREPROCESSING_RULE_UNRESOLVED`
+
+No Terpenes worksheet formula was created during this review.

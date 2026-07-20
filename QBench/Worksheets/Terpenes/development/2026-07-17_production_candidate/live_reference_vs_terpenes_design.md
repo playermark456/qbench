@@ -4,8 +4,8 @@
 
 | Live implementation pattern | Terpenes documentation proposal | Boundary |
 | --- | --- | --- |
-| Dedicated input, calculation/review, report, and technical/audit layers | Test tabs: Report, Data, Specifications, Audit | No formulas until the scientific contract passes. |
-| Compact named COA range with headers | Future bounded `report_results` | Exact rows and measurands unresolved. |
+| Dedicated input, calculation/review, report, and technical/audit layers | Test tabs: Report, Data, Specifications, Audit, METRC | No formulas until the remaining component preprocessing rule is approved. |
+| Compact named COA range with headers | `report_results = Report!A1:E23` | One header, 21 reportable measurands, and Total Terpenes. |
 | Blank/error guards around formula-owned cells | Future source-absent → blank and denominator guards | Shape only; no equation or constant copied. |
 | Qualified addresses in multi-tab definitions | Qualified logical addresses for multi-tab documentation | Old-Sandbox one-tab JSON import remains unqualified where proven. |
 | Read-only/hidden technical columns | Formula-owned and audit-only fields are visually distinct and protected | Hidden content must remain reviewable and exportable. |
@@ -21,18 +21,10 @@
 - A blank or hidden report row as proof of report-template empty-row suppression.
 - Any formula placeholder inside QBench.
 
-## Unresolved authoritative markers
+## Remaining authoritative marker
 
-- `TERPENES_CONC_UNIT_UNRESOLVED`
-- `TERPENES_MG_G_FORMULA_UNRESOLVED`
-- `TERPENES_PERCENT_FORMULA_UNRESOLVED`
-- `TERPENES_LOQ_POLICY_UNRESOLVED`
-- `TERPENES_ROUNDING_POLICY_UNRESOLVED`
-- `TERPENES_MU_POLICY_UNRESOLVED`
-- `TERPENES_REPORT_MEASURANDS_UNRESOLVED`
-- `TERPENES_OCIMENE_POLICY_UNRESOLVED`
-- `TERPENES_NEROLIDOL_POLICY_UNRESOLVED`
+- `TERPENES_COMPONENT_PREPROCESSING_RULE_UNRESOLVED`
 
-These are documentation markers only and must not be put into QBench.
+The unit, dilution, conversions, 21-measurand mapping, reportable-analyte `<LOQ` qualifier, Key/Value Store dimensions, MU method, Total Terpenes rule, rounding, and Metrc routing are resolved. Only the missing/negative/below-threshold component-channel numeric treatment remains. This marker is documentation-only and must not be put into QBench.
 
 `calculation_contract = blocked_missing_authoritative_requirement`
