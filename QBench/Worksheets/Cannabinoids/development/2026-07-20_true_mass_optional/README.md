@@ -28,32 +28,31 @@ Representative formula:
 =IF(OR("${tests[0].additional_fields['true_mass_per_unit'].value}"="",LOWER("${tests[0].additional_fields['true_mass_per_unit'].value}")="none"),"",IFERROR(VALUE("${tests[0].additional_fields['true_mass_per_unit'].value}"),""))
 ```
 
-## Artifacts
+## Repository artifacts
 
-- `source/` contains a lossless XZ-compressed, Base64-chunked copy of the uploaded source export.
-- `candidate/` contains a lossless XZ-compressed, Base64-chunked copy of the corrected candidate JSON.
-- `patch_cannabinoid_batch_true_mass_optional.py` deterministically creates the candidate from a source export.
-- `cannabinoid_potency_batch_true_mass_optional_validation_report.md` records checks and hashes.
+- `patch_cannabinoid_batch_true_mass_optional.py` deterministically creates the candidate from a QBench Export Spreadsheet JSON.
+- `cannabinoid_potency_batch_true_mass_optional_validation_report.md` records the exact source and candidate SHA-256 hashes, formula contract, and Sandbox checks.
+- The generated candidate filename is `cannabinoid_potency_batch_true_mass_optional__2026-07-20.json`.
 
-## Reconstruct an archived JSON
+The generated JSON is a large QBench export artifact. When it is copied into the local repository, place it in this directory and verify its SHA-256 against the validation report before import or commit. The patcher plus source hash remains the reproducible definition if the binary-sized artifact is not present in a remote branch.
 
-From this directory in PowerShell or a POSIX shell, concatenate the numbered parts in lexical order, Base64-decode, then XZ-decompress.
+## Generate the candidate
 
-Python example:
+```powershell
+python patch_cannabinoid_batch_true_mass_optional.py `
+  "<source Export Spreadsheet JSON>" `
+  "cannabinoid_potency_batch_true_mass_optional__2026-07-20.json"
+```
 
-```python
-from pathlib import Path
-import base64, lzma
-folder = Path("candidate")
-encoded = "".join(p.read_text() for p in sorted(folder.glob("part-*.txt")))
-Path("cannabinoid_potency_batch_true_mass_optional__2026-07-20.json").write_bytes(
-    lzma.decompress(base64.b64decode(encoded))
-)
+Expected candidate SHA-256:
+
+```text
+cd3decad45bd6e6475ad19a352d4a16faf118e0f49a3ad3a96595014ebc4ffbc
 ```
 
 ## Sandbox verification
 
-1. Import the reconstructed candidate into an inactive Cannabinoid Potency Batch worksheet.
+1. Import the generated candidate into an inactive Cannabinoid Potency Batch worksheet.
 2. Confirm a Test with a numeric `true_mass_per_unit` displays that value in column AH.
 3. Confirm a Test with no value leaves AH blank.
 4. Confirm blank AH cells do not cause formula, validation, or batch failures.
