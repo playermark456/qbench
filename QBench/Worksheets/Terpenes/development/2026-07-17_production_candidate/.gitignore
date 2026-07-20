@@ -1,0 +1,5 @@
+# Raw QBench exports remain local evidence and may include internal identifiers.
+/source_exports/*
+!/source_exports/.gitignore
+/live_raw_evidence/*
+!/live_raw_evidence/.gitignore

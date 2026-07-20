@@ -1,0 +1,36 @@
+{
+  "inspection_date": "2026-07-17",
+  "live_origin_accessed": "https://ait.qbench.net",
+  "access_mode": "authenticated_browser_read_only",
+  "purpose": "non_terpenes_implementation_reference_library",
+  "non_terpenes_assay_categories_inspected": [
+    "cannabinoid_potency",
+    "residual_solvents",
+    "heavy_metals",
+    "pesticides_quantitative",
+    "homogeneity"
+  ],
+  "object_categories_inspected": [
+    "test_worksheet_definitions",
+    "batch_worksheet_definitions",
+    "file_parser_definition_list_and_shells",
+    "automation_definition_list",
+    "report_template_definition_list_and_shell"
+  ],
+  "completed_customer_record_opened": false,
+  "configuration_export_occurred": true,
+  "configuration_exports": {
+    "non_terpenes_correction_run": 6,
+    "previous_interrupted_terpenes_definition_artifact_preserved": 1,
+    "raw_exports_ignored_and_uncommitted": true
+  },
+  "state_changing_action_occurred": false,
+  "live_api_request_occurred": false,
+  "terpenes_operational_workflow_searched_after_scope_correction": false,
+  "terpenes_formula_created": false,
+  "production_candidate_json_created": false,
+  "customer_data_retained": false,
+  "internal_numeric_qbench_ids_retained": false,
+  "signed_urls_retained": false,
+  "calculation_contract": "blocked_missing_authoritative_requirement"
+}

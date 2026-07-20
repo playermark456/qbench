@@ -1,0 +1,3 @@
+# Preserve local raw source-export copies without tracking them.
+*
+!.gitignore
