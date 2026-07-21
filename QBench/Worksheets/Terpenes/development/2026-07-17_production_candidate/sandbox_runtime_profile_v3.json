@@ -1,0 +1,9 @@
+{
+  "kv_store_binding": "4e57fd8a-0241-4eb1-a9c5-370fb243895d",
+  "kv_store_binding_classification": "another_non_secret_visible_identifier",
+  "assay_key": "Terpenes",
+  "matrix_binding_mode": "dynamic_test_matrix_reference",
+  "matrix_source": "${test.sample.product_matrix}",
+  "matrix_source_cell": "Data!C2",
+  "result_unit": "ug/g"
+}

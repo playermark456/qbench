@@ -1,0 +1,56 @@
+{
+  "phase": "4A.4",
+  "environment": "https://ait-sandbox.qbench.net",
+  "access_method": "authenticated_visual_browser_only",
+  "v2": {
+    "worksheet": "SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_TEST_WS_V2",
+    "content_modified": false,
+    "version_created": false,
+    "deactivated": false
+  },
+  "binding_discovery": {
+    "kv_fixture": "SBX_ONLY_TERPENES_RUNTIME_KV_V2",
+    "binding_classification": "another_non_secret_visible_identifier",
+    "visible_binding_literal": "4e57fd8a-0241-4eb1-a9c5-370fb243895d",
+    "visible_store_title_is_formula_literal": false,
+    "matrix_source_cell": "Data!C2",
+    "matrix_placeholder": "${test.sample.product_matrix}"
+  },
+  "v3": {
+    "worksheet": "SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_TEST_WS_V3",
+    "collision_preflight_count": 0,
+    "inactive_shell_created": true,
+    "candidate_file_picker_supported": false,
+    "json_editor_candidate_text_accepted": true,
+    "ui_renderer_applied_candidate": false,
+    "pre_save_render_gate": "failed_default_Sheet1_remained",
+    "versions_after_attempt": 0,
+    "saved": false,
+    "approved": false,
+    "activated": false
+  },
+  "runtime": {
+    "kv_fixture_modified": false,
+    "assay_created": false,
+    "sample_created": false,
+    "test_created": false,
+    "vector_entered": false,
+    "report_preview_generated": false
+  },
+  "safety": {
+    "live_qbench_accessed": false,
+    "qbench_api_used": false,
+    "oauth_or_token_used": false,
+    "browser_developer_tools_used": false,
+    "customer_record_opened": false,
+    "pass_fail_created": false,
+    "published": false,
+    "qc_review_marked": false,
+    "metrc_action": false,
+    "batch_v2_imported": false,
+    "numeric_qbench_ids_recorded": false,
+    "usernames_recorded": false,
+    "screenshots_recorded": false
+  },
+  "classification": "test_v3_runtime_blocked_sandbox_candidate_load_not_applied"
+}
