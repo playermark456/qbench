@@ -11,7 +11,9 @@ These are software-engine observations only. No equation, constant, dilution fac
 - Qualifier/display separation can use `SEARCH` or `FIND` without changing the underlying quantitative field.
 - Formula-heavy technical sections can be read-only and, where appropriate, hidden by column visibility metadata.
 - Report-facing formulas generally reference calculation/review tabs rather than repeating raw-input logic.
-- Safe non-Terpenes exports confirmed Key/Value value-selector literals including `LOQ`, `MU`, and `MU%`. No internal store identifier is retained in Terpenes tracked evidence.
+- The proven operational lookup signature is `GET_KVSTORE_VALUE(store, scope_or_program, matrix, analyte, field)`.
+- Terpenes uses scope `Terpenes`, the selected runtime matrix, and terminal field `LOQ` or `MU`. Result unit is not a lookup dimension, and `MU%` is not the Terpenes terminal field.
+- No internal store identifier is repeated in tracked narrative evidence.
 
 ## Structural counts from safe exports
 
@@ -26,7 +28,7 @@ These are software-engine observations only. No equation, constant, dilution fac
 
 ## Terpenes boundary
 
-The future implementation may reuse the guard shape `source absent -> blank`, the separation `input -> calculated review -> report`, and the established `GET_KVSTORE_VALUE` mechanics.
+The implementation reuses the guard shape `source absent -> blank`, the separation `input -> calculated review -> report`, and the proven five-argument `GET_KVSTORE_VALUE` mechanics.
 
 The user-approved Terpenes decision establishes the final unit, dilution ownership, conversions, reportable mapping, component preprocessing, LOQ/MU source dimensions, independent combined-MU equation, Total Terpenes rule, and display rounding. The Phase 3 candidate now implements guarded Terpenes formulas locally from that contract.
 

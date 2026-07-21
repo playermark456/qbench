@@ -29,6 +29,7 @@ QBench/Worksheets/Terpenes/development/*/native_43_field_rebuild/*object_ids.loc
 QBench/Worksheets/Terpenes/development/*/json_import_rebuild/runtime_instantiation/SBX_ONLY_TERPENES_2026_07_17_JSON_SCALAR_RUNTIME_TEST_WORKSHEET_export_data.csv
 QBench/Worksheets/Terpenes/development/*/read_only_api_confirmation/raw/
 QBench/Worksheets/Terpenes/development/*/read_only_api_confirmation/*.local.json
+QBench/Worksheets/Terpenes/development/2026-07-17_production_candidate/sandbox_runtime_profile_v4.local.json
 
 # Python caches and local virtual environments
 __pycache__/

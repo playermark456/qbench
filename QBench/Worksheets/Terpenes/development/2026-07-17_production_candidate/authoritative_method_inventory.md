@@ -89,7 +89,7 @@ No blank result row is designed for an untested template analyte. `Nerolidol` is
 | Ocimene and Nerolidol rollup | resolved | Missing, blank, no-peak, zero, and negative components contribute zero; positive components retain full precision and each pair sums once. |
 | LOQ source | resolved | Matrix-specific QBench Key/Value Store; reportable combined analyte keys. |
 | Below-LOQ report qualifier | resolved | Controlling SOP: report `<LOQ`. |
-| MU source | resolved | Matrix-specific QBench Key/Value Store `MU%`; component MUs for combined analytes. |
+| MU source | resolved | Matrix-specific QBench Key/Value Store terminal field `MU`; numeric values are relative percent, with component MUs for combined analytes. |
 | Combined MU method | resolved | Independent relative-uncertainty propagation with blank/denominator guards. |
 | Total Terpenes | resolved | Sum 21 unrounded reportable values strictly above their matrix LOQs; combined analytes once. |
 | Rounding | resolved | Full precision internally; three decimals only at display. |

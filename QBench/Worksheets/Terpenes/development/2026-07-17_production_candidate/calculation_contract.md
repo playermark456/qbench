@@ -55,18 +55,21 @@ Operational thresholds and MU values are environment configuration, not hardcode
 ```text
 GET_KVSTORE_VALUE(
   terpenes_store_binding,
-  assay_key,
-  analyte_key,
+  scope_or_program_key,
   matrix_or_product_type_key,
-  result_unit_key,
-  value_selector
+  analyte_key,
+  field
 )
 ```
 
+- The first-level scope/program key is `Terpenes`.
+- The second-level key is the selected runtime matrix.
 - LOQ uses the 21 reportable analyte keys. Combined keys are `Ocimene` and `Nerolidol`; component LOQs are not retrieved or summed.
 - Direct MU uses each directly reported analyte key.
 - Combined MU uses `Ocimene 1`, `Ocimene 2`, `Nerolidol 1`, and `Nerolidol 2` only for positive contributing components.
-- `value_selector` is `LOQ` or `MU%`.
+- The terminal `field` is `LOQ` or `MU`.
+- Stored LOQ values are numeric `ug/g`; stored MU values are numeric relative percent.
+- The worksheet owns display-unit conversion. Result unit is informational and is not a Key/Value hierarchy level or lookup argument.
 - The store identifier and matrix key remain sanitized Sandbox configuration bindings; no internal QBench ID is committed.
 
 ## Qualifier and Total Terpenes behavior
