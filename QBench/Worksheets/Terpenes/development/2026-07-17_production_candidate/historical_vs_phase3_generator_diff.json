@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "comparison": "historical_working_generators_vs_phase3_v1",
+  "historical_reproduction": {
+    "test": {
+      "commit": "443fa40809347114d543f442493dae6c55fc8f22",
+      "source_sha256": "1ff46aadc31c32b8b176f3eb0091c8ae26d905271fcbc4f1a118a3776f7820e9",
+      "candidate_sha256": "90686b980882b221008f281be33984dc5232e2f3d2632300db3f4a27b529640a",
+      "byte_identical": true,
+      "validator": "passed",
+      "tests": "50_of_50_passed"
+    },
+    "batch": {
+      "commit": "28cd4f17db96f2c78dd60cba84c490d9e87a6dde",
+      "source_sha256": "db6bfe7a7d306902b78c27af76b4a08a2a17b7d974f63c5593a3455e109bad07",
+      "candidate_sha256": "e5c80b1213396cab4932e267fd786c6986c933d4b404f11daa5c5aba0629758e",
+      "byte_identical": true,
+      "validator": "passed",
+      "tests": "39_of_39_passed"
+    }
+  },
+  "test_structural_summary": {
+    "historical": {
+      "dimensions": {
+        "Report": [23, 5],
+        "Data": [38, 26],
+        "Specifications": [30, 8]
+      },
+      "cell_counts": {
+        "Report": 115,
+        "Data": 241,
+        "Specifications": 170
+      },
+      "named_cells": 91
+    },
+    "phase3_v1": {
+      "sha256": "275c8058cd597cfc688121bbdf50d1189897a088f455ff9e00e79a3fdf781a44",
+      "dimensions": {
+        "Report": [23, 5],
+        "Data": [40, 26],
+        "Specifications": [23, 21]
+      },
+      "cell_counts": {
+        "Report": 113,
+        "Data": 114,
+        "Specifications": 341
+      },
+      "named_cells": 44
+    }
+  },
+  "batch_structural_summary": {
+    "historical": {
+      "dimensions": {
+        "Run Setup": [25, 3],
+        "Instrument Import": [201, 57],
+        "QC Review": [45, 24],
+        "Publish": [87, 56]
+      },
+      "cell_counts": {
+        "Run Setup": 75,
+        "Instrument Import": 11457,
+        "QC Review": 375,
+        "Publish": 4872
+      },
+      "named_cells": 67
+    },
+    "phase3_v1": {
+      "sha256": "7c96c9e8bb300f5886a4f66971c6c22c3ae72ee9225134f737d6601a0bbc55b2",
+      "dimensions": {
+        "Run Setup": [25, 3],
+        "Instrument Import": [201, 57],
+        "Batch Review": [45, 24],
+        "Test Transfer": [87, 56]
+      },
+      "cell_counts": {
+        "Run Setup": 75,
+        "Instrument Import": 11457,
+        "Batch Review": 375,
+        "Test Transfer": 4872
+      },
+      "named_cells": 67
+    }
+  },
+  "differences": [
+    {
+      "field": "base_source_selection",
+      "test": "same_active_id_42_export",
+      "batch": "same_active_id_43_export",
+      "classification": "proven_compatible_historical_pattern"
+    },
+    {
+      "field": "root_and_config_shape",
+      "test": "same_keys_order_and_types",
+      "batch": "same_keys_order_and_types",
+      "classification": "proven_compatible_historical_pattern"
+    },
+    {
+      "field": "config.namespace",
+      "test": "historical_source_value_replaced_by_uuidv5",
+      "batch": "historical_source_value_replaced_by_uuidv5",
+      "producer": "build_phase3_candidates.freshen_uuids",
+      "classification": "likely_renderer_regression"
+    },
+    {
+      "field": "config.worksheets[].worksheetId",
+      "test": "all_three_historical_ids_replaced_by_uuidv5",
+      "batch": "all_four_historical_ids_replaced_by_uuidv5",
+      "producer": "build_phase3_candidates.freshen_uuids",
+      "classification": "likely_renderer_regression"
+    },
+    {
+      "field": "config.worksheets[].csvFileName",
+      "test": "empty_string_replaced_by_target_specific_filename",
+      "batch": "empty_string_replaced_by_target_specific_filename",
+      "classification": "likely_renderer_regression"
+    },
+    {
+      "field": "worksheet_object_construction",
+      "test": "historical_deep_copy_and_update_worksheet_reused",
+      "batch": "historical_deep_copy_worksheet_from_template_and_update_worksheet_reused",
+      "classification": "proven_compatible_historical_pattern"
+    },
+    {
+      "field": "worksheet_object_keys",
+      "test": "exact_match",
+      "batch": "exact_match",
+      "classification": "proven_compatible_historical_pattern"
+    },
+    {
+      "field": "cells_entry_shape",
+      "test": ["readonly", "type", "width", "x"],
+      "batch": ["readonly", "type", "width", "x"],
+      "classification": "proven_compatible_historical_pattern"
+    },
+    {
+      "field": "test_report_cells_extent",
+      "historical": "full_23_by_5_115_entries",
+      "phase3_v1": "sparse_113_entries",
+      "classification": "likely_renderer_regression"
+    },
+    {
+      "field": "test_data_and_specifications_cell_selection",
+      "historical": "historical_used_formula_input_regions",
+      "phase3_v1": "new_nonempty_formula_regions_plus_43_reserved_destinations",
+      "classification": "intentional_business_logic_change"
+    },
+    {
+      "field": "colElement_and_element",
+      "test": "absent_in_both",
+      "batch": "absent_in_both",
+      "classification": "proven_compatible_historical_pattern"
+    },
+    {
+      "field": "readonly_type",
+      "test": "boolean_in_both",
+      "batch": "boolean_in_both",
+      "classification": "proven_compatible_historical_pattern"
+    },
+    {
+      "field": "columns_and_rows_representation",
+      "test": "same_object_shapes_with_new_business_layout_counts_and_widths",
+      "batch": "same_shapes_counts_and_widths",
+      "classification": "intentional_business_logic_change"
+    },
+    {
+      "field": "minDimensions",
+      "test": "same_columns_rows_calculation_with_new_grid_sizes",
+      "batch": "same_values_and_calculation",
+      "classification": "intentional_business_logic_change"
+    },
+    {
+      "field": "tableHeight_and_tableWidth",
+      "test": "explicit_integers_recomputed_for_new_layout",
+      "batch": "historical_values_retained",
+      "classification": "intentional_business_logic_change"
+    },
+    {
+      "field": "formula_serialization",
+      "test": "plain_equal_prefixed_strings_in_both",
+      "batch": "plain_equal_prefixed_strings_in_both",
+      "classification": "proven_compatible_historical_pattern"
+    },
+    {
+      "field": "formula_sheet_name_casing",
+      "test": "historical_uppercase_convention_retained",
+      "batch": "consistent_renaming_to_Batch_Review_and_Test_Transfer",
+      "classification": "intentional_business_logic_change"
+    },
+    {
+      "field": "top_level_data_synchronization",
+      "test": "exact_mirror",
+      "batch": "exact_mirror",
+      "classification": "proven_compatible_historical_pattern"
+    },
+    {
+      "field": "named_cells",
+      "test": "replaced_with_43_destinations_plus_report_results_using_historical_entry_shape",
+      "batch": "67_entries_retained_with_consistent_tab_renames",
+      "classification": "intentional_business_logic_change"
+    },
+    {
+      "field": "report_results",
+      "test": "Report!A1:E23_in_both",
+      "classification": "proven_compatible_historical_pattern"
+    },
+    {
+      "field": "styles",
+      "test": "cell_reference_to_integer_index_in_both",
+      "batch": "same_historical_maps",
+      "classification": "proven_compatible_historical_pattern"
+    },
+    {
+      "field": "conditional_formatting_and_kvstore_config",
+      "test": "empty_in_both",
+      "batch": "empty_in_both",
+      "classification": "proven_compatible_historical_pattern"
+    }
+  ],
+  "root_cause_code_path": {
+    "primary": "freshen_uuids_recursively_rewrote_the_proven_namespace_and_worksheet_ids",
+    "additional_renderer_sensitive_divergences": [
+      "target_specific_csvFileName_values",
+      "sparse_Test_Report_cell_extent"
+    ],
+    "experimental_limit": "the_failed_Test_v1_was_the_only_Phase3_candidate_imported_so_individual_causal_weight_remains_pending_the_authorized_static_v2_render_test"
+  },
+  "v2_correction": {
+    "strategy": "extend_the_existing_Phase3_wrapper_to_reuse_the_historical_builders_and_preserve_historical_renderer_identity",
+    "new_serializer": false,
+    "historical_helpers_modified": false,
+    "historical_identity_preserved": true,
+    "historical_Report_cell_extent_restored": true,
+    "historical_csvFileName_empty_string_restored": true,
+    "failed_v1_bytes_changed": false
+  }
+}

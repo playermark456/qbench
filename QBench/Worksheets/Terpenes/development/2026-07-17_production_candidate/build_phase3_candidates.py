@@ -203,11 +203,16 @@ def load_reportable_mapping() -> dict[str, list[dict[str, str]]]:
     return result
 
 
-def test_data_tab(helper: Any) -> tuple[list[list[Any]], list[int], dict[str, int], dict[str, dict[str, Any]]]:
+def test_data_tab(
+    helper: Any,
+    *,
+    target_name: str = TEST_TARGET,
+    version_name: str = TEST_VERSION,
+) -> tuple[list[list[Any]], list[int], dict[str, int], dict[str, dict[str, Any]]]:
     rows, cols = 40, 26
     widths = [195, 180, 250] + [120] * 23
     data = blank_grid(rows, cols)
-    data[0][0:3] = [TEST_VERSION, TEST_TARGET, "Final sample Conc.: ug/g; dilution already applied"]
+    data[0][0:3] = [version_name, target_name, "Final sample Conc.: ug/g; dilution already applied"]
     data[0][3:26] = INTERNAL_CHANNELS
     data[1][0:3] = [
         "${test.get_display_id()}",
@@ -403,7 +408,11 @@ def test_specifications_tab(
     return data, widths, style, cells
 
 
-def test_report_tab(helper: Any) -> tuple[list[list[Any]], list[int], dict[str, int], dict[str, dict[str, Any]]]:
+def test_report_tab(
+    helper: Any,
+    *,
+    preserve_historical_cell_extent: bool = False,
+) -> tuple[list[list[Any]], list[int], dict[str, int], dict[str, dict[str, Any]]]:
     widths = [210, 120, 120, 110, 105]
     data = blank_grid(23, 5)
     data[0] = ["Analyte", "Result (mg/g)", "Result (%)", "LOQ", "MU (%)"]
@@ -422,7 +431,12 @@ def test_report_tab(helper: Any) -> tuple[list[list[Any]], list[int], dict[str, 
     for row in range(2, 24):
         for col in range(1, 6):
             style[cell_ref(row, col)] = 17 if row == 23 else 5
-    cells = build_cells(helper, data, widths)
+    reserve = (
+        {cell_ref(row, col) for row in range(1, 24) for col in range(1, 6)}
+        if preserve_historical_cell_extent
+        else None
+    )
+    cells = build_cells(helper, data, widths, reserve=reserve)
     return data, widths, style, cells
 
 
@@ -440,12 +454,25 @@ def exact_test_named_cells() -> dict[str, Any]:
     return result
 
 
-def build_test_candidate(test_builder: Any) -> dict[str, Any]:
+def build_test_candidate(
+    test_builder: Any,
+    *,
+    target_name: str = TEST_TARGET,
+    version_name: str = TEST_VERSION,
+    preserve_historical_identity: bool = False,
+) -> dict[str, Any]:
     candidate = test_builder.build_candidate()
     mapping = load_reportable_mapping()
-    data_args = test_data_tab(test_builder)
+    data_args = test_data_tab(
+        test_builder,
+        target_name=target_name,
+        version_name=version_name,
+    )
     spec_args = test_specifications_tab(test_builder, mapping)
-    report_args = test_report_tab(test_builder)
+    report_args = test_report_tab(
+        test_builder,
+        preserve_historical_cell_extent=preserve_historical_identity,
+    )
 
     for name, args in [("Report", report_args), ("Data", data_args), ("Specifications", spec_args)]:
         data, widths, style, cells = args
@@ -468,13 +495,18 @@ def build_test_candidate(test_builder: Any) -> dict[str, Any]:
         worksheet["worksheetName"]: copy.deepcopy(worksheet["data"])
         for worksheet in candidate["config"]["worksheets"]
     }
-    for worksheet in candidate["config"]["worksheets"]:
-        worksheet["csvFileName"] = f'{TEST_TARGET}__{worksheet["worksheetName"]}.csv'
+    if not preserve_historical_identity:
+        for worksheet in candidate["config"]["worksheets"]:
+            worksheet["csvFileName"] = f'{target_name}__{worksheet["worksheetName"]}.csv'
 
     source_uuids = collect_uuids(candidate)
-    candidate = freshen_uuids(candidate, TEST_TARGET)
-    if source_uuids & collect_uuids(candidate):
-        raise AssertionError("Test candidate retained source UUIDs")
+    if preserve_historical_identity:
+        if collect_uuids(candidate) != source_uuids:
+            raise AssertionError("Test candidate changed the proven historical UUID set")
+    else:
+        candidate = freshen_uuids(candidate, target_name)
+        if source_uuids & collect_uuids(candidate):
+            raise AssertionError("Test candidate retained source UUIDs")
     return candidate
 
 
@@ -535,7 +567,13 @@ def patch_batch_dilution_contract(candidate: dict[str, Any]) -> dict[str, Any]:
     return candidate
 
 
-def build_batch_candidate(batch_builder: Any) -> dict[str, Any]:
+def build_batch_candidate(
+    batch_builder: Any,
+    *,
+    target_name: str = BATCH_TARGET,
+    version_name: str = BATCH_VERSION,
+    preserve_historical_identity: bool = False,
+) -> dict[str, Any]:
     candidate = batch_builder.build_candidate()
     source_uuids = collect_uuids(candidate)
 
@@ -566,10 +604,15 @@ def build_batch_candidate(batch_builder: Any) -> dict[str, Any]:
     review["data"][1][1] = "2026-07-20-phase3"
     review["data"][1][2] = "Phase 3 local candidate; quantitative-only"
     run_setup = worksheet_by_name(candidate, "Run Setup")
-    run_setup["data"][18][0:3] = ["candidate_version", BATCH_VERSION, "Local candidate; Sandbox runtime validation pending"]
+    run_setup["data"][18][0:3] = [
+        "candidate_version",
+        version_name,
+        "Local candidate; Sandbox runtime validation pending",
+    ]
 
-    for worksheet in candidate["config"]["worksheets"]:
-        worksheet["csvFileName"] = f'{BATCH_TARGET}__{worksheet["worksheetName"]}.csv'
+    if not preserve_historical_identity:
+        for worksheet in candidate["config"]["worksheets"]:
+            worksheet["csvFileName"] = f'{target_name}__{worksheet["worksheetName"]}.csv'
     candidate["data"] = {
         worksheet["worksheetName"]: copy.deepcopy(worksheet["data"])
         for worksheet in candidate["config"]["worksheets"]
@@ -577,9 +620,13 @@ def build_batch_candidate(batch_builder: Any) -> dict[str, Any]:
 
     if "apply_in_qbench" in json.dumps(candidate, ensure_ascii=False):
         raise AssertionError("Batch candidate still permits QBench dilution application")
-    candidate = freshen_uuids(candidate, BATCH_TARGET)
-    if source_uuids & collect_uuids(candidate):
-        raise AssertionError("Batch candidate retained source UUIDs")
+    if preserve_historical_identity:
+        if collect_uuids(candidate) != source_uuids:
+            raise AssertionError("Batch candidate changed the proven historical UUID set")
+    else:
+        candidate = freshen_uuids(candidate, target_name)
+        if source_uuids & collect_uuids(candidate):
+            raise AssertionError("Batch candidate retained source UUIDs")
     return candidate
 
 

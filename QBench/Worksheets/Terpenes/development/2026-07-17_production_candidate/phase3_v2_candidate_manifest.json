@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "classification": "corrected_candidates_ready_for_static_sandbox_render_test",
+  "historical_test": {
+    "candidate_commit": "ea8668a74b6aae6a3a660963d85748ce3dc0ae92",
+    "merged_commit": "443fa40809347114d543f442493dae6c55fc8f22",
+    "source_worksheet": "QBench/Rescans/2026-07-04/Worksheets/Terpenes/terpenes__id_42__worksheet_export_spreadsheet__active__2026-07-04.json",
+    "source_worksheet_sha256": "1ff46aadc31c32b8b176f3eb0091c8ae26d905271fcbc4f1a118a3776f7820e9",
+    "helper_module": "QBench/Worksheets/Terpenes/development/2026-07-14_test_worksheet_candidate/scripts/build_terpenes_test_worksheet.py",
+    "helper_module_sha256": "0164d0c8a6014a3cc9a95c33d52b5a1250e6f308caa037b6a1bfed580d667883",
+    "reproduction": "passed_byte_for_byte",
+    "historical_tests": "50_of_50_passed"
+  },
+  "historical_batch": {
+    "candidate_commit": "aaec1294c3ca521ddcc928e0e7fdbb05d6a64f0e",
+    "merged_commit": "28cd4f17db96f2c78dd60cba84c490d9e87a6dde",
+    "source_worksheet": "QBench/Rescans/2026-07-04/Worksheets/Terpenes/terpenes__id_43__worksheet_export_spreadsheet__active__2026-07-04.json",
+    "source_worksheet_sha256": "db6bfe7a7d306902b78c27af76b4a08a2a17b7d974f63c5593a3455e109bad07",
+    "helper_module": "QBench/Worksheets/Terpenes/development/2026-07-14_batch_worksheet_candidate/scripts/build_terpenes_batch_worksheet.py",
+    "helper_module_sha256": "1b4bcf3a20cb3faa3e56cd36d82006f528261e7a96f3d5efe2cec01a54345772",
+    "reproduction": "passed_byte_for_byte",
+    "historical_tests": "39_of_39_passed"
+  },
+  "corrected_build": {
+    "phase3_builder": "QBench/Worksheets/Terpenes/development/2026-07-17_production_candidate/build_phase3_candidates.py",
+    "phase3_builder_sha256": "3a62d8bebc0c9bfac0f6d4b6cb7821e2d9e7d82bb198128c7da5df368f4f78fa",
+    "v2_builder": "QBench/Worksheets/Terpenes/development/2026-07-17_production_candidate/build_phase3_candidates_v2.py",
+    "v2_builder_sha256": "667889e1c862e6b520931a6dc98c99cc3e218f1c40a6cd23837f9a37e1e39181",
+    "new_workbook_serializer": false,
+    "historical_helpers_modified": false,
+    "preserves_historical_namespace": true,
+    "preserves_historical_worksheet_ids": true,
+    "preserves_historical_csv_filename_default": true,
+    "restores_historical_test_report_cell_extent": true
+  },
+  "candidates": {
+    "test": {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-17_production_candidate/production_candidates/SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_TEST_WS__v2.json",
+      "sha256": "7aa7469ec7767a7c7b4b0aa40194e927244adc3278999e23151f4eeb134dd5a4"
+    },
+    "batch": {
+      "path": "QBench/Worksheets/Terpenes/development/2026-07-17_production_candidate/production_candidates/SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_BATCH_WS__v2.json",
+      "sha256": "a4b92be3590e57f3456e12c65219cb6a5cb340248c6f3e50c6d3f36f56777837"
+    }
+  },
+  "validation": {
+    "scientific_logic_validation": "passed",
+    "worksheet_schema_validation": "passed",
+    "historical_renderer_compatibility": "passed",
+    "renderer_regression_tests": "13_of_13_passed",
+    "calculation_vectors": "41_of_41_passed",
+    "failed_v1_test_sha256": "275c8058cd597cfc688121bbdf50d1189897a088f455ff9e00e79a3fdf781a44",
+    "failed_v1_batch_sha256": "7c96c9e8bb300f5886a4f66971c6c22c3ae72ee9225134f737d6601a0bbc55b2",
+    "failed_v1_files_unchanged": true
+  },
+  "sandbox": {
+    "accessed_during_correction": false,
+    "failed_inactive_shell_touched": false,
+    "v2_import_authorized": false
+  }
+}
