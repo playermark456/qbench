@@ -1,0 +1,47 @@
+{
+  "phase": "4A.2",
+  "inspection_date": "2026-07-21",
+  "neutral_object_identifier": "SANDBOX_TEST_WORKSHEET_V2",
+  "authorized_origin": "https://ait-sandbox.qbench.net",
+  "origin_verified_for_every_page": true,
+  "authentication_mode": "user_authenticated_visual_browser_session",
+  "live_qbench_accessed": false,
+  "qbench_api_used": false,
+  "oauth_used": false,
+  "token_retrieved": false,
+  "browser_developer_tools_used": false,
+  "candidate_hash_verified_before_sandbox_work": true,
+  "collision_search": {
+    "exact_v2_preexisting": false,
+    "failed_v1_shell_present": true,
+    "failed_v1_shell_modified": false
+  },
+  "sandbox_actions": {
+    "inactive_v2_shell_created": true,
+    "exact_v2_candidate_imported": true,
+    "unsaved_static_render_inspected": true,
+    "draft_version_saved": true,
+    "saved_definition_reopened_from_worksheet_list": true,
+    "saved_definition_exported": true,
+    "version_approved": false,
+    "worksheet_activated": false,
+    "assay_assigned_or_created": false,
+    "sample_created": false,
+    "test_instance_created": false,
+    "batch_created": false,
+    "key_value_store_created_or_changed": false,
+    "customer_record_opened": false,
+    "result_published": false,
+    "qc_review_marked": false,
+    "pass_fail_created": false
+  },
+  "raw_export": {
+    "downloaded": true,
+    "tracked": false,
+    "sha256": "cf479247be1271d4e8559bb6991d9869a9b6c1324c83c32b227d68d42e7ef127"
+  },
+  "screenshot_tracked": false,
+  "internal_numeric_qbench_id_tracked": false,
+  "username_tracked": false,
+  "classification": "test_v2_round_trip_failed_semantic_difference"
+}
