@@ -1,0 +1,44 @@
+sequence,system_name,logical_address,display_name,synthetic_value,value_type,coverage,execution_status
+1,terpenes_instrument_conc_01,Data!D2,alpha-Pinene,15.1234,number,ordinary direct positive,not_entered_binding_blocker
+2,terpenes_instrument_conc_02,Data!E2,Camphene,5,number,below LOQ,not_entered_binding_blocker
+3,terpenes_instrument_conc_03,Data!F2,beta-Myrcene,10,number,equal to LOQ,not_entered_binding_blocker
+4,terpenes_instrument_conc_04,Data!G2,beta-Pinene,20.5678,number,above LOQ,not_entered_binding_blocker
+5,terpenes_instrument_conc_05,Data!H2,Delta-3-carene,,blank,missing input,not_entered_binding_blocker
+6,terpenes_instrument_conc_06,Data!I2,alpha-Terpinene,0,number,zero input,not_entered_binding_blocker
+7,terpenes_instrument_conc_07,Data!J2,cis-Ocimene,3.25,number,positive Ocimene component,not_entered_binding_blocker
+8,terpenes_instrument_conc_08,Data!K2,d-Limonene,11.1111,number,direct positive,not_entered_binding_blocker
+9,terpenes_instrument_conc_09,Data!L2,p-Cymene,-1.5,number,negative raw input,not_entered_binding_blocker
+10,terpenes_instrument_conc_10,Data!M2,trans-Ocimene,9.75,number,positive Ocimene component,not_entered_binding_blocker
+11,terpenes_instrument_conc_11,Data!N2,Eucalyptol,12.3456,number,direct positive,not_entered_binding_blocker
+12,terpenes_instrument_conc_12,Data!O2,gamma-Terpinene,9.999,number,below LOQ boundary,not_entered_binding_blocker
+13,terpenes_instrument_conc_13,Data!P2,Terpinolene,10.001,number,above LOQ boundary,not_entered_binding_blocker
+14,terpenes_instrument_conc_14,Data!Q2,Linalool,0,number,zero input,not_entered_binding_blocker
+15,terpenes_instrument_conc_15,Data!R2,Isopulegol,4,number,positive below LOQ,not_entered_binding_blocker
+16,terpenes_instrument_conc_16,Data!S2,Geraniol,22.2222,number,direct positive,not_entered_binding_blocker
+17,terpenes_instrument_conc_17,Data!T2,beta-Caryophyllene,30.3333,number,direct positive,not_entered_binding_blocker
+18,terpenes_instrument_conc_18,Data!U2,alpha-Humulene,10,number,equal to LOQ,not_entered_binding_blocker
+19,terpenes_instrument_conc_19,Data!V2,cis-Nerolidol,12.5,number,positive Nerolidol component,not_entered_binding_blocker
+20,terpenes_instrument_conc_20,Data!W2,trans-Nerolidol,-2.5,number,negative Nerolidol component,not_entered_binding_blocker
+21,terpenes_instrument_conc_21,Data!X2,Guaiol,14.1414,number,direct positive,not_entered_binding_blocker
+22,terpenes_instrument_conc_22,Data!Y2,Caryophyllene Oxide,18.1818,number,direct positive,not_entered_binding_blocker
+23,terpenes_instrument_conc_23,Data!Z2,alpha-Bisabolol,25.2525,number,direct positive,not_entered_binding_blocker
+24,sample_mass_g,Data!B12,Sample Mass,0.5,number,preparation input,not_entered_binding_blocker
+25,final_volume_ml,Data!B13,Final Volume,10,number,preparation input,not_entered_binding_blocker
+26,df,Data!B14,DF,1,number,preparation input,not_entered_binding_blocker
+27,df_application_mode,Data!B15,DF Application Mode,already_applied,text,preparation input,not_entered_binding_blocker
+28,labsolutions_conc_unit,Data!B16,LabSolutions Conc. Unit,ug/g,text,preparation input,not_entered_binding_blocker
+29,labsolutions_conc_unit_confirmed,Data!B17,Unit Confirmed,true,boolean,preparation confirmation,not_entered_binding_blocker
+30,preparation_values_confirmed,Data!B18,Preparation Values Confirmed,true,boolean,preparation confirmation,not_entered_binding_blocker
+31,batch_qc_disposition,Data!B22,Batch QC Disposition,synthetic_review_only,text,controlled disposition,not_entered_binding_blocker
+32,publish_ready,Data!B23,Publish Ready,false,boolean,publication gate remains false,not_entered_binding_blocker
+33,source_batch_id,Data!B28,Source Batch ID,SBX_ONLY_BATCH_V2,text,synthetic audit metadata,not_entered_binding_blocker
+34,source_instrument_file,Data!B29,Source Instrument File,synthetic_instrument_output.txt,text,synthetic audit metadata,not_entered_binding_blocker
+35,source_file_hash,Data!B30,Source File Hash,SYNTHETIC_HASH_NOT_A_REAL_FILE,text,synthetic audit metadata,not_entered_binding_blocker
+36,source_data_file,Data!B31,Source Data File,synthetic_source_data.csv,text,synthetic audit metadata,not_entered_binding_blocker
+37,source_method_file,Data!B32,Source Method File,synthetic_method.lcm,text,synthetic audit metadata,not_entered_binding_blocker
+38,source_sequence_file,Data!B33,Source Sequence File,synthetic_sequence.lcb,text,synthetic audit metadata,not_entered_binding_blocker
+39,parser_version,Data!B34,Parser Version,phase4a3-synthetic-v1,text,synthetic audit metadata,not_entered_binding_blocker
+40,imported_at,Data!B35,Imported At,2026-07-21T00:00:00Z,datetime text,synthetic audit metadata,not_entered_binding_blocker
+41,instrument_name,Data!B36,Instrument Name,SBX_SYNTHETIC_GC,text,synthetic audit metadata,not_entered_binding_blocker
+42,detector_id,Data!B37,Detector ID,SBX_DETECTOR_1,text,synthetic audit metadata,not_entered_binding_blocker
+43,detector_name,Data!B38,Detector Name,SBX_FID_1,text,synthetic audit metadata,not_entered_binding_blocker

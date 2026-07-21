@@ -4,9 +4,9 @@ Date: 2026-07-21
 
 ## Final classification
 
-`test_v2_round_trip_failed_semantic_difference`
+`test_v2_round_trip_passed_with_expected_qbench_normalization`
 
-The v2 candidate passed exact-hash, collision, static-render, named-definition, save, Draft-row, list-reopen, and visual persistence gates. The saved definition's raw Export Spreadsheet then failed the required semantic round-trip gate because QBench changed serialized dimensions and the top-level formula representation.
+The v2 candidate passed exact-hash, collision, static-render, named-definition, save, Draft-row, list-reopen, visual persistence, and revised semantic round-trip gates. Phase 4A.3 established that QBench's editor-minimum, viewport, and evaluated top-level formula-cache changes are expected serialization normalizations when the authoritative embedded worksheet model remains exact.
 
 ## Gate results
 
@@ -27,7 +27,7 @@ The v2 candidate passed exact-hash, collision, static-render, named-definition, 
 | Save as inactive Draft | passed; visible Draft row existed |
 | Reopen from Worksheets list | passed; visible layout and configuration persisted |
 | Raw re-export preservation | passed; ignored exact bytes, SHA-256 `cf479247be1271d4e8559bb6991d9869a9b6c1324c83c32b227d68d42e7ef127` |
-| Semantic round trip | failed: `minDimensions`, viewport sizes, and top-level formula representation changed |
+| Semantic round trip | passed with expected QBench normalization; authoritative embedded formulas remained 309/309 exact |
 
 ## Safety result
 
@@ -40,4 +40,4 @@ The v2 candidate passed exact-hash, collision, static-render, named-definition, 
 - Nothing was published, marked QC Review, or assigned Pass/Fail.
 - No username, internal numeric QBench identifier, raw export, cookie, token, signed URL, unredacted screenshot, or customer information is tracked.
 
-The controlled stop gate remains closed before runtime validation. Review is required before any additional Sandbox import or runtime work.
+The saved-definition gate is open for the separately authorized isolated Phase 4A.3 runtime proof. The local v2 candidate remains unchanged.

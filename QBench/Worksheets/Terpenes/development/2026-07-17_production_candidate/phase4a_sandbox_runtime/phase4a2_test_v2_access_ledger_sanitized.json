@@ -43,5 +43,5 @@
   "screenshot_tracked": false,
   "internal_numeric_qbench_id_tracked": false,
   "username_tracked": false,
-  "classification": "test_v2_round_trip_failed_semantic_difference"
+  "classification": "test_v2_round_trip_passed_with_expected_qbench_normalization"
 }

@@ -1,0 +1,57 @@
+{
+  "phase": "4A.3",
+  "environment": "https://ait-sandbox.qbench.net",
+  "access_method": "authenticated_visual_browser_only",
+  "worksheet": "SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_TEST_WS_V2",
+  "version": "1 - Terpenes Production Candidate Test Worksheet v2",
+  "status_before": "DRAFT",
+  "status_actions": [
+    "set_exact_version_pending",
+    "approve_exact_version",
+    "activate_exact_version"
+  ],
+  "status_after": "APPROVED_ACTIVE",
+  "pre_status_checks": {
+    "worksheet_tabs": 3,
+    "embedded_formulas": 309,
+    "named_definitions": 44,
+    "report_results": "Report!A1:E23",
+    "pass_fail_present": false,
+    "assay_associations": 0
+  },
+  "isolated_kv_fixture": {
+    "name": "SBX_ONLY_TERPENES_RUNTIME_KV_V2",
+    "created": true,
+    "synthetic_only": true,
+    "associated_only_with_exact_v2": true,
+    "shared_store_modified": false
+  },
+  "runtime_fixture_actions": {
+    "assay_created": false,
+    "sample_created": false,
+    "test_created": false,
+    "reason": "Specifications U2 and U4 remained read-only SANDBOX_CONFIGURATION_REQUIRED bindings after isolated store association"
+  },
+  "prohibited_actions": {
+    "live_qbench_accessed": false,
+    "qbench_api_used": false,
+    "oauth_or_token_requested": false,
+    "customer_record_opened": false,
+    "shared_kv_store_modified": false,
+    "failed_v1_modified": false,
+    "pass_fail_created": false,
+    "published": false,
+    "qc_review_marked": false,
+    "metrc_action": false
+  },
+  "sanitization": {
+    "internal_numeric_ids_recorded": false,
+    "internal_uuids_recorded": false,
+    "usernames_recorded": false,
+    "credentials_or_tokens_recorded": false,
+    "cookies_or_signed_urls_recorded": false,
+    "screenshots_recorded": false,
+    "customer_data_recorded": false
+  },
+  "classification": "test_v2_runtime_blocked_readonly_kv_and_matrix_bindings"
+}

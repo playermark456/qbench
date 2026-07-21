@@ -23,7 +23,7 @@ Date: 2026-07-21
 | Number formats, protection, hidden-row/column configuration | exact |
 | Key/Value formulas in embedded worksheet data | exact |
 
-## QBench-introduced semantic differences
+## QBench serialization normalizations
 
 The raw comparison found 322 scalar differences:
 
@@ -32,8 +32,10 @@ The raw comparison found 322 scalar differences:
 - 6 viewport-size differences: each worksheet's `tableWidth`/`tableHeight` became `1954`/`350` instead of its candidate value.
 - 309 top-level `data` differences: every candidate formula cell in the top-level Report and Specifications arrays was replaced by its evaluated display value. No non-formula top-level cell differed. The duplicate formulas remained intact only in the worksheets' embedded `data` arrays.
 
-The task explicitly prohibits ignoring differences that affect dimensions, worksheet content, or formulas. Therefore the visually successful Draft cannot pass the serialized round-trip gate.
+Phase 4A.3 supplied the controlling interpretation for these saved-export differences. They are expected old-Sandbox serialization normalizations because the authoritative embedded worksheet model, actual array dimensions, all non-formula content, named definitions, styles, metadata, protection, and number formats remained exact and the workbook visibly saved and reopened.
 
-`test_v2_round_trip = failed_semantic_difference`
+The authoritative formula representation is `config.worksheets[*].data`. The duplicate top-level `data` representation is a QBench evaluated display cache. `minDimensions` is the QBench-normalized editor minimum, not actual content extent, and `tableWidth`/`tableHeight` are the normalized editor viewport.
 
-No repair, second import, approval, activation, or runtime instantiation was attempted.
+`test_v2_round_trip = passed_with_expected_qbench_normalization`
+
+No local candidate rewrite is required to reproduce these saved-export normalizations. No repair, second import, approval, activation, or runtime instantiation occurred during Phase 4A.2.
