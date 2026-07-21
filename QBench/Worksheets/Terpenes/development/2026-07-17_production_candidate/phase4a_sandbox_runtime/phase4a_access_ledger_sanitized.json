@@ -1,0 +1,43 @@
+{
+  "phase": "4A",
+  "inspection_date": "2026-07-21",
+  "authorized_origin": "https://ait-sandbox.qbench.net",
+  "origin_verified_for_every_page": true,
+  "authentication_mode": "user_authenticated_visual_browser_session",
+  "live_qbench_accessed": false,
+  "qbench_api_used": false,
+  "oauth_used": false,
+  "token_retrieved": false,
+  "browser_developer_credentials_inspected": false,
+  "candidate_hashes_verified_before_browser_work": true,
+  "collision_search": {
+    "exact_test_candidate_preexisting": false,
+    "exact_batch_candidate_preexisting": false,
+    "historical_test_proof_present": true,
+    "historical_batch_proof_present": true
+  },
+  "sandbox_actions": {
+    "inactive_test_worksheet_shell_created": true,
+    "exact_test_candidate_selected": true,
+    "test_candidate_loaded_into_unsaved_editor": true,
+    "test_version_saved": false,
+    "test_version_approved": false,
+    "test_version_activated": false,
+    "key_value_fixture_created": false,
+    "assay_created": false,
+    "sample_created": false,
+    "test_instance_created": false,
+    "batch_worksheet_created_or_imported": false,
+    "ascii_parser_uploaded": false,
+    "customer_record_opened": false,
+    "result_published": false,
+    "qc_review_marked": false,
+    "pass_fail_created": false,
+    "metrc_activity_created": false
+  },
+  "raw_export_downloaded": false,
+  "screenshot_tracked": false,
+  "internal_numeric_qbench_id_tracked": false,
+  "username_tracked": false,
+  "classification": "blocked_test_import_collapsed_renderer"
+}
