@@ -11,3 +11,5 @@ The V3 candidate used the unproven six-argument order `store, assay, analyte, ma
 `Specifications!U5 = ug/g` remains informational. It is not passed to the lookup and is not represented in the V4 store hierarchy. Stored LOQ values are numeric `ug/g`; stored MU values are numeric relative percent. Display-unit conversion remains worksheet-owned.
 
 No Pass/Fail behavior was copied from an operational worksheet.
+
+The local five-argument formula contract and Dynamic Spreadsheet renderer contract both passed. In the fresh Sandbox Test, `Data!C2`, `Specifications!U3`, and `Specifications!U4` resolved correctly, but Alpha-Pinene LOQ and MU remained blank after one list-based reopen. This is a separate runtime binding/lookup blocker; it does not change the object-type root cause for the earlier one-cell collapse and does not justify hardcoding values.

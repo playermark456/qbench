@@ -22,3 +22,5 @@ The complete hierarchy is `Terpenes -> Cannabis Concentrates -> analyte or compo
 - Pass/Fail keys: 0
 
 The V2 store and every V1-V3 object were left unchanged.
+
+After the V4 Dynamic Spreadsheet passed static and round-trip validation, this store alone was associated with `SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_TEST_WS_V4_DYNAMIC`. The association persisted after navigating away and reopening the worksheet. It was not associated with the regular Spreadsheet negative control.

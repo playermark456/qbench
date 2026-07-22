@@ -21,6 +21,7 @@ import validate_phase4a4_v3 as v3_validator
 
 PACKAGE_DIR = Path(__file__).resolve().parent
 TEST_PATH = v4_builder.TEST_OUTPUT
+DEPLOYMENT_CONTRACT_PATH = PACKAGE_DIR / "terpenes_deployment_contract.json"
 
 
 def sha256(path: Path) -> str:
@@ -244,6 +245,33 @@ def validate_runtime_configuration(candidate: dict[str, Any], profile: dict[str,
     }
 
 
+def validate_deployment_contract(contract: dict[str, Any]) -> dict[str, str]:
+    if contract.get("worksheet_json_contract") != "passed":
+        raise AssertionError("Terpenes worksheet JSON contract must pass before deployment")
+    if contract.get("qbench_shell_type") != "dynamic_spreadsheet":
+        raise AssertionError("Terpenes deployment requires dynamic_spreadsheet QBench shell type")
+    if contract.get("allowed_qbench_shell_types") != ["dynamic_spreadsheet"]:
+        raise AssertionError("Only dynamic_spreadsheet may be an allowed Terpenes QBench shell type")
+    if "spreadsheet" not in contract.get("rejected_qbench_shell_types", []):
+        raise AssertionError("Regular spreadsheet must be explicitly rejected for Terpenes deployment")
+    pre_import = contract.get("pre_import_gate", {})
+    if pre_import.get("verify_in_qbench_worksheets_list") is not True:
+        raise AssertionError("Future imports must verify the QBench Worksheets list")
+    if pre_import.get("required_visible_type") != "Dynamic Spreadsheet":
+        raise AssertionError("Future imports must visibly confirm Dynamic Spreadsheet type")
+    for surface in ("test_worksheet", "batch_worksheet"):
+        if contract.get(surface, {}).get("qbench_shell_type") != "dynamic_spreadsheet":
+            raise AssertionError(f"{surface} requires dynamic_spreadsheet QBench shell type")
+    runtime = contract.get("sandbox_runtime_contract")
+    if runtime not in {"passed", "blocked_required_kv_lookup_blank", "not_started"}:
+        raise AssertionError("Unsupported Sandbox runtime-contract classification")
+    return {
+        "worksheet_json_contract": "passed",
+        "qbench_shell_type": "dynamic_spreadsheet",
+        "sandbox_runtime_contract": runtime,
+    }
+
+
 def validate_candidate(candidate: dict[str, Any], profile: dict[str, str]) -> dict[str, Any]:
     historical = load_json(phase3_validator.HISTORICAL_TEST_PATH)
     v3_candidate = load_json(v3_builder.TEST_OUTPUT)
@@ -259,6 +287,7 @@ def validate_candidate(candidate: dict[str, Any], profile: dict[str, str]) -> di
     destinations = v3_validator.exact_destination_contract(candidate)
     runtime = validate_runtime_configuration(candidate, profile)
     difference_contract = validate_only_intended_v3_differences(candidate, v3_candidate)
+    deployment = validate_deployment_contract(load_json(DEPLOYMENT_CONTRACT_PATH))
 
     if formula_count(candidate) != formula_count(v3_candidate) or formula_count(candidate) != 309:
         raise AssertionError("V4 formula count differs from renderer-proven V3")
@@ -287,6 +316,7 @@ def validate_candidate(candidate: dict[str, Any], profile: dict[str, str]) -> di
         "vectors": vectors,
         "runtime": runtime,
         "difference_contract": difference_contract,
+        "deployment": deployment,
     }
 
 
@@ -306,6 +336,8 @@ def main() -> None:
         "named_definition_count": result["named_definition_count"],
         "unexpected_v3_differences": result["difference_contract"]["unexpected_differences"],
         "renderer_contract": result["renderer_contract"],
+        "qbench_shell_type": result["deployment"]["qbench_shell_type"],
+        "sandbox_runtime_contract": result["deployment"]["sandbox_runtime_contract"],
         "test_v4_sha256": sha256(TEST_PATH),
         "unresolved_markers": result["runtime"]["unresolved_markers"],
     }, indent=2, sort_keys=True))

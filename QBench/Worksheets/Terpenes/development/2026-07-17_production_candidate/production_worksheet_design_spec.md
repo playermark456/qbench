@@ -6,7 +6,19 @@ This specification describes the two local Phase 3 production candidates. It doe
 
 `calculation_contract = passed_authoritative_method_documentation_and_user_approved_reporting_rules`
 
-The final component-channel preprocessing rule was supplied and approved explicitly by the user. Local candidate generation is complete; saved-definition and runtime validation in an isolated Sandbox are separate future gates.
+The final component-channel preprocessing rule was supplied and approved explicitly by the user. Local candidate generation is complete. The Test V4 saved-definition and Dynamic Spreadsheet round-trip gates passed in the isolated Sandbox; the runtime contract remains blocked because required Key/Value lookups were blank.
+
+## QBench deployment-shell guard
+
+Terpenes Test and Batch worksheet JSON must be deployed only into QBench **Dynamic Spreadsheet** objects. A regular **Spreadsheet** object is an invalid deployment shell even when named definitions load.
+
+The tracked `terpenes_deployment_contract.json` intentionally separates:
+
+- `worksheet_json_contract`: local candidate validation;
+- `qbench_shell_type`: the required `dynamic_spreadsheet` object type; and
+- `sandbox_runtime_contract`: the independently proven or blocked instantiated runtime state.
+
+Every future Sandbox import must first verify in the QBench Worksheets list that the destination type is visibly **Dynamic Spreadsheet**. JSON validation alone is not sufficient for Sandbox readiness.
 
 ## Approved component preprocessing
 
@@ -102,4 +114,4 @@ The Batch worksheet preserves 23 numeric terpene channels, Dimethylacetamide, Pe
 
 The dedicated validator proves JSON syntax, tab order, dimensions, synchronized worksheet data, fresh UUIDs, the exact 43 destination contract, 23 channels, 21 reportables, component preprocessing, combined MU, reportable LOQ behavior, strict-above Total Terpenes, display rounding, report range dimensions, AF/AG ownership, and absence of Pass/Fail, credentials, signed URLs, customer data, and internal production QBench IDs.
 
-The next controlled phase is isolated Sandbox import, saved/reopened round trip, instantiated runtime proof, Key/Value binding validation, COA preview, and transfer verification. No production action is authorized.
+The remaining controlled work is resolution of the blank instantiated Key/Value lookups, full Test runtime vector proof, COA preview, Batch v2 validation, parser validation, and transfer verification. No production action is authorized.

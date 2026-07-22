@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "worksheet_json_contract": "passed",
+  "qbench_shell_type": "dynamic_spreadsheet",
+  "sandbox_runtime_contract": "blocked_required_kv_lookup_blank",
+  "allowed_qbench_shell_types": [
+    "dynamic_spreadsheet"
+  ],
+  "rejected_qbench_shell_types": [
+    "spreadsheet"
+  ],
+  "pre_import_gate": {
+    "verify_in_qbench_worksheets_list": true,
+    "required_visible_type": "Dynamic Spreadsheet"
+  },
+  "test_worksheet": {
+    "candidate": "production_candidates/SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_TEST_WS__v4.json",
+    "qbench_shell_type": "dynamic_spreadsheet",
+    "sandbox_static_contract": "passed",
+    "sandbox_round_trip_contract": "passed_with_expected_qbench_normalization",
+    "sandbox_runtime_contract": "blocked_required_kv_lookup_blank"
+  },
+  "batch_worksheet": {
+    "candidate": "production_candidates/SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_BATCH_WS__v2.json",
+    "qbench_shell_type": "dynamic_spreadsheet",
+    "sandbox_runtime_contract": "not_started"
+  }
+}
