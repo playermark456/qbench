@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "sandbox_store_list_verified_visually": true,
+  "current_binding_matched_TEST": true,
+  "corrected_binding_matched_V4": true,
+  "visible_associated_store_matched_corrected_binding": true,
+  "dynamic_spreadsheet": true,
+  "exact_values_retained_only_where_operationally_required": true,
+  "root_cause": "wrong_store_binding_test_store_used"
+}

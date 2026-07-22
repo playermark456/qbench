@@ -85,7 +85,10 @@ class Phase4A6KeyValueContractTests(unittest.TestCase):
         result = v4_validator.validate_deployment_contract(contract)
         self.assertEqual(result["worksheet_json_contract"], "passed")
         self.assertEqual(result["qbench_shell_type"], "dynamic_spreadsheet")
-        self.assertEqual(result["sandbox_runtime_contract"], "blocked_required_kv_lookup_blank")
+        self.assertEqual(
+            result["sandbox_runtime_contract"],
+            "blocked_version_2_definition_preview_blank_loq_mu",
+        )
 
     def test_regular_spreadsheet_is_rejected_as_deployment_shell(self):
         contract = copy.deepcopy(v4_validator.load_json(v4_validator.DEPLOYMENT_CONTRACT_PATH))

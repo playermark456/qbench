@@ -263,7 +263,12 @@ def validate_deployment_contract(contract: dict[str, Any]) -> dict[str, str]:
         if contract.get(surface, {}).get("qbench_shell_type") != "dynamic_spreadsheet":
             raise AssertionError(f"{surface} requires dynamic_spreadsheet QBench shell type")
     runtime = contract.get("sandbox_runtime_contract")
-    if runtime not in {"passed", "blocked_required_kv_lookup_blank", "not_started"}:
+    if runtime not in {
+        "passed",
+        "blocked_required_kv_lookup_blank",
+        "blocked_version_2_definition_preview_blank_loq_mu",
+        "not_started",
+    }:
         raise AssertionError("Unsupported Sandbox runtime-contract classification")
     return {
         "worksheet_json_contract": "passed",
