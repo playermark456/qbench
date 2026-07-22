@@ -34,4 +34,10 @@ The prompt requires resolved LOQ and MU values before Version 2 approval. The ru
 - Sanitized tracked-evidence security scans: passed
 - Git whitespace checks: passed
 
-Final classification: `test_v4_binding_fix_runtime_blocked_version_2_definition_preview_blank_loq_mu`
+Historical classification at that time: `test_v4_binding_fix_runtime_blocked_version_2_definition_preview_blank_loq_mu`
+
+Subsequent Phase 4A.6F evidence superseded this as a current conclusion. The preview used a Test instantiated before Version 2 approval; the fresh post-approval Test is the runtime authority.
+
+- `former_final_classification = superseded_by_fresh_version_2_runtime_evidence`
+- `previous_component_mu_blank_stop = superseded_invalid_preentry_expectation`
+- `current_runtime_classification = test_v4_binding_fix_runtime_passed_ready_for_coa_and_batch_v2_validation`

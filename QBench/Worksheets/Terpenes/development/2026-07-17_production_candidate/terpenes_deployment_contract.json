@@ -2,7 +2,7 @@
   "schema_version": 1,
   "worksheet_json_contract": "passed",
   "qbench_shell_type": "dynamic_spreadsheet",
-  "sandbox_runtime_contract": "blocked_version_2_definition_preview_blank_loq_mu",
+  "sandbox_runtime_contract": "passed_version_2_runtime_vector",
   "allowed_qbench_shell_types": [
     "dynamic_spreadsheet"
   ],
@@ -18,7 +18,7 @@
     "qbench_shell_type": "dynamic_spreadsheet",
     "sandbox_static_contract": "passed",
     "sandbox_round_trip_contract": "passed_with_expected_qbench_normalization",
-    "sandbox_runtime_contract": "blocked_version_2_definition_preview_blank_loq_mu"
+    "sandbox_runtime_contract": "passed_version_2_runtime_vector"
   },
   "batch_worksheet": {
     "candidate": "production_candidates/SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_BATCH_WS__v2.json",

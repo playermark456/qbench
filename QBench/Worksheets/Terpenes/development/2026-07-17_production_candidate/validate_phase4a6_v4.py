@@ -20,7 +20,11 @@ import validate_phase4a4_v3 as v3_validator
 
 
 PACKAGE_DIR = Path(__file__).resolve().parent
-TEST_PATH = v4_builder.TEST_OUTPUT
+TEST_PATH = (
+    PACKAGE_DIR
+    / "production_candidates"
+    / "SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_TEST_WS__v4_binding_fix.json"
+)
 DEPLOYMENT_CONTRACT_PATH = PACKAGE_DIR / "terpenes_deployment_contract.json"
 
 
@@ -265,8 +269,8 @@ def validate_deployment_contract(contract: dict[str, Any]) -> dict[str, str]:
     runtime = contract.get("sandbox_runtime_contract")
     if runtime not in {
         "passed",
+        "passed_version_2_runtime_vector",
         "blocked_required_kv_lookup_blank",
-        "blocked_version_2_definition_preview_blank_loq_mu",
         "not_started",
     }:
         raise AssertionError("Unsupported Sandbox runtime-contract classification")

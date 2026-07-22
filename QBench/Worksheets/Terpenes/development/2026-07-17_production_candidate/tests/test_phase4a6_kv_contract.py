@@ -87,7 +87,7 @@ class Phase4A6KeyValueContractTests(unittest.TestCase):
         self.assertEqual(result["qbench_shell_type"], "dynamic_spreadsheet")
         self.assertEqual(
             result["sandbox_runtime_contract"],
-            "blocked_version_2_definition_preview_blank_loq_mu",
+            "passed_version_2_runtime_vector",
         )
 
     def test_regular_spreadsheet_is_rejected_as_deployment_shell(self):

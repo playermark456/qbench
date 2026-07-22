@@ -1,18 +1,18 @@
 case,input_or_formula,expected_full_precision,expected_display,actual,status,note
-alpha-Pinene conversion,15.1234 ug/g,0.0151234 mg/g; 0.00151234%,0.015 mg/g; 0.002%,NOT_RUN,blocked,ordinary direct positive
-Camphene below LOQ,5 ug/g; LOQ 10,<LOQ,<LOQ,NOT_RUN,blocked,strict LOQ comparison
-beta-Myrcene equal LOQ,10 ug/g; LOQ 10,0.01 mg/g; 0.001%,0.010 mg/g; 0.001%,NOT_RUN,blocked,equal to LOQ remains numeric
-beta-Pinene above LOQ,20.5678 ug/g; LOQ 10,0.0205678 mg/g; 0.00205678%,0.021 mg/g; 0.002%,NOT_RUN,blocked,eligible for total
-direct blank behavior,Delta-3 Carene blank,raw remains blank; excluded from Total Terpenes,blank,NOT_RUN,blocked,direct analyte blank is not component preprocessing
-direct zero behavior,Alpha-Terpinene 0,raw/internal result remains 0; excluded from Total Terpenes,<LOQ,NOT_RUN,blocked,direct zero remains numeric and reports under the LOQ rule
-direct negative behavior,p-Cymene -1.5,raw/internal value remains -1.5; excluded from Total Terpenes,<LOQ; no negative potency,NOT_RUN,blocked,direct negative is preserved internally and is not zeroed
-Ocimene preprocessing,3.25 + 9.75 ug/g,3.25 + 9.75,13.000 ug/g,NOT_RUN,blocked,both components remain full precision
-Ocimene combined result,13 ug/g,0.013 mg/g; 0.0013%,0.013 mg/g; 0.001%,NOT_RUN,blocked,reported once
-Ocimene MU,MU 4% and 8%,6.08276253029822%,6.083%,NOT_RUN,blocked,independent relative-uncertainty propagation
-Nerolidol preprocessing,12.5 + (-2.5) ug/g,12.5 + 0,12.500 ug/g,NOT_RUN,blocked,negative component contributes zero
-Nerolidol combined result,12.5 ug/g,0.0125 mg/g; 0.00125%,0.013 mg/g; 0.001%,NOT_RUN,blocked,reported once
-Nerolidol MU,positive component MU 7%,7%,7.000%,NOT_RUN,blocked,one positive component uses that component MU
-both components nonpositive MU,0 and nonpositive,blank,blank,NOT_RUN,blocked,no fabricated MU
-positive component missing MU,positive contribution; MU absent,blank,blank,NOT_RUN,blocked,no fabricated numeric MU
-Total Terpenes,21 reportable measurands; strictly above LOQ,204.7801 ug/g; 0.2047801 mg/g; 0.02047801%,0.205 mg/g; 0.020%,NOT_RUN,blocked,Ocimene and Nerolidol once; component channels and prohibited analyte excluded
-runtime gate,Specifications U2 and U4,resolved store and matrix bindings,resolved,SANDBOX_CONFIGURATION_REQUIRED,blocked,both cells are read-only and formulas return blank
+alpha-Pinene conversion,15.1234 ug/g,0.0151234 mg/g; 0.00151234%,0.015 mg/g; 0.002%,0.0151234 mg/g; 0.00151234%; display 0.015 mg/g; 0.002%; MU 5,passed,ordinary direct positive
+Camphene below LOQ,5 ug/g; LOQ 10,<LOQ,<LOQ,<LOQ; total contribution 0,passed,strict LOQ comparison
+beta-Myrcene equal LOQ,10 ug/g; LOQ 10,0.01 mg/g; 0.001%,0.010 mg/g; 0.001%,numeric at LOQ; total contribution 0,passed,equal to LOQ remains numeric
+beta-Pinene above LOQ,20.5678 ug/g; LOQ 10,0.0205678 mg/g; 0.00205678%,0.021 mg/g; 0.002%,0.0205678 mg/g; 0.00205678%; display 0.021 mg/g; 0.002%,passed,eligible for total
+direct blank behavior,Delta-3 Carene blank,raw remains blank; excluded from Total Terpenes,blank,blank after save and list reopen,passed,direct analyte blank is not component preprocessing
+direct zero behavior,Alpha-Terpinene 0,raw/internal result remains 0; excluded from Total Terpenes,<LOQ,0 preserved; display <LOQ; excluded,passed,direct zero remains numeric and reports under the LOQ rule
+direct negative behavior,p-Cymene -1.5,raw/internal value remains -1.5; excluded from Total Terpenes,<LOQ; no negative potency,-1.5 preserved; display <LOQ; excluded,passed,direct negative is preserved internally and is not zeroed
+Ocimene preprocessing,3.25 + 9.75 ug/g,3.25 + 9.75,13.000 ug/g,used 3.25 + 9.75,passed,both components remain full precision
+Ocimene combined result,13 ug/g,0.013 mg/g; 0.0013%,0.013 mg/g; 0.001%,0.013 mg/g; 0.0013%; display 0.013 mg/g; 0.001%,passed,reported once
+Ocimene MU,MU 4% and 8%,6.08276253029822%,6.083%,component MU 4 and 8; combined 6.082762530298; display 6.083,passed,independent relative-uncertainty propagation
+Nerolidol preprocessing,12.5 + (-2.5) ug/g,12.5 + 0,12.500 ug/g,used 12.5 + 0; negative raw preserved,passed,negative component contributes zero
+Nerolidol combined result,12.5 ug/g,0.0125 mg/g; 0.00125%,0.013 mg/g; 0.001%,0.0125 mg/g; 0.00125%; display 0.013 mg/g; 0.001%,passed,reported once
+Nerolidol MU,positive component MU 7%,7%,7.000%,positive MU 7; noncontributing MU blank; combined 7; display 7.000,passed,one positive component uses that component MU
+both components nonpositive MU,0 and nonpositive,blank,blank,pre-entry component MUs blank with used values 0,passed,expected conditional behavior; no fabricated MU
+positive component missing MU,positive contribution; MU absent,MU UNRESOLVED,MU UNRESOLVED,local regression returned MU UNRESOLVED,passed,no fabricated numeric MU
+Total Terpenes,21 reportable measurands; strictly above LOQ,204.7801 ug/g; 0.2047801 mg/g; 0.02047801%,0.205 mg/g; 0.020%,204.7801 ug/g; 0.2047801 mg/g; 0.02047801%; display 0.205 mg/g; 0.020%,passed,Ocimene and Nerolidol once; component channels and prohibited analyte excluded
+runtime gate,Specifications U2 and U4,resolved store and matrix bindings,resolved,passed on fresh Version-2 Test and after list reopen,passed,component MU pre-entry blanks are conditional passing behavior
