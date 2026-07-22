@@ -82,6 +82,15 @@ The historical controlled stop is preserved and reclassified:
 - Blank standalone custom-function caches are not a QBench runtime failure gate; the saved and reopened live Test is authoritative.
 - The explicit preview-only report workflow was attempted with no signature. QBench returned a generic preview-generation error. No report was saved, published, or released.
 
+## COA contract classification
+
+The Sandbox generic generation error remains historical evidence but is no longer a project blocker. The user confirmed that the corresponding live COA report implementation is operational; Codex did not access or independently validate live QBench.
+
+- `test_v4_binding_fix_runtime = passed`
+- `coa_report_contract = passed_user_confirmed_live_template_operational`
+- `sandbox_coa_preview = nonblocking_sandbox_report_template_error`
+- `coa_live_template_functionality_source = user_confirmed_operational_knowledge`
+
 ## Local validation
 
 - Conditional component-MU regression tests: 8/8 passed.

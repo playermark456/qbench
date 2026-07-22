@@ -1,0 +1,9 @@
+row_alias,category,sample_type,test_identity,sample_identity,product_matrix,sample_mass_g,final_volume_ml,qbench_df,df_application_mode,compound_result_row_count,peak_table_row_count,reportable_compound_row_count,dimethylacetamide_conc,manual_integration,integration_review_status,analyte_pattern,source_row_hash_alias
+SBX_NULL_A,Null,,none,none,,,,,,24,34,23,100,No,Reviewed,0.01 repeated,sbx-row-null
+SBX_BLANK_A,Blank,Blank,none,none,,,,,,24,34,23,100,No,Reviewed,0 repeated,sbx-row-blank
+SBX_STD_A,Standard,Calibration Standard,none,none,,,,,,24,34,23,100,No,Reviewed,5 repeated,sbx-row-std
+SBX_CCV_A,CCV,Continuing CCV,none,none,,,,,,24,34,23,100,No,Reviewed,5.1 repeated,sbx-row-ccv
+SBX_LOQ_A,LOQ,LOQ Check,none,none,,,,,,24,34,23,100,No,Reviewed,0.5 repeated,sbx-row-loq
+SBX_QC_A,QC,Other QC,none,none,,,,,,24,34,23,100,No,Reviewed,2.5 repeated,sbx-row-qc
+SBX_SAMPLE_A,Sample A,Unknown,TEST_A_RUNTIME_ID,SAMPLE_A_RUNTIME_ID,Cannabis Concentrates,1,10,1,already_applied_by_labsolutions,24,34,23,100,No,Reviewed,1 through 23,sbx-row-sample-a
+SBX_SAMPLE_B,Sample B,Unknown,TEST_B_RUNTIME_ID,SAMPLE_B_RUNTIME_ID,Cannabis Concentrates,1,10,1,already_applied_by_labsolutions,24,34,23,100,No,Reviewed,101 through 123,sbx-row-sample-b
