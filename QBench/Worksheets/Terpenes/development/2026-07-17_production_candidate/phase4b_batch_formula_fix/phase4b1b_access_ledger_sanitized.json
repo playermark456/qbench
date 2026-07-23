@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "date": "2026-07-22",
+  "environment": "QBench Sandbox",
+  "sandbox_host": "ait-sandbox.qbench.net",
+  "live_qbench_accessed": false,
+  "qbench_api_accessed": false,
+  "oauth_used": false,
+  "browser_developer_tools_used": false,
+  "object_name": "SBX_ONLY_TERPENES_PRODUCTION_CANDIDATE_BATCH_WS_V2_DYNAMIC",
+  "version_2_round_trip": "passed_with_expected_qbench_normalization",
+  "version_2_approval": "passed_user_manual_approval",
+  "pretransfer_test_transfer_state": "expected_incomplete_until_parser_and_transfer",
+  "batch_formula_fix": "runtime_passed",
+  "formula_error_count": 0,
+  "events": [
+    {
+      "action": "verify_active_version_2_baseline",
+      "outcome": "passed",
+      "details": "The exact Dynamic Spreadsheet had Version 2 Approved/Active, Version 1 Approved and preserved, no Version 3, four required tabs, the corrected formula fingerprint, and formula-owned AF/AG."
+    },
+    {
+      "action": "verify_isolated_assay",
+      "outcome": "passed",
+      "details": "The assay used only the intended active Test Version 2 and Batch Version 2 worksheets and exposed no specification, Pass/Fail, parser, automation, automatic Publish, automatic QC Review, or METRC action."
+    },
+    {
+      "action": "create_fresh_runtime_fixtures",
+      "outcome": "passed",
+      "details": "Created two collision-free synthetic Samples, one NOT STARTED Test per Sample, and one fresh Batch containing only those Tests. Internal object identifiers are intentionally omitted."
+    },
+    {
+      "action": "enter_manual_fixture",
+      "outcome": "passed",
+      "details": "Entered the eight existing manual categories only in parser-writable cells and preserved AF/AG and all downstream formulas."
+    },
+    {
+      "action": "initial_pretransfer_interpretation",
+      "outcome": "superseded",
+      "details": "The observed false B12 and Analytical values incomplete BD messages were initially recorded as blank lookup fields. B4 superseded that interpretation: these are expected incomplete staging values before parser execution and Batch-to-Test transfer."
+    },
+    {
+      "action": "validate_pretransfer_formula_runtime",
+      "outcome": "passed",
+      "details": "Only Sample A and Sample B reached Test Transfer; controls were excluded; B12 was false, B13 was 0, B14 was 2, B18 was false, B19 was Run setup incomplete, BC was FALSE, BD was Analytical values incomplete, and no formula errors were observed."
+    },
+    {
+      "action": "save_reopen_and_verify_persistence",
+      "outcome": "passed",
+      "details": "All eight rows and calculated pre-transfer states persisted after normal save/reopen. No runtime export action was available."
+    },
+    {
+      "action": "stop_before_parser_and_transfer",
+      "outcome": "completed",
+      "details": "Both Tests remained NOT STARTED and analytically unmodified. No parser, ASCII upload, transfer, Pass/Fail, completion, publication, release, QC Review, METRC action, or cleanup occurred."
+    }
+  ],
+  "prohibited_or_deferred_actions": {
+    "create_worksheet_version_or_object": false,
+    "alter_worksheet_definition_formula_or_json": false,
+    "alter_assay_associations": false,
+    "parser_or_ascii_upload": false,
+    "batch_to_test_transfer": false,
+    "publish_release_or_qc_review": false,
+    "metrc_activity": false,
+    "cleanup": false
+  },
+  "classification": "batch_v2_dynamic_formula_fix_passed_ready_for_parser_and_transfer_validation"
+}

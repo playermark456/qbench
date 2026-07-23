@@ -238,17 +238,17 @@ QC_CONTROL_ROWS = [
     ),
     (
         "all_publish_rows_valid",
-        '=IF(AND($B$14>0,COUNTIF(Publish!BB2:BB87,FALSE)=0),TRUE,FALSE)',
+        '=IF(AND($B$14>0,COUNTIF(\'Publish\'!BB2:BB87,FALSE)=0),TRUE,FALSE)',
         "All populated Publish rows meet row prerequisites",
     ),
     (
         "duplicate_test_id_count",
-        '=COUNTIF(Publish!BD2:BD87,"Duplicate Test ID")',
+        '=COUNTIF(\'Publish\'!BD2:BD87,"Duplicate Test ID")',
         "Duplicate QBench Test IDs across Publish rows",
     ),
     (
         "populated_publish_row_count",
-        '=COUNTIF(Publish!A2:A87,"<>")',
+        '=COUNTIF(\'Publish\'!A2:A87,"<>")',
         "Populated Publish rows",
     ),
     ("batch_qc_disposition", "Hold", "Internal analytical batch disposition"),
@@ -730,7 +730,7 @@ def publish_message_formula(row: int) -> str:
         f'IF(AX{row}<>"Valid","Import validation required",'
         f'IF(BA{row}<>TRUE,"Source traceability incomplete",'
         f'IF(AY{row}<>"Accepted","Batch QC on hold",'
-        f'IF(\'QC Review\'!$B$18<>TRUE,"Batch release review required","Ready for transfer"))))))))))))))))'
+        f'IF(AND(\'Run Setup\'!$B$24=TRUE,\'QC Review\'!$B$9=TRUE,\'QC Review\'!$B$11=TRUE,\'QC Review\'!$B$12=TRUE,\'QC Review\'!$B$14>0,\'QC Review\'!$B$15="Accepted"),"Ready for transfer","Batch release review required"))))))))))))))))'
     )
 
 

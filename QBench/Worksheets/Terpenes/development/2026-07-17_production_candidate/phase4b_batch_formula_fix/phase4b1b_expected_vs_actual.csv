@@ -1,0 +1,51 @@
+check,expected,actual,status
+candidate_sha256,50fb7883a6932bc54b09f6997b91f01674e392696e82f77872935bb00576acda,50fb7883a6932bc54b09f6997b91f01674e392696e82f77872935bb00576acda,PASS
+focused_formula_fix_tests,5 passing,5 passing,PASS
+production_candidate_suite,13 passing once,13 passing once,PASS
+target_type,Dynamic Spreadsheet,Dynamic Spreadsheet,PASS
+active_version_state,"Version 2 Approved/Active; Version 1 Approved and preserved; no Version 3","Version 2 Approved/Active; Version 1 Approved and preserved; no Version 3",PASS
+version_2_saved_export_sha256,9f001553950403101be8f55e0ac592d77ea32105b76afaaa7c1374a3095c3aea,9f001553950403101be8f55e0ac592d77ea32105b76afaaa7c1374a3095c3aea,PASS
+worksheet_tabs,"Run Setup|Instrument Import|Batch Review|Test Transfer","Run Setup|Instrument Import|Batch Review|Test Transfer",PASS
+worksheet_dimensions,"25x3|201x57|45x24|87x56","25x3|201x57|45x24|87x56",PASS
+batch_review_b12_formula,quoted Test Transfer BB2:BB87 reference,exact corrected reference,PASS
+batch_review_b13_formula,quoted Test Transfer BD2:BD87 reference,exact corrected reference,PASS
+batch_review_b14_formula,quoted Test Transfer A2:A87 reference,exact corrected reference,PASS
+invalid_testtransfer_reference,absent,absent,PASS
+former_b13_bd_b18_cycle,absent,absent,PASS
+af_ag_ownership,AF2:AG201 formula-owned and read-only,AF2:AG201 formula-owned and read-only,PASS
+parser_writable_regions,A:AE and AH:BE excluding AF:AG,A:AE and AH:BE excluding AF:AG,PASS
+assay_association,"only intended active Test V2 and Batch V2 worksheets","only intended active Test V2 and Batch V2 worksheets",PASS
+assay_downstream_actions,"no specification|Pass/Fail|parser|automation|automatic Publish|automatic QC Review|METRC","none present",PASS
+fresh_runtime_fixtures,"two fresh Samples and Tests; one fresh Batch containing only those Tests","created without collisions; internal identifiers omitted",PASS
+fresh_test_status,one NOT STARTED Test per Sample,one NOT STARTED Test per Sample,PASS
+manual_fixture_rows,"Null|Blank|Standard|CCV|LOQ|QC|Sample A|Sample B","all eight present and persisted",PASS
+null_af_ag,"Rejected|Sample type required","Rejected|Sample type required",PASS
+other_rows_af_ag,recalculated,"Review Required|Source traceability incomplete",PASS
+control_row_exclusion,all six control categories absent from Test Transfer,all six absent,PASS
+sample_row_inclusion,only Sample A and Sample B present,only Sample A and Sample B present,PASS
+pretransfer_test_transfer_state,expected_incomplete_until_parser_and_transfer,expected_incomplete_until_parser_and_transfer,PASS
+batch_formula_fix,runtime_passed,runtime_passed,PASS
+formula_error_count,0,0,PASS
+batch_review_b12,false,false,PASS
+batch_review_b13,0,0,PASS
+batch_review_b14,2,2,PASS
+batch_review_b18,false,false,PASS
+batch_review_b19,Run setup incomplete,Run setup incomplete,PASS
+sample_a_bc,false,false,PASS
+sample_a_bd,Analytical values incomplete,Analytical values incomplete,PASS
+sample_b_bc,false,false,PASS
+sample_b_bd,Analytical values incomplete,Analytical values incomplete,PASS
+test_transfer_pretransfer_staging,"analytical and preparation/audit fields incomplete before parser and transfer","D:Z and associated staging fields incomplete before parser and transfer",PASS
+named_definitions,"all_publish_rows_valid|duplicate_test_id_count|populated_publish_row_count|terpenes_batch_publish_table","exact active Version-2 definitions",PASS
+save_reopen,fixture and formulas persist,fixture and pre-transfer state persisted,PASS
+batch_runtime_export,export if supported,no Export or Export Spreadsheet action available,NOT_APPLICABLE
+fresh_tests_analytically_unmodified,true,true,PASS
+parser_or_ascii_upload,none,none,PASS
+batch_to_test_transfer,none,none,PASS
+pass_fail_created,none,none,PASS
+completion_publish_release_qc_review,none,none,PASS
+metrc_activity,none,none,PASS
+cleanup,none,none,PASS
+qbench_api_oauth_devtools_or_live_access,none,none,PASS
+git_stage_commit_push_pr_update,none,none,PASS
+final_classification,batch_v2_dynamic_formula_fix_passed_ready_for_parser_and_transfer_validation,batch_v2_dynamic_formula_fix_passed_ready_for_parser_and_transfer_validation,PASS
