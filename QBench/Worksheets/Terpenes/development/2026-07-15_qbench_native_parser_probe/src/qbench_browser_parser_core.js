@@ -1,11 +1,21 @@
 "use strict";
 
 (function attachQBenchTerpenesParserCore(root) {
-  const VERSION = "terpenes-qbench-browser-core-v1";
+  const VERSION = "terpenes-qbench-browser-core-v2";
   const REQUIRED_SECTIONS = [
     "Header",
     "Sample Information",
     "Original Files",
+    "Configuration",
+    "Peak Table(Ch1)",
+    "Compound Results(Ch1)",
+  ];
+  const COMPLETE_RECORD_SECTIONS = [
+    "Header",
+    "File Information",
+    "Sample Information",
+    "Original Files",
+    "File Description",
     "Configuration",
     "Peak Table(Ch1)",
     "Compound Results(Ch1)",
@@ -153,6 +163,56 @@
     return sections;
   }
 
+  function splitCompleteRecords(input, limits) {
+    const normalized = normalizeText(input, limits).replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+    const starts = [];
+    normalized.split("\n").forEach((line, index) => {
+      if (/^\[Header\]\s*$/.test(line)) starts.push(index);
+    });
+    if (!starts.length) fail("MISSING_RECORD_HEADER", "Input contains no [Header] record boundary.");
+    const lines = normalized.split("\n");
+    if (lines.slice(0, starts[0]).some((line) => line.trim())) {
+      fail("UNEXPECTED_PREAMBLE", "Input contains nonblank data before the first [Header] record.");
+    }
+    return starts.map((start, index) => lines.slice(start, starts[index + 1]).join("\n"));
+  }
+
+  function splitCompleteRecordSections(text, limits) {
+    const sections = new Map();
+    let current = null;
+    text.split("\n").forEach((line, index) => {
+      if (line.length > limits.maximum_line_length) fail("LINE_TOO_LONG", "Input contains a line over the configured limit.", { row: index + 1 });
+      const match = line.match(/^\[(.+)]\s*$/);
+      if (match) {
+        current = match[1];
+        if (sections.has(current)) fail("DUPLICATE_SECTION", "Repeated section within record.", { section: current, row: index + 1 });
+        sections.set(current, []);
+        if (sections.size > limits.maximum_section_count) fail("TOO_MANY_SECTIONS", "Input contains too many sections.");
+      } else if (current) sections.get(current).push(line);
+    });
+    COMPLETE_RECORD_SECTIONS.forEach((section) => {
+      if (!sections.has(section)) fail("MISSING_SECTION", "Missing required section.", { section });
+    });
+    return sections;
+  }
+
+  function parseKeyValueSection(sections, sectionName, limits) {
+    const values = {};
+    (sections.get(sectionName) || []).forEach((line, index) => {
+      if (!line.trim()) return;
+      const cells = line.split("\t");
+      if (cells.length < 2 || cells.length > limits.maximum_field_count) {
+        fail("MALFORMED_KEY_VALUE", "Key/value section contains a malformed row.", { section: sectionName, row: index + 1 });
+      }
+      const key = String(cells.shift()).trim();
+      if (!key || Object.prototype.hasOwnProperty.call(values, key)) {
+        fail("MALFORMED_KEY_VALUE", "Key/value section contains a duplicate or blank key.", { section: sectionName, row: index + 1 });
+      }
+      values[key] = parseScalar(key, cells.join("\t"));
+    });
+    return values;
+  }
+
   function parseTable(sections, sectionName, headerPrefix, aliasMap, limits) {
     let headers = null;
     const rows = [];
@@ -182,12 +242,14 @@
     return rows;
   }
 
-  function validateRows(compoundRows, peakRows, groups) {
+  function validateRows(compoundRows, peakRows, groups, options) {
     const expected = new Map(groups.channels.map((channel) => [channel.internal_key, channel]));
     const counts = new Map();
     const errors = [];
     if (compoundRows.length !== 24) errors.push("Compound Results row count must be 24");
-    if (peakRows.length !== 34) errors.push("Peak Table row count must be 34");
+    if (!options || options.require_exact_peak_table_count !== false) {
+      if (peakRows.length !== 34) errors.push("Peak Table row count must be 34");
+    }
     compoundRows.forEach((row) => {
       if (row.unconfigured_analyte) {
         errors.push("unknown Compound Results name");
@@ -196,7 +258,7 @@
       counts.set(row.internal_key, (counts.get(row.internal_key) || 0) + 1);
       const channel = expected.get(row.internal_key);
       if (row["ID#"] !== channel.labsolutions_compound_id) errors.push("Compound Results ID/name mismatch");
-      if (typeof row["Conc."] !== "number") errors.push("Compound Results concentration must be numeric");
+      if (typeof row["Conc."] !== "number" && row["Conc."] !== "") errors.push("Compound Results concentration must be numeric or blank");
     });
     expected.forEach((_channel, key) => {
       if ((counts.get(key) || 0) !== 1) errors.push("Every configured Compound Results channel must appear exactly once");
@@ -252,6 +314,68 @@
     };
   }
 
+  function buildParsedRecord(sections, mapping, limits) {
+    const compoundRows = parseTable(sections, "Compound Results(Ch1)", "ID#", mapping.aliases, limits);
+    const peakRows = parseTable(sections, "Peak Table(Ch1)", "Peak#", mapping.aliases, limits);
+    validateRows(compoundRows, peakRows, mapping.groups, { require_exact_peak_table_count: false });
+    const byKey = new Map(compoundRows.map((row) => [row.internal_key, row]));
+    const reportableAnalytes = mapping.groups.reportable.map((channel) => {
+      const row = byKey.get(channel.internal_key);
+      return {
+        order: channel.order,
+        internal_key: channel.internal_key,
+        source_id: row["ID#"],
+        source_name: row.Name,
+        conc: row["Conc."],
+        r_time: row["R.Time"],
+        area: row.Area,
+        height: row.Height,
+      };
+    });
+    const audit = byKey.get("dimethylacetamide");
+    return {
+      header: parseKeyValueSection(sections, "Header", limits),
+      file_information: parseKeyValueSection(sections, "File Information", limits),
+      sample_information: parseKeyValueSection(sections, "Sample Information", limits),
+      original_files: parseKeyValueSection(sections, "Original Files", limits),
+      file_description: parseKeyValueSection(sections, "File Description", limits),
+      configuration: parseKeyValueSection(sections, "Configuration", limits),
+      compound_results: compoundRows,
+      peak_table: peakRows,
+      reportable_analytes: reportableAnalytes,
+      dimethylacetamide_audit: {
+        internal_key: "dimethylacetamide",
+        source_id: audit["ID#"],
+        source_name: audit.Name,
+        conc: audit["Conc."],
+        reportable: false,
+      },
+      counts: {
+        compound_result_row_count: compoundRows.length,
+        peak_table_row_count: peakRows.length,
+        reportable_compound_row_count: reportableAnalytes.length,
+        dimethylacetamide_row_count: 1,
+      },
+    };
+  }
+
+  function parseLabSolutionsAsciiMultiRecord(input, config, options) {
+    const limits = normalizeLimits(options && options.securityLimits);
+    const mapping = buildAliasMap(config);
+    const recordTexts = splitCompleteRecords(input, limits);
+    const records = recordTexts.map((recordText, index) => {
+      const parsed = buildParsedRecord(splitCompleteRecordSections(recordText, limits), mapping, limits);
+      parsed.record_order = index + 1;
+      return parsed;
+    });
+    return {
+      parser_core_version: VERSION,
+      quantitation_source: { table: "Compound Results(Ch1)", field: "Conc." },
+      records,
+      raw_file_retained_in_output: false,
+    };
+  }
+
   function toControlledError(error) {
     return {
       code: error && error.code ? error.code : "UNEXPECTED_PARSE_ERROR",
@@ -261,13 +385,17 @@
     };
   }
 
-  root.QBenchTerpenesParserCore = Object.freeze({
+  const api = Object.freeze({
     VERSION,
     DEFAULT_LIMITS,
     ProbeParseError,
     normalizeAnalyteName,
     parseNumberStrict,
     parseLabSolutionsAscii,
+    parseLabSolutionsAsciiMultiRecord,
+    splitCompleteRecords,
     toControlledError,
   });
+  root.QBenchTerpenesParserCore = api;
+  if (typeof module !== "undefined" && module.exports) module.exports = api;
 })(typeof globalThis !== "undefined" ? globalThis : self);

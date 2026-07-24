@@ -1,0 +1,44 @@
+{
+  "source_sha256": "bfd88621e2e8ab791e63ba38f07c9a1174f9600e1cf3f28d5b12ffbd08f2eb91",
+  "records": 34,
+  "category_counts": {
+    "Null": 3,
+    "Blank": 2,
+    "System Suitability": 3,
+    "Standard": 6,
+    "CCV": 3,
+    "LOQ": 1,
+    "Matrix Blank": 1,
+    "Sample": 15
+  },
+  "complete_required_section_counts": {
+    "sample_information": 34,
+    "original_files": 34,
+    "peak_table": 34,
+    "compound_results_with_24_rows": 34
+  },
+  "source_quantitation": {
+    "table": "Compound Results(Ch1)",
+    "field": "Conc."
+  },
+  "batch_output": {
+    "total_columns": 57,
+    "written_columns_per_row": 55,
+    "write_ranges": ["A:AE", "AH:BE"],
+    "formula_owned_columns_excluded": ["AF", "AG"],
+    "reportable_channel_count": 23,
+    "dimethylacetamide_destination": "AA"
+  },
+  "peak_table_audit": {
+    "records_preserved": 34,
+    "unknown_peak_total": 138,
+    "manual_integration_record_count": 0
+  },
+  "sample_test_linkage": {
+    "unmapped_reportable_held": 15,
+    "controls_excluded": 19,
+    "synthetic_runtime_overlay_resolved": 2
+  },
+  "deterministic": true,
+  "pass_fail_created": false
+}

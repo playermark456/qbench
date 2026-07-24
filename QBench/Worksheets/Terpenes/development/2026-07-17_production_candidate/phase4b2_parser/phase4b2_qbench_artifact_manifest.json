@@ -1,0 +1,16 @@
+{
+  "artifact": "QBench/Worksheets/Terpenes/development/2026-07-15_qbench_native_parser_probe/dist/terpenes_multirecord_qbench_parser.js",
+  "artifact_sha256": "c67cc07c38fa50d46150f8b45de899a8e2a4bdb48db763edee73fc07cdfe849b",
+  "artifact_bytes": 47297,
+  "operational_parser_reference_sha256": "61f91070e0b68b5c5c06de580efe0569d13075a032441968e9d43bec763c1d9e",
+  "authoritative_raw_source_sha256": "bfd88621e2e8ab791e63ba38f07c9a1174f9600e1cf3f28d5b12ffbd08f2eb91",
+  "parser_version": "terpenes-qbench-coded-parser-v1",
+  "target_worksheet": "Instrument Import",
+  "header_columns": 57,
+  "parser_owned_columns": 55,
+  "parser_owned_ranges": ["A:AE", "AH:BE"],
+  "protected_columns": ["AF", "AG"],
+  "focused_tests_passed": 30,
+  "production_candidate_compatibility_tests_passed": 5,
+  "classification": "locally_passed_ready_for_sandbox_creation"
+}

@@ -1,0 +1,3 @@
+# Ignored local-only LabSolutions mapping and normalized execution outputs.
+*
+!.gitignore

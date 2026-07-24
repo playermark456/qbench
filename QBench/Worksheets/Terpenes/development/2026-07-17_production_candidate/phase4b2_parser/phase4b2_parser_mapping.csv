@@ -1,0 +1,36 @@
+batch_column,worksheet_column,parser_source
+import_row_id,A,deterministic_source_row_key
+run_order,B,record_order
+vial,C,Sample Information > Vial#
+sample_type,D,deterministic_control_or_sample_classification
+qbench_test_id,E,Sample ID or optional ignored runtime mapping
+qbench_sample_id,F,not supplied by parser
+product_matrix,G,not supplied by parser
+sample_mass_g,H,Sample Information > Sample Amount
+final_volume_ml,I,not supplied by parser
+qbench_df,J,not supplied by parser
+df_application_mode,K,already_applied_by_labsolutions for reportable samples
+labsolutions_sample_amount,L,Sample Information > Sample Amount
+labsolutions_dilution_factor,M,Sample Information > Dilution Factor
+source_instrument_file,N,Original Files > Data File
+source_file_hash,O,SHA-256 of complete source
+source_data_file,P,Original Files > Data File
+source_method_file,Q,Original Files > Method File
+source_sequence_file,R,Original Files > Batch File
+acquired_at,S,Sample Information > Acquired
+instrument_name,T,Configuration > Instrument Name
+detector_id,U,Configuration > Detector ID
+detector_name,V,Configuration > Detector Name
+parser_version,W,parser core and adapter versions
+compound_result_row_count,X,Compound Results row count
+peak_table_row_count,Y,Peak Table row count
+reportable_compound_row_count,Z,controlled reportable result count
+dimethylacetamide_conc,AA,Compound Results ID 1 Conc. audit-only
+unknown_peak_count,AB,retained unconfigured Peak Table rows
+manual_integration,AC,Peak Table manual marker
+integration_reason,AD,manual marker reason when present
+integration_review_status,AE,derived audit review status
+import_validation_status,AF,formula-owned; never written
+import_message,AG,formula-owned; never written
+reportable_terpenes,AH:BD,Compound Results IDs 2:24 Conc. in approved order
+source_row_hash,BE,deterministic_source_row_key
