@@ -1,0 +1,4 @@
+# Preserve validated LabSolutions runtime fixtures byte-for-byte (CRLF).
+2026-07-25_terpenes_simple_results_v1/runtime/terpenes_simple_results_310_311_runtime_source.txt -text
+2026-07-25_terpenes_simple_results_v2_controls/runtime/terpenes_simple_results_310_311_runtime_source.txt -text
+2026-07-25_terpenes_simple_results_v2_controls/runtime/terpenes_simple_results_v2_controls_312_313_runtime_source.txt -text
