@@ -483,4 +483,10 @@ Production was not accessed. The future Production mapping remains assay 8 Terpe
 
 Current decision: `PRODUCTION_IMPORT_LAYER_R2_READY_FOR_GIT`.
 
-The precise next boundary is to stage the 10-path r2 follow-up scope, verify its preserved CRLF fixture bytes, create and push one follow-up commit, and add an additive Draft PR #14 comment. Production deployment remains separately unauthorized.
+The preceding `PRODUCTION_IMPORT_LAYER_R2_READY_FOR_GIT` status and Git follow-up boundary are historical. The r2 follow-up commit completed after the validated 22-path scope was transplanted to the clean branch. PR #14 remains Draft but is superseded for review because its configured-base diff contains 162 unrelated historical paths. The clean replacement branch intentionally restores `TERPENES_CURRENT_STATE.md` relative to the configured base and otherwise contains the exact validated 22-path scope. No further Sandbox proof is required. Production was not accessed, and Production deployment remains separately controlled.
+
+## Clean replacement PR review boundary (2026-07-27)
+
+Current readiness: `PRODUCTION_IMPORT_LAYER_R2_CLEAN_PR_PENDING_REVIEW`.
+
+The next boundary is read-only technical review of the clean replacement Draft PR. The import/audit scope remains limited to the Batch Results and Run Records layer; QC disposition, downstream Test-result persistence, COA, and METRC remain separate scopes.

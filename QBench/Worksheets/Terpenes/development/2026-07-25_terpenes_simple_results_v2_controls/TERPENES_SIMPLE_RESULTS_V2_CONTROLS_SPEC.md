@@ -116,6 +116,6 @@ After the update callback succeeds, the parser retrieves Results once more and v
 
 Numeric comparison accepts equivalent finite numeric-string representations without accepting changed values. Any failure emits `RESULTS_WORKSHEET_UPDATE_NOT_PERSISTED`; there is no retry or repair update, and `QB.success()` remains deferred until verification passes.
 
-## Future boundary
+## Current boundary
 
-V2 does not implement Batch Review. Revision `terpenes-simple-results-parser-v2-controls-r2` is locally validated only. It must be uploaded as parser 43 Version 2 and proven on a fresh disposable Sandbox proof before it can supersede the live evidence for parser 43 Version 1/job 69. Production promotion remains outside scope.
+V2 does not implement Batch Review. The earlier future-Sandbox-proof statement is historical: revision `terpenes-simple-results-parser-v2-controls-r2` passed the isolated Sandbox proof through parser 43 Version 2, BATCH-65, attachment 59, and job 70. The r2 follow-up commit completed. PR #14 remains Draft and is superseded for review because its configured-base diff contains unrelated historical branch material. The clean replacement branch contains the validated 22-path scope, including this evidence specification and the intentionally restored `TERPENES_CURRENT_STATE.md` path. No further Sandbox proof is required for this import/audit evidence. The next boundary is read-only technical review of the clean replacement Draft PR. Production was not accessed; Production deployment remains separately controlled and outside scope.

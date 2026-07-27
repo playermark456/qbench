@@ -934,3 +934,12 @@
 - Current readiness is `PRODUCTION_IMPORT_LAYER_R2_READY_FOR_GIT`. Production was not accessed. The recorded future Production mapping remains assay `8` Terpenes, Test Worksheet `42` preserved unchanged, and Batch Worksheet `43` as the future new-version target.
 - Repository changes in this phase are limited to the V2 validation record, the V2 production-readiness audit, and this authoritative state file. No parser, test, build, worksheet, runtime, specification, or `.gitattributes` content changed. No Git or GitHub action occurred.
 - Precise next boundary: stage and commit the 10-path r2 follow-up scope, verify the preserved CRLF fixture bytes, push, and add an additive Draft PR #14 comment. Production deployment remains separately unauthorized.
+
+## Simple Results V2 Controls r2 - clean replacement PR boundary (2026-07-27)
+
+- `final_status = PRODUCTION_IMPORT_LAYER_R2_CLEAN_PR_PENDING_REVIEW`.
+- The preceding `PRODUCTION_IMPORT_LAYER_R2_READY_FOR_GIT` status and Git follow-up boundary are historical. The r2 follow-up commit completed after the validated commits were transplanted onto the clean replacement branch.
+- PR #14 remains Draft and must not be merged as the import-layer candidate because its configured-base diff contains 162 unrelated historical paths. The clean replacement branch contains exactly the validated 22 intended paths: the original 21-path import-layer scope plus the 314/315 runtime fixture.
+- `TERPENES_CURRENT_STATE.md` is intentionally restored relative to the configured base as validated evidence. No other historical parser-probe, production-candidate, or diagnostic path is in the clean scope.
+- The hardened r2 proof remains complete through parser 43 Version 2, BATCH-65, attachment 59, and job 70. No further Sandbox proof is required for this import/audit evidence.
+- Production was not accessed. Production deployment remains separately controlled. The next boundary is read-only technical review of the clean replacement Draft PR.
