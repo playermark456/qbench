@@ -6,7 +6,7 @@ if (typeof importScripts === "function") {
 }
 
 (function attachTerpenesSimpleResultsV2Controls(root) {
-  const VERSION = "terpenes-simple-results-parser-v2-controls";
+  const VERSION = "terpenes-simple-results-parser-v2-controls-r2";
   const CORE_VERSION = "terpenes-simple-results-core-v2-controls";
   const RESULTS_TAB = "Results";
   const FIRST_DATA_ROW = 2;
@@ -163,8 +163,17 @@ if (typeof importScripts === "function") {
     return bytes;
   }
 
-  function sha256Hex(input) {
-    const bytes = utf8Bytes(input);
+  function byteView(input) {
+    if (input instanceof Uint8Array) return input;
+    if (typeof ArrayBuffer !== "undefined" && input instanceof ArrayBuffer) return new Uint8Array(input);
+    if (typeof ArrayBuffer !== "undefined" && ArrayBuffer.isView && ArrayBuffer.isView(input)) {
+      return new Uint8Array(input.buffer, input.byteOffset, input.byteLength);
+    }
+    fail("UNSUPPORTED_INPUT_TYPE", "Source input must be an exact byte sequence.");
+  }
+
+  function sha256BytesHex(input) {
+    const bytes = byteView(input);
     const words = [];
     const bitLength = bytes.length * 8;
     for (let index = 0; index < bytes.length; index += 1) {
@@ -240,6 +249,10 @@ if (typeof importScripts === "function") {
       .join("");
   }
 
+  function sha256Hex(input) {
+    return sha256BytesHex(Uint8Array.from(utf8Bytes(input)));
+  }
+
   function normalizeAnalyteName(value) {
     let text = String(value || "");
     if (typeof text.normalize === "function") text = text.normalize("NFKC");
@@ -272,6 +285,27 @@ if (typeof importScripts === "function") {
     }
     const withoutBom = input.charCodeAt(0) === 0xfeff ? input.slice(1) : input;
     return withoutBom.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+  }
+
+  function decodeSourceBytes(input, TextDecoderCtor) {
+    const bytes = byteView(input);
+    if (bytes.length > LIMITS.maximum_raw_file_size_bytes) {
+      fail("RAW_FILE_TOO_LARGE", "LabSolutions source exceeds the controlled file-size limit.");
+    }
+    const sourceFileHash = sha256BytesHex(bytes);
+    if (bytes.length >= 3 && bytes[0] === 0xef && bytes[1] === 0xbb && bytes[2] === 0xbf) {
+      fail("SOURCE_UTF8_BOM_NOT_ALLOWED", "UTF-8 BOM is not allowed in the LabSolutions source.");
+    }
+    if (typeof TextDecoderCtor !== "function") {
+      fail("SOURCE_UTF8_INVALID", "Fatal UTF-8 decoding is unavailable.");
+    }
+    let text;
+    try {
+      text = new TextDecoderCtor("utf-8", { fatal: true }).decode(bytes);
+    } catch (_error) {
+      fail("SOURCE_UTF8_INVALID", "LabSolutions source is not valid UTF-8.");
+    }
+    return { bytes, text, source_file_hash: sourceFileHash };
   }
 
   function splitCompleteRecords(input) {
@@ -480,12 +514,14 @@ if (typeof importScripts === "function") {
     };
   }
 
-  function parseSource(input) {
+  function parseSource(input, sourceFileHash) {
     if (REPORTABLE_ANALYTES.length !== 23 || ALL_ANALYTES.length !== 24) {
       fail("ANALYTE_CONFIGURATION_INVALID", "Controlled analyte counts are invalid.");
     }
+    if (!/^[a-f0-9]{64}$/.test(cellText(sourceFileHash))) {
+      fail("SOURCE_FILE_HASH_REQUIRED", "An exact uploaded-byte SHA-256 is required.");
+    }
     const aliasMap = buildAliasMap();
-    const sourceFileHash = sha256Hex(input.charCodeAt(0) === 0xfeff ? input.slice(1) : input);
     const recordTexts = splitCompleteRecords(input);
     if (recordTexts.length > AUDIT_CAPACITY) {
       fail("RUN_RECORD_CAPACITY_EXCEEDED", `Run Records capacity is ${AUDIT_CAPACITY} complete records.`);
@@ -497,6 +533,11 @@ if (typeof importScripts === "function") {
       records,
       record_count: records.length,
     };
+  }
+
+  function parseSourceBytes(input, TextDecoderCtor) {
+    const decoded = decodeSourceBytes(input, TextDecoderCtor);
+    return parseSource(decoded.text, decoded.source_file_hash);
   }
 
   function candidateTestId(record) {
@@ -649,21 +690,34 @@ if (typeof importScripts === "function") {
 
   function buildTestRowIndex(rawGrid, processedGrid, references) {
     const index = {};
-    const add = (id, row) => {
-      const key = cellText(id);
-      if (!key) return;
-      if (!index[key]) index[key] = new Set();
-      index[key].add(row);
-    };
-    for (let row = FIRST_DATA_ROW; row <= LAST_DATA_ROW; row += 1) {
-      add(visibleCell(rawGrid, processedGrid, row, 1), row);
-    }
+    const referenceIds = new Map();
     Object.entries(references || {}).forEach(([address, value]) => {
       const match = address.match(/^B(\d+)$/i);
       if (!match) return;
       const row = Number(match[1]);
-      if (row >= FIRST_DATA_ROW && row <= LAST_DATA_ROW) add(value, row);
+      if (row < FIRST_DATA_ROW || row > LAST_DATA_ROW) return;
+      const id = cellText(value);
+      if (!id) return;
+      const prior = referenceIds.get(row);
+      if (prior && prior !== id) {
+        fail("RESULTS_TEST_CONTEXT_MISMATCH", `Results row ${row} has conflicting Test references.`, { row });
+      }
+      referenceIds.set(row, id);
     });
+    for (let row = FIRST_DATA_ROW; row <= LAST_DATA_ROW; row += 1) {
+      const visibleId = cellText(visibleCell(rawGrid, processedGrid, row, 1));
+      const referenceId = referenceIds.get(row) || "";
+      if (visibleId && referenceId && visibleId !== referenceId) {
+        fail("RESULTS_TEST_CONTEXT_MISMATCH", `Results row ${row} Test context does not agree.`, { row });
+      }
+      const effectiveId = visibleId || referenceId;
+      if (!effectiveId) continue;
+      if (index[effectiveId] && !index[effectiveId].has(row)) {
+        fail("RESULTS_TEST_ID_DUPLICATE", `Test ID ${effectiveId} appears on more than one Results row.`);
+      }
+      if (!index[effectiveId]) index[effectiveId] = new Set();
+      index[effectiveId].add(row);
+    }
     return index;
   }
 
@@ -694,7 +748,7 @@ if (typeof importScripts === "function") {
 
   function planCandidateRows(bundle, candidates, sourceFileHash) {
     const index = buildTestRowIndex(bundle.rawGrid, bundle.processedGrid, bundle.references);
-    return candidates.map((record) => {
+    const plans = candidates.map((record) => {
       const id = candidateTestId(record);
       const rows = index[id] ? Array.from(index[id]) : [];
       if (!rows.length) fail("RESULTS_TEST_ID_MISSING", `Candidate Test ID ${id} is missing from Results.`);
@@ -706,6 +760,19 @@ if (typeof importScripts === "function") {
         values: buildParserOwnedValues(record, sourceFileHash),
       };
     });
+    requireDistinctCandidateRows(plans);
+    return plans;
+  }
+
+  function requireDistinctCandidateRows(plans) {
+    const rows = new Set();
+    (plans || []).forEach((plan) => {
+      if (rows.has(plan.row)) {
+        fail("RESULTS_TEST_ROW_ALIAS", `More than one candidate resolves to Results row ${plan.row}.`, { row: plan.row });
+      }
+      rows.add(plan.row);
+    });
+    return plans;
   }
 
   function planAuditRows(bundle, records, sourceFileHash) {
@@ -933,17 +1000,25 @@ if (typeof importScripts === "function") {
     return Array.isArray(filesValue) ? filesValue : Object.values(filesValue || {});
   }
 
-  function readFileText(file, FileReaderCtor) {
-    if (file && typeof file.text === "function") return Promise.resolve(file.text()).then(String);
+  function readFileBytes(file, FileReaderCtor) {
+    if (file && typeof file.arrayBuffer === "function") {
+      return Promise.resolve(file.arrayBuffer()).then((value) => byteView(value));
+    }
     return new Promise((resolve, reject) => {
       if (typeof FileReaderCtor !== "function") {
         reject(new SimpleResultsError("FILE_READER_UNAVAILABLE", "FileReader is unavailable."));
         return;
       }
       const reader = new FileReaderCtor();
-      reader.onload = (event) => resolve(String(event.target.result));
+      reader.onload = (event) => {
+        try {
+          resolve(byteView(event.target.result));
+        } catch (error) {
+          reject(error);
+        }
+      };
       reader.onerror = () => reject(new SimpleResultsError("FILE_READ_FAILED", "The selected source file could not be read."));
-      reader.readAsText(file);
+      reader.readAsArrayBuffer(file);
     });
   }
 
@@ -984,8 +1059,11 @@ if (typeof importScripts === "function") {
       if (files.length !== 1) fail("EXACTLY_ONE_TXT_SOURCE_REQUIRED", "Exactly one .txt source file is required.");
       const file = files[0];
       if (!/\.txt$/i.test(cellText(file && file.name))) fail("EXACTLY_ONE_TXT_SOURCE_REQUIRED", "Exactly one .txt source file is required.");
-      const source = await readFileText(file, env.FileReader);
-      const parsed = parseSource(source);
+      const sourceBytes = await readFileBytes(file, env.FileReader);
+      const parsed = parseSourceBytes(
+        sourceBytes,
+        env.TextDecoder || (typeof TextDecoder === "function" ? TextDecoder : undefined),
+      );
       const candidates = requireUniqueCandidates(parsed.records);
       const sampleRecords = parsed.records.filter((record) => record.category === "Sample");
       const controlRecords = parsed.records.length - sampleRecords.length;
@@ -1111,15 +1189,19 @@ if (typeof importScripts === "function") {
     PARSER_LAST_COLUMN,
     SimpleResultsError,
     sha256Hex,
+    sha256BytesHex,
+    decodeSourceBytes,
     normalizeAnalyteName,
     classifyRecord,
     parseSource,
+    parseSourceBytes,
     candidateTestId,
     requireUniqueCandidates,
     buildParserOwnedValues,
     buildAuditValues,
     requireResultsBundle,
     buildTestRowIndex,
+    requireDistinctCandidateRows,
     planCandidateRows,
     planAuditRows,
     applyResultsPlans,
@@ -1137,6 +1219,7 @@ if (typeof importScripts === "function") {
       QB,
       QBBatchService,
       FileReader: typeof FileReader === "function" ? FileReader : undefined,
+      TextDecoder: typeof TextDecoder === "function" ? TextDecoder : undefined,
     }));
   }
 })(typeof globalThis !== "undefined" ? globalThis : self);
