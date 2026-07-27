@@ -1,12 +1,16 @@
 # Terpenes Simple Results V2 Controls — Production-Readiness Audit
 
 Date: 2026-07-25  
-Audit mode: local-only, read-only implementation inspection  
-Final status: `PRODUCTION_IMPORT_LAYER_READY_FOR_GIT`
+Audit mode: local implementation evidence plus read-only Sandbox reconciliation  
+Final status: `PRODUCTION_IMPORT_LAYER_R2_READY_FOR_GIT`
 
 ## Executive decision
 
-Terpenes Simple Results V2 Controls is complete as a production-candidate **Batch import and complete-run audit layer**. The frozen parser, one-tab Batch worksheet, focused tests, and one controlled Sandbox execution prove the required import boundary:
+The earlier `PRODUCTION_IMPORT_LAYER_READY_FOR_GIT` decision applied to parser 43 Version 1, artifact SHA-256 `1c3b0badb33acee3152da95aa40fb8c4332aa465fd1733789456293e0a6c7189`, and Sandbox job 69. That evidence remains valid historical evidence, but the decision is superseded for the current local candidate.
+
+Terpenes Simple Results V2 Controls revision `terpenes-simple-results-parser-v2-controls-r2` is locally validated as a corrected **Batch import and complete-run audit layer**. Revision r2 adds strict Results Test-context reconciliation, distinct physical-row enforcement, exact-byte source hashing, UTF-8 BOM rejection, and fatal UTF-8 validation. Its one controlled BATCH-65 Sandbox proof passed on 2026-07-27. After two failed automated quarantine Save attempts, the user completed one manual Save and Codex directly verified the exact inert configuration, unchanged proof objects, and no job 71. Revision r2 is now ready for the scoped Git follow-up as the import/audit layer only.
+
+The one-tab Batch worksheet, focused tests, and historical controlled Sandbox execution establish the retained import boundary:
 
 - one LabSolutions `.txt` input;
 - strict parsing and validation of all 34 complete records;
@@ -18,7 +22,7 @@ Terpenes Simple Results V2 Controls is complete as a production-candidate **Batc
 - exact read-after-write verification before success;
 - no Test service, direct Test result write, status mutation, approval mutation, COA action, or METRC action.
 
-This decision means the implementation is ready to be committed and reviewed as the production import-layer candidate. It does **not** authorize Production deployment and does not classify the complete Terpenes review/release workflow as production-ready.
+Revision r2 may remain under Draft review. Its next boundary is the scoped 10-path Git follow-up, push, and additive Draft PR #14 comment. This readiness decision does **not** authorize Production deployment and does not classify the complete Terpenes review/release workflow as production-ready.
 
 The following remain separate scopes:
 
@@ -316,7 +320,11 @@ Production object creation, activation, assignment, or configuration remains a s
 
 ### 13. Exact PR #14 file allowlist
 
-The following is the exact repository allowlist for the Simple Results lineage and this audit. Files already present on the branch remain part of the review scope; no inference is made about Git status because Git was not accessed.
+The following is the exact 21-path repository allowlist for the Simple Results lineage and this audit. Files already present on the branch remain part of the review scope; no inference is made about Git status because Git was not accessed.
+
+#### Scoped line-ending rule
+
+- `QBench/Worksheets/Terpenes/development/.gitattributes`
 
 #### Authoritative state
 
@@ -398,9 +406,9 @@ It does not establish:
 - METRC profile mapping/export;
 - rerun governance beyond the technical overwrite/readback behavior.
 
-## Recommended next phase
+## Superseded pre-proof next phase
 
-The next phase should be a repository/Git review of only the allowlisted files, followed by a separately authorized Production deployment plan for the **import/audit layer only**.
+This was the recommended next phase before r2 proof execution: upload the corrected artifact, SHA-256 `0cda871ea3510275bd37b8dff8ba3a173b2e97f2a80579a17b3a918a352bc062`, as parser 43 Version 2 and perform a fresh disposable Sandbox proof. That proof subsequently passed as documented in the 2026-07-27 addendum. The inert-quarantine gate also subsequently passed through one manual Save followed by Codex read-only verification.
 
 Before any Production mutation:
 
@@ -420,6 +428,59 @@ If COA or METRC output is required in the same release, pause Production deploym
 
 ## Activity boundary
 
-This audit created this readiness record and appended the authoritative current-state record only. It did not modify or rebuild any parser, worksheet, runtime fixture, test, specification, validation record, package file, lockfile, `.gitignore`, report, COA, automation, or deployment artifact.
+The original audit created this readiness record and appended the authoritative current-state record only. The later local r2 hardening modified only the allowlisted V2 source, build script, browser artifact, focused tests, specification, validation record, this readiness record, and authoritative state. It did not modify the V2 worksheet, either runtime fixture, V1, package files, lockfiles, `.gitignore`, scoped `.gitattributes`, report, COA, or automation files.
 
 No Git command, GitHub action, PR #14 access, browser action, QBench Sandbox action, QBench Production action, direct API action, or network action occurred.
+
+## Revision r2 hardening addendum (2026-07-25)
+
+The current local parser revision is `terpenes-simple-results-parser-v2-controls-r2`.
+
+| Evidence | Bytes | SHA-256 |
+|---|---:|---|
+| Corrected parser source | 52,233 | `49cb728e0f06e9d12f154b5fdb9d2dac58a40cdc56bcf314b9ce6c26df0db136` |
+| Corrected build script | 5,724 | `0cdbacfa7d4c1b454e9c6be972c891a3036285bb282a8e8802ba2859b180268d` |
+| Corrected browser artifact | 52,375 | `0cda871ea3510275bd37b8dff8ba3a173b2e97f2a80579a17b3a918a352bc062` |
+| Corrected focused test | 75,224 | `077710be872947aa95bcba14a66210e4d5894dbb5f10d335c60507f323fee13e` |
+| Corrected specification | 8,282 | `b55fd323ca7290615c3ac6b8f0d129ec261bf22d6c969a70df57bd8dd745bcb9` |
+| Corrected validation record | 22,796 | `3237d399efada1a0594a47037679fe24cff99ea04d6447327015243be58219d2` |
+
+The V1 suite remains 97/97. The V2 suite is 145/145: all prior 123 checks plus 22 new adversarial hardening checks. The protected V2 worksheet remains SHA-256 `80fde1ebb3d4207a2fdcbe297c3b457906cca7355d12ff50baf3e1fca14bfeb3`; runtime fixtures remain `1e5087715a9bcf216c2991cca53f41fb4ae84b4f9e80eea0e95d7618ec77a36e` and `6b6a208faa83a16e54aa7168467d2221fa23db8f8c6c8a82d183f2bb235ce2a7`.
+
+The exact PR allowlist was 21 paths because it included the scoped `QBench/Worksheets/Terpenes/development/.gitattributes`. Parser 43 Version 1/job 69 remains evidence only for the old artifact. Revision r2 subsequently passed its distinct BATCH-65 Sandbox proof and its parser-43 inert quarantine was later directly verified after one manual Save.
+
+## BATCH-65 Sandbox proof and finalization boundary (2026-07-27)
+
+The preceding `PRODUCTION_IMPORT_LAYER_R2_PENDING_SANDBOX_VALIDATION` and `PRODUCTION_IMPORT_LAYER_R2_PENDING_QUARANTINE_FINALIZATION` statuses remain historical context. The r2 proof passed, and the later manual quarantine Save was directly verified; this record is now advanced to `PRODUCTION_IMPORT_LAYER_R2_READY_FOR_GIT`.
+
+- Frozen proof evidence: parser 43 Version 2 active; artifact SHA-256 `0cda871ea3510275bd37b8dff8ba3a173b2e97f2a80579a17b3a918a352bc062`; Batch Worksheet 80 Version 1 / SHA-256 `80fde1ebb3d4207a2fdcbe297c3b457906cca7355d12ff50baf3e1fca14bfeb3`; BATCH-65/internal ID 65; AIT-SAMP-172/internal ID 172; Source Test 314; Target Test 315; attachment 59 / asset 79; runtime SHA-256 `2019f6d543954ea5bccd485843329f3230aee944c4f82291c19b38eb1469d9fe`.
+- Exactly one BATCH-65 attachment upload created exactly one parser-43 job. Job 70 reached `SUCCESS`, created `07/27/2026 11:45 AM` and completed `07/27/2026 11:48 AM`. It remains the newest parser-43 job; no later job appeared.
+- Readback evidence is complete: every cell in dynamic rows 2 and 3 matched the local P1/Test-314 and P2/Test-315 A:AY vectors; visible and dollar-reference Test identities agreed; candidate rows were distinct; every cell in audit rows 91:124 matched the 34 source-ordered vectors; P1 was audit row 107 and P2 audit row 108; source hashes propagated exactly; and unmatched rows, row 88, fixed rows 89/90, and audit tail rows 125:190 remained unchanged.
+- The parser boundary remains one Results-only Batch update with read-after-write verification before success, no Test service, no direct Test write, no Test Worksheet 77 payload, no second Batch update, and no repair retry. Test Worksheet 77 and Tests 314/315 remained unchanged and NOT STARTED with blank Test Results and dates.
+- Local reconciliation after the proof returned V1 97/97 and hardened V2 163/163. Runtime fixture 312/313 remains SHA-256 `6b6a208faa83a16e54aa7168467d2221fa23db8f8c6c8a82d183f2bb235ce2a7`.
+- The authorized final quarantine attempt changed Filename Text in the browser to `SBX_ONLY_R2_STAGING_INERT_0cda871ea3510275.txt`, but the single Configuration Save timed out at the browser-control layer. A reload restored `terpenes_simple_results_v2_controls_314_315_runtime_source.txt`; the change did not persist. No retry was made. Job 70 remained newest and attachment 59, BATCH-65, worksheet 80, Test Worksheet 77, and Tests 314/315 remained unchanged.
+- Production mapping is recorded but not accessed: Production assay 8 Terpenes; existing Test Worksheet 42 (`Terpenes [Test] Worksheet`) remains unchanged; existing Batch Worksheet 43 (`Terpenes [Batch] Worksheet`) is the future target for a new worksheet version only. Production was not accessed or mutated.
+- Follow-up PR accounting is unchanged until this blocker is resolved: the original commit scope is 21 paths; the r2 correction follow-up scope is 10 paths; the resulting unique PR path count is 22 because the 314/315 runtime fixture is the only new unique path, while the other nine paths were already in the original scope. The new scoped `-text` rule preserves that runtime fixture byte-for-byte.
+- No Git, GitHub, PR, Production, direct API, or direct HTTP action occurred in this finalization attempt.
+
+## Manual quarantine finalization and current decision (2026-07-27)
+
+Two automated quarantine Save attempts failed without persisting the inert sentinel. The first timed out and read-only reload retained the proof filename. The separately authorized fresh retry was submitted exactly once at `2026-07-27T17:17:02.562Z`, timed out, and its single read-only reload also retained the proof filename. Neither failure created a parser job or changed a proof object.
+
+The user later completed exactly one manual Configuration Save. Codex then verified read-only that parser 43 persisted:
+
+- Trigger `When file is added to Batch attachments`;
+- assay `SBX_ONLY_TERPENES_RUNTIME_ASSAY_BATCH_V2` / ID `21`;
+- Filename Should `Equal`;
+- Filename Text `SBX_ONLY_R2_STAGING_INERT_0cda871ea3510275.txt`;
+- Version 2 APPROVED and solely active; Version 1 APPROVED and inactive.
+
+History remained exactly 70 jobs, job 70 remained the newest parser-43 job and `SUCCESS`, and no job 71 appeared. BATCH-65, attachment 59 / asset 79, Tests 314/315, worksheet 80 dynamic and audit Results, and Test Worksheet 77 remained unchanged. Tests 314/315 remained `NOT STARTED` with blank Test-level Results, Start Date, and Complete Date.
+
+Local verification reconfirmed parser artifact SHA-256 `0cda871ea3510275bd37b8dff8ba3a173b2e97f2a80579a17b3a918a352bc062`, Batch worksheet SHA-256 `80fde1ebb3d4207a2fdcbe297c3b457906cca7355d12ff50baf3e1fca14bfeb3`, and runtime 314/315 SHA-256 `2019f6d543954ea5bccd485843329f3230aee944c4f82291c19b38eb1469d9fe`. The exact scoped `-text` rule was present once and was not modified. Tested implementation content did not change; retained results remain V1 97/97 and hardened V2 r2 163/163.
+
+Production was not accessed. The future Production mapping remains assay 8 Terpenes, Test Worksheet 42 preserved unchanged, and Batch Worksheet 43 as the future new-version target.
+
+Current decision: `PRODUCTION_IMPORT_LAYER_R2_READY_FOR_GIT`.
+
+The precise next boundary is to stage the 10-path r2 follow-up scope, verify its preserved CRLF fixture bytes, create and push one follow-up commit, and add an additive Draft PR #14 comment. Production deployment remains separately unauthorized.

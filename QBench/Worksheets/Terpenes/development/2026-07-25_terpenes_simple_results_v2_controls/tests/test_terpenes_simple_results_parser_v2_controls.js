@@ -12,6 +12,7 @@ const ARTIFACT_PATH = path.join(BASE, "dist", "terpenes_simple_results_parser_v2
 const WORKSHEET_PATH = path.join(BASE, "SBX_ONLY_TERPENES_SIMPLE_RESULTS_BATCH_WS_V2_CONTROLS.json");
 const RUNTIME_PATH = path.join(BASE, "runtime", "terpenes_simple_results_310_311_runtime_source.txt");
 const BATCH63_RUNTIME_PATH = path.join(BASE, "runtime", "terpenes_simple_results_v2_controls_312_313_runtime_source.txt");
+const BATCH65_RUNTIME_PATH = path.join(BASE, "runtime", "terpenes_simple_results_v2_controls_314_315_runtime_source.txt");
 const V1_SOURCE_PATH = path.join(V1_BASE, "src", "terpenes_simple_results_parser.js");
 const V1_WORKSHEET_PATH = path.join(V1_BASE, "SBX_ONLY_TERPENES_SIMPLE_RESULTS_BATCH_WS_V1__dimension_fix.json");
 const V1_RUNTIME_PATH = path.join(V1_BASE, "runtime", "terpenes_simple_results_310_311_runtime_source.txt");
@@ -20,12 +21,16 @@ const api = require(SOURCE_PATH);
 const v1Api = require(V1_SOURCE_PATH);
 const sourceBuffer = fs.readFileSync(RUNTIME_PATH);
 const sourceText = fs.readFileSync(RUNTIME_PATH, "utf8");
-const sourceHash = sha256Text(sourceText);
-const parsed = api.parseSource(sourceText, "terpenes_simple_results_310_311_runtime_source.txt");
+const sourceHash = sha256File(RUNTIME_PATH);
+const parsed = api.parseSourceBytes(sourceBuffer, TextDecoder);
 const batch63Buffer = fs.readFileSync(BATCH63_RUNTIME_PATH);
 const batch63Text = fs.readFileSync(BATCH63_RUNTIME_PATH, "utf8");
-const batch63Hash = sha256Text(batch63Text);
-const batch63Parsed = api.parseSource(batch63Text, "terpenes_simple_results_v2_controls_312_313_runtime_source.txt");
+const batch63Hash = sha256File(BATCH63_RUNTIME_PATH);
+const batch63Parsed = api.parseSourceBytes(batch63Buffer, TextDecoder);
+const batch65Buffer = fs.readFileSync(BATCH65_RUNTIME_PATH);
+const batch65Text = fs.readFileSync(BATCH65_RUNTIME_PATH, "utf8");
+const batch65Hash = sha256File(BATCH65_RUNTIME_PATH);
+const batch65Parsed = api.parseSourceBytes(batch65Buffer, TextDecoder);
 const worksheet = JSON.parse(fs.readFileSync(WORKSHEET_PATH, "utf8"));
 const v1Worksheet = JSON.parse(fs.readFileSync(V1_WORKSHEET_PATH, "utf8"));
 const artifactText = fs.readFileSync(ARTIFACT_PATH, "utf8");
@@ -33,7 +38,8 @@ const artifactText = fs.readFileSync(ARTIFACT_PATH, "utf8");
 const EXPECTED_HASHES = {
   runtime: "1e5087715a9bcf216c2991cca53f41fb4ae84b4f9e80eea0e95d7618ec77a36e",
   batch63_runtime: "6b6a208faa83a16e54aa7168467d2221fa23db8f8c6c8a82d183f2bb235ce2a7",
-  artifact: "1c3b0badb33acee3152da95aa40fb8c4332aa465fd1733789456293e0a6c7189",
+  batch65_runtime: "2019f6d543954ea5bccd485843329f3230aee944c4f82291c19b38eb1469d9fe",
+  artifact: "0cda871ea3510275bd37b8dff8ba3a173b2e97f2a80579a17b3a918a352bc062",
   worksheet: "80fde1ebb3d4207a2fdcbe297c3b457906cca7355d12ff50baf3e1fca14bfeb3",
   v1_artifact: "bcec7bf0aa1f0b3edfab6ff2f6bcf370abf863226a81472714202aca5efbc871",
   v1_worksheet: "f8d58b33024cce2bf90171df79c7f73e984674fa64b83f99e8030935f9030448",
@@ -63,6 +69,10 @@ function sha256Text(text) {
 
 function sha256File(filePath) {
   return crypto.createHash("sha256").update(fs.readFileSync(filePath)).digest("hex");
+}
+
+function parseUtf8(text) {
+  return api.parseSourceBytes(Buffer.from(text, "utf8"), TextDecoder);
 }
 
 function expectCode(fn, code) {
@@ -106,9 +116,17 @@ function toAddress(row, column) {
 function makeState(options) {
   const opts = options || {};
   const controlsFixture = Boolean(opts.controlsFixture);
+  const batch65Fixture = Boolean(opts.batch65Fixture);
   const grid = blankGrid(api.WORKSHEET_LAST_ROW, api.RESULTS_HEADERS.length);
   grid[0] = api.RESULTS_HEADERS.slice();
-  if (controlsFixture) {
+  if (batch65Fixture) {
+    grid[1][0] = "AIT-SAMP-172";
+    grid[1][1] = "314";
+    grid[1][2] = "Cannabis Concentrates";
+    grid[2][0] = "AIT-SAMP-172";
+    grid[2][1] = "315";
+    grid[2][2] = "Cannabis Concentrates";
+  } else if (controlsFixture) {
     grid[1][0] = "AIT-SAMP-171";
     grid[1][1] = "312";
     grid[1][2] = "Cannabis Concentrates";
@@ -147,7 +165,8 @@ function makeState(options) {
     }),
     formulas: { Z87: "=SENTINEL_FORMULA" },
     images: { A1: { id: "sentinel-image" } },
-    references: controlsFixture ? { B2: "312", B3: "313" } : { B2: "310", B3: "311", B4: "999" }
+    references: batch65Fixture ? { B2: "314", B3: "315" } :
+      (controlsFixture ? { B2: "312", B3: "313" } : { B2: "310", B3: "311", B4: "999" })
   };
 }
 
@@ -189,9 +208,11 @@ function makeRuntime(options) {
   const opts = options || {};
   const state = makeState({
     controlsFixture: Boolean(opts.controlsFixture),
+    batch65Fixture: Boolean(opts.batch65Fixture),
     matchedStale: Boolean(opts.matchedStale),
     unusedAuditStale: Boolean(opts.unusedAuditStale)
   });
+  if (typeof opts.mutateInitialState === "function") opts.mutateInitialState(state);
   const counters = {
     batch_constructs: 0,
     dynamic_reads: 0,
@@ -238,11 +259,15 @@ function makeRuntime(options) {
       state.rawGrid[2][1] = "";
       state.processedGrid[2][1] = "";
     } else if (mode === "duplicate-dynamic-source") {
-      state.rawGrid[3][1] = "312";
-      state.processedGrid[3][1] = "312";
+      const sourceId = opts.batch65Fixture ? "314" : (opts.controlsFixture ? "312" : "310");
+      state.rawGrid[3][1] = sourceId;
+      state.processedGrid[3][1] = sourceId;
     } else if (mode === "duplicate-dynamic-target") {
-      state.rawGrid[3][1] = "313";
-      state.processedGrid[3][1] = "313";
+      const targetId = opts.batch65Fixture ? "315" : (opts.controlsFixture ? "313" : "311");
+      state.rawGrid[3][1] = targetId;
+      state.processedGrid[3][1] = targetId;
+    } else if (mode === "test-context-mismatch") {
+      state.references.B2 = opts.controlsFixture ? "999" : "998";
     }
   }
 
@@ -260,12 +285,13 @@ function makeRuntime(options) {
           request.success([]);
           return undefined;
         }
-        const expectedBatchId = Object.prototype.hasOwnProperty.call(opts, "batchId") ? Number(opts.batchId) : (opts.controlsFixture ? 63 : 62);
+        const expectedBatchId = Object.prototype.hasOwnProperty.call(opts, "batchId") ? Number(opts.batchId) :
+          (opts.batch65Fixture ? 65 : (opts.controlsFixture ? 63 : 62));
         if (opts.ambiguousTestId === id) {
           request.success([{ id: expectedBatchId }, { id: expectedBatchId + 1 }]);
           return undefined;
         }
-        const alternateCandidate = opts.controlsFixture ? "313" : "311";
+        const alternateCandidate = opts.batch65Fixture ? "315" : (opts.controlsFixture ? "313" : "311");
         const batchId = opts.multipleBatches && id === alternateCandidate ? expectedBatchId + 1 : expectedBatchId;
         request.success([{ id: batchId }]);
         return undefined;
@@ -306,10 +332,14 @@ function makeRuntime(options) {
     QBBatchService: QBBatchService,
     QB: {
       files: [{
-        name: opts.controlsFixture ? "terpenes_simple_results_v2_controls_312_313_runtime_source.txt" : "terpenes_simple_results_310_311_runtime_source.txt",
-        text: async function () {
-          if (Object.prototype.hasOwnProperty.call(opts, "source")) return opts.source;
-          return opts.controlsFixture ? batch63Text : sourceText;
+        name: opts.batch65Fixture ? "terpenes_simple_results_v2_controls_314_315_runtime_source.txt" :
+          (opts.controlsFixture ? "terpenes_simple_results_v2_controls_312_313_runtime_source.txt" : "terpenes_simple_results_310_311_runtime_source.txt"),
+        arrayBuffer: async function () {
+          let bytes;
+          if (Object.prototype.hasOwnProperty.call(opts, "sourceBytes")) bytes = Buffer.from(opts.sourceBytes);
+          else if (Object.prototype.hasOwnProperty.call(opts, "source")) bytes = Buffer.from(opts.source, "utf8");
+          else bytes = Buffer.from(opts.batch65Fixture ? batch65Buffer : (opts.controlsFixture ? batch63Buffer : sourceBuffer));
+          return bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength);
         }
       }],
       console: {
@@ -612,7 +642,7 @@ test("C06 validation Low and Medium and High identities remain visible", functio
 
 test("C07 malformed Compound Results section fails closed", function () {
   const malformed = sourceText.replace("[Compound Results(Ch1)]", "[Compound Results Broken]");
-  expectCode(function () { api.parseSource(malformed, "malformed.txt"); }, "MISSING_REQUIRED_SECTION");
+  expectCode(function () { parseUtf8(malformed); }, "MISSING_REQUIRED_SECTION");
 });
 
 test("C08 wrong controlled compound count fails closed", function () {
@@ -623,7 +653,7 @@ test("C08 wrong controlled compound count fails closed", function () {
   });
   lines.splice(header + 1, 1);
   const malformed = lines.join("\n");
-  expectCode(function () { api.parseSource(malformed, "wrong-count.txt"); }, "INVALID_CONTROLLED_COMPOUND_RESULTS");
+  expectCode(function () { parseUtf8(malformed); }, "INVALID_CONTROLLED_COMPOUND_RESULTS");
 });
 
 // D. Audit staging.
@@ -671,19 +701,19 @@ test("D05 Sample records appear in both dynamic and audit regions", function () 
 
 test("D06 exactly 100 complete records are accepted", function () {
   const record = sourceRecords(sourceText)[0];
-  assert.strictEqual(api.parseSource(Array(100).fill(record).join(""), "100-records.txt").records.length, 100);
+  assert.strictEqual(parseUtf8(Array(100).fill(record).join("")).records.length, 100);
 });
 
 test("D07 101 complete records fail with RUN_RECORD_CAPACITY_EXCEEDED", function () {
   const record = sourceRecords(sourceText)[0];
   expectCode(function () {
-    api.parseSource(Array(101).fill(record).join(""), "101-records.txt");
+    parseUtf8(Array(101).fill(record).join(""));
   }, "RUN_RECORD_CAPACITY_EXCEEDED");
 });
 
 test("D08 record 100 maps to row 190 without truncation", function () {
   const recordText = sourceRecords(sourceText)[0];
-  const parsed100 = api.parseSource(Array(100).fill(recordText).join(""), "100-records.txt");
+  const parsed100 = parseUtf8(Array(100).fill(recordText).join(""));
   const bundle = api.requireResultsBundle(documentsFromState(makeState()));
   const plan = api.planAuditRows(bundle, parsed100.records, parsed100.source_file_hash);
   assert.strictEqual(plan.rows.length, 100);
@@ -1285,7 +1315,7 @@ test("L18 every Batch-63 audit row has the new file hash deterministic row hash 
     const values = api.buildAuditValues(record, batch63Hash);
     assert.strictEqual(values[sourceHashColumn], batch63Hash);
     assert.strictEqual(values[sourceRowHashColumn], sha256Text(batch63Hash + ":" + (index + 1)));
-    assert.strictEqual(values[versionColumn], "terpenes-simple-results-parser-v2-controls");
+    assert.strictEqual(values[versionColumn], "terpenes-simple-results-parser-v2-controls-r2");
     assert.strictEqual(values[statusColumn], "Imported");
   });
 });
@@ -1405,6 +1435,415 @@ test("L30 Batch-63 runtime filename and human-reviewed roles remain fixture data
   );
   assert.ok(!artifactText.includes("\"312\""));
   assert.ok(!artifactText.includes("\"313\""));
+});
+
+// M. PR-review hardening revision r2.
+test("M01 equal visible and dollar-reference Test IDs are accepted", function () {
+  const state = makeState({ controlsFixture: true });
+  const index = api.buildTestRowIndex(state.rawGrid, state.processedGrid, state.references);
+  assert.deepStrictEqual(Array.from(index["312"]), [2]);
+  assert.deepStrictEqual(Array.from(index["313"]), [3]);
+});
+
+test("M02 a visible Test ID with a blank dollar reference is accepted", function () {
+  const state = makeState({ controlsFixture: true });
+  delete state.references.B2;
+  const index = api.buildTestRowIndex(state.rawGrid, state.processedGrid, state.references);
+  assert.deepStrictEqual(Array.from(index["312"]), [2]);
+});
+
+test("M03 a blank visible Test ID with a populated dollar reference is accepted", function () {
+  const state = makeState({ controlsFixture: true });
+  state.rawGrid[1][1] = "";
+  state.processedGrid[1][1] = "";
+  const index = api.buildTestRowIndex(state.rawGrid, state.processedGrid, state.references);
+  assert.deepStrictEqual(Array.from(index["312"]), [2]);
+});
+
+test("M04 visible 999 and reference 312 fail with RESULTS_TEST_CONTEXT_MISMATCH", function () {
+  const state = makeState({ controlsFixture: true });
+  state.rawGrid[1][1] = "999";
+  state.processedGrid[1][1] = "999";
+  expectCode(function () {
+    api.buildTestRowIndex(state.rawGrid, state.processedGrid, state.references);
+  }, "RESULTS_TEST_CONTEXT_MISMATCH");
+});
+
+test("M05 visible 312 and reference 999 fail with RESULTS_TEST_CONTEXT_MISMATCH", function () {
+  const state = makeState({ controlsFixture: true });
+  state.references.B2 = "999";
+  expectCode(function () {
+    api.buildTestRowIndex(state.rawGrid, state.processedGrid, state.references);
+  }, "RESULTS_TEST_CONTEXT_MISMATCH");
+});
+
+test("M06 mismatch on an unused dynamic row fails before update", async function () {
+  const runtime = makeRuntime({
+    controlsFixture: true,
+    mutateInitialState: function (state) {
+      state.rawGrid[3][1] = "999";
+      state.processedGrid[3][1] = "999";
+      state.references.B4 = "998";
+    }
+  });
+  await expectRuntimeCode(runtime, "RESULTS_TEST_CONTEXT_MISMATCH");
+  assert.strictEqual(runtime.counters.batch_updates, 0);
+  assert.strictEqual(runtime.counters.success_calls, 0);
+});
+
+test("M07 distinct candidate IDs cannot alias one physical Results row", function () {
+  expectCode(function () {
+    api.requireDistinctCandidateRows([{ id: "312", row: 2 }, { id: "313", row: 2 }]);
+  }, "RESULTS_TEST_ROW_ALIAS");
+});
+
+test("M08 initial context mismatch produces no update success or Test write", async function () {
+  const runtime = makeRuntime({
+    controlsFixture: true,
+    mutateInitialState: function (state) {
+      state.rawGrid[1][1] = "999";
+      state.processedGrid[1][1] = "999";
+    }
+  });
+  await expectRuntimeCode(runtime, "RESULTS_TEST_CONTEXT_MISMATCH");
+  assert.strictEqual(runtime.counters.batch_updates, 0);
+  assert.strictEqual(runtime.counters.success_calls, 0);
+  assert.strictEqual(runtime.counters.test_service_constructs, 0);
+});
+
+test("M09 row-alias protection fails before any service or success", function () {
+  const runtime = makeRuntime({ controlsFixture: true });
+  expectCode(function () {
+    api.requireDistinctCandidateRows([{ id: "312", row: 2 }, { id: "313", row: 2 }]);
+  }, "RESULTS_TEST_ROW_ALIAS");
+  assert.strictEqual(runtime.counters.batch_updates, 0);
+  assert.strictEqual(runtime.counters.success_calls, 0);
+  assert.strictEqual(runtime.counters.test_service_constructs, 0);
+});
+
+test("M10 readback context mismatch fails persistence verification", async function () {
+  const runtime = makeRuntime({ controlsFixture: true, persistenceMode: "test-context-mismatch" });
+  await expectRuntimeCode(runtime, "RESULTS_WORKSHEET_UPDATE_NOT_PERSISTED");
+  assert.strictEqual(runtime.counters.batch_updates, 1);
+  assert.strictEqual(runtime.counters.success_calls, 0);
+});
+
+test("M11 valid Tests 312 and 313 still map to distinct rows 2 and 3", function () {
+  const state = makeState({ controlsFixture: true });
+  const plans = api.planCandidateRows(
+    api.requireResultsBundle(documentsFromState(state)),
+    api.requireUniqueCandidates(batch63Parsed.records),
+    batch63Hash
+  );
+  assert.deepStrictEqual(plans.map(function (plan) { return [plan.id, plan.row]; }), [["312", 2], ["313", 3]]);
+});
+
+test("M12 exact CRLF fixture bytes produce the approved SHA-256", function () {
+  assert.strictEqual(api.sha256BytesHex(batch63Buffer), EXPECTED_HASHES.batch63_runtime);
+});
+
+test("M13 every dynamic and audit Source File Hash uses the exact byte hash", async function () {
+  const runtime = makeRuntime({ controlsFixture: true });
+  await api.executeRuntime(runtime.env);
+  const column = api.RESULTS_HEADERS.indexOf("Source File Hash");
+  assert.strictEqual(runtime.getState().rawGrid[1][column], EXPECTED_HASHES.batch63_runtime);
+  assert.strictEqual(runtime.getState().rawGrid[2][column], EXPECTED_HASHES.batch63_runtime);
+  assert.ok(runtime.getState().rawGrid.slice(90, 124).every(function (row) {
+    return row[column] === EXPECTED_HASHES.batch63_runtime;
+  }));
+});
+
+test("M14 audit Source Row Hash derivation uses the exact byte hash", function () {
+  const column = api.RESULTS_HEADERS.indexOf("Source Row Hash");
+  batch63Parsed.records.forEach(function (record, index) {
+    const values = api.buildAuditValues(record, EXPECTED_HASHES.batch63_runtime);
+    assert.strictEqual(values[column], sha256Text(EXPECTED_HASHES.batch63_runtime + ":" + (index + 1)));
+  });
+});
+
+test("M15 a UTF-8 BOM is rejected with SOURCE_UTF8_BOM_NOT_ALLOWED", function () {
+  const bom = Buffer.concat([Buffer.from([0xef, 0xbb, 0xbf]), batch63Buffer]);
+  expectCode(function () { api.parseSourceBytes(bom, TextDecoder); }, "SOURCE_UTF8_BOM_NOT_ALLOWED");
+});
+
+test("M16 BOM rejection occurs before Batch lookup or update", async function () {
+  const bom = Buffer.concat([Buffer.from([0xef, 0xbb, 0xbf]), batch63Buffer]);
+  const runtime = makeRuntime({ controlsFixture: true, sourceBytes: bom });
+  await expectRuntimeCode(runtime, "SOURCE_UTF8_BOM_NOT_ALLOWED");
+  assert.strictEqual(runtime.counters.batch_constructs, 0);
+  assert.strictEqual(runtime.counters.batch_updates, 0);
+  assert.strictEqual(runtime.counters.success_calls, 0);
+  assert.deepStrictEqual(runtime.events.filter(function (event) { return event.startsWith("resolve:"); }), []);
+});
+
+test("M17 invalid UTF-8 is rejected with SOURCE_UTF8_INVALID", function () {
+  const invalid = Buffer.from(batch63Buffer);
+  invalid[100] = 0xff;
+  expectCode(function () { api.parseSourceBytes(invalid, TextDecoder); }, "SOURCE_UTF8_INVALID");
+});
+
+test("M18 invalid UTF-8 fails before Batch lookup or update", async function () {
+  const invalid = Buffer.from(batch63Buffer);
+  invalid[100] = 0xff;
+  const runtime = makeRuntime({ controlsFixture: true, sourceBytes: invalid });
+  await expectRuntimeCode(runtime, "SOURCE_UTF8_INVALID");
+  assert.strictEqual(runtime.counters.batch_constructs, 0);
+  assert.strictEqual(runtime.counters.batch_updates, 0);
+  assert.strictEqual(runtime.counters.success_calls, 0);
+  assert.deepStrictEqual(runtime.events.filter(function (event) { return event.startsWith("resolve:"); }), []);
+});
+
+test("M19 LF-normalized and CRLF sources have distinct exact byte hashes", function () {
+  const lfBytes = Buffer.from(batch63Text.replace(/\r\n/g, "\n"), "utf8");
+  assert.notStrictEqual(api.sha256BytesHex(lfBytes), api.sha256BytesHex(batch63Buffer));
+  const lfParsed = api.parseSourceBytes(lfBytes, TextDecoder);
+  assert.deepStrictEqual(
+    lfParsed.records.map(function (record) { return [record.record_order, record.category, record.sample_information["Sample ID"]]; }),
+    batch63Parsed.records.map(function (record) { return [record.record_order, record.category, record.sample_information["Sample ID"]]; })
+  );
+});
+
+test("M20 source hash is not calculated from normalized or re-encoded text", function () {
+  const normalizedTextHash = sha256Text(batch63Text.replace(/\r\n/g, "\n"));
+  assert.notStrictEqual(normalizedTextHash, EXPECTED_HASHES.batch63_runtime);
+  assert.strictEqual(batch63Parsed.source_file_hash, EXPECTED_HASHES.batch63_runtime);
+});
+
+test("M21 parser revision identity is r2 in dynamic and audit values", function () {
+  const dynamic = api.buildParserOwnedValues(batch63Parsed.records[16], batch63Hash);
+  const audit = api.buildAuditValues(batch63Parsed.records[16], batch63Hash);
+  const column = api.RESULTS_HEADERS.indexOf("Parser Version");
+  assert.strictEqual(api.VERSION, "terpenes-simple-results-parser-v2-controls-r2");
+  assert.strictEqual(dynamic[column - api.PARSER_FIRST_COLUMN], api.VERSION);
+  assert.strictEqual(audit[column], api.VERSION);
+});
+
+test("M22 hardened Batch-63 regression retains the one-update complete-readback contract", async function () {
+  const runtime = makeRuntime({ controlsFixture: true });
+  const result = await api.executeRuntime(runtime.env);
+  assert.strictEqual(result.ok, true);
+  assert.deepStrictEqual(result.summary.matched_test_ids, ["312", "313"]);
+  assert.strictEqual(result.summary.dynamic_rows_written, 2);
+  assert.strictEqual(result.summary.audit_rows_written, 34);
+  assert.strictEqual(result.summary.dynamic_rows_read_back, 2);
+  assert.strictEqual(result.summary.audit_rows_read_back, 34);
+  assert.strictEqual(runtime.counters.batch_constructs, 1);
+  assert.strictEqual(runtime.counters.batch_updates, 1);
+  assert.strictEqual(runtime.counters.test_service_constructs, 0);
+  assert.strictEqual(Object.keys(runtime.getUpdatePayload().data.qb_dynamic_spreadsheet_data).join(","), "Results");
+  assert.strictEqual(runtime.getState().rawGrid[106][0], 17);
+  assert.strictEqual(runtime.getState().rawGrid[107][0], 18);
+});
+
+// N. Immutable Batch-65 runtime binding with protected Test Worksheet 77 context.
+test("N01 Batch-65 runtime fixture and protected upload artifacts have exact hashes and lengths", function () {
+  assert.ok(fs.existsSync(BATCH65_RUNTIME_PATH));
+  assert.strictEqual(batch65Buffer.length, 286204);
+  assert.strictEqual(sha256File(BATCH65_RUNTIME_PATH), EXPECTED_HASHES.batch65_runtime);
+  assert.strictEqual(sha256File(BATCH63_RUNTIME_PATH), EXPECTED_HASHES.batch63_runtime);
+  assert.strictEqual(sha256File(ARTIFACT_PATH), EXPECTED_HASHES.artifact);
+  assert.strictEqual(sha256File(WORKSHEET_PATH), EXPECTED_HASHES.worksheet);
+});
+
+test("N02 Batch-65 immutable transformation changes exactly two contracted bytes", function () {
+  assert.deepStrictEqual(byteDifferences(batch63Buffer, batch65Buffer), [
+    { offset: 124302, old: 50, new: 52 },
+    { offset: 133049, old: 51, new: 53 }
+  ]);
+  assert.ok(!batch65Buffer.subarray(0, 3).equals(Buffer.from([0xef, 0xbb, 0xbf])));
+  for (let index = 0; index < batch65Buffer.length; index += 1) {
+    if (batch65Buffer[index] === 0x0a) assert.strictEqual(batch65Buffer[index - 1], 0x0d);
+    if (batch65Buffer[index] === 0x0d) assert.strictEqual(batch65Buffer[index + 1], 0x0a);
+  }
+  assert.deepStrictEqual(Array.from(batch65Buffer.subarray(-2)), [0x0d, 0x0a]);
+});
+
+test("N03 only P1 and P2 Sample IDs change from 312 and 313 to 314 and 315", function () {
+  assert.deepStrictEqual(analyticallyComparableRecords(batch65Parsed.records), analyticallyComparableRecords(batch63Parsed.records));
+  const p1 = batch65Parsed.records.find(function (record) { return record.sample_information["Sample Name"] === "P1"; });
+  const p2 = batch65Parsed.records.find(function (record) { return record.sample_information["Sample Name"] === "P2"; });
+  assert.deepStrictEqual([p1.sample_information["Sample ID"], p2.sample_information["Sample ID"]], ["314", "315"]);
+  assert.strictEqual((batch65Text.match(/^Sample ID\t314\r$/gm) || []).length, 1);
+  assert.strictEqual((batch65Text.match(/^Sample ID\t315\r$/gm) || []).length, 1);
+  assert.strictEqual((batch65Text.match(/^Sample ID\t312\r$/gm) || []).length, 0);
+  assert.strictEqual((batch65Text.match(/^Sample ID\t313\r$/gm) || []).length, 0);
+});
+
+test("N04 Batch-65 retains all 34 complete records compounds analytes audit and categories", function () {
+  assert.strictEqual(batch65Parsed.records.length, 34);
+  assert.ok(batch65Parsed.records.every(function (record) {
+    return record.compound_results.length === 24 &&
+      record.reportable_analytes.length === 23 &&
+      Boolean(record.dimethylacetamide_audit);
+  }));
+  assert.deepStrictEqual(categoryCounts(batch65Parsed.records), {
+    Null: 3,
+    Blank: 2,
+    "System Suitability": 3,
+    Standard: 6,
+    CCV: 3,
+    LOQ: 1,
+    "Matrix Blank": 1,
+    Sample: 2,
+    Validation: 13
+  });
+});
+
+test("N05 Batch-65 candidate set is exactly the distinct strings 314 and 315", function () {
+  const candidates = api.requireUniqueCandidates(batch65Parsed.records).map(api.candidateTestId);
+  assert.deepStrictEqual(candidates, ["314", "315"]);
+  assert.ok(candidates.every(function (id) { return typeof id === "string"; }));
+});
+
+test("N06 Batch-65 local Results fixture has exact visible and reference context on distinct rows", function () {
+  const state = makeState({ batch65Fixture: true });
+  assert.deepStrictEqual(state.rawGrid[1].slice(0, 3), ["AIT-SAMP-172", "314", "Cannabis Concentrates"]);
+  assert.deepStrictEqual(state.rawGrid[2].slice(0, 3), ["AIT-SAMP-172", "315", "Cannabis Concentrates"]);
+  assert.deepStrictEqual(state.references, { B2: "314", B3: "315" });
+  const index = api.buildTestRowIndex(state.rawGrid, state.processedGrid, state.references);
+  assert.deepStrictEqual(Array.from(index["314"]), [2]);
+  assert.deepStrictEqual(Array.from(index["315"]), [3]);
+  assert.notStrictEqual(Array.from(index["314"])[0], Array.from(index["315"])[0]);
+  assert.ok(state.rawGrid.slice(3, 87).every(function (row) { return row.every(isBlank); }));
+});
+
+test("N07 Tests 314 and 315 plan exactly once to Results rows 2 and 3", function () {
+  const state = makeState({ batch65Fixture: true });
+  const bundle = api.requireResultsBundle(documentsFromState(state));
+  const plans = api.planCandidateRows(bundle, api.requireUniqueCandidates(batch65Parsed.records), batch65Hash);
+  assert.deepStrictEqual(plans.map(function (plan) { return [plan.id, plan.row]; }), [["314", 2], ["315", 3]]);
+  api.requireDistinctCandidateRows(plans);
+});
+
+test("N08 both Batch-65 candidates resolve only to internal Batch ID 65", async function () {
+  const runtime = makeRuntime({ batch65Fixture: true });
+  const result = await api.executeRuntime(runtime.env);
+  assert.strictEqual(result.ok, true);
+  assert.deepStrictEqual(result.summary.matched_test_ids, ["314", "315"]);
+  assert.deepStrictEqual(runtime.events.filter(function (event) { return event.startsWith("resolve:"); }), ["resolve:314", "resolve:315"]);
+  assert.strictEqual(runtime.getUpdatePayload().data.id, "65");
+});
+
+test("N09 Batch-65 uses one Results-only Batch update with no Test service or second update", async function () {
+  const runtime = makeRuntime({ batch65Fixture: true });
+  await api.executeRuntime(runtime.env);
+  const payload = runtime.getUpdatePayload();
+  assert.strictEqual(runtime.counters.batch_constructs, 1);
+  assert.strictEqual(runtime.counters.batch_updates, 1);
+  assert.strictEqual(runtime.counters.test_service_constructs, 0);
+  assert.strictEqual(payload.data.id, "65");
+  assert.deepStrictEqual(Object.keys(payload.data.qb_dynamic_spreadsheet_data), ["Results"]);
+  assert.strictEqual(payload.urlParams.run_worksheet_calculations, true);
+});
+
+test("N10 protected Test Worksheet 77 is fixture context only and absent from persistence", async function () {
+  const protectedTestWorksheet = { id: 77, policy: "preserve_unchanged", written_by_parser: false };
+  const runtime = makeRuntime({ batch65Fixture: true });
+  await api.executeRuntime(runtime.env);
+  const payload = runtime.getUpdatePayload();
+  assert.deepStrictEqual(protectedTestWorksheet, { id: 77, policy: "preserve_unchanged", written_by_parser: false });
+  assert.strictEqual(payload.data.test_worksheet, undefined);
+  assert.strictEqual(payload.data.qb_test_worksheet_data, undefined);
+  assert.deepStrictEqual(Object.keys(payload.data.qb_dynamic_spreadsheet_data), ["Results"]);
+  assert.ok(!artifactText.includes("QBTestService"));
+  assert.ok(!artifactText.includes("test_worksheet"));
+});
+
+test("N11 all Batch-65 records map to audit rows 91 through 124 with P1 and P2 at 107 and 108", function () {
+  const bundle = api.requireResultsBundle(documentsFromState(makeState({ batch65Fixture: true })));
+  const audit = api.planAuditRows(bundle, batch65Parsed.records, batch65Hash);
+  assert.deepStrictEqual(audit.rows.map(function (row) { return row.row; }), Array.from({ length: 34 }, function (_, index) { return index + 91; }));
+  const p1 = audit.rows.find(function (plan) { return plan.record.sample_information["Sample Name"] === "P1"; });
+  const p2 = audit.rows.find(function (plan) { return plan.record.sample_information["Sample Name"] === "P2"; });
+  assert.deepStrictEqual([p1.record_order, p1.row, p1.values[2]], [17, 107, "314"]);
+  assert.deepStrictEqual([p2.record_order, p2.row, p2.values[2]], [18, 108, "315"]);
+});
+
+test("N12 Batch-65 dynamic and audit values use the exact byte hash and r2 identity", function () {
+  const sourceHashColumn = api.RESULTS_HEADERS.indexOf("Source File Hash");
+  const sourceRowHashColumn = api.RESULTS_HEADERS.indexOf("Source Row Hash");
+  const versionColumn = api.RESULTS_HEADERS.indexOf("Parser Version");
+  const statusColumn = api.RESULTS_HEADERS.indexOf("Import Status");
+  batch65Parsed.records.forEach(function (record, index) {
+    const audit = api.buildAuditValues(record, batch65Hash);
+    assert.strictEqual(audit[sourceHashColumn], EXPECTED_HASHES.batch65_runtime);
+    assert.strictEqual(audit[sourceRowHashColumn], sha256Text(batch65Hash + ":" + (index + 1)));
+    assert.strictEqual(audit[versionColumn], "terpenes-simple-results-parser-v2-controls-r2");
+    assert.strictEqual(audit[statusColumn], "Imported");
+  });
+  [16, 17].forEach(function (recordIndex) {
+    const dynamic = api.buildParserOwnedValues(batch65Parsed.records[recordIndex], batch65Hash);
+    assert.strictEqual(dynamic[sourceHashColumn - api.PARSER_FIRST_COLUMN], EXPECTED_HASHES.batch65_runtime);
+    assert.strictEqual(dynamic[versionColumn - api.PARSER_FIRST_COLUMN], "terpenes-simple-results-parser-v2-controls-r2");
+  });
+});
+
+test("N13 Batch-65 complete readback passes before QB.success", async function () {
+  const runtime = makeRuntime({ batch65Fixture: true });
+  const result = await api.executeRuntime(runtime.env);
+  assert.strictEqual(result.ok, true);
+  assert.strictEqual(result.summary.dynamic_rows_written, 2);
+  assert.strictEqual(result.summary.audit_rows_written, 34);
+  assert.strictEqual(result.summary.dynamic_rows_read_back, 2);
+  assert.strictEqual(result.summary.audit_rows_read_back, 34);
+  assert.ok(runtime.events.indexOf("success") > runtime.events.lastIndexOf("dynamic:2"));
+  assert.strictEqual(runtime.counters.success_calls, 1);
+});
+
+test("N14 Batch-65 preserves A to C and writes exact D to AY only on matched rows", async function () {
+  const runtime = makeRuntime({ batch65Fixture: true });
+  const beforeUnused = deepCopy(runtime.getState().rawGrid.slice(3, 87));
+  await api.executeRuntime(runtime.env);
+  assert.deepStrictEqual(runtime.getState().rawGrid[1].slice(0, 3), ["AIT-SAMP-172", "314", "Cannabis Concentrates"]);
+  assert.deepStrictEqual(runtime.getState().rawGrid[2].slice(0, 3), ["AIT-SAMP-172", "315", "Cannabis Concentrates"]);
+  assert.deepStrictEqual(runtime.getState().rawGrid[1].slice(3), api.buildParserOwnedValues(batch65Parsed.records[16], batch65Hash));
+  assert.deepStrictEqual(runtime.getState().rawGrid[2].slice(3), api.buildParserOwnedValues(batch65Parsed.records[17], batch65Hash));
+  assert.deepStrictEqual(runtime.getState().rawGrid.slice(3, 87), beforeUnused);
+});
+
+test("N15 Batch-65 stale audit clearing remains targeted beyond row 124", async function () {
+  const state = makeState({ batch65Fixture: true, unusedAuditStale: true });
+  const bundle = api.requireResultsBundle(documentsFromState(state));
+  const plan = api.planAuditRows(bundle, batch65Parsed.records, batch65Hash);
+  assert.deepStrictEqual(plan.stale_cells.map(function (cell) { return toAddress(cell.row, cell.column + 1); }), ["A125", "K125", "AY130"]);
+  const runtime = makeRuntime({ batch65Fixture: true, unusedAuditStale: true });
+  await api.executeRuntime(runtime.env);
+  assert.ok(runtime.getState().rawGrid.slice(124).every(function (row) { return row.every(isBlank); }));
+});
+
+test("N16 Batch-65 filename and confirmed Source Target roles remain fixture data only", function () {
+  const runtime = makeRuntime({ batch65Fixture: true });
+  assert.strictEqual(runtime.env.QB.files[0].name, "terpenes_simple_results_v2_controls_314_315_runtime_source.txt");
+  const p1 = batch65Parsed.records.find(function (record) { return record.sample_information["Sample Name"] === "P1"; });
+  const p2 = batch65Parsed.records.find(function (record) { return record.sample_information["Sample Name"] === "P2"; });
+  assert.deepStrictEqual(
+    [[p1.sample_information["Sample Name"], p1.sample_information["Sample ID"], "Source"], [p2.sample_information["Sample Name"], p2.sample_information["Sample ID"], "Target"]],
+    [["P1", "314", "Source"], ["P2", "315", "Target"]]
+  );
+  assert.ok(!artifactText.includes("\"314\""));
+  assert.ok(!artifactText.includes("\"315\""));
+});
+
+test("N17 unknown ambiguous and multiple-Batch 314 315 resolution fail before update", async function () {
+  for (const options of [
+    { unknownTestId: "314", code: "TEST_ID_NOT_FOUND" },
+    { ambiguousTestId: "315", code: "TEST_ID_BATCH_AMBIGUOUS" },
+    { multipleBatches: true, code: "CANDIDATES_RESOLVE_TO_MULTIPLE_BATCHES" }
+  ]) {
+    const runtime = makeRuntime(Object.assign({ batch65Fixture: true }, options));
+    await expectRuntimeCode(runtime, options.code);
+    assert.strictEqual(runtime.counters.batch_updates, 0);
+    assert.strictEqual(runtime.counters.success_calls, 0);
+  }
+});
+
+test("N18 Batch-65 readback failures make no retry or premature success", async function () {
+  for (const mode of ["no-op", "missing-dynamic-source", "missing-dynamic-target", "test-context-mismatch", "changed-audit-value"]) {
+    const runtime = makeRuntime({ batch65Fixture: true, persistenceMode: mode });
+    await expectRuntimeCode(runtime, "RESULTS_WORKSHEET_UPDATE_NOT_PERSISTED");
+    assert.strictEqual(runtime.counters.batch_updates, 1);
+    assert.strictEqual(runtime.counters.success_calls, 0);
+  }
 });
 
 (async function run() {

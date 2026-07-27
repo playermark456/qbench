@@ -10,6 +10,7 @@ const DIST_DIR = path.join(BASE, "dist");
 const DIST = path.join(DIST_DIR, "terpenes_simple_results_parser_v2_controls.js");
 const V1_WORKSHEET = path.join(V1_BASE, "SBX_ONLY_TERPENES_SIMPLE_RESULTS_BATCH_WS_V1__dimension_fix.json");
 const WORKSHEET = path.join(BASE, "SBX_ONLY_TERPENES_SIMPLE_RESULTS_BATCH_WS_V2_CONTROLS.json");
+const ARTIFACT_ONLY = process.argv.includes("--artifact-only");
 const api = require(SOURCE);
 
 function columnLetter(index) {
@@ -121,7 +122,14 @@ fs.writeFileSync(DIST, banner + sourceText, "utf8");
 
 const v1Candidate = JSON.parse(fs.readFileSync(V1_WORKSHEET, "utf8"));
 const v2Candidate = addFixedRunRecordsRegion(v1Candidate);
-fs.writeFileSync(WORKSHEET, `${JSON.stringify(v2Candidate, null, 2)}\n`, "utf8");
+const worksheetText = `${JSON.stringify(v2Candidate, null, 2)}\n`;
+if (ARTIFACT_ONLY) {
+  if (fs.readFileSync(WORKSHEET, "utf8") !== worksheetText) {
+    throw new Error("Protected V2 worksheet differs from the deterministic build output.");
+  }
+} else {
+  fs.writeFileSync(WORKSHEET, worksheetText, "utf8");
+}
 
 console.log(`Built ${DIST}`);
-console.log(`Built ${WORKSHEET}`);
+console.log(ARTIFACT_ONLY ? `Verified unchanged ${WORKSHEET}` : `Built ${WORKSHEET}`);

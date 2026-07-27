@@ -26,7 +26,11 @@ The worksheet has exactly 51 columns (`A:AY`), 190 rows, and `minDimensions: [51
 | `A2:C87` | QBench dynamic Test/Sample context | Unchanged V1 `tests[0]` through `tests[85]` definitions |
 | `D2:AY87` | parser-owned for matched rows only | Exact V1 field meanings; V2 parser-version identity |
 
-Only records classified as `Sample` with a nonblank LabSolutions `Sample ID` are candidates. That ID is the QBench Test display ID. Candidate IDs must be unique, resolve to exactly one Batch each, resolve collectively to one Batch, and appear exactly once in Results column B. The parser preserves `A:C`, writes all `D:AY` fields on matched rows, explicitly writes blanks that clear stale matched-row values, and leaves unmatched rows unchanged.
+Only records classified as `Sample` with a nonblank LabSolutions `Sample ID` are candidates. That ID is the QBench Test display ID. Candidate IDs must be unique, resolve to exactly one Batch each, resolve collectively to one Batch, and map to exactly one physical Results row.
+
+For every dynamic row `2:87`, the parser reconciles the trimmed visible Test ID in column B with the trimmed Test ID in `WORKSHEET_DOLLAR_REFERENCES` for that exact B cell. If both are nonblank, they must be equal or the parser fails with `RESULTS_TEST_CONTEXT_MISMATCH`. If only one is nonblank, that value is the effective Test ID. Duplicate effective Test IDs on different rows are rejected. Candidate plans must also use physically distinct row numbers; an alias fails with `RESULTS_TEST_ROW_ALIAS`. The same strict reconciliation runs during initial planning and readback.
+
+The parser preserves `A:C`, writes all `D:AY` fields on matched rows, explicitly writes blanks that clear stale matched-row values, and leaves unmatched rows unchanged.
 
 ### Fixed Run Records audit
 
@@ -67,9 +71,11 @@ Audit rows contain every complete record once and in source order. Sample record
 
 The parser requires exactly one `.txt` input and retains V1 strict validation for complete records, required sections, table widths, numeric values, 24 controlled compounds, 23 reportable analytes, Unicode labels, peak inspection, manual integration, and one audit-only Dimethylacetamide result.
 
+The input is read as exact bytes. `Source File Hash` is SHA-256 over the uploaded bytes before decoding; it is never calculated from normalized text, BOM-stripped text, parsed output, or a decoded string re-encoded by JavaScript. A leading UTF-8 BOM (`EF BB BF`) is prohibited and fails with `SOURCE_UTF8_BOM_NOT_ALLOWED`. The exact bytes are then decoded with fatal UTF-8 validation; malformed UTF-8 fails with `SOURCE_UTF8_INVALID`. These checks occur before Batch resolution, worksheet retrieval, or update. Valid CRLF bytes are preserved as the authoritative hash input even though line handling during analytical parsing is text-based.
+
 Controlled categories are `Blank`, `Null`, `System Suitability`, `Standard`, `CCV`, `LOQ`, `Matrix Blank`, `Validation`, and `Sample`. Validation recognition is anchored to the validated `Low`, `Medium`, and `High` labels with optional numeric suffixes; broad substring matching is not used. Controls and validation records are audit-only and never resolve to Test rows.
 
-`Source File Hash` is the SHA-256 of the uploaded source. Dynamic-row `Source Row Hash` retains the proven V1 record-content contract. Audit-row `Source Row Hash` is `SHA-256(source_file_hash + ":" + record_order)`, making its source-and-position identity explicit. `Parser Version` is `terpenes-simple-results-parser-v2-controls`; `Import Status` is the literal `Imported`.
+Dynamic-row `Source Row Hash` retains the proven V1 record-content contract and is derived using the exact-byte source hash. Audit-row `Source Row Hash` is `SHA-256(source_file_hash + ":" + record_order)`, making its source-and-position identity explicit. `Parser Version` is `terpenes-simple-results-parser-v2-controls-r2`; `Import Status` is the literal `Imported`.
 
 ## Targeted stale clearing
 
@@ -104,7 +110,7 @@ The Results payload combines matched dynamic rows, all current audit rows, and t
 After the update callback succeeds, the parser retrieves Results once more and verifies:
 
 - exact 190-by-51 grid structure, row-1 header, row-88 separator, row-89 section label, and row-90 audit header;
-- exact candidate identity/count, unchanged `A:C`, exact matched `D:AY`, and byte-equivalent unmatched dynamic rows;
+- strict visible-column-B/dollar-reference reconciliation for every dynamic row, exact candidate identity/count, physically distinct candidate rows, unchanged `A:C`, exact matched `D:AY`, and byte-equivalent unmatched dynamic rows;
 - exact audit record count/order, every `A:AY` value, no missing/duplicate record, and blank unused audit capacity;
 - exact formula, image, and dollar-reference maps.
 
@@ -112,4 +118,4 @@ Numeric comparison accepts equivalent finite numeric-string representations with
 
 ## Future boundary
 
-V2 does not implement Batch Review. The next phase is separately authorized, isolated Sandbox staging using new worksheet, parser, Batch, Sample, Tests, attachment, and job objects. Production promotion remains outside scope.
+V2 does not implement Batch Review. Revision `terpenes-simple-results-parser-v2-controls-r2` is locally validated only. It must be uploaded as parser 43 Version 2 and proven on a fresh disposable Sandbox proof before it can supersede the live evidence for parser 43 Version 1/job 69. Production promotion remains outside scope.
