@@ -1,0 +1,12 @@
+# Preserve validated LabSolutions runtime fixtures byte-for-byte (CRLF).
+2026-07-25_terpenes_simple_results_v1/runtime/terpenes_simple_results_310_311_runtime_source.txt -text
+2026-07-25_terpenes_simple_results_v2_controls/runtime/terpenes_simple_results_310_311_runtime_source.txt -text
+2026-07-25_terpenes_simple_results_v2_controls/runtime/terpenes_simple_results_v2_controls_312_313_runtime_source.txt -text
+2026-07-25_terpenes_simple_results_v2_controls/runtime/terpenes_simple_results_v2_controls_314_315_runtime_source.txt -text
+
+# Preserve byte-hashed deployment artifacts and worksheet candidates exactly.
+2026-07-25_terpenes_simple_results_v1/dist/terpenes_simple_results_parser_v1.js -text
+2026-07-25_terpenes_simple_results_v1/SBX_ONLY_TERPENES_SIMPLE_RESULTS_BATCH_WS_V1.json -text
+2026-07-25_terpenes_simple_results_v1/SBX_ONLY_TERPENES_SIMPLE_RESULTS_BATCH_WS_V1__dimension_fix.json -text
+2026-07-25_terpenes_simple_results_v2_controls/dist/terpenes_simple_results_parser_v2_controls.js -text
+2026-07-25_terpenes_simple_results_v2_controls/SBX_ONLY_TERPENES_SIMPLE_RESULTS_BATCH_WS_V2_CONTROLS.json -text
