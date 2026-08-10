@@ -1,0 +1,164 @@
+@Browser
+
+Use Computer Use in the ChatGPT/Codex built-in browser and the existing authenticated SmartDraw session.
+
+TASK
+
+Create the first Scenario B equipment layout for the DDGS laboratory using the frozen SmartDraw architectural base and the attached object schedule. The purpose of this run is efficient SmartDraw execution, not additional product research or architectural reconstruction.
+
+FILES
+
+1. Frozen base: `drawings/smartdraw/source/AIT_DDGS_Future_Space_v02_MASTER.sdr`
+2. Object schedule: `AIT_DDGS_Scenario_B_SmartDraw_Object_Schedule_v01.xlsx`
+3. Easy-to-parse copy: `AIT_DDGS_Scenario_B_SmartDraw_Object_Schedule_v01.csv`
+4. Scenario source workbook: `data/instrument-options/DDGS_instrument_options_GAFTA_strict_v3.xlsx`
+
+The object schedule is the source of truth for object IDs, counts, block sizes, planning envelopes, associations, utilities, placement rules and verification status.
+
+ABSOLUTE PRIORITY OVERRIDES
+
+1. Do not revisit doors, door widths, door swings, room labels, surrounding-room labels, architectural notes, restroom details, calibration adjustments or unrelated dimensions.
+2. Do not create new room or zone labels. Only equipment, furniture, utility, storage, computer and clearance objects should be labeled.
+3. Do not research product dimensions on the web. Do not invent or substitute dimensions.
+4. Where the schedule says PLANNING ALLOWANCE or VERIFY, use the listed provisional block exactly and retain the VERIFY wording.
+5. Do not shrink equipment, tables, hoods, cabinets or planning aisles to force a fit.
+6. Scenario B is the only scenario in this run. Do not build Scenario A or Scenario C.
+7. Build B1 only. Do not spend credits creating B2 or B3 until B1 is audited and approved.
+
+FILE HANDLING
+
+1. Preserve the frozen v02 master unchanged.
+2. Duplicate it and name the working document:
+   `AIT DDGS Future Space - Scenario B1 Utility Spine v01`
+3. Create a second page in the working document named:
+   `Scenario B Object Library`
+4. Create the layout page named:
+   `Scenario B1 - Utility Spine`
+5. Do not overwrite or delete the frozen v02 master.
+
+LAYERS
+
+Use or create these editable layers:
+
+- `SCENARIO B - FURNITURE`
+- `SCENARIO B - EQUIPMENT`
+- `SCENARIO B - UTILITIES`
+- `SCENARIO B - CLEARANCES`
+
+Keep the frozen architect/reference layers locked.
+
+PHASE 1 - OBJECT LIBRARY
+
+1. Read the CSV or XLSX object schedule.
+2. On `Scenario B Object Library`, create every REQUIRED object as a separate native SmartDraw object.
+3. Create every CONDITIONAL object on the library page, but park it in a clearly separated conditional area and do not place it in B1 unless the schedule or fit requires it.
+4. For rows with quantity greater than one, create separate objects with sequential IDs. For example, create `B-U-PD01`, `B-U-PD02`, and so on rather than one combined object.
+5. Use the `SmartDraw block W/D` columns for the solid physical rectangle.
+6. Use the `Planning envelope W/D` columns for a separate dashed movable rectangle behind or around the object.
+7. Do not combine the equipment body, table and clearance envelope into one object.
+8. Keep every table separate even when two tables touch.
+9. For small equipment whose label does not fit, keep the physical rectangle at the scheduled size and use a separate short label/callout. Do not enlarge the equipment body only to fit text.
+10. Count the created required and conditional objects and compare them to the schedule before moving to placement.
+
+PHASE 2 - B1 PLACEMENT
+
+Create the B1 utility-spine layout using only required objects and these priorities:
+
+1. East utility spine:
+   - Center the wash-station envelope at the annotated east-side plumbing area.
+   - Place the FIWE 6 wet bench immediately adjacent.
+   - Place the Soxhlet hood and amino-acid prep hood near the east utility side while maintaining separation from the furnace/heat cluster and preserving access to the wash manifold.
+   - Place flammables, corrosives and waste zones near their associated hood without blocking circulation or utilities.
+
+2. Dirty/noisy prep:
+   - Place PULVERISETTE 19, CT 293, PT 100/DR 100, AS 200, sieve storage and the two dust-collection placeholders toward the northwest/west side.
+   - Preserve the one-way sequence: primary grinding -> fine grinding -> division -> sieve verification -> analytical routing.
+   - Keep prep vibration and dust away from balances, LECO, Sykam and clean-general instruments.
+
+3. Thermal/gravimetric:
+   - Keep OGS100, F6010, both heat stands, both desiccators, the desiccator bench and BAL-01 as a coherent movable cluster.
+   - Prefer the north/Drying-Room interface, but do not permanently move equipment into the existing Drying Room unless the drawing and project records clearly support it.
+   - Keep BAL-01 on its own dedicated table, near but not on the desiccator bench, and away from heat/drafts/vibration.
+
+4. Clean general analysis:
+   - Place the 96 x 36 clean bench with the Evolution One and AUTOPOL blocks.
+   - Place the 60 x 30 clean bench with ColorFlex and Copley density tester.
+   - Place BAL-02 on its own 36 x 30 table outside solvent, sink and grinding zones.
+   - BAL-02 is associated with Soxhlet gravimetry and general analytical preparation; do not assume it replaces the LECO-quoted Sartorius balance.
+
+5. Clean instruments:
+   - Place LECO and Sykam on their separate 96 x 36 benches in the cleanest practical area.
+   - Keep their standalone-computer blocks on their respective benches rather than creating separate full-size office desks.
+   - Add the listed gas, exhaust, UPS and power/data planning symbols without designing final routes.
+
+6. Computers:
+   - Use the three 30 x 24 laptop dock/monitor objects as reserved sections of existing benches, not as three additional freestanding tables.
+   - Keep prep, wet/thermal and clean-zone stations convenient to their workflows.
+
+7. Windows and services:
+   - The curved southwest and long south walls are window walls.
+   - Benches may be near them, but do not assume wall power, data, water, drain or gas.
+   - Use the five separate ceiling power/data drop candidates where overhead service would make the layout workable.
+   - Avoid tall storage that materially blocks the window walls.
+
+8. Circulation:
+   - Use the scheduled 48-inch primary, 42-inch active-work and 36-inch provisional-service templates.
+   - These are planning assumptions, not final code determinations.
+   - Do not reduce them merely to fit optional furniture.
+
+9. Existing instruments and sample intake:
+   - Do not place sample receiving/intake in Room 114.
+   - Do not place the existing LCMS-8040RX, ICP-OES or Multiwave 5000 in Room 114.
+   - Use only the scheduled aliquot-handoff arrow if it improves workflow communication.
+
+CONDITIONAL ITEMS
+
+Keep the following on the library page unless there is verified room and need:
+
+- Additional 72 x 30 wet-prep/cabinet bench
+- 96 x 36 future expansion bench
+- Undercounter reagent refrigerator
+- LECO-quoted Sartorius Entris II balance
+- Optional LECO/PC UPS
+
+Do not place an optional object by shrinking required aisles or required service envelopes.
+
+QUALITY CHECK
+
+Before saving:
+
+1. Hide the architect reference and confirm the equipment/furniture layout remains understandable.
+2. Verify every physical object, table, utility symbol and clearance envelope can be selected independently.
+3. Compare object IDs and quantities against the schedule.
+4. Confirm no Room 114 object was rescaled after creation.
+5. Confirm no equipment overlaps walls, required access openings or another equipment body.
+6. Confirm the wash manifold remains accessible.
+7. Confirm hoods and furnace/heat equipment are separated.
+8. Confirm both MA204 balances and both desiccators are present with the scheduled associations.
+9. Confirm external LCMS/ICP/Multiwave instruments were not placed in Room 114.
+10. List any required object that could not fit without violating the scheduled dimensions or aisles. Do not hide the conflict.
+
+EXPORTS
+
+Save and export:
+
+- `AIT_DDGS_Scenario_B1_Utility_Spine_v01.sdr`
+- `AIT_DDGS_Scenario_B1_Utility_Spine_v01_REFERENCE_ON.pdf`
+- `AIT_DDGS_Scenario_B1_Utility_Spine_v01_NATIVE_ONLY.pdf`
+- `AIT_DDGS_Scenario_B1_Utility_Spine_v01_NATIVE_ONLY.svg`
+- `AIT_DDGS_Scenario_B1_Utility_Spine_v01_PREVIEW.png`
+
+FINAL REPORT
+
+Report:
+
+1. Required object count created and placed.
+2. Conditional object count created and left on the library page.
+3. Tables/benches/hoods count by ID.
+4. Whether both MA204 balances and both desiccators are present and correctly associated.
+5. Which objects use provisional rather than OEM-verified footprints.
+6. Any fit, circulation, utility or service conflict.
+7. Any object omitted and the exact reason.
+8. Exact export filenames and locations.
+
+Stop after B1 and the exports. Do not begin B2, B3, Scenario A or Scenario C.
