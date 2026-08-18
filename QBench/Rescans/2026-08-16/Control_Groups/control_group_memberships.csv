@@ -1,0 +1,5 @@
+control_group_id,control_group_name,display_sequence,control_id,control_name,order_interpretation,evidence_url
+2,Heavy Metals - Demo - AMM,1,4,Blank,display_order_observed_not_proven_configured,https://ait.qbench.net/control-group?id=2#controls
+2,Heavy Metals - Demo - AMM,2,3,System Suitability 2,display_order_observed_not_proven_configured,https://ait.qbench.net/control-group?id=2#controls
+2,Heavy Metals - Demo - AMM,3,2,System Suitability 1,display_order_observed_not_proven_configured,https://ait.qbench.net/control-group?id=2#controls
+1,Example Control Group,1,1,Example Control,display_order_observed_not_proven_configured,https://ait.qbench.net/control-group?id=1#controls

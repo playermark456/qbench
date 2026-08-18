@@ -1,0 +1,29 @@
+{
+  "scan_date": "2026-08-16",
+  "effective_hostname": "ait.qbench.net",
+  "qbench_mutations_performed": 0,
+  "export_to_excel_used": false,
+  "manual_reconstruction_used": false,
+  "attempts": [
+    {
+      "worksheet_id": 7,
+      "worksheet_type": "Dynamic Spreadsheet",
+      "version_id": "672",
+      "version_number": 16,
+      "version_status": "APPROVED",
+      "active": true,
+      "selection": "default active",
+      "result": "download event timeout at 3 seconds and 30 seconds; locator downloadMedia also failed"
+    },
+    {
+      "worksheet_id": 8,
+      "worksheet_type": "Dynamic Spreadsheet",
+      "version_id": "676",
+      "version_number": 59,
+      "version_status": "APPROVED",
+      "active": true,
+      "selection": "explicitly selected existing active version",
+      "result": "download event timeout at 30 seconds"
+    }
+  ]
+}

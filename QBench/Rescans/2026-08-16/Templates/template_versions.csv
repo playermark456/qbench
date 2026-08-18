@@ -1,0 +1,44 @@
+family,template_id,template_name,version_number,status_text,active,selected_at_capture,source_capture_state,source_artifact_path
+Email_Templates,1,Samples Received Email,1,1 - APPROVED (ACTIVE),true,true,sanitized_visible_code_editor_source,QBench/Rescans/2026-08-16/Templates/Email_Templates/1/versions/1/source.html
+Email_Templates,2,Sample Report Email,1,1 - APPROVED (ACTIVE),true,true,sanitized_visible_code_editor_source,QBench/Rescans/2026-08-16/Templates/Email_Templates/2/versions/1/source.html
+Email_Templates,5,Order Published Email,1,1 - APPROVED (ACTIVE),true,true,sanitized_visible_code_editor_source,QBench/Rescans/2026-08-16/Templates/Email_Templates/5/versions/1/source.html
+Email_Templates,6,Order Report Published Email,1,1 - APPROVED (ACTIVE),true,true,sanitized_visible_code_editor_source,QBench/Rescans/2026-08-16/Templates/Email_Templates/6/versions/1/source.html
+Email_Templates,7,Sample Report Published Email,1,1 - APPROVED (ACTIVE),true,true,sanitized_visible_code_editor_source,QBench/Rescans/2026-08-16/Templates/Email_Templates/7/versions/1/source.html
+Email_Templates,8,Test Report Published Email,1,1 - APPROVED (ACTIVE),true,true,sanitized_visible_code_editor_source,QBench/Rescans/2026-08-16/Templates/Email_Templates/8/versions/1/source.html
+Email_Templates,9,Order Request Revision Email,1,1 - APPROVED (ACTIVE),true,true,sanitized_visible_code_editor_source,QBench/Rescans/2026-08-16/Templates/Email_Templates/9/versions/1/source.html
+Email_Templates,10,Invoice Email,1,1 - APPROVED (ACTIVE),true,true,sanitized_visible_code_editor_source,QBench/Rescans/2026-08-16/Templates/Email_Templates/10/versions/1/source.html
+Email_Templates,12,Order Request Conversion Email,1,1 - APPROVED (ACTIVE),true,true,sanitized_visible_code_editor_source,QBench/Rescans/2026-08-16/Templates/Email_Templates/12/versions/1/source.html
+Email_Templates,13,New Comment Email,1,1 - APPROVED (ACTIVE),true,true,sanitized_visible_code_editor_source,QBench/Rescans/2026-08-16/Templates/Email_Templates/13/versions/1/source.html
+Email_Templates,15,Payment Received Email,1,1 - APPROVED (ACTIVE),true,true,sanitized_visible_code_editor_source,QBench/Rescans/2026-08-16/Templates/Email_Templates/15/versions/1/source.html
+Email_Templates,16,Quotation Email,1,1 - APPROVED (ACTIVE),true,true,sanitized_visible_code_editor_source,QBench/Rescans/2026-08-16/Templates/Email_Templates/16/versions/1/source.html
+Email_Templates,17,Equipment Out Of Service Email,1,1 - APPROVED (ACTIVE),true,true,sanitized_visible_code_editor_source,QBench/Rescans/2026-08-16/Templates/Email_Templates/17/versions/1/source.html
+Email_Templates,18,Order Request Approved Email,1,1 - APPROVED (ACTIVE),true,true,sanitized_visible_code_editor_source,QBench/Rescans/2026-08-16/Templates/Email_Templates/18/versions/1/source.html
+Invoice_Templates,40,Invoice Template Configuration,1,1 - APPROVED (ACTIVE),true,false,sanitized_visible_editor_html,"{""header"":""QBench/Rescans/2026-08-16/Templates/Invoice_Templates/40/versions/1/header.html"",""body"":""QBench/Rescans/2026-08-16/Templates/Invoice_Templates/40/versions/1/body.html"",""footer"":""QBench/Rescans/2026-08-16/Templates/Invoice_Templates/40/versions/1/footer.html""}"
+Label_Templates,24,Inventory Label,6,6 - Test - DRAFT,false,true,sanitized_visible_editor_html,QBench/Rescans/2026-08-16/Templates/Label_Templates/24/versions/6/body.html
+Label_Templates,24,Inventory Label,5,5 - APPROVED (ACTIVE),true,false,unavailable_after_read_only_version_selection,
+Label_Templates,24,Inventory Label,4,4 - APPROVED,false,false,not_captured,
+Label_Templates,24,Inventory Label,3,3 - APPROVED,false,false,not_captured,
+Label_Templates,24,Inventory Label,2,2 - APPROVED,false,false,not_captured,
+Label_Templates,24,Inventory Label,1,1 - APPROVED,false,false,not_captured,
+Label_Templates,29,Equipment Label (Barcode),5,5 - Test - DRAFT,false,true,sanitized_visible_editor_html,QBench/Rescans/2026-08-16/Templates/Label_Templates/29/versions/5/body.html
+Label_Templates,29,Equipment Label (Barcode),4,4 - APPROVED (ACTIVE),true,false,unavailable_after_read_only_version_selection,
+Label_Templates,29,Equipment Label (Barcode),3,3 - REJECTED,false,false,not_captured,
+Label_Templates,29,Equipment Label (Barcode),2,2 - APPROVED,false,false,not_captured,
+Label_Templates,29,Equipment Label (Barcode),1,1 - APPROVED,false,false,not_captured,
+Label_Templates,30,Equipment Calibration,2,2 - Test - DRAFT,false,true,sanitized_visible_editor_html,QBench/Rescans/2026-08-16/Templates/Label_Templates/30/versions/2/body.html
+Label_Templates,30,Equipment Calibration,1,1 - DRAFT,false,false,not_captured,
+Label_Templates,32,Sample Intake Sample Label,5,5 - Test - DRAFT,false,true,sanitized_visible_editor_html,QBench/Rescans/2026-08-16/Templates/Label_Templates/32/versions/5/body.html
+Label_Templates,32,Sample Intake Sample Label,4,4 - APPROVED (ACTIVE),true,false,unavailable_after_read_only_version_selection,
+Label_Templates,32,Sample Intake Sample Label,3,3 - REJECTED,false,false,not_captured,
+Label_Templates,32,Sample Intake Sample Label,2,2 - APPROVED,false,false,not_captured,
+Label_Templates,32,Sample Intake Sample Label,1,1 - REJECTED,false,false,not_captured,
+Label_Templates,33,Sample Assay Labels,3,3 - Test - DRAFT,false,true,sanitized_visible_editor_html,QBench/Rescans/2026-08-16/Templates/Label_Templates/33/versions/3/body.html
+Label_Templates,33,Sample Assay Labels,2,2 - APPROVED (ACTIVE),true,false,unavailable_after_read_only_version_selection,
+Label_Templates,33,Sample Assay Labels,1,1 - APPROVED,false,false,not_captured,
+Label_Templates,34,Location Label,4,4 - Location Test - DRAFT,false,true,sanitized_visible_editor_html,QBench/Rescans/2026-08-16/Templates/Label_Templates/34/versions/4/body.html
+Label_Templates,34,Location Label,3,3 - APPROVED (ACTIVE),true,false,unavailable_after_read_only_version_selection,
+Label_Templates,34,Location Label,2,2 - APPROVED,false,false,not_captured,
+Label_Templates,34,Location Label,1,1 - APPROVED,false,false,not_captured,
+Label_Templates,35,Batch Label (Barcode),3,3 - TEST - DRAFT,false,true,sanitized_visible_editor_html,QBench/Rescans/2026-08-16/Templates/Label_Templates/35/versions/3/body.html
+Label_Templates,35,Batch Label (Barcode),2,2 - APPROVED (ACTIVE),true,false,unavailable_after_read_only_version_selection,
+Label_Templates,35,Batch Label (Barcode),1,1 - DRAFT,false,false,not_captured,

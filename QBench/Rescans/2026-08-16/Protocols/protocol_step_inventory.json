@@ -1,0 +1,2213 @@
+{
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-16T23:21:32.805Z",
+  "source_host": "ait.qbench.net",
+  "capture_method": "serialized read-only DOM extraction",
+  "count": 81,
+  "items": [
+    {
+      "step_id": 11,
+      "name": "Assigning Equipment Usage to Batch",
+      "description": "Instructions on how to assign equipment to batch.",
+      "worksheet_id": 26,
+      "worksheet_name": "[Protocol Step WS] Assigning Equipment to Batch",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=11",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 1
+        },
+        {
+          "protocol_id": 14,
+          "name": "[Batch] Gene Up Aspergillus Microbial Analysis Protocol",
+          "sequence": 1
+        },
+        {
+          "protocol_id": 15,
+          "name": "[Batch] Gene Up Listeria Microbial Analysis Protocol",
+          "sequence": 1
+        },
+        {
+          "protocol_id": 13,
+          "name": "[Batch] Gene Up Salmonella & STEC Microbial Analysis",
+          "sequence": 1
+        },
+        {
+          "protocol_id": 2,
+          "name": "[Batch] Heavy Metals Protocol",
+          "sequence": 1
+        },
+        {
+          "protocol_id": 8,
+          "name": "[Batch] Mycotoxin (Quantitative) Protocol",
+          "sequence": 1
+        },
+        {
+          "protocol_id": 7,
+          "name": "[Batch] Qualitative Pesticides & Mycotoxin Protocol",
+          "sequence": 1
+        },
+        {
+          "protocol_id": 12,
+          "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol",
+          "sequence": 1
+        },
+        {
+          "protocol_id": 6,
+          "name": "[Batch] Residual Solvents Protocol",
+          "sequence": 1
+        },
+        {
+          "protocol_id": 16,
+          "name": "[Batch] Tempo Microbial Analysis Protocol",
+          "sequence": 2
+        },
+        {
+          "protocol_id": 3,
+          "name": "[Batch] Water Activity Protocol",
+          "sequence": 1
+        },
+        {
+          "protocol_id": 10,
+          "name": "[Test] Foreign Material Protocol",
+          "sequence": 1
+        }
+      ]
+    },
+    {
+      "step_id": 12,
+      "name": "Assigning Inventory Usage to Batch",
+      "description": "Instructions on how to assign inventory used to batch.",
+      "worksheet_id": 27,
+      "worksheet_name": "[Protocol Step WS] Assigning Inventory to Batch",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=12",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 2
+        },
+        {
+          "protocol_id": 14,
+          "name": "[Batch] Gene Up Aspergillus Microbial Analysis Protocol",
+          "sequence": 2
+        },
+        {
+          "protocol_id": 15,
+          "name": "[Batch] Gene Up Listeria Microbial Analysis Protocol",
+          "sequence": 2
+        },
+        {
+          "protocol_id": 13,
+          "name": "[Batch] Gene Up Salmonella & STEC Microbial Analysis",
+          "sequence": 2
+        },
+        {
+          "protocol_id": 2,
+          "name": "[Batch] Heavy Metals Protocol",
+          "sequence": 2
+        },
+        {
+          "protocol_id": 8,
+          "name": "[Batch] Mycotoxin (Quantitative) Protocol",
+          "sequence": 2
+        },
+        {
+          "protocol_id": 7,
+          "name": "[Batch] Qualitative Pesticides & Mycotoxin Protocol",
+          "sequence": 2
+        },
+        {
+          "protocol_id": 12,
+          "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol",
+          "sequence": 2
+        },
+        {
+          "protocol_id": 6,
+          "name": "[Batch] Residual Solvents Protocol",
+          "sequence": 2
+        },
+        {
+          "protocol_id": 16,
+          "name": "[Batch] Tempo Microbial Analysis Protocol",
+          "sequence": 1
+        },
+        {
+          "protocol_id": 3,
+          "name": "[Batch] Water Activity Protocol",
+          "sequence": 6
+        }
+      ]
+    },
+    {
+      "step_id": 13,
+      "name": "Cannabinoid Potency Preparation of Lab Control Samples",
+      "description": "This protocol step worksheet is to gather the information for Potency Preparation of Lab Control Samples. It gives the steps and form from Cannabinoid Potency Assay SOP Dated 3/11/2026, Section 8.6.",
+      "worksheet_id": 32,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Lab Control Samples",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=13",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 4
+        }
+      ]
+    },
+    {
+      "step_id": 21,
+      "name": "Cannabinoid Potency | Calculations and Reporting of Results",
+      "description": "This protocol step is to document the calculations and reporting of results. It gives the steps from Cannabinoid Potency Assay SOP, Section 8.14.",
+      "worksheet_id": 39,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Calculations and Reporting of Results",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=21",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": []
+    },
+    {
+      "step_id": 18,
+      "name": "Cannabinoid Potency | HPLC Setup and Measurement",
+      "description": "This protocol step is performing HPLC Setup and Measurement. It gives the steps from Cannabinoid Potency Assay SOP, Section 8.12.",
+      "worksheet_id": 37,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} HPLC Setup and Measurement",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=18",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 21
+        }
+      ]
+    },
+    {
+      "step_id": 71,
+      "name": "Cannabinoid Potency | Preparation of Beverage Samples",
+      "description": "",
+      "worksheet_id": 137,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Beverage Samples",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=71",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 12
+        }
+      ]
+    },
+    {
+      "step_id": 73,
+      "name": "Cannabinoid Potency | Preparation of Beverage Samples | Extraction",
+      "description": "",
+      "worksheet_id": 139,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Beverage Samples Extraction",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=73",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 14
+        }
+      ]
+    },
+    {
+      "step_id": 72,
+      "name": "Cannabinoid Potency | Preparation of Beverage Samples | QuEChERS",
+      "description": "",
+      "worksheet_id": 138,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Beverage Samples QuEChERS",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=72",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 13
+        }
+      ]
+    },
+    {
+      "step_id": 78,
+      "name": "Cannabinoid Potency | Preparation of Concentrate Samples",
+      "description": "",
+      "worksheet_id": 145,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Concentrate Samples",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=78",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 9
+        }
+      ]
+    },
+    {
+      "step_id": 80,
+      "name": "Cannabinoid Potency | Preparation of Concentrate Samples | Filter",
+      "description": "",
+      "worksheet_id": 147,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Concentrate Samples Filter",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=80",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 11
+        }
+      ]
+    },
+    {
+      "step_id": 79,
+      "name": "Cannabinoid Potency | Preparation of Concentrate Samples | Vortex/Sonicate",
+      "description": "",
+      "worksheet_id": 146,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Concentrate Samples Vortex/Sonicate",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=79",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 10
+        }
+      ]
+    },
+    {
+      "step_id": 66,
+      "name": "Cannabinoid Potency | Preparation of Edible Samples",
+      "description": "",
+      "worksheet_id": 132,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Edible Samples",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=66",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 15
+        }
+      ]
+    },
+    {
+      "step_id": 69,
+      "name": "Cannabinoid Potency | Preparation of Edible Samples | Centrifuge",
+      "description": "",
+      "worksheet_id": 135,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Edible Samples Centrifuge",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=69",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 18
+        }
+      ]
+    },
+    {
+      "step_id": 70,
+      "name": "Cannabinoid Potency | Preparation of Edible Samples | Filter",
+      "description": "",
+      "worksheet_id": 136,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Edible Samples Filter",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=70",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 19
+        }
+      ]
+    },
+    {
+      "step_id": 68,
+      "name": "Cannabinoid Potency | Preparation of Edible Samples | QuEChERS",
+      "description": "",
+      "worksheet_id": 134,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Edible Samples QuEChERS",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=68",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 17
+        }
+      ]
+    },
+    {
+      "step_id": 67,
+      "name": "Cannabinoid Potency | Preparation of Edible Samples | Vortex/Sonicate",
+      "description": "",
+      "worksheet_id": 133,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Edible Samples Vortex/Sonicate",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=67",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 16
+        }
+      ]
+    },
+    {
+      "step_id": 16,
+      "name": "Cannabinoid Potency | Preparation of Flower/Plant Samples | Centrifuge",
+      "description": "This protocol step is to document the preparation of flower/plant samples. It gives the steps from Cannabinoid Potency Assay SOP, Section 8.7.5 through 8.7.7.\n\n8.7.7\tCentrifuge the samples at ≥3000 rpm for 5 minutes.",
+      "worksheet_id": 35,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Flower/Plant Samples Centrifuge",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=16",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 7
+        }
+      ]
+    },
+    {
+      "step_id": 17,
+      "name": "Cannabinoid Potency | Preparation of Flower/Plant Samples | Filter/Dilution",
+      "description": "This protocol step is to document the preparation of flower/plant samples. It gives the steps from Cannabinoid Potency Assay SOP, Section 8.7.8 through 8.7.9.\n\n8.7.8\tAttach a clean, 0.2 µm PTFE filter to a syringe and dispense contents into a new 5 mL tube (DF=40).\n8.7.9\tDilute the samples with ACN (if needed). Common dilution factors include: \n•\tHemp Flower: 400x – 600x\n•\tMarijuana Flower: 1000x – 1500x\n•\tProficiency Hemp Flower: 100x & 500x",
+      "worksheet_id": 36,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Flower/Plant Samples Filter",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=17",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 8
+        }
+      ]
+    },
+    {
+      "step_id": 14,
+      "name": "Cannabinoid Potency | Preparation of Flower/Plant Samples | Step 1",
+      "description": "Add 20.0 mL of ACN to the 0.5 g of plant sample in the 50 mL conical tube",
+      "worksheet_id": 33,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Flower/Plant Samples",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=14",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 5
+        }
+      ]
+    },
+    {
+      "step_id": 15,
+      "name": "Cannabinoid Potency | Preparation of Flower/Plant Samples | Vortex/Sonicate",
+      "description": "This protocol step is to document the preparation of flower/plant samples. It gives the steps from Cannabinoid Potency Assay SOP, Section 8.7.5 through 8.7.6.\n\n8.7.5\tVortex sample at speed 10 for 5 minutes, then sonicate for 5 minutes.\n8.7.6\tVortex sample at speed 10 for 1 minute, then sonicate for 5 minutes.",
+      "worksheet_id": 34,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Flower/Plant Samples Vortex/Sonicate",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=15",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 6
+        }
+      ]
+    },
+    {
+      "step_id": 74,
+      "name": "Cannabinoid Potency | Preparation of Patch Samples",
+      "description": "",
+      "worksheet_id": 140,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Patch Samples",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=74",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": []
+    },
+    {
+      "step_id": 76,
+      "name": "Cannabinoid Potency | Preparation of Patch Samples | Filter/Dilution",
+      "description": "",
+      "worksheet_id": 142,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Patch Samples Filter/Dilution",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=76",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": []
+    },
+    {
+      "step_id": 75,
+      "name": "Cannabinoid Potency | Preparation of Patch Samples | Vortex/ Sonicate",
+      "description": "",
+      "worksheet_id": 141,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Patch Samples Vortex/ Sonicate",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=75",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": []
+    },
+    {
+      "step_id": 20,
+      "name": "Cannabinoid Potency | Quality Control Requirements",
+      "description": "This protocol step is performing Quality Control Requirements. It gives the steps from Cannabinoid Potency Assay SOP, Section 8.14.",
+      "worksheet_id": 38,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Quality Control Requirements",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=20",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": []
+    },
+    {
+      "step_id": 19,
+      "name": "Cannabinoid Potency | Quality Control Requirements",
+      "description": "This protocol step is verifying all quality control requirements are meant. It gives the steps from Cannabinoid Potency Assay SOP, Section 8.13.",
+      "worksheet_id": 38,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Quality Control Requirements",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=19",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 22
+        }
+      ]
+    },
+    {
+      "step_id": 81,
+      "name": "Cannabinoid Potency | Solution Prep",
+      "description": "",
+      "worksheet_id": 148,
+      "worksheet_name": "Cannabinoid Potency {Protocol WS} Solution Prep",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=81",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "step_id": 22,
+      "name": "Cannabis/Hemp | Instrument Output and QBench Upload of Results",
+      "description": "This protocol step holds instructions for our to obtain the output file from each cannabis instrument and how to upload into QBench. There is a tab for each instruement. There are also links to Loom recording showing how to perform these steps.",
+      "worksheet_id": 40,
+      "worksheet_name": "General {Protocol WS} Instrument Output and QBench Upload of Results",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=22",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 23
+        },
+        {
+          "protocol_id": 2,
+          "name": "[Batch] Heavy Metals Protocol",
+          "sequence": 11
+        },
+        {
+          "protocol_id": 8,
+          "name": "[Batch] Mycotoxin (Quantitative) Protocol",
+          "sequence": 9
+        },
+        {
+          "protocol_id": 7,
+          "name": "[Batch] Qualitative Pesticides & Mycotoxin Protocol",
+          "sequence": 8
+        },
+        {
+          "protocol_id": 12,
+          "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol",
+          "sequence": 12
+        },
+        {
+          "protocol_id": 6,
+          "name": "[Batch] Residual Solvents Protocol",
+          "sequence": 7
+        }
+      ]
+    },
+    {
+      "step_id": 23,
+      "name": "Cannabis/Hemp | Overall Chemist Review of Batch",
+      "description": "This step holds a worksheet for steps to check after the batch is to complete to do a quality check on the overall batch and records within QBench.",
+      "worksheet_id": 41,
+      "worksheet_name": "Cannabis/Hemp {Protocol WS} Overall Chemist Review of Batch",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=23",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 24
+        },
+        {
+          "protocol_id": 14,
+          "name": "[Batch] Gene Up Aspergillus Microbial Analysis Protocol",
+          "sequence": 8
+        },
+        {
+          "protocol_id": 15,
+          "name": "[Batch] Gene Up Listeria Microbial Analysis Protocol",
+          "sequence": 7
+        },
+        {
+          "protocol_id": 13,
+          "name": "[Batch] Gene Up Salmonella & STEC Microbial Analysis",
+          "sequence": 7
+        },
+        {
+          "protocol_id": 2,
+          "name": "[Batch] Heavy Metals Protocol",
+          "sequence": 12
+        },
+        {
+          "protocol_id": 8,
+          "name": "[Batch] Mycotoxin (Quantitative) Protocol",
+          "sequence": 10
+        },
+        {
+          "protocol_id": 7,
+          "name": "[Batch] Qualitative Pesticides & Mycotoxin Protocol",
+          "sequence": 9
+        },
+        {
+          "protocol_id": 12,
+          "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol",
+          "sequence": 13
+        },
+        {
+          "protocol_id": 6,
+          "name": "[Batch] Residual Solvents Protocol",
+          "sequence": 8
+        },
+        {
+          "protocol_id": 16,
+          "name": "[Batch] Tempo Microbial Analysis Protocol",
+          "sequence": 6
+        },
+        {
+          "protocol_id": 3,
+          "name": "[Batch] Water Activity Protocol",
+          "sequence": 7
+        },
+        {
+          "protocol_id": 10,
+          "name": "[Test] Foreign Material Protocol",
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "step_id": 37,
+      "name": "Foreign Material Sample Analysis",
+      "description": "",
+      "worksheet_id": 58,
+      "worksheet_name": "Foreign Material [Protocol WS] Perform FM Testing",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=37",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 10,
+          "name": "[Test] Foreign Material Protocol",
+          "sequence": 2
+        }
+      ]
+    },
+    {
+      "step_id": 54,
+      "name": "Gene Up Microbial Analysis | Aspergillus Enriched Broth Preparation",
+      "description": "",
+      "worksheet_id": 88,
+      "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Aspergillus Enriched Broth Preparation",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=54",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 14,
+          "name": "[Batch] Gene Up Aspergillus Microbial Analysis Protocol",
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "step_id": 62,
+      "name": "Gene Up Microbial Analysis | Gene Up PCR Program",
+      "description": "",
+      "worksheet_id": 99,
+      "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Gene Up PCR Program",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=62",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 14,
+          "name": "[Batch] Gene Up Aspergillus Microbial Analysis Protocol",
+          "sequence": 7
+        },
+        {
+          "protocol_id": 15,
+          "name": "[Batch] Gene Up Listeria Microbial Analysis Protocol",
+          "sequence": 6
+        },
+        {
+          "protocol_id": 13,
+          "name": "[Batch] Gene Up Salmonella & STEC Microbial Analysis",
+          "sequence": 6
+        }
+      ]
+    },
+    {
+      "step_id": 60,
+      "name": "Gene Up Microbial Analysis | Sample Enrichment (Aspergillus)",
+      "description": "",
+      "worksheet_id": 97,
+      "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Enrichment (Aspergillus)",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=60",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 14,
+          "name": "[Batch] Gene Up Aspergillus Microbial Analysis Protocol",
+          "sequence": 6
+        }
+      ]
+    },
+    {
+      "step_id": 59,
+      "name": "Gene Up Microbial Analysis | Sample Incubation",
+      "description": "",
+      "worksheet_id": 96,
+      "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Incubation",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=59",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 14,
+          "name": "[Batch] Gene Up Aspergillus Microbial Analysis Protocol",
+          "sequence": 5
+        },
+        {
+          "protocol_id": 15,
+          "name": "[Batch] Gene Up Listeria Microbial Analysis Protocol",
+          "sequence": 4
+        },
+        {
+          "protocol_id": 13,
+          "name": "[Batch] Gene Up Salmonella & STEC Microbial Analysis",
+          "sequence": 4
+        }
+      ]
+    },
+    {
+      "step_id": 61,
+      "name": "Gene Up Microbial Analysis | Sample Lysis (Sal/ STEC and Listeria)",
+      "description": "",
+      "worksheet_id": 98,
+      "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Lysis (Sal/ STEC and Listeria)",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=61",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 15,
+          "name": "[Batch] Gene Up Listeria Microbial Analysis Protocol",
+          "sequence": 5
+        },
+        {
+          "protocol_id": 13,
+          "name": "[Batch] Gene Up Salmonella & STEC Microbial Analysis",
+          "sequence": 5
+        }
+      ]
+    },
+    {
+      "step_id": 55,
+      "name": "Gene Up Microbial Analysis | Sample Preparation (Aspergillus)",
+      "description": "",
+      "worksheet_id": 90,
+      "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Preparation (Aspergillus)",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=55",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 14,
+          "name": "[Batch] Gene Up Aspergillus Microbial Analysis Protocol",
+          "sequence": 4
+        }
+      ]
+    },
+    {
+      "step_id": 58,
+      "name": "Gene Up Microbial Analysis | Sample Preparation (Listeria)",
+      "description": "",
+      "worksheet_id": 92,
+      "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Preparation (Listeria)",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=58",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 15,
+          "name": "[Batch] Gene Up Listeria Microbial Analysis Protocol",
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "step_id": 57,
+      "name": "Gene Up Microbial Analysis | Sample Preparation (Sal/ STEC)",
+      "description": "",
+      "worksheet_id": 91,
+      "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Preparation (Sal/ STEC)",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=57",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 13,
+          "name": "[Batch] Gene Up Salmonella & STEC Microbial Analysis",
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "step_id": 29,
+      "name": "Heavy Metals | Analysis Elements and Mass Registration & Assay",
+      "description": "This protocol step is to document the analysis elements and mass registration. It gives the steps from Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.10 and 8.11.",
+      "worksheet_id": 50,
+      "worksheet_name": "Heavy Metals [Protocol WS] Analysis Elements and Mass Registration & Assay",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=29",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 2,
+          "name": "[Batch] Heavy Metals Protocol",
+          "sequence": 8
+        }
+      ]
+    },
+    {
+      "step_id": 31,
+      "name": "Heavy Metals | Calculations and Reporting of Results",
+      "description": "This protocol step is to document the calculations and reporting of results. It gives the steps from Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.13.",
+      "worksheet_id": 53,
+      "worksheet_name": "Heavy Metals [Protocol WS] Calculating and Reporting of Results",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=31",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 2,
+          "name": "[Batch] Heavy Metals Protocol",
+          "sequence": 10
+        }
+      ]
+    },
+    {
+      "step_id": 27,
+      "name": "Heavy Metals | Digestion of Samples",
+      "description": "This protocol step is to document that the samples are IN the microwave digestor. Set to In Progress once the digestion process is started. \n\nFrom Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.8.",
+      "worksheet_id": null,
+      "worksheet_name": "Select worksheet",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=27",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 2,
+          "name": "[Batch] Heavy Metals Protocol",
+          "sequence": 5
+        }
+      ]
+    },
+    {
+      "step_id": 28,
+      "name": "Heavy Metals | Instrument Setup",
+      "description": "This protocol step is to document the ICP-MS Setup and Measurement. It gives the steps from Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.9.",
+      "worksheet_id": 49,
+      "worksheet_name": "Heavy Metals [Protocol WS] Instrument Setup",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=28",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 2,
+          "name": "[Batch] Heavy Metals Protocol",
+          "sequence": 7
+        }
+      ]
+    },
+    {
+      "step_id": 26,
+      "name": "Heavy Metals | Preparation of Samples After Digestion",
+      "description": "This protocol step is to document the Preparation of Heavy Metals Samples after digestion. It gives the steps from Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.8.",
+      "worksheet_id": 48,
+      "worksheet_name": "Heavy Metals [Protocol WS] Preparation of Samples After Digestion",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=26",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 2,
+          "name": "[Batch] Heavy Metals Protocol",
+          "sequence": 6
+        }
+      ]
+    },
+    {
+      "step_id": 25,
+      "name": "Heavy Metals | Preparation of Samples Prior to Digestion",
+      "description": "This protocol step is to document the Preparation of Heavy Metals Samples prior to digestion. It gives the steps from Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.8.",
+      "worksheet_id": 47,
+      "worksheet_name": "Heavy Metals [Protocol WS] Preparation of Samples Prior to Digestion",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=25",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 2,
+          "name": "[Batch] Heavy Metals Protocol",
+          "sequence": 4
+        }
+      ]
+    },
+    {
+      "step_id": 24,
+      "name": "Heavy Metals | Preparation of the Blank, Fortified Blank, Matrix, and Matrix Spike Solutions",
+      "description": "This protocol step is to document the Preparation of the Blank, Fortified Blank, Matrix, and Matrix Spike Solutions. It gives the steps from Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.7.",
+      "worksheet_id": 46,
+      "worksheet_name": "Heavy Metals [Protocol WS] Preparation of the Blank, Fortified Blank, Matrix, and Matrix Spike Solutions",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=24",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 2,
+          "name": "[Batch] Heavy Metals Protocol",
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "step_id": 30,
+      "name": "Heavy Metals | Quality Control Requirements",
+      "description": "This protocol step is to document quality control requirements. It gives the steps from Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.12.",
+      "worksheet_id": 51,
+      "worksheet_name": "Heavy Metals [Protocol WS] Quality Control Requirements",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=30",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 2,
+          "name": "[Batch] Heavy Metals Protocol",
+          "sequence": 9
+        }
+      ]
+    },
+    {
+      "step_id": 44,
+      "name": "Homogeneity | Homogeneity Evaluation & Reporting",
+      "description": "This protocol step goes over the process set forth in section 11.0 of the MN OCM Homogeneity Testing SOP.",
+      "worksheet_id": 72,
+      "worksheet_name": "Homogeneity [Protocol WS] Homogeneity Evaluation & Reporting",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=44",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 11,
+          "name": "[Batch] Homogeneity Protocol",
+          "sequence": 4
+        }
+      ]
+    },
+    {
+      "step_id": 45,
+      "name": "Homogeneity | Pre-Conditions & QBench Setup",
+      "description": "This protocol step stores instructions on how to handle homogeneity testing for MN OCM for the Pre-Conditions and QBench Setup.",
+      "worksheet_id": 69,
+      "worksheet_name": "Homogeneity [Protocol WS] Pre-Conditions & QBench Setup",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=45",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 11,
+          "name": "[Batch] Homogeneity Protocol",
+          "sequence": 1
+        }
+      ]
+    },
+    {
+      "step_id": 46,
+      "name": "Homogeneity | Run Cannabinoid Potency Tests",
+      "description": "This protocol step goes over the process set forth in section 10.0 of the MN OCM Homogeneity Testing SOP.",
+      "worksheet_id": 71,
+      "worksheet_name": "Homogeneity [Protocol WS] Run Cannabinoid Potency Tests",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=46",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 11,
+          "name": "[Batch] Homogeneity Protocol",
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "step_id": 47,
+      "name": "Homogeneity | Sub-Sampling",
+      "description": "This Protocol step goes over section 9.0 Sampling Expectation of the MN OCM Homogeneity Testing SOP.",
+      "worksheet_id": 70,
+      "worksheet_name": "Homogeneity [Protocol WS] Sub-Sampling",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=47",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 11,
+          "name": "[Batch] Homogeneity Protocol",
+          "sequence": 2
+        }
+      ]
+    },
+    {
+      "step_id": 38,
+      "name": "Mycotoxin | Laboratory Controls",
+      "description": "This protocol step is to document the laboratory control requirements. It gives the steps from Mycotoxin Analysis SOP, Section 8.10.",
+      "worksheet_id": 65,
+      "worksheet_name": "Mycotoxin [Protocol WS] Laboratory Controls",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=38",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 8,
+          "name": "[Batch] Mycotoxin (Quantitative) Protocol",
+          "sequence": 8
+        }
+      ]
+    },
+    {
+      "step_id": 39,
+      "name": "Mycotoxin | LC-MS/MS Setup and Measurement",
+      "description": "This protocol step is to document the LC-MS/MS Setup and Measurement steps. It gives the steps from Mycotoxin Analysis SOP, Section 8.8.",
+      "worksheet_id": 64,
+      "worksheet_name": "Mycotoxin [Protocol WS] LC-MS/MS Setup and Measurement",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=39",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 8,
+          "name": "[Batch] Mycotoxin (Quantitative) Protocol",
+          "sequence": 7
+        }
+      ]
+    },
+    {
+      "step_id": 41,
+      "name": "Mycotoxin | Preparation of Lab Controls",
+      "description": "This protocol step is to document the preparation of lab control samples purposes. It gives the steps from Mycotoxin Analysis SOP, Section 8.5.",
+      "worksheet_id": 60,
+      "worksheet_name": "Mycotoxins [Protocol WS] Preparation of Lab Control Samples",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=41",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 8,
+          "name": "[Batch] Mycotoxin (Quantitative) Protocol",
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "step_id": 42,
+      "name": "Mycotoxin | Preparation of Sample | Centrifuge & Positive Pressure",
+      "description": "This protocol step is to document the sample preparation of centrifuging and positive pressure manifold steps. It gives the steps from Mycotoxin Analysis SOP, Section 8.6.6 through 8.6.11.",
+      "worksheet_id": 62,
+      "worksheet_name": "Mycotoxins [Protocol WS] Preparation of Sample | Centrifuge & Positive Pressure",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=42",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 8,
+          "name": "[Batch] Mycotoxin (Quantitative) Protocol",
+          "sequence": 5
+        }
+      ]
+    },
+    {
+      "step_id": 43,
+      "name": "Mycotoxin | Preparation of Sample | Weigh and Vortex",
+      "description": "This protocol step is to document the sample preparation of weighing and vortexing steps. It gives the steps from Mycotoxin Analysis SOP, Section 8.6.1 through 8.6.5.",
+      "worksheet_id": 61,
+      "worksheet_name": "Mycotoxins [Protocol WS] Preparation of Sample | Weigh & Vortex",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=43",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 8,
+          "name": "[Batch] Mycotoxin (Quantitative) Protocol",
+          "sequence": 4
+        }
+      ]
+    },
+    {
+      "step_id": 40,
+      "name": "Mycotoxin | Preparation of Standards",
+      "description": "This protocol step is to document the sample preparation of standards. It gives the steps from Mycotoxin Analysis SOP, Section 8.7.",
+      "worksheet_id": 63,
+      "worksheet_name": "Mycotoxin [Protocol WS] Preparation of Standards",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=40",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 8,
+          "name": "[Batch] Mycotoxin (Quantitative) Protocol",
+          "sequence": 6
+        }
+      ]
+    },
+    {
+      "step_id": 82,
+      "name": "Pest (Quantitative Flower) | Preparation of Lab Control Samples | Sample Preparation 1",
+      "description": "",
+      "worksheet_id": 150,
+      "worksheet_name": "Pest (Quantitative Flower) [Protocol WS] Preparation of Lab Control Samples | Sample Preparation 1",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=82",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 12,
+          "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol",
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "step_id": 85,
+      "name": "Pest (Quantitative Flower) | Preparation of Lab Control Samples | Sample Preparation 2",
+      "description": "",
+      "worksheet_id": 153,
+      "worksheet_name": "Pest (Quantitative Flower) [Protocol WS] Preparation of Lab Control Samples | Sample Preparation 2",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=85",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 12,
+          "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol",
+          "sequence": 6
+        }
+      ]
+    },
+    {
+      "step_id": 83,
+      "name": "Pest (Quantitative Flower) | Preparation of Samples | Sample Preparation 1",
+      "description": "",
+      "worksheet_id": 151,
+      "worksheet_name": "Pest (Quantitative Flower) [Protocol WS] Preparation of Samples | Sample Preparation 1",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=83",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 12,
+          "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol",
+          "sequence": 4
+        }
+      ]
+    },
+    {
+      "step_id": 86,
+      "name": "Pest (Quantitative Flower) | Preparation of Samples | Sample Preparation 2",
+      "description": "",
+      "worksheet_id": 154,
+      "worksheet_name": "Pest (Quantitative Flower) [Protocol WS] Preparation of Samples | Sample Preparation 2",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=86",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 12,
+          "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol",
+          "sequence": 7
+        }
+      ]
+    },
+    {
+      "step_id": 84,
+      "name": "Pest (Quantitative Flower) | Preparation of Standards | Sample Preparation 1",
+      "description": "",
+      "worksheet_id": 152,
+      "worksheet_name": "Pest (Quantitative Flower) [Protocol WS] Preparation of Standards | Sample Preparation 1",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=84",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 12,
+          "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol",
+          "sequence": 5
+        }
+      ]
+    },
+    {
+      "step_id": 87,
+      "name": "Pest (Quantitative Flower) | Preparation of Standards | Sample Preparation 2",
+      "description": "",
+      "worksheet_id": 155,
+      "worksheet_name": "Pest (Quantitative Flower) [Protocol WS] Preparation of Standards | Sample Preparation 2",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=87",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 12,
+          "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol",
+          "sequence": 8
+        }
+      ]
+    },
+    {
+      "step_id": 89,
+      "name": "Pest (Quantitative) | Calculations and Reporting of Results",
+      "description": "",
+      "worksheet_id": 157,
+      "worksheet_name": "Pest (Quantitative) [Protocol WS] Calculations and Reporting of Results",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=89",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 12,
+          "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol",
+          "sequence": 11
+        }
+      ]
+    },
+    {
+      "step_id": 88,
+      "name": "Pest (Quantitative) | Laboratory Control Requirements",
+      "description": "",
+      "worksheet_id": 156,
+      "worksheet_name": "Pest (Quantitative) [Protocol WS] Laboratory Control Requirements",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=88",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 12,
+          "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol",
+          "sequence": 10
+        }
+      ]
+    },
+    {
+      "step_id": 48,
+      "name": "Pest Myco (Qualitative) | Calculations and Reporting of Results",
+      "description": "This protocol step is to document the calculations and reporting of results. It gives the steps from Pesticide and Mycotoxin Screening Assay SOP, Section 8.9.",
+      "worksheet_id": 79,
+      "worksheet_name": "Pest Myco (Qualitative) [Protocol WS] Calculations and Reporting of Results",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=48",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 7,
+          "name": "[Batch] Qualitative Pesticides & Mycotoxin Protocol",
+          "sequence": 7
+        }
+      ]
+    },
+    {
+      "step_id": 49,
+      "name": "Pest Myco (Qualitative) | Laboratory Control Requirements",
+      "description": "This protocol step is to document the laboratory control requirements. It gives the steps from Pesticide and Mycotoxin Screening Assay SOP, Section 8.8.",
+      "worksheet_id": 78,
+      "worksheet_name": "Pest Myco (Qualitative) [Protocol WS] Laboratory Control Requirements",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=49",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 7,
+          "name": "[Batch] Qualitative Pesticides & Mycotoxin Protocol",
+          "sequence": 6
+        }
+      ]
+    },
+    {
+      "step_id": 50,
+      "name": "Pest Myco (Qualitative) | LC-MS/MS Setup and Measurement",
+      "description": "This protocol step is to document the LC-MS/MS Setup and Measurement steps. It gives the steps from Pesticide and Mycotoxin Screening Assay SOP, Section 8.6.",
+      "worksheet_id": 76,
+      "worksheet_name": "Pest Myco [Protocol WS] LC-MS/MS Setup and Measurement",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=50",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 7,
+          "name": "[Batch] Qualitative Pesticides & Mycotoxin Protocol",
+          "sequence": 5
+        },
+        {
+          "protocol_id": 12,
+          "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol",
+          "sequence": 9
+        }
+      ]
+    },
+    {
+      "step_id": 51,
+      "name": "Pest Myco (Qualitative) | Preparation of Laboratory Control Samples",
+      "description": "This protocol step is to document the preparation of lab control samples purposes. It gives the steps from Pesticide and Mycotoxin Screening Assay SOP, Section 8.4.",
+      "worksheet_id": 74,
+      "worksheet_name": "Pest Myco Qualitative [Protocol WS] Preparation of Laboratory Control Samples",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=51",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 7,
+          "name": "[Batch] Qualitative Pesticides & Mycotoxin Protocol",
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "step_id": 52,
+      "name": "Pest Myco (Qualitative) | Preparation of Samples",
+      "description": "This protocol step is to document the sample preparation of samples. It gives the steps from Pesticide and Mycotoxin Screening Assay SOP, Section 8.5.",
+      "worksheet_id": 75,
+      "worksheet_name": "Pest Myco Qualitative [Protocol WS] Preparation of Samples",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=52",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 7,
+          "name": "[Batch] Qualitative Pesticides & Mycotoxin Protocol",
+          "sequence": 4
+        }
+      ]
+    },
+    {
+      "step_id": 35,
+      "name": "Residual Solvents | Calculations and Reporting of Results",
+      "description": "This protocol step worksheet is to gather the information for calculations and reporting of results. It gives the steps and form from Residual Solvents Assay SOP Section 8.8.",
+      "worksheet_id": 57,
+      "worksheet_name": "Residual Solvents [Protocol WS] Calculations and Reporting of Results",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=35",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 6,
+          "name": "[Batch] Residual Solvents Protocol",
+          "sequence": 6
+        }
+      ]
+    },
+    {
+      "step_id": 33,
+      "name": "Residual Solvents | Instrument Setup & Measurement",
+      "description": "This protocol step worksheet is to gather the information for instrument setup and measurement. It gives the steps and form from Residual Solvents Assay SOP Section 8.6.",
+      "worksheet_id": 55,
+      "worksheet_name": "Residual Solvents [Protocol WS] Instrument Setup & Measurement",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=33",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 6,
+          "name": "[Batch] Residual Solvents Protocol",
+          "sequence": 4
+        }
+      ]
+    },
+    {
+      "step_id": 34,
+      "name": "Residual Solvents | Quality Control Requirements",
+      "description": "This protocol step worksheet is to gather the information for quality control requirements. It gives the steps and form from Residual Solvents Assay SOP Section 8.7.",
+      "worksheet_id": 56,
+      "worksheet_name": "Residual Solvents [Protocol WS] Quality Control Requirements",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=34",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 6,
+          "name": "[Batch] Residual Solvents Protocol",
+          "sequence": 5
+        }
+      ]
+    },
+    {
+      "step_id": 32,
+      "name": "Residual Solvents | Sample Preparation",
+      "description": "This protocol step worksheet is to gather the information for sample preparation. It gives the steps and form from Residual Solvents Assay SOP Sections 8.3 & 8.4.",
+      "worksheet_id": 54,
+      "worksheet_name": "Residual Solvents [Protocol WS] Sample Preparation",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=32",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 6,
+          "name": "[Batch] Residual Solvents Protocol",
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "step_id": 53,
+      "name": "Salmonella STEC | Step 1",
+      "description": "",
+      "worksheet_id": 85,
+      "worksheet_name": "Salmonella STEC [Protocol WS] Step 1",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=53",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": []
+    },
+    {
+      "step_id": 77,
+      "name": "Sample Dilution",
+      "description": "",
+      "worksheet_id": 143,
+      "worksheet_name": "Sample Dilution {Protocol WS}",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=77",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 4,
+          "name": "[Batch] Cannabinoid Potency Protocol",
+          "sequence": 20
+        }
+      ]
+    },
+    {
+      "step_id": 64,
+      "name": "Tempo Microbial Analysis | Sample Incubation",
+      "description": "",
+      "worksheet_id": 101,
+      "worksheet_name": "Tempo Microbial Analysis [Protocol] Worksheet Sample Incubation",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=64",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 16,
+          "name": "[Batch] Tempo Microbial Analysis Protocol",
+          "sequence": 4
+        }
+      ]
+    },
+    {
+      "step_id": 63,
+      "name": "Tempo Microbial Analysis | Sample Preparation",
+      "description": "",
+      "worksheet_id": 100,
+      "worksheet_name": "Tempo Microbial Analysis [Protocol] Worksheet Sample Preparation",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=63",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 16,
+          "name": "[Batch] Tempo Microbial Analysis Protocol",
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "step_id": 65,
+      "name": "Tempo Microbial Analysis | Sample Reading",
+      "description": "",
+      "worksheet_id": 102,
+      "worksheet_name": "Tempo Microbial Analysis [Protocol] Worksheet Sample Reading",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=65",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 16,
+          "name": "[Batch] Tempo Microbial Analysis Protocol",
+          "sequence": 5
+        }
+      ]
+    },
+    {
+      "step_id": 8,
+      "name": "Water Activity Clean Equipment",
+      "description": "Step pertaining to cleaning the equipment before use. Worksheet stores the instructions for those steps.",
+      "worksheet_id": 23,
+      "worksheet_name": "Water Activity [Protocol WS] Clean Equipment",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=8",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 3,
+          "name": "[Batch] Water Activity Protocol",
+          "sequence": 2
+        }
+      ]
+    },
+    {
+      "step_id": 9,
+      "name": "Water Activity Meter Verification",
+      "description": "This protocol step worksheet is for instructional purposes. It gives the steps from Water Activity Analysis SOP Dated 3/11/2026, Section 8.2.",
+      "worksheet_id": 24,
+      "worksheet_name": "Water Activity [Protocol WS] Meter Verification",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=9",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 3,
+          "name": "[Batch] Water Activity Protocol",
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "step_id": 10,
+      "name": "Water Activity Sample Measurements",
+      "description": "This protocol step worksheet is to gather the measurements for Water Activity tests. It gives the steps and form from Water Activity Analysis SOP Dated 3/11/2026, Section 8.4.",
+      "worksheet_id": 25,
+      "worksheet_name": "Water Activity [Protocol WS] Sample Analysis",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=10",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 3,
+          "name": "[Batch] Water Activity Protocol",
+          "sequence": 4
+        }
+      ]
+    },
+    {
+      "step_id": 36,
+      "name": "Water Activity Verify Results Went to Batch Worksheet Attached",
+      "description": "This worksheet is the batch worksheet and connected directly to test worksheets.",
+      "worksheet_id": 29,
+      "worksheet_name": "Water Activity [Batch WS]",
+      "detail_url": "https://ait.qbench.net/protocolstep?id=36",
+      "active_state": "not_exposed",
+      "completion_conditions": "not_exposed",
+      "entry_conditions": "not_exposed",
+      "equipment_assignment": "not_exposed",
+      "inventory_assignment": "not_exposed",
+      "required_optional_state": "not_exposed",
+      "required_role": "not_exposed",
+      "resource_assignment": "not_exposed",
+      "session_active": true,
+      "worksheet_version_behavior": "not_exposed",
+      "protocol_memberships": [
+        {
+          "protocol_id": 3,
+          "name": "[Batch] Water Activity Protocol",
+          "sequence": 5
+        }
+      ]
+    }
+  ]
+}

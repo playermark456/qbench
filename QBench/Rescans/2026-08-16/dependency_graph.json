@@ -1,0 +1,585 @@
+{
+  "schema_version": "1.0",
+  "scan_date": "2026-08-16",
+  "graph_kind": "offline_cross_family_dependency_reconciliation",
+  "environment": "production_read_only",
+  "evidence_scope": "tracked sanitized Phase 1-5 artifacts only",
+  "node_reference_convention": {
+    "object": "<type>:<numeric-or-stable-id>",
+    "worksheet_tab": "worksheet:<worksheet-id>:<tab-name>",
+    "type_wildcard": "<type>:*"
+  },
+  "critical_edges_scope": "Selected high-impact cross-family paths and Cannabinoid Potency baseline edges. Relationship sets and their normalized source artifacts are the exhaustive evidence.",
+  "unresolved_edges_scope": "Selected material gaps; detailed open questions remain in the family dependency maps.",
+  "evidence_levels": [
+    "directly_observed_configuration",
+    "source_observed",
+    "repository_evidence_historical",
+    "reasoned_dependency_inference",
+    "unable_to_verify"
+  ],
+  "node_sets": [
+    {
+      "type": "assay",
+      "count": 20,
+      "artifact": "Assays/assay_inventory.json",
+      "id_field": "assay_id"
+    },
+    {
+      "type": "worksheet",
+      "count": 148,
+      "artifact": "Worksheets/worksheet_detail_capture.json",
+      "id_field": "worksheet_id"
+    },
+    {
+      "type": "protocol",
+      "count": 15,
+      "artifact": "Protocols/protocol_inventory.json",
+      "id_field": "protocol_id"
+    },
+    {
+      "type": "protocol_step",
+      "count": 81,
+      "artifact": "Protocols/protocol_step_inventory.json",
+      "id_field": "step_id"
+    },
+    {
+      "type": "panel",
+      "count": 9,
+      "artifact": "Panels/panel_inventory.json",
+      "id_field": "panel_id"
+    },
+    {
+      "type": "parser",
+      "count": 10,
+      "artifact": "File_Parsers/file_parser_inventory.json",
+      "id_field": "id"
+    },
+    {
+      "type": "automation",
+      "count": 16,
+      "artifact": "Automations/automation_inventory.json",
+      "id_field": "id"
+    },
+    {
+      "type": "report",
+      "count": 3,
+      "artifact": "Reports/report_inventory.json",
+      "id_field": "id"
+    },
+    {
+      "type": "kvstore",
+      "count": 11,
+      "artifact": "Key_Value_Stores/kvstore_inventory.json",
+      "id_field": "store_id"
+    },
+    {
+      "type": "control",
+      "count": 4,
+      "artifact": "Controls/control_inventory.json",
+      "id_field": "control_id"
+    },
+    {
+      "type": "control_group",
+      "count": 2,
+      "artifact": "Control_Groups/control_group_inventory.json",
+      "id_field": "control_group_id"
+    },
+    {
+      "type": "resource_group",
+      "count": 10,
+      "artifact": "Resource_Groups/resource_group_inventory.json",
+      "id_field": "resource_group_id"
+    },
+    {
+      "type": "inventory_item",
+      "count": 158,
+      "artifact": "Inventory/inventory_item_inventory.json",
+      "id_field": "configuration_id"
+    },
+    {
+      "type": "equipment",
+      "count": 103,
+      "artifact": "Equipment/equipment_inventory.json",
+      "id_field": "equipment_id"
+    }
+  ],
+  "relationship_sets": [
+    {
+      "relationship": "assay_uses_test_worksheet",
+      "from_type": "assay",
+      "to_type": "worksheet",
+      "count": 18,
+      "evidence_level": "directly_observed_configuration",
+      "artifact": "Assays/assay_inventory.json"
+    },
+    {
+      "relationship": "assay_uses_batch_worksheet",
+      "from_type": "assay",
+      "to_type": "worksheet",
+      "count": 17,
+      "evidence_level": "directly_observed_configuration",
+      "artifact": "Assays/assay_inventory.json"
+    },
+    {
+      "relationship": "assay_assigns_protocol",
+      "from_type": "assay",
+      "to_type": "protocol",
+      "count": 12,
+      "evidence_level": "directly_observed_configuration",
+      "artifact": "Assays/assay_inventory.json"
+    },
+    {
+      "relationship": "panel_contains_assay",
+      "from_type": "panel",
+      "to_type": "assay",
+      "count": 88,
+      "evidence_level": "directly_observed_configuration",
+      "artifact": "Panels/panel_assay_relationships.csv"
+    },
+    {
+      "relationship": "protocol_assigns_ordered_step",
+      "from_type": "protocol",
+      "to_type": "protocol_step",
+      "count": 118,
+      "evidence_level": "directly_observed_configuration",
+      "artifact": "Protocols/protocol_step_relationships.csv",
+      "artifact_row_count": 120,
+      "placeholder_row_count": 2,
+      "note": "The CSV preserves one blank step placeholder row for each empty protocol (5 and 9); 118 rows contain an assigned step."
+    },
+    {
+      "relationship": "protocol_step_uses_worksheet",
+      "from_type": "protocol_step",
+      "to_type": "worksheet",
+      "count": 80,
+      "evidence_level": "directly_observed_configuration",
+      "artifact": "Protocols/protocol_step_inventory.json"
+    },
+    {
+      "relationship": "assay_assigns_resource_group",
+      "from_type": "assay",
+      "to_type": "resource_group",
+      "count": 9,
+      "evidence_level": "directly_observed_configuration",
+      "artifact": "Resource_Groups/resource_group_associations.csv"
+    },
+    {
+      "relationship": "assay_assigns_batch_control_group",
+      "from_type": "assay",
+      "to_type": "control_group",
+      "count": 0,
+      "evidence_level": "directly_observed_configuration",
+      "artifact": "Assays/assay_inventory.json"
+    },
+    {
+      "relationship": "control_group_contains_control",
+      "from_type": "control_group",
+      "to_type": "control",
+      "count": 4,
+      "evidence_level": "directly_observed_configuration",
+      "artifact": "Control_Groups/control_group_memberships.csv"
+    },
+    {
+      "relationship": "resource_group_contains_inventory_item",
+      "from_type": "resource_group",
+      "to_type": "inventory_item",
+      "count": 105,
+      "evidence_level": "directly_observed_configuration",
+      "artifact": "Resource_Groups/resource_group_inventory_items.csv"
+    },
+    {
+      "relationship": "resource_group_contains_equipment",
+      "from_type": "resource_group",
+      "to_type": "equipment",
+      "count": 137,
+      "evidence_level": "directly_observed_configuration",
+      "artifact": "Resource_Groups/resource_group_equipment.csv"
+    },
+    {
+      "relationship": "parser_configures_assay",
+      "from_type": "parser",
+      "to_type": "assay",
+      "count": 6,
+      "evidence_level": "directly_observed_configuration",
+      "artifact": "File_Parsers/file_parser_inventory.csv"
+    },
+    {
+      "relationship": "automation_condition",
+      "from_type": "automation",
+      "to_type": "configuration_target",
+      "count": 18,
+      "evidence_level": "directly_observed_configuration",
+      "artifact": "Automations/automation_conditions.csv"
+    },
+    {
+      "relationship": "automation_action",
+      "from_type": "automation",
+      "to_type": "worksheet_field",
+      "count": 90,
+      "evidence_level": "directly_observed_configuration",
+      "artifact": "Automations/automation_actions.csv"
+    },
+    {
+      "relationship": "report_source_routes_assay",
+      "from_type": "report",
+      "to_type": "assay",
+      "count": 18,
+      "evidence_level": "source_observed",
+      "artifact": "report_dependency_map.md",
+      "note": "Report 26 routes 16 current assay IDs and report 44 reads assays 2 and 11."
+    },
+    {
+      "relationship": "kvstore_current_assignment",
+      "from_type": "kvstore",
+      "to_type": "field_or_worksheet_or_assay_or_panel_or_protocol",
+      "count": 0,
+      "evidence_level": "unable_to_verify",
+      "artifact": "kvstore_dependency_analysis.md"
+    },
+    {
+      "relationship": "kvstore_historical_worksheet_candidate",
+      "from_type": "kvstore",
+      "to_type": "worksheet",
+      "count": 23,
+      "evidence_level": "repository_evidence_historical",
+      "artifact": "kvstore_dependency_analysis.md"
+    }
+  ],
+  "critical_edges": [
+    {
+      "from": "parser:50",
+      "to": "assay:8",
+      "relationship": "configured_for_assay",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "assay:8",
+      "to": "worksheet:43",
+      "relationship": "uses_batch_worksheet",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "parser:50",
+      "to": "worksheet:43:Results",
+      "relationship": "writes_dynamic_results_tab",
+      "evidence_level": "reasoned_dependency_inference",
+      "join_note": "Worksheet ID follows the direct assay binding; source names the Results tab."
+    },
+    {
+      "from": "worksheet:43",
+      "to": "automation:17",
+      "relationship": "satisfies_worksheet_condition",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "automation:17",
+      "to": "worksheet:42",
+      "relationship": "writes_26_test_worksheet_fields",
+      "evidence_level": "reasoned_dependency_inference"
+    },
+    {
+      "from": "worksheet:42",
+      "to": "report:26",
+      "relationship": "renders_report_results_for_assay_8",
+      "evidence_level": "reasoned_dependency_inference"
+    },
+    {
+      "from": "parser:46",
+      "to": "assay:2",
+      "relationship": "configured_for_assay",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "parser:46",
+      "to": "worksheet:7:Results",
+      "relationship": "writes_dynamic_results_tab",
+      "evidence_level": "reasoned_dependency_inference",
+      "join_note": "Worksheet ID follows the direct assay binding; source names the Results tab."
+    },
+    {
+      "from": "worksheet:7",
+      "to": "automation:11",
+      "relationship": "satisfies_assay_and_worksheet_conditions",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "automation:11",
+      "to": "worksheet:8",
+      "relationship": "writes_result_1_through_29_and_df",
+      "evidence_level": "reasoned_dependency_inference"
+    },
+    {
+      "from": "worksheet:8",
+      "to": "report:26",
+      "relationship": "renders_potency_named_cells",
+      "evidence_level": "reasoned_dependency_inference"
+    },
+    {
+      "from": "worksheet:8",
+      "to": "report:44",
+      "relationship": "supplies_potency_values",
+      "evidence_level": "reasoned_dependency_inference"
+    },
+    {
+      "from": "automation:16",
+      "to": "worksheet:73",
+      "relationship": "writes_mg_serving_1_after_status_transition",
+      "evidence_level": "reasoned_dependency_inference"
+    },
+    {
+      "from": "parser:41",
+      "to": "assay:3",
+      "relationship": "configured_for_assay",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "assay:3",
+      "to": "worksheet:5",
+      "relationship": "uses_batch_worksheet",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "worksheet:5",
+      "to": "automation:1",
+      "relationship": "satisfies_worksheet_condition",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "automation:1",
+      "to": "worksheet:6",
+      "relationship": "writes_test_worksheet_fields",
+      "evidence_level": "reasoned_dependency_inference"
+    },
+    {
+      "from": "worksheet:6",
+      "to": "report:26",
+      "relationship": "renders_report_results_for_assay_3",
+      "evidence_level": "reasoned_dependency_inference"
+    },
+    {
+      "from": "parser:47",
+      "to": "assay:4",
+      "relationship": "configured_for_assay",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "assay:4",
+      "to": "worksheet:15",
+      "relationship": "uses_batch_worksheet",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "assay:5",
+      "to": "worksheet:15",
+      "relationship": "uses_batch_worksheet",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "worksheet:15",
+      "to": "automation:8",
+      "relationship": "satisfies_worksheet_condition",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "automation:8",
+      "to": "worksheet:14",
+      "relationship": "writes_pesticides_results_and_df",
+      "evidence_level": "reasoned_dependency_inference"
+    },
+    {
+      "from": "automation:8",
+      "to": "worksheet:10",
+      "relationship": "writes_mycotoxin_results_and_df",
+      "evidence_level": "reasoned_dependency_inference"
+    },
+    {
+      "from": "worksheet:14",
+      "to": "report:26",
+      "relationship": "renders_report_results_for_assay_4",
+      "evidence_level": "reasoned_dependency_inference"
+    },
+    {
+      "from": "worksheet:10",
+      "to": "report:26",
+      "relationship": "renders_report_results_for_assay_5",
+      "evidence_level": "reasoned_dependency_inference"
+    },
+    {
+      "from": "assay:2",
+      "to": "protocol:4",
+      "relationship": "assigns_batch_protocol",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "protocol:4",
+      "to": "worksheet:32",
+      "relationship": "assigns_at_sequence_4",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "protocol:4",
+      "to": "worksheet:33",
+      "relationship": "assigns_at_sequence_5",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "protocol:4",
+      "to": "worksheet:34",
+      "relationship": "assigns_at_sequence_6",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "protocol:4",
+      "to": "worksheet:35",
+      "relationship": "assigns_at_sequence_7",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "protocol:4",
+      "to": "worksheet:36",
+      "relationship": "assigns_at_sequence_8",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "protocol:4",
+      "to": "worksheet:37",
+      "relationship": "assigns_at_sequence_21",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "protocol:4",
+      "to": "worksheet:38",
+      "relationship": "assigns_at_sequence_22",
+      "evidence_level": "directly_observed_configuration"
+    },
+    {
+      "from": "protocol:4",
+      "to": "worksheet:40",
+      "relationship": "assigns_shared_general_step_at_sequence_23",
+      "evidence_level": "directly_observed_configuration"
+    }
+  ],
+  "unresolved_or_absent_edges": [
+    {
+      "from": "protocol_step:27",
+      "to": "worksheet:*",
+      "relationship": "step_worksheet_assignment",
+      "state": "absent",
+      "reason": "Heavy Metals protocol 2 sequence 5 assigns step 27, but the step has no worksheet."
+    },
+    {
+      "from": "protocol_step:83",
+      "to": "worksheet:151",
+      "relationship": "active_worksheet_version",
+      "state": "absent",
+      "reason": "Worksheet 151 has one Draft version and no active version."
+    },
+    {
+      "from": "protocol:4",
+      "to": "worksheet:39",
+      "relationship": "expected_calculation_reporting_step_assignment",
+      "state": "absent",
+      "reason": "Step 21 and active worksheet 39 exist but have zero protocol memberships."
+    },
+    {
+      "from": "protocol_step:20",
+      "to": "protocol:4",
+      "relationship": "duplicate_quality_control_step_assignment",
+      "state": "absent",
+      "reason": "Step 20 points to worksheet 38 but is unassigned."
+    },
+    {
+      "from": "protocol_step:74",
+      "to": "protocol:4",
+      "relationship": "patch_preparation_assignment",
+      "state": "absent",
+      "reason": "Patch step 74 and worksheet 140 are active definitions with zero protocol memberships."
+    },
+    {
+      "from": "protocol_step:75",
+      "to": "protocol:4",
+      "relationship": "patch_preparation_assignment",
+      "state": "absent",
+      "reason": "Patch step 75 and worksheet 141 are active definitions with zero protocol memberships."
+    },
+    {
+      "from": "protocol_step:76",
+      "to": "protocol:4",
+      "relationship": "patch_preparation_assignment",
+      "state": "absent",
+      "reason": "Patch step 76 and worksheet 142 are active definitions with zero protocol memberships."
+    },
+    {
+      "from": "protocol:4",
+      "to": "worksheet:41",
+      "relationship": "final_review_definition",
+      "state": "configured_but_no_version",
+      "reason": "The assigned worksheet object is active and has zero versions."
+    },
+    {
+      "from": "protocol:9",
+      "to": "assay:8",
+      "relationship": "terpenes_protocol_assignment",
+      "state": "absent",
+      "reason": "Protocol 9 is empty and assay 8 has no configured protocol."
+    },
+    {
+      "from": "automation:3",
+      "to": "assay:5",
+      "relationship": "quantitative_mycotoxin_path",
+      "state": "unresolved",
+      "reason": "Automation 3 watches worksheet 9 while assay 5 is bound to shared worksheet 15 and protocol 7."
+    },
+    {
+      "from": "automation:14",
+      "to": "assay:19",
+      "relationship": "ym_batch_to_test_path",
+      "state": "unresolved",
+      "reason": "Automation 14 watches worksheet 89 while assay 19 configures worksheet 94 as both Test and Batch."
+    },
+    {
+      "from": "automation:10",
+      "to": "worksheet:16",
+      "relationship": "pesticides_quantitative_destination",
+      "state": "requires_current_export",
+      "reason": "The configured destination name is absent from the last tracked native export."
+    },
+    {
+      "from": "report:26",
+      "to": "assay:21",
+      "relationship": "report_route",
+      "state": "absent",
+      "reason": "Assay 21 is not present in report 26's captured active source map."
+    },
+    {
+      "from": "report:44",
+      "to": "named_cell:pass_fail",
+      "relationship": "authoritative_homogeneity_status",
+      "state": "wrong_precedence",
+      "reason": "Captured source reads homogeneity_metrc before the canonical pass_fail value."
+    },
+    {
+      "from": "report:44",
+      "to": "named_cell:report_results",
+      "relationship": "standalone_homogeneity_table_render",
+      "state": "absent",
+      "reason": "Captured source does not render the canonical report_results range."
+    },
+    {
+      "from": "kvstore:*",
+      "to": "current_field_or_worksheet_or_assay_or_panel_or_protocol",
+      "relationship": "current_assignment",
+      "state": "unable_to_verify",
+      "reason": "Assignment controls and current native worksheet definitions were not exposed."
+    }
+  ],
+  "limitations": [
+    "No current native worksheet Export Spreadsheet artifact was obtained for any of the 161 required versions.",
+    "Protocol required/optional, entry/completion, resource, equipment, inventory, and version-binding behavior was not exposed.",
+    "No-Code parser mapping rows were not exposed without Edit.",
+    "Automation runtime ordering, retries, idempotency, transactionality, and history behavior were not tested.",
+    "Report runtime rendering and pagination were not generated or previewed.",
+    "Historical KV-store edges are candidates, not current assignments."
+  ]
+}

@@ -1,0 +1,1144 @@
+{
+  "scan_date": "2026-08-16",
+  "count": 3,
+  "items": [
+    {
+      "capture_timestamp_utc": "2026-08-17T00:42:16.444Z",
+      "url": "https://ait.qbench.net/templates/report?id=26",
+      "id": 26,
+      "name": "Certificate of Analysis Report",
+      "report_type": "Sample Report",
+      "editor_type": "Visual Editor",
+      "status": "Active",
+      "href": "/templates/report?id=26",
+      "details": [
+        {
+          "text": "Report Template Configuration  \n\nReport Template Configurations are used to customize reports based on specifications.\n\nTitle *\nEditor Type\n\nVisual Editor\n\nReport Level *\nSample\nReport File Name\n(Report File Name can be in jinja code. Learn more.)\nPassword\n(Report Password can be in jinja code. Learn more.)\nDescription\n Automatically include page numbers on report\n Automatically compress report upon generation\n Active\nSave Delete",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": "Certificate of Analysis Report",
+              "placeholder": "Title",
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen8",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "File Name",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Password",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Description",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": ""
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "design": {
+        "panes": [
+          {
+            "text": "Version\n24 - Terpenes final - APPROVED (ACTIVE)\n×\nWarning: This template configuration has one or more preceding DRAFT/PENDING version(s) available. Please submit the DRAFT version(s) for approval and/or reject all the PENDING version(s) if applicable.\nSet Active\nTemplate Design\nHeader Body Footer Page Setup\nInsert Macro Insert Variable\nFile\nEdit\nView\nInsert\nFormat\nTools\nTable\nHelp\ndiv\nPress Alt+0 for help\n46 words\nSave As New Version Save Draft Full Screen\nPreview\n Preview\nSample ID\nSelect sample\nTest IDs (Select All)   \nSignature\nNone",
+            "selected_values": [],
+            "controls": [
+              {
+                "type": "text",
+                "name": null,
+                "id": "s2id_autogen11",
+                "value": null,
+                "placeholder": null,
+                "checked": null
+              },
+              {
+                "type": "text",
+                "name": null,
+                "id": "s2id_autogen17",
+                "value": null,
+                "placeholder": null,
+                "checked": null
+              },
+              {
+                "type": "text",
+                "name": null,
+                "id": "s2id_autogen18",
+                "value": null,
+                "placeholder": "",
+                "checked": null
+              },
+              {
+                "type": "text",
+                "name": null,
+                "id": "s2id_autogen12",
+                "value": null,
+                "placeholder": null,
+                "checked": null
+              }
+            ],
+            "tables": []
+          }
+        ],
+        "source_capture_state": "sanitized_visible_editor_html",
+        "source_version_display": "24 - Terpenes final - APPROVED (ACTIVE)",
+        "source_artifacts": {
+          "header": "QBench/Rescans/2026-08-16/Reports/26/header.html",
+          "body": "QBench/Rescans/2026-08-16/Reports/26/body.html",
+          "footer": "QBench/Rescans/2026-08-16/Reports/26/footer.html"
+        },
+        "source_metadata": {
+          "header": {
+            "context": "report:26:header",
+            "email_count": 0,
+            "phone_count": 0,
+            "opaque_blob_url_count": 1,
+            "embedded_image_data_count": 0,
+            "raw_length": 5741,
+            "pre_write_sanitized_character_count": 5702,
+            "pre_write_sanitized_sha256": "ce41fcf4f0328739d11dfa578f544aedb1903792bdc4941b909f6343a0ccdfd1",
+            "persisted_artifact_byte_count": 5705,
+            "persisted_artifact_sha256": "925ac1bacab72cf741e990c31e5ea6a2a44b47998a0624b8d712db18ab2155f9"
+          },
+          "body": {
+            "context": "report:26:body",
+            "email_count": 0,
+            "phone_count": 0,
+            "opaque_blob_url_count": 3,
+            "embedded_image_data_count": 4,
+            "raw_length": 47789,
+            "pre_write_sanitized_character_count": 47478,
+            "pre_write_sanitized_sha256": "37540afdaf7531562de38776056d909549eaca96c382a3128d84edf2a99fc91a",
+            "persisted_artifact_byte_count": 47479,
+            "persisted_artifact_sha256": "d17d156e7c03ac21382353a0d43bc9a544027e2b7e359c304232a9a32cbd603b"
+          },
+          "footer": {
+            "context": "report:26:footer",
+            "email_count": 0,
+            "phone_count": 0,
+            "opaque_blob_url_count": 2,
+            "embedded_image_data_count": 0,
+            "raw_length": 5089,
+            "pre_write_sanitized_character_count": 5011,
+            "pre_write_sanitized_sha256": "2abc876d358c2b6ea6b0c27ed24a22be45ad2ec8a8bb96b9f6cf73159d92e07c",
+            "persisted_artifact_byte_count": 5014,
+            "persisted_artifact_sha256": "b43e4d6c61589670cb40d5cef714b59ef25ab17f6c970dfdc540e5948479da0c"
+          }
+        }
+      },
+      "page_setup": [
+        {
+          "text": "Version\n24 - Terpenes final - APPROVED (ACTIVE)\n×\nWarning: This template configuration has one or more preceding DRAFT/PENDING version(s) available. Please submit the DRAFT version(s) for approval and/or reject all the PENDING version(s) if applicable.\nSet Active\nTemplate Design\nHeader Body Footer Page Setup\nInsert Macro Insert Variable\nPage Margins (Inches)\nLeft\nTop\nRight\nBottom\nHeader/Footer Size (Inches)\nHeader Top Margin Offset\nHeader Height\nFooter Bottom Margin Offset\nFooter Height\nPage Size (Inches)\nWidth\nHeight\nSave As New Version Save Draft Full Screen\nPreview\n Preview\nSample ID\nSelect sample\nTest IDs (Select All)   \nSignature\nNone",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen11",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Left",
+              "id": null,
+              "value": "1",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Top",
+              "id": null,
+              "value": "1",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Right",
+              "id": null,
+              "value": "1",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Bottom",
+              "id": null,
+              "value": "1",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "HeaderTopMarginOffset",
+              "id": null,
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "HeaderHeight",
+              "id": null,
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "FooterBottomMarginOffset",
+              "id": null,
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "FooterHeight",
+              "id": null,
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Width",
+              "id": null,
+              "value": "8.5",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Height",
+              "id": null,
+              "value": "11",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen17",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen18",
+              "value": null,
+              "placeholder": "",
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen12",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "versions": [
+        {
+          "text": "Versions\n\nView all versions and their statuses.\n\nVersion\tStatus\tNotes\n24 - Terpenes final\t APPROVED Active\t\n23 - Time Zone correction\t APPROVED\t\n22 - updates\t APPROVED\t\n21 - footer update\t APPROVED\t\n20 - Homogeneity approved 2\t APPROVED\t\n19 - homogenetiy approved\t APPROVED\t\n18 - homogeneity test\t\nPENDING\n\t+ Add\n17 - THC hex edit 2\t APPROVED\t\n16 - THC hex fixed\t APPROVED\t\n15 - sample received fixed\t APPROVED\t\n14 - Sample img fixed\t APPROVED\t\n13 - Homogeneity\t APPROVED\t\n12 - Fixed\t APPROVED\t\n11 - Approved 2.0\t APPROVED\t\n10 - Approved\t APPROVED\t\n9 - update\tDRAFT\t+ Add\n8 - Updated THC hexagon %\t\nPENDING\n\t+ Add\n7\t\nPENDING\n\t+ Add\n6\tDRAFT\t+ Add\n5 - [AIT-82] Update protocol steps\t APPROVED\t\n4 - [AIT-82] Multiple microbial assays + small adjustments for CP, equations and location\t APPROVED\t\n3\tAPPROVED\t\n2\tDRAFT\t+ Add\n1\t\nPENDING\n\t+ Add",
+          "selected_values": [],
+          "controls": [],
+          "tables": [
+            [
+              "Version\tStatus\tNotes",
+              "24 - Terpenes final\t APPROVED Active",
+              "23 - Time Zone correction\t APPROVED",
+              "22 - updates\t APPROVED",
+              "21 - footer update\t APPROVED",
+              "20 - Homogeneity approved 2\t APPROVED",
+              "19 - homogenetiy approved\t APPROVED",
+              "18 - homogeneity test\t\nPENDING\n\t+ Add",
+              "17 - THC hex edit 2\t APPROVED",
+              "16 - THC hex fixed\t APPROVED",
+              "15 - sample received fixed\t APPROVED",
+              "14 - Sample img fixed\t APPROVED",
+              "13 - Homogeneity\t APPROVED",
+              "12 - Fixed\t APPROVED",
+              "11 - Approved 2.0\t APPROVED",
+              "10 - Approved\t APPROVED",
+              "9 - update\tDRAFT\t+ Add",
+              "8 - Updated THC hexagon %\t\nPENDING\n\t+ Add",
+              "7\t\nPENDING\n\t+ Add",
+              "6\tDRAFT\t+ Add",
+              "5 - [AIT-82] Update protocol steps\t APPROVED",
+              "4 - [AIT-82] Multiple microbial assays + small adjustments for CP, equations and location\t APPROVED",
+              "3\tAPPROVED",
+              "2\tDRAFT\t+ Add",
+              "1\t\nPENDING\n\t+ Add"
+            ]
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "file_name": "AIT Watermark.png",
+          "attachment_version": 1,
+          "uploaded_by": "omitted_staff_identity",
+          "download": "not_used",
+          "content_omitted": false,
+          "public_control_displayed": "Make Public"
+        },
+        {
+          "file_name": "CoA Signatures.png",
+          "attachment_version": 3,
+          "uploaded_by": "omitted_staff_identity",
+          "download": "not_used",
+          "content_omitted": true,
+          "public_control_displayed": "Make Public"
+        },
+        {
+          "file_name": "Header Image.png",
+          "attachment_version": 2,
+          "uploaded_by": "omitted_staff_identity",
+          "download": "not_used",
+          "content_omitted": false,
+          "public_control_displayed": "Make Public"
+        },
+        {
+          "file_name": "hexagon-grid-8tile-1336x618.png",
+          "attachment_version": 1,
+          "uploaded_by": "omitted_staff_identity",
+          "download": "not_used",
+          "content_omitted": false,
+          "public_control_displayed": "Make Public"
+        },
+        {
+          "file_name": "hexagon-grid.png",
+          "attachment_version": 1,
+          "uploaded_by": "omitted_staff_identity",
+          "download": "not_used",
+          "content_omitted": false,
+          "public_control_displayed": "Make Public"
+        },
+        {
+          "file_name": "Quality Control Verified.png",
+          "attachment_version": 1,
+          "uploaded_by": "omitted_staff_identity",
+          "download": "not_used",
+          "content_omitted": false,
+          "public_control_displayed": "Make Public"
+        }
+      ],
+      "limitations": [
+        "Report password value was not inspected or captured.",
+        "No Preview, report generation, sample/test/signature selection, Save, version action, Set Active, upload, Make Public, or download was used.",
+        "Attachment uploader identities were omitted and signature-image content was not opened or downloaded.",
+        "Opaque blob URLs and embedded image payloads were replaced in committed HTML.",
+        "Screenshots omitted because safe element-only capture was unavailable."
+      ]
+    },
+    {
+      "capture_timestamp_utc": "2026-08-17T00:42:55.878Z",
+      "url": "https://ait.qbench.net/templates/report?id=44",
+      "id": 44,
+      "name": "Homogeneity",
+      "report_type": "Sample Report",
+      "editor_type": "Visual Editor",
+      "status": "Active",
+      "href": "/templates/report?id=44",
+      "details": [
+        {
+          "text": "Report Template Configuration  \n\nReport Template Configurations are used to customize reports based on specifications.\n\nTitle *\nEditor Type\n\nVisual Editor\n\nReport Level *\nSample\nReport File Name\n(Report File Name can be in jinja code. Learn more.)\nPassword\n(Report Password can be in jinja code. Learn more.)\nDescription\n Automatically include page numbers on report\nPage Number Position\nBottom Middle\n Automatically compress report upon generation\n Active\nSave Delete",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": "Homogeneity",
+              "placeholder": "Title",
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen8",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "File Name",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Password",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Description",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": ""
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen10",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": ""
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "design": {
+        "panes": [
+          {
+            "text": "Version\n2 - 3.0 - APPROVED (ACTIVE)\nSet Active\nTemplate Design\nHeader Body Footer Page Setup\nInsert Macro Insert Variable\nFile\nEdit\nView\nInsert\nFormat\nTools\nTable\nHelp\ndiv\nPress Alt+0 for help\n46 words\nSave As New Version Save Draft Full Screen\nPreview\n Preview\nSample ID\nSelect sample\nTest IDs (Select All)   \nSignature\nNone",
+            "selected_values": [],
+            "controls": [
+              {
+                "type": "text",
+                "name": null,
+                "id": "s2id_autogen11",
+                "value": null,
+                "placeholder": null,
+                "checked": null
+              },
+              {
+                "type": "text",
+                "name": null,
+                "id": "s2id_autogen17",
+                "value": null,
+                "placeholder": null,
+                "checked": null
+              },
+              {
+                "type": "text",
+                "name": null,
+                "id": "s2id_autogen18",
+                "value": null,
+                "placeholder": "",
+                "checked": null
+              },
+              {
+                "type": "text",
+                "name": null,
+                "id": "s2id_autogen12",
+                "value": null,
+                "placeholder": null,
+                "checked": null
+              }
+            ],
+            "tables": []
+          }
+        ],
+        "source_capture_state": "sanitized_visible_editor_html",
+        "source_version_display": "2 - 3.0 - APPROVED (ACTIVE)",
+        "source_artifacts": {
+          "header": "QBench/Rescans/2026-08-16/Reports/44/header.html",
+          "body": "QBench/Rescans/2026-08-16/Reports/44/body.html",
+          "footer": "QBench/Rescans/2026-08-16/Reports/44/footer.html"
+        },
+        "source_metadata": {
+          "header": {
+            "context": "report:44:header",
+            "email_count": 0,
+            "phone_count": 0,
+            "opaque_blob_url_count": 1,
+            "embedded_image_data_count": 0,
+            "raw_length": 5741,
+            "pre_write_sanitized_character_count": 5702,
+            "pre_write_sanitized_sha256": "ce41fcf4f0328739d11dfa578f544aedb1903792bdc4941b909f6343a0ccdfd1",
+            "persisted_artifact_byte_count": 5705,
+            "persisted_artifact_sha256": "925ac1bacab72cf741e990c31e5ea6a2a44b47998a0624b8d712db18ab2155f9"
+          },
+          "body": {
+            "context": "report:44:body",
+            "email_count": 0,
+            "phone_count": 0,
+            "opaque_blob_url_count": 0,
+            "embedded_image_data_count": 0,
+            "raw_length": 33142,
+            "pre_write_sanitized_character_count": 33142,
+            "pre_write_sanitized_sha256": "53fc39f571fef450a9e30abd94e56c01911177b095aab32852db05056167426f",
+            "persisted_artifact_byte_count": 33145,
+            "persisted_artifact_sha256": "4597f8d2ae2ca563d2cb797be9c390177db26b7658377e2ec9d9086cc68f7126"
+          },
+          "footer": {
+            "context": "report:44:footer",
+            "email_count": 0,
+            "phone_count": 0,
+            "opaque_blob_url_count": 2,
+            "embedded_image_data_count": 0,
+            "raw_length": 5026,
+            "pre_write_sanitized_character_count": 4948,
+            "pre_write_sanitized_sha256": "b91b6533c06dd703f5d93e0165e7000bd96015e7ed9e847ff7635f35c08a4f8d",
+            "persisted_artifact_byte_count": 4951,
+            "persisted_artifact_sha256": "75d143d057ab06c2d03408608d51e9f45ce461334dc0f46a0c28409767c619aa"
+          }
+        }
+      },
+      "page_setup": [
+        {
+          "text": "Version\n2 - 3.0 - APPROVED (ACTIVE)\nSet Active\nTemplate Design\nHeader Body Footer Page Setup\nInsert Macro Insert Variable\nPage Margins (Inches)\nLeft\nTop\nRight\nBottom\nHeader/Footer Size (Inches)\nHeader Top Margin Offset\nHeader Height\nFooter Bottom Margin Offset\nFooter Height\nPage Size (Inches)\nWidth\nHeight\nSave As New Version Save Draft Full Screen\nPreview\n Preview\nSample ID\nSelect sample\nTest IDs (Select All)   \nSignature\nNone",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen11",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Left",
+              "id": null,
+              "value": "1",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Top",
+              "id": null,
+              "value": "1",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Right",
+              "id": null,
+              "value": "1",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Bottom",
+              "id": null,
+              "value": "1",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "HeaderTopMarginOffset",
+              "id": null,
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "HeaderHeight",
+              "id": null,
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "FooterBottomMarginOffset",
+              "id": null,
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "FooterHeight",
+              "id": null,
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Width",
+              "id": null,
+              "value": "8.5",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Height",
+              "id": null,
+              "value": "11",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen17",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen18",
+              "value": null,
+              "placeholder": "",
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen12",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "versions": [
+        {
+          "text": "Versions\n\nView all versions and their statuses.\n\nVersion\tStatus\tNotes\n2 - 3.0\t APPROVED Active\t\n1 - homogeneity 2\t APPROVED",
+          "selected_values": [],
+          "controls": [],
+          "tables": [
+            [
+              "Version\tStatus\tNotes",
+              "2 - 3.0\t APPROVED Active",
+              "1 - homogeneity 2\t APPROVED"
+            ]
+          ]
+        }
+      ],
+      "attachments": [],
+      "limitations": [
+        "Report password value was not inspected or captured.",
+        "No Preview, report generation, sample/test/signature selection, Save, version action, Set Active, upload, Make Public, or download was used.",
+        "Attachment uploader identities were omitted and signature-image content was not opened or downloaded.",
+        "Opaque blob URLs and embedded image payloads were replaced in committed HTML.",
+        "Screenshots omitted because safe element-only capture was unavailable."
+      ]
+    },
+    {
+      "capture_timestamp_utc": "2026-08-17T00:43:36.307Z",
+      "url": "https://ait.qbench.net/templates/report?id=20",
+      "id": 20,
+      "name": "1Certificate of Analysis Report",
+      "report_type": "Sample Report",
+      "editor_type": "Visual Editor",
+      "status": "Inactive",
+      "href": "/templates/report?id=20",
+      "details": [
+        {
+          "text": "Report Template Configuration  \n\nReport Template Configurations are used to customize reports based on specifications.\n\nTitle *\nEditor Type\n\nVisual Editor\n\nReport Level *\nSample\nReport File Name\n(Report File Name can be in jinja code. Learn more.)\nPassword\n(Report Password can be in jinja code. Learn more.)\nDescription\n Automatically include page numbers on report\n Automatically compress report upon generation\n Active\nSave Delete",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": "1Certificate of Analysis Report",
+              "placeholder": "Title",
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen8",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "File Name",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Password",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Description",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "design": {
+        "panes": [
+          {
+            "text": "Version\n1 - APPROVED (ACTIVE)\nSet Active\nTemplate Design\nHeader Body Footer Page Setup\nInsert Macro Insert Variable\nFile\nEdit\nView\nInsert\nFormat\nTools\nTable\nHelp\ndiv\nPress Alt+0 for help\n22 words\nSave As New Version Save Draft Full Screen\nPreview\n Preview\nSample ID\nSelect sample\nTest IDs (Select All)   \nSignature\nNone",
+            "selected_values": [],
+            "controls": [
+              {
+                "type": "text",
+                "name": null,
+                "id": "s2id_autogen11",
+                "value": null,
+                "placeholder": null,
+                "checked": null
+              },
+              {
+                "type": "text",
+                "name": null,
+                "id": "s2id_autogen17",
+                "value": null,
+                "placeholder": null,
+                "checked": null
+              },
+              {
+                "type": "text",
+                "name": null,
+                "id": "s2id_autogen18",
+                "value": null,
+                "placeholder": "",
+                "checked": null
+              },
+              {
+                "type": "text",
+                "name": null,
+                "id": "s2id_autogen12",
+                "value": null,
+                "placeholder": null,
+                "checked": null
+              }
+            ],
+            "tables": []
+          }
+        ],
+        "source_capture_state": "sanitized_visible_editor_html",
+        "source_version_display": "1 - APPROVED (ACTIVE)",
+        "source_artifacts": {
+          "header": "QBench/Rescans/2026-08-16/Reports/20/header.html",
+          "body": "QBench/Rescans/2026-08-16/Reports/20/body.html",
+          "footer": "QBench/Rescans/2026-08-16/Reports/20/footer.html"
+        },
+        "source_metadata": {
+          "header": {
+            "context": "report:20:header",
+            "email_count": 3,
+            "phone_count": 1,
+            "opaque_blob_url_count": 1,
+            "embedded_image_data_count": 0,
+            "raw_length": 3113,
+            "pre_write_sanitized_character_count": 3068,
+            "pre_write_sanitized_sha256": "b8ec778757248678f348b7dc32c72146295ebebfc34a2487fc2df3966eb99afd",
+            "persisted_artifact_byte_count": 3069,
+            "persisted_artifact_sha256": "0cffdf9acb13f9d11668cefbd5c44f88aca772b1223d063cdb06e85537304840"
+          },
+          "body": {
+            "context": "report:20:body",
+            "email_count": 0,
+            "phone_count": 0,
+            "opaque_blob_url_count": 1,
+            "embedded_image_data_count": 0,
+            "raw_length": 12283,
+            "pre_write_sanitized_character_count": 12244,
+            "pre_write_sanitized_sha256": "1a618cc372a538e0ca62e60f94d9d89febc62ab2dd95f45faf6e0d6144c02160",
+            "persisted_artifact_byte_count": 12247,
+            "persisted_artifact_sha256": "5ea7b9bd1e5ff88d2908941a8b81673578061c5d2edc057feca45b10f1e1865e"
+          },
+          "footer": {
+            "context": "report:20:footer",
+            "email_count": 0,
+            "phone_count": 0,
+            "opaque_blob_url_count": 0,
+            "embedded_image_data_count": 0,
+            "raw_length": 1857,
+            "pre_write_sanitized_character_count": 1857,
+            "pre_write_sanitized_sha256": "4e407e384aaca33d27ef6b65ab388b720232428e6f036dae56bb658961d1821b",
+            "persisted_artifact_byte_count": 1858,
+            "persisted_artifact_sha256": "88bc319d1c1a0e1a5dfd520bb34a8312fc5464cca1b8bcdcc13f0f9cd7ab5970"
+          }
+        }
+      },
+      "page_setup": [
+        {
+          "text": "Version\n1 - APPROVED (ACTIVE)\nSet Active\nTemplate Design\nHeader Body Footer Page Setup\nInsert Macro Insert Variable\nPage Margins (Inches)\nLeft\nTop\nRight\nBottom\nHeader/Footer Size (Inches)\nHeader Top Margin Offset\nHeader Height\nFooter Bottom Margin Offset\nFooter Height\nPage Size (Inches)\nWidth\nHeight\nSave As New Version Save Draft Full Screen\nPreview\n Preview\nSample ID\nSelect sample\nTest IDs (Select All)   \nSignature\nNone",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen11",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Left",
+              "id": null,
+              "value": "1",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Top",
+              "id": null,
+              "value": "1",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Right",
+              "id": null,
+              "value": "1",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Bottom",
+              "id": null,
+              "value": "1",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "HeaderTopMarginOffset",
+              "id": null,
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "HeaderHeight",
+              "id": null,
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "FooterBottomMarginOffset",
+              "id": null,
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "FooterHeight",
+              "id": null,
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Width",
+              "id": null,
+              "value": "8.5",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "number",
+              "name": "Height",
+              "id": null,
+              "value": "11",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen17",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen18",
+              "value": null,
+              "placeholder": "",
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen12",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "versions": [
+        {
+          "text": "Versions\n\nView all versions and their statuses.\n\nVersion\tStatus\tNotes\n1\t APPROVED Active",
+          "selected_values": [],
+          "controls": [],
+          "tables": [
+            [
+              "Version\tStatus\tNotes",
+              "1\t APPROVED Active"
+            ]
+          ]
+        }
+      ],
+      "attachments": [],
+      "limitations": [
+        "Report password value was not inspected or captured.",
+        "No Preview, report generation, sample/test/signature selection, Save, version action, Set Active, upload, Make Public, or download was used.",
+        "Attachment uploader identities were omitted and signature-image content was not opened or downloaded.",
+        "Opaque blob URLs and embedded image payloads were replaced in committed HTML.",
+        "Screenshots omitted because safe element-only capture was unavailable."
+      ]
+    }
+  ],
+  "source_sanitization": [
+    {
+      "context": "report:26:header",
+      "email_count": 0,
+      "phone_count": 0,
+      "opaque_blob_url_count": 1,
+      "embedded_image_data_count": 0,
+      "raw_length": 5741,
+      "pre_write_sanitized_character_count": 5702,
+      "pre_write_sanitized_sha256": "ce41fcf4f0328739d11dfa578f544aedb1903792bdc4941b909f6343a0ccdfd1",
+      "persisted_artifact_byte_count": 5705,
+      "persisted_artifact_sha256": "925ac1bacab72cf741e990c31e5ea6a2a44b47998a0624b8d712db18ab2155f9"
+    },
+    {
+      "context": "report:26:body",
+      "email_count": 0,
+      "phone_count": 0,
+      "opaque_blob_url_count": 3,
+      "embedded_image_data_count": 4,
+      "raw_length": 47789,
+      "pre_write_sanitized_character_count": 47478,
+      "pre_write_sanitized_sha256": "37540afdaf7531562de38776056d909549eaca96c382a3128d84edf2a99fc91a",
+      "persisted_artifact_byte_count": 47479,
+      "persisted_artifact_sha256": "d17d156e7c03ac21382353a0d43bc9a544027e2b7e359c304232a9a32cbd603b"
+    },
+    {
+      "context": "report:26:footer",
+      "email_count": 0,
+      "phone_count": 0,
+      "opaque_blob_url_count": 2,
+      "embedded_image_data_count": 0,
+      "raw_length": 5089,
+      "pre_write_sanitized_character_count": 5011,
+      "pre_write_sanitized_sha256": "2abc876d358c2b6ea6b0c27ed24a22be45ad2ec8a8bb96b9f6cf73159d92e07c",
+      "persisted_artifact_byte_count": 5014,
+      "persisted_artifact_sha256": "b43e4d6c61589670cb40d5cef714b59ef25ab17f6c970dfdc540e5948479da0c"
+    },
+    {
+      "context": "report:44:header",
+      "email_count": 0,
+      "phone_count": 0,
+      "opaque_blob_url_count": 1,
+      "embedded_image_data_count": 0,
+      "raw_length": 5741,
+      "pre_write_sanitized_character_count": 5702,
+      "pre_write_sanitized_sha256": "ce41fcf4f0328739d11dfa578f544aedb1903792bdc4941b909f6343a0ccdfd1",
+      "persisted_artifact_byte_count": 5705,
+      "persisted_artifact_sha256": "925ac1bacab72cf741e990c31e5ea6a2a44b47998a0624b8d712db18ab2155f9"
+    },
+    {
+      "context": "report:44:body",
+      "email_count": 0,
+      "phone_count": 0,
+      "opaque_blob_url_count": 0,
+      "embedded_image_data_count": 0,
+      "raw_length": 33142,
+      "pre_write_sanitized_character_count": 33142,
+      "pre_write_sanitized_sha256": "53fc39f571fef450a9e30abd94e56c01911177b095aab32852db05056167426f",
+      "persisted_artifact_byte_count": 33145,
+      "persisted_artifact_sha256": "4597f8d2ae2ca563d2cb797be9c390177db26b7658377e2ec9d9086cc68f7126"
+    },
+    {
+      "context": "report:44:footer",
+      "email_count": 0,
+      "phone_count": 0,
+      "opaque_blob_url_count": 2,
+      "embedded_image_data_count": 0,
+      "raw_length": 5026,
+      "pre_write_sanitized_character_count": 4948,
+      "pre_write_sanitized_sha256": "b91b6533c06dd703f5d93e0165e7000bd96015e7ed9e847ff7635f35c08a4f8d",
+      "persisted_artifact_byte_count": 4951,
+      "persisted_artifact_sha256": "75d143d057ab06c2d03408608d51e9f45ce461334dc0f46a0c28409767c619aa"
+    },
+    {
+      "context": "report:20:header",
+      "email_count": 3,
+      "phone_count": 1,
+      "opaque_blob_url_count": 1,
+      "embedded_image_data_count": 0,
+      "raw_length": 3113,
+      "pre_write_sanitized_character_count": 3068,
+      "pre_write_sanitized_sha256": "b8ec778757248678f348b7dc32c72146295ebebfc34a2487fc2df3966eb99afd",
+      "persisted_artifact_byte_count": 3069,
+      "persisted_artifact_sha256": "0cffdf9acb13f9d11668cefbd5c44f88aca772b1223d063cdb06e85537304840"
+    },
+    {
+      "context": "report:20:body",
+      "email_count": 0,
+      "phone_count": 0,
+      "opaque_blob_url_count": 1,
+      "embedded_image_data_count": 0,
+      "raw_length": 12283,
+      "pre_write_sanitized_character_count": 12244,
+      "pre_write_sanitized_sha256": "1a618cc372a538e0ca62e60f94d9d89febc62ab2dd95f45faf6e0d6144c02160",
+      "persisted_artifact_byte_count": 12247,
+      "persisted_artifact_sha256": "5ea7b9bd1e5ff88d2908941a8b81673578061c5d2edc057feca45b10f1e1865e"
+    },
+    {
+      "context": "report:20:footer",
+      "email_count": 0,
+      "phone_count": 0,
+      "opaque_blob_url_count": 0,
+      "embedded_image_data_count": 0,
+      "raw_length": 1857,
+      "pre_write_sanitized_character_count": 1857,
+      "pre_write_sanitized_sha256": "4e407e384aaca33d27ef6b65ab388b720232428e6f036dae56bb658961d1821b",
+      "persisted_artifact_byte_count": 1858,
+      "persisted_artifact_sha256": "88bc319d1c1a0e1a5dfd520bb34a8312fc5464cca1b8bcdcc13f0f9cd7ab5970"
+    }
+  ],
+  "limitations": [
+    "No report or preview was generated.",
+    "No sample, test, signature, or operational record was selected.",
+    "Report password values were not inspected.",
+    "Uploader identities were omitted; attachments and signature imagery were not downloaded.",
+    "Opaque blob URLs, embedded image data, emails, and phone numbers were replaced in committed source.",
+    "Screenshots were omitted because safe element-only capture was unavailable."
+  ]
+}

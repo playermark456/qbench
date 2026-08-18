@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-17T02:26:20.590Z",
+  "source_host": "ait.qbench.net",
+  "capture_method": "Document Configurations / Settings plus selected Terpenes metadata",
+  "privacy_note": "No document content, attachment, note, approver identity, team identity, or training record was captured.",
+  "configuration": {
+    "settings": [
+      {
+        "field_label": "Enable option to include document as an attachment in emails",
+        "control_type": "checkbox",
+        "checked_state": false
+      },
+      {
+        "field_label": "Disable acknowledgements for Team members",
+        "control_type": "checkbox",
+        "checked_state": false
+      }
+    ],
+    "terpenes_metadata": {
+      "draft_sop_versions": [
+        {
+          "version": "1",
+          "status": "DRAFT",
+          "approved_or_obsolete_date": null,
+          "approver_identity": "omitted_personal_data",
+          "notes": "omitted"
+        }
+      ],
+      "approved_sop_versions": [
+        {
+          "version": "1",
+          "status": "APPROVED",
+          "approved_or_obsolete_date": null,
+          "identity": "omitted_personal_data",
+          "notes": "omitted"
+        }
+      ],
+      "approved_form_versions": [
+        {
+          "version": "1",
+          "status": "APPROVED",
+          "approved_or_obsolete_date": null,
+          "identity": "omitted_personal_data",
+          "notes": "omitted"
+        }
+      ],
+      "authority_note": "QBench metadata only — current revision authority supplied by user"
+    },
+      "tree_view_counts": {
+        "prior_navigation_count": 47,
+        "approved_leaf_count": 66,
+        "pending_leaf_count": 3,
+        "all_leaf_count": 68,
+        "approved_pending_overlap_count": 1,
+        "count_scope_discrepancy": true
+      },
+    "content_capture": "omitted"
+  }
+}

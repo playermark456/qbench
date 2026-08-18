@@ -1,0 +1,8 @@
+{
+  "status": "blocked_metadata_only",
+  "objects_counted": 4,
+  "details_retained": 0,
+  "secret_values_committed": 0,
+  "reason": "sensitive_integration_configuration_encountered",
+  "rescan_required": "only_after_separate_remediation_and_explicit_authorization"
+}

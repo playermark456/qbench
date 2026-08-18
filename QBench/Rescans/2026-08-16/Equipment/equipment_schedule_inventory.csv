@@ -1,0 +1,39 @@
+schedule_id,schedule_name,frequency,active,record_attachment_required
+24,3 Place Balance Verification,DAILY,true,false
+1,4 or 5 Place Balance Verification,DAILY,true,false
+3,Calibration,ANNUALLY,true,true
+29,Cold Storage Temperature | -20C,DAILY,true,false
+30,Cold Storage Temperature | -70C,DAILY,true,false
+28,Cold Storage Temperature | 4C,DAILY,true,false
+8,Column Maintenance,AS NEEDED,true,false
+11,"Contamination Assessment - Likely doesn't' make sense here, didn't want to forget",ANNUALLY,true,false
+35,Daily Dispenser Verification | 20mL,DAILY,true,false
+36,Daily Dispenser Verification | 20mL (ACN),DAILY,true,false
+34,Daily Dispenser Verification | 3 mL,AS NEEDED,true,false
+38,Daily Dispenser Verification | 3.6 mL,AS NEEDED,true,false
+33,Daily Dispenser Verification | 3.9 mL,DAILY,true,false
+9,Environmental Condition Assessment,EVERY TWO YEARS,true,false
+26,Environmental Conditions | Instrument Room,DAILY,true,false
+27,Environmental Conditions | Microbial Room,DAILY,true,false
+25,Environmental Conditions | Sample Prep,DAILY,true,false
+13,Gene Up Self-Test,DAILY,true,false
+37,Incubator Temperature | 25C,DAILY,true,false
+31,Incubator Temperature | 36C,DAILY,true,false
+32,Incubator Temperature | 42C,DAILY,true,false
+7,Maintenance,AS NEEDED,true,false
+4,Manufacturer Preventative Maintenence,ANNUALLY,true,true
+10,Microwave Digester Temperature Calibration Log,MONTHLY,true,true
+22,Multichannel Pipette Verifications | 10 µL,DAILY,true,false
+15,Pipette Autoclave,AS NEEDED,true,false
+19,Pipette Verifications | 1 mL,DAILY,true,false
+20,Pipette Verifications | 10 mL,DAILY,true,false
+2,Pipette Verifications | 10 uL,DAILY,true,false
+17,Pipette Verifications | 100 uL,DAILY,true,false
+21,Pipette Verifications | 200 uL,DAILY,true,false
+18,Pipette Verifications | 250 uL,DAILY,true,false
+23,Repeat Pipette Verifications,DAILY,true,false
+14,Replace & Autoclave,BI-WEEKLY,true,false
+5,Temperature & Humidity Verification,DAILY,true,false
+6,Temperature Logs,MONTHLY,true,true
+16,Tempo Data Export,WEEKLY,true,false
+12,Tempo QC Check,MONTHLY,true,false

@@ -1,0 +1,2 @@
+status,objects_counted,details_retained,secret_values_committed,reason,rescan_required
+blocked_metadata_only,4,0,0,sensitive_integration_configuration_encountered,only_after_separate_remediation_and_explicit_authorization

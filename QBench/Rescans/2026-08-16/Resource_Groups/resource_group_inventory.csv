@@ -1,0 +1,11 @@
+resource_group_id,name,description,active_state,resource_type,inventory_item_count,equipment_count,auto_use_equipment,scheduling_rules_state,availability_rules_state,required_optional_state,detail_url
+3,Water Activity Analysis,Resources used in water activity analysis.,not_exposed,not_exposed,4,1,true,not_exposed,not_exposed,not_exposed,https://ait.qbench.net/resourcegroup?id=3
+4,Foreign Material Analysis,Equipment that can be used within foreign material analysis.,not_exposed,not_exposed,0,3,false,not_exposed,not_exposed,not_exposed,https://ait.qbench.net/resourcegroup?id=4
+5,Heavy Metals Analysis,Resources regularly used in heavy metals analysis.,not_exposed,not_exposed,22,16,false,not_exposed,not_exposed,not_exposed,https://ait.qbench.net/resourcegroup?id=5
+6,Mycotoxin Analysis,Resources used in quantitative mycotoxin analysis.,not_exposed,not_exposed,12,20,false,not_exposed,not_exposed,not_exposed,https://ait.qbench.net/resourcegroup?id=6
+7,Residual Solvents Analysis,Resources used in residual solvent analysis.,not_exposed,not_exposed,6,15,false,not_exposed,not_exposed,not_exposed,https://ait.qbench.net/resourcegroup?id=7
+8,Cannabinoid Potency Analysis,Resources regularly used in cannabinoid potency analysis.,not_exposed,not_exposed,16,29,false,not_exposed,not_exposed,not_exposed,https://ait.qbench.net/resourcegroup?id=8
+9,Pest Myco (Qualitative) Analysis,Resources used in the qualitative analysis of pesticides and mycotoxins.,not_exposed,not_exposed,19,14,false,not_exposed,not_exposed,not_exposed,https://ait.qbench.net/resourcegroup?id=9
+10,Gene Up Microbial Analysis,Resources used in PCR analysis of microbials.,not_exposed,not_exposed,18,20,false,not_exposed,not_exposed,not_exposed,https://ait.qbench.net/resourcegroup?id=10
+11,Tempo Microbial Analysis,Resources used in enumeration analysis of microbials.,not_exposed,not_exposed,8,19,false,not_exposed,not_exposed,not_exposed,https://ait.qbench.net/resourcegroup?id=11
+12,Pest (Quantitative) Analysis,,not_exposed,not_exposed,0,0,not_exposed,not_exposed,not_exposed,not_exposed,https://ait.qbench.net/resourcegroup?id=12

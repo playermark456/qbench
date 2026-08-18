@@ -1,0 +1,10 @@
+report_id,report_name,source_version_display,section,artifact_path,bytes,sha256,redacted_email_markers,redacted_phone_markers,redacted_blob_markers,redacted_embedded_image_markers
+26,Certificate of Analysis Report,24 - Terpenes final - APPROVED (ACTIVE),header,QBench/Rescans/2026-08-16/Reports/26/header.html,5705,925ac1bacab72cf741e990c31e5ea6a2a44b47998a0624b8d712db18ab2155f9,0,0,1,0
+26,Certificate of Analysis Report,24 - Terpenes final - APPROVED (ACTIVE),body,QBench/Rescans/2026-08-16/Reports/26/body.html,47479,d17d156e7c03ac21382353a0d43bc9a544027e2b7e359c304232a9a32cbd603b,0,0,3,4
+26,Certificate of Analysis Report,24 - Terpenes final - APPROVED (ACTIVE),footer,QBench/Rescans/2026-08-16/Reports/26/footer.html,5014,b43e4d6c61589670cb40d5cef714b59ef25ab17f6c970dfdc540e5948479da0c,0,0,2,0
+44,Homogeneity,2 - 3.0 - APPROVED (ACTIVE),header,QBench/Rescans/2026-08-16/Reports/44/header.html,5705,925ac1bacab72cf741e990c31e5ea6a2a44b47998a0624b8d712db18ab2155f9,0,0,1,0
+44,Homogeneity,2 - 3.0 - APPROVED (ACTIVE),body,QBench/Rescans/2026-08-16/Reports/44/body.html,33145,4597f8d2ae2ca563d2cb797be9c390177db26b7658377e2ec9d9086cc68f7126,0,0,0,0
+44,Homogeneity,2 - 3.0 - APPROVED (ACTIVE),footer,QBench/Rescans/2026-08-16/Reports/44/footer.html,4951,75d143d057ab06c2d03408608d51e9f45ce461334dc0f46a0c28409767c619aa,0,0,2,0
+20,1Certificate of Analysis Report,1 - APPROVED (ACTIVE),header,QBench/Rescans/2026-08-16/Reports/20/header.html,3069,0cffdf9acb13f9d11668cefbd5c44f88aca772b1223d063cdb06e85537304840,3,1,1,0
+20,1Certificate of Analysis Report,1 - APPROVED (ACTIVE),body,QBench/Rescans/2026-08-16/Reports/20/body.html,12247,5ea7b9bd1e5ff88d2908941a8b81673578061c5d2edc057feca45b10f1e1865e,0,0,1,0
+20,1Certificate of Analysis Report,1 - APPROVED (ACTIVE),footer,QBench/Rescans/2026-08-16/Reports/20/footer.html,1858,88bc319d1c1a0e1a5dfd520bb34a8312fc5464cca1b8bcdcc13f0f9cd7ab5970,0,0,0,0

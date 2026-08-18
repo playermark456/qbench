@@ -1,0 +1,9 @@
+category,safe_route,presence_state,visible_count,capture_scope,evidence,limitation
+specifications,not_exposed,module_enabled_but_no_visible_route,,blocked_read_only,Phase 1 navigation plus prior completed phase evidence,not exposed in visible navigation / unable to verify read-only
+alerts,not_exposed,no_standalone_route,,metadata_only,Phase 1 navigation plus prior completed phase evidence,active Stability Due email template ID 51 has no version/source; other alert behavior unable to verify
+stability,not_exposed,anchors_only,,metadata_only,"Assay 13; Sample fields Stability Required, Stability Pull Date, Storage Bin; email template 51","assay 13 and Sample field anchors exist; multiple pulls, interval representation, scheduling, recipients, and reminder timing unable to verify"
+sources,/sources,visible_count_recorded,0,count_only,Phase 1 navigation plus prior completed phase evidence,
+charts,/charts,visible_count_recorded,0,count_only,Phase 1 navigation plus prior completed phase evidence,
+locations,/locations,visible_count_recorded,1097,aggregate_only,Phase 1 navigation plus prior completed phase evidence,
+roles_permissions,not_exposed,not_exposed,,blocked_read_only,Phase 1 navigation plus prior completed phase evidence,
+sample_types_matrices_units,not_exposed,cross_reference_phase3_fields_and_assays,,metadata_only,Phase 1 navigation plus prior completed phase evidence,

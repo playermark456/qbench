@@ -1,0 +1,3 @@
+control_group_id,name,member_count,configured_order_state,frequency,assay_associations,protocol_references,acceptance_behavior,failure_behavior,detail_url
+2,Heavy Metals - Demo - AMM,3,display_order_observed_not_proven_configured,not_exposed,not_exposed,not_exposed,not_exposed,not_exposed,https://ait.qbench.net/control-group?id=2
+1,Example Control Group,1,display_order_observed_not_proven_configured,not_exposed,not_exposed,not_exposed,not_exposed,not_exposed,https://ait.qbench.net/control-group?id=1

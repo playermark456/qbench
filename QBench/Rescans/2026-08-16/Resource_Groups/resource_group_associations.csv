@@ -1,0 +1,10 @@
+resource_group_id,resource_group_name,assay_id,assay_name,assignment_level,assay_protocol_context_id,assay_protocol_context_name,protocol_context_state,resource_assignment_evidence,evidence_artifact
+3,Water Activity Analysis,9,Water Activity,batch,3,[Batch] Water Activity Protocol,indirect_assay_context_not_resource_assignment,explicit_assay_side_resource_group_link,Assays/assay_inventory.json
+4,Foreign Material Analysis,12,Foreign Material,test,10,[Test] Foreign Material Protocol,indirect_assay_context_not_resource_assignment,explicit_assay_side_resource_group_link,Assays/assay_inventory.json
+5,Heavy Metals Analysis,3,Heavy Metals,batch,2,[Batch] Heavy Metals Protocol,indirect_assay_context_not_resource_assignment,explicit_assay_side_resource_group_link,Assays/assay_inventory.json
+7,Residual Solvents Analysis,7,Residual Solvents,batch,6,[Batch] Residual Solvents Protocol,indirect_assay_context_not_resource_assignment,explicit_assay_side_resource_group_link,Assays/assay_inventory.json
+8,Cannabinoid Potency Analysis,2,Cannabinoid Potency,batch,4,[Batch] Cannabinoid Potency Protocol,indirect_assay_context_not_resource_assignment,explicit_assay_side_resource_group_link,Assays/assay_inventory.json
+8,Cannabinoid Potency Analysis,11,Homogeneity,batch,11,[Batch] Homogeneity Protocol,indirect_assay_context_not_resource_assignment,explicit_assay_side_resource_group_link,Assays/assay_inventory.json
+9,Pest Myco (Qualitative) Analysis,4,Pesticides,batch,7,[Batch] Qualitative Pesticides & Mycotoxin Protocol,indirect_assay_context_not_resource_assignment,explicit_assay_side_resource_group_link,Assays/assay_inventory.json
+9,Pest Myco (Qualitative) Analysis,5,Mycotoxins,batch,7,[Batch] Qualitative Pesticides & Mycotoxin Protocol,indirect_assay_context_not_resource_assignment,explicit_assay_side_resource_group_link,Assays/assay_inventory.json
+12,Pest (Quantitative) Analysis,21,Pesticides Quantitative Flower,batch,12,[Batch] Quantitative Pesticide in Cannabis Flower Protocol,indirect_assay_context_not_resource_assignment,explicit_assay_side_resource_group_link,Assays/assay_inventory.json

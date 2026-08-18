@@ -1,0 +1,281 @@
+{
+  "schema_version": "1.0",
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-17T02:26:20.590Z",
+  "source_host": "ait.qbench.net",
+  "capture_method": "Equipment Configurations / Schedules",
+  "privacy_note": "No equipment records, certificates, service reports, serials, exact locations, staff identities, or attachments were captured.",
+  "limitations": [
+    "Only Schedules is exposed in Equipment Configurations.",
+    "Required-assignment and availability behavior were not exposed."
+  ],
+  "count": 38,
+  "items": [
+    {
+      "schedule_id": 24,
+      "schedule_name": "3 Place Balance Verification",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 1,
+      "schedule_name": "4 or 5 Place Balance Verification",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 3,
+      "schedule_name": "Calibration",
+      "frequency": "ANNUALLY",
+      "active": true,
+      "record_attachment_required": true
+    },
+    {
+      "schedule_id": 29,
+      "schedule_name": "Cold Storage Temperature | -20C",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 30,
+      "schedule_name": "Cold Storage Temperature | -70C",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 28,
+      "schedule_name": "Cold Storage Temperature | 4C",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 8,
+      "schedule_name": "Column Maintenance",
+      "frequency": "AS NEEDED",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 11,
+      "schedule_name": "Contamination Assessment - Likely doesn't' make sense here, didn't want to forget",
+      "frequency": "ANNUALLY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 35,
+      "schedule_name": "Daily Dispenser Verification | 20mL",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 36,
+      "schedule_name": "Daily Dispenser Verification | 20mL (ACN)",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 34,
+      "schedule_name": "Daily Dispenser Verification | 3 mL",
+      "frequency": "AS NEEDED",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 38,
+      "schedule_name": "Daily Dispenser Verification | 3.6 mL",
+      "frequency": "AS NEEDED",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 33,
+      "schedule_name": "Daily Dispenser Verification | 3.9 mL",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 9,
+      "schedule_name": "Environmental Condition Assessment",
+      "frequency": "EVERY TWO YEARS",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 26,
+      "schedule_name": "Environmental Conditions | Instrument Room",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 27,
+      "schedule_name": "Environmental Conditions | Microbial Room",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 25,
+      "schedule_name": "Environmental Conditions | Sample Prep",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 13,
+      "schedule_name": "Gene Up Self-Test",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 37,
+      "schedule_name": "Incubator Temperature | 25C",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 31,
+      "schedule_name": "Incubator Temperature | 36C",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 32,
+      "schedule_name": "Incubator Temperature | 42C",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 7,
+      "schedule_name": "Maintenance",
+      "frequency": "AS NEEDED",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 4,
+      "schedule_name": "Manufacturer Preventative Maintenence",
+      "frequency": "ANNUALLY",
+      "active": true,
+      "record_attachment_required": true
+    },
+    {
+      "schedule_id": 10,
+      "schedule_name": "Microwave Digester Temperature Calibration Log",
+      "frequency": "MONTHLY",
+      "active": true,
+      "record_attachment_required": true
+    },
+    {
+      "schedule_id": 22,
+      "schedule_name": "Multichannel Pipette Verifications | 10 µL",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 15,
+      "schedule_name": "Pipette Autoclave",
+      "frequency": "AS NEEDED",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 19,
+      "schedule_name": "Pipette Verifications | 1 mL",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 20,
+      "schedule_name": "Pipette Verifications | 10 mL",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 2,
+      "schedule_name": "Pipette Verifications | 10 uL",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 17,
+      "schedule_name": "Pipette Verifications | 100 uL",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 21,
+      "schedule_name": "Pipette Verifications | 200 uL",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 18,
+      "schedule_name": "Pipette Verifications | 250 uL",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 23,
+      "schedule_name": "Repeat Pipette Verifications",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 14,
+      "schedule_name": "Replace & Autoclave",
+      "frequency": "BI-WEEKLY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 5,
+      "schedule_name": "Temperature & Humidity Verification",
+      "frequency": "DAILY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 6,
+      "schedule_name": "Temperature Logs",
+      "frequency": "MONTHLY",
+      "active": true,
+      "record_attachment_required": true
+    },
+    {
+      "schedule_id": 16,
+      "schedule_name": "Tempo Data Export",
+      "frequency": "WEEKLY",
+      "active": true,
+      "record_attachment_required": false
+    },
+    {
+      "schedule_id": 12,
+      "schedule_name": "Tempo QC Check",
+      "frequency": "MONTHLY",
+      "active": true,
+      "record_attachment_required": false
+    }
+  ]
+}

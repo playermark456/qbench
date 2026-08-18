@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-17T02:26:20.590Z",
+  "source_host": "ait.qbench.net",
+  "capture_method": "cross-phase metadata synthesis only",
+  "anchors": {
+    "assay": {
+      "id": 13,
+      "name": "Stability",
+      "worksheet_state": "none_configured",
+      "protocol_state": "none_configured"
+    },
+    "sample_fields": [
+      "Stability Required",
+      "Stability Pull Date",
+      "Storage Bin"
+    ],
+    "email_template": {
+      "id": 51,
+      "name": "Stability Due",
+      "active_state": true,
+      "version_state": "no version",
+      "source_state": "empty"
+    }
+  },
+  "unable_to_verify": [
+    "whether one Sample can have multiple pull dates",
+    "how 3/6/12-month intervals are represented",
+    "notification scheduling",
+    "reminder timing",
+    "recipient roles",
+    "whether stability is a separate record, field, or protocol-step representation"
+  ],
+  "privacy_note": "No stability records, dates, storage-bin values, recipients, customer data, or operational alerts were accessed."
+}
