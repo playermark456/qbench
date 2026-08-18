@@ -56,6 +56,16 @@ eport_content, pass_fail, and METRC-specific cells. Report source HTML/code was 
 
 See Docs/qbench_open_questions.md for items that could not be determined without changing QBench or using unsupported download paths.
 
+## Production read-only rescan 2026-08-16 — Phase 5 partial
+
+- Four active controls and two control groups were captured. Controls 2–4 use the displayed data field `Concentration`; control 1 displays the exact typo `Concentraiton`. No control had an inventory-item assignment exposed.
+- Ten resource groups were captured with inventory/equipment membership counts and auto-use values where exposed. Direct assay assignments are reconciled in `RESOURCE_INDEX.md`; Terpenes assay 8 has no resource-group assignment.
+- All 20 assay-side Batch Control Group fields were null/blank. Control acceptance, reporting, automation, and frequency semantics were not exposed and are not inferred.
+- Sensitive integration configuration was encountered on an authenticated settings page. Details were intentionally omitted. Managed Interfaces remains incomplete pending separate administrative or vendor remediation.
+- QBench remained read-only. No Save, Delete, Submit, Approve, Set Active, Import, Update, Create, Duplicate, Publish, assignment, execution, or other mutation action was used.
+
+Current canonical relationships are in `CONTROL_INDEX.md`, `RESOURCE_INDEX.md`, `ASSAY_ID_MAP.md`, `PROTOCOL_INDEX.md`, and `FIELD_INDEX.md`. Open questions and the stop boundary are maintained in `Docs/qbench_open_questions.md`.
+
 ## Rescan 2026-07-04
 
 - Worksheet/template pages scanned: 139.

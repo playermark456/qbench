@@ -1,0 +1,1640 @@
+{
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-16T23:21:32.805Z",
+  "source_host": "ait.qbench.net",
+  "capture_method": "serialized read-only DOM extraction",
+  "privacy_note": "Personal technician/team values were omitted; configuration definitions only.",
+  "limitations": [
+    "Assay-side panel membership was not exposed: all assay panels arrays are empty. Use Panels/panel_inventory.json and panel_assay_relationships.csv as the authoritative current reverse-membership source.",
+    "Default-report relationships did not load reliably and are deferred to Phase 4."
+  ],
+  "count": 20,
+  "items": [
+    {
+      "assay_id": 14,
+      "name": "Aspergillus spp.",
+      "list_abbreviation": "MI-ASP |",
+      "list_method": "MTH-MICRO-ASP-01",
+      "detail_url": "https://ait.qbench.net/assay?id=14",
+      "abbreviation": "MI-ASP |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": "/protocol?id=14",
+        "id": 14,
+        "name": "[Batch] Gene Up Aspergillus Microbial Analysis Protocol"
+      },
+      "batch_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=80",
+        "id": 80,
+        "name": "Aspergillus Microbial Analysis [Batch WS]"
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-MICRO-ASP-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [
+        "Cannabis/Hemp"
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=81",
+        "id": 81,
+        "name": "Total Aspergillus Microbial Analysis [Test WS]"
+      },
+      "title": "Aspergillus spp.",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 2,
+      "name": "Cannabinoid Potency",
+      "list_abbreviation": "CP |",
+      "list_method": "MTH-CP-01",
+      "detail_url": "https://ait.qbench.net/assay?id=2",
+      "abbreviation": "CP |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": "/protocol?id=4",
+        "id": 4,
+        "name": "[Batch] Cannabinoid Potency Protocol"
+      },
+      "batch_resource_group": {
+        "href": "/resourcegroup?id=8",
+        "id": 8,
+        "name": "Cannabinoid Potency Analysis"
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=7",
+        "id": 7,
+        "name": "Cannabinoid Potency [Batch] Worksheet"
+      },
+      "category": "",
+      "coa_equations": "Total THC=(THCa*0.877)+Delta 9 THC | Total CBD = (CBDa*0.877)+CBD | Purity Equation=unknown cannabinoids' estimated concentration based on peak area comparison to the CBD calibration curve. | Other Artificially Derived Cannabinoids = combined total of 0.5 milligrams of all other cannabinoids per serving other than delta-9 THC, CBD, CBG, CBN, and CBC |Total [Analyte] mg Per Container=Servings Per Container*Total [Analyte] mg/g | Total [Analyte] mg Per Serving=Servings Per Container*Total [Analyte] mg/g | Total Variance=Product Label within 15% of label amount for each compound listed, or <25% if more than 70% THC present.",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-CP-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [
+        "Cannabis/Hemp"
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=8",
+        "id": 8,
+        "name": "Cannabinoid Potency [Test] Worksheet"
+      },
+      "title": "Cannabinoid Potency",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 20,
+      "name": "Enterobacteriaceae",
+      "list_abbreviation": "MI-EB |",
+      "list_method": "MTH-MICRO-EN-01",
+      "detail_url": "https://ait.qbench.net/assay?id=20",
+      "abbreviation": "MI-EB |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=89",
+        "id": 89,
+        "name": "Total Aerobic Count & Enterobacteriaceae & YM [Batch WS]"
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-MICRO-EN-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [
+        "Cannabis/Hemp"
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=95",
+        "id": 95,
+        "name": "Enterobacteriaceae [Test] WS"
+      },
+      "title": "Enterobacteriaceae",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 12,
+      "name": "Foreign Material",
+      "list_abbreviation": "FM |",
+      "list_method": "MTH-FM-01",
+      "detail_url": "https://ait.qbench.net/assay?id=12",
+      "abbreviation": "FM |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_worksheet": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "category": "",
+      "coa_equations": "Total Foreign Material %=(Foreign Material Mass/Test Portion Mass)*100%",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-FM-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [
+        "Cannabis/Hemp"
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": "/protocol?id=10",
+        "id": 10,
+        "name": "[Test] Foreign Material Protocol"
+      },
+      "test_resource_group": {
+        "href": "/resourcegroup?id=4",
+        "id": 4,
+        "name": "Foreign Material Analysis"
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=31",
+        "id": 31,
+        "name": "Foreign Material [Test WS]"
+      },
+      "title": "Foreign Material",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 3,
+      "name": "Heavy Metals",
+      "list_abbreviation": "HM |",
+      "list_method": "MTH-HM-01",
+      "detail_url": "https://ait.qbench.net/assay?id=3",
+      "abbreviation": "HM |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": "/protocol?id=2",
+        "id": 2,
+        "name": "[Batch] Heavy Metals Protocol"
+      },
+      "batch_resource_group": {
+        "href": "/resourcegroup?id=5",
+        "id": 5,
+        "name": "Heavy Metals Analysis"
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=5",
+        "id": 5,
+        "name": "Heavy Metals [Batch] Worksheet"
+      },
+      "category": "",
+      "coa_equations": "Concentration (ppb, µg/kg) = S (Concentration of Analyte (ng/g) * DF (Dilution Factor) * (M (Mass of Analytical Solution)/m (Mass (g) of Sample Portion))",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-HM-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [
+        "Cannabis/Hemp"
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=6",
+        "id": 6,
+        "name": "Heavy Metals [Test] Worksheet"
+      },
+      "title": "Heavy Metals",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 11,
+      "name": "Homogeneity",
+      "list_abbreviation": "HOM |",
+      "list_method": "",
+      "detail_url": "https://ait.qbench.net/assay?id=11",
+      "abbreviation": "HOM |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": "/protocol?id=11",
+        "id": 11,
+        "name": "[Batch] Homogeneity Protocol"
+      },
+      "batch_resource_group": {
+        "href": "/resourcegroup?id=8",
+        "id": 8,
+        "name": "Cannabinoid Potency Analysis"
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=7",
+        "id": 7,
+        "name": "Cannabinoid Potency [Batch] Worksheet"
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=73",
+        "id": 73,
+        "name": "Homogeneity [Test WS]"
+      },
+      "title": "Homogeneity",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 17,
+      "name": "Listeria Monocytogenes",
+      "list_abbreviation": "MI-LIS |",
+      "list_method": "MTH-MICRO-LIS-01",
+      "detail_url": "https://ait.qbench.net/assay?id=17",
+      "abbreviation": "MI-LIS |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=86",
+        "id": 86,
+        "name": "Listeria Monocytogenes [Batch] Worksheet"
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-MICRO-LIS-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=87",
+        "id": 87,
+        "name": "Listeria Monocytogenes [Test] Worksheet"
+      },
+      "title": "Listeria Monocytogenes",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 6,
+      "name": "Microbial Analysis",
+      "list_abbreviation": "MICRO |",
+      "list_method": "MTH-MICRO-GU-01; MTH-MICRO-TE-01",
+      "detail_url": "https://ait.qbench.net/assay?id=6",
+      "abbreviation": "MICRO |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=45",
+        "id": 45,
+        "name": null
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-MICRO-GU-01; MTH-MICRO-TE-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [
+        "Cannabis/Hemp"
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=44",
+        "id": 44,
+        "name": null
+      },
+      "title": "Microbial Analysis",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 10,
+      "name": "Moisture Analysis",
+      "list_abbreviation": "MO |",
+      "list_method": "",
+      "detail_url": "https://ait.qbench.net/assay?id=10",
+      "abbreviation": "MO |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_worksheet": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "title": "Moisture Analysis",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 5,
+      "name": "Mycotoxins",
+      "list_abbreviation": "MY |",
+      "list_method": "MTH-PM-01; MTH-MY-01",
+      "detail_url": "https://ait.qbench.net/assay?id=5",
+      "abbreviation": "MY |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": "/protocol?id=7",
+        "id": 7,
+        "name": "[Batch] Qualitative Pesticides & Mycotoxin Protocol"
+      },
+      "batch_resource_group": {
+        "href": "/resourcegroup?id=9",
+        "id": 9,
+        "name": "Pest Myco (Qualitative) Analysis"
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=15",
+        "id": 15,
+        "name": "Pesticide_Myco (Qualitative) [Batch] Worksheet"
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-PM-01; MTH-MY-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [
+        "Cannabis/Hemp"
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=10",
+        "id": 10,
+        "name": "Mycotoxin (Qualitative) [Test] Worksheet"
+      },
+      "title": "Mycotoxins",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 4,
+      "name": "Pesticides",
+      "list_abbreviation": "PE |",
+      "list_method": "MTH-PM-01; MTH-PE-01",
+      "detail_url": "https://ait.qbench.net/assay?id=4",
+      "abbreviation": "PE |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": "/protocol?id=7",
+        "id": 7,
+        "name": "[Batch] Qualitative Pesticides & Mycotoxin Protocol"
+      },
+      "batch_resource_group": {
+        "href": "/resourcegroup?id=9",
+        "id": 9,
+        "name": "Pest Myco (Qualitative) Analysis"
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=15",
+        "id": 15,
+        "name": "Pesticide_Myco (Qualitative) [Batch] Worksheet"
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-PM-01; MTH-PE-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [
+        "Cannabis/Hemp"
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=14",
+        "id": 14,
+        "name": "Pesticides (Qualitative) [Test] Worksheet"
+      },
+      "title": "Pesticides",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 21,
+      "name": "Pesticides Quantitative Flower",
+      "list_abbreviation": "PEqf |",
+      "list_method": "MTH-PM-02",
+      "detail_url": "https://ait.qbench.net/assay?id=21",
+      "abbreviation": "PEqf |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": "/protocol?id=12",
+        "id": 12,
+        "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol"
+      },
+      "batch_resource_group": {
+        "href": "/resourcegroup?id=12",
+        "id": 12,
+        "name": "Pest (Quantitative) Analysis"
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=13",
+        "id": 13,
+        "name": "Pesticides (Quantitative) [Batch] Worksheet"
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-PM-02",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=16",
+        "id": 16,
+        "name": "Pesticides (Quantitative) [Test] Worksheet"
+      },
+      "title": "Pesticides Quantitative Flower",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 7,
+      "name": "Residual Solvents",
+      "list_abbreviation": "RS |",
+      "list_method": "MTH-RS-01",
+      "detail_url": "https://ait.qbench.net/assay?id=7",
+      "abbreviation": "RS |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": "/protocol?id=6",
+        "id": 6,
+        "name": "[Batch] Residual Solvents Protocol"
+      },
+      "batch_resource_group": {
+        "href": "/resourcegroup?id=7",
+        "id": 7,
+        "name": "Residual Solvents Analysis"
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=11",
+        "id": 11,
+        "name": "Residual Solvents [Batch] Worksheet"
+      },
+      "category": "",
+      "coa_equations": "Concentration (µg/g)=Amount of analyte from GC-MS (µg)/Mass of sample (g)",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-RS-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=12",
+        "id": 12,
+        "name": "Residual Solvents [Test] Worksheet"
+      },
+      "title": "Residual Solvents",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 15,
+      "name": "Salmonella Species",
+      "list_abbreviation": "MI-SLM |",
+      "list_method": "MTH-MICRO-SLM-01",
+      "detail_url": "https://ait.qbench.net/assay?id=15",
+      "abbreviation": "MI-SLM |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": "/protocol?id=13",
+        "id": 13,
+        "name": "[Batch] Gene Up Salmonella & STEC Microbial Analysis"
+      },
+      "batch_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=82",
+        "id": 82,
+        "name": "Salmonella & STEC Microbial Analysis [Batch WS]"
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-MICRO-SLM-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [
+        "Cannabis/Hemp"
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=83",
+        "id": 83,
+        "name": "Salmonella Species [Test] Worksheet"
+      },
+      "title": "Salmonella Species",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 16,
+      "name": "Shiga toxin-producing E. coli",
+      "list_abbreviation": "MI-STEC |",
+      "list_method": "MTH-MICRO-STCSLM-01",
+      "detail_url": "https://ait.qbench.net/assay?id=16",
+      "abbreviation": "MI-STEC |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": "/protocol?id=13",
+        "id": 13,
+        "name": "[Batch] Gene Up Salmonella & STEC Microbial Analysis"
+      },
+      "batch_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=82",
+        "id": 82,
+        "name": "Salmonella & STEC Microbial Analysis [Batch WS]"
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-MICRO-STCSLM-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [
+        "Cannabis/Hemp"
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=84",
+        "id": 84,
+        "name": "STEC [Test] Worksheet"
+      },
+      "title": "Shiga toxin-producing E. coli",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 13,
+      "name": "Stability",
+      "list_abbreviation": "STAB |",
+      "list_method": "",
+      "detail_url": "https://ait.qbench.net/assay?id=13",
+      "abbreviation": "STAB |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_worksheet": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "title": "Stability",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 8,
+      "name": "Terpenes",
+      "list_abbreviation": "TR |",
+      "list_method": "",
+      "detail_url": "https://ait.qbench.net/assay?id=8",
+      "abbreviation": "TR |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=43",
+        "id": 43,
+        "name": "Terpenes [Batch] Worksheet"
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=42",
+        "id": 42,
+        "name": "Terpenes [Test] Worksheet"
+      },
+      "title": "Terpenes",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 18,
+      "name": "Total Aerobic Microbial",
+      "list_abbreviation": "MI-AE |",
+      "list_method": "MTH-MICRO-AE-01",
+      "detail_url": "https://ait.qbench.net/assay?id=18",
+      "abbreviation": "MI-AE |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=89",
+        "id": 89,
+        "name": "Total Aerobic Count & Enterobacteriaceae & YM [Batch WS]"
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-MICRO-AE-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [
+        "Cannabis/Hemp"
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=93",
+        "id": 93,
+        "name": "Total Aerobic Count [Test] WS"
+      },
+      "title": "Total Aerobic Microbial",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 19,
+      "name": "Total Yeast and Mold",
+      "list_abbreviation": "MI-YM |",
+      "list_method": "MTH-MICRO-YM-01",
+      "detail_url": "https://ait.qbench.net/assay?id=19",
+      "abbreviation": "MI-YM |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=94",
+        "id": 94,
+        "name": "Total Yeast and Mold {Test WS}"
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-MICRO-YM-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [
+        "Cannabis/Hemp"
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=94",
+        "id": 94,
+        "name": "Total Yeast and Mold {Test WS}"
+      },
+      "title": "Total Yeast and Mold",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    },
+    {
+      "assay_id": 9,
+      "name": "Water Activity",
+      "list_abbreviation": "WA |",
+      "list_method": "MTH-WA-01",
+      "detail_url": "https://ait.qbench.net/assay?id=9",
+      "abbreviation": "WA |",
+      "active": true,
+      "batch_control_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "batch_protocol": {
+        "href": "/protocol?id=3",
+        "id": 3,
+        "name": "[Batch] Water Activity Protocol"
+      },
+      "batch_resource_group": {
+        "href": "/resourcegroup?id=3",
+        "id": 3,
+        "name": "Water Activity Analysis"
+      },
+      "batch_worksheet": {
+        "href": "/worksheet?id=29",
+        "id": 29,
+        "name": "Water Activity [Batch WS]"
+      },
+      "category": "",
+      "coa_equations": "",
+      "default_reports": {
+        "order": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "sample": {
+          "href": null,
+          "id": null,
+          "name": null
+        },
+        "test": {
+          "href": null,
+          "id": null,
+          "name": null
+        }
+      },
+      "duration_days": "",
+      "method": "MTH-WA-01",
+      "omitted_personal_fields": [
+        "Default Technician",
+        "Team"
+      ],
+      "panels": [],
+      "sample_level_worksheet": false,
+      "sample_types": [
+        "Cannabis/Hemp"
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "sort_order": "",
+      "specifications": [],
+      "tags": "",
+      "test_protocol": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_resource_group": {
+        "href": null,
+        "id": null,
+        "name": null
+      },
+      "test_results_display_field": "",
+      "test_worksheet": {
+        "href": "/worksheet?id=28",
+        "id": 28,
+        "name": "Water Activity [Test WS]"
+      },
+      "title": "Water Activity",
+      "panels_capture_state": "not_exposed_on_assay_detail_page; use panel-side evidence"
+    }
+  ]
+}

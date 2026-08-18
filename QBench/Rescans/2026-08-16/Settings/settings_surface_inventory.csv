@@ -1,0 +1,95 @@
+settings_family,safe_route,display_sequence,section_label,field_label,field_occurrence,control_type,checked_state,value_capture_state,safe_value,redaction_reason,capture_status
+general,/settings/general,1,General Settings,General Settings,1,heading,,not_applicable,,,captured
+general,/settings/general,2,General Settings ,General Settings ,1,heading,,not_applicable,,,captured
+general,/settings/general,3,General Settings ,Auto-populate estimated complete date (Assay duration is used to determine the estimated complete date. Tests without an assay duration cannot be auto-populated.),1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,4,General Settings ,Use only business days to estimate,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,5,General Settings ,Auto-populate estimated start date 1 days from received date,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,6,General Settings ,Use only business days to estimate,2,checkbox,true,captured_boolean,,,captured
+general,/settings/general,7,General Settings ,Auto-assign test technician,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,8,General Settings ,On initial modification,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,9,General Settings ,When test is started,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,10,General Settings ,When test is completed,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,11,General Settings ,Enable free response for tests,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,12,General Settings ,Enable the creation of linked Samples,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,13,General Settings ,Use Order View for Tests List Page,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,14,General Settings ,Use read-only view for Samples on the order logging page,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,15,General Settings ,Automatically expand all rows on tests page,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,16,General Settings ,Require a PIN when generating reports,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,17,General Settings ,Update Invoice Date when saving an invoice,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,18,General Settings ,Automatically generate an invoice once an order is created,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,19,General Settings ,Apply company discount on individual line items instead of subtotal,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,20,General Settings ,Group any tests run as part of a panel into single line items,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,21,General Settings ,Auto-fill Invoice date to the date the Invoice was created,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,22,General Settings ,Automatically add a Quotation's Assays and Panels rates to the related Customer Billing once the Quotation is accepted.,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,23,General Settings ,Automatically mark an Invoice as [truncated by accessible label],1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,24,General Settings ,Auto-populate invoice due date 0 days from the invoiced date,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,25,General Settings ,Manage Customer account balance manually,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,26,General Settings ,Automatically update Order status when Test status change,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,27,General Settings ,Lock Order status until all Tests are complete,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,28,General Settings ,Display a notification containing a Customer's special instructions upon creating a new Order,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,29,General Settings ,Enable Test Estimated Complete Date override with Order Due Date,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,30,General Settings ,Enable Internal Reports,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,31,General Settings ,Automatically include image Attachments in a Report upon Attachment upload.,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,32,General Settings ,Enable File Parsers,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,33,General Settings ,Enable Specification Module,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,34,General Settings ,Enable Sample selection when generating a report,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,35,General Settings ,Enable Test selection when generating a report,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,36,General Settings ,Enforce Unique Customer Name,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,37,General Settings ,Enable Sample-Level [truncated by accessible label],1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,38,General Settings ,Require reason when deleting/restoring an object,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,39,General Settings ,Reserve [truncated by accessible label],1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,40,General Settings ,Enable Copy Dynamic Spreadsheets,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,41,General Settings ,Enable Bulk Assays/Panels Assignment,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,42,General Settings ,Automatically check [truncated by accessible label],1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,43,General Settings ,Restrict list of Assays to add to a Batch based on selected Tests.,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,44,General Settings ,Auto associate a Source to a Customer when the Source is associated to a Sample on an Order.,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,45,General Settings ,Enable attachment previews,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,46,General Settings ,Enable Unique Sub Sample Sources,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,47,Due Dates ,Due Dates ,1,heading,,not_applicable,,,captured
+general,/settings/general,48,Due Dates ,Enable,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,49,Due Dates ,New Year's Day,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,50,Due Dates ,Martin Luther King Jr. Day,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,51,Due Dates ,President's Day,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,52,Due Dates ,Memorial Day,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,53,Due Dates ,4th of July,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,54,Due Dates ,Labor Day,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,55,Due Dates ,Columbus Day,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,56,Due Dates ,Veterans Day,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,57,Due Dates ,Thanksgiving,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,58,Due Dates ,Christmas,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,59,Modules ,Modules ,1,heading,,not_applicable,,,captured
+general,/settings/general,60,Modules ,"QBench Core (Includes Orders, Tests, Assays, and Customers)",1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,61,Modules ,Sources,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,62,Modules ,Batches,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,63,Modules ,Controls,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,64,Modules ,Deviations,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,65,Modules ,Protocols,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,66,Modules ,Projects,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,67,Modules ,Epics,1,checkbox,false,captured_boolean,,,captured
+general,/settings/general,68,Modules ,Panels,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,69,Modules ,Analytics,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,70,Modules ,QMS - Issues,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,71,Modules ,QMS - Equipment,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,72,Modules ,QMS - Logs,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,73,Modules ,QMS - Documents,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,74,Modules ,QMS - Training,1,checkbox,true,captured_boolean,,,captured
+general,/settings/general,75,Search Settings ,Search Settings ,1,heading,,not_applicable,,,captured
+general,/settings/general,76,Comments Settings ,Comments Settings ,1,heading,,not_applicable,,,captured
+general,/settings/general,77,Frequency Settings ,Frequency Settings ,1,heading,,not_applicable,,,captured
+general,/settings/general,78,Rush Turnaround Settings ,Rush Turnaround Settings ,1,heading,,not_applicable,,,captured
+general,/settings/general,79,Tax Rates ,Tax Rates ,1,heading,,not_applicable,,,captured
+general,/settings/general,80,Follower Settings ,Follower Settings ,1,heading,,not_applicable,,,captured
+general,/settings/general,81,Public Report Configuration ,Public Report Configuration ,1,heading,,not_applicable,,,captured
+general,/settings/general,82,Help Center ,Help Center ,1,heading,,not_applicable,,,captured
+general,/settings/general,83,Help Center ,Enable,2,checkbox,false,captured_boolean,,,captured
+customer_portal,/settings/customerportal,1,Customer Portal Settings,Customer Portal Settings,1,heading,,not_applicable,,,structure_only
+customer_portal,/settings/customerportal,2,Customer Portal Appearance ,Customer Portal Appearance ,1,heading,,not_applicable,,,structure_only
+customer_portal,/settings/customerportal,3,Enabled Views ,Enabled Views ,1,heading,,not_applicable,,,structure_only
+customer_portal,/settings/customerportal,4,Order Requests ,Order Requests ,1,heading,,not_applicable,,,structure_only
+customer_portal,/settings/customerportal,5,Portal Email ,Portal Email ,1,heading,,not_applicable,,,structure_only
+customer_portal,/settings/customerportal,6,Portal Email ,Company Name,1,textbox,,omitted_sensitive_or_branding_value,,values deliberately omitted,structure_only
+customer_portal,/settings/customerportal,7,Portal Email ,"Only letters, numbers, spaces, and common punctuation (&, ', ., -, comma, parentheses, /) can be used",1,textbox,,omitted_sensitive_or_branding_value,,values deliberately omitted,structure_only
+customer_portal,/settings/customerportal,8,Portal Email ,Email Subject,1,textbox,,omitted_sensitive_or_branding_value,,values deliberately omitted,structure_only
+customer_portal,/settings/customerportal,9,Portal Email ,Reply-to Email,1,textbox,,omitted_sensitive_or_branding_value,,values deliberately omitted,structure_only
+customer_portal,/settings/customerportal,10,Custom Portal Invite Email ,Custom Portal Invite Email ,1,heading,,not_applicable,,,structure_only
+customer_portal,/settings/customerportal,11,Security Settings ,Security Settings ,1,heading,,not_applicable,,,structure_only

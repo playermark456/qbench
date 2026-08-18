@@ -1,0 +1,5655 @@
+{
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-16T23:18:32.668Z",
+  "source_host": "ait.qbench.net",
+  "store": {
+    "store_id": "1ddd77a8-1f6f-4b62-afb9-ac0c877af0bc",
+    "name": "Cannabis Heavy Metals",
+    "created_timestamp_visible": "03/14/2026 11:12 PM",
+    "created_by": "omitted_personal_field",
+    "detail_url": "https://ait.qbench.net/kvstore?id=1ddd77a8-1f6f-4b62-afb9-ac0c877af0bc",
+    "visible_name": "Cannabis Heavy Metals",
+    "description": "This KV store holds the Heavy Metals limits, analytes, LOQ, etc for the ND Medical Program, National Hemp, and MN OCM Cannabis/Hemp Programs.",
+    "description_redaction_reason": null,
+    "system_name": "not_separately_exposed",
+    "active_inactive_state": "not_exposed_on_detail_page",
+    "root_type": "object",
+    "leaf_count": 432,
+    "top_level_keys": [
+      "MN OCM Cannabis",
+      "MN OCM Hemp Derived Cannabis Products (HDCP)",
+      "ND Medical",
+      "National Hemp"
+    ],
+    "max_depth": 4,
+    "redacted_value_count": 0,
+    "referencing_fields": "not_exposed_on_kv_detail_page",
+    "referencing_worksheets": "requires_offline_repository_cross_reference",
+    "referencing_assays": "not_exposed_on_kv_detail_page",
+    "referencing_panels": "not_exposed_on_kv_detail_page",
+    "referencing_protocols": "not_exposed_on_kv_detail_page",
+    "capture_method": "DOM extraction after read-only Store tab and Expand all presentation control",
+    "safe_detail_url": "https://ait.qbench.net/kvstore?id=1ddd77a8-1f6f-4b62-afb9-ac0c877af0bc",
+    "unique_path_count": 432,
+    "duplicate_path_row_count": 0,
+    "max_path_occurrence": 1
+  },
+  "ordered_values": [
+    {
+      "ordinal": 5,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 6,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 20.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 7,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 9,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 10,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 32.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 11,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 13,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 14,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 48.8,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 15,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 17,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 18,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 13,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 19,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 22,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 23,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 20.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 24,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 26,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 27,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 32.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 28,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 30,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 31,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 48.8,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 32,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 34,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 35,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 13,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 36,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 39,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 40,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 20.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 41,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 43,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 44,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 32.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 45,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 47,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 48,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 48.8,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 49,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 51,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 52,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 13,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 53,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 56,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 57,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 58,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 60,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 61,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 62,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 64,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 65,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 66,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 68,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 69,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 70,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 73,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 74,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 75,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 77,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 78,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 79,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 81,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 82,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 83,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 85,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 86,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 87,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 90,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 91,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 92,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 94,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 95,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 96,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 98,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 99,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 100,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 102,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 103,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 104,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 107,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 108,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 109,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 111,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 112,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 113,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 115,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 116,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 117,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 119,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 120,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 121,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 124,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 125,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 126,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 128,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 129,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 130,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 132,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 133,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 134,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 136,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 137,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 138,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 141,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 142,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 143,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 145,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 146,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 147,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 149,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 150,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 151,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 153,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 154,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 155,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 159,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Concentrate",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 160,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Concentrate",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 161,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Concentrate",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 163,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Concentrate",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 164,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Concentrate",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 165,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Concentrate",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 167,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Concentrate",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 168,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Concentrate",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 169,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Concentrate",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 171,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Concentrate",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 172,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Concentrate",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 173,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Concentrate",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 176,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 177,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 20.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 178,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 180,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 181,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 32.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 182,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 184,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 185,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 48.8,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 186,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 188,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 189,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 13,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 190,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 193,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 194,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 20.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 195,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 197,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 198,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 32.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 199,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 201,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 202,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 48.8,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 203,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 205,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 206,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 13,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 207,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 210,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 211,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 20.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 212,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 214,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 215,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 32.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 216,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 218,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 219,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 48.8,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 220,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 222,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 223,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 13,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 224,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 227,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 228,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 229,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 231,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 232,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 233,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 235,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 236,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 237,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 239,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 240,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 241,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 244,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 245,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 246,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 248,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 249,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 250,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 252,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 253,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 254,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 256,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 257,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 258,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 261,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 262,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 263,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 265,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 266,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 267,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 269,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 270,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 271,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 273,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 274,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 275,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 278,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 279,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 280,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 282,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 283,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 284,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 286,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 287,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 288,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 290,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 291,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 292,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 295,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 296,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 297,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 299,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 300,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 301,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 303,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 304,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 305,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 307,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 308,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 309,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 312,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 313,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 314,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 316,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 317,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 318,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 320,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 321,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 322,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 324,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 325,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 326,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 329,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 330,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 331,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 333,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 334,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 335,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 337,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 338,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 339,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 341,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 342,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 343,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 347,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 348,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 349,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 351,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 352,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 353,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 355,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 356,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 357,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 359,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 360,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 361,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 364,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 365,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 366,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 368,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 369,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 370,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 372,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 373,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 374,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 376,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 377,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 378,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 381,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 382,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 383,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 385,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 386,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 387,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 389,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 390,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 391,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 393,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 394,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 395,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 398,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 399,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 400,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 402,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 403,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 404,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 406,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 407,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 408,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 410,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 411,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 412,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 415,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 416,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 417,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 419,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 420,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 421,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 423,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 424,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 425,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 427,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 428,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": "",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 429,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 433,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Concentrate",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 434,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Concentrate",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 435,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Concentrate",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 437,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Concentrate",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 438,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Concentrate",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 439,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Concentrate",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 441,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Concentrate",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 442,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Concentrate",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 443,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Concentrate",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 445,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Concentrate",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 446,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Concentrate",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 447,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Concentrate",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 450,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 451,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 20.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 452,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 454,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 455,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 32.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 456,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 458,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 459,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 48.8,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 460,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 462,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 463,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 13,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 464,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 467,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Smoking",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 468,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Smoking",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 20.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 469,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Smoking",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 471,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Smoking",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 472,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Smoking",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 32.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 473,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Smoking",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 475,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Smoking",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 476,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Smoking",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 48.8,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 477,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Smoking",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 479,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Smoking",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 480,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Smoking",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 13,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 481,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Flower for Smoking",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 484,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Infused Flower",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 485,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Infused Flower",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 20.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 486,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Infused Flower",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 488,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Infused Flower",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 489,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Infused Flower",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 32.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 490,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Infused Flower",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 492,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Infused Flower",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 493,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Infused Flower",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 48.8,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 494,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Infused Flower",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 496,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Infused Flower",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 497,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Infused Flower",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 13,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 498,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Infused Flower",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 501,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Liquid Edible",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 502,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Liquid Edible",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 503,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Liquid Edible",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 505,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Liquid Edible",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 506,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Liquid Edible",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 507,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Liquid Edible",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 509,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Liquid Edible",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 510,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Liquid Edible",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 511,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Liquid Edible",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 513,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Liquid Edible",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 514,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Liquid Edible",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 515,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Liquid Edible",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 518,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 519,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 520,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 522,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 523,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 524,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 526,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 527,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 528,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 530,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 531,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 532,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 535,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Edible",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 536,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Edible",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 537,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Edible",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 539,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Edible",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 540,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Edible",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 541,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Edible",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 543,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Edible",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 544,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Edible",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 545,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Edible",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 547,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Edible",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 548,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Edible",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 549,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Edible",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 552,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 553,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 554,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 556,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 557,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 558,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 560,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 561,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 562,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 564,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 565,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 566,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 569,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Edible",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 570,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Edible",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 571,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Edible",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 573,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Edible",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 574,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Edible",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 575,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Edible",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 577,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Edible",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 578,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Edible",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 579,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Edible",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 581,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Edible",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 582,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Edible",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 583,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Edible",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 586,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 587,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 588,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 590,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 591,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 592,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.2,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 594,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 595,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 596,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 598,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 599,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 600,
+      "path": [
+        "National Hemp",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.1,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 603,
+      "path": [
+        "National Hemp",
+        "Hemp Resins - Artificially Derived",
+        "Arsenic",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 604,
+      "path": [
+        "National Hemp",
+        "Hemp Resins - Artificially Derived",
+        "Arsenic",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 10.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 605,
+      "path": [
+        "National Hemp",
+        "Hemp Resins - Artificially Derived",
+        "Arsenic",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 1.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 607,
+      "path": [
+        "National Hemp",
+        "Hemp Resins - Artificially Derived",
+        "Cadmium",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 608,
+      "path": [
+        "National Hemp",
+        "Hemp Resins - Artificially Derived",
+        "Cadmium",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 30.7,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 609,
+      "path": [
+        "National Hemp",
+        "Hemp Resins - Artificially Derived",
+        "Cadmium",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 611,
+      "path": [
+        "National Hemp",
+        "Hemp Resins - Artificially Derived",
+        "Lead",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 612,
+      "path": [
+        "National Hemp",
+        "Hemp Resins - Artificially Derived",
+        "Lead",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 5.4,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 613,
+      "path": [
+        "National Hemp",
+        "Hemp Resins - Artificially Derived",
+        "Lead",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 0.5,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 615,
+      "path": [
+        "National Hemp",
+        "Hemp Resins - Artificially Derived",
+        "Mercury",
+        "LOQ"
+      ],
+      "redaction_reason": null,
+      "value": 0.05,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 616,
+      "path": [
+        "National Hemp",
+        "Hemp Resins - Artificially Derived",
+        "Mercury",
+        "MU"
+      ],
+      "redaction_reason": null,
+      "value": 17.6,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 617,
+      "path": [
+        "National Hemp",
+        "Hemp Resins - Artificially Derived",
+        "Mercury",
+        "Pass/Fail Limits"
+      ],
+      "redaction_reason": null,
+      "value": 3,
+      "value_type": "number",
+      "path_occurrence": 1
+    }
+  ]
+}

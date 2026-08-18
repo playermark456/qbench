@@ -1,0 +1,33 @@
+{
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-16T23:18:32.668Z",
+  "source_host": "ait.qbench.net",
+  "store": {
+    "store_id": "9f287566-0fa1-4eb1-b770-283069826e09",
+    "name": "TEST Potency",
+    "created_timestamp_visible": "03/14/2026 10:35 PM",
+    "created_by": "omitted_personal_field",
+    "detail_url": "https://ait.qbench.net/kvstore?id=9f287566-0fa1-4eb1-b770-283069826e09",
+    "visible_name": "TEST Potency",
+    "description": "",
+    "description_redaction_reason": null,
+    "system_name": "not_separately_exposed",
+    "active_inactive_state": "not_exposed_on_detail_page",
+    "root_type": "object",
+    "leaf_count": 0,
+    "top_level_keys": [],
+    "max_depth": 0,
+    "redacted_value_count": 0,
+    "referencing_fields": "not_exposed_on_kv_detail_page",
+    "referencing_worksheets": "requires_offline_repository_cross_reference",
+    "referencing_assays": "not_exposed_on_kv_detail_page",
+    "referencing_panels": "not_exposed_on_kv_detail_page",
+    "referencing_protocols": "not_exposed_on_kv_detail_page",
+    "capture_method": "DOM extraction after read-only Store tab and Expand all presentation control",
+    "safe_detail_url": "https://ait.qbench.net/kvstore?id=9f287566-0fa1-4eb1-b770-283069826e09",
+    "unique_path_count": 0,
+    "duplicate_path_row_count": 0,
+    "max_path_occurrence": 0
+  },
+  "ordered_values": []
+}

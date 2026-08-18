@@ -1,0 +1,6086 @@
+{
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-16T23:18:32.668Z",
+  "source_host": "ait.qbench.net",
+  "store": {
+    "store_id": "d35d8737-5747-408a-a4e3-4a883c79349a",
+    "name": "Microbial Analysis",
+    "created_timestamp_visible": "04/08/2026 07:59 PM",
+    "created_by": "omitted_personal_field",
+    "detail_url": "https://ait.qbench.net/kvstore?id=d35d8737-5747-408a-a4e3-4a883c79349a",
+    "visible_name": "Microbial Analysis",
+    "description": "",
+    "description_redaction_reason": null,
+    "system_name": "not_separately_exposed",
+    "active_inactive_state": "not_exposed_on_detail_page",
+    "root_type": "object",
+    "leaf_count": 504,
+    "top_level_keys": [
+      "MN OCM Cannabis",
+      "MN OCM Hemp Derived Cannabis Products (HDCP)",
+      "ND Medical"
+    ],
+    "max_depth": 3,
+    "redacted_value_count": 0,
+    "referencing_fields": "not_exposed_on_kv_detail_page",
+    "referencing_worksheets": "requires_offline_repository_cross_reference",
+    "referencing_assays": "not_exposed_on_kv_detail_page",
+    "referencing_panels": "not_exposed_on_kv_detail_page",
+    "referencing_protocols": "not_exposed_on_kv_detail_page",
+    "capture_method": "DOM extraction after read-only Store tab and Expand all presentation control",
+    "safe_detail_url": "https://ait.qbench.net/kvstore?id=d35d8737-5747-408a-a4e3-4a883c79349a",
+    "unique_path_count": 168,
+    "duplicate_path_row_count": 504,
+    "max_path_occurrence": 3
+  },
+  "ordered_values": [
+    {
+      "ordinal": 1,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 2,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 3,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 4,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 5,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 6,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 7,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 8,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 9,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 10,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 11,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 12,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 13,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 14,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 15,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 16,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 17,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 18,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 19,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 20,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 21,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 22,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 23,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 24,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 10 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 25,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 26,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 27,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 1000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 28,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 29,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 30,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 10 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 31,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 32,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 33,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 10 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 34,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 35,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 36,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 37,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 38,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 39,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Flower for Smoking",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 40,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 41,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 42,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 10 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 43,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 44,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 45,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 46,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 47,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 48,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 10 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 49,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 50,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 51,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 10 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 52,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 53,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 54,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 10 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 55,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 56,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 57,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 58,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 59,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 60,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Infused Flower",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 61,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 62,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 63,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 64,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 65,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 66,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 67,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 68,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 69,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 70,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 71,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 72,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 73,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 74,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 75,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 76,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 77,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 78,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 79,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 80,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 81,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Liquid Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 82,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 83,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 84,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 85,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 86,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 87,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 88,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 89,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 90,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 91,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 92,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 93,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 94,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 95,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 96,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 97,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 98,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 99,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 100,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 101,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 102,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 103,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 104,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 105,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 106,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 107,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 108,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 109,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 110,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 111,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 112,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 113,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 114,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 115,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 116,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 117,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 118,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 119,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 120,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 121,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 122,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 123,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 124,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 125,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 126,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 127,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 128,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 129,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 130,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 131,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 132,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 133,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 134,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 135,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 136,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 137,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 138,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 139,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 140,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 141,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 142,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 143,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 144,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 145,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 146,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 147,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 148,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 149,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 150,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 151,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 152,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 153,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 154,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 155,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 156,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 157,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 158,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 159,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 160,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 161,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 162,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 163,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 164,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 165,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 166,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 167,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 168,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 169,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 170,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 171,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 172,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 173,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 174,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 175,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 176,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 177,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 178,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 179,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 180,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 181,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 182,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 183,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 184,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 185,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 186,
+      "path": [
+        "MN OCM Cannabis",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 187,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 188,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 189,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 190,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 191,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 192,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 193,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 194,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 195,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 196,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 197,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 198,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 199,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 200,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 201,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 202,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 203,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 204,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 205,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 206,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 207,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Concentrate",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 208,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 209,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 210,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 10 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 211,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 212,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 213,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 1000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 214,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 215,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 216,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 10 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 217,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 218,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 219,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 10 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 220,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 221,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 222,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 223,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 224,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 225,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Flower for Smoking",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 226,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 227,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 228,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 10 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 229,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 230,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 231,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 232,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 233,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 234,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 10 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 235,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 236,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 237,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 10 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 238,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 239,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 240,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 10 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 241,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 242,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 243,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 244,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 245,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 246,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Infused Flower",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 247,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 248,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 249,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 250,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 251,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 252,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 253,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 254,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 255,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 256,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 257,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 258,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 259,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 260,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 261,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 262,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 263,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 264,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 265,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 266,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 267,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Liquid Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 268,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 269,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 270,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 271,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 272,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 273,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 274,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 275,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 276,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 277,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 278,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 279,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 280,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 281,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 282,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 283,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 284,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 285,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 286,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 287,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 288,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Non-Liquid Edibles",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 289,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 290,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 291,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 292,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 293,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 294,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 295,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 296,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 297,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 298,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 299,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 300,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 301,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 302,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 303,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 304,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 305,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 306,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 307,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 308,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 309,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 310,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 311,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 312,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 313,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 314,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 315,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 316,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 317,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 318,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 319,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 320,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 321,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 322,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 323,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 324,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 325,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 326,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 327,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 328,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 329,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 330,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Resins for Inhalation",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 331,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 332,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 333,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 334,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 335,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 336,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 337,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 338,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 339,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 340,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 341,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 342,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 343,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 344,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 345,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 346,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 347,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 348,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 349,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 350,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 351,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Edible",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 352,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 353,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 354,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 355,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 356,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 357,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 358,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 359,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 360,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 361,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 362,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 363,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 364,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 365,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 366,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 367,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 368,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 369,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 370,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 371,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 372,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Rosins for Inhalation",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 373,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 374,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 375,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 376,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 377,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 378,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 379,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 380,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 381,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 382,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 383,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 384,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 385,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 386,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 387,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 25 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 388,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 389,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 390,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 391,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 392,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 393,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Cannabis or Hemp Topical",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 394,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 395,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 396,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Aspergillus spp."
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 397,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 398,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 399,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Enterobacteriaceae"
+      ],
+      "redaction_reason": null,
+      "value": 150,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 400,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 401,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 402,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Listeria Monocytogenes"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 403,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 404,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 405,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Salmonella species"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 406,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 407,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 408,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Shiga toxin-producing E. coli"
+      ],
+      "redaction_reason": null,
+      "value": "Not detected in 5 g",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 409,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 410,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 411,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Total aerobic microbial"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 412,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 413,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "N/A",
+      "value_type": "string",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 414,
+      "path": [
+        "MN OCM Hemp Derived Cannabis Products (HDCP)",
+        "Hemp Resins - Artificially Derived",
+        "Total yeast and mold"
+      ],
+      "redaction_reason": null,
+      "value": "Not applicable",
+      "value_type": "string",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 415,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 416,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 417,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 418,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 419,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 420,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": 0,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 421,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 422,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 423,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": 0,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 424,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 425,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 426,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 427,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 428,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 429,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": 10000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 430,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 431,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 432,
+      "path": [
+        "ND Medical",
+        "Cannabis Concentrates",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": 1000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 433,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 434,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 435,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 436,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 437,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 438,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": 0,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 439,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 440,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 441,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": 0,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 442,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 443,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 444,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 445,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 446,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 447,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": 10000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 448,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 449,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 450,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Edibles",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": 1000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 451,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 452,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 453,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 454,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 455,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 456,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": 0,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 457,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 458,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 459,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": 0,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 460,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 461,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 462,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 463,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 464,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 465,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": 10000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 466,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 467,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 468,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Ingestibles",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": 1000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 469,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 470,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 471,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 472,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 473,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 474,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": 0,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 475,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 476,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 477,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": 0,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 478,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 479,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 480,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": 100,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 481,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 482,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 483,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": 10000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 484,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 485,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 486,
+      "path": [
+        "ND Medical",
+        "Cannabis End Products - Topicals",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": 1000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 487,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 488,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 489,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Bile-Tolerant Gram-Negative Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": 1000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 490,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 491,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 492,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "STEC"
+      ],
+      "redaction_reason": null,
+      "value": 0,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 493,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 494,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 495,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Salmonella"
+      ],
+      "redaction_reason": null,
+      "value": 0,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 496,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 497,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 498,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Total Coliforms"
+      ],
+      "redaction_reason": null,
+      "value": 1000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 499,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 500,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 501,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Total Viable Aerobic Bacteria"
+      ],
+      "redaction_reason": null,
+      "value": 100000,
+      "value_type": "number",
+      "path_occurrence": 3
+    },
+    {
+      "ordinal": 502,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 1
+    },
+    {
+      "ordinal": 503,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": null,
+      "value_type": "null",
+      "path_occurrence": 2
+    },
+    {
+      "ordinal": 504,
+      "path": [
+        "ND Medical",
+        "Cannabis Flower",
+        "Total Yeast and Mold"
+      ],
+      "redaction_reason": null,
+      "value": 10000,
+      "value_type": "number",
+      "path_occurrence": 3
+    }
+  ]
+}

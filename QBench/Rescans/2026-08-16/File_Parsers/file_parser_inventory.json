@@ -1,0 +1,1533 @@
+{
+  "scan_date": "2026-08-16",
+  "capture_scope": "all 10 production-visible parser list rows and safe configuration tabs",
+  "count": 10,
+  "code_count": 5,
+  "no_code_count": 5,
+  "configuration_active_count": 5,
+  "configuration_inactive_count": 5,
+  "code_source_count": 5,
+  "no_code_finder_count": 63,
+  "items": [
+    {
+      "capture_timestamp_utc": "2026-08-17T00:28:01.179Z",
+      "url": "https://ait.qbench.net/templates/file-parser?id=50",
+      "id": 50,
+      "name": "Terpenes Simple Results Parser V2 Controls",
+      "parser_type": "Code",
+      "active": true,
+      "href": "/templates/file-parser?id=50",
+      "details": [
+        {
+          "text": "File Parser\n\nFile Parsers custom scripts written in JavaScript to import data into QBench from one or many files.\n\nTitle *\nEditor Type\n\nCode\n\nDescription\n Active\nSave Delete",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": "Terpenes Simple Results Parser V2 Controls",
+              "placeholder": "Title",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Description",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": ""
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "configuration": [
+        {
+          "text": "Configuration\nConfigure how you want this File Parser to be triggered.\nTrigger\nWhen file is added to Batch attachments\nAssay \nTerpenes — TR |\nFilename Should \nEnd With\nFilename Text\nSave",
+          "selected_values": [
+            "When file is added to Batch attachments",
+            "Terpenes — TR |",
+            "End With"
+          ],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-5-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-3-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-4-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": null,
+              "value": ".txt",
+              "placeholder": "Filename Text",
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "design": [
+        {
+          "text": "Template Design source text omitted from pane capture; complete source is preserved at QBench/Rescans/2026-08-16/File_Parsers/50/source.js.",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen8",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "file",
+              "name": "file",
+              "id": "qbenchFilesPreview",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": "qbenchFileParserReasonTextArea",
+              "value": null,
+              "placeholder": "Update Reason",
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "source": {
+        "capture_state": "full_editor_text_recaptured_via_read_only_select_all",
+        "line_count": 1274,
+        "byte_count": 53538,
+        "sha256": "0d8e998c017bd1b0888c1edf4b06cdc622c47e1a2c788e8b3ceead0951fb4841",
+        "email_count": 0,
+        "hardcoded_operational_id_count": 0,
+        "phone_count": 0,
+        "artifact_path": "QBench/Rescans/2026-08-16/File_Parsers/50/source.js",
+        "capture_method": "CodeMirror select-all text interface; no edit, copy, preview, save, or run",
+        "selected_version_display": "2 - updated test id version - APPROVED (ACTIVE)",
+        "recaptured_timestamp_utc": "2026-08-17T01:31:23.678Z",
+        "artifact_byte_count": 53538,
+        "artifact_sha256": "0d8e998c017bd1b0888c1edf4b06cdc622c47e1a2c788e8b3ceead0951fb4841",
+        "secret_bearing_url_count": 0,
+        "syntax_check": "PASS"
+      },
+      "versions": [
+        {
+          "text": "Versions\n\nView all template versions and their statuses.\n\nVersion\tStatus\tNotes\n2 - updated test id version\t APPROVED Active since 08/04/2026\t\n1 - terpenes-simple-results-parser-v2-controls-r2\t APPROVED",
+          "selected_values": [],
+          "controls": [],
+          "tables": [
+            [
+              "Version\tStatus\tNotes",
+              "2 - updated test id version\t APPROVED Active since 08/04/2026",
+              "1 - terpenes-simple-results-parser-v2-controls-r2\t APPROVED"
+            ]
+          ]
+        }
+      ],
+      "limitations": [
+        "Parser history/results were not opened.",
+        "Preview, file selection, Run, Save, Save Draft, Save As New Version, and Set Active were not used.",
+        "Screenshots omitted because safe element-only capture was unavailable.",
+        "Initial viewport-derived source capture was rejected after validation found duplicated/truncated text; the artifact was recaptured through the editor select-all text interface before commit."
+      ]
+    },
+    {
+      "capture_timestamp_utc": "2026-08-17T00:28:29.571Z",
+      "url": "https://ait.qbench.net/templates/file-parser?id=49",
+      "id": 49,
+      "name": "ZZZ_SANDBOX_ONLY_Terpenes_Attachment_Context_Probe_2026-07-16",
+      "parser_type": "Code",
+      "active": false,
+      "href": "/templates/file-parser?id=49",
+      "details": [
+        {
+          "text": "File Parser\n\nFile Parsers custom scripts written in JavaScript to import data into QBench from one or many files.\n\nTitle *\nEditor Type\n\nCode\n\nDescription\n Active\nSave Delete",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": "ZZZ_SANDBOX_ONLY_Terpenes_Attachment_Context_Probe_2026-07-16",
+              "placeholder": "Title",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Description",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "configuration": [
+        {
+          "text": "Configuration\nConfigure how you want this File Parser to be triggered.\nTrigger\nWhen file is added to Batch attachments\nAssay \nSelect...\nFilename Should \nEqual\nFilename Text\nSave",
+          "selected_values": [
+            "When file is added to Batch attachments",
+            "Equal"
+          ],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-5-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-3-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-4-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": null,
+              "value": "Output_redacted_fixture.txt",
+              "placeholder": "Filename Text",
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "design": [
+        {
+          "text": "Template Design source text omitted from pane capture; complete source is preserved at QBench/Rescans/2026-08-16/File_Parsers/49/source.js.",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen8",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "file",
+              "name": "file",
+              "id": "qbenchFilesPreview",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": "qbenchFileParserReasonTextArea",
+              "value": null,
+              "placeholder": "Update Reason",
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "source": {
+        "capture_state": "full_editor_text_recaptured_via_read_only_select_all",
+        "line_count": 113,
+        "byte_count": 3181,
+        "sha256": "b78253516708c75444cfb4b1401c8d87bd206765851d9f8f56225dfe9478939f",
+        "email_count": 0,
+        "hardcoded_operational_id_count": 0,
+        "phone_count": 0,
+        "artifact_path": "QBench/Rescans/2026-08-16/File_Parsers/49/source.js",
+        "capture_method": "CodeMirror select-all text interface; no edit, copy, preview, save, or run",
+        "selected_version_display": "1 - Stage 2B Temporary Attachment Context Probe - APPROVED (ACTIVE)",
+        "recaptured_timestamp_utc": "2026-08-17T01:31:23.679Z",
+        "artifact_byte_count": 3181,
+        "artifact_sha256": "b78253516708c75444cfb4b1401c8d87bd206765851d9f8f56225dfe9478939f",
+        "secret_bearing_url_count": 0,
+        "syntax_check": "PASS"
+      },
+      "versions": [
+        {
+          "text": "Versions\n\nView all template versions and their statuses.\n\nVersion\tStatus\tNotes\n1 - Stage 2B Temporary Attachment Context Probe\t APPROVED Active since 07/15/2026",
+          "selected_values": [],
+          "controls": [],
+          "tables": [
+            [
+              "Version\tStatus\tNotes",
+              "1 - Stage 2B Temporary Attachment Context Probe\t APPROVED Active since 07/15/2026"
+            ]
+          ]
+        }
+      ],
+      "limitations": [
+        "Parser history/results were not opened.",
+        "Preview, file selection, Run, Save, Save Draft, Save As New Version, and Set Active were not used.",
+        "Screenshots omitted because safe element-only capture was unavailable.",
+        "Initial viewport-derived source capture was rejected after validation found duplicated/truncated text; the artifact was recaptured through the editor select-all text interface before commit."
+      ]
+    },
+    {
+      "capture_timestamp_utc": "2026-08-17T00:28:56.528Z",
+      "url": "https://ait.qbench.net/templates/file-parser?id=48",
+      "id": 48,
+      "name": "ZZZ_SANDBOX_ONLY_Terpenes_Runtime_NoWrite_Probe",
+      "parser_type": "Code",
+      "active": false,
+      "href": "/templates/file-parser?id=48",
+      "details": [
+        {
+          "text": "File Parser\n\nFile Parsers custom scripts written in JavaScript to import data into QBench from one or many files.\n\nTitle *\nEditor Type\n\nCode\n\nDescription\n Active\nSave Delete",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": "ZZZ_SANDBOX_ONLY_Terpenes_Runtime_NoWrite_Probe",
+              "placeholder": "Title",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Description",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "configuration": [
+        {
+          "text": "Configuration\nConfigure how you want this File Parser to be triggered.\nTrigger\nSelect...\nAssay \nSelect...\nFilename Should \nSelect...\nFilename Text\nSave",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-5-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-3-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-4-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": null,
+              "value": "",
+              "placeholder": "Filename Text",
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "design": [
+        {
+          "text": "Template Design source text omitted from pane capture; complete source is preserved at QBench/Rescans/2026-08-16/File_Parsers/48/source.js.",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen8",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "file",
+              "name": "file",
+              "id": "qbenchFilesPreview",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": "qbenchFileParserReasonTextArea",
+              "value": null,
+              "placeholder": "Update Reason",
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "source": {
+        "capture_state": "full_editor_text_recaptured_via_read_only_select_all",
+        "line_count": 53,
+        "byte_count": 1811,
+        "sha256": "eeb8c72a1c5bd995be44a648ed65f6a48fe6f66cddf89d3ccdb1b4479621b82d",
+        "email_count": 0,
+        "hardcoded_operational_id_count": 0,
+        "phone_count": 0,
+        "artifact_path": "QBench/Rescans/2026-08-16/File_Parsers/48/source.js",
+        "capture_method": "CodeMirror select-all text interface; no edit, copy, preview, save, or run",
+        "selected_version_display": "2 - Stage 2A Read-Only Batch-Context Preview - DRAFT",
+        "recaptured_timestamp_utc": "2026-08-17T01:31:23.679Z",
+        "artifact_byte_count": 1811,
+        "artifact_sha256": "eeb8c72a1c5bd995be44a648ed65f6a48fe6f66cddf89d3ccdb1b4479621b82d",
+        "secret_bearing_url_count": 0,
+        "syntax_check": "PASS"
+      },
+      "versions": [
+        {
+          "text": "Versions\n\nView all template versions and their statuses.\n\nVersion\tStatus\tNotes\n2 - Stage 2A Read-Only Batch-Context Preview\tDRAFT\t\n1 - Stage 1 No-Write Runtime Preview\tDRAFT",
+          "selected_values": [],
+          "controls": [],
+          "tables": [
+            [
+              "Version\tStatus\tNotes",
+              "2 - Stage 2A Read-Only Batch-Context Preview\tDRAFT",
+              "1 - Stage 1 No-Write Runtime Preview\tDRAFT"
+            ]
+          ]
+        }
+      ],
+      "limitations": [
+        "Parser history/results were not opened.",
+        "Preview, file selection, Run, Save, Save Draft, Save As New Version, and Set Active were not used.",
+        "Screenshots omitted because safe element-only capture was unavailable.",
+        "Initial viewport-derived source capture was rejected after validation found duplicated/truncated text; the artifact was recaptured through the editor select-all text interface before commit."
+      ]
+    },
+    {
+      "capture_timestamp_utc": "2026-08-17T00:33:42.150Z",
+      "url": "https://ait.qbench.net/templates/file-parser?id=47",
+      "id": 47,
+      "name": "Pest Myco Qualitative",
+      "parser_type": "No Code",
+      "active": true,
+      "href": "/templates/file-parser?id=47",
+      "details": [
+        {
+          "text": "File Parser\n\nFile Parsers custom scripts written in JavaScript to import data into QBench from one or many files.\n\nTitle *\nEditor Type\n\nStandard\n\nDescription\n Active\nSave Delete",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": "Pest Myco Qualitative",
+              "placeholder": "Title",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Description",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": ""
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "configuration": [
+        {
+          "text": "Configuration\nConfigure your file parser. Indicate how the file is delimited, where the parsed data should go, and how the parser will be triggered.\nType\nDelimited file (Excel, CSV, TSV, etc.).\nHow Are File Contents Delimited?\nComma Separated\nData Target\nPopulate Batch Worksheet\nTrigger\nWhen file is added to Batch attachments\nAssay \nPesticides — PE | — MTH-PM-01; MTH-PE-01\nFilename Should \nContain\nFilename Text\nPatch Worksheet Data\nSave",
+          "selected_values": [
+            "Delimited file (Excel, CSV, TSV, etc.).",
+            "Comma Separated",
+            "Populate Batch Worksheet",
+            "When file is added to Batch attachments",
+            "Pesticides — PE | — MTH-PM-01; MTH-PE-01",
+            "Contain"
+          ],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-2-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-3-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-4-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-8-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-7-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-6-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": null,
+              "value": ".csv",
+              "placeholder": "Filename Text",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "finders": [
+        {
+          "text": "Finders\nAdd one or more data finders. A data finder will tell the parser which data to look for and how to name it so that it can be saved to the target specified in the configuration tab\n+ Add Finder\nbQC -By Test In Batch\nCloneDeleteEdit\ncQC -By Test In Batch\nCloneDeleteEdit\npQC -By Test In Batch\nCloneDeleteEdit\nSTD1-3 -By Test In Batch\nCloneDeleteEdit\nSTD1-2 -By Test In Batch\nCloneDeleteEdit\nSTD1-1 -By Test In Batch\nCloneDeleteEdit\nSystem Suit 3- Pesticides -By Test In Batch\nCloneDeleteEdit\nSystem Suit 2- Pesticides -By Test In Batch\nCloneDeleteEdit\nSystem Suit 1- Pesticides -By Test In Batch\nCloneDeleteEdit\nReagent Blank- Pesticides -By Test In Batch\nCloneDeleteEdit\nSamples - Pesticides -By Test In Batch\nCloneDeleteEdit\nSamples - Mycotoxin -By Test In Batch\nCloneDeleteEdit",
+          "selected_values": [],
+          "controls": [],
+          "tables": []
+        }
+      ],
+      "source": {
+        "capture_state": "not_applicable_no_code"
+      },
+      "versions": {
+        "capture_state": "not_exposed_no_versions_tab"
+      },
+      "limitations": [
+        "Finder names are visible, but finder/mapping internals require prohibited Edit and were not opened.",
+        "Parser history/results were not opened.",
+        "Edit, Clone, Delete, Add Finder, Preview, file selection, Run, and Save were not used.",
+        "Screenshots omitted because safe element-only capture was unavailable."
+      ]
+    },
+    {
+      "capture_timestamp_utc": "2026-08-17T00:29:18.771Z",
+      "url": "https://ait.qbench.net/templates/file-parser?id=46",
+      "id": 46,
+      "name": "Cannabinoid Potency Parser",
+      "parser_type": "Code",
+      "active": true,
+      "href": "/templates/file-parser?id=46",
+      "details": [
+        {
+          "text": "File Parser\n\nFile Parsers custom scripts written in JavaScript to import data into QBench from one or many files.\n\nTitle *\nEditor Type\n\nCode\n\nDescription\n Active\nSave Delete",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": "Cannabinoid Potency Parser",
+              "placeholder": "Title",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Description",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": ""
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "configuration": [
+        {
+          "text": "Configuration\nConfigure how you want this File Parser to be triggered.\nTrigger\nWhen file is added to Batch attachments\nAssay \nCannabinoid Potency — CP | — MTH-CP-01\nFilename Should \nEnd With\nFilename Text\nSave",
+          "selected_values": [
+            "When file is added to Batch attachments",
+            "Cannabinoid Potency — CP | — MTH-CP-01",
+            "End With"
+          ],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-5-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-3-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-4-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": null,
+              "value": ".csv",
+              "placeholder": "Filename Text",
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "design": [
+        {
+          "text": "Template Design source text omitted from pane capture; complete source is preserved at QBench/Rescans/2026-08-16/File_Parsers/46/source.js.",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "s2id_autogen8",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "file",
+              "name": "file",
+              "id": "qbenchFilesPreview",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": "qbenchFileParserReasonTextArea",
+              "value": null,
+              "placeholder": "Update Reason",
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "source": {
+        "capture_state": "full_editor_text_recaptured_via_read_only_select_all",
+        "line_count": 380,
+        "byte_count": 15927,
+        "sha256": "d66415468b309b82775a2af2e925a3ad0551bc667b34b0ac568d5b42ac452c33",
+        "email_count": 0,
+        "hardcoded_operational_id_count": 0,
+        "phone_count": 0,
+        "artifact_path": "QBench/Rescans/2026-08-16/File_Parsers/46/source.js",
+        "capture_method": "CodeMirror select-all text interface; no edit, copy, preview, save, or run",
+        "selected_version_display": "1 - AIT-135 Cannabinoid Potency Parser - APPROVED (ACTIVE)",
+        "recaptured_timestamp_utc": "2026-08-17T01:31:23.680Z",
+        "artifact_byte_count": 15927,
+        "artifact_sha256": "d66415468b309b82775a2af2e925a3ad0551bc667b34b0ac568d5b42ac452c33",
+        "secret_bearing_url_count": 0,
+        "syntax_check": "PASS"
+      },
+      "versions": [
+        {
+          "text": "Versions\n\nView all template versions and their statuses.\n\nVersion\tStatus\tNotes\n1 - AIT-135 Cannabinoid Potency Parser\t APPROVED Active since 07/10/2026",
+          "selected_values": [],
+          "controls": [],
+          "tables": [
+            [
+              "Version\tStatus\tNotes",
+              "1 - AIT-135 Cannabinoid Potency Parser\t APPROVED Active since 07/10/2026"
+            ]
+          ]
+        }
+      ],
+      "limitations": [
+        "Parser history/results were not opened.",
+        "Preview, file selection, Run, Save, Save Draft, Save As New Version, and Set Active were not used.",
+        "Screenshots omitted because safe element-only capture was unavailable.",
+        "Initial viewport-derived source capture was rejected after validation found duplicated/truncated text; the artifact was recaptured through the editor select-all text interface before commit."
+      ]
+    },
+    {
+      "capture_timestamp_utc": "2026-08-17T00:29:40.370Z",
+      "url": "https://ait.qbench.net/templates/file-parser?id=45",
+      "id": 45,
+      "name": "Gene-up",
+      "parser_type": "Code",
+      "active": false,
+      "href": "/templates/file-parser?id=45",
+      "details": [
+        {
+          "text": "File Parser\n\nFile Parsers custom scripts written in JavaScript to import data into QBench from one or many files.\n\nTitle *\nEditor Type\n\nCode\n\nDescription\n Active\nSave Delete",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": "Gene-up",
+              "placeholder": "Title",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Description",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "configuration": [
+        {
+          "text": "Configuration\nConfigure how you want this File Parser to be triggered.\nTrigger\nSelect...\nAssay \nSelect...\nFilename Should \nSelect...\nFilename Text\nSave",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-5-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-3-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-4-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": null,
+              "value": "",
+              "placeholder": "Filename Text",
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "design": [
+        {
+          "text": "Template Design source text omitted from pane capture; complete source is preserved at QBench/Rescans/2026-08-16/File_Parsers/45/source.js.",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "file",
+              "name": "file",
+              "id": "qbenchFilesPreview",
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": "qbenchFileParserReasonTextArea",
+              "value": null,
+              "placeholder": "Update Reason",
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "source": {
+        "capture_state": "full_editor_text_recaptured_via_read_only_select_all",
+        "line_count": 41,
+        "byte_count": 1378,
+        "sha256": "1a5bf4c737e87cfcd4ffd2e3e7f4d29d854fe88c81b9e688c027a35fdfc9ff64",
+        "email_count": 0,
+        "hardcoded_operational_id_count": 0,
+        "phone_count": 0,
+        "artifact_path": "QBench/Rescans/2026-08-16/File_Parsers/45/source.js",
+        "capture_method": "CodeMirror select-all text interface; no edit, copy, preview, save, or run",
+        "selected_version_display": "unversioned base editor",
+        "recaptured_timestamp_utc": "2026-08-17T01:31:23.681Z",
+        "artifact_byte_count": 1378,
+        "artifact_sha256": "1a5bf4c737e87cfcd4ffd2e3e7f4d29d854fe88c81b9e688c027a35fdfc9ff64",
+        "secret_bearing_url_count": 0,
+        "syntax_check": "PASS"
+      },
+      "versions": [
+        {
+          "text": "Versions\n\nView all template versions and their statuses.\n\nNo Versions Found\nPlease head over to the Design tab to create your first Template Version!",
+          "selected_values": [],
+          "controls": [],
+          "tables": []
+        }
+      ],
+      "limitations": [
+        "Parser history/results were not opened.",
+        "Preview, file selection, Run, Save, Save Draft, Save As New Version, and Set Active were not used.",
+        "Screenshots omitted because safe element-only capture was unavailable.",
+        "Initial viewport-derived source capture was rejected after validation found duplicated/truncated text; the artifact was recaptured through the editor select-all text interface before commit."
+      ]
+    },
+    {
+      "capture_timestamp_utc": "2026-08-17T00:34:05.067Z",
+      "url": "https://ait.qbench.net/templates/file-parser?id=41",
+      "id": 41,
+      "name": "Heavy Metals DataManager",
+      "parser_type": "No Code",
+      "active": true,
+      "href": "/templates/file-parser?id=41",
+      "details": [
+        {
+          "text": "File Parser\n\nFile Parsers custom scripts written in JavaScript to import data into QBench from one or many files.\n\nTitle *\nEditor Type\n\nStandard\n\nDescription\n Active\nSave Delete",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": "Heavy Metals DataManager",
+              "placeholder": "Title",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Description",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": ""
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "configuration": [
+        {
+          "text": "Configuration\nConfigure your file parser. Indicate how the file is delimited, where the parsed data should go, and how the parser will be triggered.\nType\nDelimited file (Excel, CSV, TSV, etc.).\nHow Are File Contents Delimited?\nTab Separated\nData Target\nPopulate Batch Worksheet\nTrigger\nWhen file is added to Batch attachments\nAssay \nHeavy Metals — HM | — MTH-HM-01\nFilename Should \nContain\nFilename Text\nPatch Worksheet Data\nSave",
+          "selected_values": [
+            "Delimited file (Excel, CSV, TSV, etc.).",
+            "Tab Separated",
+            "Populate Batch Worksheet",
+            "When file is added to Batch attachments",
+            "Heavy Metals — HM | — MTH-HM-01",
+            "Contain"
+          ],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-2-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-3-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-4-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-8-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-7-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-6-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": null,
+              "value": ".txt",
+              "placeholder": "Filename Text",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "finders": [
+        {
+          "text": "Finders\nAdd one or more data finders. A data finder will tell the parser which data to look for and how to name it so that it can be saved to the target specified in the configuration tab\n+ Add Finder\nArsenic - Fortified Blank -By Sample In Batch\nCloneDeleteEdit\nCadmium - Fortified Blank -By Sample In Batch\nCloneDeleteEdit\nMercury - Fortified Blank -By Sample In Batch\nCloneDeleteEdit\nLead - Fortified Blank -By Sample In Batch\nCloneDeleteEdit\nArsenic - Fortified Blank -By Sample In Batch\nCloneDeleteEdit\nCadmium - Fortified Blank -By Sample In Batch\nCloneDeleteEdit\nMercury - Fortified Blank -By Sample In Batch\nCloneDeleteEdit\nLead - Fortified Blank -By Sample In Batch\nCloneDeleteEdit\nArsenic - Flower Blank -By Sample In Batch\nCloneDeleteEdit\nCadmium - Flower Blank -By Sample In Batch\nCloneDeleteEdit\nMercury - Flower Blank -By Sample In Batch\nCloneDeleteEdit\nLead - Flower Blank -By Sample In Batch\nCloneDeleteEdit\nArsenic - Fortified Concentration -By Sample In Batch\nCloneDeleteEdit\nCadmium - Fortified Concentration -By Sample In Batch\nCloneDeleteEdit\nMercury - Fortified Concentration -By Sample In Batch\nCloneDeleteEdit\nLead - Fortified Concentration -By Sample In Batch\nCloneDeleteEdit\nArsenic - Concentration Blank -By Sample In Batch\nCloneDeleteEdit\nCadmium - Concentration Blank -By Sample In Batch\nCloneDeleteEdit\nMercury - Concentration Blank -By Sample In Batch\nCloneDeleteEdit\nLead - Concentration Blank -By Sample In Batch\nCloneDeleteEdit\nArsenic - Method/Digestion Blank -By Sample In Batch\nCloneDeleteEdit\nCadmium - Method/Digestion Blank -By Sample In Batch\nCloneDeleteEdit\nMercury - Method/Digestion Blank -By Sample In Batch\nCloneDeleteEdit\nLead - Method/Digestion Blank -By Sample In Batch\nCloneDeleteEdit\nArsenic - ICV1 -By Sample In Batch\nCloneDeleteEdit\nCadmium - ICV1 -By Sample In Batch\nCloneDeleteEdit\nMercury - ICV1 -By Sample In Batch\nCloneDeleteEdit\nLead - ICV1 -By Sample In Batch\nCloneDeleteEdit\nArsenic - Cal4 -By Sample In Batch\nCloneDeleteEdit\nCadmium - Cal4 -By Sample In Batch\nCloneDeleteEdit\nMercury - Cal4 -By Sample In Batch\nCloneDeleteEdit\nLead - Cal4 -By Sample In Batch\nCloneDeleteEdit\nArsenic - Cal3 -By Sample In Batch\nCloneDeleteEdit\nCadmium - Cal3 -By Sample In Batch\nCloneDeleteEdit\nMercury - Cal3 -By Sample In Batch\nCloneDeleteEdit\nLead - Cal3 -By Sample In Batch\nCloneDeleteEdit\nArsenic - Cal2 -By Sample In Batch\nCloneDeleteEdit\nCadmium - Cal2 -By Sample In Batch\nCloneDeleteEdit\nMercury - Cal2 -By Sample In Batch\nCloneDeleteEdit\nLead - Cal2 -By Sample In Batch\nCloneDeleteEdit\nArsenic - Cal1 -By Sample In Batch\nCloneDeleteEdit\nCadmium - Cal1 -By Sample In Batch\nCloneDeleteEdit\nMercury - Cal1 -By Sample In Batch\nCloneDeleteEdit\nLead - Cal1 -By Sample In Batch\nCloneDeleteEdit\nArsenic -By Test In Batch\nCloneDeleteEdit\nCadmium -By Test In Batch\nCloneDeleteEdit\nMercury -By Test In Batch\nCloneDeleteEdit\nLead -By Test In Batch\nCloneDeleteEdit",
+          "selected_values": [],
+          "controls": [],
+          "tables": []
+        }
+      ],
+      "source": {
+        "capture_state": "not_applicable_no_code"
+      },
+      "versions": {
+        "capture_state": "not_exposed_no_versions_tab"
+      },
+      "limitations": [
+        "Finder names are visible, but finder/mapping internals require prohibited Edit and were not opened.",
+        "Parser history/results were not opened.",
+        "Edit, Clone, Delete, Add Finder, Preview, file selection, Run, and Save were not used.",
+        "Screenshots omitted because safe element-only capture was unavailable."
+      ]
+    },
+    {
+      "capture_timestamp_utc": "2026-08-17T00:34:24.358Z",
+      "url": "https://ait.qbench.net/templates/file-parser?id=25",
+      "id": 25,
+      "name": "Cannabis Heavy Metals ICPMS File Parser",
+      "parser_type": "No Code",
+      "active": false,
+      "href": "/templates/file-parser?id=25",
+      "details": [
+        {
+          "text": "File Parser\n\nFile Parsers custom scripts written in JavaScript to import data into QBench from one or many files.\n\nTitle *\nEditor Type\n\nStandard\n\nDescription\n Active\nSave Delete",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": "Cannabis Heavy Metals ICPMS File Parser",
+              "placeholder": "Title",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Description",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "configuration": [
+        {
+          "text": "Configuration\nConfigure your file parser. Indicate how the file is delimited, where the parsed data should go, and how the parser will be triggered.\nType\nDelimited file (Excel, CSV, TSV, etc.).\nHow Are File Contents Delimited?\nComma Separated\nData Target\nPopulate Batch Worksheet\nTrigger\nWhen file is added to Batch attachments\nAssay \nHeavy Metals — HM | — MTH-HM-01\nFilename Should \nContain\nFilename Text\nPatch Worksheet Data\nSave",
+          "selected_values": [
+            "Delimited file (Excel, CSV, TSV, etc.).",
+            "Comma Separated",
+            "Populate Batch Worksheet",
+            "When file is added to Batch attachments",
+            "Heavy Metals — HM | — MTH-HM-01",
+            "Contain"
+          ],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-2-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-3-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-4-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-8-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-7-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-6-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": null,
+              "value": "IC",
+              "placeholder": "Filename Text",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "finders": [
+        {
+          "text": "Finders\nAdd one or more data finders. A data finder will tell the parser which data to look for and how to name it so that it can be saved to the target specified in the configuration tab\n+ Add Finder\nHeavy Metals Sample in Batch -By Sample In Batch\nCloneDeleteEdit",
+          "selected_values": [],
+          "controls": [],
+          "tables": []
+        }
+      ],
+      "source": {
+        "capture_state": "not_applicable_no_code"
+      },
+      "versions": {
+        "capture_state": "not_exposed_no_versions_tab"
+      },
+      "limitations": [
+        "Finder names are visible, but finder/mapping internals require prohibited Edit and were not opened.",
+        "Parser history/results were not opened.",
+        "Edit, Clone, Delete, Add Finder, Preview, file selection, Run, and Save were not used.",
+        "Screenshots omitted because safe element-only capture was unavailable."
+      ]
+    },
+    {
+      "capture_timestamp_utc": "2026-08-17T00:34:43.715Z",
+      "url": "https://ait.qbench.net/templates/file-parser?id=22",
+      "id": 22,
+      "name": "Heavy Metals File Parser - AMM",
+      "parser_type": "No Code",
+      "active": false,
+      "href": "/templates/file-parser?id=22",
+      "details": [
+        {
+          "text": "File Parser\n\nFile Parsers custom scripts written in JavaScript to import data into QBench from one or many files.\n\nTitle *\nEditor Type\n\nStandard\n\nDescription\n Active\nSave Delete",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": "Heavy Metals File Parser - AMM",
+              "placeholder": "Title",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Description",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "configuration": [
+        {
+          "text": "Configuration\nConfigure your file parser. Indicate how the file is delimited, where the parsed data should go, and how the parser will be triggered.\nType\nDelimited file (Excel, CSV, TSV, etc.).\nHow Are File Contents Delimited?\nComma Separated\nData Target\nPopulate Batch Worksheet\nTrigger\nWhen file is added to Batch attachments\nAssay \nHeavy Metals — HM | — MTH-HM-01\nFilename Should \nEnd With\nFilename Text\nPatch Worksheet Data\nSave",
+          "selected_values": [
+            "Delimited file (Excel, CSV, TSV, etc.).",
+            "Comma Separated",
+            "Populate Batch Worksheet",
+            "When file is added to Batch attachments",
+            "Heavy Metals — HM | — MTH-HM-01",
+            "End With"
+          ],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-2-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-3-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-4-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-8-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-7-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-6-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": null,
+              "value": ".csv",
+              "placeholder": "Filename Text",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "finders": [
+        {
+          "text": "Finders\nAdd one or more data finders. A data finder will tell the parser which data to look for and how to name it so that it can be saved to the target specified in the configuration tab\n+ Add Finder\nTests in Batch -By Test In Batch\nCloneDeleteEdit",
+          "selected_values": [],
+          "controls": [],
+          "tables": []
+        }
+      ],
+      "source": {
+        "capture_state": "not_applicable_no_code"
+      },
+      "versions": {
+        "capture_state": "not_exposed_no_versions_tab"
+      },
+      "limitations": [
+        "Finder names are visible, but finder/mapping internals require prohibited Edit and were not opened.",
+        "Parser history/results were not opened.",
+        "Edit, Clone, Delete, Add Finder, Preview, file selection, Run, and Save were not used.",
+        "Screenshots omitted because safe element-only capture was unavailable."
+      ]
+    },
+    {
+      "capture_timestamp_utc": "2026-08-17T00:35:08.666Z",
+      "url": "https://ait.qbench.net/templates/file-parser?id=21",
+      "id": 21,
+      "name": "Example [File Parser]",
+      "parser_type": "No Code",
+      "active": true,
+      "href": "/templates/file-parser?id=21",
+      "details": [
+        {
+          "text": "File Parser\n\nFile Parsers custom scripts written in JavaScript to import data into QBench from one or many files.\n\nTitle *\nEditor Type\n\nStandard\n\nDescription\n Active\nSave Delete",
+          "selected_values": [],
+          "controls": [
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": "Example [File Parser]",
+              "placeholder": "Title",
+              "checked": null
+            },
+            {
+              "type": null,
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": "Description",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": "_",
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": ""
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "configuration": [
+        {
+          "text": "Configuration\nConfigure your file parser. Indicate how the file is delimited, where the parsed data should go, and how the parser will be triggered.\nType\nDelimited file (Excel, CSV, TSV, etc.).\nHow Are File Contents Delimited?\nExcel (.xlsx and .xlsm)\nData Target\nPopulate Multiple Test Worksheets\nTrigger\nWhen file is uploaded from navigation bar and Test IDs can be found in a specific cell range in file\nFilename Should \nEnd With\nFilename Text\nPatch Worksheet Data\nSave",
+          "selected_values": [
+            "Delimited file (Excel, CSV, TSV, etc.).",
+            "Excel (.xlsx and .xlsm)",
+            "Populate Multiple Test Worksheets",
+            "When file is uploaded from navigation bar and Test IDs can be found in a specific cell range in file",
+            "End With"
+          ],
+          "controls": [
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-2-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-3-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-4-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-7-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": "react-select-6-input",
+              "value": "",
+              "placeholder": null,
+              "checked": null
+            },
+            {
+              "type": "text",
+              "name": null,
+              "id": null,
+              "value": ".xlsx",
+              "placeholder": "Filename Text",
+              "checked": null
+            },
+            {
+              "type": "checkbox",
+              "name": null,
+              "id": null,
+              "value": null,
+              "placeholder": null,
+              "checked": null
+            }
+          ],
+          "tables": []
+        }
+      ],
+      "finders": [
+        {
+          "text": "Finders\nAdd one or more data finders. A data finder will tell the parser which data to look for and how to name it so that it can be saved to the target specified in the configuration tab\n+ Add Finder\nFinder # 1 -By Sample In Batch\nCloneDeleteEdit",
+          "selected_values": [],
+          "controls": [],
+          "tables": []
+        }
+      ],
+      "source": {
+        "capture_state": "not_applicable_no_code"
+      },
+      "versions": {
+        "capture_state": "not_exposed_no_versions_tab"
+      },
+      "limitations": [
+        "Finder names are visible, but finder/mapping internals require prohibited Edit and were not opened.",
+        "Parser history/results were not opened.",
+        "Edit, Clone, Delete, Add Finder, Preview, file selection, Run, and Save were not used.",
+        "Screenshots omitted because safe element-only capture was unavailable."
+      ]
+    }
+  ],
+  "limitations": [
+    "Parser histories/results were not opened.",
+    "No parser was previewed, run, retried, or supplied a file.",
+    "No Save, Save Draft, Save As New Version, Set Active, Add Finder, Clone, Delete, or Edit action was used.",
+    "No-code finder names were captured; mapping internals require prohibited Edit and remain unavailable.",
+    "Screenshots were omitted because safe element-only capture was unavailable and full-page capture includes account/password-notice material."
+  ],
+  "source_capture_correction": {
+    "timestamp_utc": "2026-08-17T01:31:23.681Z",
+    "reason": "Initial scroll/viewport extraction duplicated adjacent lines and truncated parser 46; rejected before commit.",
+    "method": "Read-only CodeMirror select-all text interface; no clipboard, edit, preview, save, file selection, or execution.",
+    "corrected_parser_ids": [
+      45,
+      46,
+      48,
+      49,
+      50
+    ]
+  }
+}

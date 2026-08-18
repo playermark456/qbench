@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-17T02:26:20.590Z",
+  "source_host": "ait.qbench.net",
+  "capture_method": "Inventory Configurations Categories and Settings tabs; field inventory cross-reference",
+  "privacy_note": "No stock, lot, supplier, catalog, purchasing, transaction, attachment, or location values were captured.",
+  "configuration": {
+    "categories": [
+      {
+        "category_id": 5,
+        "category_name": "Consumables",
+        "active": true
+      },
+      {
+        "category_id": 10,
+        "category_name": "Formulation",
+        "active": true
+      },
+      {
+        "category_id": 7,
+        "category_name": "General Consumables",
+        "active": true
+      },
+      {
+        "category_id": 4,
+        "category_name": "Reagents",
+        "active": true
+      },
+      {
+        "category_id": 6,
+        "category_name": "Reference Standards",
+        "active": true
+      },
+      {
+        "category_id": 3,
+        "category_name": "Solvents",
+        "active": true
+      },
+      {
+        "category_id": 11,
+        "category_name": "Stocks",
+        "active": true
+      }
+    ],
+    "expired_stock_usage_blocked": false,
+    "manufacturer_field_configuration": "field_presence_only_cross_reference_Phase3",
+    "catalog_number_field_configuration": "field_presence_only_cross_reference_Phase3",
+    "lot_tracking_state": "field_present_behavior_not_verified",
+    "expiration_tracking_state": "field_present_behavior_not_verified",
+    "storage_location_state": "field_present_behavior_not_verified",
+    "reorder_configuration_state": "field_present_behavior_not_verified",
+    "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+    "custom_fields": "cross_reference_Field_Index",
+    "association_state": "resource_group_memberships_captured"
+  }
+}

@@ -1,0 +1,3729 @@
+{
+  "schema_version": "1.0",
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-17T02:26:20.590Z",
+  "source_host": "ait.qbench.net",
+  "capture_method": "complete eight-page list capture plus resource-group membership reconciliation; safe columns only",
+  "privacy_note": "Descriptions, separate supplier/manufacturer fields, catalog values, prices, stock balances, lots, quantities, locations, transactions, purchases, attachments, and notes were omitted. Verbatim item names may contain parenthetical qualifiers that are part of the configured name.",
+  "limitations": [
+    "Units and size are aggregated only from safe resource-group membership rows; null means not exposed through captured membership evidence, not no unit configured.",
+    "Item active state and inventory type were not exposed.",
+    "Field presence proves structure only; it does not prove that lot, expiration, location, reorder, or minimum-stock behavior is enabled."
+  ],
+  "count": 158,
+  "items": [
+    {
+      "configuration_id": 116,
+      "item_name": "Acetonitrile, HPLC (Concord)",
+      "category": "Solvents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "4000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        6,
+        8,
+        9
+      ],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 246,
+      "item_name": "Acetonitrile, HPLC (Fisher)",
+      "category": "Solvents",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 152,
+      "item_name": "Alconox Detergent",
+      "category": "General Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 277,
+      "item_name": "Blank CBD Flower Biomass",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 286,
+      "item_name": "Blank Gummy Base Matrix",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 121,
+      "item_name": "Blank Hemp Flower Matrix",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 228,
+      "item_name": "Blank Hemp Oil Matrix",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "g"
+      ],
+      "size": [
+        "100"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        7
+      ],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 287,
+      "item_name": "Blank MCT Oil Matrix",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 165,
+      "item_name": "Blank Olive Oil Matrix, neat",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "g"
+      ],
+      "size": [
+        "2.5"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        8
+      ],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 174,
+      "item_name": "Blank Powdered Gelatin Mix Matrix",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "g"
+      ],
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        8
+      ],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 125,
+      "item_name": "Cellulose powder, microcrystallline",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "g"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        8
+      ],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 162,
+      "item_name": "CP - LC Column NexLeaf CBX",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "column"
+      ],
+      "size": [
+        "1"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        8
+      ],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 129,
+      "item_name": "CP - 13-Cannabinoid Mix",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        8
+      ],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 114,
+      "item_name": "CP - 80:20 ACN:H2O Sol.",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "250"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        8
+      ],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 199,
+      "item_name": "CP - Captiva EMR Filter Tubes",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "tubes"
+      ],
+      "size": [
+        "100"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        6,
+        8
+      ],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 128,
+      "item_name": "CP - Custom 12-Phytocannabinoid Mixture CRM",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 250,
+      "item_name": "CP - Mobile Phase A",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "2000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        8
+      ],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 251,
+      "item_name": "CP - Mobile Phase B",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "5000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        8
+      ],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 177,
+      "item_name": "CP - Unbuffered QuEChERS 5.0g",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "packs"
+      ],
+      "size": [
+        "50"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        6,
+        8
+      ],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 178,
+      "item_name": "CP - Unbuffered QuEChERS 7.5g",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "packs"
+      ],
+      "size": [
+        "50"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        8
+      ],
+      "source_page": 1,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 137,
+      "item_name": "Formic Acid, LCMS",
+      "category": "Reagents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "50"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        6,
+        8,
+        9
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 140,
+      "item_name": "Hexanes, ACS",
+      "category": "Solvents",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 110,
+      "item_name": "HM - 2.0% Nitric Acid Solution",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "5100"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 143,
+      "item_name": "HM - 4 HM Mix (ICV Stock)",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "100000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 118,
+      "item_name": "HM - Arsenic (As) ICP Std",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "500000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 122,
+      "item_name": "HM - Cadmium (Cd) ICP Std",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "500000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 221,
+      "item_name": "HM - CAL1",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "40"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 220,
+      "item_name": "HM - CAL2",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "40"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 219,
+      "item_name": "HM - CAL3",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "40"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 139,
+      "item_name": "HM - CAL4",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "40"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 222,
+      "item_name": "HM - CCV",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "40"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 138,
+      "item_name": "HM - Gold ICP Calibration Std",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "100000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 247,
+      "item_name": "HM - I.C. Water",
+      "category": "Solvents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "5000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 147,
+      "item_name": "HM - ICPMS Tuning Solution",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "125"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 223,
+      "item_name": "HM - ICV",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "40"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 144,
+      "item_name": "HM - ICV Dilution Solution (IDS)",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "10000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 148,
+      "item_name": "HM - IS Working Solution",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 154,
+      "item_name": "HM - Lead (Pb) ICP Std",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "500000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 155,
+      "item_name": "HM - Mercury (Hg) ICP Std",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "500000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 160,
+      "item_name": "HM - Mixed Std Stock(MXS)",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "10000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 2,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 163,
+      "item_name": "HM - Nitric Acid, ~68%",
+      "category": "Reagents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "2500"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 142,
+      "item_name": "HM - Tuning Sol. (IS Stock)",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "125"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5
+      ],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 150,
+      "item_name": "Isopropyl Alcohol, 99%",
+      "category": "Solvents",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 149,
+      "item_name": "Isopropyl Alcohol, LCMS",
+      "category": "Solvents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "4000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        8
+      ],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 153,
+      "item_name": "LaCroix Beverage",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "355"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        8
+      ],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 157,
+      "item_name": "Methanol, HPLC",
+      "category": "Solvents",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 158,
+      "item_name": "Methanol, LCMS",
+      "category": "Solvents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "4000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        6
+      ],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 262,
+      "item_name": "Micro - 1.5mL Centrifuge Tubes",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 303,
+      "item_name": "Micro - Agar Plate, Blood",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 299,
+      "item_name": "Micro - Agar Plate, Blue Potato Dextrose",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 301,
+      "item_name": "Micro - Agar Plate, MacConkey",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 300,
+      "item_name": "Micro - Agar Plate, Potato Dextrose",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 304,
+      "item_name": "Micro - Agar Plate, Tryptic Soy",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 302,
+      "item_name": "Micro - Agar Plate, Xylose Lysine Deoxycholate",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 289,
+      "item_name": "Micro - Bioballs Candida Albicans Control",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "vials"
+      ],
+      "size": [
+        "20"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        11
+      ],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 290,
+      "item_name": "Micro - Bioballs Enterobacteria Klebsiella Aerogenes Control",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "vials"
+      ],
+      "size": [
+        "20"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        11
+      ],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 288,
+      "item_name": "Micro - Bioballs Escherichia Coli Control",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "vials"
+      ],
+      "size": [
+        "20"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        11
+      ],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 267,
+      "item_name": "Micro - Buffered Peptone H2O 225mL",
+      "category": "Reagents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "225"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10,
+        11
+      ],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 297,
+      "item_name": "Micro - Buffered Peptone H2O Mix",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 279,
+      "item_name": "Micro - Buffered Peptone H2O, Boxed",
+      "category": "Reagents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "5000, 10000, or 20000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 3,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 254,
+      "item_name": "Micro - Chlortetracycline",
+      "category": "Reagents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "vials"
+      ],
+      "size": [
+        "5"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 298,
+      "item_name": "Micro - Demi-Fraser w/ Supp, Boxed",
+      "category": "Reagents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "10000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 255,
+      "item_name": "Micro - Dicloran",
+      "category": "Reagents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "g"
+      ],
+      "size": [
+        "100"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 292,
+      "item_name": "Micro - DNA Control GENE-UP Aspergillus",
+      "category": "",
+      "inventory_type": "not_exposed",
+      "units": [
+        "vials"
+      ],
+      "size": [
+        "1"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 291,
+      "item_name": "Micro - DNA Control Lysteria Monocytogenes",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "vials"
+      ],
+      "size": [
+        "1"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 293,
+      "item_name": "Micro - DNA Control VERIFLOW E. Coli",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "vials"
+      ],
+      "size": [
+        "1"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 294,
+      "item_name": "Micro - DNA Control VERIFLOW Salmonella",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "vials"
+      ],
+      "size": [
+        "1"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 259,
+      "item_name": "Micro - GENE-UP Aspergillus Kit",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "tubes"
+      ],
+      "size": [
+        "24"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 256,
+      "item_name": "Micro - GENE-UP Sal/STEC Kit",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "tubes"
+      ],
+      "size": [
+        "24"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 258,
+      "item_name": "Micro - GENE-UP® L Mono. Kit",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "tubes"
+      ],
+      "size": [
+        "192"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 257,
+      "item_name": "Micro - GENE-UP® Lysis Kit",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "tubes"
+      ],
+      "size": [
+        "192"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 253,
+      "item_name": "Micro - LPT Broth",
+      "category": "Reagents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "225"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 264,
+      "item_name": "Micro - PDB Powder",
+      "category": "Reagents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "g"
+      ],
+      "size": [
+        "250"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 265,
+      "item_name": "Micro - Peptone Salt Broth",
+      "category": "Reagents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "tubes"
+      ],
+      "size": [
+        "100"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 285,
+      "item_name": "Micro - Potato Dextrose + CTC + Dichloran 20L",
+      "category": "Reagents",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 252,
+      "item_name": "Micro - Potato Dextrose Broth",
+      "category": "Reagents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 278,
+      "item_name": "Micro - Potato Dextrose w/ CTC",
+      "category": "Reagents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "20000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        10
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 270,
+      "item_name": "Micro - Tempo AC Cards",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "cards"
+      ],
+      "size": [
+        "48"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        11
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 269,
+      "item_name": "Micro - Tempo EB Cards",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "cards"
+      ],
+      "size": [
+        "48"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        11
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 271,
+      "item_name": "Micro - Tempo YM Cards",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "cards"
+      ],
+      "size": [
+        "48"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        11
+      ],
+      "source_page": 4,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 268,
+      "item_name": "Micro - TempoBags",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 272,
+      "item_name": "Micro - Water, Deionized Type II",
+      "category": "Solvents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "20000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        11
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 261,
+      "item_name": "Micro - Whirl-Pak Bags 24oz.",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 260,
+      "item_name": "Micro - Whirl-Pak Bags 7oz.",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 227,
+      "item_name": "P/M - 1% Formic Acid ACN Sol.",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "50.5"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        6,
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 117,
+      "item_name": "P/M - Ammonium Fluoride",
+      "category": "Reagents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "g"
+      ],
+      "size": [
+        "50"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 225,
+      "item_name": "P/M - Ammonium Formate",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mg"
+      ],
+      "size": [
+        "25000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 119,
+      "item_name": "P/M - Azadirachtin Std",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 126,
+      "item_name": "P/M - Chlormequat Std",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 224,
+      "item_name": "P/M - Mobile Phase A",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "2000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        6,
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 226,
+      "item_name": "P/M - Mycotoxin Mix (M Mix)",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        6
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 161,
+      "item_name": "P/M - Mycotoxin Mixture 5 Std",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        6,
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 167,
+      "item_name": "P/M - Oregon Pesticide Std #1",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 168,
+      "item_name": "P/M - Oregon Pesticide Std #2",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 169,
+      "item_name": "P/M - Oregon Pesticide Std #3",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 170,
+      "item_name": "P/M - Oregon Pesticide Std #4",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 171,
+      "item_name": "P/M - Oregon Pesticide Std #5",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 172,
+      "item_name": "P/M - Oregon Pesticide Std #6",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 248,
+      "item_name": "P/M - Pest/Myco Mix (PM Mix)",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "12000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 249,
+      "item_name": "P/M - Pesticide Mix (P Mix)",
+      "category": "Formulation",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "3000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        9
+      ],
+      "source_page": 5,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 276,
+      "item_name": "P/M - Raptor ARC-18 Column",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "columns"
+      ],
+      "size": [
+        "1"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        6,
+        9
+      ],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 188,
+      "item_name": "Pipette - 1000µL Filtered Tips",
+      "category": "General Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 192,
+      "item_name": "Pipette - 1000µL Microman Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 193,
+      "item_name": "Pipette - 100µL Microman Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 109,
+      "item_name": "Pipette - 10mL Pipette Filters",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 187,
+      "item_name": "Pipette - 10mL Pipette Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 275,
+      "item_name": "Pipette - 10mL Serological Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 189,
+      "item_name": "Pipette - 10µL Filtered Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 195,
+      "item_name": "Pipette - 10µL Microman Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 190,
+      "item_name": "Pipette - 200µL Filtered Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 191,
+      "item_name": "Pipette - 20µL Filtered Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 194,
+      "item_name": "Pipette - 250µL Microman Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 274,
+      "item_name": "Pipette - 25mL Serological Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 112,
+      "item_name": "Pipette - 3.0mL Transfer Pipettes",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 120,
+      "item_name": "Plastic Beakers",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 175,
+      "item_name": "Pressurized Gas, Argon",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "tank"
+      ],
+      "size": [
+        "1"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5,
+        6,
+        9
+      ],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 176,
+      "item_name": "Pressurized Gas, Helium",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "tank"
+      ],
+      "size": [
+        "1"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        5,
+        7
+      ],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 282,
+      "item_name": "Pressurized Gas, Hydrogen",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 196,
+      "item_name": "Repeater - 0.5mL Repeater Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 197,
+      "item_name": "Repeater - 10mL Repeater Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 6,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 111,
+      "item_name": "Repeater - 2.5mL Repeater Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 244,
+      "item_name": "Repeater - 25mL Repeater Tip Cap",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 245,
+      "item_name": "Repeater - 25mL Repeater Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 113,
+      "item_name": "Repeater - 50mL Repeater Tip Caps",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 198,
+      "item_name": "Repeater - 50mL Repeater Tips",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 131,
+      "item_name": "RS - DMAC, Dimethylacetamide",
+      "category": "Solvents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        7
+      ],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 123,
+      "item_name": "RS - Headspace Crimping Caps",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 229,
+      "item_name": "RS - Residual Solv. VOC Mix",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        7
+      ],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 230,
+      "item_name": "RS - Residual Solvents Mix #1",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "uL"
+      ],
+      "size": [
+        "1000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        7
+      ],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 231,
+      "item_name": "RS/Terpenes - GC Column SH-I-624Sil MS Capillary",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": [
+        "columns"
+      ],
+      "size": [
+        "1"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        7
+      ],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 133,
+      "item_name": "Syringe - 0.22µm PTFE Filter",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 273,
+      "item_name": "Syringe - 0.22µm YM Filter",
+      "category": "",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 263,
+      "item_name": "Syringe - 30mL Syringe",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 184,
+      "item_name": "Syringe - 3mL Syringe",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 185,
+      "item_name": "Syringe - 5mL Syringe",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 295,
+      "item_name": "Terpenes - Cannabis Terpenes Std #1",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 296,
+      "item_name": "Terpenes - Cannabis Terpenes Std #2",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 283,
+      "item_name": "Terpenes - Ethyl Acetate",
+      "category": "Solvents",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 284,
+      "item_name": "Tridecane",
+      "category": "Solvents",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 200,
+      "item_name": "Tubes - 15mL Centrifuge Tubes",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 7,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 186,
+      "item_name": "Tubes - 15mL Test Tubes (HM)",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 202,
+      "item_name": "Tubes - 50mL Green Cap Centrifuge Tubes",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 204,
+      "item_name": "Tubes - 50mL Red Cap Centrifuge Tubes",
+      "category": "General Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 205,
+      "item_name": "Tubes - 50mL Self-Standing Centrifuge Tubes",
+      "category": "General Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 203,
+      "item_name": "Tubes - 5mL Test Tubes",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 209,
+      "item_name": "Vials - 2mL High-Recovery Vials",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 210,
+      "item_name": "Vials - 2mL HPLC Amber Vials",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 208,
+      "item_name": "Vials - Headspace Vials GCMS",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 206,
+      "item_name": "WA - 0.150aw Verification Std",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "tubes"
+      ],
+      "size": [
+        "50"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        3
+      ],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 215,
+      "item_name": "WA - 0.500aw Verification Std",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "tubes"
+      ],
+      "size": [
+        "50"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        3
+      ],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 216,
+      "item_name": "WA - 0.760aw Verification Std",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "tubes"
+      ],
+      "size": [
+        "50"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        3
+      ],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 207,
+      "item_name": "WA - 1.000aw Verification Std",
+      "category": "Reference Standards",
+      "inventory_type": "not_exposed",
+      "units": [
+        "tubes"
+      ],
+      "size": [
+        "50"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        3
+      ],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 180,
+      "item_name": "WA - Sample Cup Lids",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 181,
+      "item_name": "WA - Sample Cups",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 211,
+      "item_name": "Water, LC-MS (Fisher)",
+      "category": "Solvents",
+      "inventory_type": "not_exposed",
+      "units": [
+        "mL"
+      ],
+      "size": [
+        "4000"
+      ],
+      "active_state": "not_exposed",
+      "resource_group_ids": [
+        6,
+        8
+      ],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 212,
+      "item_name": "Water, LC-MS (Honeywell)",
+      "category": "Solvents",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 213,
+      "item_name": "Weighing Boats Large",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    },
+    {
+      "configuration_id": 214,
+      "item_name": "Weighing Boats Small",
+      "category": "Consumables",
+      "inventory_type": "not_exposed",
+      "units": null,
+      "size": null,
+      "active_state": "not_exposed",
+      "resource_group_ids": [],
+      "source_page": 8,
+      "lot_tracking_state": "field_present_behavior_not_verified",
+      "expiration_tracking_state": "field_present_behavior_not_verified",
+      "storage_location_state": "field_present_behavior_not_verified",
+      "reorder_configuration_state": "field_present_behavior_not_verified",
+      "minimum_stock_configuration_state": "field_present_behavior_not_verified",
+      "description": "omitted",
+      "supplier_manufacturer_catalog": "omitted",
+      "stock_balances": "omitted",
+      "lots_transactions_attachments": "not_opened"
+    }
+  ]
+}

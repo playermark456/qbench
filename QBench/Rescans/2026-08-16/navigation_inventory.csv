@@ -1,0 +1,32 @@
+category,safe_route,page_title,phase_1_count,count_basis,pagination_observed,phase_1_capture_status,privacy_note
+Worksheets,/worksheets,Worksheets,148,range heading 1-148 of 148,1 page,Count captured,Configuration metadata only
+Assays,/assays,Assays,20,range heading 1-20 of 20,1 page,Count captured,Configuration metadata only
+Panels,/panels,Panels,9,range heading 1-9 of 9,1 page,Count captured,Configuration metadata only
+Controls,/controls,Controls,4,range heading 1-4 of 4,1 page,Count captured,No control-run results opened
+Control Groups,/control-groups,Control Groups,2,range heading 1-2 of 2,1 page,Count captured,Configuration metadata only
+Resource Groups,/resourcegroups,Resource Groups,10,10 unique detail IDs visible; page range incorrectly displayed 0-0 of 0,1 page,Count captured with UI anomaly,Configuration metadata only
+Protocols,/protocols,Protocols,15,range heading 1-15 of 15,1 page,Count captured,Configuration metadata only
+Protocol Steps,/protocolsteps,Protocol Steps,81,range heading 1-20 of 81,5 pages,Count captured,Only first-page rows inspected during Phase 1
+Automations,/automations,Automations,16,range heading 1-16 of 16,1 page,Count captured,No automation run/test/history opened
+Key/Value Stores,/kvstores,Key/Value Stores,10,10 unique detail IDs visible; page range incorrectly displayed 0-0 of 0,1 page,Count captured with UI anomaly,Values not opened during Phase 1
+Report Templates,/templates/reports,Report Template Configurations,3,visible configuration rows; page range incorrectly displayed 0-0 of 0,1 page,Count captured,No report generated
+Label Templates,/templates/labels,Label Templates,7,visible configuration rows; page range incorrectly displayed 0-0 of 0,1 page,Count captured,No label generated
+Email Templates,/templates/emails,Email Template Configurations,15,visible configuration rows; page range incorrectly displayed 0-0 of 0,1 page,Count captured,No email sent and no history opened
+Print Templates,/templates/printdocs,Print Template Configurations,0,visible configuration rows; page range displayed 0-0 of 0,1 page,Count captured,No print action used
+Platemap Templates,/templates/platemaps,Platemap Template Configurations,1,visible configuration row; page range incorrectly displayed 0-0 of 0,1 page,Count captured,Configuration metadata only
+Invoice Templates,/templates/invoices,Invoice Template Configurations,1,visible configuration row; page range incorrectly displayed 0-0 of 0,1 page,Count captured,No invoice records opened
+Quotation Templates,/templates/quotations,Quotation Template Configurations,0,visible configuration rows; page range displayed 0-0 of 0,1 page,Count captured,No quotation records opened
+Payment Templates,/templates/payments,Payment Template Configurations,0,visible configuration rows; page range displayed 0-0 of 0,1 page,Count captured,No payment records opened
+Rich Text Configurations,/templates/richtexts,Rich Text Configurations,0,visible configuration rows; page range displayed 0-0 of 0,1 page,Count captured,Configuration metadata only
+Internal Reports,/templates/internal_reports,Internal Reports,2,range heading 1-2 of 2,1 page,Count captured,No internal report executed
+Template Macros,/templates/macros,Template Macros,1,visible configuration row; page range incorrectly displayed 0-0 of 0,1 page,Count captured,Configuration metadata only
+File Parsers,/templates/file-parsers,File Parsers,10,range heading 1-10 of 10,1 page,Count captured,No parser preview run test or history opened
+Fields and Data Types,/settings/fields,Field and Data Type Settings,,25 visible table rows but no reliable category total,Not reported,Presence captured; full inventory deferred,Definitions only; no record values opened
+Locations,/locations,Locations,1097,range heading 1-150 of 1097,8 pages,Count captured,Only aggregate count retained; no detailed physical-security locations recorded
+Equipment,/equipmentlist,Equipment,103,range heading 1-103 of 103,1 page,Count captured,No service history certificates or serial numbers captured
+Inventory Items,/inventory/items,Inventory Items,158,range heading 1-20 of 158,8 pages,Count captured,No lots transactions purchases or supplier accounts opened
+Sources,/sources,Sources,0,page range displayed 0-0 of 0,1 page,Count captured,No source/customer records opened
+Log Types,/logtypes,Log Types,1,range heading 1-1 of 1,1 page,Count captured,No operational logs opened
+Document Control,/documents,Document Control,47,visible configuration rows; page range incorrectly displayed 0-0 of 0,1 page,Count captured,Only aggregate count retained; no document contents downloaded
+Charts,/charts,Charts,0,page range displayed 0-0 of 0,1 page,Count captured,No operational analytics opened
+General Settings,/settings/general,General Settings,,page present; no single object total,Not applicable,Presence and safe field labels inspected,No form values credentials or operational records captured

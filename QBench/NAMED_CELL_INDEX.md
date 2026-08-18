@@ -1,6 +1,34 @@
 ﻿# Named Cell Index
 
-Generated from the exported worksheet JSON files under QBench/Worksheets.
+Generated from exported worksheet JSON files under `QBench/Worksheets`. The address rows remain a historical native-export baseline; current production worksheet versions could not be exported in the 2026-08-16 read-only scan.
+
+## 2026-08-16 production report-source dependency overlay
+
+- Report 26 v24 reads `pass_fail` for status tiles; three total-THC fields for Cannabinoid display; `report_results` for eight assay sections; and `report_header`/`report_content` for the microbial summary.
+- Report 44 v2 reads `homogeneity_metrc` first with `pass_fail` fallback. For its Potency summary it reads direct `Report!B2:B4`/`Report!E2:E4` cells first, then falls back to `report_left_total_label`, `report_left_total_mg_container`, `report_left_total_mg_serving`, `report_right_total_label`, `report_right_total_mg_container`, and `report_right_total_mg_serving`. Its Homogeneity status order conflicts with the canonical requirement that `pass_fail` drive first-page status and `report_results` supply the standalone table/page.
+- Report 20 v1 renders a complete Test worksheet without a named-cell restriction.
+- Current report-critical worksheet versions have advanced, so the ranges below cannot certify current compatibility. The July Terpenes export lacks the `report_results` now required by report 26 v24.
+- The 2026-07-04 rescan block was appended four times historically. The first preserved copy is the authoritative last-verified native-export baseline. The three later copies are explicitly deprecated duplicates: they remain for history, are not independent evidence, and must never be counted or used to override the first copy. Before this overlay was added, the historical index contained 2,717 data rows but only 1,158 exact unique rows.
+
+Current report source and the full dependency analysis are in `QBench/Rescans/2026-08-16/Reports/` and `QBench/Rescans/2026-08-16/report_dependency_map.md`.
+
+### Current authority and known gaps
+
+Use this precedence for report work: (1) the production-source overlay above defines current names actually requested by report code; (2) the first preserved 2026-07-04 rescan block defines the last verified native-export addresses; (3) the original pre-rescan rows and three deprecated duplicate rescan blocks are historical only. A source reference does not prove a named cell exists, and no current address is inferred.
+
+| Dependency | Last verified native-export evidence | Current interpretation |
+|---|---|---|
+| Homogeneity `pass_fail` | `Data!B31` | Required canonical status value; last verified in the first 2026-07-04 block. |
+| Homogeneity `homogeneity_metrc` | `COA!F1` | Compatibility/METRC value; not the canonical first-page status source. |
+| Homogeneity `report_results` | `COA!A1:G20` | Required canonical standalone Homogeneity table/page. The older original `Report!A1:B1` row is superseded historical evidence. |
+| Cannabinoids `total_thc_report_result` | `Data!C11` | Last verified historically and read by report 26. |
+| Cannabinoids `total_thc_mg_per_serving_report_result`, `total_thc_mg_per_container_report_result` | Not present | Read by report 26 but export-unverified. |
+| Report 44 six `report_left_total_*` / `report_right_total_*` fields | Not present | Optional fallback names after direct cell reads; absence alone is not a runtime defect, but the names remain export-unverified. |
+| Terpenes `report_results` | Not present | Required by report 26 v24; current range unknown. |
+| Terpenes `pass_fail` | Not present | Read by report 26 tile/overall-status logic; current compatibility remains unverified. |
+| Water Activity `pass_fail` | Not present; `pass_fail_report = Specifications!B7` exists | Report 26 reads `pass_fail`; compatibility remains unverified. |
+| Listeria `pass_fail` | Not present | Report 26 reads `pass_fail`; current compatibility remains unverified. |
+| Cannabinoid Potency generic `pass_fail` | Not present | Source call exists in shared tile logic; current compatibility remains unverified. |
 
 | Assay | Worksheet | Named Cell | Cell/Range | Purpose | Used by COA? | Notes |
 |---|---|---|---|---|---|---|
@@ -778,7 +806,7 @@ Generated from the exported worksheet JSON files under QBench/Worksheets.
 | Water_Activity | water activity test ws id 28 | wateractivity_metrc | Specifications!D5 | METRC reporting field | Yes/likely | Exportable=True |
 | Water_Activity | water activity test ws id 28 | wateractivityaw | Data!D2 | Worksheet named cell | Unknown | Exportable=True; Display=Water Activity aw |
 
-## Rescan 2026-07-04 Named-Cell Changes
+## Authoritative historical baseline — Rescan 2026-07-04 (first preserved copy)
 
 | Assay | Worksheet | Named Cell | Cell/Range | Purpose | Used by COA? | Notes |
 |---|---|---|---|---|---|---|
@@ -1269,7 +1297,7 @@ Generated from the exported worksheet JSON files under QBench/Worksheets.
 | Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
 | Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
 
-## Rescan 2026-07-04 Named-Cell Changes
+## Deprecated duplicate 1 of 3 — Rescan 2026-07-04 (preserved, do not use)
 
 | Assay | Worksheet | Named Cell | Cell/Range | Purpose | Used by COA? | Notes |
 |---|---|---|---|---|---|---|
@@ -1760,7 +1788,7 @@ Generated from the exported worksheet JSON files under QBench/Worksheets.
 | Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
 | Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
 
-## Rescan 2026-07-04 Named-Cell Changes
+## Deprecated duplicate 2 of 3 — Rescan 2026-07-04 (preserved, do not use)
 
 | Assay | Worksheet | Named Cell | Cell/Range | Purpose | Used by COA? | Notes |
 |---|---|---|---|---|---|---|
@@ -2251,7 +2279,7 @@ Generated from the exported worksheet JSON files under QBench/Worksheets.
 | Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_header | Report!A1:E1 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
 | Microbiology/Enterobacteriaceae | Enterobacteriaceae [Test] WS | report_results | Report!A1:E2 |  | Yes | Discovered/verified in 2026-07-04 rescan (changed). |
 
-## Rescan 2026-07-04 Named-Cell Changes
+## Deprecated duplicate 3 of 3 — Rescan 2026-07-04 (preserved, do not use)
 
 | Assay | Worksheet | Named Cell | Cell/Range | Purpose | Used by COA? | Notes |
 |---|---|---|---|---|---|---|

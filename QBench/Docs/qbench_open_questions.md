@@ -1,8 +1,8 @@
 ﻿# QBench Open Questions
 
-- COA report template ID 26 exposes a Visual Editor but no visible source export/copy/download control. Active version 17 was selected read-only; source HTML was not extractable from the DOM inspection.
-- COA assets were visible as QBench attachment download links, including `AIT Watermark.png`, `CoA Signatures.png`, `Header Image.png`, `hexagon-grid-8tile-1336x618.png`, `hexagon-grid.png`, and `Quality Control Verified.png`. Browser download attempts did not create local files, so assets were not saved into the repo.
-- Confirm whether active report template ID 44 `Homogeneity` is used for production/sandbox Homogeneity COAs or only retained separately; inspected assays listed Certificate of Analysis Report as default.
+- Resolved by the 2026-08-16 read-only rescan: report ID 26 is now active v24, `Terpenes final`, and sanitized Header/Body/Footer source is captured. No native source export control was exposed; the earlier v17/no-source note is historical.
+- Report 26 exposes `AIT Watermark.png`, `CoA Signatures.png`, `Header Image.png`, `hexagon-grid-8tile-1336x618.png`, `hexagon-grid.png`, and `Quality Control Verified.png`; its source also looks up the sample-level `sample_img` attachment. Report 20 iterates all sample attachments and renders the selected signature image. No asset was downloaded; signature content and uploader identities remain excluded. Report 44 exposes no attachment despite referencing `AIT Watermark.png`.
+- Confirm whether active report template ID 44 `Homogeneity` is used operationally or retained separately; inspected assays listed Certificate of Analysis Report as default, and report 44's captured source conflicts with the canonical Homogeneity `pass_fail` / `report_results` contract.
 - Parser internals for no-code parsers were not fully visible from read-only detail pages, and no parser export/download option was visible.
 - File parser code pages did not expose a parser-specific export/download control. A later read-only editor inspection captured parser 46's complete active source and parser 45's visible template without invoking Save, Set Active, Preview, or file selection. Both import `file_parser.js` 1.1.0 and `qbjs.js` 2.7.0 and use the documented `run`/`QB` base model.
 - Automation condition rows were not fully exposed in the compact read-only extraction; worksheet-field actions were visible and indexed.
@@ -195,3 +195,44 @@ The 43-field design remains blocked by unproven cardinality, atomicity,
 authorization, idempotency, and full-contract error handling. The current
 recommended path is an exact-Test REST API publisher. Evidence is in
 `QBench/Worksheets/Terpenes/development/2026-07-17_batch_to_test_automation/`.
+
+## Production rescan 2026-08-16 — Phase 4
+
+Evidence correction: the preliminary viewport/DOM email-source capture was rejected because CodeMirror text was duplicated/truncated. Full-editor Select All recapture and independent validation found all 14 approved-active email v1 sources Jinja-balanced with exact inventory hashes. The earlier “12 malformed sources” finding must not be used.
+
+- Why is parser 50 active in production while its full source begins with an `SBX_ONLY` marker, and are inactive probe parsers 48/49 intentionally retained in production?
+- Is automation 17's 26-field Terpenes Batch-to-Test contract validated against the current active worksheet versions? Current native worksheet exports are unavailable.
+- When can the three mapping defects confirmed against tracked active worksheet exports be corrected and validated in QBench Sandbox? Automation 1 reverses Lead/Mercury, automation 6 omits Total Xylenes and Trichloroethene from its 19-cell destination, and automation 11 reverses Unknown Peaks 2/3 between `result_21` and `result_22`.
+- Does the current active Pesticides Quantitative Test worksheet still expose `pesticides_results` rather than automation 10's `pest_quantitative_results` destination? Obtain a current native worksheet 16 export before treating this likely tracked-export mismatch as a confirmed current defect.
+- Is automation 14 intentionally based on shared worksheet 89 while current TYMC assay metadata names worksheet 94 as its Batch worksheet?
+- Is automation 3's quantitative Mycotoxin path still associated with an active assay/worksheet workflow?
+- Should report 26 v24 route Pesticides Quantitative assay ID 21? The captured report assay map includes Pesticides ID 4 but not ID 21.
+- What active Terpenes ranges currently provide `report_results` and generic `pass_fail`? The historical July export defines neither, while report 26 renders the former and uses the latter in tile/overall-status logic.
+- Do current Cannabinoid Potency exports define `total_thc_mg_per_serving_report_result` and `total_thc_mg_per_container_report_result`, and do they define report 44's six `report_left_total_*` / `report_right_total_*` fallback names? Report 44 reads direct cells first, so absence of its semantic fallbacks alone is not a runtime defect.
+- Should Water Activity add a `pass_fail` compatibility name for report 26 instead of only `pass_fail_report`, and should Listeria add the `pass_fail` value its report tile reads?
+- When will report 44 be aligned to the canonical Homogeneity contract—`pass_fail` for first-page status and `report_results` for the standalone table/page—instead of preferring `homogeneity_metrc` and reconstructing Potency cells directly?
+- Should report 44 preserve blanks/pending state rather than rendering literal `0.0` when both direct and semantic Potency lookups are empty?
+- Can safe Sandbox/PDF previews verify report 26's four source page breaks and CSS page counter, report 44's automatic-plus-CSS duplicate-page-number risk and unused page-break class, reports 26/44's fixed 8.48–8.5-inch elements, and report 20's 100.311%-wide table against one-inch Letter-page margins?
+- How should report 44 resolve `AIT Watermark.png` when its configuration exposes no attachment, which safe filenames correspond to report 26's remaining redacted blob/image references, and are report 26's sample-level `sample_img` plus report 20's all-attachment/signature rendering intentionally scoped?
+- What is the production tenant timezone used by `local_time`? No timezone field was exposed on the read-only General Settings page.
+- Are the six newer label drafts intended to supersede their active versions, and how can the active-version Body source be exported without entering a mutation workflow?
+- Should the externally loaded Google Fonts URL and `qbench.net` anchor that remain on plain `http://` in all 14 recaptured active email sources be migrated to HTTPS and previewed for compatibility in Sandbox?
+- Is active Stability Due email template ID 51 expected to function despite having no saved version and empty source? Where are its schedule, recipient, and reminder rules configured?
+- Should invoice ID 40 capture provenance be normalized where JSON records `initial_selected` but `template_versions.csv` records `selected_at_capture=false`?
+- Are active platemap ID 39 and active macro ID 27 intentionally unversioned/empty?
+- What query/design definitions back internal reports 31 and 52? Their read-only configuration pages exposed access scope but no source, and the reports were not executed.
+
+## Production rescan 2026-08-16 — Phase 5 partial
+
+Sensitive integration configuration was encountered on an authenticated settings page. Details were intentionally omitted. Managed Interfaces remains incomplete pending separate administrative or vendor remediation.
+
+- Is control 1's displayed data-field spelling `Concentraiton` an unintended duplicate/typo of `Concentration`, and what safe Sandbox migration would preserve historical control data if it is corrected?
+- What acceptance limits, specifications, report behavior, automation dependencies, and required frequency apply to the four controls and two control groups? Those semantics were not exposed by the safe read-only views.
+- Are the lack of inventory-item assignments on all four controls and the null/blank Batch Control Group fields on all 20 assays intentional?
+- Which resource group, if any, should be assigned to Terpenes assay 8? No Terpenes-named resource group or direct Batch/Test resource assignment was exposed.
+- When will the Terpenes Analysis Form be corrected through controlled document review so its 5 mL internal-standard preparation record agrees with the controlling SOP v1.4 instruction to bring 5.0 µL dimethylacetamide to 25 mL with ethyl acetate?
+- Which approved QBench design should represent the Terpenes SOP’s calibration/QC sequence, preparation branches, resource checks, integration review, and final approval? Protocol 9 is empty and unassigned; the active parser 50 → worksheet 43 → automation 17 → worksheet 42 → report 26 path transfers results but does not implement those controls.
+- Are resource groups 6 (Mycotoxin Analysis), 10 (Gene Up Microbial Analysis), and 11 (Tempo Microbial Analysis) intentionally unassigned at the assay layer, or are their relationships configured elsewhere?
+- Is resource group 12 (Pest (Quantitative) Analysis) intentionally empty, and what is its auto-use setting? The safe detail view exposed zero inventory/equipment members but did not expose the auto-use value.
+- Are inventory items 292 and 273 intentionally uncategorized, and should resource-group default quantities be configured? All 105 membership rows had blank `default_quantity`; item 174 also lacked a displayed size and item 292 lacked a displayed category ID.
+- Which schedule assignment is intended for equipment 107? Its UI text was the undelimited `No Maintenance Required Cold Storage Temperature | -70C`, so the safe capture cannot distinguish a single label from a concatenated sentinel plus schedule.

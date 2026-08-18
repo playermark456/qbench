@@ -1,5 +1,34 @@
 ﻿# Automation Index
 
+## Production rescan 2026-08-16
+
+Current production configuration was verified read-only at `ait.qbench.net` on 2026-08-16/17 UTC. There are 16 automations: 13 active and 3 inactive. All use `Data Modified`. Complete normalized conditions and ordered actions are in `QBench/Rescans/2026-08-16/Automations/`.
+
+| ID | Automation name | Data type | Active | Observed condition | Ordered action summary |
+|---:|---|---|---|---|---|
+| 17 | Terpenes Batch to Test ws | Batch | Active | Worksheet 43 — Terpenes [Batch] Worksheet | 26 all-Test writes: `terpenes_instrument_conc_01..23` from lookup columns 9–31, then `sample_mass_g`/`df`/`df_application_mode` from columns 6–8 of `B2:AY87` |
+| 16 | Homogeneity - Pull potency mg/serving | Test | Active | Homogeneity assay; status changes into `Ready for Homogeneity Pull` | Writes `mg_serving_1` from `Potency Results Lookup` |
+| 14 | AC EB YM Batch to Test WS | Batch | Active | Worksheet 89 | Writes `ac_results`, `eb_results`, `ym_results` |
+| 13 | Listeria Batch to Test WS | Batch | Active | Worksheet 86 | Writes `lis_results` |
+| 12 | Salmonella Species & STEC Batch to Test WS | Batch | Active | Worksheet 82 | Writes `salmonella_results` and `stec_results` |
+| 11 | Cannabinoid Potency Batch to Test WS | Batch | Active | Cannabinoid Potency assay and worksheet 7 | Writes `result_1..29` and `df` from `Results`; tracked active exports confirm `result_21`/`result_22` reverse Unknown Peaks 2/3 |
+| 10 | Pesticide (Quantitative) Analysis | Batch | Active | Worksheet 13 | Writes `pest_quantitative_results` from `B34:BT200`; likely tracked-export mismatch because worksheet 16 exposes `pesticides_results`, pending a current export |
+| 9 | Aspergillus Batch WS to Test WS | Batch | Active | Worksheet 80 | Writes four species-result fields |
+| 8 | Pest Myco (Qualitative) Batch WS to Test WS | Batch | Active | Worksheet 15 | Writes `pesticides_results`, `mycotoxin_results`, `df` |
+| 6 | Residual Solvents Batch WS to Test WS | Batch | Active | Worksheet 11 | Tracked active exports confirm `residual_solvents_results` receives 17 source cells for a 19-cell destination, omitting Total Xylenes and Trichloroethene; `df` is aligned |
+| 4 | Water Activity Batch WS to Test WS | Batch | Active | Worksheet 29 | Writes `wateractivityaw` |
+| 3 | Mycotoxin (Quantitative) Batch WS to Test WS | Batch | Active | Worksheet 9 | Writes five toxin fields; action 5 has a distinct all-Samples-Test fan-out label |
+| 1 | Heavy Metals Batch WS to Test WS | Batch | Active | Worksheet 5 | Tracked active exports confirm the `lead` and `mercury` source columns are reversed; arsenic, cadmium, and `df` align |
+| 15 | Water Activity Protocol WS to Batch WS | Batch Object Protocol Step | Inactive | Protocol Step = Water Activity Sample Measurements | Destination `wateractivity_0`; source blank |
+| 5 | test wa | Batch | Inactive | Protocol = [Batch] Water Activity Protocol | Destination `wateractivity_0`; source blank |
+| 2 | Heavy Metals Batch WS to Test WS 2 | Batch | Inactive | Worksheet 5 | Older four-metal mappings using `{{get_display_id}}` |
+
+Observed configuration contains 18 condition blocks and 90 actions. IDs 1, 6, and 11 have repository-confirmed mapping defects against the tracked active worksheet exports. ID 10 remains a likely tracked-export mismatch that requires a current native worksheet 16 export before correction. Scheduling, date-driven behavior, notifications, retry/error/idempotency behavior, last-modified metadata, and history counts were not exposed. No automation was run. See `QBench/Rescans/2026-08-16/automation_cascade_analysis.md`.
+
+## Superseded pre-rescan summary
+
+The following table is retained as historical repository context. It predates automation 17 and lacks the condition detail now captured above.
+
 | ID | Automation name | Trigger | Data type | Active | Related assay/module | Conditions | Actions / worksheet fields updated |
 |---:|---|---|---|---|---|---|---|
 | 16 | Homogeneity - Pull potency mg/serving | Data Modified | Test | Active | Homogeneity | Condition table present, specific row values not exposed in read-only summary | Updates mg_serving_1 using VLOOKUP against Potency Results Lookup. |

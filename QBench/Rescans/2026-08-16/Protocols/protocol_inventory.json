@@ -1,0 +1,1337 @@
+{
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-16T23:21:32.805Z",
+  "source_host": "ait.qbench.net",
+  "capture_method": "serialized read-only DOM extraction",
+  "count": 15,
+  "items": [
+    {
+      "protocol_id": 4,
+      "name": "[Batch] Cannabinoid Potency Protocol",
+      "detail_url": "https://ait.qbench.net/protocol?id=4",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": [
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign equipment to batch.",
+          "priority": null,
+          "sequence": 1,
+          "step_id": 11,
+          "step_name": "Assigning Equipment Usage to Batch",
+          "worksheet_id": 26,
+          "worksheet_name": "[Protocol Step WS] Assigning Equipment to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign inventory used to batch.",
+          "priority": null,
+          "sequence": 2,
+          "step_id": 12,
+          "step_name": "Assigning Inventory Usage to Batch",
+          "worksheet_id": 27,
+          "worksheet_name": "[Protocol Step WS] Assigning Inventory to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 3,
+          "step_id": 81,
+          "step_name": "Cannabinoid Potency | Solution Prep",
+          "worksheet_id": 148,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Solution Prep"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step worksheet is to gather the information for Potency Preparation of Lab Control Samples. It gives the steps and form from Cannabinoid Potency Assay SOP Dated 3/11/2026, Section 8.6.",
+          "priority": null,
+          "sequence": 4,
+          "step_id": 13,
+          "step_name": "Cannabinoid Potency Preparation of Lab Control Samples",
+          "worksheet_id": 32,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Lab Control Samples"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Add 20.0 mL of ACN to the 0.5 g of plant sample in the 50 mL conical tube",
+          "priority": null,
+          "sequence": 5,
+          "step_id": 14,
+          "step_name": "Cannabinoid Potency | Preparation of Flower/Plant Samples | Step 1",
+          "worksheet_id": 33,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Flower/Plant Samples"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the preparation of flower/plant samples. It gives the steps from Cannabinoid Potency Assay SOP, Section 8.7.5 through 8.7.6.8.7.5 Vortex sample at speed 10 for 5 minutes, then sonicate for 5 minutes.8.7.6 Vortex sample at speed 10 for 1 minute, then sonicate for 5 minutes.",
+          "priority": null,
+          "sequence": 6,
+          "step_id": 15,
+          "step_name": "Cannabinoid Potency | Preparation of Flower/Plant Samples | Vortex/Sonicate",
+          "worksheet_id": 34,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Flower/Plant Samples Vortex/Sonicate"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the preparation of flower/plant samples. It gives the steps from Cannabinoid Potency Assay SOP, Section 8.7.5 through 8.7.7.8.7.7 Centrifuge the samples at ≥3000 rpm for 5 minutes.",
+          "priority": null,
+          "sequence": 7,
+          "step_id": 16,
+          "step_name": "Cannabinoid Potency | Preparation of Flower/Plant Samples | Centrifuge",
+          "worksheet_id": 35,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Flower/Plant Samples Centrifuge"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the preparation of flower/plant samples. It gives the steps from Cannabinoid Potency Assay SOP, Section 8.7.8 through 8.7.9.8.7.8 Attach a clean, 0.2 µm PTFE filter to a syringe and dispense contents into a new 5 mL tube (DF=40).8.7.9 Dilute the samples with ACN (if needed). Common dilution factors include: • Hemp Flower: 400x – 600x• Marijuana Flower: 1000x – 1500x• Proficiency Hemp Flower: 100x & 500x",
+          "priority": null,
+          "sequence": 8,
+          "step_id": 17,
+          "step_name": "Cannabinoid Potency | Preparation of Flower/Plant Samples | Filter/Dilution",
+          "worksheet_id": 36,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Flower/Plant Samples Filter"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 9,
+          "step_id": 78,
+          "step_name": "Cannabinoid Potency | Preparation of Concentrate Samples",
+          "worksheet_id": 145,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Concentrate Samples"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 10,
+          "step_id": 79,
+          "step_name": "Cannabinoid Potency | Preparation of Concentrate Samples | Vortex/Sonicate",
+          "worksheet_id": 146,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Concentrate Samples Vortex/Sonicate"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 11,
+          "step_id": 80,
+          "step_name": "Cannabinoid Potency | Preparation of Concentrate Samples | Filter",
+          "worksheet_id": 147,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Concentrate Samples Filter"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 12,
+          "step_id": 71,
+          "step_name": "Cannabinoid Potency | Preparation of Beverage Samples",
+          "worksheet_id": 137,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Beverage Samples"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 13,
+          "step_id": 72,
+          "step_name": "Cannabinoid Potency | Preparation of Beverage Samples | QuEChERS",
+          "worksheet_id": 138,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Beverage Samples QuEChERS"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 14,
+          "step_id": 73,
+          "step_name": "Cannabinoid Potency | Preparation of Beverage Samples | Extraction",
+          "worksheet_id": 139,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Beverage Samples Extraction"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 15,
+          "step_id": 66,
+          "step_name": "Cannabinoid Potency | Preparation of Edible Samples",
+          "worksheet_id": 132,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Edible Samples"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 16,
+          "step_id": 67,
+          "step_name": "Cannabinoid Potency | Preparation of Edible Samples | Vortex/Sonicate",
+          "worksheet_id": 133,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Edible Samples Vortex/Sonicate"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 17,
+          "step_id": 68,
+          "step_name": "Cannabinoid Potency | Preparation of Edible Samples | QuEChERS",
+          "worksheet_id": 134,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Edible Samples QuEChERS"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 18,
+          "step_id": 69,
+          "step_name": "Cannabinoid Potency | Preparation of Edible Samples | Centrifuge",
+          "worksheet_id": 135,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Edible Samples Centrifuge"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 19,
+          "step_id": 70,
+          "step_name": "Cannabinoid Potency | Preparation of Edible Samples | Filter",
+          "worksheet_id": 136,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Preparation of Edible Samples Filter"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 20,
+          "step_id": 77,
+          "step_name": "Sample Dilution",
+          "worksheet_id": 143,
+          "worksheet_name": "Sample Dilution {Protocol WS}"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is performing HPLC Setup and Measurement. It gives the steps from Cannabinoid Potency Assay SOP, Section 8.12.",
+          "priority": null,
+          "sequence": 21,
+          "step_id": 18,
+          "step_name": "Cannabinoid Potency | HPLC Setup and Measurement",
+          "worksheet_id": 37,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} HPLC Setup and Measurement"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is verifying all quality control requirements are meant. It gives the steps from Cannabinoid Potency Assay SOP, Section 8.13.",
+          "priority": null,
+          "sequence": 22,
+          "step_id": 19,
+          "step_name": "Cannabinoid Potency | Quality Control Requirements",
+          "worksheet_id": 38,
+          "worksheet_name": "Cannabinoid Potency {Protocol WS} Quality Control Requirements"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step holds instructions for our to obtain the output file from each cannabis instrument and how to upload into QBench. There is a tab for each instruement. There are also links to Loom recording showing how to perform these steps.",
+          "priority": null,
+          "sequence": 23,
+          "step_id": 22,
+          "step_name": "Cannabis/Hemp | Instrument Output and QBench Upload of Results",
+          "worksheet_id": 40,
+          "worksheet_name": "General {Protocol WS} Instrument Output and QBench Upload of Results"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This step holds a worksheet for steps to check after the batch is to complete to do a quality check on the overall batch and records within QBench.",
+          "priority": null,
+          "sequence": 24,
+          "step_id": 23,
+          "step_name": "Cannabis/Hemp | Overall Chemist Review of Batch",
+          "worksheet_id": 41,
+          "worksheet_name": "Cannabis/Hemp {Protocol WS} Overall Chemist Review of Batch"
+        }
+      ]
+    },
+    {
+      "protocol_id": 14,
+      "name": "[Batch] Gene Up Aspergillus Microbial Analysis Protocol",
+      "detail_url": "https://ait.qbench.net/protocol?id=14",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": [
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign equipment to batch.",
+          "priority": null,
+          "sequence": 1,
+          "step_id": 11,
+          "step_name": "Assigning Equipment Usage to Batch",
+          "worksheet_id": 26,
+          "worksheet_name": "[Protocol Step WS] Assigning Equipment to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign inventory used to batch.",
+          "priority": null,
+          "sequence": 2,
+          "step_id": 12,
+          "step_name": "Assigning Inventory Usage to Batch",
+          "worksheet_id": 27,
+          "worksheet_name": "[Protocol Step WS] Assigning Inventory to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 3,
+          "step_id": 54,
+          "step_name": "Gene Up Microbial Analysis | Aspergillus Enriched Broth Preparation",
+          "worksheet_id": 88,
+          "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Aspergillus Enriched Broth Preparation"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 4,
+          "step_id": 55,
+          "step_name": "Gene Up Microbial Analysis | Sample Preparation (Aspergillus)",
+          "worksheet_id": 90,
+          "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Preparation (Aspergillus)"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 5,
+          "step_id": 59,
+          "step_name": "Gene Up Microbial Analysis | Sample Incubation",
+          "worksheet_id": 96,
+          "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Incubation"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 6,
+          "step_id": 60,
+          "step_name": "Gene Up Microbial Analysis | Sample Enrichment (Aspergillus)",
+          "worksheet_id": 97,
+          "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Enrichment (Aspergillus)"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 7,
+          "step_id": 62,
+          "step_name": "Gene Up Microbial Analysis | Gene Up PCR Program",
+          "worksheet_id": 99,
+          "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Gene Up PCR Program"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This step holds a worksheet for steps to check after the batch is to complete to do a quality check on the overall batch and records within QBench.",
+          "priority": null,
+          "sequence": 8,
+          "step_id": 23,
+          "step_name": "Cannabis/Hemp | Overall Chemist Review of Batch",
+          "worksheet_id": 41,
+          "worksheet_name": "Cannabis/Hemp {Protocol WS} Overall Chemist Review of Batch"
+        }
+      ]
+    },
+    {
+      "protocol_id": 15,
+      "name": "[Batch] Gene Up Listeria Microbial Analysis Protocol",
+      "detail_url": "https://ait.qbench.net/protocol?id=15",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": [
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign equipment to batch.",
+          "priority": null,
+          "sequence": 1,
+          "step_id": 11,
+          "step_name": "Assigning Equipment Usage to Batch",
+          "worksheet_id": 26,
+          "worksheet_name": "[Protocol Step WS] Assigning Equipment to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign inventory used to batch.",
+          "priority": null,
+          "sequence": 2,
+          "step_id": 12,
+          "step_name": "Assigning Inventory Usage to Batch",
+          "worksheet_id": 27,
+          "worksheet_name": "[Protocol Step WS] Assigning Inventory to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 3,
+          "step_id": 58,
+          "step_name": "Gene Up Microbial Analysis | Sample Preparation (Listeria)",
+          "worksheet_id": 92,
+          "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Preparation (Listeria)"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 4,
+          "step_id": 59,
+          "step_name": "Gene Up Microbial Analysis | Sample Incubation",
+          "worksheet_id": 96,
+          "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Incubation"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 5,
+          "step_id": 61,
+          "step_name": "Gene Up Microbial Analysis | Sample Lysis (Sal/ STEC and Listeria)",
+          "worksheet_id": 98,
+          "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Lysis (Sal/ STEC and Listeria)"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 6,
+          "step_id": 62,
+          "step_name": "Gene Up Microbial Analysis | Gene Up PCR Program",
+          "worksheet_id": 99,
+          "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Gene Up PCR Program"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This step holds a worksheet for steps to check after the batch is to complete to do a quality check on the overall batch and records within QBench.",
+          "priority": null,
+          "sequence": 7,
+          "step_id": 23,
+          "step_name": "Cannabis/Hemp | Overall Chemist Review of Batch",
+          "worksheet_id": 41,
+          "worksheet_name": "Cannabis/Hemp {Protocol WS} Overall Chemist Review of Batch"
+        }
+      ]
+    },
+    {
+      "protocol_id": 13,
+      "name": "[Batch] Gene Up Salmonella & STEC Microbial Analysis",
+      "detail_url": "https://ait.qbench.net/protocol?id=13",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": [
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign equipment to batch.",
+          "priority": null,
+          "sequence": 1,
+          "step_id": 11,
+          "step_name": "Assigning Equipment Usage to Batch",
+          "worksheet_id": 26,
+          "worksheet_name": "[Protocol Step WS] Assigning Equipment to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign inventory used to batch.",
+          "priority": null,
+          "sequence": 2,
+          "step_id": 12,
+          "step_name": "Assigning Inventory Usage to Batch",
+          "worksheet_id": 27,
+          "worksheet_name": "[Protocol Step WS] Assigning Inventory to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 3,
+          "step_id": 57,
+          "step_name": "Gene Up Microbial Analysis | Sample Preparation (Sal/ STEC)",
+          "worksheet_id": 91,
+          "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Preparation (Sal/ STEC)"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 4,
+          "step_id": 59,
+          "step_name": "Gene Up Microbial Analysis | Sample Incubation",
+          "worksheet_id": 96,
+          "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Incubation"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 5,
+          "step_id": 61,
+          "step_name": "Gene Up Microbial Analysis | Sample Lysis (Sal/ STEC and Listeria)",
+          "worksheet_id": 98,
+          "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Sample Lysis (Sal/ STEC and Listeria)"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 6,
+          "step_id": 62,
+          "step_name": "Gene Up Microbial Analysis | Gene Up PCR Program",
+          "worksheet_id": 99,
+          "worksheet_name": "Gene Up Microbial Analysis [Protocol] Worksheet Gene Up PCR Program"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This step holds a worksheet for steps to check after the batch is to complete to do a quality check on the overall batch and records within QBench.",
+          "priority": null,
+          "sequence": 7,
+          "step_id": 23,
+          "step_name": "Cannabis/Hemp | Overall Chemist Review of Batch",
+          "worksheet_id": 41,
+          "worksheet_name": "Cannabis/Hemp {Protocol WS} Overall Chemist Review of Batch"
+        }
+      ]
+    },
+    {
+      "protocol_id": 2,
+      "name": "[Batch] Heavy Metals Protocol",
+      "detail_url": "https://ait.qbench.net/protocol?id=2",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": [
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign equipment to batch.",
+          "priority": null,
+          "sequence": 1,
+          "step_id": 11,
+          "step_name": "Assigning Equipment Usage to Batch",
+          "worksheet_id": 26,
+          "worksheet_name": "[Protocol Step WS] Assigning Equipment to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign inventory used to batch.",
+          "priority": null,
+          "sequence": 2,
+          "step_id": 12,
+          "step_name": "Assigning Inventory Usage to Batch",
+          "worksheet_id": 27,
+          "worksheet_name": "[Protocol Step WS] Assigning Inventory to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the Preparation of the Blank, Fortified Blank, Matrix, and Matrix Spike Solutions. It gives the steps from Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.7.",
+          "priority": null,
+          "sequence": 3,
+          "step_id": 24,
+          "step_name": "Heavy Metals | Preparation of the Blank, Fortified Blank, Matrix, and Matrix Spike Solutions",
+          "worksheet_id": 46,
+          "worksheet_name": "Heavy Metals [Protocol WS] Preparation of the Blank, Fortified Blank, Matrix, and Matrix Spike Solutions"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the Preparation of Heavy Metals Samples prior to digestion. It gives the steps from Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.8.",
+          "priority": null,
+          "sequence": 4,
+          "step_id": 25,
+          "step_name": "Heavy Metals | Preparation of Samples Prior to Digestion",
+          "worksheet_id": 47,
+          "worksheet_name": "Heavy Metals [Protocol WS] Preparation of Samples Prior to Digestion"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document that the samples are IN the microwave digestor. Set to In Progress once the digestion process is started. From Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.8.",
+          "priority": null,
+          "sequence": 5,
+          "step_id": 27,
+          "step_name": "Heavy Metals | Digestion of Samples",
+          "worksheet_id": null,
+          "worksheet_name": ""
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the Preparation of Heavy Metals Samples after digestion. It gives the steps from Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.8.",
+          "priority": null,
+          "sequence": 6,
+          "step_id": 26,
+          "step_name": "Heavy Metals | Preparation of Samples After Digestion",
+          "worksheet_id": 48,
+          "worksheet_name": "Heavy Metals [Protocol WS] Preparation of Samples After Digestion"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the ICP-MS Setup and Measurement. It gives the steps from Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.9.",
+          "priority": null,
+          "sequence": 7,
+          "step_id": 28,
+          "step_name": "Heavy Metals | Instrument Setup",
+          "worksheet_id": 49,
+          "worksheet_name": "Heavy Metals [Protocol WS] Instrument Setup"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the analysis elements and mass registration. It gives the steps from Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.10 and 8.11.",
+          "priority": null,
+          "sequence": 8,
+          "step_id": 29,
+          "step_name": "Heavy Metals | Analysis Elements and Mass Registration & Assay",
+          "worksheet_id": 50,
+          "worksheet_name": "Heavy Metals [Protocol WS] Analysis Elements and Mass Registration & Assay"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document quality control requirements. It gives the steps from Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.12.",
+          "priority": null,
+          "sequence": 9,
+          "step_id": 30,
+          "step_name": "Heavy Metals | Quality Control Requirements",
+          "worksheet_id": 51,
+          "worksheet_name": "Heavy Metals [Protocol WS] Quality Control Requirements"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the calculations and reporting of results. It gives the steps from Heavy Metals Analysis in Cannabis and Cannabis Products SOP, Section 8.13.",
+          "priority": null,
+          "sequence": 10,
+          "step_id": 31,
+          "step_name": "Heavy Metals | Calculations and Reporting of Results",
+          "worksheet_id": 53,
+          "worksheet_name": "Heavy Metals [Protocol WS] Calculating and Reporting of Results"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step holds instructions for our to obtain the output file from each cannabis instrument and how to upload into QBench. There is a tab for each instruement. There are also links to Loom recording showing how to perform these steps.",
+          "priority": null,
+          "sequence": 11,
+          "step_id": 22,
+          "step_name": "Cannabis/Hemp | Instrument Output and QBench Upload of Results",
+          "worksheet_id": 40,
+          "worksheet_name": "General {Protocol WS} Instrument Output and QBench Upload of Results"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This step holds a worksheet for steps to check after the batch is to complete to do a quality check on the overall batch and records within QBench.",
+          "priority": null,
+          "sequence": 12,
+          "step_id": 23,
+          "step_name": "Cannabis/Hemp | Overall Chemist Review of Batch",
+          "worksheet_id": 41,
+          "worksheet_name": "Cannabis/Hemp {Protocol WS} Overall Chemist Review of Batch"
+        }
+      ]
+    },
+    {
+      "protocol_id": 11,
+      "name": "[Batch] Homogeneity Protocol",
+      "detail_url": "https://ait.qbench.net/protocol?id=11",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": [
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step stores instructions on how to handle homogeneity testing for MN OCM for the Pre-Conditions and QBench Setup.",
+          "priority": "1",
+          "sequence": 1,
+          "step_id": 45,
+          "step_name": "Homogeneity | Pre-Conditions & QBench Setup",
+          "worksheet_id": 69,
+          "worksheet_name": "Homogeneity [Protocol WS] Pre-Conditions & QBench Setup"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This Protocol step goes over section 9.0 Sampling Expectation of the MN OCM Homogeneity Testing SOP.",
+          "priority": "2",
+          "sequence": 2,
+          "step_id": 47,
+          "step_name": "Homogeneity | Sub-Sampling",
+          "worksheet_id": 70,
+          "worksheet_name": "Homogeneity [Protocol WS] Sub-Sampling"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step goes over the process set forth in section 10.0 of the MN OCM Homogeneity Testing SOP.",
+          "priority": "3",
+          "sequence": 3,
+          "step_id": 46,
+          "step_name": "Homogeneity | Run Cannabinoid Potency Tests",
+          "worksheet_id": 71,
+          "worksheet_name": "Homogeneity [Protocol WS] Run Cannabinoid Potency Tests"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step goes over the process set forth in section 11.0 of the MN OCM Homogeneity Testing SOP.",
+          "priority": "4",
+          "sequence": 4,
+          "step_id": 44,
+          "step_name": "Homogeneity | Homogeneity Evaluation & Reporting",
+          "worksheet_id": 72,
+          "worksheet_name": "Homogeneity [Protocol WS] Homogeneity Evaluation & Reporting"
+        }
+      ]
+    },
+    {
+      "protocol_id": 5,
+      "name": "[Batch] Microbials Protocol",
+      "detail_url": "https://ait.qbench.net/protocol?id=5",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": []
+    },
+    {
+      "protocol_id": 8,
+      "name": "[Batch] Mycotoxin (Quantitative) Protocol",
+      "detail_url": "https://ait.qbench.net/protocol?id=8",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": [
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign equipment to batch.",
+          "priority": null,
+          "sequence": 1,
+          "step_id": 11,
+          "step_name": "Assigning Equipment Usage to Batch",
+          "worksheet_id": 26,
+          "worksheet_name": "[Protocol Step WS] Assigning Equipment to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign inventory used to batch.",
+          "priority": null,
+          "sequence": 2,
+          "step_id": 12,
+          "step_name": "Assigning Inventory Usage to Batch",
+          "worksheet_id": 27,
+          "worksheet_name": "[Protocol Step WS] Assigning Inventory to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the preparation of lab control samples purposes. It gives the steps from Mycotoxin Analysis SOP, Section 8.5.",
+          "priority": null,
+          "sequence": 3,
+          "step_id": 41,
+          "step_name": "Mycotoxin | Preparation of Lab Controls",
+          "worksheet_id": 60,
+          "worksheet_name": "Mycotoxins [Protocol WS] Preparation of Lab Control Samples"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the sample preparation of weighing and vortexing steps. It gives the steps from Mycotoxin Analysis SOP, Section 8.6.1 through 8.6.5.",
+          "priority": null,
+          "sequence": 4,
+          "step_id": 43,
+          "step_name": "Mycotoxin | Preparation of Sample | Weigh and Vortex",
+          "worksheet_id": 61,
+          "worksheet_name": "Mycotoxins [Protocol WS] Preparation of Sample | Weigh & Vortex"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the sample preparation of centrifuging and positive pressure manifold steps. It gives the steps from Mycotoxin Analysis SOP, Section 8.6.6 through 8.6.11.",
+          "priority": null,
+          "sequence": 5,
+          "step_id": 42,
+          "step_name": "Mycotoxin | Preparation of Sample | Centrifuge & Positive Pressure",
+          "worksheet_id": 62,
+          "worksheet_name": "Mycotoxins [Protocol WS] Preparation of Sample | Centrifuge & Positive Pressure"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the sample preparation of standards. It gives the steps from Mycotoxin Analysis SOP, Section 8.7.",
+          "priority": null,
+          "sequence": 6,
+          "step_id": 40,
+          "step_name": "Mycotoxin | Preparation of Standards",
+          "worksheet_id": 63,
+          "worksheet_name": "Mycotoxin [Protocol WS] Preparation of Standards"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the LC-MS/MS Setup and Measurement steps. It gives the steps from Mycotoxin Analysis SOP, Section 8.8.",
+          "priority": null,
+          "sequence": 7,
+          "step_id": 39,
+          "step_name": "Mycotoxin | LC-MS/MS Setup and Measurement",
+          "worksheet_id": 64,
+          "worksheet_name": "Mycotoxin [Protocol WS] LC-MS/MS Setup and Measurement"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the laboratory control requirements. It gives the steps from Mycotoxin Analysis SOP, Section 8.10.",
+          "priority": null,
+          "sequence": 8,
+          "step_id": 38,
+          "step_name": "Mycotoxin | Laboratory Controls",
+          "worksheet_id": 65,
+          "worksheet_name": "Mycotoxin [Protocol WS] Laboratory Controls"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step holds instructions for our to obtain the output file from each cannabis instrument and how to upload into QBench. There is a tab for each instruement. There are also links to Loom recording showing how to perform these steps.",
+          "priority": null,
+          "sequence": 9,
+          "step_id": 22,
+          "step_name": "Cannabis/Hemp | Instrument Output and QBench Upload of Results",
+          "worksheet_id": 40,
+          "worksheet_name": "General {Protocol WS} Instrument Output and QBench Upload of Results"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This step holds a worksheet for steps to check after the batch is to complete to do a quality check on the overall batch and records within QBench.",
+          "priority": null,
+          "sequence": 10,
+          "step_id": 23,
+          "step_name": "Cannabis/Hemp | Overall Chemist Review of Batch",
+          "worksheet_id": 41,
+          "worksheet_name": "Cannabis/Hemp {Protocol WS} Overall Chemist Review of Batch"
+        }
+      ]
+    },
+    {
+      "protocol_id": 7,
+      "name": "[Batch] Qualitative Pesticides & Mycotoxin Protocol",
+      "detail_url": "https://ait.qbench.net/protocol?id=7",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": [
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign equipment to batch.",
+          "priority": null,
+          "sequence": 1,
+          "step_id": 11,
+          "step_name": "Assigning Equipment Usage to Batch",
+          "worksheet_id": 26,
+          "worksheet_name": "[Protocol Step WS] Assigning Equipment to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign inventory used to batch.",
+          "priority": null,
+          "sequence": 2,
+          "step_id": 12,
+          "step_name": "Assigning Inventory Usage to Batch",
+          "worksheet_id": 27,
+          "worksheet_name": "[Protocol Step WS] Assigning Inventory to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the preparation of lab control samples purposes. It gives the steps from Pesticide and Mycotoxin Screening Assay SOP, Section 8.4.",
+          "priority": null,
+          "sequence": 3,
+          "step_id": 51,
+          "step_name": "Pest Myco (Qualitative) | Preparation of Laboratory Control Samples",
+          "worksheet_id": 74,
+          "worksheet_name": "Pest Myco Qualitative [Protocol WS] Preparation of Laboratory Control Samples"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the sample preparation of samples. It gives the steps from Pesticide and Mycotoxin Screening Assay SOP, Section 8.5.",
+          "priority": null,
+          "sequence": 4,
+          "step_id": 52,
+          "step_name": "Pest Myco (Qualitative) | Preparation of Samples",
+          "worksheet_id": 75,
+          "worksheet_name": "Pest Myco Qualitative [Protocol WS] Preparation of Samples"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the LC-MS/MS Setup and Measurement steps. It gives the steps from Pesticide and Mycotoxin Screening Assay SOP, Section 8.6.",
+          "priority": null,
+          "sequence": 5,
+          "step_id": 50,
+          "step_name": "Pest Myco (Qualitative) | LC-MS/MS Setup and Measurement",
+          "worksheet_id": 76,
+          "worksheet_name": "Pest Myco [Protocol WS] LC-MS/MS Setup and Measurement"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the laboratory control requirements. It gives the steps from Pesticide and Mycotoxin Screening Assay SOP, Section 8.8.",
+          "priority": null,
+          "sequence": 6,
+          "step_id": 49,
+          "step_name": "Pest Myco (Qualitative) | Laboratory Control Requirements",
+          "worksheet_id": 78,
+          "worksheet_name": "Pest Myco (Qualitative) [Protocol WS] Laboratory Control Requirements"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the calculations and reporting of results. It gives the steps from Pesticide and Mycotoxin Screening Assay SOP, Section 8.9.",
+          "priority": null,
+          "sequence": 7,
+          "step_id": 48,
+          "step_name": "Pest Myco (Qualitative) | Calculations and Reporting of Results",
+          "worksheet_id": 79,
+          "worksheet_name": "Pest Myco (Qualitative) [Protocol WS] Calculations and Reporting of Results"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step holds instructions for our to obtain the output file from each cannabis instrument and how to upload into QBench. There is a tab for each instruement. There are also links to Loom recording showing how to perform these steps.",
+          "priority": null,
+          "sequence": 8,
+          "step_id": 22,
+          "step_name": "Cannabis/Hemp | Instrument Output and QBench Upload of Results",
+          "worksheet_id": 40,
+          "worksheet_name": "General {Protocol WS} Instrument Output and QBench Upload of Results"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This step holds a worksheet for steps to check after the batch is to complete to do a quality check on the overall batch and records within QBench.",
+          "priority": null,
+          "sequence": 9,
+          "step_id": 23,
+          "step_name": "Cannabis/Hemp | Overall Chemist Review of Batch",
+          "worksheet_id": 41,
+          "worksheet_name": "Cannabis/Hemp {Protocol WS} Overall Chemist Review of Batch"
+        }
+      ]
+    },
+    {
+      "protocol_id": 12,
+      "name": "[Batch] Quantitative Pesticide in Cannabis Flower Protocol",
+      "detail_url": "https://ait.qbench.net/protocol?id=12",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": [
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign equipment to batch.",
+          "priority": null,
+          "sequence": 1,
+          "step_id": 11,
+          "step_name": "Assigning Equipment Usage to Batch",
+          "worksheet_id": 26,
+          "worksheet_name": "[Protocol Step WS] Assigning Equipment to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign inventory used to batch.",
+          "priority": null,
+          "sequence": 2,
+          "step_id": 12,
+          "step_name": "Assigning Inventory Usage to Batch",
+          "worksheet_id": 27,
+          "worksheet_name": "[Protocol Step WS] Assigning Inventory to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 3,
+          "step_id": 82,
+          "step_name": "Pest (Quantitative Flower) | Preparation of Lab Control Samples | Sample Preparation 1",
+          "worksheet_id": 150,
+          "worksheet_name": "Pest (Quantitative Flower) [Protocol WS] Preparation of Lab Control Samples | Sample Preparation 1"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 4,
+          "step_id": 83,
+          "step_name": "Pest (Quantitative Flower) | Preparation of Samples | Sample Preparation 1",
+          "worksheet_id": 151,
+          "worksheet_name": "Pest (Quantitative Flower) [Protocol WS] Preparation of Samples | Sample Preparation 1"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 5,
+          "step_id": 84,
+          "step_name": "Pest (Quantitative Flower) | Preparation of Standards | Sample Preparation 1",
+          "worksheet_id": 152,
+          "worksheet_name": "Pest (Quantitative Flower) [Protocol WS] Preparation of Standards | Sample Preparation 1"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 6,
+          "step_id": 85,
+          "step_name": "Pest (Quantitative Flower) | Preparation of Lab Control Samples | Sample Preparation 2",
+          "worksheet_id": 153,
+          "worksheet_name": "Pest (Quantitative Flower) [Protocol WS] Preparation of Lab Control Samples | Sample Preparation 2"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 7,
+          "step_id": 86,
+          "step_name": "Pest (Quantitative Flower) | Preparation of Samples | Sample Preparation 2",
+          "worksheet_id": 154,
+          "worksheet_name": "Pest (Quantitative Flower) [Protocol WS] Preparation of Samples | Sample Preparation 2"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 8,
+          "step_id": 87,
+          "step_name": "Pest (Quantitative Flower) | Preparation of Standards | Sample Preparation 2",
+          "worksheet_id": 155,
+          "worksheet_name": "Pest (Quantitative Flower) [Protocol WS] Preparation of Standards | Sample Preparation 2"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step is to document the LC-MS/MS Setup and Measurement steps. It gives the steps from Pesticide and Mycotoxin Screening Assay SOP, Section 8.6.",
+          "priority": null,
+          "sequence": 9,
+          "step_id": 50,
+          "step_name": "Pest Myco (Qualitative) | LC-MS/MS Setup and Measurement",
+          "worksheet_id": 76,
+          "worksheet_name": "Pest Myco [Protocol WS] LC-MS/MS Setup and Measurement"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 10,
+          "step_id": 88,
+          "step_name": "Pest (Quantitative) | Laboratory Control Requirements",
+          "worksheet_id": 156,
+          "worksheet_name": "Pest (Quantitative) [Protocol WS] Laboratory Control Requirements"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 11,
+          "step_id": 89,
+          "step_name": "Pest (Quantitative) | Calculations and Reporting of Results",
+          "worksheet_id": 157,
+          "worksheet_name": "Pest (Quantitative) [Protocol WS] Calculations and Reporting of Results"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step holds instructions for our to obtain the output file from each cannabis instrument and how to upload into QBench. There is a tab for each instruement. There are also links to Loom recording showing how to perform these steps.",
+          "priority": null,
+          "sequence": 12,
+          "step_id": 22,
+          "step_name": "Cannabis/Hemp | Instrument Output and QBench Upload of Results",
+          "worksheet_id": 40,
+          "worksheet_name": "General {Protocol WS} Instrument Output and QBench Upload of Results"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This step holds a worksheet for steps to check after the batch is to complete to do a quality check on the overall batch and records within QBench.",
+          "priority": null,
+          "sequence": 13,
+          "step_id": 23,
+          "step_name": "Cannabis/Hemp | Overall Chemist Review of Batch",
+          "worksheet_id": 41,
+          "worksheet_name": "Cannabis/Hemp {Protocol WS} Overall Chemist Review of Batch"
+        }
+      ]
+    },
+    {
+      "protocol_id": 6,
+      "name": "[Batch] Residual Solvents Protocol",
+      "detail_url": "https://ait.qbench.net/protocol?id=6",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": [
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign equipment to batch.",
+          "priority": null,
+          "sequence": 1,
+          "step_id": 11,
+          "step_name": "Assigning Equipment Usage to Batch",
+          "worksheet_id": 26,
+          "worksheet_name": "[Protocol Step WS] Assigning Equipment to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign inventory used to batch.",
+          "priority": null,
+          "sequence": 2,
+          "step_id": 12,
+          "step_name": "Assigning Inventory Usage to Batch",
+          "worksheet_id": 27,
+          "worksheet_name": "[Protocol Step WS] Assigning Inventory to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step worksheet is to gather the information for sample preparation. It gives the steps and form from Residual Solvents Assay SOP Sections 8.3 & 8.4.",
+          "priority": null,
+          "sequence": 3,
+          "step_id": 32,
+          "step_name": "Residual Solvents | Sample Preparation",
+          "worksheet_id": 54,
+          "worksheet_name": "Residual Solvents [Protocol WS] Sample Preparation"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step worksheet is to gather the information for instrument setup and measurement. It gives the steps and form from Residual Solvents Assay SOP Section 8.6.",
+          "priority": null,
+          "sequence": 4,
+          "step_id": 33,
+          "step_name": "Residual Solvents | Instrument Setup & Measurement",
+          "worksheet_id": 55,
+          "worksheet_name": "Residual Solvents [Protocol WS] Instrument Setup & Measurement"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step worksheet is to gather the information for quality control requirements. It gives the steps and form from Residual Solvents Assay SOP Section 8.7.",
+          "priority": null,
+          "sequence": 5,
+          "step_id": 34,
+          "step_name": "Residual Solvents | Quality Control Requirements",
+          "worksheet_id": 56,
+          "worksheet_name": "Residual Solvents [Protocol WS] Quality Control Requirements"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step worksheet is to gather the information for calculations and reporting of results. It gives the steps and form from Residual Solvents Assay SOP Section 8.8.",
+          "priority": null,
+          "sequence": 6,
+          "step_id": 35,
+          "step_name": "Residual Solvents | Calculations and Reporting of Results",
+          "worksheet_id": 57,
+          "worksheet_name": "Residual Solvents [Protocol WS] Calculations and Reporting of Results"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step holds instructions for our to obtain the output file from each cannabis instrument and how to upload into QBench. There is a tab for each instruement. There are also links to Loom recording showing how to perform these steps.",
+          "priority": null,
+          "sequence": 7,
+          "step_id": 22,
+          "step_name": "Cannabis/Hemp | Instrument Output and QBench Upload of Results",
+          "worksheet_id": 40,
+          "worksheet_name": "General {Protocol WS} Instrument Output and QBench Upload of Results"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This step holds a worksheet for steps to check after the batch is to complete to do a quality check on the overall batch and records within QBench.",
+          "priority": null,
+          "sequence": 8,
+          "step_id": 23,
+          "step_name": "Cannabis/Hemp | Overall Chemist Review of Batch",
+          "worksheet_id": 41,
+          "worksheet_name": "Cannabis/Hemp {Protocol WS} Overall Chemist Review of Batch"
+        }
+      ]
+    },
+    {
+      "protocol_id": 16,
+      "name": "[Batch] Tempo Microbial Analysis Protocol",
+      "detail_url": "https://ait.qbench.net/protocol?id=16",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": [
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign inventory used to batch.",
+          "priority": null,
+          "sequence": 1,
+          "step_id": 12,
+          "step_name": "Assigning Inventory Usage to Batch",
+          "worksheet_id": 27,
+          "worksheet_name": "[Protocol Step WS] Assigning Inventory to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign equipment to batch.",
+          "priority": null,
+          "sequence": 2,
+          "step_id": 11,
+          "step_name": "Assigning Equipment Usage to Batch",
+          "worksheet_id": 26,
+          "worksheet_name": "[Protocol Step WS] Assigning Equipment to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 3,
+          "step_id": 63,
+          "step_name": "Tempo Microbial Analysis | Sample Preparation",
+          "worksheet_id": 100,
+          "worksheet_name": "Tempo Microbial Analysis [Protocol] Worksheet Sample Preparation"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 4,
+          "step_id": 64,
+          "step_name": "Tempo Microbial Analysis | Sample Incubation",
+          "worksheet_id": 101,
+          "worksheet_name": "Tempo Microbial Analysis [Protocol] Worksheet Sample Incubation"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 5,
+          "step_id": 65,
+          "step_name": "Tempo Microbial Analysis | Sample Reading",
+          "worksheet_id": 102,
+          "worksheet_name": "Tempo Microbial Analysis [Protocol] Worksheet Sample Reading"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This step holds a worksheet for steps to check after the batch is to complete to do a quality check on the overall batch and records within QBench.",
+          "priority": null,
+          "sequence": 6,
+          "step_id": 23,
+          "step_name": "Cannabis/Hemp | Overall Chemist Review of Batch",
+          "worksheet_id": 41,
+          "worksheet_name": "Cannabis/Hemp {Protocol WS} Overall Chemist Review of Batch"
+        }
+      ]
+    },
+    {
+      "protocol_id": 9,
+      "name": "[Batch] Terpenes Protocol",
+      "detail_url": "https://ait.qbench.net/protocol?id=9",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": []
+    },
+    {
+      "protocol_id": 3,
+      "name": "[Batch] Water Activity Protocol",
+      "detail_url": "https://ait.qbench.net/protocol?id=3",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": [
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign equipment to batch.",
+          "priority": null,
+          "sequence": 1,
+          "step_id": 11,
+          "step_name": "Assigning Equipment Usage to Batch",
+          "worksheet_id": 26,
+          "worksheet_name": "[Protocol Step WS] Assigning Equipment to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Step pertaining to cleaning the equipment before use. Worksheet stores the instructions for those steps.",
+          "priority": null,
+          "sequence": 2,
+          "step_id": 8,
+          "step_name": "Water Activity Clean Equipment",
+          "worksheet_id": 23,
+          "worksheet_name": "Water Activity [Protocol WS] Clean Equipment"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step worksheet is for instructional purposes. It gives the steps from Water Activity Analysis SOP Dated 3/11/2026, Section 8.2.",
+          "priority": null,
+          "sequence": 3,
+          "step_id": 9,
+          "step_name": "Water Activity Meter Verification",
+          "worksheet_id": 24,
+          "worksheet_name": "Water Activity [Protocol WS] Meter Verification"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This protocol step worksheet is to gather the measurements for Water Activity tests. It gives the steps and form from Water Activity Analysis SOP Dated 3/11/2026, Section 8.4.",
+          "priority": null,
+          "sequence": 4,
+          "step_id": 10,
+          "step_name": "Water Activity Sample Measurements",
+          "worksheet_id": 25,
+          "worksheet_name": "Water Activity [Protocol WS] Sample Analysis"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This worksheet is the batch worksheet and connected directly to test worksheets.",
+          "priority": null,
+          "sequence": 5,
+          "step_id": 36,
+          "step_name": "Water Activity Verify Results Went to Batch Worksheet Attached",
+          "worksheet_id": 29,
+          "worksheet_name": "Water Activity [Batch WS]"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign inventory used to batch.",
+          "priority": null,
+          "sequence": 6,
+          "step_id": 12,
+          "step_name": "Assigning Inventory Usage to Batch",
+          "worksheet_id": 27,
+          "worksheet_name": "[Protocol Step WS] Assigning Inventory to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This step holds a worksheet for steps to check after the batch is to complete to do a quality check on the overall batch and records within QBench.",
+          "priority": null,
+          "sequence": 7,
+          "step_id": 23,
+          "step_name": "Cannabis/Hemp | Overall Chemist Review of Batch",
+          "worksheet_id": 41,
+          "worksheet_name": "Cannabis/Hemp {Protocol WS} Overall Chemist Review of Batch"
+        }
+      ]
+    },
+    {
+      "protocol_id": 10,
+      "name": "[Test] Foreign Material Protocol",
+      "detail_url": "https://ait.qbench.net/protocol?id=10",
+      "active_state": "not_exposed_on_detail_page",
+      "description": "",
+      "session_active": true,
+      "steps": [
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "Instructions on how to assign equipment to batch.",
+          "priority": null,
+          "sequence": 1,
+          "step_id": 11,
+          "step_name": "Assigning Equipment Usage to Batch",
+          "worksheet_id": 26,
+          "worksheet_name": "[Protocol Step WS] Assigning Equipment to Batch"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "",
+          "priority": null,
+          "sequence": 2,
+          "step_id": 37,
+          "step_name": "Foreign Material Sample Analysis",
+          "worksheet_id": 58,
+          "worksheet_name": "Foreign Material [Protocol WS] Perform FM Testing"
+        },
+        {
+          "default_technician": "omitted_personal_data",
+          "description": "This step holds a worksheet for steps to check after the batch is to complete to do a quality check on the overall batch and records within QBench.",
+          "priority": null,
+          "sequence": 3,
+          "step_id": 23,
+          "step_name": "Cannabis/Hemp | Overall Chemist Review of Batch",
+          "worksheet_id": 41,
+          "worksheet_name": "Cannabis/Hemp {Protocol WS} Overall Chemist Review of Batch"
+        }
+      ]
+    }
+  ]
+}

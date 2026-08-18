@@ -1,0 +1,64 @@
+parser_id,parser_name,finder_ordinal,finder_name,mapping_capture_state
+47,Pest Myco Qualitative,1,bQC -By Test In Batch,not_exposed_requires_prohibited_edit
+47,Pest Myco Qualitative,2,cQC -By Test In Batch,not_exposed_requires_prohibited_edit
+47,Pest Myco Qualitative,3,pQC -By Test In Batch,not_exposed_requires_prohibited_edit
+47,Pest Myco Qualitative,4,STD1-3 -By Test In Batch,not_exposed_requires_prohibited_edit
+47,Pest Myco Qualitative,5,STD1-2 -By Test In Batch,not_exposed_requires_prohibited_edit
+47,Pest Myco Qualitative,6,STD1-1 -By Test In Batch,not_exposed_requires_prohibited_edit
+47,Pest Myco Qualitative,7,System Suit 3- Pesticides -By Test In Batch,not_exposed_requires_prohibited_edit
+47,Pest Myco Qualitative,8,System Suit 2- Pesticides -By Test In Batch,not_exposed_requires_prohibited_edit
+47,Pest Myco Qualitative,9,System Suit 1- Pesticides -By Test In Batch,not_exposed_requires_prohibited_edit
+47,Pest Myco Qualitative,10,Reagent Blank- Pesticides -By Test In Batch,not_exposed_requires_prohibited_edit
+47,Pest Myco Qualitative,11,Samples - Pesticides -By Test In Batch,not_exposed_requires_prohibited_edit
+47,Pest Myco Qualitative,12,Samples - Mycotoxin -By Test In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,1,Arsenic - Fortified Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,2,Cadmium - Fortified Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,3,Mercury - Fortified Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,4,Lead - Fortified Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,5,Arsenic - Fortified Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,6,Cadmium - Fortified Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,7,Mercury - Fortified Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,8,Lead - Fortified Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,9,Arsenic - Flower Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,10,Cadmium - Flower Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,11,Mercury - Flower Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,12,Lead - Flower Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,13,Arsenic - Fortified Concentration -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,14,Cadmium - Fortified Concentration -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,15,Mercury - Fortified Concentration -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,16,Lead - Fortified Concentration -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,17,Arsenic - Concentration Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,18,Cadmium - Concentration Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,19,Mercury - Concentration Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,20,Lead - Concentration Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,21,Arsenic - Method/Digestion Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,22,Cadmium - Method/Digestion Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,23,Mercury - Method/Digestion Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,24,Lead - Method/Digestion Blank -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,25,Arsenic - ICV1 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,26,Cadmium - ICV1 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,27,Mercury - ICV1 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,28,Lead - ICV1 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,29,Arsenic - Cal4 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,30,Cadmium - Cal4 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,31,Mercury - Cal4 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,32,Lead - Cal4 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,33,Arsenic - Cal3 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,34,Cadmium - Cal3 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,35,Mercury - Cal3 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,36,Lead - Cal3 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,37,Arsenic - Cal2 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,38,Cadmium - Cal2 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,39,Mercury - Cal2 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,40,Lead - Cal2 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,41,Arsenic - Cal1 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,42,Cadmium - Cal1 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,43,Mercury - Cal1 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,44,Lead - Cal1 -By Sample In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,45,Arsenic -By Test In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,46,Cadmium -By Test In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,47,Mercury -By Test In Batch,not_exposed_requires_prohibited_edit
+41,Heavy Metals DataManager,48,Lead -By Test In Batch,not_exposed_requires_prohibited_edit
+25,Cannabis Heavy Metals ICPMS File Parser,1,Heavy Metals Sample in Batch -By Sample In Batch,not_exposed_requires_prohibited_edit
+22,Heavy Metals File Parser - AMM,1,Tests in Batch -By Test In Batch,not_exposed_requires_prohibited_edit
+21,Example [File Parser],1,Finder # 1 -By Sample In Batch,not_exposed_requires_prohibited_edit

@@ -1,0 +1,208 @@
+<div><span title="{%set CANNABINOIDS_ID = 2%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set CANNABINOIDS_ID = 2%}" contenteditable="false">set CANNABINOIDS_ID = 2</span> <span title="{%set HOMOGENEITY_ID = 11%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set HOMOGENEITY_ID = 11%}" contenteditable="false">set HOMOGENEITY_ID = 11</span> <span title="{%set POTENCY_TESTS = []%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set POTENCY_TESTS = []%}" contenteditable="false">set POTENCY_TESTS = []</span> <span title="{%set HOMOGENEITY_TEST = namespace(value=none)%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set HOMOGENEITY_TEST = namespace(value=none)%}" contenteditable="false">set HOMOGENEITY_TEST = namespace(value=none)</span> <span title="{%set POTENCY_METHODS = []%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set POTENCY_METHODS = []%}" contenteditable="false">set POTENCY_METHODS = []</span> <span title="{%set SAMPLE_WEIGHTS = []%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set SAMPLE_WEIGHTS = []%}" contenteditable="false">set SAMPLE_WEIGHTS = []</span> <span title="{%set METRC_SOURCE_IDS = []%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set METRC_SOURCE_IDS = []%}" contenteditable="false">set METRC_SOURCE_IDS = []</span> <span title="{%set METRC_LAB_IDS = []%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set METRC_LAB_IDS = []%}" contenteditable="false">set METRC_LAB_IDS = []</span> <span title="{%set PREP_DATES = []%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set PREP_DATES = []%}" contenteditable="false">set PREP_DATES = []</span> <span title="{%for item in tests%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%for item in tests%}" contenteditable="false">for item in tests</span> <span title="{%if item.assay_id == CANNABINOIDS_ID%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%if item.assay_id == CANNABINOIDS_ID%}" contenteditable="false">if item.assay_id == CANNABINOIDS_ID</span> <span title="{%set _ = POTENCY_TESTS.append(item)%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set _ = POTENCY_TESTS.append(item)%}" contenteditable="false">set _ = POTENCY_TESTS.append(item)</span> <span title="{%if item.assay and item.assay.method and item.assay.method not in POTENCY_METHODS%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%if item.assay and item.assay.method and item.assay.method not in POTENCY_METHODS%}" contenteditable="false">if item.assay and item.assay.method and item.assay.method not in POTENCY_METHODS</span> <span title="{%set _ = POTENCY_METHODS.append(item.assay.method)%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set _ = POTENCY_METHODS.append(item.assay.method)%}" contenteditable="false">set _ = POTENCY_METHODS.append(item.assay.method)</span> <span title="{%endif%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%endif%}" contenteditable="false">endif</span> <span title="{%if item.test_sample_weight and item.test_sample_weight not in SAMPLE_WEIGHTS%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%if item.test_sample_weight and item.test_sample_weight not in SAMPLE_WEIGHTS%}" contenteditable="false">if item.test_sample_weight and item.test_sample_weight not in SAMPLE_WEIGHTS</span> <span title="{%set _ = SAMPLE_WEIGHTS.append(item.test_sample_weight)%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set _ = SAMPLE_WEIGHTS.append(item.test_sample_weight)%}" contenteditable="false">set _ = SAMPLE_WEIGHTS.append(item.test_sample_weight)</span> <span title="{%endif%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%endif%}" contenteditable="false">endif</span> <span title="{%if item.metrc_source_package_id and item.metrc_source_package_id not in METRC_SOURCE_IDS%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%if item.metrc_source_package_id and item.metrc_source_package_id not in METRC_SOURCE_IDS%}" contenteditable="false">if item.metrc_source_package_id and item.metrc_source_package_id not in METRC_SOURCE_IDS</span> <span title="{%set _ = METRC_SOURCE_IDS.append(item.metrc_source_package_id)%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set _ = METRC_SOURCE_IDS.append(item.metrc_source_package_id)%}" contenteditable="false">set _ = METRC_SOURCE_IDS.append(item.metrc_source_package_id)</span> <span title="{%endif%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%endif%}" contenteditable="false">endif</span> <span title="{%if item.metrc_lab_test_id and item.metrc_lab_test_id not in METRC_LAB_IDS%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%if item.metrc_lab_test_id and item.metrc_lab_test_id not in METRC_LAB_IDS%}" contenteditable="false">if item.metrc_lab_test_id and item.metrc_lab_test_id not in METRC_LAB_IDS</span> <span title="{%set _ = METRC_LAB_IDS.append(item.metrc_lab_test_id)%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set _ = METRC_LAB_IDS.append(item.metrc_lab_test_id)%}" contenteditable="false">set _ = METRC_LAB_IDS.append(item.metrc_lab_test_id)</span> <span title="{%endif%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%endif%}" contenteditable="false">endif</span> <span title="{%endif%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%endif%}" contenteditable="false">endif</span> <span title="{%if item.assay_id == HOMOGENEITY_ID%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%if item.assay_id == HOMOGENEITY_ID%}" contenteditable="false">if item.assay_id == HOMOGENEITY_ID</span> <span title="{%set HOMOGENEITY_TEST.value = item%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set HOMOGENEITY_TEST.value = item%}" contenteditable="false">set HOMOGENEITY_TEST.value = item</span> <span title="{%endif%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%endif%}" contenteditable="false">endif</span> <span title="{%for batch in item.batches%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%for batch in item.batches%}" contenteditable="false">for batch in item.batches</span> <span title="{%for step in batch.batch_protocol_steps%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%for step in batch.batch_protocol_steps%}" contenteditable="false">for step in batch.batch_protocol_steps</span> <span title="{%set date_completed = step.date_completed%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set date_completed = step.date_completed%}" contenteditable="false">set date_completed = step.date_completed</span> <span title="{%set prep_date = date_completed|local_time(&quot;%m/%d/%Y&quot;) if date_completed else ''%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set prep_date = date_completed|local_time(&quot;%m/%d/%Y&quot;) if date_completed else ''%}" contenteditable="false">set prep_date = date_completed|local_time("%m/%d/%Y") if date_completed else ''</span> <span title="{%if prep_date and prep_date not in PREP_DATES%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%if prep_date and prep_date not in PREP_DATES%}" contenteditable="false">if prep_date and prep_date not in PREP_DATES</span> <span title="{%set _ = PREP_DATES.append(prep_date)%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set _ = PREP_DATES.append(prep_date)%}" contenteditable="false">set _ = PREP_DATES.append(prep_date)</span> <span title="{%endif%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%endif%}" contenteditable="false">endif</span> <span title="{%endfor%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%endfor%}" contenteditable="false">endfor</span> <span title="{%endfor%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%endfor%}" contenteditable="false">endfor</span> <span title="{%endfor%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%endfor%}" contenteditable="false">endfor</span> <span title="{%set HOMOGENEITY_RESULT = 'Not Tested'%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set HOMOGENEITY_RESULT = 'Not Tested'%}" contenteditable="false">set HOMOGENEITY_RESULT = 'Not Tested'</span> <span title="{%set HOMOGENEITY_CLASS = 'not-tested'%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set HOMOGENEITY_CLASS = 'not-tested'%}" contenteditable="false">set HOMOGENEITY_CLASS = 'not-tested'</span> <span title="{%if HOMOGENEITY_TEST.value%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%if HOMOGENEITY_TEST.value%}" contenteditable="false">if HOMOGENEITY_TEST.value</span> <span title="{%set HOMOGENEITY_RESULT = HOMOGENEITY_TEST.value.get_worksheet_value('homogeneity_metrc') or HOMOGENEITY_TEST.value.get_worksheet_value('pass_fail') or 'Pending'%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set HOMOGENEITY_RESULT = HOMOGENEITY_TEST.value.get_worksheet_value('homogeneity_metrc') or HOMOGENEITY_TEST.value.get_worksheet_value('pass_fail') or 'Pending'%}" contenteditable="false">set HOMOGENEITY_RESULT = HOMOGENEITY_TEST.value.get_worksheet_value('homogeneity_metrc') or HOMOGENEITY_TEST.value.get_worksheet_value('pass_fail') or 'Pending'</span> <span title="{%if HOMOGENEITY_RESULT|string|trim|lower == 'pass'%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%if HOMOGENEITY_RESULT|string|trim|lower == 'pass'%}" contenteditable="false">if HOMOGENEITY_RESULT|string|trim|lower == 'pass'</span> <span title="{%set HOMOGENEITY_CLASS = 'pass'%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set HOMOGENEITY_CLASS = 'pass'%}" contenteditable="false">set HOMOGENEITY_CLASS = 'pass'</span> <span title="{%elif HOMOGENEITY_RESULT|string|trim|lower == 'fail'%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%elif HOMOGENEITY_RESULT|string|trim|lower == 'fail'%}" contenteditable="false">elif HOMOGENEITY_RESULT|string|trim|lower == 'fail'</span> <span title="{%set HOMOGENEITY_CLASS = 'fail'%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set HOMOGENEITY_CLASS = 'fail'%}" contenteditable="false">set HOMOGENEITY_CLASS = 'fail'</span> <span title="{%else%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%else%}" contenteditable="false">else</span> <span title="{%set HOMOGENEITY_CLASS = 'info'%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set HOMOGENEITY_CLASS = 'info'%}" contenteditable="false">set HOMOGENEITY_CLASS = 'info'</span> <span title="{%endif%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%endif%}" contenteditable="false">endif</span> <span title="{%endif%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%endif%}" contenteditable="false">endif</span></div><style>
+  @page {
+    background-image: url("<span title="{{report_config_attachments['AIT Watermark.png'].asset_id|get_asset_file_download_url() if report_config_attachments and report_config_attachments['AIT Watermark.png']}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{report_config_attachments['AIT Watermark.png'].asset_id|get_asset_file_download_url() if report_config_attachments and report_config_attachments['AIT Watermark.png']}}" contenteditable="false">report_config_attachments['AIT Watermark.png'].asset_id|get_asset_file_download_url() if report_config_attachments and report_config_attachments['AIT Watermark.png']</span>");
+    background-size: 7in;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: 'Roboto';
+  }
+
+  * {
+    font-family: 'Roboto';
+  }
+
+  .ait-homo-body {
+    width: 8.48in;
+    font-size: 8pt;
+  }
+
+  .ait-homo-title {
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.08in;
+  }
+
+  .ait-homo-subtitle {
+    text-align: center;
+    font-size: 8pt;
+    margin-bottom: 0.12in;
+  }
+
+  .ait-homo-info-table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .ait-homo-info-table td {
+    font-size: 8pt;
+    vertical-align: top;
+    padding: 2px 4px;
+    border: 0;
+  }
+
+  .ait-homo-card-row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 6px 0;
+    margin-top: 0.08in;
+    margin-bottom: 0.12in;
+  }
+
+  .ait-homo-card {
+    display: table-cell;
+    border: 1px solid #777;
+    padding: 6px;
+    vertical-align: top;
+  }
+
+  .ait-homo-card-label {
+    font-size: 7pt;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+
+  .ait-homo-card-value {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: 3px;
+  }
+
+  .pass {
+    color: #2da841;
+    font-weight: bold;
+  }
+
+  .fail {
+    color: #d42b2b;
+    font-weight: bold;
+  }
+
+  .not-tested {
+    color: #888;
+    font-weight: bold;
+  }
+
+  .info {
+    color: #333;
+    font-weight: bold;
+  }
+
+  .ait-homo-section-header {
+    font-size: 13pt;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.15in;
+    margin-bottom: 0.06in;
+  }
+
+  .ait-homo-summary-header {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    font-size: 6.5pt;
+  }
+
+  .ait-homo-summary-row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-bottom: 1px solid #ddd;
+    font-size: 6.5pt;
+  }
+
+  .ait-homo-cell {
+    display: table-cell;
+    padding: 1px 1px;
+    vertical-align: top;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  .ait-homo-note {
+    font-size: 6.5pt;
+    margin-top: 0.08in;
+  }
+
+  .ait-homo-detail-block {
+    page-break-inside: avoid;
+    margin-top: 0.10in;
+    padding-top: 0.04in;
+    border-top: 2px solid black;
+  }
+
+  .ait-homo-detail-heading {
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.02in;
+  }
+
+  .ait-homo-detail-meta {
+    font-size: 7pt;
+    text-align: center;
+    margin-bottom: 0.04in;
+  }
+
+  .ait-homo-potency-worksheet-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ait-homo-potency-worksheet-container table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+  }
+
+  .ait-homo-potency-worksheet-container table,
+  .ait-homo-potency-worksheet-container th,
+  .ait-homo-potency-worksheet-container td {
+    font-size: 7pt !important;
+    height: auto !important;
+    min-height: 8px !important;
+    max-height: none !important;
+  }
+
+  .ait-homo-method-line {
+    font-size: 7pt;
+    margin-top: 0.02in;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  .ait-homo-two-col {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .ait-homo-two-col-left {
+    display: table-cell;
+    width: 35%;
+    padding: 3px 4px;
+    font-weight: bold;
+  }
+
+  .ait-homo-two-col-right {
+    display: table-cell;
+    width: 65%;
+    padding: 3px 4px;
+  }
+</style><div class="ait-homo-body"><div class="ait-homo-title">Homogeneity Report</div><div class="ait-homo-subtitle">Cannabinoid Potency Replicate Results</div><table class="ait-homo-info-table mce-item-table"><colgroup> <col style="width: 35%;" data-mce-style="width: 35%;"> <col style="width: 32%;" data-mce-style="width: 32%;"> <col style="width: 33%;" data-mce-style="width: 33%;"> </colgroup><tbody><tr><td>Collected Sampled: <span title="{{sample.additional_fields['date_collected_sampled'].date_or_datetime_value | local_time(&quot;%m/%d/%Y&quot;) if sample and sample.additional_fields['date_collected_sampled'] and sample.additional_fields['date_collected_sampled'].date_or_datetime_value}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{sample.additional_fields['date_collected_sampled'].date_or_datetime_value | local_time(&quot;%m/%d/%Y&quot;) if sample and sample.additional_fields['date_collected_sampled'] and sample.additional_fields['date_collected_sampled'].date_or_datetime_value}}" contenteditable="false">sample.additional_fields['date_collected_sampled'].date_or_datetime_value | local_time("%m/%d/%Y") if sample and sample.additional_fields['date_collected_sampled'] and sample.additional_fields['date_collected_sampled'].date_or_datetime_value</span></td><td>Strain: <span title="{{sample.strain if sample and sample.strain}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{sample.strain if sample and sample.strain}}" contenteditable="false">sample.strain if sample and sample.strain</span></td><td>Sampling Method: <span title="{{&quot;SOP Client Method&quot; if sample.date_collected_sampled else &quot;&quot;}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{&quot;SOP Client Method&quot; if sample.date_collected_sampled else &quot;&quot;}}" contenteditable="false">"SOP Client Method" if sample.date_collected_sampled else ""</span></td></tr><tr><td>Received By Testing Lab: <span title="{{sample.date_received1 | local_time(&quot;%m/%d/%Y&quot;) if sample and sample.date_received1}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{sample.date_received1 | local_time(&quot;%m/%d/%Y&quot;) if sample and sample.date_received1}}" contenteditable="false">sample.date_received1 | local_time("%m/%d/%Y") if sample and sample.date_received1</span></td><td>Batch No: <span title="{{sample.batch_id if sample and sample.batch_id}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{sample.batch_id if sample and sample.batch_id}}" contenteditable="false">sample.batch_id if sample and sample.batch_id</span></td><td>Description: <span title="{{sample.description | html_replace_br if sample and sample.description}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{sample.description | html_replace_br if sample and sample.description}}" contenteditable="false">sample.description | html_replace_br if sample and sample.description</span></td></tr><tr><td>Sample Preparation: <span title="{{PREP_DATES|join(', ')}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{PREP_DATES|join(', ')}}" contenteditable="false">PREP_DATES|join(', ')</span></td><td>Batch Size: <span title="{{sample.batch_size if sample and sample.batch_size}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{sample.batch_size if sample and sample.batch_size}}" contenteditable="false">sample.batch_size if sample and sample.batch_size</span></td><td>Metrc ID: <span title="{{sample.metrc_uid if sample and sample.metrc_uid}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{sample.metrc_uid if sample and sample.metrc_uid}}" contenteditable="false">sample.metrc_uid if sample and sample.metrc_uid</span></td></tr></tbody></table><hr style="color: black;" data-mce-style="color: black;"><div class="ait-homo-card-row"><div class="ait-homo-card"><div class="ait-homo-card-label">Homogeneity</div><div class="ait-homo-card-value {{HOMOGENEITY_CLASS}}"><span title="{{HOMOGENEITY_RESULT}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{HOMOGENEITY_RESULT}}" contenteditable="false">HOMOGENEITY_RESULT</span></div></div><div class="ait-homo-card"><div class="ait-homo-card-label">Potency Tests Included</div><div class="ait-homo-card-value info"><span title="{{POTENCY_TESTS|length}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{POTENCY_TESTS|length}}" contenteditable="false">POTENCY_TESTS|length</span></div></div><div class="ait-homo-card"><div class="ait-homo-card-label">Potency Method</div><div style="font-size: 8pt; margin-top: 4px;" data-mce-style="font-size: 8pt; margin-top: 4px;"><span title="{{POTENCY_METHODS|join(', ') if POTENCY_METHODS else 'Pending'}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{POTENCY_METHODS|join(', ') if POTENCY_METHODS else 'Pending'}}" contenteditable="false">POTENCY_METHODS|join(', ') if POTENCY_METHODS else 'Pending'</span></div></div></div><div class="ait-homo-section-header" style="margin-top: 0.08in; margin-bottom: 0.04in;" data-mce-style="margin-top: 0.08in; margin-bottom: 0.04in;">Replicate Summary</div><div class="ait-homo-note" style="font-size: 5.5pt; margin-top: 0.01in; margin-bottom: 0.03in;" data-mce-style="font-size: 5.5pt; margin-top: 0.01in; margin-bottom: 0.03in;">Summary values are pulled from the two total cannabinoid result blocks displayed on the potency report tab.</div><div class="ait-homo-summary-header" style="font-size: 6pt; line-height: 1.25;" data-mce-style="font-size: 6pt; line-height: 1.25;"><div class="ait-homo-cell center" style="width: 5%; padding: 3px 2px;" data-mce-style="width: 5%; padding: 3px 2px;">Rep.</div><div class="ait-homo-cell center" style="width: 9%; padding: 3px 2px;" data-mce-style="width: 9%; padding: 3px 2px;">Test ID</div><div class="ait-homo-cell center" style="width: 14%; padding: 3px 2px;" data-mce-style="width: 14%; padding: 3px 2px;">Analyte 1</div><div class="ait-homo-cell center" style="width: 11%; padding: 3px 2px;" data-mce-style="width: 11%; padding: 3px 2px;">mg/serv.</div><div class="ait-homo-cell center" style="width: 14%; padding: 3px 2px;" data-mce-style="width: 14%; padding: 3px 2px;">mg/cont.</div><div class="ait-homo-cell center" style="width: 14%; padding: 3px 2px;" data-mce-style="width: 14%; padding: 3px 2px;">Analyte 2</div><div class="ait-homo-cell center" style="width: 11%; padding: 3px 2px;" data-mce-style="width: 11%; padding: 3px 2px;">mg/serv.</div><div class="ait-homo-cell center" style="width: 14%; padding: 3px 2px;" data-mce-style="width: 14%; padding: 3px 2px;">mg/cont.</div></div><span title="{%for potency in POTENCY_TESTS%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%for potency in POTENCY_TESTS%}" contenteditable="false">for potency in POTENCY_TESTS</span> <span title="{%set left_label = potency.get_worksheet_value('Report!B4') or potency.get_worksheet_value('report_left_total_label') or 'Total 1'%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set left_label = potency.get_worksheet_value('Report!B4') or potency.get_worksheet_value('report_left_total_label') or 'Total 1'%}" contenteditable="false">set left_label = potency.get_worksheet_value('Report!B4') or potency.get_worksheet_value('report_left_total_label') or 'Total 1'</span> <span title="{%set left_container = potency.get_worksheet_value('Report!B2') or potency.get_worksheet_value('report_left_total_mg_container') or ''%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set left_container = potency.get_worksheet_value('Report!B2') or potency.get_worksheet_value('report_left_total_mg_container') or ''%}" contenteditable="false">set left_container = potency.get_worksheet_value('Report!B2') or potency.get_worksheet_value('report_left_total_mg_container') or ''</span> <span title="{%set left_serving = potency.get_worksheet_value('Report!B3') or potency.get_worksheet_value('report_left_total_mg_serving') or ''%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set left_serving = potency.get_worksheet_value('Report!B3') or potency.get_worksheet_value('report_left_total_mg_serving') or ''%}" contenteditable="false">set left_serving = potency.get_worksheet_value('Report!B3') or potency.get_worksheet_value('report_left_total_mg_serving') or ''</span> <span title="{%set right_label = potency.get_worksheet_value('Report!E4') or potency.get_worksheet_value('report_right_total_label') or 'Total 2'%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set right_label = potency.get_worksheet_value('Report!E4') or potency.get_worksheet_value('report_right_total_label') or 'Total 2'%}" contenteditable="false">set right_label = potency.get_worksheet_value('Report!E4') or potency.get_worksheet_value('report_right_total_label') or 'Total 2'</span> <span title="{%set right_container = potency.get_worksheet_value('Report!E2') or potency.get_worksheet_value('report_right_total_mg_container') or ''%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set right_container = potency.get_worksheet_value('Report!E2') or potency.get_worksheet_value('report_right_total_mg_container') or ''%}" contenteditable="false">set right_container = potency.get_worksheet_value('Report!E2') or potency.get_worksheet_value('report_right_total_mg_container') or ''</span> <span title="{%set right_serving = potency.get_worksheet_value('Report!E3') or potency.get_worksheet_value('report_right_total_mg_serving') or ''%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set right_serving = potency.get_worksheet_value('Report!E3') or potency.get_worksheet_value('report_right_total_mg_serving') or ''%}" contenteditable="false">set right_serving = potency.get_worksheet_value('Report!E3') or potency.get_worksheet_value('report_right_total_mg_serving') or ''</span> <span title="{%set left_serving_clean = left_serving|string|replace('mg/serving', '')|replace('mg / serving', '')|replace('mg per serving', '')|replace('Pending', '')|trim%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set left_serving_clean = left_serving|string|replace('mg/serving', '')|replace('mg / serving', '')|replace('mg per serving', '')|replace('Pending', '')|trim%}" contenteditable="false">set left_serving_clean = left_serving|string|replace('mg/serving', '')|replace('mg / serving', '')|replace('mg per serving', '')|replace('Pending', '')|trim</span> <span title="{%set left_container_clean = left_container|string|replace('mg/container', '')|replace('mg / container', '')|replace('mg per container', '')|replace('Pending', '')|trim%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set left_container_clean = left_container|string|replace('mg/container', '')|replace('mg / container', '')|replace('mg per container', '')|replace('Pending', '')|trim%}" contenteditable="false">set left_container_clean = left_container|string|replace('mg/container', '')|replace('mg / container', '')|replace('mg per container', '')|replace('Pending', '')|trim</span> <span title="{%set right_serving_clean = right_serving|string|replace('mg/serving', '')|replace('mg / serving', '')|replace('mg per serving', '')|replace('Pending', '')|trim%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set right_serving_clean = right_serving|string|replace('mg/serving', '')|replace('mg / serving', '')|replace('mg per serving', '')|replace('Pending', '')|trim%}" contenteditable="false">set right_serving_clean = right_serving|string|replace('mg/serving', '')|replace('mg / serving', '')|replace('mg per serving', '')|replace('Pending', '')|trim</span> <span title="{%set right_container_clean = right_container|string|replace('mg/container', '')|replace('mg / container', '')|replace('mg per container', '')|replace('Pending', '')|trim%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%set right_container_clean = right_container|string|replace('mg/container', '')|replace('mg / container', '')|replace('mg per container', '')|replace('Pending', '')|trim%}" contenteditable="false">set right_container_clean = right_container|string|replace('mg/container', '')|replace('mg / container', '')|replace('mg per container', '')|replace('Pending', '')|trim</span><div class="ait-homo-summary-row" style="font-size: 6pt; line-height: 1.45;" data-mce-style="font-size: 6pt; line-height: 1.45;"><div class="ait-homo-cell center" style="width: 5%; padding: 4px 2px;" data-mce-style="width: 5%; padding: 4px 2px;"><span title="{{loop.index}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{loop.index}}" contenteditable="false">loop.index</span></div><div class="ait-homo-cell center" style="width: 9%; padding: 4px 2px;" data-mce-style="width: 9%; padding: 4px 2px;"><span title="{{potency.get_display_id() if potency and potency.get_display_id}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{potency.get_display_id() if potency and potency.get_display_id}}" contenteditable="false">potency.get_display_id() if potency and potency.get_display_id</span></div><div class="ait-homo-cell center" style="width: 14%; padding: 4px 2px;" data-mce-style="width: 14%; padding: 4px 2px;"><span title="{{left_label}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{left_label}}" contenteditable="false">left_label</span></div><div class="ait-homo-cell center" style="width: 11%; padding: 4px 2px;" data-mce-style="width: 11%; padding: 4px 2px;"><span title="{{left_serving_clean if left_serving_clean else '0.0'}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{left_serving_clean if left_serving_clean else '0.0'}}" contenteditable="false">left_serving_clean if left_serving_clean else '0.0'</span></div><div class="ait-homo-cell center" style="width: 14%; padding: 4px 2px;" data-mce-style="width: 14%; padding: 4px 2px;"><span title="{{left_container_clean if left_container_clean else '0.0'}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{left_container_clean if left_container_clean else '0.0'}}" contenteditable="false">left_container_clean if left_container_clean else '0.0'</span></div><div class="ait-homo-cell center" style="width: 14%; padding: 4px 2px;" data-mce-style="width: 14%; padding: 4px 2px;"><span title="{{right_label}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{right_label}}" contenteditable="false">right_label</span></div><div class="ait-homo-cell center" style="width: 11%; padding: 4px 2px;" data-mce-style="width: 11%; padding: 4px 2px;"><span title="{{right_serving_clean if right_serving_clean else '0.0'}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{right_serving_clean if right_serving_clean else '0.0'}}" contenteditable="false">right_serving_clean if right_serving_clean else '0.0'</span></div><div class="ait-homo-cell center" style="width: 14%; padding: 4px 2px;" data-mce-style="width: 14%; padding: 4px 2px;"><span title="{{right_container_clean if right_container_clean else '0.0'}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{right_container_clean if right_container_clean else '0.0'}}" contenteditable="false">right_container_clean if right_container_clean else '0.0'</span></div></div><span title="{%endfor%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%endfor%}" contenteditable="false">endfor</span> <span title="{%if not POTENCY_TESTS%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%if not POTENCY_TESTS%}" contenteditable="false">if not POTENCY_TESTS</span><div class="ait-homo-summary-row" style="font-size: 6pt; line-height: 1.45;" data-mce-style="font-size: 6pt; line-height: 1.45;"><div class="ait-homo-cell center" style="width: 100%; padding: 4px 2px;" data-mce-style="width: 100%; padding: 4px 2px;">No Cannabinoid Potency tests were selected for this report.</div></div><span title="{%endif%}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{%endif%}" contenteditable="false">endif</span><div class="ait-homo-note" style="font-size: 5.5pt; margin-top: 0.04in;" data-mce-style="font-size: 5.5pt; margin-top: 0.04in;">Total Primary Sample Weights: <span title="{{SAMPLE_WEIGHTS|join(', ') if SAMPLE_WEIGHTS else ''}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{SAMPLE_WEIGHTS|join(', ') if SAMPLE_WEIGHTS else ''}}" contenteditable="false">SAMPLE_WEIGHTS|join(', ') if SAMPLE_WEIGHTS else ''</span>﻿ | METRC Source Package IDs: <span title="{{METRC_SOURCE_IDS|join(', ') if METRC_SOURCE_IDS else ''}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{METRC_SOURCE_IDS|join(', ') if METRC_SOURCE_IDS else ''}}" contenteditable="false">METRC_SOURCE_IDS|join(', ') if METRC_SOURCE_IDS else ''</span> | METRC Lab Test IDs: <span title="{{METRC_LAB_IDS|join(', ') if METRC_LAB_IDS else ''}}" class="qbench-wysiwyg-variable mceNonEditable" data-original-variable="{{METRC_LAB_IDS|join(', ') if METRC_LAB_IDS else ''}}" contenteditable="false">METRC_LAB_IDS|join(', ') if METRC_LAB_IDS else ''</span></div></div>

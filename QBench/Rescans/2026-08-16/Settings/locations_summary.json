@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-17T02:26:20.590Z",
+  "source_host": "ait.qbench.net",
+  "capture_method": "aggregate list heading and column schema only",
+  "privacy_note": "Location names, types, descriptions, tags, addresses, licenses, METRC values, and sample associations were omitted.",
+  "summary": {
+    "visible_count": 1097,
+    "capture_scope": "aggregate_only",
+    "names": "omitted_security_sensitive",
+    "addresses": "omitted",
+    "details": "not_opened"
+  }
+}

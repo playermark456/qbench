@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-17T02:26:20.590Z",
+  "source_host": "ait.qbench.net",
+  "capture_method": "authenticated in-app browser; read-only semantic capture",
+  "privacy_note": "No control-run results or operational records were captured.",
+  "limitations": [
+    "Display sequence is observed UI order, not proof of a configured execution order.",
+    "Frequency, assay/protocol links, acceptance behavior, and failure behavior were not exposed."
+  ],
+  "count": 2,
+  "items": [
+    {
+      "control_group_id": 2,
+      "name": "Heavy Metals - Demo - AMM",
+      "member_count": 3,
+      "configured_order_state": "display_order_observed_not_proven_configured",
+      "frequency": "not_exposed",
+      "assay_associations": "not_exposed",
+      "protocol_references": "not_exposed",
+      "acceptance_behavior": "not_exposed",
+      "failure_behavior": "not_exposed",
+      "detail_url": "https://ait.qbench.net/control-group?id=2"
+    },
+    {
+      "control_group_id": 1,
+      "name": "Example Control Group",
+      "member_count": 1,
+      "configured_order_state": "display_order_observed_not_proven_configured",
+      "frequency": "not_exposed",
+      "assay_associations": "not_exposed",
+      "protocol_references": "not_exposed",
+      "acceptance_behavior": "not_exposed",
+      "failure_behavior": "not_exposed",
+      "detail_url": "https://ait.qbench.net/control-group?id=1"
+    }
+  ]
+}

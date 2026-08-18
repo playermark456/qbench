@@ -1,0 +1,33 @@
+# Privacy Omissions — 2026-08-16
+
+- No authentication screenshot was captured because Google/QBench sign-in surfaces can expose account identifiers.
+- The full Google OAuth URL was intentionally omitted. Only the hostname-level safe URL `https://accounts.google.com/` is retained.
+- No browser cookies, storage, credentials, tokens, authorization headers, or session data were inspected or saved.
+- No customer, sample, test, order, Batch, METRC, inventory-transaction, or staff-personal records were opened or saved.
+- Pre-existing untracked Terpenes development paths, including a local environment-file path and controlled/source DOCX paths, were excluded from scan staging and were not inspected for inclusion.
+- The temporary full-page worksheet screenshot used to establish crop coordinates was deleted because it showed account identity and a password-expiry notice. Only two manually reviewed, tightly cropped configuration regions were retained.
+- No current native worksheet definition was committed because QBench's visible **Export Spreadsheet** control produced no downloadable file through the available browser tooling. No alternative format or DOM-reconstructed worksheet was retained.
+- Version-table metadata was retained because it contains configuration names, IDs, version labels, statuses, and safe timestamps only. Created-by/modified-by identities were intentionally omitted.
+- Assay technician and team selections were omitted; only safe assay configuration was retained.
+- Field settings were captured as definitions only. No User, Customer, Contact, Sample, Test, Order, Batch, Inventory, Equipment, or other record values were opened.
+- KV-store created-by identities were omitted. API Clients and History were not opened because they were unnecessary for the value inventory and could expose integration or staff information.
+- No Phase 3 screenshot was captured; DOM-derived configuration evidence was sufficient.
+- No Phase 4 screenshot was retained. The available full-page scope included account/profile and password-expiry UI, and a safe element-only screenshot capture was unavailable.
+- Automation and parser history, jobs, logs, operational attachments, file contents, record links, and creator identities were not opened.
+- Report Preview and generation were not used. No sample, Test, signature, invoice, email recipient, or other operational record was selected.
+- The report password field value was not inspected.
+- Report attachment uploader identities were omitted. No report attachment was downloaded, and `CoA Signatures.png` content was specifically excluded.
+- Three literal email addresses, one literal phone number, eleven opaque report blob URLs, four embedded report images, and one invoice-header blob URL were replaced with explicit omission markers in committed source.
+- Internal-report configured user identities were omitted; only a safe configured-user count/access-scope state was retained.
+- Browser tabs were closed and reopened within the same authenticated session only to discard transient editor state after read-only source capture. No browser profile, cookie, storage, session, or authentication material was inspected or saved.
+- Phase 5 control Results, Comments, Attachments, History, and actual control-run records were not opened.
+- Inventory descriptions, separate supplier/manufacturer/catalog fields and account data, prices, stock balances, lots, quantities, storage locations, transactions, purchases, attachments, and notes were omitted. Configured item names were retained verbatim and may contain brand-like qualifiers.
+- Equipment model/manufacturer details, serials, exact locations, suppliers, tags, records, certificates, service reports, histories, usage, comments, attachments, and staff identities were omitted.
+- Document contents, files, notes, teams, approver/reviewer identities, training records, and attachments were not opened or saved.
+- Location names, types, descriptions, tags, addresses, licenses, METRC values, and sample associations were omitted; only the aggregate count was retained.
+- Email Settings, Developer Settings, and Parameter Store were not opened because those surfaces can expose secrets or account data.
+- Sensitive integration configuration was encountered on an authenticated settings page. Details were intentionally omitted. Managed Interfaces remains incomplete pending separate administrative or vendor remediation.
+- No Phase 5 screenshot was captured or retained.
+- Phase 6 and Phase 7 did not reopen QBench. The two local reference DOCX files were read in place; neither attached source document was copied by this scan, staged, or committed.
+- DOCX visual rendering was unavailable because LibreOffice was not installed. Structural text, tables, headers, and footers were read; no staff identity or catalog-number detail was retained in the crosswalk.
+- The only two retained screenshots were opened again during Phase 7 and passed manual privacy review and hash verification.

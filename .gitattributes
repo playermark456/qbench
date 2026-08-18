@@ -1,1 +1,4 @@
 QBench/Worksheets/Terpenes/development/2026-07-17_batch_to_test_automation/vlookup_route_probe/source/*.json -text
+QBench/Rescans/2026-08-16/File_Parsers/**/source.js -text -whitespace
+QBench/Rescans/2026-08-16/Reports/**/*.html -text -whitespace
+QBench/Rescans/2026-08-16/Templates/**/*.html -text -whitespace

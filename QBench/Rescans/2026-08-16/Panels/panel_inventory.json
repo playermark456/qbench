@@ -1,0 +1,821 @@
+{
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-16T23:21:32.805Z",
+  "source_host": "ait.qbench.net",
+  "capture_method": "serialized read-only DOM extraction",
+  "count": 9,
+  "items": [
+    {
+      "panel_id": 1,
+      "name": "MN Flower Compliance Panel",
+      "description": "MN OCM licensed cannabis or hemp flower intended to be packaged for retail sales, including flower to be infused, is required to have the following panel of tests. \nMicrobial (Total Aerobic, Total Yeast and Mold, Enterobacteriaceae, Salmonella species, Shiga toxin-producing E. coli, Aspergillus spp.)\nMycotoxins\nHeavy Metals\nPesticides\nForeign Material\nPotency\nWater Activity",
+      "detail_url": "https://ait.qbench.net/panel?id=1",
+      "active": true,
+      "assays": [
+        {
+          "assay_id": 2,
+          "configured_order": null,
+          "count": null,
+          "name": "Cannabinoid Potency",
+          "priority": null,
+          "sequence": 1
+        },
+        {
+          "assay_id": 3,
+          "configured_order": null,
+          "count": null,
+          "name": "Heavy Metals",
+          "priority": null,
+          "sequence": 2
+        },
+        {
+          "assay_id": 4,
+          "configured_order": null,
+          "count": null,
+          "name": "Pesticides",
+          "priority": null,
+          "sequence": 3
+        },
+        {
+          "assay_id": 5,
+          "configured_order": null,
+          "count": null,
+          "name": "Mycotoxins",
+          "priority": null,
+          "sequence": 4
+        },
+        {
+          "assay_id": 9,
+          "configured_order": null,
+          "count": null,
+          "name": "Water Activity",
+          "priority": null,
+          "sequence": 5
+        },
+        {
+          "assay_id": 12,
+          "configured_order": null,
+          "count": null,
+          "name": "Foreign Material",
+          "priority": null,
+          "sequence": 6
+        },
+        {
+          "assay_id": 14,
+          "configured_order": null,
+          "count": null,
+          "name": "Aspergillus spp.",
+          "priority": null,
+          "sequence": 7
+        },
+        {
+          "assay_id": 15,
+          "configured_order": null,
+          "count": null,
+          "name": "Salmonella Species",
+          "priority": null,
+          "sequence": 8
+        },
+        {
+          "assay_id": 16,
+          "configured_order": null,
+          "count": null,
+          "name": "Shiga toxin-producing E. coli",
+          "priority": null,
+          "sequence": 9
+        },
+        {
+          "assay_id": 18,
+          "configured_order": null,
+          "count": null,
+          "name": "Total Aerobic Microbial",
+          "priority": null,
+          "sequence": 10
+        },
+        {
+          "assay_id": 19,
+          "configured_order": null,
+          "count": null,
+          "name": "Total Yeast and Mold",
+          "priority": null,
+          "sequence": 11
+        },
+        {
+          "assay_id": 20,
+          "configured_order": null,
+          "count": null,
+          "name": "Enterobacteriaceae",
+          "priority": null,
+          "sequence": 12
+        }
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "title": "MN Flower Compliance Panel"
+    },
+    {
+      "panel_id": 4,
+      "name": "MN OCM Cannabis/Hemp Resin (Solvent) Compliance Panel",
+      "description": "MN OCM licensed cannabis or hemp resin intended to be packaged for retail sales, is required to have the following panel of tests. \nMicrobial (Enterobacteriaceae, Salmonella species, Shiga toxin-producing E. coli, L. monocytogenes, Aspergillus spp.)\nMycotoxins\nHeavy Metals\nPesticides\nResidual Solvents\nPotency",
+      "detail_url": "https://ait.qbench.net/panel?id=4",
+      "active": true,
+      "assays": [
+        {
+          "assay_id": 2,
+          "configured_order": null,
+          "count": null,
+          "name": "Cannabinoid Potency",
+          "priority": null,
+          "sequence": 1
+        },
+        {
+          "assay_id": 3,
+          "configured_order": null,
+          "count": null,
+          "name": "Heavy Metals",
+          "priority": null,
+          "sequence": 2
+        },
+        {
+          "assay_id": 4,
+          "configured_order": null,
+          "count": null,
+          "name": "Pesticides",
+          "priority": null,
+          "sequence": 3
+        },
+        {
+          "assay_id": 5,
+          "configured_order": null,
+          "count": null,
+          "name": "Mycotoxins",
+          "priority": null,
+          "sequence": 4
+        },
+        {
+          "assay_id": 7,
+          "configured_order": null,
+          "count": null,
+          "name": "Residual Solvents",
+          "priority": null,
+          "sequence": 5
+        },
+        {
+          "assay_id": 14,
+          "configured_order": null,
+          "count": null,
+          "name": "Aspergillus spp.",
+          "priority": null,
+          "sequence": 6
+        },
+        {
+          "assay_id": 15,
+          "configured_order": null,
+          "count": null,
+          "name": "Salmonella Species",
+          "priority": null,
+          "sequence": 7
+        },
+        {
+          "assay_id": 16,
+          "configured_order": null,
+          "count": null,
+          "name": "Shiga toxin-producing E. coli",
+          "priority": null,
+          "sequence": 8
+        },
+        {
+          "assay_id": 17,
+          "configured_order": null,
+          "count": null,
+          "name": "Listeria Monocytogenes",
+          "priority": null,
+          "sequence": 9
+        },
+        {
+          "assay_id": 20,
+          "configured_order": null,
+          "count": null,
+          "name": "Enterobacteriaceae",
+          "priority": null,
+          "sequence": 10
+        }
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "title": "MN OCM Cannabis/Hemp Resin (Solvent) Compliance Panel"
+    },
+    {
+      "panel_id": 3,
+      "name": "MN OCM Cannabis/Hemp Rosin (solventless) Compliance Panel",
+      "description": "MN OCM licensed cannabis or hemp rosin intended to be packaged for retail sales, is required to have the following panel of tests. \nMicrobial (Enterobacteriaceae, Salmonella species, Shiga toxin-producing E. coli, L. monocytogenes, Aspergillus spp.)\nMycotoxins\nHeavy Metals\nPesticides\nPotency",
+      "detail_url": "https://ait.qbench.net/panel?id=3",
+      "active": true,
+      "assays": [
+        {
+          "assay_id": 2,
+          "configured_order": null,
+          "count": null,
+          "name": "Cannabinoid Potency",
+          "priority": null,
+          "sequence": 1
+        },
+        {
+          "assay_id": 3,
+          "configured_order": null,
+          "count": null,
+          "name": "Heavy Metals",
+          "priority": null,
+          "sequence": 2
+        },
+        {
+          "assay_id": 4,
+          "configured_order": null,
+          "count": null,
+          "name": "Pesticides",
+          "priority": null,
+          "sequence": 3
+        },
+        {
+          "assay_id": 5,
+          "configured_order": null,
+          "count": null,
+          "name": "Mycotoxins",
+          "priority": null,
+          "sequence": 4
+        },
+        {
+          "assay_id": 14,
+          "configured_order": null,
+          "count": null,
+          "name": "Aspergillus spp.",
+          "priority": null,
+          "sequence": 5
+        },
+        {
+          "assay_id": 15,
+          "configured_order": null,
+          "count": null,
+          "name": "Salmonella Species",
+          "priority": null,
+          "sequence": 6
+        },
+        {
+          "assay_id": 16,
+          "configured_order": null,
+          "count": null,
+          "name": "Shiga toxin-producing E. coli",
+          "priority": null,
+          "sequence": 7
+        },
+        {
+          "assay_id": 17,
+          "configured_order": null,
+          "count": null,
+          "name": "Listeria Monocytogenes",
+          "priority": null,
+          "sequence": 8
+        },
+        {
+          "assay_id": 20,
+          "configured_order": null,
+          "count": null,
+          "name": "Enterobacteriaceae",
+          "priority": null,
+          "sequence": 9
+        }
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "title": "MN OCM Cannabis/Hemp Rosin (solventless) Compliance Panel"
+    },
+    {
+      "panel_id": 2,
+      "name": "MN OCM Flower for Concentrate Panel (Recommended)",
+      "description": "MN OCM licensed cannabis or hemp that is to be made into rosins, resins or manufactured final products, the following tests in this panel are recommended, not required. \nMicrobial \nHeavy Metals\nPesticides\nPotency",
+      "detail_url": "https://ait.qbench.net/panel?id=2",
+      "active": true,
+      "assays": [
+        {
+          "assay_id": 2,
+          "configured_order": null,
+          "count": null,
+          "name": "Cannabinoid Potency",
+          "priority": null,
+          "sequence": 1
+        },
+        {
+          "assay_id": 3,
+          "configured_order": null,
+          "count": null,
+          "name": "Heavy Metals",
+          "priority": null,
+          "sequence": 2
+        },
+        {
+          "assay_id": 4,
+          "configured_order": null,
+          "count": null,
+          "name": "Pesticides",
+          "priority": null,
+          "sequence": 3
+        },
+        {
+          "assay_id": 14,
+          "configured_order": null,
+          "count": null,
+          "name": "Aspergillus spp.",
+          "priority": null,
+          "sequence": 4
+        },
+        {
+          "assay_id": 15,
+          "configured_order": null,
+          "count": null,
+          "name": "Salmonella Species",
+          "priority": null,
+          "sequence": 5
+        },
+        {
+          "assay_id": 16,
+          "configured_order": null,
+          "count": null,
+          "name": "Shiga toxin-producing E. coli",
+          "priority": null,
+          "sequence": 6
+        },
+        {
+          "assay_id": 17,
+          "configured_order": null,
+          "count": null,
+          "name": "Listeria Monocytogenes",
+          "priority": null,
+          "sequence": 7
+        },
+        {
+          "assay_id": 20,
+          "configured_order": null,
+          "count": null,
+          "name": "Enterobacteriaceae",
+          "priority": null,
+          "sequence": 8
+        }
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "title": "MN OCM Flower for Concentrate Panel (Recommended)"
+    },
+    {
+      "panel_id": 5,
+      "name": "MN OCM Hemp Resins Compliance Panel (Artificially Derived)",
+      "description": "MN OCM licensed hemp resins, with artificially derived cannabinoid, intended to be packaged for retail sales, is required to have the following panel of tests. \nMicrobial  (Enterobacteriaceae, Salmonella species, Shiga toxin-producing E. coli, L. monocytogenes, Aspergillus spp.)\nMycotoxins\nHeavy Metals\nPesticides\nResidual Solvents\nForeign Material\nPotency",
+      "detail_url": "https://ait.qbench.net/panel?id=5",
+      "active": true,
+      "assays": [
+        {
+          "assay_id": 2,
+          "configured_order": null,
+          "count": null,
+          "name": "Cannabinoid Potency",
+          "priority": null,
+          "sequence": 1
+        },
+        {
+          "assay_id": 3,
+          "configured_order": null,
+          "count": null,
+          "name": "Heavy Metals",
+          "priority": null,
+          "sequence": 2
+        },
+        {
+          "assay_id": 4,
+          "configured_order": null,
+          "count": null,
+          "name": "Pesticides",
+          "priority": null,
+          "sequence": 3
+        },
+        {
+          "assay_id": 5,
+          "configured_order": null,
+          "count": null,
+          "name": "Mycotoxins",
+          "priority": null,
+          "sequence": 4
+        },
+        {
+          "assay_id": 7,
+          "configured_order": null,
+          "count": null,
+          "name": "Residual Solvents",
+          "priority": null,
+          "sequence": 5
+        },
+        {
+          "assay_id": 12,
+          "configured_order": null,
+          "count": null,
+          "name": "Foreign Material",
+          "priority": null,
+          "sequence": 6
+        },
+        {
+          "assay_id": 14,
+          "configured_order": null,
+          "count": null,
+          "name": "Aspergillus spp.",
+          "priority": null,
+          "sequence": 7
+        },
+        {
+          "assay_id": 15,
+          "configured_order": null,
+          "count": null,
+          "name": "Salmonella Species",
+          "priority": null,
+          "sequence": 8
+        },
+        {
+          "assay_id": 16,
+          "configured_order": null,
+          "count": null,
+          "name": "Shiga toxin-producing E. coli",
+          "priority": null,
+          "sequence": 9
+        },
+        {
+          "assay_id": 17,
+          "configured_order": null,
+          "count": null,
+          "name": "Listeria Monocytogenes",
+          "priority": null,
+          "sequence": 10
+        },
+        {
+          "assay_id": 20,
+          "configured_order": null,
+          "count": null,
+          "name": "Enterobacteriaceae",
+          "priority": null,
+          "sequence": 11
+        }
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "title": "MN OCM Hemp Resins Compliance Panel (Artificially Derived)"
+    },
+    {
+      "panel_id": 6,
+      "name": "MN OCM Manufactured Final Products Compliance Panel",
+      "description": "MN OCM licensed cannabis or hemp manufactured final products, intended to be packaged for retail sales, are required to have the following panel of tests. This may include, but not limited to, infused flower, edibles, HDCP, LPHE, etc. \nMicrobial (Enterobacteriaceae, Salmonella species, Shiga toxin-producing E. coli, L. monocytogenes, Aspergillus spp.)\nPotency",
+      "detail_url": "https://ait.qbench.net/panel?id=6",
+      "active": true,
+      "assays": [
+        {
+          "assay_id": 2,
+          "configured_order": null,
+          "count": null,
+          "name": "Cannabinoid Potency",
+          "priority": null,
+          "sequence": 1
+        },
+        {
+          "assay_id": 14,
+          "configured_order": null,
+          "count": null,
+          "name": "Aspergillus spp.",
+          "priority": null,
+          "sequence": 2
+        },
+        {
+          "assay_id": 15,
+          "configured_order": null,
+          "count": null,
+          "name": "Salmonella Species",
+          "priority": null,
+          "sequence": 3
+        },
+        {
+          "assay_id": 16,
+          "configured_order": null,
+          "count": null,
+          "name": "Shiga toxin-producing E. coli",
+          "priority": null,
+          "sequence": 4
+        },
+        {
+          "assay_id": 17,
+          "configured_order": null,
+          "count": null,
+          "name": "Listeria Monocytogenes",
+          "priority": null,
+          "sequence": 5
+        },
+        {
+          "assay_id": 20,
+          "configured_order": null,
+          "count": null,
+          "name": "Enterobacteriaceae",
+          "priority": null,
+          "sequence": 6
+        }
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "title": "MN OCM Manufactured Final Products Compliance Panel"
+    },
+    {
+      "panel_id": 7,
+      "name": "MN OCM Manufactured Final Products Compliance Panel (Non-Liquid)",
+      "description": "MN OCM licensed cannabis or hemp manufactured final products, intended to be packaged for retail sales, are required to have the following panel of tests. This may include, but not limited to, infused flower, edibles, HDCP, LPHE, etc. \nMicrobial (Enterobacteriaceae, Salmonella species, Shiga toxin-producing E. coli, L. monocytogenes, Aspergillus spp.)\nPotency\nWater Activity",
+      "detail_url": "https://ait.qbench.net/panel?id=7",
+      "active": true,
+      "assays": [
+        {
+          "assay_id": 2,
+          "configured_order": null,
+          "count": null,
+          "name": "Cannabinoid Potency",
+          "priority": null,
+          "sequence": 1
+        },
+        {
+          "assay_id": 9,
+          "configured_order": null,
+          "count": null,
+          "name": "Water Activity",
+          "priority": null,
+          "sequence": 2
+        },
+        {
+          "assay_id": 14,
+          "configured_order": null,
+          "count": null,
+          "name": "Aspergillus spp.",
+          "priority": null,
+          "sequence": 3
+        },
+        {
+          "assay_id": 15,
+          "configured_order": null,
+          "count": null,
+          "name": "Salmonella Species",
+          "priority": null,
+          "sequence": 4
+        },
+        {
+          "assay_id": 16,
+          "configured_order": null,
+          "count": null,
+          "name": "Shiga toxin-producing E. coli",
+          "priority": null,
+          "sequence": 5
+        },
+        {
+          "assay_id": 17,
+          "configured_order": null,
+          "count": null,
+          "name": "Listeria Monocytogenes",
+          "priority": null,
+          "sequence": 6
+        },
+        {
+          "assay_id": 20,
+          "configured_order": null,
+          "count": null,
+          "name": "Enterobacteriaceae",
+          "priority": null,
+          "sequence": 7
+        }
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "title": "MN OCM Manufactured Final Products Compliance Panel (Non-Liquid)"
+    },
+    {
+      "panel_id": 8,
+      "name": "Tribal/Out-of-State Conc/Products Panel",
+      "description": "Tribal and Hemp-derived samples imported from outside MN intended for sale in MN\nMicrobial (Enterobacteriaceae, Salmonella Species, Shiga toxin-producing E. Coli, Aspergillus spp., L. monocytogenes)\nMycotoxins\nHeavy Metals\nPesticides\nResidual Solvents\nPotency\nFilth and Foreign Material\nWater Activity",
+      "detail_url": "https://ait.qbench.net/panel?id=8",
+      "active": true,
+      "assays": [
+        {
+          "assay_id": 2,
+          "configured_order": null,
+          "count": null,
+          "name": "Cannabinoid Potency",
+          "priority": null,
+          "sequence": 1
+        },
+        {
+          "assay_id": 3,
+          "configured_order": null,
+          "count": null,
+          "name": "Heavy Metals",
+          "priority": null,
+          "sequence": 2
+        },
+        {
+          "assay_id": 4,
+          "configured_order": null,
+          "count": null,
+          "name": "Pesticides",
+          "priority": null,
+          "sequence": 3
+        },
+        {
+          "assay_id": 5,
+          "configured_order": null,
+          "count": null,
+          "name": "Mycotoxins",
+          "priority": null,
+          "sequence": 4
+        },
+        {
+          "assay_id": 7,
+          "configured_order": null,
+          "count": null,
+          "name": "Residual Solvents",
+          "priority": null,
+          "sequence": 5
+        },
+        {
+          "assay_id": 9,
+          "configured_order": null,
+          "count": null,
+          "name": "Water Activity",
+          "priority": null,
+          "sequence": 6
+        },
+        {
+          "assay_id": 12,
+          "configured_order": null,
+          "count": null,
+          "name": "Foreign Material",
+          "priority": null,
+          "sequence": 7
+        },
+        {
+          "assay_id": 14,
+          "configured_order": null,
+          "count": null,
+          "name": "Aspergillus spp.",
+          "priority": null,
+          "sequence": 8
+        },
+        {
+          "assay_id": 15,
+          "configured_order": null,
+          "count": null,
+          "name": "Salmonella Species",
+          "priority": null,
+          "sequence": 9
+        },
+        {
+          "assay_id": 16,
+          "configured_order": null,
+          "count": null,
+          "name": "Shiga toxin-producing E. coli",
+          "priority": null,
+          "sequence": 10
+        },
+        {
+          "assay_id": 17,
+          "configured_order": null,
+          "count": null,
+          "name": "Listeria Monocytogenes",
+          "priority": null,
+          "sequence": 11
+        },
+        {
+          "assay_id": 20,
+          "configured_order": null,
+          "count": null,
+          "name": "Enterobacteriaceae",
+          "priority": null,
+          "sequence": 12
+        }
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "title": "Tribal/Out-of-State Conc/Products Panel"
+    },
+    {
+      "panel_id": 9,
+      "name": "Tribal/Out-of-State Flower Panel",
+      "description": "Tribal and Hemp-derived samples imported from outside MN intended for sale in MN\nMicrobial (Total Aerobic, Total Yeast and Mold, Enterobacteriaceae, Salmonella species, Shiga toxin-producing E. coli, Aspergillus spp.)\nMycotoxins\nHeavy Metals\nPesticides\nResidual Solvents\nPotency\nFilth and Foreign Material\nWater Activity",
+      "detail_url": "https://ait.qbench.net/panel?id=9",
+      "active": true,
+      "assays": [
+        {
+          "assay_id": 2,
+          "configured_order": null,
+          "count": null,
+          "name": "Cannabinoid Potency",
+          "priority": null,
+          "sequence": 1
+        },
+        {
+          "assay_id": 3,
+          "configured_order": null,
+          "count": null,
+          "name": "Heavy Metals",
+          "priority": null,
+          "sequence": 2
+        },
+        {
+          "assay_id": 4,
+          "configured_order": null,
+          "count": null,
+          "name": "Pesticides",
+          "priority": null,
+          "sequence": 3
+        },
+        {
+          "assay_id": 5,
+          "configured_order": null,
+          "count": null,
+          "name": "Mycotoxins",
+          "priority": null,
+          "sequence": 4
+        },
+        {
+          "assay_id": 7,
+          "configured_order": null,
+          "count": null,
+          "name": "Residual Solvents",
+          "priority": null,
+          "sequence": 5
+        },
+        {
+          "assay_id": 9,
+          "configured_order": null,
+          "count": null,
+          "name": "Water Activity",
+          "priority": null,
+          "sequence": 6
+        },
+        {
+          "assay_id": 12,
+          "configured_order": null,
+          "count": null,
+          "name": "Foreign Material",
+          "priority": null,
+          "sequence": 7
+        },
+        {
+          "assay_id": 14,
+          "configured_order": null,
+          "count": null,
+          "name": "Aspergillus spp.",
+          "priority": null,
+          "sequence": 8
+        },
+        {
+          "assay_id": 15,
+          "configured_order": null,
+          "count": null,
+          "name": "Salmonella Species",
+          "priority": null,
+          "sequence": 9
+        },
+        {
+          "assay_id": 16,
+          "configured_order": null,
+          "count": null,
+          "name": "Shiga toxin-producing E. coli",
+          "priority": null,
+          "sequence": 10
+        },
+        {
+          "assay_id": 18,
+          "configured_order": null,
+          "count": null,
+          "name": "Total Aerobic Microbial",
+          "priority": null,
+          "sequence": 11
+        },
+        {
+          "assay_id": 19,
+          "configured_order": null,
+          "count": null,
+          "name": "Total Yeast and Mold",
+          "priority": null,
+          "sequence": 12
+        },
+        {
+          "assay_id": 20,
+          "configured_order": null,
+          "count": null,
+          "name": "Enterobacteriaceae",
+          "priority": null,
+          "sequence": 13
+        }
+      ],
+      "session_active": true,
+      "show_customer_portal": true,
+      "title": "Tribal/Out-of-State Flower Panel"
+    }
+  ]
+}

@@ -1,6 +1,38 @@
 ﻿# Report Rendering Map
 
-QBench has two active sample report templates visible in Sandbox:
+## Production rescan 2026-08-16
+
+Three report configurations were verified read-only in production at `ait.qbench.net`. Active-version source was visible in the editors and was captured after replacing personal/contact values, opaque blob URLs, and embedded image data.
+
+| Report template | ID | Configuration status | Current active version | Current source status |
+|---|---:|---|---|---|
+| Certificate of Analysis Report | 26 | Active | 24 — Terpenes final | Sanitized Header, Body, and Footer captured; 24-version list captured |
+| Homogeneity | 44 | Active | 2 — 3.0 | Sanitized Header, Body, and Footer captured |
+| 1Certificate of Analysis Report | 20 | Inactive | 1 | Sanitized Header, Body, and Footer captured; configuration/version status distinction retained |
+
+### Current rendering dependencies
+
+Report 26 advanced from active v20 in the 2026-07-04 baseline to active v24. It calls `QBTestService().render_worksheet(..., named_cell="report_results", ignore_empty_rows=true)` for Cannabinoids, Terpenes, Homogeneity, Heavy Metals, Mycotoxins, Pesticides, Residual Solvents, and Foreign Material. Its microbial summary calls `QBOrderService().render_test_worksheets_summary(...)` with `report_header` and `report_content`; the routed summary set also includes Water Activity assay ID 9. Result tiles read `pass_fail`; the Cannabinoid display reads the historically verified `total_thc_report_result` plus the export-unverified `total_thc_mg_per_serving_report_result` and `total_thc_mg_per_container_report_result`. Pesticides Quantitative assay ID 21 is absent from its embedded assay map.
+
+Report 44 reads `homogeneity_metrc` first and `pass_fail` only as fallback. It reconstructs a Potency table by trying direct `Report!B2:B4`/`Report!E2:E4` cells first, then six export-unverified semantic fallbacks—`report_left_total_label`, `report_left_total_mg_container`, `report_left_total_mg_serving`, `report_right_total_label`, `report_right_total_mg_container`, and `report_right_total_mg_serving`. Absence of the semantic names alone is therefore not a runtime defect. If both lookup paths are blank, four left/right mg/serving and mg/container outputs render as literal `0.0`, creating a missing-data-as-zero risk. Report 44 does not call `render_worksheet`. This is a canonical conflict: Homogeneity first-page status must use `pass_fail`, and its standalone table/page must render `report_results`. Report 20 renders a complete Test worksheet without a named-range restriction.
+
+### Pagination, print layout, and assets
+
+- Report 26 contains four `mce-pagebreak` markers: before Terpenes, Homogeneity, the microbial/heavy-metals/mycotoxins group, and Pesticides. The last marker is inside the Pesticides conditional; Residual Solvents/Foreign Material follow without a separate marker, so that break is absent when Pesticides is absent. Automatic page numbering is off, but Footer CSS emits `Page x of y`. Its dedicated 96%-width/fixed-layout Terpenes table is intended to constrain width.
+- Report 44 enables automatic page numbers at Bottom Middle and also emits a CSS page counter, creating a duplicate-number risk. Its `.page-break` rule is unused, so no effective explicit break was found. `page-break-inside: avoid` applies to the detail block.
+- Report 20 has no explicit break behavior in the captured source and automatic page numbering is off.
+- All three use Letter 8.5×11-inch page setup with one-inch margins and blank explicit header/footer size fields. Reports 26 and 44 contain fixed elements approximately 8.48–8.5 inches wide; report 20 instead contains a 100.311%-wide table. Each requires preview/fit validation, but the fixed-inch overflow risk applies only to reports 26 and 44.
+- Report 26 exposes six report attachments, references `AIT Watermark.png` and `hexagon-grid-8tile-1336x618.png` by filename, and looks up the sample-level `sample_img` attachment. Report 44 exposes no attachment but references `AIT Watermark.png`; resolution is unverified. Report 20 iterates all sample attachments and renders the selected signature image. Signature content was deliberately omitted.
+
+### Date, timezone, and evidence status
+
+Report 26 formats issuance, collection, and protocol completion as `%m/%d/%Y`, and received-by-lab as `%m/%d/%Y %I:%M %p`. Report 44 uses `%m/%d/%Y`; report 20 uses `%m/%d/%y` for start/completion and `%m/%d/%Y` for issuance. No source embeds a timezone identifier or offset. The read-only General Settings surface exposed no timezone field, so tenant timezone remains unverified; rescan metadata showing `America/Chicago` is not QBench configuration evidence.
+
+The nine persisted report source files reconcile exactly to `report_source_inventory.csv` and to the explicitly labeled persisted byte/hash fields in `report_inventory.json`; separate pre-write character/hash fields preserve sanitizer provenance. See `QBench/Rescans/2026-08-16/Reports/` and `QBench/Rescans/2026-08-16/report_dependency_map.md`. Current named-cell addresses and runtime pagination/asset behavior cannot be certified because native worksheet exports and generated report previews were not obtained. The last verified Terpenes export lacks both `report_results` and generic `pass_fail`, even though report 26 renders the former and uses the latter in tile/overall-status logic.
+
+## Superseded pre-rescan report summary
+
+The following report table is retained as historical evidence and predates the current source capture:
 
 | Report template | ID | Status | Active/default version observed | Notes |
 |---|---:|---|---|---|
@@ -8,7 +40,11 @@ QBench has two active sample report templates visible in Sandbox:
 | Homogeneity | 44 | Active | 2 - 3.0 - APPROVED (ACTIVE) | Separate active sample report template; no attachments visible. Need confirmation whether this is used operationally or superseded by COA ID 26. |
 | 1Certificate of Analysis Report | 20 | Inactive | Not inspected in depth | Legacy inactive report template. |
 
-COA rendering appears to be driven by worksheet named cells. The common pattern is that each test worksheet exposes report_results, often with report_header, report_content, pass_fail, and METRC-specific cells. QBench report generation can then render those ranges/cells into the sample-level COA.
+## Historical worksheet-range baseline
+
+The detailed ranges below are an older native-export table and do not represent current advanced worksheet versions. They remain useful for dependency comparison but must not be treated as current production definitions. In particular, Terpenes has neither `report_results` nor generic `pass_fail` despite report 26 v24 using both, and the Homogeneity row predates the first authoritative 2026-07-04 rescan block that verifies `pass_fail = Data!B31` and `report_results = COA!A1:G20`.
+
+COA rendering is driven by worksheet named cells. The common pattern is that each test worksheet exposes `report_results`, often with `report_header`, `report_content`, `pass_fail`, and METRC-specific cells.
 
 | Assay / worksheet | Report-related named cells | Notes |
 |---|---|---|

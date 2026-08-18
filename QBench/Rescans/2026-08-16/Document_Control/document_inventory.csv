@@ -1,0 +1,69 @@
+tree_occurrence,tree_path,document_name,node_marker,tree_level,visible_in_approved_view,visible_in_pending_view,status_interpretation,version_metadata,authority_note,content_capture
+1,00-Quality Manual,Quality Management System SOP,controlled_document,2,true,false,filter-membership-only,not_opened,,omitted
+2,03-Sample Handling / Sample Disposal & Retention,Sample Retention and Disposal SOP,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+3,03-Sample Handling / Sample Intake [ISO 7.4],Daily Balance Verification,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+4,03-Sample Handling / Sample Intake [ISO 7.4],"Initial Weighing, Homogenization, and Representative Subsampling SOP",controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+5,03-Sample Handling / Sample Intake [ISO 7.4],Sample Receiving SOP,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+6,03-Sample Handling / Sample Storage & Chain of Custody,Sample Handling and Storage SOP,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+7,03-Sample Handling,Inventory Control and Sample Accountability SOP,controlled_document,2,true,false,filter-membership-only,not_opened,,omitted
+8,03-Sample Handling,Sample Weighing Log,controlled_document,2,true,false,filter-membership-only,not_opened,,omitted
+9,04-Testing Methods / Assay Specific SOPs / Cannabinoid Potency,Cannabinoid Edible Potency Ammendment V1.0.pdf,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+10,04-Testing Methods / Assay Specific SOPs / Cannabinoid Potency,Cannabinoid Potency Assay Form MN,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+11,04-Testing Methods / Assay Specific SOPs / Cannabinoid Potency,Cannabinoid Potency Assay SOP MN,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+12,04-Testing Methods / Assay Specific SOPs / Cannabinoid Potency,Cannabinoid Potency Transfer Protocol,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+13,04-Testing Methods / Assay Specific SOPs / Cannabinoid Potency,Method Transfer Report for Cannabinoid Potency Assay,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+14,04-Testing Methods / Assay Specific SOPs / Foreign Material,FM Testing Validation Report,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+15,04-Testing Methods / Assay Specific SOPs / Foreign Material,Foreign Material Testing Form,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+16,04-Testing Methods / Assay Specific SOPs / Foreign Material,Foreign Material Testing SOP,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+17,04-Testing Methods / Assay Specific SOPs / Foreign Material,Foreign Material Testing Validation Form,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+18,04-Testing Methods / Assay Specific SOPs / Foreign Material,Foreign Material Validation Calculations and Measurement Uncertainty,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+19,04-Testing Methods / Assay Specific SOPs / Heavy Metals,Heavy Metals Analysis in Cannabis and Cannabis Products Form,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+20,04-Testing Methods / Assay Specific SOPs / Heavy Metals,Heavy Metals Analysis in Cannabis and Cannabis Products SOP,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+21,04-Testing Methods / Assay Specific SOPs / Heavy Metals,Method Transfer Report for Heavy Metals Analysis,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+22,04-Testing Methods / Assay Specific SOPs / Homogeneity,MN OCM Homogeneity Testing SOP,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+23,04-Testing Methods / Assay Specific SOPs / Mycotoxin,Method Transfer Report for Mycotoxin Analysis,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+24,04-Testing Methods / Assay Specific SOPs / Mycotoxin,Mycotoxin Analysis Form,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+25,04-Testing Methods / Assay Specific SOPs / Mycotoxin,Mycotoxin Analysis SOP,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+26,04-Testing Methods / Assay Specific SOPs / Mycotoxin,Mycotoxins Protocol,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+27,04-Testing Methods / Assay Specific SOPs / Mycotoxin,Mycotoxins Protocol Addendum,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+28,04-Testing Methods / Assay Specific SOPs / Mycotoxin,Pesticides and Mycotoxins Report,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+29,04-Testing Methods / Assay Specific SOPs / Mycotoxin,Validation Report Addendum for Mycotoxin Analysis,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+30,04-Testing Methods / Assay Specific SOPs / Pesticides,Pesticide Analysis in Cannabis Flower SOP - 2.docx,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+31,04-Testing Methods / Assay Specific SOPs / Pesticides,Pesticide Analysis in Non-Flower SOP - 3.docx,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+32,04-Testing Methods / Assay Specific SOPs / Pesticides & Mycotoxins,Pesticide and Mycotoxin Screening Assay SOP,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+33,04-Testing Methods / Assay Specific SOPs / Residual Solvents,Residual Solvents Analysis Form,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+34,04-Testing Methods / Assay Specific SOPs / Residual Solvents,Residual Solvents Analysis SOP,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+35,04-Testing Methods / Assay Specific SOPs / Residual Solvents,Validation Report for Residual Solvents,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+36,04-Testing Methods / Assay Specific SOPs / Terpenes,Terpene Analysis SOP,calendar_marker,4,false,true,filter-membership-only,draft v1 metadata captured,QBench metadata only — current revision authority supplied by user,omitted
+37,04-Testing Methods / Assay Specific SOPs / Terpenes,Terpenes Analysis Form,controlled_document,4,true,false,filter-membership-only,approved v1 metadata captured,QBench metadata only — current revision authority supplied by user,omitted
+38,04-Testing Methods / Assay Specific SOPs / Terpenes,Terpenes NSI Lab Supplemental Proficiency Testing.pdf,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+39,04-Testing Methods / Assay Specific SOPs / Terpenes,Terpenes PT,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+40,04-Testing Methods / Assay Specific SOPs / Terpenes,Validation Report for Terpenes,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+41,04-Testing Methods / Assay Specific SOPs / Water Activity,Water Activity Analysis Form,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+42,04-Testing Methods / Assay Specific SOPs / Water Activity,Water Activity Analysis SOP,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+43,04-Testing Methods / Assay Specific SOPs / Water Activity,Water Activity Meter Verification,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+44,04-Testing Methods / Assay Specific SOPs / Water Activity,Water Activity Validation Report,controlled_document,4,true,false,filter-membership-only,not_opened,,omitted
+45,04-Testing Methods / Assay Specific SOPs,Terpene Analysis SOP,controlled_document,3,true,false,filter-membership-only,approved v1 metadata captured,QBench metadata only — current revision authority supplied by user,omitted
+46,04-Testing Methods / QC & Result Validity,Proficiency Testing SOP,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+47,05-Equipment & Facilities / Equipment Calibration & Records [ISO 6.4],"Instrument Maintenance, Calibration, and Qualification SOP",controlled_document,3,true,true,filter-membership-only,not_opened,,omitted
+48,05-Equipment & Facilities / Facilities & Environment [ISO 6.3],Security System SOP_AIT MN,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+49,"06-Quality Events / Nonconforming Work, Corrective Action, Complaints [ISO 7.10, 8.7, 7.9]","Complaints, Non-Conforming Work & Corrective Actions SOP",controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+50,07-Document & Records Control,Visitor Sign In Sheet,controlled_document,2,true,false,filter-membership-only,not_opened,,omitted
+51,MN OCM Documents / Method Expansion,Microbials,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+52,MN OCM Documents / Method Expansion,Terpenes Request Form,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+53,MN OCM Documents / METRC,DRAFT Metrc Lab Guide,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+54,MN OCM Documents / METRC,METRC Support Bulletin - Naming Products,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+55,MN OCM Documents / METRC,Metrc Testing Facility User Guide 25.1,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+56,MN OCM Documents / METRC,OCM CSV Test Batch Templates,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+57,MN OCM Documents / METRC,OCM METRC CSV Upload,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+58,MN OCM Documents / MN OCM Provided Documents,MN OCM Sub-Contracting Guidance,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+59,MN OCM Documents / Required Training,Cannabis Worker Training_Data Privacy and Confidentiality,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+60,MN OCM Documents / Required Training,Cannabis Worker Training_Emergencies,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+61,MN OCM Documents / Required Training,Cannabis Worker Training_State and Federal Cannabis Laws,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+62,MN OCM Documents / Required Training,Hazardous Materials and Equipment SOP,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+63,MN OCM Documents / Required Training,MN OCM Training Requirements SOP,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+64,MN OCM Documents,AIT MN Facility & Security Diagram,calendar_marker,2,false,true,filter-membership-only,not_opened,,omitted
+65,Posters / Weighing,Sample Weighing Reference Chart_2026_05.pdf,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+66,QBench Template / Worksheets,Standard Protocol WS Template.json,controlled_document,3,true,false,filter-membership-only,not_opened,,omitted
+67,,Daily Pipette and Repeater Verification Form,controlled_document,1,true,false,filter-membership-only,not_opened,,omitted
+68,,Daily Pipette Verification Acceptable Ranges,controlled_document,1,true,false,filter-membership-only,not_opened,,omitted

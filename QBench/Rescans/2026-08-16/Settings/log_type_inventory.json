@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "scan_date": "2026-08-16",
+  "captured_at_utc": "2026-08-17T02:26:20.590Z",
+  "source_host": "ait.qbench.net",
+  "capture_method": "safe list metadata only",
+  "privacy_note": "Operational log counts and records were omitted.",
+  "limitations": [
+    "The single visible log type is inactive.",
+    "No log records were opened."
+  ],
+  "count": 1,
+  "items": [
+    {
+      "log_type_id": 1,
+      "name": "Cannabinoid Potency Formulations",
+      "description": null,
+      "worksheet_id": 20,
+      "worksheet_name": "[Logs] Daily Balance Verification | Capacity XYg - 2",
+      "active": false,
+      "operational_log_count": "omitted"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+report_id,report_name,version_number,version_note,status_display,active,raw_safe_row
+26,Certificate of Analysis Report,24,Terpenes final,APPROVED Active,true,24 - Terpenes final APPROVED Active
+26,Certificate of Analysis Report,23,Time Zone correction,APPROVED,false,23 - Time Zone correction APPROVED
+26,Certificate of Analysis Report,22,updates,APPROVED,false,22 - updates APPROVED
+26,Certificate of Analysis Report,21,footer update,APPROVED,false,21 - footer update APPROVED
+26,Certificate of Analysis Report,20,Homogeneity approved 2,APPROVED,false,20 - Homogeneity approved 2 APPROVED
+26,Certificate of Analysis Report,19,homogenetiy approved,APPROVED,false,19 - homogenetiy approved APPROVED
+26,Certificate of Analysis Report,18,homogeneity test,PENDING,false,18 - homogeneity test PENDING
+26,Certificate of Analysis Report,17,THC hex edit 2,APPROVED,false,17 - THC hex edit 2 APPROVED
+26,Certificate of Analysis Report,16,THC hex fixed,APPROVED,false,16 - THC hex fixed APPROVED
+26,Certificate of Analysis Report,15,sample received fixed,APPROVED,false,15 - sample received fixed APPROVED
+26,Certificate of Analysis Report,14,Sample img fixed,APPROVED,false,14 - Sample img fixed APPROVED
+26,Certificate of Analysis Report,13,Homogeneity,APPROVED,false,13 - Homogeneity APPROVED
+26,Certificate of Analysis Report,12,Fixed,APPROVED,false,12 - Fixed APPROVED
+26,Certificate of Analysis Report,11,Approved 2.0,APPROVED,false,11 - Approved 2.0 APPROVED
+26,Certificate of Analysis Report,10,Approved,APPROVED,false,10 - Approved APPROVED
+26,Certificate of Analysis Report,9,update,DRAFT,false,9 - update DRAFT
+26,Certificate of Analysis Report,8,Updated THC hexagon %,PENDING,false,8 - Updated THC hexagon % PENDING
+26,Certificate of Analysis Report,7,,PENDING,false,7 PENDING
+26,Certificate of Analysis Report,6,,DRAFT,false,6 DRAFT
+26,Certificate of Analysis Report,5,[AIT-82] Update protocol steps,APPROVED,false,5 - [AIT-82] Update protocol steps APPROVED
+26,Certificate of Analysis Report,4,"[AIT-82] Multiple microbial assays + small adjustments for CP, equations and location",APPROVED,false,"4 - [AIT-82] Multiple microbial assays + small adjustments for CP, equations and location APPROVED"
+26,Certificate of Analysis Report,3,,APPROVED,false,3 APPROVED
+26,Certificate of Analysis Report,2,,DRAFT,false,2 DRAFT
+26,Certificate of Analysis Report,1,,PENDING,false,1 PENDING
+44,Homogeneity,2,3.0,APPROVED Active,true,2 - 3.0 APPROVED Active
+44,Homogeneity,1,homogeneity 2,APPROVED,false,1 - homogeneity 2 APPROVED
+20,1Certificate of Analysis Report,1,,APPROVED Active,true,1 APPROVED Active
